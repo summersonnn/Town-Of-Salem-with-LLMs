@@ -102,7 +102,7 @@ class Vampire_or_Peasant:
             # Store role
             self.roles[p] = role
 
-    def chat(self, rounds: int = 1) -> List[Dict[str, Any]]:
+    def public_chat(self, rounds: int = 1) -> List[Dict[str, Any]]:
         for _ in range(rounds):
             speaker = self.turn_order[self.current_index]
             self.current_index = (self.current_index + 1) % len(self.turn_order)
@@ -125,15 +125,89 @@ class Vampire_or_Peasant:
             print("---")
         return self.shared_history
     
-        # Game stages stubs
-    def vampires_chatting(self) -> None:
-        pass
+    def vampires_voting(self) -> Optional[str]:
+        """
+        Ask each vampire to vote on a peasant to kill. Tally votes and return the chosen victim.
+        Returns the name of the selected victim, or None if no valid vote.
+        """
+        # Identify alive vampires and peasants
+        vampires = [p for p, role in self.roles.items() if role == "Vampire" and p in self.turn_order]
+        peasants = [p for p, role in self.roles.items() if role == "Peasant" and p in self.turn_order]
+        if not vampires or not peasants:
+            return None
 
-    def mod_announcing_updates(self) -> None:
-        pass
+        # Collect votes
+        votes: Dict[str, int] = {peasant: 0 for peasant in peasants}
+        for vamp in vampires:
+            prompt = [
+                {"role": "system", "content": f"You are the vampire {vamp}."},
+                {"role": "system", "content": "Choose one peasant to kill tonight."},
+                {"role": "system", "content": "Choices: " + ", ".join(peasants)}
+            ]
+            raw = chat_completion(
+                chat_history=prompt,
+                temperature=self.temperature,
+                player_name=vamp,
+                player_model_map=self.player_model_map
+            )
+            choice = sanitize_reply(raw).strip()
+            if choice not in peasants:
+                choice = random.choice(peasants)
+            votes[choice] += 1
 
-    def update_player_list(self) -> None:
-        pass
+        # Determine highest votes and resolve ties
+        max_votes = max(votes.values())
+        top_choices = [p for p, count in votes.items() if count == max_votes]
+        victim = random.choice(top_choices) if len(top_choices) > 1 else top_choices[0]
+
+        # Remove victim from game
+        self.update_player_list(victim)
+        return victim
+
+    def mod_announcing_updates(self, day_or_night: str, subject: Optional[str]) -> None:
+        """
+        Moderator announcement after night or day action.
+        day_or_night: "Night" or "Day"
+        subject: victim name (for night) or kicked player (for day)
+        """
+        if day_or_night == "Night":
+            if subject:
+                announcement = f"Night has fallen. Vampires have killed {subject} tonight."
+            else:
+                announcement = "Night has fallen. No one was killed tonight."
+        else:
+            if subject:
+                announcement = f"Day has dawned. The community has voted out {subject}."
+            else:
+                announcement = "Day has dawned. The vote was tied; no one was voted out."
+        # Append to public history
+        self.shared_history.append({"role": "system", "content": announcement})
+
+    def mod_announcing_alive_players(self) -> None:
+        """
+        Announce currently living players to the public chat.
+        """
+        if not self.turn_order:
+            return
+        announcement = "Currently alive players: " + ", ".join(self.turn_order) + "."
+        self.shared_history.append({"role": "system", "content": announcement})
+
+
+    def update_player_list(self, removed_player: str) -> None:
+        """
+        Remove eliminated player from turn order, roles, and private history.
+        Adjust current_index accordingly.
+        """
+        if removed_player not in self.turn_order:
+            return
+        idx = self.turn_order.index(removed_player)
+        self.turn_order.remove(removed_player)
+        # Adjust current index to account for removed player
+        if idx < self.current_index:
+            self.current_index -= 1
+        # Clean up role and private history
+        self.roles.pop(removed_player, None)
+        self.private_histories.pop(removed_player, None)
 
     def check_game_end(self) -> Tuple[bool, str]:
         """
@@ -157,8 +231,51 @@ class Vampire_or_Peasant:
 
         return False, ""
 
-    def vote(self) -> str:
-        pass
+    def vote(self) -> Optional[str]:
+        """
+        Real vote function: players can vote for someone to kick or pass.
+        Returns the name of the kicked player, or None if tie or no votes.
+        """
+        if not self.turn_order:
+            return None
+        # Initialize vote counts
+        votes: Dict[str, int] = {p: 0 for p in self.turn_order}
+        passes = 0
+        # Ask each player
+        for p in list(self.turn_order):
+            prompt = [
+                {"role": "system", "content": f"You are player {p}."},
+                {"role": "system", "content": "Vote to kick a player or say 'Pass'."},
+                {"role": "system", "content": "Choices: " + ", ".join(self.turn_order) + ", Pass"}
+            ]
+            raw = chat_completion(
+                chat_history=prompt,
+                temperature=self.temperature,
+                player_name=p,
+                player_model_map=self.player_model_map
+            )
+            choice = sanitize_reply(raw).strip()
+            if choice == "Pass":
+                passes += 1
+            elif choice in votes:
+                votes[choice] += 1
+            else:
+                # Invalid choice treated as pass
+                passes += 1
+        # Filter out passes
+        filtered_votes = {p: c for p, c in votes.items() if c > 0}
+        if not filtered_votes:
+            return None
+        # Determine highest and tie
+        max_votes = max(filtered_votes.values())
+        top = [p for p, c in filtered_votes.items() if c == max_votes]
+        if len(top) > 1:
+            return None
+        kicked = top[0]
+        # Remove from game
+        self.update_player_list(kicked)
+        return kicked
+
 
     def run_game(self) -> None:
         """
@@ -167,37 +284,51 @@ class Vampire_or_Peasant:
         round_counter = 0
         while True:
             # Night: vampires choose a victim
-            self.vampires_chatting()
+            victim = self.vampires_voting()
+
+            print(f"Night: {victim} has been chosen as the victim.")
 
             # Moderator announces results and updates about the night actions
-            self.mod_announcing_updates()
-
-            # Day: players discuss
-            self.chat(rounds=len(self.turn_order)*2)
-
-            # Vote for a player to kick out
-            kicked_player = self.vote()
-
-            # Update player list based on night actions
-            self.update_player_list()
-
-            # Moderator announces results and updates about the poll results
-            self.mod_announcing_updates()
+            self.mod_announcing_updates("Night", victim)
 
             finished, winner = self.check_game_end()
             if finished:
                 print(f"Game over! {winner} wins!")
                 break
 
+            # Announce alive players before day discussion
+            self.mod_announcing_alive_players()
+
+            # Day: players discuss
+            self.public_chat(rounds=len(self.turn_order)*2)
+
+            # Vote for a player to kick out
+            kicked_player = self.vote()
+
+            print(f"Day: {kicked_player} has been voted out.")
+
+            # Moderator announces results and updates about the poll results
+            self.mod_announcing_updates("Day", kicked_player)
+
+            finished, winner = self.check_game_end()
+            if finished:
+                print(f"Game over! {winner} wins!")
+                break
+
+            # Announce alive players before next night
+            self.mod_announcing_alive_players()
+
 # --- example ---
 if __name__ == "__main__":
     load_dotenv()
-    players = ["John","Bob","Sarah","Alice"]
+    players = ["John","Bob","Sarah","Alice", "Charlie", "David"]
     models = [
         "openai/o4-mini-high",
         "google/gemini-2.5-pro-preview",
         "qwen/qwen3-32b",
-        "anthropic/claude-3.7-sonnet"
+        "anthropic/claude-3.7-sonnet",
+        "x-ai/grok-3-mini-beta",
+        "deepseek/deepseek-r1"
     ]
 
     game = Vampire_or_Peasant(players, models)
