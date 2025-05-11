@@ -20,8 +20,7 @@ def chat_completion(
         player_model_map: An optional dictionary mapping player names to specific
                           model names (e.g., {"John": "meta-llama/llama-3.3-70b-instruct:nitro"}).
                           If a mapping exists for the given `player_name`, that model
-                          will be used. Otherwise, the model specified by the
-                          `MODEL_NAME` environment variable is used. Defaults to None.
+                          will be used.
 
     Returns:
         The content of the generated message.
@@ -48,7 +47,27 @@ def chat_completion(
         base_url=base_url,
     )
 
-    # Prepare request parameters
+    # 1) Define your game-rules system prompt:
+    system_message = {
+        "role": "system",
+        "content": (
+            "You are playing Vampire or Peasant.  "
+            "There are multiple human‐named players, each controlled by a different LLM.  "
+            "You only know players by their human name.  "
+            "Follow the turn order unless someone is directly addressed with “Name!”.  "
+            "Do not reveal which LLM model you are running under.  "
+            "Speak only as your assigned player."
+            "If you are talking to a specific player, put an arrow, and then use their name at the end of your message and end with a question mark. "
+            "For example, if you are talking to Bob, you should say '->Bob?' at the END of your message. "
+            "Full Example: 'I think you're a vampire! ->Bob?' "
+            "If you are not talking to a specific player, do not do anything special."
+        )
+    }
+
+    # 2) Prepend it to a fresh copy of the chat history:
+    messages = [system_message] + chat_history.copy()
+
+    # 3) Build request with that:
     request_params = {
         "model": model_to_use,
         "messages": chat_history.copy(),
@@ -62,8 +81,6 @@ def chat_completion(
         print(f"Error during chat completion:")
         print(f"Full base URL: {base_url}")
         print(f"Model used: {model_to_use}")
-        # print(f"Request params: {request_params}") # Be cautious printing full request if it contains sensitive data
-        # For debugging, printing only model and messages structure can be safer:
         print(f"Request params (model and message count): model={request_params.get('model')}, num_messages={len(request_params.get('messages', []))}")
         raise
 
