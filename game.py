@@ -1,6 +1,6 @@
 import os
 import random
-from typing import List, Dict, Optional, Any
+from typing import List, Dict, Optional, Any, Tuple
 from dotenv import load_dotenv
 
 # your provided chat_completion; assumed to be on PYTHONPATH
@@ -57,6 +57,10 @@ class Vampire_or_Peasant:
         self.private_histories = {          # private per player
             name: [] for name in player_names
         }
+
+        # Roles mapping
+        self.roles: Dict[str, str] = {}
+
         # Game rules
         self.rules = {"role": "system", "content": (
                 "You are playing Vampire or Peasant.  "
@@ -82,63 +86,32 @@ class Vampire_or_Peasant:
         })
 
     def assign_roles(self, vampire_population: int = 1) -> None:
-        """Randomly pick distinct vampires, notify each privately."""
+        """
+        Randomly assign secret roles to each player.
+        """
         n = len(self.turn_order)
         if not (1 <= vampire_population <= n):
             raise ValueError(f"vampire_population must be 1..{n}")
 
         vampires = set(random.sample(self.turn_order, vampire_population))
         for p in self.turn_order:
-            # name notice
-            self.private_histories[p].append({
-                "role": "system",
-                "content": f"You are {p}."
-            })
+            # Notify private history
+            self.private_histories[p].append({"role": "system", "content": f"You are {p}."})
             role = "Vampire" if p in vampires else "Peasant"
-            self.private_histories[p].append({
-                "role": "system",
-                "content": f"Your secret role is: {role}."
-            })
-
-    # def _parse_direct_address(self) -> Optional[str]:
-    #     """Detect '->Name?' in last shared message."""
-    #     if not self.shared_history:
-    #         return None
-    #     txt = self.shared_history[-1]["content"].strip()
-    #     if txt.endswith('?') and '->' in txt:
-    #         cand = txt.rsplit('->', 1)[-1].rstrip('?').strip()
-    #         if cand in self.player_model_map:
-    #             return cand
-    #     return None
+            self.private_histories[p].append({"role": "system", "content": f"Your secret role is: {role}."})
+            # Store role
+            self.roles[p] = role
 
     def chat(self, rounds: int = 1) -> List[Dict[str, Any]]:
-        """
-        Run the conversation for `rounds` turns internally.
-        Each turn:
-          - Determine speaker (direct or round-robin)
-          - Build message list: rules, shared, private
-          - Call chat_completion
-          - Append result to shared history
-        Returns the updated shared_history after all turns.
-        """
         for _ in range(rounds):
-            # pick speaker
-            # direct = self._parse_direct_address()
-            # if direct:
-            #     speaker = direct
-            # else:
-            #     speaker = self.turn_order[self.current_index]
-            #     self.current_index = (self.current_index + 1) % len(self.turn_order)
             speaker = self.turn_order[self.current_index]
             self.current_index = (self.current_index + 1) % len(self.turn_order)
 
-            # prepare messages
+            # Build conversation for this player
             shared_sep = {"role": "system", "content": "Here is the chat so far:"}
             private_sep = {"role": "system", "content": "Here is your private history:"}
-
             msgs = [self.rules, shared_sep] + self.shared_history + [private_sep] + self.private_histories[speaker]
 
-            # call LLM
             raw_reply = chat_completion(
                 chat_history=msgs,
                 temperature=self.temperature,
@@ -146,16 +119,75 @@ class Vampire_or_Peasant:
                 player_model_map=self.player_model_map
             )
 
-            # sanitize and append to shared
             reply = sanitize_reply(raw_reply)
-            self.shared_history.append({
-                "role": "assistant",
-                "name": speaker,
-                "content": reply
-            })
+            self.shared_history.append({"role": "assistant", "name": speaker, "content": reply})
             print(f"{speaker}: {reply}")
             print("---")
         return self.shared_history
+    
+        # Game stages stubs
+    def vampires_chatting(self) -> None:
+        pass
+
+    def mod_announcing_updates(self) -> None:
+        pass
+
+    def update_player_list(self) -> None:
+        pass
+
+    def check_game_end(self) -> Tuple[bool, str]:
+        """
+        Evaluate win conditions:
+        - If no vampires remain, peasants win.
+        - If vampires >= peasants, vampires win.
+        Returns (ended: bool, winner: str).
+        """
+        # Count roles among alive players
+        alive = self.turn_order
+        num_vampires = sum(1 for p in alive if self.roles.get(p) == "Vampire")
+        num_peasants = sum(1 for p in alive if self.roles.get(p) == "Peasant")
+
+        # Peasants win if no vampires remain
+        if num_vampires == 0:
+            return True, "Peasants"
+
+        # Vampires win if they are equal or outnumber peasants
+        if num_vampires > 0 and num_peasants <= num_vampires:
+            return True, "Vampires"
+
+        return False, ""
+
+    def vote(self) -> str:
+        pass
+
+    def run_game(self) -> None:
+        """
+        Main game loop combining day and night stages until end state.
+        """
+        round_counter = 0
+        while True:
+            # Night: vampires choose a victim
+            self.vampires_chatting()
+
+            # Moderator announces results and updates about the night actions
+            self.mod_announcing_updates()
+
+            # Day: players discuss
+            self.chat(rounds=len(self.turn_order)*2)
+
+            # Vote for a player to kick out
+            kicked_player = self.vote()
+
+            # Update player list based on night actions
+            self.update_player_list()
+
+            # Moderator announces results and updates about the poll results
+            self.mod_announcing_updates()
+
+            finished, winner = self.check_game_end()
+            if finished:
+                print(f"Game over! {winner} wins!")
+                break
 
 # --- example ---
 if __name__ == "__main__":
@@ -170,7 +202,7 @@ if __name__ == "__main__":
 
     game = Vampire_or_Peasant(players, models)
     game.introduce_players()
-    game.assign_roles(vampire_population=2)
+    game.assign_roles(vampire_population=1)
 
-    # run 5 turns internally
-    history = game.chat(rounds=10)
+    # run the full game loop
+    game.run_game()
