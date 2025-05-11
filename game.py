@@ -6,6 +6,29 @@ from dotenv import load_dotenv
 # your provided chat_completion; assumed to be on PYTHONPATH
 from llm_call import chat_completion  
 
+def sanitize_reply(reply: str) -> str:
+    """
+    Removes any preceding <|im_start|> text in the reply.
+    Then, removes a single pair of surrounding double-quotation marks from the
+    (potentially modified) reply if it starts and ends with a double-quote (").
+    Otherwise, returns the (potentially modified) reply.
+    """
+    im_start_token = "<|im_start|>\n"
+
+    # Step 1: Remove preceding <|im_start|> text, if present.
+    # This handles "any preceding <|im_start|> text". If the token is there at the start,
+    # it's removed. If not, the string remains unchanged.
+    if reply.startswith(im_start_token):
+        reply = reply[len(im_start_token):]
+
+    # Step 2: Remove a single pair of surrounding double-quotation marks
+    # from the (potentially modified) reply. This is the original functionality.
+    if len(reply) >= 2 and reply.startswith('"') and reply.endswith('"'):
+        return reply[1:-1]
+    
+    # If quotes were not removed (either not present or string too short),
+    # return the reply, which might have had <|im_start|> removed or might be original.
+    return reply
 
 class Vampire_or_Peasant:
     def __init__(
@@ -15,172 +38,139 @@ class Vampire_or_Peasant:
         temperature: float = 0.9
     ):
         """
-        player_names: list of human-readable names, e.g. ["John","Bob","Sarah"]
-        available_models: list of model strings to assign uniquely, e.g.
-                          ["openai/o4-mini-high","google/gemini-2.5-pro-preview",
-                           "qwen/qwen3-235b-a22b","anthropic/claude-3.7-sonnet" ]
-                          Must be at least as many models as players.
+        player_names: list of human-readable names
+        available_models: unique model strings to assign (must >= players)
         """
         if len(available_models) < len(player_names):
-            raise ValueError(
-                "Not enough distinct models to assign uniquely to each player."
-            )
+            raise ValueError("Not enough distinct models for each player.")
 
-        # Sample without replacement so every player gets a different base model
-        shuffled = random.sample(available_models, len(player_names))
-        # Append ":nitro" to each model name
-        suffixed = [model + ":nitro" for model in shuffled]
+        # Assign unique models with :nitro suffix
+        suffixed = [m + ":nitro" for m in random.sample(available_models, len(player_names))]
+        self.player_model_map = dict(zip(player_names, suffixed))
 
-        # Build the public mapping
-        self.player_model_map: Dict[str, str] = dict(zip(player_names, suffixed))
+        self.turn_order = player_names[:]    # fixed round-robin
+        self.current_index = 0
+        self.temperature = temperature
 
-        # Turn order
-        self.turn_order: List[str] = player_names[:]
-        self.current_index: int = 0
-        self.temperature: float = temperature
-
-        # Shared (public) chat history
-        self.shared_history: List[Dict[str, Any]] = []
-
-        # Private history per player (e.g., their secret role info)
-        self.private_histories: Dict[str, List[Dict[str, Any]]] = {
+        # Histories
+        self.shared_history = []             # public chat
+        self.private_histories = {          # private per player
             name: [] for name in player_names
         }
+        # Game rules
+        self.rules = {"role": "system", "content": (
+                "You are playing Vampire or Peasant.  "
+                "There are multiple human‐named players, each controlled by a different LLM.  "
+                "You only know players by their human name.  "
+                "Follow the turn order unless someone is directly addressed with “Name!”.  "
+                "Do not reveal which LLM model you are running under.  "
+                "Speak only as your assigned player."
+                "Do not mix your shared and private histories. You should not reveal anything about your private history when speaking to others. "
+                "You don't need to put your name at the beginning of your message. It will be added automatically. Just write your message. "
+                "Do not repeat old messages in the chat history. Just output the new message. "
+        )}
 
     def introduce_players(self) -> None:
-        """Call once at start to announce who’s playing (system role)."""
+        """Announce players once at game start."""
         names = ", ".join(self.turn_order)
-        system_msg = {"role": "system", "content": f"I am the moderator of this game. I introduce the players: {names}. \
-                      I've already assigned roles. Let's begin."}
-        self.shared_history.append(system_msg)
+        self.shared_history.append({
+            "role": "system",
+            "content": (
+                "I am the moderator. Players: " + names + ". "
+                "Roles assigned. Game begins now."
+            )
+        })
 
     def assign_roles(self, vampire_population: int = 1) -> None:
-        """
-        Randomly assigns `vampire_population` distinct Vampires and the rest Peasants.
-        Appends a private system message to each player's history exactly once.
+        """Randomly pick distinct vampires, notify each privately."""
+        n = len(self.turn_order)
+        if not (1 <= vampire_population <= n):
+            raise ValueError(f"vampire_population must be 1..{n}")
 
-        Args:
-            vampire_population: Number of players to assign as Vampire. Default is 1.
-        """
-        total_players = len(self.turn_order)
-        if vampire_population < 1 or vampire_population > total_players:
-            raise ValueError(
-                f"vampire_population must be between 1 and {total_players}"
-            )
-
-        # Choose distinct vampires without replacement
         vampires = set(random.sample(self.turn_order, vampire_population))
-
-        # Assign roles and notify privately
-        for player in self.turn_order:
-            # Inform player of their name first
-            self.private_histories[player].append({
+        for p in self.turn_order:
+            # name notice
+            self.private_histories[p].append({
                 "role": "system",
-                "content": f"You are {player}."
+                "content": f"You are {p}."
             })
-            # Then inform of their secret role
-            role = "Vampire" if player in vampires else "Peasant"
-            self.private_histories[player].append({
+            role = "Vampire" if p in vampires else "Peasant"
+            self.private_histories[p].append({
                 "role": "system",
                 "content": f"Your secret role is: {role}."
             })
 
-    def _parse_direct_address(self) -> Optional[str]:
-        """
-        If last shared message ends with '->Name?' return that Name.
-        """
-        if not self.shared_history:
-            return None
-        last = self.shared_history[-1].get("content", "").strip()
-        if last.endswith('?') and '->' in last:
-            candidate = last.rsplit('->', 1)[-1].rstrip('?').strip()
-            if candidate in self.player_model_map:
-                return candidate
-        return None
+    # def _parse_direct_address(self) -> Optional[str]:
+    #     """Detect '->Name?' in last shared message."""
+    #     if not self.shared_history:
+    #         return None
+    #     txt = self.shared_history[-1]["content"].strip()
+    #     if txt.endswith('?') and '->' in txt:
+    #         cand = txt.rsplit('->', 1)[-1].rstrip('?').strip()
+    #         if cand in self.player_model_map:
+    #             return cand
+    #     return None
 
-    def chat(self) -> List[Dict[str, Any]]:
+    def chat(self, rounds: int = 1) -> List[Dict[str, Any]]:
         """
-        Advance conversation:
-          - Determine speaker (direct address or round-robin)
-          - Build a structured message list with clear separators:
-              1. game rules system prompt
-              2. "Here is the chat between players so far:" system prompt + shared history
-              3. "Here is your private chat history:" system prompt + private history
-          - Call chat_completion, append to shared history
-        Returns updated shared_history.
+        Run the conversation for `rounds` turns internally.
+        Each turn:
+          - Determine speaker (direct or round-robin)
+          - Build message list: rules, shared, private
+          - Call chat_completion
+          - Append result to shared history
+        Returns the updated shared_history after all turns.
         """
-        # Pick who speaks
-        direct = self._parse_direct_address()
-        if direct:
-            speaker = direct
-        else:
+        for _ in range(rounds):
+            # pick speaker
+            # direct = self._parse_direct_address()
+            # if direct:
+            #     speaker = direct
+            # else:
+            #     speaker = self.turn_order[self.current_index]
+            #     self.current_index = (self.current_index + 1) % len(self.turn_order)
             speaker = self.turn_order[self.current_index]
             self.current_index = (self.current_index + 1) % len(self.turn_order)
 
-        # 1) Core game rules
-        system_rules = {
-            "role": "system",
-            "content": (
-                "You are playing Vampire or Peasant."
-                "Speak only as your assigned player and do not reveal your model."
-                "Game begins now. "
+            # prepare messages
+            shared_sep = {"role": "system", "content": "Here is the chat so far:"}
+            private_sep = {"role": "system", "content": "Here is your private history:"}
+
+            msgs = [self.rules, shared_sep] + self.shared_history + [private_sep] + self.private_histories[speaker]
+
+            # call LLM
+            raw_reply = chat_completion(
+                chat_history=msgs,
+                temperature=self.temperature,
+                player_name=speaker,
+                player_model_map=self.player_model_map
             )
-        }
-        # 2) Shared history with separator
-        shared_sep = {"role": "system", "content": "Here is the chat between players so far:"}
-        shared = self.shared_history.copy()
 
-        # 3) Private history with separator
-        private_sep = {"role": "system", "content": "Here is your private chat history:"}
-        private = self.private_histories[speaker].copy()
-
-        # Final message list
-        messages = [system_rules, shared_sep] + shared + [private_sep] + private
-
-        # Call the LLM
-        response = chat_completion(
-            chat_history=messages,
-            temperature=self.temperature,
-            player_name=speaker,
-            player_model_map=self.player_model_map
-        )
-
-        # Build assistant message
-        assistant_msg = {"role": "assistant", "name": speaker, "content": response}
-
-        # Append to shared history only
-        self.shared_history.append(assistant_msg)
-
+            # sanitize and append to shared
+            reply = sanitize_reply(raw_reply)
+            self.shared_history.append({
+                "role": "assistant",
+                "name": speaker,
+                "content": reply
+            })
+            print(f"{speaker}: {reply}")
+            print("---")
         return self.shared_history
-        
 
-# ----------- example --------------
+# --- example ---
 if __name__ == "__main__":
-    load_dotenv()  # ensure LLM_BASE_URL & LLM_API_KEY are set
-
-    players = ["John","Bob","Sarah", "Alice"]
-    models  = [
-        "openai/o4-mini-high", 
-        "google/gemini-2.5-pro-preview", 
-        "qwen/qwen3-235b-a22b",
+    load_dotenv()
+    players = ["John","Bob","Sarah","Alice"]
+    models = [
+        "openai/o4-mini-high",
+        "google/gemini-2.5-pro-preview",
+        "qwen/qwen3-32b",
         "anthropic/claude-3.7-sonnet"
     ]
 
-    # Initialize game and announce players
     game = Vampire_or_Peasant(players, models)
     game.introduce_players()
-
-    # Randomly assign 2 vampires and notify privately
     game.assign_roles(vampire_population=2)
-    # Print each player's private role for demonstration
-    for p in players:
-        private_msgs = game.private_histories[p]
-        print(f"[PRIVATE to {p}]: {private_msgs[0]['content']}")
 
-    # 3 normal rounds
-    for _ in range(3):
-        hist = game.chat()
-        msg = hist[-1]
-        print(f"{msg['name']}: {msg['content']}")
-
-
+    # run 5 turns internally
+    history = game.chat(rounds=10)
