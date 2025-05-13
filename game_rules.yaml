@@ -1,0 +1,102 @@
+# game_rules.yaml
+
+game_system_prompt:
+  role: "system"
+  content: |
+    ### Game Overview 
+    The game is run by a moderator who privately assigns roles to each player at the beginning. Only the vampires know who their fellow vampires are, allowing them to strategize together against the peasants.
+
+    Each round consists of three phases:
+
+    1. **Night**
+    2. **Daytime Discussion**
+    3. **Voting**
+
+    The game proceeds through multiple such rounds until a win condition is met.
+
+    ---
+
+    ### Roles in the Game (excluding the moderator which is not in game but manages it)
+
+    * **2 Vampires**
+    * **1 Observer** (Peasant with special ability)
+    * **1 Clown**
+    * **1 Doctor** (Peasant with special ability)
+    * **1 Musketeer** (Peasant with special ability)
+    * **Peasants without special roles**
+
+    ---
+
+    ### Win Conditions
+
+    There are three possible factions that can win:
+
+    * **Vampires** win if the number of living vampires equals the number of non-vampire players.
+      *Example: 2 vampires and 2 non-vampires alive.*
+
+    * **Peasants** win if all vampires are eliminated.
+
+    * **Clown** wins if they are voted out by the group. This is their only goal.
+
+    A game can end either:
+
+    * After a night phase, if someone is killed,
+    * Or after a vote, if someone is kicked out.
+
+    ---
+
+    ### Special Role Abilities
+
+    * **Observer**: A peasant who, each night, can secretly ask the moderator if a specific player is a vampire. The moderator responds with "Yes" or "No." The observer can do this every night unless they are eliminated.
+
+    * **Doctor**: Each night, chooses a player to protect from vampire attacks. If the vampires target that player, no one dies. The doctor can protect themselves, but only once during the entire game. He can protect any other player unlimited number of times.
+
+    * **Musketeer**: If voted out during the day, the musketeer chooses one player to eliminate as they go down. This ability doesn’t trigger if the musketeer is killed at night.
+
+    * **Clown**: Their goal is to get kicked out during the voting phase. If successful, the clown wins alone.
+
+    ---
+
+    ### Voting Mechanics
+
+    * During the voting phase, players may:
+
+      * Accuse someone of being a vampire, or
+      * Say "Pass" if uncertain.
+
+    * "Pass" votes are ignored in the count.
+
+    * The player with the most votes (excluding "Pass") is kicked out. In case of a tie, no one is eliminated that round. Next night begins.
+
+    ---
+
+    ### Game Flow Summary
+
+    1. **Roles are assigned privately.**
+
+    2. **Night Phase**:
+
+      * Observer asks about one player’s identity.
+      * Doctor selects someone to protect.
+      * Vampires agree on a player to attack.
+      * All night interactions are private and only known to the respective roles.
+
+    3. **Day Phase**:
+
+      * If someone was successfully attacked and not protected, the moderator announces their death (without revealing their role). If noone dies because doctor protected the correct
+    player, then moderator also announces this as "No one got killed during the night".
+      * Players discuss and try to deduce who might be a vampire.
+      * A vote is held to decide if someone gets kicked out.
+
+    4. **Next night begins**.
+
+    The cycle repeats until one of the win conditions is fulfilled.
+
+    ---
+
+    **Important Notes**:
+
+    * When a player is removed from the game—whether by being killed at night or voted out during the day—their role remains hidden from the other players.
+    * Keep in mind: aside from the moderator, **anyone can lie**. The moderator doesn’t participate as a player and is completely impartial, so he always tell the truth.
+    * If the clown is voted out, the game ends immediately, and the clown is declared the winner.
+    * During daytime discussions, players are free to **pretend to be any role**, so stay sharp—deception is part of the game.

@@ -2,8 +2,8 @@ import os
 import random
 from typing import List, Dict, Optional, Any, Tuple
 from dotenv import load_dotenv
+import yaml
 
-# your provided chat_completion; assumed to be on PYTHONPATH
 from llm_call import chat_completion  
 
 def sanitize_reply(reply: str) -> str:
@@ -35,6 +35,7 @@ class Vampire_or_Peasant:
         self,
         player_names: List[str],
         available_models: List[str],
+        rules_file_path: str,
         temperature: float = 0.9
     ):
         """
@@ -61,46 +62,168 @@ class Vampire_or_Peasant:
         # Roles mapping
         self.roles: Dict[str, str] = {}
 
-        # Game rules
-        self.rules = {"role": "system", "content": (
-                "You are playing Vampire or Peasant.  "
-                "There are multiple human‐named players, each controlled by a different LLM.  "
-                "You only know players by their human name.  "
-                "Follow the turn order unless someone is directly addressed with “Name!”.  "
-                "Do not reveal which LLM model you are running under.  "
-                "Speak only as your assigned player."
-                "Do not mix your shared and private histories. You should not reveal anything about your private history when speaking to others. "
-                "You don't need to put your name at the beginning of your message. It will be added automatically. Just write your message. "
-                "Do not repeat old messages in the chat history. Just output the new message. "
-        )}
+        # Game rules - loaded from file
+        self.rules = self._load_rules_from_file(rules_file_path)
+
+    def _load_rules_from_file(self, file_path: str) -> Dict[str, Any]:
+        """Loads game rules from a YAML file."""
+        try:
+            with open(file_path, 'r') as f:
+                rules_config = yaml.safe_load(f)
+            
+            # Assuming the rules are under a top-level key, e.g., 'game_rules'
+            # and that this key contains a dictionary like the original self.rules
+            if not isinstance(rules_config, dict) or 'game_system_prompt' not in rules_config:
+                raise ValueError(f"YAML file '{file_path}' must contain a top-level key 'game_system_prompt' "
+                                 "with 'role' and 'content'.")
+            
+            game_system_prompt = rules_config['game_system_prompt']
+            if not isinstance(game_system_prompt, dict) or \
+               'role' not in game_system_prompt or \
+               'content' not in game_system_prompt:
+                raise ValueError("The 'game_system_prompt' in the YAML must be a dictionary "
+                                 "containing 'role' and 'content' keys.")
+            
+            return game_system_prompt # This is the direct replacement for the old self.rules
+            
+        except FileNotFoundError:
+            raise FileNotFoundError(f"Rules file not found: {file_path}")
+        except yaml.YAMLError as e:
+            raise ValueError(f"Error parsing YAML rules file {file_path}: {e}")
+        except Exception as e: # Catch other potential issues during loading/parsing
+            raise ValueError(f"An unexpected error occurred while loading rules from {file_path}: {e}")
 
     def introduce_players(self) -> None:
         """Announce players once at game start."""
         names = ", ".join(self.turn_order)
+
+        # Append system messages to shared history
         self.shared_history.append({
             "role": "system",
             "content": (
-                "I am the moderator. Players: " + names + ". "
+                "Game rules: " + self.rules["content"] + ". "
+        )})
+        
+       # Append system messages to shared history (welcome message)
+        self.shared_history.append({
+            "role": "system",
+            "content": (
+                "Hello everyone. I am the moderator. Players are: " + names + ". "
                 "Roles assigned. Game begins now."
             )
         })
 
+
     def assign_roles(self, vampire_population: int = 1) -> None:
         """
-        Randomly assign secret roles to each player.
+        Randomly assign secret roles to each player. Called once per game.
+        Roles:
+        - N Vampires (as per vampire_population)
+        - 1 Observer
+        - 1 Clown
+        - 1 Doctor
+        - 1 Musketeer
+        - Remaining: Peasants (without special abilities)
         """
-        n = len(self.turn_order)
-        if not (1 <= vampire_population <= n):
-            raise ValueError(f"vampire_population must be 1..{n}")
+        num_players = len(self.turn_order)
 
-        vampires = set(random.sample(self.turn_order, vampire_population))
-        for p in self.turn_order:
-            # Notify private history
-            self.private_histories[p].append({"role": "system", "content": f"You are {p}."})
-            role = "Vampire" if p in vampires else "Peasant"
-            self.private_histories[p].append({"role": "system", "content": f"Your secret role is: {role}."})
-            # Store role
-            self.roles[p] = role
+        # Define counts for the fixed special roles
+        num_observer = 1
+        num_clown = 1
+        num_doctor = 1
+        num_musketeer = 1
+
+        # Calculate the total number of roles that have a fixed count or are specified by parameter
+        total_specific_roles = (
+            vampire_population
+            + num_observer
+            + num_clown
+            + num_doctor
+            + num_musketeer
+        )
+
+        # --- Validations ---
+        if not (vampire_population >= 1):
+            raise ValueError("vampire_population must be at least 1.")
+
+        if total_specific_roles > num_players:
+            raise ValueError(
+                f"Not enough players ({num_players}) for the specified roles. "
+                f"Required: {vampire_population} Vampires, {num_observer} Observer, "
+                f"{num_clown} Clown, {num_doctor} Doctor, {num_musketeer} Musketeer. "
+                f"Total specific roles: {total_specific_roles}."
+            )
+
+        # --- Role Assignment ---
+        # Create a mutable list of players and shuffle it for random assignment.
+        # This list contains player names and is used to pick players for roles.
+        players_to_assign_from = list(self.turn_order)
+        random.shuffle(players_to_assign_from)
+
+        # Assign Vampires directly to self.roles
+        for _ in range(vampire_population):
+            player = players_to_assign_from.pop(0) # Take from the front of the shuffled list
+            self.roles[player] = "Vampire"
+
+        # Assign Observer
+        player = players_to_assign_from.pop(0)
+        self.roles[player] = "Observer"
+
+        # Assign Clown
+        player = players_to_assign_from.pop(0)
+        self.roles[player] = "Clown"
+
+        # Assign Doctor
+        player = players_to_assign_from.pop(0)
+        self.roles[player] = "Doctor"
+
+        # Assign Musketeer
+        player = players_to_assign_from.pop(0)
+        self.roles[player] = "Musketeer"
+
+        # Assign remaining players as "Peasant" (without special roles)
+        for player in players_to_assign_from: # Any players left in the list
+            self.roles[player] = "Peasant"
+
+        # --- Update private_histories ---
+        # self.roles is now fully populated.
+        # Iterate through the original turn_order (or all player_names) to update their private history.
+        for player_name in self.turn_order:
+            role = self.roles[player_name] # Get the assigned role for this player
+
+            # Append system messages to private history for each player
+            self.private_histories[player_name].append(
+                {"role": "system", "content": f"You are {player_name}."}
+            )
+            self.private_histories[player_name].append(
+                {"role": "system", "content": f"Your secret role is: {role}."}
+            )
+
+            # Optional: Add role-specific introductory messages
+            if role == "Vampire":
+                self.private_histories[player_name].append(
+                    {"role": "system", "content": "You are a Vampire. Your goal is to eliminate all Peasants. You can choose one Peasant to kill each night."}
+                )
+            elif role == "Observer":
+                self.private_histories[player_name].append(
+                    {"role": "system", "content": "You are an Observer. Your goal is to identify the Vampires. You can observe one player each night to learn their role."}
+                )
+            elif role == "Clown":
+                self.private_histories[player_name].append(
+                    {"role": "system", "content": "You are the Clown. Your goal is to get yourself eliminated by public vote. If you succeed, you might win alone!"}
+                )
+            elif role == "Doctor":
+                self.private_histories[player_name].append(
+                    {"role": "system", "content": "You are a Doctor. Each night, you may choose one player to protect from a Vampire attack. Your goal is to help the Peasants survive."}
+                )
+            elif role == "Musketeer":
+                self.private_histories[player_name].append(
+                    {"role": "system", "content": "You are a Musketeer. If you've been eliminated by public vote, you can choose one player to eliminate as you go down."}
+                )
+            elif role == "Peasant":
+                self.private_histories[player_name].append(
+                    {"role": "system", "content": "You are a Peasant. You have no special abilities. Your goal is to work with others to identify and eliminate all Vampires."}
+                )
 
     def public_chat(self, rounds: int = 1) -> List[Dict[str, Any]]:
         for _ in range(rounds):
@@ -110,7 +233,7 @@ class Vampire_or_Peasant:
             # Build conversation for this player
             shared_sep = {"role": "system", "content": "Here is the chat so far:"}
             private_sep = {"role": "system", "content": "Here is your private history:"}
-            msgs = [self.rules, shared_sep] + self.shared_history + [private_sep] + self.private_histories[speaker]
+            msgs = [shared_sep] + self.shared_history + [private_sep] + self.private_histories[speaker]
 
             raw_reply = chat_completion(
                 chat_history=msgs,
@@ -191,6 +314,7 @@ class Vampire_or_Peasant:
             return
         announcement = "Currently alive players: " + ", ".join(self.turn_order) + "."
         self.shared_history.append({"role": "system", "content": announcement})
+        print(announcement)
 
 
     def update_player_list(self, removed_player: str) -> None:
@@ -209,23 +333,32 @@ class Vampire_or_Peasant:
         self.roles.pop(removed_player, None)
         self.private_histories.pop(removed_player, None)
 
-    def check_game_end(self) -> Tuple[bool, str]:
+    def check_game_end(self, kicked: str = None) -> Tuple[bool, str]:
         """
         Evaluate win conditions:
+        - If the kicked player had the role "Clown", then game ends. Clown wins.
         - If no vampires remain, peasants win.
         - If vampires >= peasants, vampires win.
         Returns (ended: bool, winner: str).
         """
+        # Check Clown win condition first
+        if kicked: # Ensure kicked is not empty or None
+            kicked_role = self.roles.get(kicked)
+            if kicked_role == "Clown":
+                return True, "Clown"
+
         # Count roles among alive players
         alive = self.turn_order
         num_vampires = sum(1 for p in alive if self.roles.get(p) == "Vampire")
-        num_peasants = sum(1 for p in alive if self.roles.get(p) == "Peasant")
+        num_peasants = sum(1 for p in alive if self.roles.get(p) != "Vampire") # Assuming non-Vampires are Peasants for this count
 
         # Peasants win if no vampires remain
         if num_vampires == 0:
             return True, "Peasants"
 
         # Vampires win if they are equal or outnumber peasants
+        # This condition should only be checked if there are still vampires.
+        # If num_vampires is 0, the above condition already handles it.
         if num_vampires > 0 and num_peasants <= num_vampires:
             return True, "Vampires"
 
@@ -281,7 +414,6 @@ class Vampire_or_Peasant:
         """
         Main game loop combining day and night stages until end state.
         """
-        round_counter = 0
         while True:
             # Night: vampires choose a victim
             victim = self.vampires_voting()
@@ -310,7 +442,7 @@ class Vampire_or_Peasant:
             # Moderator announces results and updates about the poll results
             self.mod_announcing_updates("Day", kicked_player)
 
-            finished, winner = self.check_game_end()
+            finished, winner = self.check_game_end(kicked=kicked_player)
             if finished:
                 print(f"Game over! {winner} wins!")
                 break
@@ -321,19 +453,23 @@ class Vampire_or_Peasant:
 # --- example ---
 if __name__ == "__main__":
     load_dotenv()
-    players = ["John","Bob","Sarah","Alice", "Charlie", "David"]
+    players = ["John","Bob","Sarah","Alice", "Charlie", "David", "Eva", "Frank"]
     models = [
         "openai/o4-mini-high",
+        "microsoft/phi-4-reasoning-plus",
         "google/gemini-2.5-pro-preview",
         "qwen/qwen3-32b",
+        "qwen/qwq-32b",
         "anthropic/claude-3.7-sonnet",
         "x-ai/grok-3-mini-beta",
         "deepseek/deepseek-r1"
     ]
 
-    game = Vampire_or_Peasant(players, models)
+    game = Vampire_or_Peasant(players, models, "game_rules.yaml", temperature=0.6)
     game.introduce_players()
-    game.assign_roles(vampire_population=1)
+    game.assign_roles(vampire_population=2)
 
     # run the full game loop
     game.run_game()
+
+    # TODO: Voting choices are not being recorded in the shared history.
