@@ -65,4 +65,30 @@ def chat_completion(
 
 
 if __name__ == "__main__":
-    pass
+    load_dotenv()
+        # 1. Define the player name
+    player_to_use = "Player"
+
+    # 2. Define the player_model_map
+    model_map = {
+        "Dr. Reasoning": "microsoft/phi-4-reasoning-plus",
+        "Storyteller Sam": "qwen/qwen3-235b-a22b:nitro", # Another player, different model
+        "Player": "meta-llama/llama-4-maverick:nitro" # Default player if name is "Player"
+    }
+
+    # 3. Create a sample chat history
+    sample_history = [
+        {"role": "system", "content": "You are an assistant."},
+        {"role": "user", "content": "What is the meaning of life?"},
+    ]
+
+    # 4. Call the function
+    print(f"Attempting chat completion for player: {player_to_use}")
+    response_content = chat_completion(
+        chat_history=sample_history,
+        player_name=player_to_use,
+        player_model_map=model_map,
+        temperature=0.7
+    )
+    print(f"\nModel ({model_map[player_to_use]}) response for {player_to_use}:")
+    print(response_content)
