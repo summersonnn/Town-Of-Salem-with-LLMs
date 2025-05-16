@@ -65,6 +65,12 @@ class Vampire_or_Peasant:
 
         # Roles mapping
         self.roles: Dict[str, str] = {}
+        self.vampires = []
+        self.peasants = []
+        self.observer = None
+        self.doctor = None
+        self.clown = None
+        self.musketeer = None
 
         # Game rules - loaded from file
         self.rules = self._load_rules_from_file(rules_file_path)
@@ -168,22 +174,27 @@ class Vampire_or_Peasant:
         for _ in range(vampire_population):
             player = players_to_assign_from.pop(0) # Take from the front of the shuffled list
             self.roles[player] = "Vampire"
+            self.vampires.append(player) # Keep track of assigned vampires
 
         # Assign Observer
         player = players_to_assign_from.pop(0)
         self.roles[player] = "Observer"
+        self.observer = player # Keep track of assigned observer
 
         # Assign Clown
         player = players_to_assign_from.pop(0)
         self.roles[player] = "Clown"
+        self.clown = player # Keep track of assigned clown
 
         # Assign Doctor
         player = players_to_assign_from.pop(0)
         self.roles[player] = "Doctor"
+        self.doctor = player # Keep track of assigned doctor
 
         # Assign Musketeer
         player = players_to_assign_from.pop(0)
         self.roles[player] = "Musketeer"
+        self.musketeer = player # Keep track of assigned musketeer
 
         # Assign remaining players as "Peasant" (without special roles)
         for player in players_to_assign_from: # Any players left in the list
@@ -237,11 +248,13 @@ class Vampire_or_Peasant:
         # Build conversation for this player
         shared_sep = {"role": "system", "content": "Here is the chat so far:"}
         private_sep = {"role": "system", "content": "Here is your private history:"}
-        last_warning = {"role": "system", "content": "Do not put your name before your message. Just write your message."}
-        msgs = [shared_sep] + self.shared_history + [private_sep] + self.private_histories[player_name] + [last_warning]
+        last_warning = {"role": "system", "content": "Do not put your name before your message. Just write your new message."}
+        you_are = {"role": "system", "content": f"Remember, you are {player_name}."}
+        msgs = [shared_sep] + self.shared_history + [private_sep] + self.private_histories[player_name] + [last_warning] + [you_are]
         return msgs
 
     def public_chat(self, rounds: int = 1) -> List[Dict[str, Any]]:
+        self.shared_history.append({"role": "system", "content": "Public chat begins. Discuss and share information."})
         for _ in range(rounds):
             speaker = self.turn_order[self.current_index]
             self.current_index = (self.current_index + 1) % len(self.turn_order)
@@ -394,7 +407,8 @@ class Vampire_or_Peasant:
             prompt = [
                 {"role": "system", "content": f"You are player {p}."},
                 {"role": "system", "content": "Vote to kick a player or say 'Pass'."},
-                {"role": "system", "content": "Choices: " + ", ".join(self.turn_order) + ", Pass"}
+                {"role": "system", "content": "Choices: " + ", ".join(self.turn_order) + ", Pass"},
+                {"role": "system", "content": "Output only the name of the player (or 'Pass') and nothing else."}
             ]
             raw = chat_completion(
                 chat_history=prompt,
@@ -403,6 +417,9 @@ class Vampire_or_Peasant:
                 player_model_map=self.player_model_map
             )
             choice = sanitize_reply(raw).strip()
+            # Put the player name and vote in the shared history
+            self.shared_history.append({"role": "assistant", "name": p, "content": "I vote for " + choice})
+
             if choice == "Pass":
                 passes += 1
             elif choice in votes:
@@ -420,9 +437,41 @@ class Vampire_or_Peasant:
         if len(top) > 1:
             return None
         kicked = top[0]
+
         # Remove from game
         self.update_player_list(kicked)
+
+        # Check if the kicked player was the musketeer
+        musketeer_kill = self.check_musketeer_action(kicked)
+        if musketeer_kill:
+            print(f"Day: The Musketeer {kicked} has chosen to eliminate {musketeer_kill}.")
+
         return kicked
+    
+    def check_musketeer_action(self, kicked: str) -> None:
+        """
+        Check if the kicked player was the Musketeer.
+        If so, they can choose to eliminate one player as they go down.
+        """
+        if self.roles.get(kicked) == "Musketeer":
+            # Ask the Musketeer to choose a player to eliminate
+            prompt = [
+                {"role": "system", "content": f"You are the Musketeer {kicked}."},
+                {"role": "system", "content": "You have been eliminated. Choose one player to eliminate."},
+                {"role": "system", "content": "Choices: " + ", ".join(self.turn_order) + ", Pass"}
+            ]
+            choice = chat_completion(
+                chat_history=prompt,
+                temperature=self.temperature,
+                player_name=kicked,
+                player_model_map=self.player_model_map
+            )
+            choice = sanitize_reply(choice).strip()
+            self.update_player_list(choice)
+            self.shared_history.append(
+                {"role": "system", "content": f"The last kicked player was the Musketeer. The Musketeer {kicked} has chosen to eliminate {choice}."}
+            )
+            return choice
     
     # There is a single observer. So there is no need to vote.
     def observer_action(self) -> Optional[str]:
@@ -532,6 +581,12 @@ class Vampire_or_Peasant:
         """
         Main game loop combining day and night stages until end state.
         """
+        # Print the roles to the moderator
+        print("Roles assigned:")
+        for player, role in self.roles.items():
+            print(f"{player}: {role} -- {self.player_model_map[player]}")
+
+
         while True:
             self.observer_action()
             self.doctor_action()
@@ -598,6 +653,8 @@ if __name__ == "__main__":
     # run the full game loop
     game.run_game()
 
-    # TODO: Voting choices are not being recorded in the shared history.
-    # TODO: When initialing classes, assign observer, clown, doctor, and musketeer to their own variables.
     # TODO: Add round numbers to the both histories
+    # TODO: Check case: if Doctor protects himself more than once 
+    # TODO: When doctor protects himself, write "You choose to protect yourself" in the private history. Not the name of the player.
+    # TODO: deepseek-r1 puts thinking tokens in the shared history (after its response). Fix this.
+    # TODO: Mistral seems to repeat the shared history. Maybe switch to Mistrall Small 3.1
