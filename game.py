@@ -217,7 +217,8 @@ class Vampire_or_Peasant:
             # Optional: Add role-specific introductory messages
             if role == "Vampire":
                 self.private_histories[player_name].append(
-                    {"role": "system", "content": "You are a Vampire. Your goal is to eliminate all Peasants. You can choose one Peasant to kill each night."}
+                    {"role": "system", "content": "You are a Vampire. Your goal is to eliminate all Peasants. You can choose one Peasant to kill each night."
+                    "Here is the list of your fellow vampires (including yourself): " + ", ".join(self.vampires) + "."}
                 )
             elif role == "Observer":
                 self.private_histories[player_name].append(
@@ -445,6 +446,8 @@ class Vampire_or_Peasant:
         musketeer_kill = self.check_musketeer_action(kicked)
         if musketeer_kill:
             print(f"Day: The Musketeer {kicked} has chosen to eliminate {musketeer_kill}.")
+            self.shared_history.append(f"{kicked} is chosen to be kicked out. He/She was the musketeer and has chosen to eliminate {musketeer_kill}.")
+            self.update_player_list(musketeer_kill)
 
         return kicked
     
@@ -479,10 +482,13 @@ class Vampire_or_Peasant:
         Observer action: choose a player to observe.
         Returns the name of the observed player, or None if no valid choice.
         """
-        if not self.turn_order:
-            return None
         # Identify the observer
         observer = [p for p, role in self.roles.items() if role == "Observer"]
+
+        # Check if the observer is alive
+        if not observer:
+            return None
+        
         observer = observer[0]
         others = [p for p in self.turn_order if p != observer]
         # Check if the observer is alive
@@ -571,7 +577,7 @@ class Vampire_or_Peasant:
         self.protected_player = protected_player
 
         # Append the observation result to the doctor's private history.
-        protection_message = f"You chose to protect {protected_player}."
+        protection_message = f"You chose to protect {protected_player}." if protected_player != doctor else f"You chose to protect yourself. ({doctor})"
         self.private_histories[doctor].append(
             {"role": "system", "content": protection_message}
         )
@@ -586,8 +592,9 @@ class Vampire_or_Peasant:
         for player, role in self.roles.items():
             print(f"{player}: {role} -- {self.player_model_map[player]}")
 
-
+        round = 1
         while True:
+            self.shared_history.append({"role": "system", "content": f"Night {round} begins."})
             self.observer_action()
             self.doctor_action()
 
@@ -595,9 +602,9 @@ class Vampire_or_Peasant:
             victim = self.vampires_voting()
 
             if victim:
-                print(f"Night: {victim} has been chosen as the victim.")
+                print(f"Night {round} - {victim} has been chosen as the victim.")
             else:
-                print("Night: Noone died tonight.")
+                print("Night {round} - Noone died tonight.")
             self.protected_player = None
 
                 # Moderator announces results and updates about the night actions
@@ -611,6 +618,7 @@ class Vampire_or_Peasant:
             # Announce alive players before day discussion
             self.mod_announcing_alive_players()
 
+            self.shared_history.append({"role": "system", "content": f"Day {round} begins."})
             # Day: players discuss
             self.public_chat(rounds=len(self.turn_order)*2)
 
@@ -629,20 +637,22 @@ class Vampire_or_Peasant:
 
             # Announce alive players before next night
             self.mod_announcing_alive_players()
+            round += 1
 
 # --- example ---
 if __name__ == "__main__":
     load_dotenv()
-    players = ["John","Bob","Sarah","Alice", "Charlie", "David", "Eva", "Frank", "Grace"]
+    players = ["John","Bob","Sarah","Alice", "Charlie", "David", "Eva", "Frank", "Grace", "Hannah"]
     models = [
         "openai/o4-mini-high",
+        "openai/gpt-4.1",
         "google/gemini-2.5-pro-preview",
+        "google/gemini-2.5-flash-preview:thinking",
         "qwen/qwen3-32b",
         "qwen/qwq-32b",
         "anthropic/claude-3.7-sonnet",
         "x-ai/grok-3-mini-beta",
         "deepseek/deepseek-r1",
-        "mistralai/mistral-medium-3",
         "meta-llama/llama-4-maverick"
     ]
 
@@ -653,8 +663,5 @@ if __name__ == "__main__":
     # run the full game loop
     game.run_game()
 
-    # TODO: Add round numbers to the both histories
-    # TODO: Check case: if Doctor protects himself more than once 
-    # TODO: When doctor protects himself, write "You choose to protect yourself" in the private history. Not the name of the player.
-    # TODO: deepseek-r1 puts thinking tokens in the shared history (after its response). Fix this.
-    # TODO: Mistral seems to repeat the shared history. Maybe switch to Mistrall Small 3.1
+    # TODO: Rotate the speaking order daily.
+    # TODO: Structured response for voting mechanism

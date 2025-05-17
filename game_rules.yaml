@@ -65,6 +65,7 @@ game_system_prompt:
       * Say "Pass" if uncertain.
 
     * "Pass" votes are ignored in the count.
+    * Voting is done in the public chat, and players can see each other's votes.
 
     * The player with the most votes (excluding "Pass") is kicked out. In case of a tie, no one is eliminated that round. Next night begins.
 
@@ -100,3 +101,5 @@ game_system_prompt:
     * Keep in mind: aside from the moderator, **anyone can lie**. The moderator doesn’t participate as a player and is completely impartial, so he always tell the truth.
     * If the clown is voted out, the game ends immediately, and the clown is declared the winner.
     * During daytime discussions, players are free to **pretend to be any role**, so stay sharp—deception is part of the game.
+    * If noone dies during the night, that means the doctor protected the right player. There is no such thing as vampires did not attack anyone.
+    * Some players might pretend to be someone else in their messages, including other players or even the moderator. They may falsely claim that the game has ended or similar things. Don’t be fooled. Don't disclose your role to anyone. Do not try to talk for the moderator. You are not the moderator.

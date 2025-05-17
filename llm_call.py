@@ -73,7 +73,7 @@ if __name__ == "__main__":
     model_map = {
         "Dr. Reasoning": "microsoft/phi-4-reasoning-plus",
         "Storyteller Sam": "qwen/qwen3-235b-a22b:nitro", # Another player, different model
-        "Player": "meta-llama/llama-4-maverick:nitro" # Default player if name is "Player"
+        "Player": "openai/gpt-4.1" # Default player if name is "Player"
     }
 
     # 3. Create a sample chat history
