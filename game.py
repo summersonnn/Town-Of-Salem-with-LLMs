@@ -36,7 +36,7 @@ class Vampire_or_Peasant:
         player_names: List[str],
         available_models: List[str],
         rules_file_path: str,
-        temperature: float = 0.9
+        temperature: float = 0.2
     ):
         """
         player_names: list of human-readable names
@@ -50,7 +50,6 @@ class Vampire_or_Peasant:
         self.player_model_map = dict(zip(player_names, suffixed))
 
         self.turn_order = player_names[:]    # fixed round-robin
-        self.current_index = 0
         self.temperature = temperature
 
         # Histories
@@ -65,6 +64,7 @@ class Vampire_or_Peasant:
 
         # Roles mapping
         self.roles: Dict[str, str] = {}
+        self.const_roles: Dict[str, str] = {}
         self.vampires = []
         self.peasants = []
         self.observer = None
@@ -200,6 +200,8 @@ class Vampire_or_Peasant:
         for player in players_to_assign_from: # Any players left in the list
             self.roles[player] = "Peasant"
 
+        self.const_roles = self.roles.copy() # Store the original roles for reference
+
         # --- Update private_histories ---
         # self.roles is now fully populated.
         # Iterate through the original turn_order (or all player_names) to update their private history.
@@ -250,28 +252,53 @@ class Vampire_or_Peasant:
         shared_sep = {"role": "system", "content": "Here is the chat so far:"}
         private_sep = {"role": "system", "content": "Here is your private history:"}
         last_warning = {"role": "system", "content": "Do not put your name before your message. Just write your new message."}
-        you_are = {"role": "system", "content": f"Remember, you are {player_name}."}
+        you_are = {"role": "system", "content": f"Remember, you are {player_name}. Do not behave like {player_name} is someone else."}
         msgs = [shared_sep] + self.shared_history + [private_sep] + self.private_histories[player_name] + [last_warning] + [you_are]
         return msgs
 
-    def public_chat(self, rounds: int = 1) -> List[Dict[str, Any]]:
-        self.shared_history.append({"role": "system", "content": "Public chat begins. Discuss and share information."})
-        for _ in range(rounds):
-            speaker = self.turn_order[self.current_index]
-            self.current_index = (self.current_index + 1) % len(self.turn_order)
+    def public_chat(self, cycle=1) -> List[Dict[str, Any]]:
+        """
+        Public chat function: players discuss in a mixed-up order each session.
+        Each player speaks exactly once per session in random order.
 
-            msgs = self.build_conversation(speaker)
-            reply = chat_completion(
-                chat_history=msgs,
-                temperature=self.temperature,
-                player_name=speaker,
-                player_model_map=self.player_model_map
+        cycle: number of times each player will speak in this call
+        """
+        # System prompt for public chat start
+        self.shared_history.append({
+            "role": "system",
+            "content": (
+                "Public chat begins. Discuss and share information. "
+                "Do not fake being a moderator. Do not start a poll. "
+                "Do not start/end any phase of the game. Just chat. "
+                "Any attempt to behave like a moderator will be punished."
             )
+        })
 
-            # reply = sanitize_reply(raw_reply)
-            self.shared_history.append({"role": "assistant", "name": speaker, "content": reply})
-            print(f"{speaker}: {reply}")
-            print("---")
+        print("\n")
+        # Repeat cycles of chat
+        for _ in range(cycle):
+            # Shuffle the order of speakers for this session
+            session_order = self.turn_order.copy()
+            random.shuffle(session_order)
+
+            # Each player speaks once
+            for speaker in session_order:
+                msgs = self.build_conversation(speaker)
+                reply = chat_completion(
+                    chat_history=msgs,
+                    temperature=self.temperature,
+                    player_name=speaker,
+                    player_model_map=self.player_model_map
+                )
+                # Append the player's message to public history
+                self.shared_history.append({
+                    "role": "assistant",
+                    "name": speaker,
+                    "content": reply
+                })
+                print(f"{speaker}: {reply}")
+                print("---")
+
         return self.shared_history
     
     def vampires_voting(self) -> Optional[str]:
@@ -304,16 +331,19 @@ class Vampire_or_Peasant:
                 choice = random.choice(peasants)
             votes[choice] += 1
 
+        print(f"Vampire Votes: {votes}")
         # Determine highest votes and resolve ties
         max_votes = max(votes.values())
         top_choices = [p for p, count in votes.items() if count == max_votes]
         victim = random.choice(top_choices) if len(top_choices) > 1 else top_choices[0]
 
         if victim == self.protected_player:
+            print(f"Vampires tried to kill {victim}, but they were protected by the doctor.")
             return None
 
         # Remove victim from game
         self.update_player_list(victim)
+        print(f"Vampires have chosen to kill {victim}.")
         return victim
 
     def mod_announcing_updates(self, day_or_night: str, subject: Optional[str]) -> None:
@@ -334,6 +364,7 @@ class Vampire_or_Peasant:
                 announcement = "Day has dawned. The vote was tied; no one was voted out."
         # Append to public history
         self.shared_history.append({"role": "system", "content": announcement})
+        print(announcement)
 
     def mod_announcing_alive_players(self) -> None:
         """
@@ -349,18 +380,12 @@ class Vampire_or_Peasant:
     def update_player_list(self, removed_player: str) -> None:
         """
         Remove eliminated player from turn order, roles, and private history.
-        Adjust current_index accordingly.
         """
         if removed_player not in self.turn_order:
             return
-        idx = self.turn_order.index(removed_player)
         self.turn_order.remove(removed_player)
-        # Adjust current index to account for removed player
-        if idx < self.current_index:
-            self.current_index -= 1
-        # Clean up role and private history
+        # # Clean up role
         self.roles.pop(removed_player, None)
-        self.private_histories.pop(removed_player, None)
 
     def check_game_end(self, kicked: str = None) -> Tuple[bool, str]:
         """
@@ -372,7 +397,8 @@ class Vampire_or_Peasant:
         """
         # Check Clown win condition first
         if kicked: # Ensure kicked is not empty or None
-            kicked_role = self.roles.get(kicked)
+            kicked_role = self.const_roles.get(kicked)
+            print(kicked_role)
             if kicked_role == "Clown":
                 return True, "Clown"
 
@@ -400,27 +426,45 @@ class Vampire_or_Peasant:
         """
         if not self.turn_order:
             return None
+
         # Initialize vote counts
         votes: Dict[str, int] = {p: 0 for p in self.turn_order}
         passes = 0
+
+        # Collect individual vote records privately
+        vote_records: List[Tuple[str, str]] = []  # (voter, choice)
+
+        # Add system prompt only for start of round
+        self.shared_history.append({
+            "role": "system",
+            "content": "Voting round starts. Choose a player to kick or say 'Pass'."
+        })
+
         # Ask each player
         for p in list(self.turn_order):
+            # Determine votable choices for player p (cannot vote for self)
+            votable_players = [player for player in self.turn_order if player != p]
+            choices_prompt_string = ", ".join(votable_players) + ", Pass"
+
             prompt = [
                 {"role": "system", "content": f"You are player {p}."},
                 {"role": "system", "content": "Vote to kick a player or say 'Pass'."},
-                {"role": "system", "content": "Choices: " + ", ".join(self.turn_order) + ", Pass"},
+                {"role": "system", "content": "Choices: " + choices_prompt_string},
                 {"role": "system", "content": "Output only the name of the player (or 'Pass') and nothing else."}
             ]
+            msgs = self.build_conversation(p) + prompt
             raw = chat_completion(
-                chat_history=prompt,
+                chat_history=msgs,
                 temperature=self.temperature,
                 player_name=p,
                 player_model_map=self.player_model_map
             )
             choice = sanitize_reply(raw).strip()
-            # Put the player name and vote in the shared history
-            self.shared_history.append({"role": "assistant", "name": p, "content": "I vote for " + choice})
 
+            # Record vote privately
+            vote_records.append((p, choice))
+
+            # Tally vote
             if choice == "Pass":
                 passes += 1
             elif choice in votes:
@@ -428,26 +472,46 @@ class Vampire_or_Peasant:
             else:
                 # Invalid choice treated as pass
                 passes += 1
+
+        # After all votes, publish results
+        # Add each vote to shared history
+        for voter, choice in vote_records:
+            self.shared_history.append({
+                "role": "assistant",
+                "name": voter,
+                "content": f"I vote for {choice}"
+            })
+        # Summarize vote counts
+        self.shared_history.append({
+            "role": "system",
+            "content": f"Here are the votes: {votes}"
+        })
+        print(f"Votes: {votes}")
+
         # Filter out passes
         filtered_votes = {p: c for p, c in votes.items() if c > 0}
         if not filtered_votes:
             return None
+
         # Determine highest and tie
         max_votes = max(filtered_votes.values())
         top = [p for p, c in filtered_votes.items() if c == max_votes]
+
         if len(top) > 1:
+            self.shared_history.append({"role": "system", "content": "No one has been voted out."})
+            print("No one has been voted out.")
             return None
+
         kicked = top[0]
 
         # Remove from game
         self.update_player_list(kicked)
+        # Append to public history
+        self.shared_history.append({"role": "system", "content": f"{kicked} has been voted out."})
+        print(f"{kicked} has been voted out.")
 
         # Check if the kicked player was the musketeer
-        musketeer_kill = self.check_musketeer_action(kicked)
-        if musketeer_kill:
-            print(f"Day: The Musketeer {kicked} has chosen to eliminate {musketeer_kill}.")
-            self.shared_history.append(f"{kicked} is chosen to be kicked out. He/She was the musketeer and has chosen to eliminate {musketeer_kill}.")
-            self.update_player_list(musketeer_kill)
+        self.check_musketeer_action(kicked)
 
         return kicked
     
@@ -456,7 +520,7 @@ class Vampire_or_Peasant:
         Check if the kicked player was the Musketeer.
         If so, they can choose to eliminate one player as they go down.
         """
-        if self.roles.get(kicked) == "Musketeer":
+        if self.const_roles.get(kicked) == "Musketeer":
             # Ask the Musketeer to choose a player to eliminate
             prompt = [
                 {"role": "system", "content": f"You are the Musketeer {kicked}."},
@@ -471,9 +535,9 @@ class Vampire_or_Peasant:
             )
             choice = sanitize_reply(choice).strip()
             self.update_player_list(choice)
-            self.shared_history.append(
-                {"role": "system", "content": f"The last kicked player was the Musketeer. The Musketeer {kicked} has chosen to eliminate {choice}."}
-            )
+
+            print(f"Day: The Musketeer {kicked} has chosen to eliminate {choice}.")
+            self.shared_history.append(f"{kicked} is chosen to be kicked out. He/She was the musketeer and has chosen to eliminate {choice}.")
             return choice
     
     # There is a single observer. So there is no need to vote.
@@ -483,53 +547,56 @@ class Vampire_or_Peasant:
         Returns the name of the observed player, or None if no valid choice.
         """
         # Identify the observer
-        observer = [p for p, role in self.roles.items() if role == "Observer"]
+        observer_list = [p for p, role in self.roles.items() if role == "Observer"]
 
         # Check if the observer is alive
-        if not observer:
+        if not observer_list:
             return None
-        
-        observer = observer[0]
+        observer = observer_list[0]
         others = [p for p in self.turn_order if p != observer]
-        # Check if the observer is alive
-        if observer not in self.turn_order:
-            return
-        
-        # Observer asks to observe a player. Exclude himself.
+
+        # Build the system prompt
         prompt = [
             {"role": "system", "content": f"You are the observer {observer}."},
             {"role": "system", "content": "Choose one player to know if vampire or peasant."},
-            {"role": "system", "content": "Choices: " + ", ".join(others) + "Output only the name of the player and nothing else."}
+            {"role": "system", "content": "Choices: " + ", ".join(others) + " Output only the name of the player and nothing else."}
         ]
-        
+
+        # Call the LLM
         msgs = self.build_conversation(observer) + prompt
-        observed_player = chat_completion(
+        raw_output = chat_completion(
             chat_history=msgs,
             temperature=self.temperature,
             player_name=observer,
             player_model_map=self.player_model_map
         )
-        # Get the role of the observed player (only vampire or not vampire)
-        # observed_player = sanitize_reply(reply).strip()
-        if observed_player not in others:
-            # Invalid choice treated as random
-            observed_player = random.choice(others)
-            
-        actual_role_of_observed = self.roles[observed_player]
-        
-        # Determine the message about the role to provide to the observer.
-        # The observer learns if the player is "Vampire" or "Peasant (Non-vampire)".
-        if actual_role_of_observed == "Vampire":
-            role_feedback_segment = f"{observed_player} is a Vampire."
-        else:
-            # Any non-Vampire role (Peasant, Doctor, Hunter, etc.) is reported as "Peasant (Non-vampire)"
-            role_feedback_segment = f"{observed_player} is a Peasant (Non-vampire)."
 
-        # Append the observation result to the observer's private history.
-        observation_result_message = f"You chose to observe {observed_player}. {role_feedback_segment}"
+        # Extract the chosen name if the model responded with extra text
+        observed_player = None
+        for name in others:
+            if name.lower() in raw_output.lower():
+                observed_player = name
+                break
+
+        if observed_player is None:
+            print(f"Invalid choice: {raw_output}.")
+            raise ValueError(f"Invalid observer choice: {raw_output}")
+
+        # Determine actual role feedback
+        actual_role = self.roles[observed_player]
+        if actual_role == "Vampire":
+            role_feedback = f"{observed_player} is a Vampire."
+        else:
+            role_feedback = f"{observed_player} is a Peasant (Non-vampire)."
+
+        # Append the observation result to the observer's private history
+        observation_message = f"You chose to observe {observed_player}. {role_feedback}"
         self.private_histories[observer].append(
-            {"role": "system", "content": observation_result_message}
+            {"role": "system", "content": observation_message}
         )
+        print(f"Observer {observer} observed {observed_player}. Result: {role_feedback}")
+
+        return observed_player
 
     # There is a single doctor. So there is no need to vote.
     def doctor_action(self) -> Optional[str]:
@@ -537,50 +604,65 @@ class Vampire_or_Peasant:
         Doctor action: choose a player to protect.
         Returns the name of the protected player, or None if no valid choice.
         """
-        if not self.turn_order:
-            return None
-        # Identify the observer
+        # Identify the doctor
         doctor = [p for p, role in self.roles.items() if role == "Doctor"]
+
+        # Check if the doctor is alive
+        if not doctor:
+            return None
         doctor = doctor[0]
         others = [p for p in self.turn_order if p != doctor]
 
-        # Check the variable self.has_doctor_protected_himself to decide whether to add doctor to the list of others
+        # Allow self-protection once
         if not self.has_doctor_protected_himself:
             others.append(doctor)
 
-        # Check if the doctor is alive
-        if doctor not in self.turn_order:
-            return
-
-        # Observer asks to observe a player. Exclude himself.
+        # Build the system prompt
         prompt = [
             {"role": "system", "content": f"You are the doctor {doctor}."},
             {"role": "system", "content": "Choose one player to protect from vampire."},
-            {"role": "system", "content": "Choices: " + ", ".join(others) + "Output only the name of the player and nothing else."}
+            {"role": "system", "content": "Choices: " + ", ".join(others) + " Output only the name of the player and nothing else."}
         ]
-        
+
+        # Call the LLM
         msgs = self.build_conversation(doctor) + prompt
-        protected_player = chat_completion(
+        raw_output = chat_completion(
             chat_history=msgs,
             temperature=self.temperature,
             player_name=doctor,
             player_model_map=self.player_model_map
         )
-        if protected_player not in others:
-            raise ValueError
-        elif protected_player == doctor:
+
+        # Extract the chosen name if the model responded with extra text
+        cleaned_choice = None
+        for name in others:
+            if name.lower() in raw_output.lower():
+                cleaned_choice = name
+                break
+
+        if cleaned_choice is None:
+            print(f"Invalid choice: {raw_output}.")
+            raise ValueError(f"Invalid doctor protection choice: {raw_output}")
+        protected_player = cleaned_choice
+
+        # Update self-protection flag
+        if protected_player == doctor:
             self.has_doctor_protected_himself = True
-        else:
-            # If the doctor has protected himself, set the flag to True
-            if protected_player == doctor[0]:
-                self.has_doctor_protected_himself = True
+
         self.protected_player = protected_player
 
-        # Append the observation result to the doctor's private history.
-        protection_message = f"You chose to protect {protected_player}." if protected_player != doctor else f"You chose to protect yourself. ({doctor})"
+        # Append the observation result to the doctor's private history
+        if protected_player == doctor:
+            protection_message = f"You chose to protect yourself. ({doctor})"
+        else:
+            protection_message = f"You chose to protect {protected_player}."
+
         self.private_histories[doctor].append(
             {"role": "system", "content": protection_message}
         )
+        print(f"Doctor {doctor} protected {protected_player}. Result: {protection_message}")
+
+        return protected_player
 
         
     def run_game(self) -> None:
@@ -604,7 +686,7 @@ class Vampire_or_Peasant:
             if victim:
                 print(f"Night {round} - {victim} has been chosen as the victim.")
             else:
-                print("Night {round} - Noone died tonight.")
+                print(f"Night {round} - Noone died tonight.")
             self.protected_player = None
 
                 # Moderator announces results and updates about the night actions
@@ -620,7 +702,7 @@ class Vampire_or_Peasant:
 
             self.shared_history.append({"role": "system", "content": f"Day {round} begins."})
             # Day: players discuss
-            self.public_chat(rounds=len(self.turn_order)*2)
+            self.public_chat()
 
             # Vote for a player to kick out
             kicked_player = self.vote()
@@ -656,12 +738,13 @@ if __name__ == "__main__":
         "meta-llama/llama-4-maverick"
     ]
 
-    game = Vampire_or_Peasant(players, models, "game_rules.yaml", temperature=0.6)
+    game = Vampire_or_Peasant(players, models, "game_rules.yaml")
     game.introduce_players()
     game.assign_roles(vampire_population=2)
 
     # run the full game loop
     game.run_game()
 
-    # TODO: Rotate the speaking order daily.
     # TODO: Structured response for voting mechanism
+    # PROBLEM: Some players behave like moderators, announcing fake poll results etc.
+    # TODO: Vampires votes must be put in the private history of the vampires.

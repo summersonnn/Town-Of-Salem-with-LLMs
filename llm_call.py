@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 
 def chat_completion(
     chat_history: List[Dict[str, str]],
-    temperature: float = 0.9,
+    temperature: float = 0.2,
     player_name: str = "Player",
     player_model_map: Optional[Dict[str, str]] = None, # New parameter
 ) -> str:
