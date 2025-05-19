@@ -6,29 +6,29 @@ import yaml
 
 from llm_call import chat_completion  
 
-def sanitize_reply(reply: str) -> str:
-    """
-    Removes any preceding <|im_start|> text in the reply.
-    Then, removes a single pair of surrounding double-quotation marks from the
-    (potentially modified) reply if it starts and ends with a double-quote (").
-    Otherwise, returns the (potentially modified) reply.
-    """
-    im_start_token = "<|im_start|>\n"
+# def sanitize_reply(reply: str) -> str:
+#     """
+#     Removes any preceding <|im_start|> text in the reply.
+#     Then, removes a single pair of surrounding double-quotation marks from the
+#     (potentially modified) reply if it starts and ends with a double-quote (").
+#     Otherwise, returns the (potentially modified) reply.
+#     """
+#     im_start_token = "<|im_start|>\n"
 
-    # Step 1: Remove preceding <|im_start|> text, if present.
-    # This handles "any preceding <|im_start|> text". If the token is there at the start,
-    # it's removed. If not, the string remains unchanged.
-    if reply.startswith(im_start_token):
-        reply = reply[len(im_start_token):]
+#     # Step 1: Remove preceding <|im_start|> text, if present.
+#     # This handles "any preceding <|im_start|> text". If the token is there at the start,
+#     # it's removed. If not, the string remains unchanged.
+#     if reply.startswith(im_start_token):
+#         reply = reply[len(im_start_token):]
 
-    # Step 2: Remove a single pair of surrounding double-quotation marks
-    # from the (potentially modified) reply. This is the original functionality.
-    if len(reply) >= 2 and reply.startswith('"') and reply.endswith('"'):
-        return reply[1:-1]
+#     # Step 2: Remove a single pair of surrounding double-quotation marks
+#     # from the (potentially modified) reply. This is the original functionality.
+#     if len(reply) >= 2 and reply.startswith('"') and reply.endswith('"'):
+#         return reply[1:-1]
     
-    # If quotes were not removed (either not present or string too short),
-    # return the reply, which might have had <|im_start|> removed or might be original.
-    return reply
+#     # If quotes were not removed (either not present or string too short),
+#     # return the reply, which might have had <|im_start|> removed or might be original.
+#     return reply
 
 class Vampire_or_Peasant:
     def __init__(
@@ -301,7 +301,7 @@ class Vampire_or_Peasant:
 
         return self.shared_history
     
-    def vampires_voting(self) -> Optional[str]:
+    def vampires_voting(self, round: int) -> Optional[str]:
         """
         Ask each vampire to vote on a peasant to kill. Tally votes and return the chosen victim.
         Returns the name of the selected victim, or None if no valid vote.
@@ -318,7 +318,7 @@ class Vampire_or_Peasant:
             prompt = [
                 {"role": "system", "content": f"You are the vampire {vamp}."},
                 {"role": "system", "content": "Choose one peasant to kill tonight."},
-                {"role": "system", "content": "Choices: " + ", ".join(peasants) + "Only reply with the name of the chosen peasant."}
+                {"role": "system", "content": "Choices: " + ", ".join(peasants) + "Reply only with the name of the chosen peasant."}
             ]
             choice = chat_completion(
                 chat_history=prompt,
@@ -326,10 +326,14 @@ class Vampire_or_Peasant:
                 player_name=vamp,
                 player_model_map=self.player_model_map
             )
-            #choice = sanitize_reply(raw).strip()
             if choice not in peasants:
+                raise ValueError(f"Invalid vampire choice: {choice}. Must be one of {', '.join(peasants)}.")
                 choice = random.choice(peasants)
             votes[choice] += 1
+            
+            # Append the vote to private history of all vampires
+            for vampire in vampires:
+                self.private_histories[vampire].append({"role": "system", "content": f"{vamp}, as a vampire, voted to kill {choice} in the night {round}."})
 
         print(f"Vampire Votes: {votes}")
         # Determine highest votes and resolve ties
@@ -339,14 +343,18 @@ class Vampire_or_Peasant:
 
         if victim == self.protected_player:
             print(f"Vampires tried to kill {victim}, but they were protected by the doctor.")
+            print(f"Night {round} - Noone died tonight.")
+            self.shared_history.append({"role": "system", "content": f"Night {round} - No one died tonight."})
             return None
 
         # Remove victim from game
         self.update_player_list(victim)
-        print(f"Vampires have chosen to kill {victim}.")
+
+        print(f"Night {round} - {victim} has been chosen as the victim.")
         return victim
 
-    def mod_announcing_updates(self, day_or_night: str, subject: Optional[str]) -> None:
+
+    def mod_announcing_updates(self, day_or_night: str, subject: Optional[str], round: int) -> None:
         """
         Moderator announcement after night or day action.
         day_or_night: "Night" or "Day"
@@ -354,14 +362,14 @@ class Vampire_or_Peasant:
         """
         if day_or_night == "Night":
             if subject:
-                announcement = f"Night has fallen. Vampires have killed {subject} tonight."
+                announcement = f"Night {round} has fallen. Vampires have killed {subject} tonight."
             else:
-                announcement = "Night has fallen. No one was killed tonight."
+                announcement = "Night {round} has fallen. No one was killed tonight."
         else:
             if subject:
-                announcement = f"Day has dawned. The community has voted out {subject}."
+                announcement = f"Day {round} has dawned. The community has voted out {subject}."
             else:
-                announcement = "Day has dawned. The vote was tied; no one was voted out."
+                announcement = "Day {round} has dawned. The vote was tied; no one was voted out."
         # Append to public history
         self.shared_history.append({"role": "system", "content": announcement})
         print(announcement)
@@ -419,7 +427,7 @@ class Vampire_or_Peasant:
 
         return False, ""
 
-    def vote(self) -> Optional[str]:
+    def vote(self, round: int) -> Optional[str]:
         """
         Real vote function: players can vote for someone to kick or pass.
         Returns the name of the kicked player, or None if tie or no votes.
@@ -437,7 +445,7 @@ class Vampire_or_Peasant:
         # Add system prompt only for start of round
         self.shared_history.append({
             "role": "system",
-            "content": "Voting round starts. Choose a player to kick or say 'Pass'."
+            "content": f"Voting round {round} starts. Choose a player to kick or say 'Pass'."
         })
 
         # Ask each player
@@ -453,13 +461,12 @@ class Vampire_or_Peasant:
                 {"role": "system", "content": "Output only the name of the player (or 'Pass') and nothing else."}
             ]
             msgs = self.build_conversation(p) + prompt
-            raw = chat_completion(
+            choice = chat_completion(
                 chat_history=msgs,
                 temperature=self.temperature,
                 player_name=p,
                 player_model_map=self.player_model_map
             )
-            choice = sanitize_reply(raw).strip()
 
             # Record vote privately
             vote_records.append((p, choice))
@@ -512,7 +519,6 @@ class Vampire_or_Peasant:
 
         # Check if the kicked player was the musketeer
         self.check_musketeer_action(kicked)
-
         return kicked
     
     def check_musketeer_action(self, kicked: str) -> None:
@@ -533,7 +539,6 @@ class Vampire_or_Peasant:
                 player_name=kicked,
                 player_model_map=self.player_model_map
             )
-            choice = sanitize_reply(choice).strip()
             self.update_player_list(choice)
 
             print(f"Day: The Musketeer {kicked} has chosen to eliminate {choice}.")
@@ -541,7 +546,7 @@ class Vampire_or_Peasant:
             return choice
     
     # There is a single observer. So there is no need to vote.
-    def observer_action(self) -> Optional[str]:
+    def observer_action(self, round) -> Optional[str]:
         """
         Observer action: choose a player to observe.
         Returns the name of the observed player, or None if no valid choice.
@@ -590,7 +595,7 @@ class Vampire_or_Peasant:
             role_feedback = f"{observed_player} is a Peasant (Non-vampire)."
 
         # Append the observation result to the observer's private history
-        observation_message = f"You chose to observe {observed_player}. {role_feedback}"
+        observation_message = f"You chose to observe {observed_player} in the night {round}. {role_feedback}"
         self.private_histories[observer].append(
             {"role": "system", "content": observation_message}
         )
@@ -599,7 +604,7 @@ class Vampire_or_Peasant:
         return observed_player
 
     # There is a single doctor. So there is no need to vote.
-    def doctor_action(self) -> Optional[str]:
+    def doctor_action(self, round) -> Optional[str]:
         """
         Doctor action: choose a player to protect.
         Returns the name of the protected player, or None if no valid choice.
@@ -653,9 +658,9 @@ class Vampire_or_Peasant:
 
         # Append the observation result to the doctor's private history
         if protected_player == doctor:
-            protection_message = f"You chose to protect yourself. ({doctor})"
+            protection_message = f"You chose to protect yourself in the night {round}. ({doctor})"
         else:
-            protection_message = f"You chose to protect {protected_player}."
+            protection_message = f"You chose to protect {protected_player} in the night {round}."
 
         self.private_histories[doctor].append(
             {"role": "system", "content": protection_message}
@@ -677,19 +682,14 @@ class Vampire_or_Peasant:
         round = 1
         while True:
             self.shared_history.append({"role": "system", "content": f"Night {round} begins."})
-            self.observer_action()
-            self.doctor_action()
+            self.observer_action(round)
+            self.doctor_action(round)
 
             # Night: vampires choose a victim
-            victim = self.vampires_voting()
-
-            if victim:
-                print(f"Night {round} - {victim} has been chosen as the victim.")
-            else:
-                print(f"Night {round} - Noone died tonight.")
+            victim = self.vampires_voting(round)
             self.protected_player = None
 
-                # Moderator announces results and updates about the night actions
+            # Moderator announces results and updates about the night actions
             self.mod_announcing_updates("Night", victim)
 
             finished, winner = self.check_game_end()
@@ -705,7 +705,7 @@ class Vampire_or_Peasant:
             self.public_chat()
 
             # Vote for a player to kick out
-            kicked_player = self.vote()
+            kicked_player = self.vote(round)
 
             print(f"Day: {kicked_player} has been voted out.")
 
