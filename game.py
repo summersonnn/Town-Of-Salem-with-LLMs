@@ -318,17 +318,24 @@ class Vampire_or_Peasant:
             prompt = [
                 {"role": "system", "content": f"You are the vampire {vamp}."},
                 {"role": "system", "content": "Choose one peasant to kill tonight."},
-                {"role": "system", "content": "Choices: " + ", ".join(peasants) + "Reply only with the name of the chosen peasant."}
+                {"role": "system", "content": "Choices: " + ", ".join(peasants) + "Reply only with the name of the chosen peasant. Example output: 'Nina'"}
             ]
-            choice = chat_completion(
+            raw_output = chat_completion(
                 chat_history=prompt,
                 temperature=self.temperature,
                 player_name=vamp,
                 player_model_map=self.player_model_map
             )
-            if choice not in peasants:
-                raise ValueError(f"Invalid vampire choice: {choice}. Must be one of {', '.join(peasants)}.")
+            
+            # Extract the chosen name if the model responded with extra text
+            choice = None
+            for name in peasants:
+                if name.lower() in raw_output.lower():
+                    choice = name
+                    break
+            if choice is None:
                 choice = random.choice(peasants)
+                print(f"Vampire {vamp} did not provide a valid vote. Randomly choosing: {choice}")
             votes[choice] += 1
             
             # Append the vote to private history of all vampires
@@ -339,7 +346,13 @@ class Vampire_or_Peasant:
         # Determine highest votes and resolve ties
         max_votes = max(votes.values())
         top_choices = [p for p, count in votes.items() if count == max_votes]
-        victim = random.choice(top_choices) if len(top_choices) > 1 else top_choices[0]
+
+        if len(top_choices) > 1:
+            victim = random.choice(top_choices)
+            for vampire in vampires:
+                self.private_histories[vampire].append({"role": "system", "content": f"Vampires voting ended in a tie. Randomly chosen from top choices: {victim}"})
+        else:
+            victim = top_choices[0]
 
         if victim == self.protected_player:
             print(f"Vampires tried to kill {victim}, but they were protected by the doctor.")
@@ -442,11 +455,7 @@ class Vampire_or_Peasant:
         # Collect individual vote records privately
         vote_records: List[Tuple[str, str]] = []  # (voter, choice)
 
-        # Add system prompt only for start of round
-        self.shared_history.append({
-            "role": "system",
-            "content": f"Voting round {round} starts. Choose a player to kick or say 'Pass'."
-        })
+        print(f"Voting round {round} starts.")
 
         # Ask each player
         for p in list(self.turn_order):
@@ -455,10 +464,10 @@ class Vampire_or_Peasant:
             choices_prompt_string = ", ".join(votable_players) + ", Pass"
 
             prompt = [
-                {"role": "system", "content": f"You are player {p}."},
+                {"role": "system", "content": f"Voting round {round} starts. You are player {p}."},
                 {"role": "system", "content": "Vote to kick a player or say 'Pass'."},
                 {"role": "system", "content": "Choices: " + choices_prompt_string},
-                {"role": "system", "content": "Output only the name of the player (or 'Pass') and nothing else."}
+                {"role": "system", "content": "Output only the name of the player (or 'Pass') and nothing else. Discussion time is over. Example output: 'Nina'"}
             ]
             msgs = self.build_conversation(p) + prompt
             choice = chat_completion(
@@ -468,17 +477,19 @@ class Vampire_or_Peasant:
                 player_model_map=self.player_model_map
             )
 
-            # Record vote privately
-            vote_records.append((p, choice))
-
             # Tally vote
             if choice == "Pass":
                 passes += 1
-            elif choice in votes:
+            elif choice in votable_players:
                 votes[choice] += 1
             else:
                 # Invalid choice treated as pass
+                print(f"Invalid choice by {p}: {choice} treated as pass.")
                 passes += 1
+                choice = "Pass"
+
+            # Record vote
+            vote_records.append((p, choice))
 
         # After all votes, publish results
         # Add each vote to shared history
@@ -531,7 +542,8 @@ class Vampire_or_Peasant:
             prompt = [
                 {"role": "system", "content": f"You are the Musketeer {kicked}."},
                 {"role": "system", "content": "You have been eliminated. Choose one player to eliminate."},
-                {"role": "system", "content": "Choices: " + ", ".join(self.turn_order) + ", Pass"}
+                {"role": "system", "content": "Choices: " + ", ".join(self.turn_order)},
+                {"role": "system", "content": "Output only the name of the player and nothing else. Example output: 'Nina'"}
             ]
             choice = chat_completion(
                 chat_history=prompt,
@@ -564,7 +576,7 @@ class Vampire_or_Peasant:
         prompt = [
             {"role": "system", "content": f"You are the observer {observer}."},
             {"role": "system", "content": "Choose one player to know if vampire or peasant."},
-            {"role": "system", "content": "Choices: " + ", ".join(others) + " Output only the name of the player and nothing else."}
+            {"role": "system", "content": "Choices: " + ", ".join(others) + " Output only the name of the player and nothing else. Example output: 'Nina'"}
         ]
 
         # Call the LLM
@@ -584,8 +596,8 @@ class Vampire_or_Peasant:
                 break
 
         if observed_player is None:
-            print(f"Invalid choice: {raw_output}.")
-            raise ValueError(f"Invalid observer choice: {raw_output}")
+            observed_player = random.choice(others)
+            print(f"{observer}'s model response was invalid: {raw_output}. The model did not provide a valid vote. Randomly choosing: {observed_player}")
 
         # Determine actual role feedback
         actual_role = self.roles[observed_player]
@@ -626,7 +638,7 @@ class Vampire_or_Peasant:
         prompt = [
             {"role": "system", "content": f"You are the doctor {doctor}."},
             {"role": "system", "content": "Choose one player to protect from vampire."},
-            {"role": "system", "content": "Choices: " + ", ".join(others) + " Output only the name of the player and nothing else."}
+            {"role": "system", "content": "Choices: " + ", ".join(others) + " Output only the name of the player and nothing else. Example output: 'Nina'"}
         ]
 
         # Call the LLM
@@ -639,16 +651,16 @@ class Vampire_or_Peasant:
         )
 
         # Extract the chosen name if the model responded with extra text
-        cleaned_choice = None
+        choice = None
         for name in others:
             if name.lower() in raw_output.lower():
-                cleaned_choice = name
+                choice = name
                 break
 
-        if cleaned_choice is None:
-            print(f"Invalid choice: {raw_output}.")
-            raise ValueError(f"Invalid doctor protection choice: {raw_output}")
-        protected_player = cleaned_choice
+        if choice is None:
+            choice = random.choice(others)
+            print(f"{doctor}'s model response was invalid: {raw_output}. The model did not provide a valid vote. Randomly choosing: {choice}")
+        protected_player = choice
 
         # Update self-protection flag
         if protected_player == doctor:
@@ -690,7 +702,7 @@ class Vampire_or_Peasant:
             self.protected_player = None
 
             # Moderator announces results and updates about the night actions
-            self.mod_announcing_updates("Night", victim)
+            self.mod_announcing_updates("Night", victim, round)
 
             finished, winner = self.check_game_end()
             if finished:
@@ -710,7 +722,7 @@ class Vampire_or_Peasant:
             print(f"Day: {kicked_player} has been voted out.")
 
             # Moderator announces results and updates about the poll results
-            self.mod_announcing_updates("Day", kicked_player)
+            self.mod_announcing_updates("Day", kicked_player, round)
 
             finished, winner = self.check_game_end(kicked=kicked_player)
             if finished:
@@ -724,15 +736,15 @@ class Vampire_or_Peasant:
 # --- example ---
 if __name__ == "__main__":
     load_dotenv()
-    players = ["John","Bob","Sarah","Alice", "Charlie", "David", "Eva", "Frank", "Grace", "Hannah"]
+    players = ["John","Sarah","Alice", "Charlie", "David", "Eva", "Frank"] # "Grace", "Hannah", "Bob"
     models = [
-        "openai/o4-mini-high",
+        # "openai/o4-mini-high",
         "openai/gpt-4.1",
-        "google/gemini-2.5-pro-preview",
+        # "google/gemini-2.5-pro-preview",
         "google/gemini-2.5-flash-preview:thinking",
         "qwen/qwen3-32b",
         "qwen/qwq-32b",
-        "anthropic/claude-3.7-sonnet",
+        #"anthropic/claude-3.7-sonnet:thinking",
         "x-ai/grok-3-mini-beta",
         "deepseek/deepseek-r1",
         "meta-llama/llama-4-maverick"
@@ -746,5 +758,3 @@ if __name__ == "__main__":
     game.run_game()
 
     # TODO: Structured response for voting mechanism
-    # PROBLEM: Some players behave like moderators, announcing fake poll results etc.
-    # TODO: Vampires votes must be put in the private history of the vampires.
