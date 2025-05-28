@@ -130,7 +130,6 @@ celerybeat.pid
 *.sage.py
 
 # Environments
-reddit_env/
 .env
 .venv
 env/
