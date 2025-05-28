@@ -69,11 +69,15 @@ def chat_completion(
         base_url=base_url,
     )
 
+    # Initialize request_params with common parameters
     request_params = {
         "model": model_to_use,
         "messages": chat_history.copy(), # Use a copy
-        "temperature": temperature,
     }
+
+    # Conditionally add the temperature parameter
+    if "o3" not in model_to_use:
+        request_params["temperature"] = temperature
 
     last_exception = None
     for attempt in range(MAX_RETRIES):
@@ -115,13 +119,13 @@ def chat_completion(
 if __name__ == "__main__":
     load_dotenv()
         # 1. Define the player name
-    player_to_use = "Alice"
+    player_to_use = "Player"
 
     # 2. Define the player_model_map
     model_map = {
         "Max": "google/gemini-2.5-pro-preview:nitro",
         "Sam": "anthropic/claude-3.7-sonnet", # Another player, different model
-        "Player": "openai/gpt-4.1", # Default player if name is "Player"
+        "Player": "openai/o3", # Default player if name is "Player"
         "Alice": "openai/o4-mini-high"
     }
 

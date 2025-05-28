@@ -299,6 +299,7 @@ class Vampire_or_Peasant:
                 print(f"{speaker}: {reply}")
                 print("---")
 
+        print("\n")
         return self.shared_history
     
     def vampires_voting(self, round: int) -> Optional[str]:
@@ -334,8 +335,9 @@ class Vampire_or_Peasant:
                     choice = name
                     break
             if choice is None:
+                print(f"Vampire {vamp} did not provide a valid vote. He/She said: {raw_output}")
                 choice = random.choice(peasants)
-                print(f"Vampire {vamp} did not provide a valid vote. Randomly choosing: {choice}")
+                print(f"Randomly choosing: {choice}")
             votes[choice] += 1
             
             # Append the vote to private history of all vampires
@@ -356,14 +358,14 @@ class Vampire_or_Peasant:
 
         if victim == self.protected_player:
             print(f"Vampires tried to kill {victim}, but they were protected by the doctor.")
-            print(f"Night {round} - Noone died tonight.")
+            print(f"Night {round} - Noone died tonight.\n")
             self.shared_history.append({"role": "system", "content": f"Night {round} - No one died tonight."})
             return None
 
         # Remove victim from game
         self.update_player_list(victim)
 
-        print(f"Night {round} - {victim} has been chosen as the victim.")
+        print(f"Night {round} - {victim} has been chosen as the victim.\n")
         return victim
 
 
@@ -419,7 +421,6 @@ class Vampire_or_Peasant:
         # Check Clown win condition first
         if kicked: # Ensure kicked is not empty or None
             kicked_role = self.const_roles.get(kicked)
-            print(kicked_role)
             if kicked_role == "Clown":
                 return True, "Clown"
 
@@ -517,7 +518,7 @@ class Vampire_or_Peasant:
 
         if len(top) > 1:
             self.shared_history.append({"role": "system", "content": "No one has been voted out."})
-            print("No one has been voted out.")
+            print("No one has been voted out.\n")
             return None
 
         kicked = top[0]
@@ -526,7 +527,7 @@ class Vampire_or_Peasant:
         self.update_player_list(kicked)
         # Append to public history
         self.shared_history.append({"role": "system", "content": f"{kicked} has been voted out."})
-        print(f"{kicked} has been voted out.")
+        print(f"{kicked} has been voted out.\n")
 
         # Check if the kicked player was the musketeer
         self.check_musketeer_action(kicked)
@@ -553,7 +554,7 @@ class Vampire_or_Peasant:
             )
             self.update_player_list(choice)
 
-            print(f"Day: The Musketeer {kicked} has chosen to eliminate {choice}.")
+            print(f"Day: The Musketeer {kicked} has chosen to eliminate {choice}.\n")
             self.shared_history.append(f"{kicked} is chosen to be kicked out. He/She was the musketeer and has chosen to eliminate {choice}.")
             return choice
     
@@ -719,7 +720,7 @@ class Vampire_or_Peasant:
             # Vote for a player to kick out
             kicked_player = self.vote(round)
 
-            print(f"Day: {kicked_player} has been voted out.")
+            print(f"Day: {kicked_player} has been voted out.\n")
 
             # Moderator announces results and updates about the poll results
             self.mod_announcing_updates("Day", kicked_player, round)
@@ -736,23 +737,46 @@ class Vampire_or_Peasant:
 # --- example ---
 if __name__ == "__main__":
     load_dotenv()
-    players = ["John","Sarah","Alice", "Charlie", "David", "Eva", "Frank"] # "Grace", "Hannah", "Bob"
+    
+    players = [
+    "Alice",
+    "Bob",
+    "Charlie",
+    "Daniel",
+    "David",
+    "Eva",
+    "Frank",
+    "Grace",
+    "Hannah",
+    "Isabella",
+    "James",
+    "John",
+    "Michael",
+    "Olivia",
+    "Sarah",
+    ]
+    
     models = [
-        # "openai/o4-mini-high",
         "openai/gpt-4.1",
-        # "google/gemini-2.5-pro-preview",
-        "google/gemini-2.5-flash-preview:thinking",
+        "openai/o4-mini-high",
+        "google/gemini-2.5-pro-preview",
+        "google/gemini-2.5-flash-preview-05-20:thinking",
         "qwen/qwen3-32b",
         "qwen/qwq-32b",
-        #"anthropic/claude-3.7-sonnet:thinking",
-        "x-ai/grok-3-mini-beta",
+        "qwen/qwen3-235b-a22b",
+        "anthropic/claude-3.7-sonnet",
+        "anthropic/claude-sonnet-4",
+        "anthropic/claude-opus-4",
+        "x-ai/grok-3-beta",
         "deepseek/deepseek-r1",
-        "meta-llama/llama-4-maverick"
+        "deepseek/deepseek-chat-v3-0324",
+        "meta-llama/llama-4-maverick",
+        "meta-llama/llama-4-scout"
     ]
 
     game = Vampire_or_Peasant(players, models, "game_rules.yaml")
     game.introduce_players()
-    game.assign_roles(vampire_population=2)
+    game.assign_roles(vampire_population=3)
 
     # run the full game loop
     game.run_game()
