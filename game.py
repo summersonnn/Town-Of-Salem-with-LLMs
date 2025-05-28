@@ -6,30 +6,6 @@ import yaml
 
 from llm_call import chat_completion  
 
-# def sanitize_reply(reply: str) -> str:
-#     """
-#     Removes any preceding <|im_start|> text in the reply.
-#     Then, removes a single pair of surrounding double-quotation marks from the
-#     (potentially modified) reply if it starts and ends with a double-quote (").
-#     Otherwise, returns the (potentially modified) reply.
-#     """
-#     im_start_token = "<|im_start|>\n"
-
-#     # Step 1: Remove preceding <|im_start|> text, if present.
-#     # This handles "any preceding <|im_start|> text". If the token is there at the start,
-#     # it's removed. If not, the string remains unchanged.
-#     if reply.startswith(im_start_token):
-#         reply = reply[len(im_start_token):]
-
-#     # Step 2: Remove a single pair of surrounding double-quotation marks
-#     # from the (potentially modified) reply. This is the original functionality.
-#     if len(reply) >= 2 and reply.startswith('"') and reply.endswith('"'):
-#         return reply[1:-1]
-    
-#     # If quotes were not removed (either not present or string too short),
-#     # return the reply, which might have had <|im_start|> removed or might be original.
-#     return reply
-
 class Vampire_or_Peasant:
     def __init__(
         self,
@@ -321,25 +297,16 @@ class Vampire_or_Peasant:
                 {"role": "system", "content": "Choose one peasant to kill tonight."},
                 {"role": "system", "content": "Choices: " + ", ".join(peasants) + "Reply only with the name of the chosen peasant. Example output: 'Nina'"}
             ]
-            raw_output = chat_completion(
+            choice = chat_completion(
                 chat_history=prompt,
                 temperature=self.temperature,
                 player_name=vamp,
-                player_model_map=self.player_model_map
-            )
+                player_model_map=self.player_model_map,
+                is_a_decision=True,
+                choices=peasants
+            ).vote
             
-            # Extract the chosen name if the model responded with extra text
-            choice = None
-            for name in peasants:
-                if name.lower() in raw_output.lower():
-                    choice = name
-                    break
-            if choice is None:
-                print(f"Vampire {vamp} did not provide a valid vote. He/She said: {raw_output}")
-                choice = random.choice(peasants)
-                print(f"Randomly choosing: {choice}")
             votes[choice] += 1
-            
             # Append the vote to private history of all vampires
             for vampire in vampires:
                 self.private_histories[vampire].append({"role": "system", "content": f"{vamp}, as a vampire, voted to kill {choice} in the night {round}."})
@@ -475,22 +442,19 @@ class Vampire_or_Peasant:
                 chat_history=msgs,
                 temperature=self.temperature,
                 player_name=p,
-                player_model_map=self.player_model_map
-            )
+                player_model_map=self.player_model_map,
+                is_a_decision=True,
+                choices=votable_players + ["Pass"]
+            ).vote
 
-            # Tally vote
             if choice == "Pass":
                 passes += 1
-            elif choice in votable_players:
-                votes[choice] += 1
             else:
-                # Invalid choice treated as pass
-                print(f"Invalid choice by {p}: {choice} treated as pass.")
-                passes += 1
-                choice = "Pass"
+                votes[choice] += 1
 
             # Record vote
             vote_records.append((p, choice))
+        print(votes)
 
         # After all votes, publish results
         # Add each vote to shared history
@@ -550,8 +514,10 @@ class Vampire_or_Peasant:
                 chat_history=prompt,
                 temperature=self.temperature,
                 player_name=kicked,
-                player_model_map=self.player_model_map
-            )
+                player_model_map=self.player_model_map,
+                is_a_decision=True,
+                choices=self.turn_order
+            ).vote
             self.update_player_list(choice)
 
             print(f"Day: The Musketeer {kicked} has chosen to eliminate {choice}.\n")
@@ -582,23 +548,14 @@ class Vampire_or_Peasant:
 
         # Call the LLM
         msgs = self.build_conversation(observer) + prompt
-        raw_output = chat_completion(
+        observed_player = chat_completion(
             chat_history=msgs,
             temperature=self.temperature,
             player_name=observer,
-            player_model_map=self.player_model_map
-        )
-
-        # Extract the chosen name if the model responded with extra text
-        observed_player = None
-        for name in others:
-            if name.lower() in raw_output.lower():
-                observed_player = name
-                break
-
-        if observed_player is None:
-            observed_player = random.choice(others)
-            print(f"{observer}'s model response was invalid: {raw_output}. The model did not provide a valid vote. Randomly choosing: {observed_player}")
+            player_model_map=self.player_model_map,
+            is_a_decision=True,
+            choices=others
+        ).vote
 
         # Determine actual role feedback
         actual_role = self.roles[observed_player]
@@ -644,24 +601,14 @@ class Vampire_or_Peasant:
 
         # Call the LLM
         msgs = self.build_conversation(doctor) + prompt
-        raw_output = chat_completion(
+        protected_player = chat_completion(
             chat_history=msgs,
             temperature=self.temperature,
             player_name=doctor,
-            player_model_map=self.player_model_map
-        )
-
-        # Extract the chosen name if the model responded with extra text
-        choice = None
-        for name in others:
-            if name.lower() in raw_output.lower():
-                choice = name
-                break
-
-        if choice is None:
-            choice = random.choice(others)
-            print(f"{doctor}'s model response was invalid: {raw_output}. The model did not provide a valid vote. Randomly choosing: {choice}")
-        protected_player = choice
+            player_model_map=self.player_model_map,
+            is_a_decision=True,
+            choices=others
+        ).vote
 
         # Update self-protection flag
         if protected_player == doctor:
@@ -742,41 +689,40 @@ if __name__ == "__main__":
     "Alice",
     "Bob",
     "Charlie",
-    "Daniel",
     "David",
     "Eva",
     "Frank",
-    "Grace",
-    "Hannah",
-    "Isabella",
-    "James",
-    "John",
-    "Michael",
-    "Olivia",
-    "Sarah",
+    # "Grace",
+    # "Hannah",
+    # "Isabella",
+    # "James",
+    # "John",
+    # "Michael",
+    # "Olivia",
+    # "Sarah",
     ]
     
     models = [
-        "openai/gpt-4.1",
+        #"openai/gpt-4.1",
         "openai/o4-mini-high",
         "google/gemini-2.5-pro-preview",
         "google/gemini-2.5-flash-preview-05-20:thinking",
         "qwen/qwen3-32b",
-        "qwen/qwq-32b",
-        "qwen/qwen3-235b-a22b",
-        "anthropic/claude-3.7-sonnet",
-        "anthropic/claude-sonnet-4",
-        "anthropic/claude-opus-4",
+        # "qwen/qwq-32b", removed due to not supporting instructor
+        # "qwen/qwen3-235b-a22b",
+        # "anthropic/claude-3.7-sonnet",
+        # "anthropic/claude-sonnet-4",
+        # "anthropic/claude-opus-4",
         "x-ai/grok-3-beta",
-        "deepseek/deepseek-r1",
-        "deepseek/deepseek-chat-v3-0324",
-        "meta-llama/llama-4-maverick",
+        # "deepseek/deepseek-r1",
+        # "deepseek/deepseek-chat-v3-0324",
+        # "meta-llama/llama-4-maverick",
         "meta-llama/llama-4-scout"
     ]
 
     game = Vampire_or_Peasant(players, models, "game_rules.yaml")
     game.introduce_players()
-    game.assign_roles(vampire_population=3)
+    game.assign_roles(vampire_population=1)
 
     # run the full game loop
     game.run_game()

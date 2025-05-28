@@ -1,19 +1,29 @@
 import os
-import time # For retry delay
+import time
 from typing import List, Dict, Optional
-from openai import OpenAI # type: ignore
+from openai import OpenAI
+import instructor
+from pydantic import BaseModel, create_model
+from typing import Literal
 from dotenv import load_dotenv
 
 # Define retry constants
 MAX_RETRIES = 3
 RETRY_DELAY_SECONDS = 2 # Simple fixed delay
 
+# Constrain vote to predefined options
+class Vote(BaseModel):
+    reasoning: str
+    vote: Literal["Alice", "Bob", "Charlie", "Cem"]
+
 def chat_completion(
     chat_history: List[Dict[str, str]],
     temperature: float = 0.2,
     player_name: str = "Player",
     player_model_map: Optional[Dict[str, str]] = None,
-) -> str:
+    is_a_decision: bool = False,
+    choices: List[str] = None
+) -> str | Vote:
     """
     Unified chat completion function using OpenAI-compatible API.
     Retries the API call in case of transient errors.
@@ -68,22 +78,37 @@ def chat_completion(
         api_key=api_key,
         base_url=base_url,
     )
-
+    
+    # Special case for llama scout. Instructor fails with nitro probably due to provider
+    if "scout" in model_to_use and model_to_use.endswith(":nitro"):
+        model_to_use = model_to_use[:-len(":nitro")]
+    
     # Initialize request_params with common parameters
     request_params = {
         "model": model_to_use,
         "messages": chat_history.copy(), # Use a copy
+        "temperature": temperature
     }
 
-    # Conditionally add the temperature parameter
-    if "o3" not in model_to_use:
-        request_params["temperature"] = temperature
+    if is_a_decision:
+        # Enable instructor patches for OpenAI client
+        client = instructor.from_openai(client, mode=instructor.Mode.TOOLS)
+        
+        if not choices:
+            raise ValueError("choices must be provided when is_a_decision is True")
 
+        DynamicVote = create_model(
+            "DynamicVote",
+            reasoning=(str, ...),
+            vote=(Literal[tuple(choices)], ...)  # Dynamically constrain vote
+        )
+        request_params["response_model"] = DynamicVote
+        
     last_exception = None
     for attempt in range(MAX_RETRIES):
         try:
             response = client.chat.completions.create(**request_params)
-            return response.choices[0].message.content
+            return response.choices[0].message.content if not is_a_decision else response
         except Exception as e:
             last_exception = e
             print(f"Error during chat completion on attempt {attempt + 1}/{MAX_RETRIES}: {type(e).__name__}: {str(e)}")
@@ -119,20 +144,17 @@ def chat_completion(
 if __name__ == "__main__":
     load_dotenv()
         # 1. Define the player name
-    player_to_use = "Player"
+    player_to_use = "Max"
 
     # 2. Define the player_model_map
     model_map = {
-        "Max": "google/gemini-2.5-pro-preview:nitro",
-        "Sam": "anthropic/claude-3.7-sonnet", # Another player, different model
-        "Player": "openai/o3", # Default player if name is "Player"
-        "Alice": "openai/o4-mini-high"
+        "Max": "meta-llama/llama-4-scout"
     }
 
     # 3. Create a sample chat history
     sample_history = [
         {"role": "system", "content": "You are an assistant."},
-        {"role": "user", "content": "What is the meaning of life?"},
+        {"role": "user", "content": "Alice is a sad face. Bob is a pervert. Charlie is foul mouthed. Cem is an alcoholic. Who are you choosing to vote out and why?"},
     ]
 
     # 4. Call the function
@@ -141,7 +163,9 @@ if __name__ == "__main__":
         chat_history=sample_history,
         player_name=player_to_use,
         player_model_map=model_map,
-        temperature=0.7
+        temperature=0.7,
+        is_a_decision=True,
+        choices=["Alice","Bob", "Charlie", "Cem"]
     )
     print(f"\nModel ({model_map[player_to_use]}) response for {player_to_use}:")
     print(response_content)
