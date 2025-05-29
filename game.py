@@ -692,14 +692,14 @@ if __name__ == "__main__":
     "David",
     "Eva",
     "Frank",
-    # "Grace",
-    # "Hannah",
-    # "Isabella",
-    # "James",
-    # "John",
-    # "Michael",
-    # "Olivia",
-    # "Sarah",
+    "Grace",
+    "Hannah",
+    "Isabella",
+    "James",
+    "John",
+    "Michael",
+    "Olivia",
+    "Sarah",
     ]
     
     models = [
@@ -722,7 +722,7 @@ if __name__ == "__main__":
 
     game = Vampire_or_Peasant(players, models, "game_rules.yaml")
     game.introduce_players()
-    game.assign_roles(vampire_population=1)
+    game.assign_roles(vampire_population=3)
 
     # run the full game loop
     game.run_game()
