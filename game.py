@@ -700,6 +700,7 @@ if __name__ == "__main__":
     "Michael",
     "Olivia",
     "Sarah",
+    "Tom"
     ]
     
     models = [
@@ -714,9 +715,10 @@ if __name__ == "__main__":
         "anthropic/claude-opus-4",
         "x-ai/grok-3-beta",
         "meta-llama/llama-4-maverick",
-        "meta-llama/llama-4-scout"
+        "meta-llama/llama-4-scout",
         "deepseek/deepseek-chat-v3-0324",
-        "deepseek/deepseek-r1" 
+        "deepseek/deepseek-r1",
+        "deepseek/deepseek-r1-distill-llama-70b"
         # "qwen/qwq-32b", removed due to not supporting instructor
     ]
 
