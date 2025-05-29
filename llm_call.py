@@ -87,12 +87,13 @@ def chat_completion(
     request_params = {
         "model": model_to_use,
         "messages": chat_history.copy(), # Use a copy
-        "temperature": temperature
+        "temperature": temperature,
+
     }
 
     if is_a_decision:
         # Enable instructor patches for OpenAI client
-        client = instructor.from_openai(client, mode=instructor.Mode.TOOLS)
+        client = instructor.from_openai(client)
         
         if not choices:
             raise ValueError("choices must be provided when is_a_decision is True")
@@ -148,7 +149,7 @@ if __name__ == "__main__":
 
     # 2. Define the player_model_map
     model_map = {
-        "Max": "meta-llama/llama-4-scout"
+        "Max": "deepseek/deepseek-r1-0528",
     }
 
     # 3. Create a sample chat history
