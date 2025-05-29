@@ -703,21 +703,21 @@ if __name__ == "__main__":
     ]
     
     models = [
-        #"openai/gpt-4.1",
+        "openai/gpt-4.1",
         "openai/o4-mini-high",
         "google/gemini-2.5-pro-preview",
         "google/gemini-2.5-flash-preview-05-20:thinking",
         "qwen/qwen3-32b",
-        # "qwen/qwq-32b", removed due to not supporting instructor
-        # "qwen/qwen3-235b-a22b",
-        # "anthropic/claude-3.7-sonnet",
-        # "anthropic/claude-sonnet-4",
-        # "anthropic/claude-opus-4",
+        "qwen/qwen3-235b-a22b",
+        "anthropic/claude-3.7-sonnet",
+        "anthropic/claude-sonnet-4",
+        "anthropic/claude-opus-4",
         "x-ai/grok-3-beta",
-        # "deepseek/deepseek-r1",
-        # "deepseek/deepseek-chat-v3-0324",
-        # "meta-llama/llama-4-maverick",
+        "meta-llama/llama-4-maverick",
         "meta-llama/llama-4-scout"
+        "deepseek/deepseek-chat-v3-0324",
+        "deepseek/deepseek-r1" 
+        # "qwen/qwq-32b", removed due to not supporting instructor
     ]
 
     game = Vampire_or_Peasant(players, models, "game_rules.yaml")
@@ -727,4 +727,4 @@ if __name__ == "__main__":
     # run the full game loop
     game.run_game()
 
-    # TODO: Structured response for voting mechanism
+    # deepseekr1 without structured output

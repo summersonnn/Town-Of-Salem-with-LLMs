@@ -79,8 +79,9 @@ def chat_completion(
         base_url=base_url,
     )
     
-    # Special case for llama scout. Instructor fails with nitro probably due to provider
-    if "scout" in model_to_use and model_to_use.endswith(":nitro"):
+    # Special case for scout and r1. the fastest is problematic, so we remove the suffix
+    if ("scout" in model_to_use or "deepseek" in model_to_use) and \
+    model_to_use.endswith(":nitro"):
         model_to_use = model_to_use[:-len(":nitro")]
     
     # Initialize request_params with common parameters
@@ -90,6 +91,11 @@ def chat_completion(
         "temperature": temperature,
 
     }
+    
+    # deepseek r1 seems to only work with the provider Novita. Others fail at generating structured outputs
+    if model_to_use=='deepseek/deepseek-r1' and "extra_body" not in request_params:
+        request_params["extra_body"] = {}
+        request_params["extra_body"]["provider"] = {"order": ['Novita']}
 
     if is_a_decision:
         # Enable instructor patches for OpenAI client
@@ -149,13 +155,13 @@ if __name__ == "__main__":
 
     # 2. Define the player_model_map
     model_map = {
-        "Max": "deepseek/deepseek-r1-0528",
+        "Max": "qwen/qwq-32b",
     }
 
     # 3. Create a sample chat history
     sample_history = [
         {"role": "system", "content": "You are an assistant."},
-        {"role": "user", "content": "Alice is a sad face. Bob is a pervert. Charlie is foul mouthed. Cem is an alcoholic. Who are you choosing to vote out and why?"},
+        {"role": "user", "content": "Alice is a liar. Bob is a pervert. Charlie is foul mouthed. Cem is an alcoholic. Who are you choosing to vote out and why?"},
     ]
 
     # 4. Call the function
@@ -164,7 +170,7 @@ if __name__ == "__main__":
         chat_history=sample_history,
         player_name=player_to_use,
         player_model_map=model_map,
-        temperature=0.7,
+        temperature=0.2,
         is_a_decision=True,
         choices=["Alice","Bob", "Charlie", "Cem"]
     )
