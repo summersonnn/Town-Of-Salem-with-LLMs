@@ -728,5 +728,3 @@ if __name__ == "__main__":
 
     # run the full game loop
     game.run_game()
-
-    # deepseekr1 without structured output
