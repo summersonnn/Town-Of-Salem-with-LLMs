@@ -89,13 +89,22 @@ def chat_completion(
         "model": model_to_use,
         "messages": chat_history.copy(), # Use a copy
         "temperature": temperature,
-
     }
     
     # deepseek r1 seems to only work with the provider Novita. Others fail at generating structured outputs
     if model_to_use=='deepseek/deepseek-r1' and "extra_body" not in request_params:
         request_params["extra_body"] = {}
-        request_params["extra_body"]["provider"] = {"order": ['Novita']}
+        request_params["extra_body"]["provider"] = {"order": ['Novita','DeepInfra']}
+
+    if "235" in model_to_use and "extra_body" not in request_params:
+        request_params["extra_body"] = {}
+        request_params["extra_body"]["provider"] = {"order": ['Kluster']}
+
+    # Enable extended thinking for Anthropic models
+    if "anthropic" in model_to_use and "extra_body" not in request_params:
+        request_params["extra_body"] = {}
+        request_params["extra_body"]["thinking"] = {"type": "enabled", "budget_tokens": 1024}
+
 
     if is_a_decision:
         # Enable instructor patches for OpenAI client
@@ -155,7 +164,7 @@ if __name__ == "__main__":
 
     # 2. Define the player_model_map
     model_map = {
-        "Max": "deepseek/deepseek-r1-distill-llama-70b",
+        "Max": "deepseek/deepseek-chat-v3-0324",
     }
 
     # 3. Create a sample chat history

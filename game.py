@@ -454,6 +454,7 @@ class Vampire_or_Peasant:
 
             # Record vote
             vote_records.append((p, choice))
+            print(f"{p} voted for {choice}.")
         print(votes)
 
         # After all votes, publish results
@@ -691,40 +692,43 @@ if __name__ == "__main__":
     "Charlie",
     "David",
     "Eva",
-    "Frank",
-    "Grace",
-    "Hannah",
-    "Isabella",
-    "James",
-    "John",
-    "Michael",
-    "Olivia",
-    "Sarah",
-    "Tom"
-    ]
+    "Frank" ]
+    # "Grace",
+    # "Hannah",
+    # "Isabella",
+    # "James",
+    # "John",
+    # "Michael",
+    # "Olivia",
+    # "Sarah",
+    # "Tom"
+    # ]
     
     models = [
-        "openai/gpt-4.1",
-        "openai/o4-mini-high",
-        "google/gemini-2.5-pro-preview",
+        #"openai/gpt-4.1",
+        #"openai/o1",
+        #"google/gemini-2.5-pro-preview",
         "google/gemini-2.5-flash-preview-05-20:thinking",
         "qwen/qwen3-32b",
         "qwen/qwen3-235b-a22b",
-        "anthropic/claude-3.7-sonnet",
-        "anthropic/claude-sonnet-4",
-        "anthropic/claude-opus-4",
-        "x-ai/grok-3-beta",
-        "meta-llama/llama-4-maverick",
-        "meta-llama/llama-4-scout",
-        "deepseek/deepseek-chat-v3-0324",
+        # "anthropic/claude-3.7-sonnet",
+        # "anthropic/claude-sonnet-4",
+        # "anthropic/claude-opus-4",
+        # "x-ai/grok-3-beta",
+        # "meta-llama/llama-4-maverick",
+        # "meta-llama/llama-4-scout",
+        "deepseek/deepseek-chat-v3-0324",  # test with this more
         "deepseek/deepseek-r1",
         "deepseek/deepseek-r1-distill-llama-70b"
+        # Total of 15 models. Add one more and play with two groups of 8 players.
+
+        # "openai/o4-mini-high", Error: something about reasoning summaries although never wanted such a summary ?
         # "qwen/qwq-32b", removed due to not supporting instructor
     ]
 
     game = Vampire_or_Peasant(players, models, "game_rules.yaml")
     game.introduce_players()
-    game.assign_roles(vampire_population=3)
+    game.assign_roles(vampire_population=1)
 
     # run the full game loop
     game.run_game()

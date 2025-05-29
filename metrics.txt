@@ -17,3 +17,5 @@
 # Peasants win percentage - total and per model/name
 # Clown win percentage - total and per model/name
 
+# Points per dollar (points/lowest cost at openrouter)
+    -> Treat cost as average of input and output cost
