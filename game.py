@@ -4,7 +4,8 @@ from typing import List, Dict, Optional, Any, Tuple
 from dotenv import load_dotenv
 import yaml
 
-from llm_call import chat_completion  
+from llm_call import chat_completion
+from game_logs import GameLogger 
 
 class Vampire_or_Peasant:
     def __init__(
@@ -20,6 +21,11 @@ class Vampire_or_Peasant:
         """
         if len(available_models) < len(player_names):
             raise ValueError("Not enough distinct models for each player.")
+        self.rules_file_path = rules_file_path
+        self.logger = GameLogger()
+        
+        # Store original player names for logging setup
+        self.initial_player_names = player_names[:]
 
         # Assign unique models with :nitro suffix
         # suffixed = [m + ":nitro" for m in random.sample(available_models, len(player_names))]
@@ -84,21 +90,24 @@ class Vampire_or_Peasant:
         """Announce players once at game start."""
         names = ", ".join(self.turn_order)
 
-        # Append system messages to shared history
+        # Game rules announcement
+        rules_message_content = "Game rules: " + self.rules["content"] + ". "
         self.shared_history.append({
             "role": "system",
-            "content": (
-                "Game rules: " + self.rules["content"] + ". "
-        )})
-        
-       # Append system messages to shared history (welcome message)
-        self.shared_history.append({
-            "role": "system",
-            "content": (
-                "Hello everyone. I am the moderator. Players are: " + names + ". "
-                "Roles assigned. Game begins now."
-            )
+            "content": rules_message_content
         })
+        
+        # Welcome message announcement
+        welcome_message_content = (
+            "Hello everyone. I am the moderator. Players are: " + names + ". "
+            "Roles assigned. Game begins now."
+        )
+        self.shared_history.append({
+            "role": "system",
+            "content": welcome_message_content
+        })
+        self.logger.log_moderator_announcement(welcome_message_content)
+        self.logger.save_log()
 
 
     def assign_roles(self, vampire_population: int = 1) -> None:
@@ -178,6 +187,16 @@ class Vampire_or_Peasant:
             self.roles[player] = "Peasant"
 
         self.const_roles = self.roles.copy() # Store the original roles for reference
+        
+        # Log game setup and roles
+        self.logger.log_game_setup_and_roles(
+            player_names=self.initial_player_names, # Original list of players
+            player_model_map=self.player_model_map,
+            roles_map=self.const_roles,
+            rules_file=self.rules_file_path,
+            initial_vampire_population=vampire_population
+        )
+        self.logger.save_log()
 
         # --- Update private_histories ---
         # self.roles is now fully populated.
@@ -695,8 +714,8 @@ if __name__ == "__main__":
     #"Shaw",
     #"Elias",
     #"Greer",
-    #"Chuck",
-    #"Sarah",
+    "Chuck",
+    "Sarah",
     "Casey",
     "Morgan",
     "Jeff",
@@ -709,11 +728,11 @@ if __name__ == "__main__":
         #"openai/gpt-4.1",
         #"openai/o1",
         #"google/gemini-2.5-pro-preview",
-        #"google/gemini-2.5-flash-preview-05-20:thinking",
+        "google/gemini-2.5-flash-preview-05-20:thinking",
         "qwen/qwen3-32b",
         #"qwen/qwen3-235b-a22b",
         #"qwen/qwq-32b",
-        #"anthropic/claude-3.7-sonnet",
+        "anthropic/claude-3.7-sonnet",
         #"anthropic/claude-sonnet-4",
         #"anthropic/claude-opus-4",
         "x-ai/grok-3-beta",

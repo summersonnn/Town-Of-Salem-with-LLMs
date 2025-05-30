@@ -24,29 +24,7 @@ def chat_completion(
     is_a_decision: bool = False,
     choices: List[str] = None
 ) -> str | Vote:
-    """
-    Unified chat completion function using OpenAI-compatible API.
-    Retries the API call in case of transient errors.
 
-    Args:
-        chat_history: A list of message dictionaries representing the conversation history.
-        temperature: The sampling temperature for the completion. Defaults to 0.2.
-        player_name: The name of the player for whom the completion is generated.
-                     Used to look up a specific model in `player_model_map`. Defaults to "Player".
-        player_model_map: An optional dictionary mapping player names to specific
-                          model names (e.g., {"John": "meta-llama/llama-3.3-70b-instruct:nitro"}).
-                          If a mapping exists for the given `player_name`, that model
-                          will be used.
-
-    Returns:
-        The content of the generated message.
-        
-    Raises:
-        AttributeError: If LLM_BASE_URL or LLM_API_KEY env vars are not set.
-        ValueError: If a model cannot be determined for the player based on `player_model_map`
-                    (e.g., map is None, or player not in map, and no other fallback is configured).
-        Any exception from the OpenAI client during API call, after all retries have failed.
-    """
     base_url_env = os.getenv("LLM_BASE_URL")
     api_key_env = os.getenv("LLM_API_KEY")
 
@@ -122,12 +100,6 @@ def chat_completion(
             
             if attempt < MAX_RETRIES - 1:
                 print(f"Waiting {RETRY_DELAY_SECONDS} seconds before next retry...")
-                # Remove the :nitro suffix if present in the model name. Also change the request params
-                # to use the modified model name.
-                if model_to_use.endswith(":nitro"):
-                    model_to_use = model_to_use[:-len(":nitro")]
-                    request_params["model"] = model_to_use
-                    print(f"Will be tried with the model name without the :nitro suffix. So: '{model_to_use}'")
                 time.sleep(RETRY_DELAY_SECONDS)
             else:
                 # This is the last attempt

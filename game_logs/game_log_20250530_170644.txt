@@ -1,0 +1,18 @@
+--- Game Log: 20250530_170644 ---
+--- Log started at: 2025-05-30 17:06:44 ---
+==================================================
+[2025-05-30 17:06:44] MODERATOR: Hello everyone. I am the moderator. Players are: Chuck, Sarah, Casey, Morgan, Jeff, Lester, Devon, Ellie. Roles assigned. Game begins now.
+[2025-05-30 17:06:44] GAME SETUP & INITIAL ROLES:
+  Rules File: game_rules.yaml
+  Requested Vampire Population: 1
+  Actual Vampires Assigned: 1
+  Players, Roles, and Models:
+    - Chuck: Vampire (Model: deepseek/deepseek-r1-0528-qwen3-8b)
+    - Sarah: Doctor (Model: meta-llama/llama-4-scout)
+    - Casey: Peasant (Model: anthropic/claude-3.7-sonnet)
+    - Morgan: Musketeer (Model: meta-llama/llama-4-maverick)
+    - Jeff: Peasant (Model: qwen/qwen3-32b)
+    - Lester: Clown (Model: x-ai/grok-3-beta)
+    - Devon: Peasant (Model: google/gemini-2.5-flash-preview-05-20:thinking)
+    - Ellie: Observer (Model: x-ai/grok-3-mini-beta)
+--------------------
