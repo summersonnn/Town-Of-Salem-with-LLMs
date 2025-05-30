@@ -273,7 +273,7 @@ class Vampire_or_Peasant:
                     "content": reply
                 })
                 print(f"{speaker}: {reply}")
-                print("---")
+                print("------------------------------------------------------------------------------------")
 
         print("\n")
         return self.shared_history
@@ -692,17 +692,17 @@ if __name__ == "__main__":
     "Charlie",
     "David",
     "Eva",
-    "Frank" ]
-    # "Grace",
+    "Frank",
+    "Grace",
     # "Hannah",
     # "Isabella",
     # "James",
-    # "John",
+    "John",
     # "Michael",
     # "Olivia",
     # "Sarah",
     # "Tom"
-    # ]
+    ]
     
     models = [
         #"openai/gpt-4.1",
@@ -711,24 +711,21 @@ if __name__ == "__main__":
         "google/gemini-2.5-flash-preview-05-20:thinking",
         "qwen/qwen3-32b",
         "qwen/qwen3-235b-a22b",
+        "qwen/qwq-32b",
         # "anthropic/claude-3.7-sonnet",
         # "anthropic/claude-sonnet-4",
         # "anthropic/claude-opus-4",
         # "x-ai/grok-3-beta",
-        # "meta-llama/llama-4-maverick",
+        "meta-llama/llama-4-maverick",
         # "meta-llama/llama-4-scout",
-        "deepseek/deepseek-chat-v3-0324",  # test with this more
-        "deepseek/deepseek-r1",
-        "deepseek/deepseek-r1-distill-llama-70b"
-        # Total of 15 models. Add one more and play with two groups of 8 players.
-
-        # "openai/o4-mini-high", Error: something about reasoning summaries although never wanted such a summary ?
-        # "qwen/qwq-32b", removed due to not supporting instructor
+        "deepseek/deepseek-chat-v3-0324",  # confuses everyone with starting poll and endng days
+        "deepseek/deepseek-r1-0528",
+        "deepseek/deepseek-r1-0528-qwen3-8b"
     ]
 
     game = Vampire_or_Peasant(players, models, "game_rules.yaml")
     game.introduce_players()
-    game.assign_roles(vampire_population=1)
+    game.assign_roles(vampire_population=2)
 
     # run the full game loop
     game.run_game()

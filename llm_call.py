@@ -79,8 +79,8 @@ def chat_completion(
         base_url=base_url,
     )
     
-    # Special case for scout and r1. the fastest is problematic, so we remove the suffix
-    if ("scout" in model_to_use or "deepseek" in model_to_use) and \
+    # Special case for scout, deepseek, and qwen 235. the fastest is problematic, so we remove the suffix
+    if any(key in model_to_use for key in ["scout", "deepseek", "235"]) and \
     model_to_use.endswith(":nitro"):
         model_to_use = model_to_use[:-len(":nitro")]
     
@@ -91,24 +91,15 @@ def chat_completion(
         "temperature": temperature,
     }
     
-    # deepseek r1 seems to only work with the provider Novita. Others fail at generating structured outputs
-    if model_to_use=='deepseek/deepseek-r1' and "extra_body" not in request_params:
-        request_params["extra_body"] = {}
-        request_params["extra_body"]["provider"] = {"order": ['Novita','DeepInfra']}
-
-    if "235" in model_to_use and "extra_body" not in request_params:
-        request_params["extra_body"] = {}
-        request_params["extra_body"]["provider"] = {"order": ['Kluster']}
-
     # Enable extended thinking for Anthropic models
     if "anthropic" in model_to_use and "extra_body" not in request_params:
         request_params["extra_body"] = {}
-        request_params["extra_body"]["thinking"] = {"type": "enabled", "budget_tokens": 1024}
+        request_params["extra_body"]["thinking"] = {"type": "enabled", "budget_tokens": 2048}
 
 
     if is_a_decision:
         # Enable instructor patches for OpenAI client
-        client = instructor.from_openai(client)
+        client = instructor.from_openai(client, mode=instructor.Mode.JSON)
         
         if not choices:
             raise ValueError("choices must be provided when is_a_decision is True")
@@ -164,7 +155,7 @@ if __name__ == "__main__":
 
     # 2. Define the player_model_map
     model_map = {
-        "Max": "deepseek/deepseek-chat-v3-0324",
+        "Max": "qwen/qwq-32b",
     }
 
     # 3. Create a sample chat history
