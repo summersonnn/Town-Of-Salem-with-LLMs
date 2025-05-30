@@ -750,4 +750,9 @@ if __name__ == "__main__":
     # run the full game loop
     game.run_game()
     
-    # Check: How to avoid players to behave like a mod? Maybe put a "user" tag in the context history?
+    # Finish game logging for every step.
+    # Implement a mechanism to randomly select 10 models and 10 names to start game.
+    # Implement error handling to never stop a game.
+    # Implement points system
+    # Implement distinct point logs for every model and name. It includes how many times peasant, vampire, won, points etc.
+    # Implement a run with 100 games, all running in a loop. Log files will be named Game 1, Game 2 etc.
