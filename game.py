@@ -687,45 +687,46 @@ if __name__ == "__main__":
     load_dotenv()
     
     players = [
-    "Alice",
-    "Bob",
-    "Charlie",
-    "David",
-    "Eva",
-    "Frank",
-    "Grace",
-    # "Hannah",
-    # "Isabella",
-    # "James",
-    "John",
-    # "Michael",
-    # "Olivia",
-    # "Sarah",
-    # "Tom"
+    "Finch",
+    "Reese",
+    "Carter",
+    "Fusco",
+    "Root",
+    "Shaw",
+    "Elias",
+    "Greer",
+    "Chuck",
+    "Sarah",
+    "Casey",
+    "Morgan",
+    "Jeff",
+    "Lester",
+    "Devon",
+    "Ellie"
     ]
     
     models = [
-        #"openai/gpt-4.1",
-        #"openai/o1",
-        #"google/gemini-2.5-pro-preview",
+        "openai/gpt-4.1",
+        "openai/o1",
+        "google/gemini-2.5-pro-preview",
         "google/gemini-2.5-flash-preview-05-20:thinking",
         "qwen/qwen3-32b",
         "qwen/qwen3-235b-a22b",
         "qwen/qwq-32b",
-        # "anthropic/claude-3.7-sonnet",
-        # "anthropic/claude-sonnet-4",
-        # "anthropic/claude-opus-4",
-        # "x-ai/grok-3-beta",
+        "anthropic/claude-3.7-sonnet",
+        "anthropic/claude-sonnet-4",
+        "anthropic/claude-opus-4",
+        "x-ai/grok-3-beta",
+        "x-ai/grok-3-mini-beta",
         "meta-llama/llama-4-maverick",
-        # "meta-llama/llama-4-scout",
-        "deepseek/deepseek-chat-v3-0324",  # confuses everyone with starting poll and endng days
-        "deepseek/deepseek-r1-0528",
-        "deepseek/deepseek-r1-0528-qwen3-8b"
+        "meta-llama/llama-4-scout",
+        "deepseek/deepseek-r1-0528",  # takes too long time. produces too many tokens
+        "deepseek/deepseek-r1-0528-qwen3-8b", 
     ]
 
     game = Vampire_or_Peasant(players, models, "game_rules.yaml")
     game.introduce_players()
-    game.assign_roles(vampire_population=2)
+    game.assign_roles(vampire_population=3)
 
     # run the full game loop
     game.run_game()

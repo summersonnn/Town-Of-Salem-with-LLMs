@@ -155,7 +155,7 @@ if __name__ == "__main__":
 
     # 2. Define the player_model_map
     model_map = {
-        "Max": "qwen/qwq-32b",
+        "Max": "mistralai/mistral-medium-3",
     }
 
     # 3. Create a sample chat history
