@@ -3,6 +3,9 @@
     -> 1 point gained when clown won
     -> 0.5 point gained when vampire and was NOT alive when vampires won
     -> 0.1 points per each night survived for peasants - special roles included
+# Points / # of vampire games  per model/name
+
+
 # Statistics for above point calculation such as:
     -> how many times each model/name was a vampire
         -> how many times each model/name won when a vampire and was alive

@@ -18,14 +18,14 @@ game_system_prompt:
 
     ### Roles in the Game (excluding the moderator which is not in game but manages it)
 
-    * **3 Vampires**
+    * **1 Vampire**
     * **1 Observer** (Peasant with special ability)
     * **1 Clown**
     * **1 Doctor** (Peasant with special ability)
     * **1 Musketeer** (Peasant with special ability)
-    * **9 Peasants without special roles**
+    * **1 Peasant without special roles**
 
-    That makes 16 players in total.
+    That makes 6 players in total.
 
     ---
 

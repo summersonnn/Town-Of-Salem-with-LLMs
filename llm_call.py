@@ -127,7 +127,7 @@ def chat_completion(
                 if model_to_use.endswith(":nitro"):
                     model_to_use = model_to_use[:-len(":nitro")]
                     request_params["model"] = model_to_use
-                print(f"Will be tried with the model name without the :nitro suffix. So: '{model_to_use}'")
+                    print(f"Will be tried with the model name without the :nitro suffix. So: '{model_to_use}'")
                 time.sleep(RETRY_DELAY_SECONDS)
             else:
                 # This is the last attempt

@@ -22,7 +22,9 @@ class Vampire_or_Peasant:
             raise ValueError("Not enough distinct models for each player.")
 
         # Assign unique models with :nitro suffix
-        suffixed = [m + ":nitro" for m in random.sample(available_models, len(player_names))]
+        # suffixed = [m + ":nitro" for m in random.sample(available_models, len(player_names))]
+        # We no longer use nitro suffix.
+        suffixed = [m for m in random.sample(available_models, len(player_names))]
         self.player_model_map = dict(zip(player_names, suffixed))
 
         self.turn_order = player_names[:]    # fixed round-robin
@@ -42,7 +44,6 @@ class Vampire_or_Peasant:
         self.roles: Dict[str, str] = {}
         self.const_roles: Dict[str, str] = {}
         self.vampires = []
-        self.peasants = []
         self.observer = None
         self.doctor = None
         self.clown = None
@@ -346,12 +347,12 @@ class Vampire_or_Peasant:
             if subject:
                 announcement = f"Night {round} has fallen. Vampires have killed {subject} tonight."
             else:
-                announcement = "Night {round} has fallen. No one was killed tonight."
+                announcement = f"Night {round} has fallen. No one was killed tonight."
         else:
             if subject:
                 announcement = f"Day {round} has dawned. The community has voted out {subject}."
             else:
-                announcement = "Day {round} has dawned. The vote was tied; no one was voted out."
+                announcement = f"Day {round} has dawned. The vote was tied; no one was voted out."
         # Append to public history
         self.shared_history.append({"role": "system", "content": announcement})
         print(announcement)
@@ -395,6 +396,7 @@ class Vampire_or_Peasant:
         alive = self.turn_order
         num_vampires = sum(1 for p in alive if self.roles.get(p) == "Vampire")
         num_peasants = sum(1 for p in alive if self.roles.get(p) != "Vampire") # Assuming non-Vampires are Peasants for this count
+        print(f"[DEBUG] Game End Check: Vampires: {num_vampires}, Non-Vampires: {num_peasants}")
 
         # Peasants win if no vampires remain
         if num_vampires == 0:
@@ -521,8 +523,8 @@ class Vampire_or_Peasant:
             ).vote
             self.update_player_list(choice)
 
-            print(f"Day: The Musketeer {kicked} has chosen to eliminate {choice}.\n")
-            self.shared_history.append(f"{kicked} is chosen to be kicked out. He/She was the musketeer and has chosen to eliminate {choice}.")
+            print(f"{kicked} was voted out. As the Musketeer, they chose to eliminate {choice}.\n")
+            self.shared_history.append({"role": "system", "content":  f"{kicked} was voted out. As the Musketeer, they chose to eliminate {choice}."})
             return choice
     
     # There is a single observer. So there is no need to vote.
@@ -543,7 +545,7 @@ class Vampire_or_Peasant:
         # Build the system prompt
         prompt = [
             {"role": "system", "content": f"You are the observer {observer}."},
-            {"role": "system", "content": "Choose one player to know if vampire or peasant."},
+            {"role": "system", "content": "Choose one player to know if they are a Vampire or not a Vampire."},
             {"role": "system", "content": "Choices: " + ", ".join(others) + " Output only the name of the player and nothing else. Example output: 'Nina'"}
         ]
 
@@ -668,8 +670,6 @@ class Vampire_or_Peasant:
             # Vote for a player to kick out
             kicked_player = self.vote(round)
 
-            print(f"Day: {kicked_player} has been voted out.\n")
-
             # Moderator announces results and updates about the poll results
             self.mod_announcing_updates("Day", kicked_player, round)
 
@@ -687,16 +687,16 @@ if __name__ == "__main__":
     load_dotenv()
     
     players = [
-    "Finch",
-    "Reese",
-    "Carter",
-    "Fusco",
-    "Root",
-    "Shaw",
-    "Elias",
-    "Greer",
-    "Chuck",
-    "Sarah",
+    #"Finch",
+    #"Reese",
+    #"Carter",
+    #"Fusco",
+    #"Root",
+    #"Shaw",
+    #"Elias",
+    #"Greer",
+    #"Chuck",
+    #"Sarah",
     "Casey",
     "Morgan",
     "Jeff",
@@ -706,27 +706,29 @@ if __name__ == "__main__":
     ]
     
     models = [
-        "openai/gpt-4.1",
-        "openai/o1",
-        "google/gemini-2.5-pro-preview",
-        "google/gemini-2.5-flash-preview-05-20:thinking",
+        #"openai/gpt-4.1",
+        #"openai/o1",
+        #"google/gemini-2.5-pro-preview",
+        #"google/gemini-2.5-flash-preview-05-20:thinking",
         "qwen/qwen3-32b",
-        "qwen/qwen3-235b-a22b",
-        "qwen/qwq-32b",
-        "anthropic/claude-3.7-sonnet",
-        "anthropic/claude-sonnet-4",
-        "anthropic/claude-opus-4",
+        #"qwen/qwen3-235b-a22b",
+        #"qwen/qwq-32b",
+        #"anthropic/claude-3.7-sonnet",
+        #"anthropic/claude-sonnet-4",
+        #"anthropic/claude-opus-4",
         "x-ai/grok-3-beta",
         "x-ai/grok-3-mini-beta",
         "meta-llama/llama-4-maverick",
         "meta-llama/llama-4-scout",
-        "deepseek/deepseek-r1-0528",  # takes too long time. produces too many tokens
+        #"deepseek/deepseek-r1-0528",  # takes too long time. produces too many tokens
         "deepseek/deepseek-r1-0528-qwen3-8b", 
     ]
 
     game = Vampire_or_Peasant(players, models, "game_rules.yaml")
     game.introduce_players()
-    game.assign_roles(vampire_population=3)
+    game.assign_roles(vampire_population=1)
 
     # run the full game loop
     game.run_game()
+    
+    # Check: How to avoid players to behave like a mod? Maybe put a "user" tag in the context history?
