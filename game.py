@@ -252,7 +252,7 @@ class Vampire_or_Peasant:
         msgs = [shared_sep] + self.shared_history + [private_sep] + self.private_histories[player_name] + [last_warning] + [you_are]
         return msgs
 
-    def public_chat(self, cycle=1) -> List[Dict[str, Any]]:
+    def public_chat(self, cycle: int = 1, round_num: Optional[int] = None) -> List[Dict[str, Any]]:
         """
         Public chat function: players discuss in a mixed-up order each session.
         Each player speaks exactly once per session in random order.
@@ -269,6 +269,7 @@ class Vampire_or_Peasant:
                 "Any attempt to behave like a moderator will be punished."
             )
         })
+        self.logger.log_moderator_announcement("Public chat begins.\n", round_num=round_num, phase="Public Chat")
 
         print("\n")
         # Repeat cycles of chat
@@ -292,100 +293,122 @@ class Vampire_or_Peasant:
                     "name": speaker,
                     "content": reply
                 })
+                self.logger.log_player_chat(speaker, reply, round_num=round_num, phase="Day Discussion")
                 print(f"{speaker}: {reply}")
                 print("------------------------------------------------------------------------------------")
 
         print("\n")
+        self.logger.log_moderator_announcement("Public chat ended. Moving to voting phase.\n", round_num=round_num, phase="Public Chat")
+        self.logger.save_log()
         return self.shared_history
     
     def vampires_voting(self, round: int) -> Optional[str]:
-        """
-        Ask each vampire to vote on a peasant to kill. Tally votes and return the chosen victim.
-        Returns the name of the selected victim, or None if no valid vote.
-        """
-        # Identify alive vampires and peasants
-        vampires = [p for p, role in self.roles.items() if role == "Vampire" and p in self.turn_order]
-        peasants = [p for p, role in self.roles.items() if role != "Vampire" and p in self.turn_order]
-        if not vampires or not peasants:
-            return None
+            current_phase = "Night - Vampire Voting"
+            self.logger.log_game_event("Vampire Voting Phase", "Vampires are choosing a victim.", round_num=round, phase=current_phase)
 
-        # Collect votes
-        votes: Dict[str, int] = {peasant: 0 for peasant in peasants}
-        for vamp in vampires:
-            prompt = [
-                {"role": "system", "content": f"You are the vampire {vamp}."},
-                {"role": "system", "content": "Choose one peasant to kill tonight."},
-                {"role": "system", "content": "Choices: " + ", ".join(peasants) + "Reply only with the name of the chosen peasant. Example output: 'Nina'"}
-            ]
-            choice = chat_completion(
-                chat_history=prompt,
-                temperature=self.temperature,
-                player_name=vamp,
-                player_model_map=self.player_model_map,
-                is_a_decision=True,
-                choices=peasants
-            ).vote
+            alive_vampires = [p for p, role in self.roles.items() if role == "Vampire" and p in self.turn_order]
+            potential_victims = [p for p in self.turn_order if self.roles.get(p) != "Vampire"]
+
+            votes: Dict[str, int] = {peasant: 0 for peasant in potential_victims}
             
-            votes[choice] += 1
-            # Append the vote to private history of all vampires
-            for vampire in vampires:
-                self.private_histories[vampire].append({"role": "system", "content": f"{vamp}, as a vampire, voted to kill {choice} in the night {round}."})
+            # Construct the part of the prompt that is common for all vampires making this decision
+            # This will be appended to their individual full conversation history
+            vampire_decision_prompt_suffix = [
+                {"role": "system", "content": f"It is Night {round}. As a Vampire, you and your fellow vampires must choose one non-Vampire player to kill."},
+                {"role": "system", "content": "Review the public chat and your private history to make a strategic decision."},
+                {"role": "system", "content": "Your fellow vampires are: " + ", ".join(v for v in self.vampires if v in self.turn_order) + "."}, # List alive fellow vampires
+                {"role": "system", "content": "Alive non-Vampire players (potential targets): " + ", ".join(potential_victims) + "."},
+                {"role": "system", "content": "Reply with the name of the player you vote to kill."}
+            ]
 
-        print(f"Vampire Votes: {votes}")
-        # Determine highest votes and resolve ties
-        max_votes = max(votes.values())
-        top_choices = [p for p, count in votes.items() if count == max_votes]
+            for vamp_attacker in alive_vampires:
+                # Build the full conversation history for this vampire
+                messages_for_llm = self.build_conversation(vamp_attacker)
+                # Append the specific voting instructions
+                messages_for_llm.extend(vampire_decision_prompt_suffix)
+                
+                choice_obj = chat_completion(
+                    chat_history=messages_for_llm,
+                    temperature=self.temperature,
+                    player_name=vamp_attacker,
+                    player_model_map=self.player_model_map,
+                    is_a_decision=True,
+                    choices=potential_victims
+                )
+                choice = choice_obj.vote
+                
+                if choice in votes: # Ensure the choice is a valid potential victim
+                    votes[choice] += 1
+                    self.logger.log_player_action_choice(vamp_attacker, "Vampire Vote", choice, round_num=round, phase=current_phase, valid_choices=potential_victims)
+                    for other_vamp in alive_vampires: # Inform all alive vampires of this specific vote
+                        private_msg = f"{vamp_attacker} (Vampire) voted to kill {choice} in night {round}."
+                        self.private_histories[other_vamp].append({"role": "system", "content": private_msg})
+                else:
+                    # Handle invalid choice - e.g., log it, and perhaps the vampire's vote is forfeited for this round
+                    self.logger.log_game_event("Invalid Vampire Vote", f"Vampire {vamp_attacker} made an invalid choice: {choice}. Vote ignored.", round_num=round, phase=current_phase)
 
-        if len(top_choices) > 1:
-            victim = random.choice(top_choices)
-            for vampire in vampires:
-                self.private_histories[vampire].append({"role": "system", "content": f"Vampires voting ended in a tie. Randomly chosen from top choices: {victim}"})
-        else:
-            victim = top_choices[0]
+            self.logger.log_vote_tally("Vampire Kill", votes, round_num=round, phase=current_phase)
+            print(f"Vampire Votes: {votes}")
 
-        if victim == self.protected_player:
-            print(f"Vampires tried to kill {victim}, but they were protected by the doctor.")
-            print(f"Night {round} - Noone died tonight.\n")
-            self.shared_history.append({"role": "system", "content": f"Night {round} - No one died tonight."})
-            return None
+            max_votes = max(votes.values())
+            top_choices = [p for p, count in votes.items() if count == max_votes]
 
-        # Remove victim from game
-        self.update_player_list(victim)
+            victim: str
+            if len(top_choices) > 1:
+                victim = random.choice(top_choices)
+                tie_msg = f"Vampire voting resulted in a tie. {victim} was randomly selected from the tied players ({', '.join(top_choices)}) to be killed."
+                self.logger.log_game_event("Vampire Vote Tie Broken", tie_msg, round_num=round, phase=current_phase)
+                for other_vamp in alive_vampires:
+                    self.private_histories[other_vamp].append({"role": "system", "content": tie_msg})
+            else:
+                victim = top_choices[0]
+                chosen_msg = f"Vampires collectively chose to kill {victim}."
+                self.logger.log_game_event("Vampire Victim Chosen", chosen_msg, round_num=round, phase=current_phase)
+                for other_vamp in alive_vampires:
+                    self.private_histories[other_vamp].append({"role": "system", "content": chosen_msg})
 
-        print(f"Night {round} - {victim} has been chosen as the victim.\n")
-        return victim
+            if victim == self.protected_player:
+                protection_msg = f"Vampires tried to kill {victim}, but they were protected by the doctor."
+                print(protection_msg)
+                self.logger.log_game_event("Protection Successful", protection_msg, round_num=round, phase="Night")
+                # self.shared_history.append({"role": "system", "content": f"Night {round} - No one died tonight."}) # mod_announcing_updates will handle this
+                self.logger.save_log()
+                return None 
+
+            self.logger.log_elimination(victim, "Killed by Vampires", round_num=round, phase="Night", original_role=self.const_roles.get(victim))
+            self.update_player_list(victim)
+
+            print(f"Night {round} - {victim} has been chosen as the victim.\n")
+            self.logger.save_log()
+            return victim
 
 
     def mod_announcing_updates(self, day_or_night: str, subject: Optional[str], round: int) -> None:
-        """
-        Moderator announcement after night or day action.
-        day_or_night: "Night" or "Day"
-        subject: victim name (for night) or kicked player (for day)
-        """
+        announcement: str
         if day_or_night == "Night":
             if subject:
                 announcement = f"Night {round} has fallen. Vampires have killed {subject} tonight."
             else:
                 announcement = f"Night {round} has fallen. No one was killed tonight."
-        else:
+        else: # Day
             if subject:
                 announcement = f"Day {round} has dawned. The community has voted out {subject}."
             else:
                 announcement = f"Day {round} has dawned. The vote was tied; no one was voted out."
-        # Append to public history
+        
         self.shared_history.append({"role": "system", "content": announcement})
+        self.logger.log_moderator_announcement(announcement, round_num=round, phase=day_or_night)
         print(announcement)
+        self.logger.save_log()
 
-    def mod_announcing_alive_players(self) -> None:
-        """
-        Announce currently living players to the public chat.
-        """
+    def mod_announcing_alive_players(self, round_num: Optional[int] = None, phase: Optional[str] = None) -> None:
         if not self.turn_order:
             return
         announcement = "Currently alive players: " + ", ".join(self.turn_order) + "."
         self.shared_history.append({"role": "system", "content": announcement})
+        self.logger.log_moderator_announcement(announcement, round_num=round_num, phase=phase)
         print(announcement)
-
+        self.logger.save_log()
 
     def update_player_list(self, removed_player: str) -> None:
         """
@@ -397,35 +420,45 @@ class Vampire_or_Peasant:
         # # Clean up role
         self.roles.pop(removed_player, None)
 
-    def check_game_end(self, kicked: str = None) -> Tuple[bool, str]:
-        """
-        Evaluate win conditions:
-        - If the kicked player had the role "Clown", then game ends. Clown wins.
-        - If no vampires remain, peasants win.
-        - If vampires >= peasants, vampires win.
-        Returns (ended: bool, winner: str).
-        """
-        # Check Clown win condition first
-        if kicked: # Ensure kicked is not empty or None
+    def check_game_end(self, round_num: Optional[int] = None, kicked: str = None) -> Tuple[bool, str]:
+        winner = ""
+        reason = ""
+        ended = False
+
+        if kicked:
             kicked_role = self.const_roles.get(kicked)
             if kicked_role == "Clown":
-                return True, "Clown"
+                ended = True
+                winner = "Clown"
+                reason = f"Clown ({kicked}) was successfully voted out."
 
-        # Count roles among alive players
-        alive = self.turn_order
-        num_vampires = sum(1 for p in alive if self.roles.get(p) == "Vampire")
-        num_peasants = sum(1 for p in alive if self.roles.get(p) != "Vampire") # Assuming non-Vampires are Peasants for this count
-        print(f"[DEBUG] Game End Check: Vampires: {num_vampires}, Non-Vampires: {num_peasants}")
+        if not ended:
+            alive_players = self.turn_order
+            # Use self.roles for current roles of ALIVE players for game logic
+            # but self.const_roles for identifying original roles if needed elsewhere
+            num_vampires = sum(1 for p in alive_players if self.roles.get(p) == "Vampire")
+            # Non-vampires are anyone not a vampire among the living
+            num_non_vampires = sum(1 for p in alive_players if self.roles.get(p) != "Vampire")
+            
+            print(f"[DEBUG] Game End Check (Round {round_num}): Vampires: {num_vampires}, Non-Vampires: {num_non_vampires}, Alive: {', '.join(alive_players)}")
+            self.logger.log_game_event("Game End Check Status", 
+                                       f"Vampires: {num_vampires}, Non-Vampires: {num_non_vampires}, Alive: {len(alive_players)} - This info is not shared with players.",
+                                       round_num=round_num)
 
-        # Peasants win if no vampires remain
-        if num_vampires == 0:
-            return True, "Peasants"
+            if num_vampires == 0:
+                ended = True
+                winner = "Peasants" # Includes all non-vampire roles that survived
+                reason = "All vampires have been eliminated."
+            elif num_non_vampires <= num_vampires : # Vampires win if they are equal or outnumber peasants
+                ended = True
+                winner = "Vampires"
+                reason = "Vampires equal or outnumber other players."
 
-        # Vampires win if they are equal or outnumber peasants
-        # This condition should only be checked if there are still vampires.
-        # If num_vampires is 0, the above condition already handles it.
-        if num_vampires > 0 and num_peasants <= num_vampires:
-            return True, "Vampires"
+        if ended:
+            final_alive_player_roles = {p: self.roles.get(p, "Unknown - Eliminated?") for p in self.turn_order}
+            self.logger.log_game_end(winner, reason, final_alive_player_roles, self.const_roles)
+            self.logger.save_log()
+            return True, winner
 
         return False, ""
 
@@ -434,8 +467,8 @@ class Vampire_or_Peasant:
         Real vote function: players can vote for someone to kick or pass.
         Returns the name of the kicked player, or None if tie or no votes.
         """
-        if not self.turn_order:
-            return None
+        current_phase = "Day Voting"
+        self.logger.log_game_event("Public Voting Phase", f"Day {round} voting starts.", round_num=round, phase=current_phase)
 
         # Initialize vote counts
         votes: Dict[str, int] = {p: 0 for p in self.turn_order}
@@ -445,6 +478,7 @@ class Vampire_or_Peasant:
         vote_records: List[Tuple[str, str]] = []  # (voter, choice)
 
         print(f"Voting round {round} starts.")
+        self.logger.log_moderator_announcement("Public voting begins.\n", round_num=round, phase=f"Public Voting")
 
         # Ask each player
         for p in list(self.turn_order):
@@ -459,14 +493,15 @@ class Vampire_or_Peasant:
                 {"role": "system", "content": "Output only the name of the player (or 'Pass') and nothing else. Discussion time is over. Example output: 'Nina'"}
             ]
             msgs = self.build_conversation(p) + prompt
-            choice = chat_completion(
+            choice_obj = chat_completion(
                 chat_history=msgs,
                 temperature=self.temperature,
                 player_name=p,
                 player_model_map=self.player_model_map,
                 is_a_decision=True,
                 choices=votable_players + ["Pass"]
-            ).vote
+            )
+            choice = choice_obj.vote
 
             if choice == "Pass":
                 passes += 1
@@ -476,7 +511,9 @@ class Vampire_or_Peasant:
             # Record vote
             vote_records.append((p, choice))
             print(f"{p} voted for {choice}.")
-        print(votes)
+
+        self.logger.log_vote_tally("Public Kick-Out", votes, round_num=round, phase=current_phase)
+        print(f"Votes: {votes}")
 
         # After all votes, publish results
         # Add each vote to shared history
@@ -503,48 +540,66 @@ class Vampire_or_Peasant:
         top = [p for p, c in filtered_votes.items() if c == max_votes]
 
         if len(top) > 1:
-            self.shared_history.append({"role": "system", "content": "No one has been voted out."})
-            print("No one has been voted out.\n")
+            outcome_msg = "The vote was tied. No one has been voted out."
+            self.logger.log_vote_outcome(outcome_msg, round_num=round, phase=current_phase)
+            self.shared_history.append({"role": "system", "content": outcome_msg})
+            print(outcome_msg + "\n")
+            self.logger.save_log()
             return None
-
+        
         kicked = top[0]
-
-        # Remove from game
-        self.update_player_list(kicked)
-        # Append to public history
-        self.shared_history.append({"role": "system", "content": f"{kicked} has been voted out."})
+        outcome_msg = f"{kicked} has been voted out with {max_votes} vote(s)."
+        self.logger.log_vote_outcome(outcome_msg, round_num=round, phase=current_phase)
+        self.shared_history.append({"role": "system", "content": f"{kicked} has been voted out."}) # Simpler for chat
         print(f"{kicked} has been voted out.\n")
 
-        # Check if the kicked player was the musketeer
-        self.check_musketeer_action(kicked)
+        # Log elimination before updating list and checking musketeer
+        self.logger.log_elimination(kicked, "Voted out by players", round_num=round, phase=current_phase, original_role=self.const_roles.get(kicked))
+        self.update_player_list(kicked)
+        
+        self.check_musketeer_action(kicked, round_num=round) # Pass round_num
+        self.logger.log_moderator_announcement("Public voting ended.\n", round_num=round, phase="Public Voting")
+        self.logger.save_log()
         return kicked
     
-    def check_musketeer_action(self, kicked: str) -> None:
+    def check_musketeer_action(self, kicked: str, round_num: int) -> None:
         """
         Check if the kicked player was the Musketeer.
         If so, they can choose to eliminate one player as they go down.
         """
+        current_phase = "Day - Musketeer Action"
         if self.const_roles.get(kicked) == "Musketeer":
+            self.logger.log_game_event("Musketeer Ability Triggered", f"{kicked} (Musketeer) was eliminated, can use ability.", round_num=round_num, phase=current_phase)
             # Ask the Musketeer to choose a player to eliminate
             prompt = [
                 {"role": "system", "content": f"You are the Musketeer {kicked}."},
                 {"role": "system", "content": "You have been eliminated. Choose one player to eliminate."},
-                {"role": "system", "content": "Choices: " + ", ".join(self.turn_order)},
-                {"role": "system", "content": "Output only the name of the player and nothing else. Example output: 'Nina'"}
+                {"role": "system", "content": "Choices: " + ", ".join(self.turn_order)}
             ]
-            choice = chat_completion(
-                chat_history=prompt,
+            choice_obj = chat_completion(
+                chat_history=prompt, # Simplified history
                 temperature=self.temperature,
-                player_name=kicked,
+                player_name=kicked, # Use the kicked player's name/model
                 player_model_map=self.player_model_map,
                 is_a_decision=True,
-                choices=self.turn_order
-            ).vote
-            self.update_player_list(choice)
+                choices=self.turn_order # Can choose from remaining alive players
+            )
+            choice = choice_obj.vote
 
-            print(f"{kicked} was voted out. As the Musketeer, they chose to eliminate {choice}.\n")
-            self.shared_history.append({"role": "system", "content":  f"{kicked} was voted out. As the Musketeer, they chose to eliminate {choice}."})
-            return choice
+            self.logger.log_player_action_choice(kicked, "Musketeer Retaliation", choice, round_num=round_num, phase=current_phase, valid_choices=self.turn_order)
+            
+            musketeer_msg = f"{kicked} was voted out. As the Musketeer, they chose to eliminate {choice}."
+            print(musketeer_msg + "\n")
+            self.shared_history.append({"role": "system", "content": musketeer_msg})
+            # Log this specific moderator announcement as well
+            self.logger.log_moderator_announcement(musketeer_msg, round_num=round_num, phase=current_phase)
+
+            # Log elimination before updating list
+            self.logger.log_elimination(choice, f"Eliminated by Musketeer {kicked}", 
+                                        round_num=round_num, phase=current_phase, 
+                                        eliminated_by=kicked, original_role=self.const_roles.get(choice))
+            self.update_player_list(choice)
+            self.logger.save_log()
     
     # There is a single observer. So there is no need to vote.
     def observer_action(self, round) -> Optional[str]:
@@ -552,12 +607,16 @@ class Vampire_or_Peasant:
         Observer action: choose a player to observe.
         Returns the name of the observed player, or None if no valid choice.
         """
+        current_phase = "Night - Observer Action"
         # Identify the observer
         observer_list = [p for p, role in self.roles.items() if role == "Observer"]
 
         # Check if the observer is alive
         if not observer_list:
+            self.logger.log_game_event("Observer Action Skipped", "Observer is not active or available.", round_num=round, phase=current_phase)
+            self.logger.save_log()
             return None
+        
         observer = observer_list[0]
         others = [p for p in self.turn_order if p != observer]
 
@@ -565,19 +624,21 @@ class Vampire_or_Peasant:
         prompt = [
             {"role": "system", "content": f"You are the observer {observer}."},
             {"role": "system", "content": "Choose one player to know if they are a Vampire or not a Vampire."},
-            {"role": "system", "content": "Choices: " + ", ".join(others) + " Output only the name of the player and nothing else. Example output: 'Nina'"}
+            {"role": "system", "content": "Choices: " + ", ".join(others) + " Output the name of the player."}
         ]
 
         # Call the LLM
         msgs = self.build_conversation(observer) + prompt
-        observed_player = chat_completion(
+        choice_obj = chat_completion(
             chat_history=msgs,
             temperature=self.temperature,
-            player_name=observer,
+            player_name=self.observer,
             player_model_map=self.player_model_map,
             is_a_decision=True,
             choices=others
-        ).vote
+        )
+        observed_player = choice_obj.vote
+        self.logger.log_player_action_choice(self.observer, "Observer Choice", observed_player, round_num=round, phase=current_phase, valid_choices=others)
 
         # Determine actual role feedback
         actual_role = self.roles[observed_player]
@@ -588,11 +649,12 @@ class Vampire_or_Peasant:
 
         # Append the observation result to the observer's private history
         observation_message = f"You chose to observe {observed_player} in the night {round}. {role_feedback}"
+        self.logger.log_private_info(self.observer, "Observation Result", observation_message, round_num=round, phase=current_phase)
         self.private_histories[observer].append(
             {"role": "system", "content": observation_message}
         )
         print(f"Observer {observer} observed {observed_player}. Result: {role_feedback}")
-
+        self.logger.save_log()
         return observed_player
 
     # There is a single doctor. So there is no need to vote.
@@ -601,6 +663,7 @@ class Vampire_or_Peasant:
         Doctor action: choose a player to protect.
         Returns the name of the protected player, or None if no valid choice.
         """
+        current_phase = "Night - Doctor Action"
         # Identify the doctor
         doctor = [p for p, role in self.roles.items() if role == "Doctor"]
 
@@ -623,14 +686,16 @@ class Vampire_or_Peasant:
 
         # Call the LLM
         msgs = self.build_conversation(doctor) + prompt
-        protected_player = chat_completion(
+        choice_obj = chat_completion(
             chat_history=msgs,
             temperature=self.temperature,
-            player_name=doctor,
+            player_name=self.doctor,
             player_model_map=self.player_model_map,
             is_a_decision=True,
-            choices=others
-        ).vote
+            choices=others 
+        )
+        protected_player = choice_obj.vote
+        self.logger.log_player_action_choice(self.doctor, "Doctor Protection", protected_player, round_num=round, phase=current_phase, valid_choices=others)
 
         # Update self-protection flag
         if protected_player == doctor:
@@ -648,63 +713,70 @@ class Vampire_or_Peasant:
             {"role": "system", "content": protection_message}
         )
         print(f"Doctor {doctor} protected {protected_player}. Result: {protection_message}")
-
+        self.logger.log_private_info(self.doctor, "Protection Confirmation", protection_message, round_num=round, phase=current_phase)
+        self.logger.save_log()
         return protected_player
 
         
     def run_game(self) -> None:
-        """
-        Main game loop combining day and night stages until end state.
-        """
-        # Print the roles to the moderator
-        print("Roles assigned:")
-        for player, role in self.roles.items():
+        print("Roles assigned (Moderator View):")
+        for player, role in self.const_roles.items(): # Use const_roles for initial full list
             print(f"{player}: {role} -- {self.player_model_map[player]}")
 
-        round = 1
+        round_num = 1
         while True:
-            self.shared_history.append({"role": "system", "content": f"Night {round} begins."})
-            self.observer_action(round)
-            self.doctor_action(round)
+            # --- NIGHT PHASE ---
+            night_phase_str = f"Night {round_num}"
+            self.logger.log_game_event("Phase Start", f"{night_phase_str} begins.", round_num=round_num, phase="Night")
+            self.logger.save_log()
+            self.shared_history.append({"role": "system", "content": f"{night_phase_str} begins."})
+            
+            self.observer_action(round_num) # Logging within method
+            self.doctor_action(round_num)   # Logging within method
 
-            # Night: vampires choose a victim
-            victim = self.vampires_voting(round)
-            self.protected_player = None
+            victim = self.vampires_voting(round_num) # Logging within method
+            self.protected_player = None # Reset protection after vampire attack resolution
 
-            # Moderator announces results and updates about the night actions
-            self.mod_announcing_updates("Night", victim, round)
+            self.mod_announcing_updates("Night", victim, round_num) # Logging within method
 
-            finished, winner = self.check_game_end()
+            finished, winner = self.check_game_end(round_num=round_num) # Logging within method if game ends
             if finished:
                 print(f"Game over! {winner} wins!")
+                self.logger.log_moderator_announcement(f"Game over! {winner} wins!", round_num=round_num, phase="Game End")
+                self.logger.save_log()
                 break
 
-            # Announce alive players before day discussion
-            self.mod_announcing_alive_players()
+            self.mod_announcing_alive_players(round_num=round_num, phase="Night End") # Logging within method
 
-            self.shared_history.append({"role": "system", "content": f"Day {round} begins."})
-            # Day: players discuss
-            self.public_chat()
+            # --- DAY PHASE ---
+            day_phase_str = f"Day {round_num}"
+            self.logger.log_game_event("Phase Start", f"{day_phase_str} begins.", round_num=round_num, phase="Day")
+            self.logger.save_log()
+            self.shared_history.append({"role": "system", "content": f"{day_phase_str} begins."})
+            
+            self.public_chat(cycle=1, round_num=round_num) # Logging within method
 
-            # Vote for a player to kick out
-            kicked_player = self.vote(round)
+            kicked_player = self.vote(round_num) # Logging within method
 
-            # Moderator announces results and updates about the poll results
-            self.mod_announcing_updates("Day", kicked_player, round)
+            self.mod_announcing_updates("Day", kicked_player, round_num) # Logging within method
 
-            finished, winner = self.check_game_end(kicked=kicked_player)
+            # Pass kicked_player to check_game_end for Clown win condition
+            finished, winner = self.check_game_end(round_num=round_num, kicked=kicked_player) # Logging within method if game ends
             if finished:
                 print(f"Game over! {winner} wins!")
+                self.logger.log_moderator_announcement(f"Game over! {winner} wins!", round_num=round_num, phase="Game End")
+                self.logger.save_log()
                 break
 
-            # Announce alive players before next night
-            self.mod_announcing_alive_players()
-            round += 1
+            self.mod_announcing_alive_players(round_num=round_num, phase="Day End") # Logging within method
+            round_num += 1
+        
+        # Final save, though individual methods save frequently
+        self.logger.save_log()
 
 # --- example ---
 if __name__ == "__main__":
     load_dotenv()
-    
     players = [
     #"Finch",
     #"Reese",
@@ -750,7 +822,7 @@ if __name__ == "__main__":
     # run the full game loop
     game.run_game()
     
-    # Finish game logging for every step.
+    # DONE: Finish game logging for every step.
     # Implement a mechanism to randomly select 10 models and 10 names to start game.
     # Implement error handling to never stop a game.
     # Implement points system
