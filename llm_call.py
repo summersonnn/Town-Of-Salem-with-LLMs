@@ -6,6 +6,7 @@ import instructor
 from pydantic import BaseModel, create_model
 from typing import Literal
 from dotenv import load_dotenv
+import random
 
 # Define retry constants
 MAX_RETRIES = 3
@@ -103,13 +104,24 @@ def chat_completion(
                 time.sleep(RETRY_DELAY_SECONDS)
             else:
                 # This is the last attempt
-                print(f"All {MAX_RETRIES} retry attempts failed for model {model_to_use}.")
+                print(f"\n\nAll {MAX_RETRIES} retry attempts failed for model {model_to_use}.")
                 print(f"Final error details:")
                 print(f"  Full base URL: {base_url}")
                 print(f"  Model used: {model_to_use}")
                 print(f"  Request params (model and message count): model={request_params.get('model')}, num_messages={len(request_params.get('messages', []))}")
-                print(f"  Last exception: {type(last_exception).__name__}: {str(last_exception)}")
-                raise # Re-raise the last caught exception
+                print(f"  Last exception: {type(last_exception).__name__}: {str(last_exception)}\n\n")
+                
+                # Return a DyanmicVote with a random choice if is_a_decision
+                if is_a_decision:
+                    random_choice = random.choice(choices)
+                    return DynamicVote(
+                        reasoning=f"Randomly selected {random_choice} after {MAX_RETRIES} failed attempts.",
+                        vote=random_choice
+                    )
+                # If not a decision, return an empty string
+                else:
+                    return ""
+                    
 
     # This part of the code should not be reached if MAX_RETRIES > 0,
     # as the loop will either return on success or raise on the final failed attempt.

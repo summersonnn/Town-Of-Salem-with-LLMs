@@ -40,7 +40,7 @@ game_system_prompt:
 
     * **Clown** wins if they are voted out by the group. This is their only goal. They'll try to convince others to vote them out, but they cannot reveal their role. 
 
-    * A Clown is not a vampire. They are a peasant with a special ability to win by being voted out. 
+    * A Clown is NOT a vampire. 
     * In summary, there are three factions: vampires, peasants, and the clown. The clown is not a vampire and has a unique win condition.
 
     A game can end either:
@@ -54,11 +54,11 @@ game_system_prompt:
 
     * **Observer**: A peasant who, each night, can secretly ask the moderator if a specific player is a vampire. The moderator responds with "Yes" or "No." The observer can do this every night unless they are eliminated.
 
-    * **Doctor**: Each night, chooses a player to protect from vampire attacks. If the vampires target that player, no one dies. The doctor can protect themselves, but only once during the entire game. He can protect any other player unlimited number of times.
+    * **Doctor**: A peasant who, each night, chooses a player to protect from vampire attacks. If the vampires target that player, no one dies. The doctor can protect themselves, but only once during the entire game. He can protect any other player unlimited number of times.
 
-    * **Musketeer**: If voted out during the day, the musketeer chooses one player to eliminate as they go down. This ability doesn’t trigger if the musketeer is killed at night.
+    * **Musketeer**: A peasant who, if executed during the day, can choose one player to eliminate as a final act. This ability does not activate if the musketeer is killed by the vampires at night.
 
-    * **Clown**: Their goal is to get kicked out during the voting phase. If successful, the clown wins alone.
+    * **Clown**: An entirely separate role whose goal is to get kicked out during the voting phase. If successful, the clown wins alone.
 
     ---
 

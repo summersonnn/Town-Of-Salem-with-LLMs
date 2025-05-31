@@ -13,6 +13,7 @@ class Vampire_or_Peasant:
         player_names: List[str],
         available_models: List[str],
         rules_file_path: str,
+        game_id: int,
         temperature: float = 0.2
     ):
         """
@@ -22,7 +23,8 @@ class Vampire_or_Peasant:
         if len(available_models) < len(player_names):
             raise ValueError("Not enough distinct models for each player.")
         self.rules_file_path = rules_file_path
-        self.logger = GameLogger()
+        self.game_id = game_id # Store game_id
+        self.logger = GameLogger(game_id=self.game_id)
         
         # Store original player names for logging setup
         self.initial_player_names = player_names[:]
@@ -719,9 +721,11 @@ class Vampire_or_Peasant:
 
         
     def run_game(self) -> None:
-        print("Roles assigned (Moderator View):")
-        for player, role in self.const_roles.items(): # Use const_roles for initial full list
-            print(f"{player}: {role} -- {self.player_model_map[player]}")
+        print(f"\n--- Starting Game {self.game_id} ---")
+        print("Roles assigned (Moderator View for Game {self.game_id}):")
+        for player, role in self.const_roles.items():
+            print(f"- {player}: {role} (Model: {self.player_model_map[player]})")
+        print("-----------------------------------------")
 
         round_num = 1
         while True:
@@ -773,58 +777,92 @@ class Vampire_or_Peasant:
         
         # Final save, though individual methods save frequently
         self.logger.save_log()
+        print(f"--- Game {self.game_id} Concluded ---")
 
 # --- example ---
 if __name__ == "__main__":
     load_dotenv()
-    players = [
-    #"Finch",
-    #"Reese",
-    #"Carter",
-    #"Fusco",
-    #"Root",
-    #"Shaw",
-    #"Elias",
-    #"Greer",
-    "Chuck",
-    "Sarah",
-    "Casey",
-    "Morgan",
-    "Jeff",
-    "Lester",
-    "Devon",
-    "Ellie"
+    # Master lists of all available players and models
+
+    ALL_PLAYERS = [
+        "Chuck", "Sarah", "Casey", "Morgan", "Jeff", "Lester", "Devon", "Ellie",
+        "Finch", "Reese", "Carter", "Fusco", "Root", "Shaw", "Elias", "Greer" 
     ]
     
-    models = [
-        #"openai/gpt-4.1",
-        #"openai/o1",
-        #"google/gemini-2.5-pro-preview",
+    ALL_MODELS = [
+        "openai/gpt-4.1",
+        "openai/o1",
+        "google/gemini-2.5-pro-preview",
         "google/gemini-2.5-flash-preview-05-20:thinking",
         "qwen/qwen3-32b",
-        #"qwen/qwen3-235b-a22b",
-        #"qwen/qwq-32b",
+        "qwen/qwen3-235b-a22b",
+        "qwen/qwq-32b",
         "anthropic/claude-3.7-sonnet",
-        #"anthropic/claude-sonnet-4",
-        #"anthropic/claude-opus-4",
+        "anthropic/claude-sonnet-4",
+        "anthropic/claude-opus-4",
         "x-ai/grok-3-beta",
         "x-ai/grok-3-mini-beta",
         "meta-llama/llama-4-maverick",
         "meta-llama/llama-4-scout",
-        #"deepseek/deepseek-r1-0528",  # takes too long time. produces too many tokens
+        "deepseek/deepseek-r1-0528",  # takes too long time. produces too many tokens
         "deepseek/deepseek-r1-0528-qwen3-8b", 
     ]
 
-    game = Vampire_or_Peasant(players, models, "game_rules.yaml")
-    game.introduce_players()
-    game.assign_roles(vampire_population=1)
+    NUM_GAMES_TO_RUN = 10
+    NUM_PLAYERS_PER_GAME = 8
 
-    # run the full game loop
-    game.run_game()
+    # Ensure we have enough unique players and models for selection
+    if len(ALL_PLAYERS) < NUM_PLAYERS_PER_GAME:
+        raise ValueError(f"Not enough players in ALL_PLAYERS ({len(ALL_PLAYERS)}) to select {NUM_PLAYERS_PER_GAME}.")
+    if len(ALL_MODELS) < NUM_PLAYERS_PER_GAME:
+        raise ValueError(f"Not enough models in ALL_MODELS ({len(ALL_MODELS)}) to select {NUM_PLAYERS_PER_GAME}.")
+    
+    rules_file = "game_rules.yaml"
+
+    for game_num in range(1, NUM_GAMES_TO_RUN + 1):
+        print(f"\n\n===== INITIALIZING GAME {game_num} / {NUM_GAMES_TO_RUN} =====")
+        
+        # Select a random subset of players and models for this game
+        # Ensure player names are unique for the game. random.sample handles this.
+        selected_players = random.sample(ALL_PLAYERS, NUM_PLAYERS_PER_GAME)
+        # Ensure model names are unique for the game. random.sample handles this.
+        selected_models = random.sample(ALL_MODELS, NUM_PLAYERS_PER_GAME)
+
+        print(f"Selected for Game {game_num}:")
+        print(f"Players: {selected_players}")
+        print(f"Models: {selected_models}")
+
+        try:
+            game_instance = Vampire_or_Peasant(
+                player_names=selected_players,
+                available_models=selected_models,
+                rules_file_path=rules_file,
+                game_id=game_num, # Pass the current game number
+            )
+            game_instance.introduce_players()
+            game_instance.assign_roles(vampire_population=2) 
+            game_instance.run_game()
+
+        except Exception as e:
+            print(f"!!!!!! CRITICAL ERROR IN GAME {game_num} !!!!!")
+            print(f"Error type: {type(e).__name__}")
+            print(f"Error message: {e}")
+            import traceback
+            traceback.print_exc()
+            # Optionally, log this critical error to a master error log
+            # For now, just prints and continues to the next game if possible
+
+        print(f"===== GAME {game_num} COMPLETE =====")
+        if game_num < NUM_GAMES_TO_RUN:
+            print(f"Proceeding to Game {game_num + 1}...")
+            # Add a small delay if desired, e.g., time.sleep(5)
+        else:
+            print("All games finished.")
+
     
     # DONE: Finish game logging for every step.
-    # Implement a mechanism to randomly select 10 models and 10 names to start game.
-    # Implement error handling to never stop a game.
+    # DONE: Implement a mechanism to randomly select 10 models and 10 names to start game.
+    # DONE: Implement a run with 100 games, all running in a loop. Log files will be named Game 1, Game 2 etc.
+    # DONE: Implement error handling to never stop a game.
     # Implement points system
     # Implement distinct point logs for every model and name. It includes how many times peasant, vampire, won, points etc.
-    # Implement a run with 100 games, all running in a loop. Log files will be named Game 1, Game 2 etc.
