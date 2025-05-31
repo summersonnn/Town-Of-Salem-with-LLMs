@@ -779,37 +779,53 @@ class Vampire_or_Peasant:
         self.logger.save_log()
         print(f"--- Game {self.game_id} Concluded ---")
 
+# --- Helper function to load config ---
+def load_game_config(config_file_path="game_config.yaml"):
+    """Loads player and model lists from a YAML configuration file."""
+    try:
+        with open(config_file_path, 'r') as f:
+            config = yaml.safe_load(f)
+        
+        if not isinstance(config, dict):
+            raise ValueError(f"Configuration file {config_file_path} should be a YAML dictionary.")
+
+        all_players = config.get('players')
+        all_models = config.get('models')
+
+        if not all_players or not isinstance(all_players, list):
+            raise ValueError(f"Missing or invalid 'players' list in {config_file_path}.")
+        if not all_models or not isinstance(all_models, list):
+            raise ValueError(f"Missing or invalid 'models' list in {config_file_path}.")
+            
+        return all_players, all_models
+    except FileNotFoundError:
+        print(f"Error: Configuration file '{config_file_path}' not found.")
+        raise
+    except yaml.YAMLError as e:
+        print(f"Error parsing YAML file '{config_file_path}': {e}")
+        raise
+    except ValueError as e:
+        print(f"Error in configuration file structure: {e}")
+        raise
+
 # --- example ---
 if __name__ == "__main__":
     load_dotenv()
-    # Master lists of all available players and models
 
-    ALL_PLAYERS = [
-        "Chuck", "Sarah", "Casey", "Morgan", "Jeff", "Lester", "Devon", "Ellie",
-        "Finch", "Reese", "Carter", "Fusco", "Root", "Shaw", "Elias", "Greer" 
-    ]
-    
-    ALL_MODELS = [
-        "openai/gpt-4.1",
-        "openai/o1",
-        "google/gemini-2.5-pro-preview",
-        "google/gemini-2.5-flash-preview-05-20:thinking",
-        "qwen/qwen3-32b",
-        "qwen/qwen3-235b-a22b",
-        "qwen/qwq-32b",
-        "anthropic/claude-3.7-sonnet",
-        "anthropic/claude-sonnet-4",
-        "anthropic/claude-opus-4",
-        "x-ai/grok-3-beta",
-        "x-ai/grok-3-mini-beta",
-        "meta-llama/llama-4-maverick",
-        "meta-llama/llama-4-scout",
-        "deepseek/deepseek-r1-0528",  # takes too long time. produces too many tokens
-        "deepseek/deepseek-r1-0528-qwen3-8b", 
-    ]
-
+    # --- Configuration ---
+    CONFIG_FILE = "game_config.yaml" # Name of your new config file
+    RULES_FILE = "game_rules.yaml"
     NUM_GAMES_TO_RUN = 10
     NUM_PLAYERS_PER_GAME = 8
+
+    # Load players and models from the external file
+    try:
+        ALL_PLAYERS, ALL_MODELS = load_game_config(CONFIG_FILE)
+        print(f"Successfully loaded {len(ALL_PLAYERS)} players and {len(ALL_MODELS)} models from {CONFIG_FILE}.")
+    except Exception as e:
+        print(f"Failed to load game configuration: {e}")
+        print("Exiting.")
+        exit(1) # Exit if we can't load essential config
 
     # Ensure we have enough unique players and models for selection
     if len(ALL_PLAYERS) < NUM_PLAYERS_PER_GAME:
