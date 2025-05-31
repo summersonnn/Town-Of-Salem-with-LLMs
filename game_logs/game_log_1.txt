@@ -33,3 +33,31 @@ MODERATOR (Round 1, Night): Night 1 has fallen. Vampires have killed Jeff tonigh
 EVENT (Round 1): Game End Check Status - Vampires: 2, Non-Vampires: 5, Alive: 7 - This info is not shared with players.
 MODERATOR (Round 1, Night End): Currently alive players: Elias, Shaw, Fusco, Casey, Devon, Finch, Morgan.
 EVENT (Round 1, Day): Phase Start - Day 1 begins.
+MODERATOR (Round 1, Public Chat): Public chat begins.
+
+***Devon: I can't believe Jeff is gone already. That's rough. We need to talk this out—does anyone have any ideas about who might be behind this? Maybe we should start by sharing if we noticed anything suspicious last night, or if there's anyone who seems off today. I'm feeling pretty on edge about all this. What do you all think?
+***Shaw: Fusco, that's confusing. How did you vote for both Jeff and Devon? Each of us only gets one vote per night, and only the vampires actually vote during the night phase. Are you saying you're a vampire, or is this some kind of joke? Because if you're not, this feels like you're trying to stir up chaos or draw attention to yourself. What's your game here?
+***Casey: This is really suspicious behavior from Fusco. Claiming to vote for both Jeff and Devon during the night makes no sense - only vampires coordinate attacks at night, and they pick one target together. Regular peasants don't vote at night at all.
+
+Fusco is either:
+1. A vampire who just accidentally revealed themselves by confusing the game mechanics
+2. The clown trying to act suspicious to get voted out
+3. Just confused about how the game works
+
+But honestly, claiming to "vote" for the person who died AND someone else during the night phase is a huge red flag. That's not how any role works. I think we should seriously consider voting Fusco out - this seems like either a vampire slip-up or clown behavior.
+
+What does everyone else think about this? Devon, you were apparently one of Fusco's supposed "targets" - how do you feel about this claim?
+***Finch: This is getting intense. Fusco's comment about voting for both Jeff and Devon is definitely raising some eyebrows. I'm not sure what to make of it yet, but it's definitely suspicious. We need to be careful about jumping to conclusions, though. Let's keep discussing and see if we can figure out what's going on. Does anyone have any information about Jeff's role or any other observations from last night?
+***Elias: I'm not sure I'd jump on Fusco so quickly, to be honest. Yeah, what he said was weird, but it could just be some twisted joke or pure confusion. We don't actually know his intentions.
+
+What about Finch, though? Finch has been pretty quick to point fingers ever since the day started, especially at Fusco. It's almost like Finch is pushing for a bandwagon. Maybe it's a clever vampire play—stir up immediate suspicion to get someone else voted out. I'm not saying Fusco is innocent, but Finch’s reaction strikes me as equally suspicious. Maybe we should be looking that way.
+***Morgan: I agree that Fusco's comment is strange. Maybe he's just trying to confuse us, but I don't think we should get distracted. The clown might be trying to act suspicious to get us to vote them out. Let's focus on real clues. If the Observer is here, maybe they can check someone to help us narrow down the vampires. Also, we should be careful not to lose the Doctor or Musketeer by voting the wrong person. Has anyone else noticed anything else?
+***Fusco: Well, this is quite the mess. Look, I made a stupid comment earlier that clearly confused everyone. I wasn't actually "voting" for anyone during the night - I was just trying to say I had suspicions about both Jeff and Devon, but I worded it terribly. Obviously only vampires act at night, and I'm not a vampire.
+
+But now that everyone's jumping on me, let me point something out - Casey was awfully quick to lay out a detailed analysis of why my comment was suspicious. Almost like they were prepared for this kind of confusion. And they're pushing hard for everyone to vote me out. That feels like vampire behavior to me - create chaos and then guide the discussion toward eliminating someone.
+
+Elias makes a good point about not jumping to conclusions too fast. We need to think strategically here. If I were a vampire, would I really make such an obvious mistake on day one? And if I were the clown, would I be this sloppy about trying to get voted out?
+
+I think we should look more carefully at who's pushing hardest for my elimination right now.
+MODERATOR (Round 1, Public Chat): Public chat ended. Moving to voting phase.
+

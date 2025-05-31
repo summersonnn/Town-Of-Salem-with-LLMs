@@ -84,7 +84,7 @@ game_system_prompt:
 
       * Observer asks about one player’s identity.
       * Doctor selects someone to protect.
-      * Vampires agree on a player to attack.
+      * Vampires agree on a player to attack. In case of a tie, the moderator randomly selects one of the tied players to be attacked.
       * All night interactions are private and only known to the respective roles.
 
     3. **Day Phase**:
