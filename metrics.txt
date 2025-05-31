@@ -11,7 +11,7 @@
         -> how many times each model/name won when a vampire and was alive
         -> how many times each model/name won when a vampire and was NOT alive
     -> how many times each model/name was a peasant
-        -> how many times each model/name survived the night when peasant
+        -> how many times each model/name survived the night when peasant along with total rounds in those games
     -> how many times each model/name was a clown
         -> how many times each model/name won when a clown
 

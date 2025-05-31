@@ -1,22 +1,35 @@
 --- Game Log: 1 ---
---- Log started at: 2025-05-31 19:05:21 ---
+--- Log started at: 2025-05-31 23:02:29 ---
 ==================================================
-MODERATOR: Hello everyone. I am the moderator. Players are: Reese, Casey, Finch, Devon, Elias, Ellie, Carter, Fusco. Roles assigned. Game begins now.
+MODERATOR: Hello everyone. I am the moderator. Players are: Jeff, Elias, Shaw, Fusco, Casey, Devon, Finch, Morgan. Roles assigned. Game begins now.
 GAME SETUP & INITIAL ROLES:
   Rules File: game_rules.yaml
   Requested Vampire Population: 2
   Players, Roles, and Models:
-    - Reese: Doctor (Model: x-ai/grok-3-beta)
-    - Casey: Clown (Model: qwen/qwq-32b)
-    - Finch: Peasant (Model: openai/gpt-4.1)
-    - Devon: Vampire (Model: openai/o1)
-    - Elias: Musketeer (Model: google/gemini-2.5-pro-preview)
-    - Ellie: Vampire (Model: x-ai/grok-3-mini-beta)
-    - Carter: Observer (Model: qwen/qwen3-32b)
-    - Fusco: Peasant (Model: meta-llama/llama-4-scout)
+    - Jeff: Observer (Model: google/gemini-2.5-pro-preview)
+    - Elias: Clown (Model: openai/o1)
+    - Shaw: Vampire (Model: deepseek/deepseek-r1-0528)
+    - Fusco: Musketeer (Model: anthropic/claude-sonnet-4)
+    - Casey: Peasant (Model: anthropic/claude-opus-4)
+    - Devon: Doctor (Model: x-ai/grok-3-mini-beta)
+    - Finch: Vampire (Model: meta-llama/llama-4-maverick)
+    - Morgan: Peasant (Model: qwen/qwen3-32b)
 --------------------
 EVENT (Round 1, Night): Phase Start - Night 1 begins.
-ACTION (R1, Night - Observer Action): Carter observed: Reese
-PRIVATE INFO for Carter (Round 1, Night - Observer Action) (Observation Result): You chose to observe Reese in the night 1. Reese is a Peasant (Non-vampire).
-ACTION (R1, Night - Doctor Action): Reese protected: Reese
-PRIVATE INFO for Reese (Round 1, Night - Doctor Action) (Protection Confirmation): You chose to protect yourself in the night 1. (Reese)
+ACTION (R1, Night - Observer Action): Jeff observed: Elias
+PRIVATE INFO for Jeff (Round 1, Night - Observer Action) (Observation Result): You chose to observe Elias in the night 1. Elias is a Peasant (Non-vampire).
+ACTION (R1, Night - Doctor Action): Devon protected: Finch
+PRIVATE INFO for Devon (Round 1, Night - Doctor Action) (Protection Confirmation): You chose to protect Finch in the night 1.
+EVENT (Round 1, Night - Vampire Voting): Vampire Voting Phase - Vampires are choosing a victim.
+ACTION (R1, Night - Vampire Voting): Finch voted to kill: Jeff
+ACTION (R1, Night - Vampire Voting): Shaw voted to kill: Devon
+VOTE TALLY (Round 1, Night - Vampire Voting) - Type: Vampire Kill
+  Jeff: 1 vote(s)
+  Devon: 1 vote(s)
+--------------------
+EVENT (Round 1, Night - Vampire Voting): Vampire Vote Tie Broken - Vampire voting resulted in a tie. Jeff was randomly selected from the tied players (Jeff, Devon) to be killed.
+ELIMINATION (Round 1, Night): Jeff (Role: Observer) was eliminated. Reason: Killed by Vampires.
+MODERATOR (Round 1, Night): Night 1 has fallen. Vampires have killed Jeff tonight.
+EVENT (Round 1): Game End Check Status - Vampires: 2, Non-Vampires: 5, Alive: 7 - This info is not shared with players.
+MODERATOR (Round 1, Night End): Currently alive players: Elias, Shaw, Fusco, Casey, Devon, Finch, Morgan.
+EVENT (Round 1, Day): Phase Start - Day 1 begins.

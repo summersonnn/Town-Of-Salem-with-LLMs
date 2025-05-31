@@ -6,6 +6,7 @@ import yaml
 
 from llm_call import chat_completion
 from game_logs import GameLogger 
+from game_points import GamePoints
 
 class Vampire_or_Peasant:
     def __init__(
@@ -60,6 +61,19 @@ class Vampire_or_Peasant:
         # Game rules - loaded from file
         self.rules = self._load_rules_from_file(rules_file_path)
 
+        # --- Points System Attributes ---
+        # Initialized with 0 for all players who start the game.
+        self.player_rounds_survived: Dict[str, int] = {name: 0 for name in self.initial_player_names}
+        # Points accumulated by non-vampires for surviving nights.
+        self.player_nightly_points: Dict[str, float] = {name: 0.0 for name in self.initial_player_names}
+        self.winner_team: str = ""  # Stores "Vampires", "Peasants", or "Clown"
+        self.kicked_clown_name: Optional[str] = None # Stores the name of the Clown if they win by being kicked
+        self.total_rounds_played_in_game: int = 0 
+
+        # Initialize GamePoints handler
+        # This is fine here as GamePoints accesses game attributes lazily (during process_points)
+        self.game_points_handler = GamePoints(self)
+
     def _load_rules_from_file(self, file_path: str) -> Dict[str, Any]:
         """Loads game rules from a YAML file."""
         try:
@@ -113,16 +127,6 @@ class Vampire_or_Peasant:
 
 
     def assign_roles(self, vampire_population: int = 1) -> None:
-        """
-        Randomly assign secret roles to each player. Called once per game.
-        Roles:
-        - N Vampires (as per vampire_population)
-        - 1 Observer
-        - 1 Clown
-        - 1 Doctor
-        - 1 Musketeer
-        - Remaining: Peasants (without special abilities)
-        """
         num_players = len(self.turn_order)
 
         # Define counts for the fixed special roles
@@ -747,6 +751,14 @@ class Vampire_or_Peasant:
 
         round_num = 1
         while True:
+            self.total_rounds_played_in_game = round_num # Update total rounds played
+
+            print(f"\n--- Round {round_num} ---")
+            # Increment rounds survived for players alive at the START of this round
+            for alive_player_this_round_start in list(self.turn_order): # Iterate copy
+                self.player_rounds_survived[alive_player_this_round_start] = \
+                    self.player_rounds_survived.get(alive_player_this_round_start, 0) + 1
+
             # --- NIGHT PHASE ---
             night_phase_str = f"Night {round_num}"
             self.logger.log_game_event("Phase Start", f"{night_phase_str} begins.", round_num=round_num, phase="Night")
@@ -761,8 +773,17 @@ class Vampire_or_Peasant:
 
             self.mod_announcing_updates("Night", victim, round_num) # Logging within method
 
+            # Award nightly points to non-vampires alive AFTER night's events
+            for alive_player_after_night in list(self.turn_order): # Iterate copy
+                player_original_role = self.const_roles.get(alive_player_after_night)
+                if player_original_role and player_original_role != "Vampire":
+                    self.player_nightly_points[alive_player_after_night] = \
+                        self.player_nightly_points.get(alive_player_after_night, 0.0) + 0.1
+            self.logger.save_log() # Save after nightly points update
+
             finished, winner = self.check_game_end(round_num=round_num) # Logging within method if game ends
             if finished:
+                self.winner_team = winner # Store the winning team/role string
                 print(f"Game over! {winner} wins!")
                 self.logger.log_moderator_announcement(f"Game over! {winner} wins!", round_num=round_num, phase="Game End")
                 self.logger.save_log()
@@ -785,6 +806,9 @@ class Vampire_or_Peasant:
             # Pass kicked_player to check_game_end for Clown win condition
             finished, winner = self.check_game_end(round_num=round_num, kicked=kicked_player) # Logging within method if game ends
             if finished:
+                self.winner_team = winner
+                if self.winner_team == "Clown" and kicked_player is not None and self.const_roles.get(kicked_player) == "Clown":
+                    self.kicked_clown_name = kicked_player
                 print(f"Game over! {winner} wins!")
                 self.logger.log_moderator_announcement(f"Game over! {winner} wins!", round_num=round_num, phase="Game End")
                 self.logger.save_log()
@@ -793,6 +817,12 @@ class Vampire_or_Peasant:
             self.mod_announcing_alive_players(round_num=round_num, phase="Day End") # Logging within method
             round_num += 1
         
+        # --- Game End Processing ---
+        self.total_rounds_played_in_game = round_num # Final round count
+        self.game_points_handler.process_points() # Process points after winner_team is set
+        print(f"Game over! {self.winner_team} wins!")
+        self.logger.log_moderator_announcement(f"Game over! {self.winner_team} wins!", round_num=self.total_rounds_played_in_game, phase="Game End")
+
         # Final save, though individual methods save frequently
         self.logger.save_log()
         print(f"--- Game {self.game_id} Concluded ---")
@@ -833,7 +863,7 @@ if __name__ == "__main__":
     # --- Configuration ---
     CONFIG_FILE = "game_config.yaml" # Name of your new config file
     RULES_FILE = "game_rules.yaml"
-    NUM_GAMES_TO_RUN = 10
+    NUM_GAMES_TO_RUN = 5
     NUM_PLAYERS_PER_GAME = 8
 
     # Load players and models from the external file
@@ -898,5 +928,5 @@ if __name__ == "__main__":
     # DONE: Implement a mechanism to randomly select 10 models and 10 names to start game.
     # DONE: Implement a run with 100 games, all running in a loop. Log files will be named Game 1, Game 2 etc.
     # DONE: Implement error handling to never stop a game.
-    # Implement points system
-    # Implement distinct point logs for every model and name. It includes how many times peasant, vampire, won, points etc.
+    # DONE: Implement points system
+    # DONE: Implement distinct point logs for every model and name. It includes how many times peasant, vampire, won, points etc.
