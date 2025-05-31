@@ -1,22 +1,22 @@
 --- Game Log: 1 ---
---- Log started at: 2025-05-31 18:34:25 ---
+--- Log started at: 2025-05-31 19:05:21 ---
 ==================================================
-MODERATOR: Hello everyone. I am the moderator. Players are: Root, Morgan, Chuck, Reese, Sarah, Finch, Lester, Carter. Roles assigned. Game begins now.
+MODERATOR: Hello everyone. I am the moderator. Players are: Reese, Casey, Finch, Devon, Elias, Ellie, Carter, Fusco. Roles assigned. Game begins now.
 GAME SETUP & INITIAL ROLES:
   Rules File: game_rules.yaml
   Requested Vampire Population: 2
   Players, Roles, and Models:
-    - Root: Vampire (Model: google/gemini-2.5-flash-preview-05-20:thinking)
-    - Morgan: Musketeer (Model: deepseek/deepseek-r1-0528-qwen3-8b)
-    - Chuck: Peasant (Model: x-ai/grok-3-beta)
-    - Reese: Doctor (Model: qwen/qwen3-235b-a22b)
-    - Sarah: Observer (Model: meta-llama/llama-4-scout)
-    - Finch: Peasant (Model: anthropic/claude-sonnet-4)
-    - Lester: Clown (Model: qwen/qwq-32b)
-    - Carter: Vampire (Model: openai/gpt-4.1)
+    - Reese: Doctor (Model: x-ai/grok-3-beta)
+    - Casey: Clown (Model: qwen/qwq-32b)
+    - Finch: Peasant (Model: openai/gpt-4.1)
+    - Devon: Vampire (Model: openai/o1)
+    - Elias: Musketeer (Model: google/gemini-2.5-pro-preview)
+    - Ellie: Vampire (Model: x-ai/grok-3-mini-beta)
+    - Carter: Observer (Model: qwen/qwen3-32b)
+    - Fusco: Peasant (Model: meta-llama/llama-4-scout)
 --------------------
 EVENT (Round 1, Night): Phase Start - Night 1 begins.
-ACTION (R1, Night - Observer Action): Sarah observed: Morgan
-PRIVATE INFO for Sarah (Round 1, Night - Observer Action) (Observation Result): You chose to observe Morgan in the night 1. Morgan is a Peasant (Non-vampire).
+ACTION (R1, Night - Observer Action): Carter observed: Reese
+PRIVATE INFO for Carter (Round 1, Night - Observer Action) (Observation Result): You chose to observe Reese in the night 1. Reese is a Peasant (Non-vampire).
 ACTION (R1, Night - Doctor Action): Reese protected: Reese
 PRIVATE INFO for Reese (Round 1, Night - Doctor Action) (Protection Confirmation): You chose to protect yourself in the night 1. (Reese)

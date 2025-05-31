@@ -312,6 +312,9 @@ class Vampire_or_Peasant:
             potential_victims = [p for p in self.turn_order if self.roles.get(p) != "Vampire"]
 
             votes: Dict[str, int] = {peasant: 0 for peasant in potential_victims}
+            # Store individual vote records privately until all votes are cast
+            # Each item will be a tuple: (vampire_who_voted, chosen_victim)
+            individual_vampire_votes: List[Tuple[str, str]] = []
             
             # Construct the part of the prompt that is common for all vampires making this decision
             # This will be appended to their individual full conversation history
@@ -341,21 +344,37 @@ class Vampire_or_Peasant:
                 
                 if choice in votes: # Ensure the choice is a valid potential victim
                     votes[choice] += 1
+                    individual_vampire_votes.append((vamp_attacker, choice)) # Record the vote
                     self.logger.log_player_action_choice(vamp_attacker, "Vampire Vote", choice, round_num=round, phase=current_phase, valid_choices=potential_victims)
-                    for other_vamp in alive_vampires: # Inform all alive vampires of this specific vote
-                        private_msg = f"{vamp_attacker} (Vampire) voted to kill {choice} in night {round}."
-                        self.private_histories[other_vamp].append({"role": "system", "content": private_msg})
+                    print(f"Vampire {vamp_attacker} (privately) voted to kill {choice}.") # Server log
                 else:
                     # Handle invalid choice - e.g., log it, and perhaps the vampire's vote is forfeited for this round
                     self.logger.log_game_event("Invalid Vampire Vote", f"Vampire {vamp_attacker} made an invalid choice: {choice}. Vote ignored.", round_num=round, phase=current_phase)
 
             self.logger.log_vote_tally("Vampire Kill", votes, round_num=round, phase=current_phase)
-            print(f"Vampire Votes: {votes}")
+            print(f"Night {round} - All Vampire Votes Collected. Tally: {votes}")
 
             max_votes = max(votes.values())
             top_choices = [p for p, count in votes.items() if count == max_votes]
 
-            victim: str
+            # After all vampires have voted, update their private histories
+            for vamp_recipient in alive_vampires:
+                # Add each individual vote to the recipient's private history
+                # This mimics the "assistant" role messages in the public vote
+                for voter_vamp, victim_choice in individual_vampire_votes:
+                    self.private_histories[vamp_recipient].append({
+                        "role": "assistant", # Message is from the perspective of the voter_vamp
+                        "name": voter_vamp,
+                        "content": f"I voted to kill {victim_choice}."
+                })
+
+                # Add a system message summarizing the vote tally to the recipient's private history
+                self.private_histories[vamp_recipient].append({
+                    "role": "system",
+                    "content": f"Night {round} vampire vote tally: {votes}"
+                })
+                
+            # Now determine the outcome based on the vote tally
             if len(top_choices) > 1:
                 victim = random.choice(top_choices)
                 tie_msg = f"Vampire voting resulted in a tie. {victim} was randomly selected from the tied players ({', '.join(top_choices)}) to be killed."
@@ -373,7 +392,6 @@ class Vampire_or_Peasant:
                 protection_msg = f"Vampires tried to kill {victim}, but they were protected by the doctor."
                 print(protection_msg)
                 self.logger.log_game_event("Protection Successful", protection_msg, round_num=round, phase="Night")
-                # self.shared_history.append({"role": "system", "content": f"Night {round} - No one died tonight."}) # mod_announcing_updates will handle this
                 self.logger.save_log()
                 return None 
 
