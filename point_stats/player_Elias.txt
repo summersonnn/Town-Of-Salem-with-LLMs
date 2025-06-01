@@ -1,0 +1,22 @@
+Game ID: 1
+Players in Game (Name: Model): {'Elias': 'qwen/qwen3-235b-a22b', 'Greer': 'qwen/qwq-32b', 'Lester': 'google/gemini-2.5-flash-preview-05-20:thinking', 'Morgan': 'qwen/qwen3-32b', 'Ellie': 'openai/gpt-4.1', 'Finch': 'x-ai/grok-3-mini-beta', 'Casey': 'x-ai/grok-3-beta', 'Fusco': 'anthropic/claude-sonnet-4', 'Root': 'anthropic/claude-opus-4', 'Chuck': 'openai/o1'}
+Your Role: Musketeer
+Game Outcome for You: Won
+Rounds Survived by Player: 3
+Total Rounds in this Game: 3
+Points Gained This Game: 0.3
+------------------------------------
+--- Summary Statistics ---
+Total Points: 0.3
+Total Rounds Survived (Non-Vampire Games): 3
+Total Games with Non-Vampire Round Stats: 1
+Total Vampire Games: 0
+Won Vampire Games: 0
+Won and Survived Vampire Games: 0
+Vampire Win Percentage: 0.0%
+Total Peasant Role Games: 0
+Won Peasant Role Games: 0
+Peasant Role Win Percentage: 0.0%
+Total Clown Games: 0
+Won Clown Games: 0
+Clown Win Percentage: 0.0%

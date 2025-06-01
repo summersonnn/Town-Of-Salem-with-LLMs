@@ -111,6 +111,7 @@ def chat_completion(
                 print(f"  Request params (model and message count): model={request_params.get('model')}, num_messages={len(request_params.get('messages', []))}")
                 print(f"  Last exception: {type(last_exception).__name__}: {str(last_exception)}\n\n")
                 
+                '''
                 # Return a DyanmicVote with a random choice if is_a_decision
                 if is_a_decision:
                     random_choice = random.choice(choices)
@@ -121,6 +122,8 @@ def chat_completion(
                 # If not a decision, return an empty string
                 else:
                     return ""
+                '''
+                raise Exception
                     
 
     # This part of the code should not be reached if MAX_RETRIES > 0,
@@ -139,7 +142,7 @@ if __name__ == "__main__":
 
     # 2. Define the player_model_map
     model_map = {
-        "Max": "mistralai/mistral-medium-3",
+        "Max": "openai/o4-mini-high",
     }
 
     # 3. Create a sample chat history

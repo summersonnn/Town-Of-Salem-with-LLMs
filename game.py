@@ -863,8 +863,8 @@ if __name__ == "__main__":
     # --- Configuration ---
     CONFIG_FILE = "game_config.yaml" # Name of your new config file
     RULES_FILE = "game_rules.yaml"
-    NUM_GAMES_TO_RUN = 5
-    NUM_PLAYERS_PER_GAME = 8
+    NUM_GAMES_TO_RUN = 1
+    NUM_PLAYERS_PER_GAME = 10
 
     # Load players and models from the external file
     try:

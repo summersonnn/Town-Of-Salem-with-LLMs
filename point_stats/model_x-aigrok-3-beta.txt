@@ -1,0 +1,22 @@
+Game ID: 1
+Played by (Player Name): Casey
+Player's Role in this Game: Peasant
+Game Outcome for Player: Won
+Rounds Survived by Player: 2
+Total Rounds in this Game: 3
+Points Gained This Game (for Model via Player): 0.2
+------------------------------------
+--- Summary Statistics ---
+Total Points: 0.2
+Total Rounds Survived (Non-Vampire Games): 2
+Total Games with Non-Vampire Round Stats: 1
+Total Vampire Games: 0
+Won Vampire Games: 0
+Won and Survived Vampire Games: 0
+Vampire Win Percentage: 0.0%
+Total Peasant Role Games: 1
+Won Peasant Role Games: 1
+Peasant Role Win Percentage: 100.0%
+Total Clown Games: 0
+Won Clown Games: 0
+Clown Win Percentage: 0.0%
