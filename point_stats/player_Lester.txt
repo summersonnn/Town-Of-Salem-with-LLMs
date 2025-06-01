@@ -6,17 +6,25 @@ Rounds Survived by Player: 3
 Total Rounds in this Game: 3
 Points Gained This Game: 0.3
 ------------------------------------
+Game ID: 2
+Players in Game (Name: Model): {'Greer': 'deepseek/deepseek-r1-0528', 'Root': 'meta-llama/llama-4-scout', 'Reese': 'qwen/qwq-32b', 'Lester': 'google/gemini-2.5-flash-preview-05-20:thinking', 'Chuck': 'anthropic/claude-sonnet-4', 'Shaw': 'deepseek/deepseek-r1-0528-qwen3-8b', 'Fusco': 'nvidia/llama-3.1-nemotron-ultra-253b-v1', 'Sarah': 'anthropic/claude-3.7-sonnet', 'Jeff': 'openai/gpt-4.1', 'Devon': 'openai/o1'}
+Your Role: Peasant
+Game Outcome for You: Lost
+Rounds Survived by Player: 4
+Total Rounds in this Game: 4
+Points Gained This Game: 0.4
+------------------------------------
 --- Summary Statistics ---
-Total Points: 0.3
-Total Rounds Survived (Non-Vampire Games): 3
-Total Games with Non-Vampire Round Stats: 1
+Total Points: 0.7
+Total Rounds Survived (Non-Vampire Games): 7
+Total Games with Non-Vampire Round Stats: 2
 Total Vampire Games: 0
 Won Vampire Games: 0
 Won and Survived Vampire Games: 0
 Vampire Win Percentage: 0.0%
-Total Peasant Role Games: 1
+Total Peasant Role Games: 2
 Won Peasant Role Games: 1
-Peasant Role Win Percentage: 100.0%
+Peasant Role Win Percentage: 50.0%
 Total Clown Games: 0
 Won Clown Games: 0
 Clown Win Percentage: 0.0%

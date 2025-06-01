@@ -58,10 +58,9 @@ def chat_completion(
         base_url=base_url,
     )
     
-    # Special case for scout, deepseek, and qwen 235. the fastest is problematic, so we remove the suffix
-    if any(key in model_to_use for key in ["scout", "deepseek", "235"]) and \
-    model_to_use.endswith(":nitro"):
-        model_to_use = model_to_use[:-len(":nitro")]
+    # For qwen models, choose the fastest provider!
+    if "qwen" in model_to_use:
+        model_to_use = model_to_use + ":nitro"
     
     # Initialize request_params with common parameters
     request_params = {
@@ -142,7 +141,7 @@ if __name__ == "__main__":
 
     # 2. Define the player_model_map
     model_map = {
-        "Max": "openai/o4-mini-high",
+        "Max": "nvidia/llama-3.1-nemotron-ultra-253b-v1",
     }
 
     # 3. Create a sample chat history

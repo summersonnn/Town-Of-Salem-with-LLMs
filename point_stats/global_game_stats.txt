@@ -1,6 +1,8 @@
 Game 1
 Won by Peasants
+Game 2
+Won by Vampires
 
-Vampires win ratio: 0/1 : 0.0%
-Peasants win ratio: 1/1 : 100.0%
-Clown win ratio: 0/1 : 0.0%
+Vampires win ratio: 1/2 : 50.0%
+Peasants win ratio: 1/2 : 50.0%
+Clown win ratio: 0/2 : 0.0%

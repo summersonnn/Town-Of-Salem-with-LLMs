@@ -514,7 +514,7 @@ class Vampire_or_Peasant:
                 {"role": "system", "content": f"Voting round {round} starts. You are player {p}."},
                 {"role": "system", "content": "Vote to kick a player or say 'Pass'."},
                 {"role": "system", "content": "Choices: " + choices_prompt_string},
-                {"role": "system", "content": "Output only the name of the player (or 'Pass') and nothing else. Discussion time is over. Example output: 'Nina'"}
+                {"role": "system", "content": "Output only the name of the player (or 'Pass') and nothing else. Discussion time is over. Example output 1: Nina Example output 2: Pass"}
             ]
             msgs = self.build_conversation(p) + prompt
             choice_obj = chat_completion(
@@ -863,7 +863,7 @@ if __name__ == "__main__":
     # --- Configuration ---
     CONFIG_FILE = "game_config.yaml" # Name of your new config file
     RULES_FILE = "game_rules.yaml"
-    NUM_GAMES_TO_RUN = 1
+    NUM_GAMES_TO_RUN = 3
     NUM_PLAYERS_PER_GAME = 10
 
     # Load players and models from the external file
@@ -883,7 +883,7 @@ if __name__ == "__main__":
     
     rules_file = "game_rules.yaml"
 
-    for game_num in range(1, NUM_GAMES_TO_RUN + 1):
+    for game_num in range(3, NUM_GAMES_TO_RUN + 1):
         print(f"\n\n===== INITIALIZING GAME {game_num} / {NUM_GAMES_TO_RUN} =====")
         
         # Select a random subset of players and models for this game

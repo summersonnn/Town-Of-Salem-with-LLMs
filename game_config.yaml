@@ -28,7 +28,7 @@ models:
   - "anthropic/claude-sonnet-4"
   - "anthropic/claude-opus-4"
   - "x-ai/grok-3-beta"
-  - "x-ai/grok-3-mini-beta"
+  - "nvidia/llama-3.1-nemotron-ultra-253b-v1"
   - "meta-llama/llama-4-maverick"
   - "meta-llama/llama-4-scout"
   - "deepseek/deepseek-r1-0528"

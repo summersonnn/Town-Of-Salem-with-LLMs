@@ -6,14 +6,22 @@ Rounds Survived by Player: 3
 Total Rounds in this Game: 3
 Points Gained This Game (for Model via Player): 0.3
 ------------------------------------
+Game ID: 2
+Played by (Player Name): Reese
+Player's Role in this Game: Vampire
+Game Outcome for Player: Won
+Rounds Survived by Player: 4 (Vampire Game - stats not tracked for summary)
+Total Rounds in this Game: 4
+Points Gained This Game (for Model via Player): 1.0
+------------------------------------
 --- Summary Statistics ---
-Total Points: 0.3
+Total Points: 1.3
 Total Rounds Survived (Non-Vampire Games): 3
 Total Games with Non-Vampire Round Stats: 1
-Total Vampire Games: 0
-Won Vampire Games: 0
-Won and Survived Vampire Games: 0
-Vampire Win Percentage: 0.0%
+Total Vampire Games: 1
+Won Vampire Games: 1
+Won and Survived Vampire Games: 1
+Vampire Win Percentage: 100.0%
 Total Peasant Role Games: 1
 Won Peasant Role Games: 1
 Peasant Role Win Percentage: 100.0%
