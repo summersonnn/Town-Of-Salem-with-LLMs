@@ -863,8 +863,8 @@ if __name__ == "__main__":
     # --- Configuration ---
     CONFIG_FILE = "game_config.yaml" # Name of your new config file
     RULES_FILE = "game_rules.yaml"
-    NUM_GAMES_TO_RUN = 3
-    NUM_PLAYERS_PER_GAME = 10
+    NUM_GAMES_TO_RUN = 32
+    NUM_PLAYERS_PER_GAME = 8
 
     # Load players and models from the external file
     try:
@@ -883,7 +883,7 @@ if __name__ == "__main__":
     
     rules_file = "game_rules.yaml"
 
-    for game_num in range(3, NUM_GAMES_TO_RUN + 1):
+    for game_num in range(19, NUM_GAMES_TO_RUN + 1):
         print(f"\n\n===== INITIALIZING GAME {game_num} / {NUM_GAMES_TO_RUN} =====")
         
         # Select a random subset of players and models for this game
