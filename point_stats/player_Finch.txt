@@ -1,0 +1,46 @@
+Game ID: 1
+Players in Game (Name: Model): {'Sarah': 'deepseek/deepseek-r1-0528-qwen3-8b', 'Casey': 'meta-llama/llama-4-maverick', 'Root': 'qwen/qwen3-32b', 'Shaw': 'anthropic/claude-opus-4', 'Reese': 'nvidia/llama-3.1-nemotron-ultra-253b-v1', 'Finch': 'anthropic/claude-3.7-sonnet', 'Jeff': 'qwen/qwq-32b', 'Carter': 'deepseek/deepseek-r1-0528'}
+Your Role: Clown
+Game Outcome for You: Lost
+Rounds Survived by Player: 4
+Total Rounds in this Game: 4
+Points Gained This Game: 0.3
+------------------------------------
+Game ID: 3
+Players in Game (Name: Model): {'Greer': 'openai/o1', 'Carter': 'google/gemini-2.5-flash-preview-05-20:thinking', 'Reese': 'qwen/qwen3-32b', 'Finch': 'nvidia/llama-3.1-nemotron-ultra-253b-v1', 'Jeff': 'qwen/qwq-32b', 'Fusco': 'anthropic/claude-opus-4', 'Casey': 'meta-llama/llama-4-maverick', 'Morgan': 'google/gemini-2.5-pro-preview'}
+Your Role: Vampire
+Game Outcome for You: Won
+Rounds Survived by Player: 3 (Vampire Game - survival stats not tracked for summary)
+Total Rounds in this Game: 3 (Vampire Game - total rounds not tracked for non-vampire summary)
+Points Gained This Game: 1.0
+------------------------------------
+Game ID: 4
+Players in Game (Name: Model): {'Ellie': 'anthropic/claude-opus-4', 'Sarah': 'openai/gpt-4.1', 'Devon': 'qwen/qwen3-235b-a22b', 'Finch': 'qwen/qwq-32b', 'Carter': 'qwen/qwen3-32b', 'Reese': 'anthropic/claude-sonnet-4', 'Casey': 'nvidia/llama-3.1-nemotron-ultra-253b-v1', 'Morgan': 'meta-llama/llama-4-maverick'}
+Your Role: Musketeer
+Game Outcome for You: Lost
+Rounds Survived by Player: 2
+Total Rounds in this Game: 5
+Points Gained This Game: 0.1
+------------------------------------
+Game ID: 5
+Players in Game (Name: Model): {'Lester': 'nvidia/llama-3.1-nemotron-ultra-253b-v1', 'Jeff': 'anthropic/claude-opus-4', 'Morgan': 'openai/o1', 'Elias': 'deepseek/deepseek-r1-0528-qwen3-8b', 'Devon': 'google/gemini-2.5-pro-preview', 'Reese': 'meta-llama/llama-4-maverick', 'Finch': 'deepseek/deepseek-r1-0528', 'Greer': 'google/gemini-2.5-flash-preview-05-20:thinking'}
+Your Role: Vampire
+Game Outcome for You: Lost
+Rounds Survived by Player: 2 (Vampire Game - survival stats not tracked for summary)
+Total Rounds in this Game: 2 (Vampire Game - total rounds not tracked for non-vampire summary)
+Points Gained This Game: 0.0
+------------------------------------
+--- Summary Statistics ---
+Total Points: 1.4
+Total Rounds Survived (Non-Vampire Games): 6
+Total Rounds in all Non-Vampire Games: 9
+Total Vampire Games: 2
+Won Vampire Games: 1
+Won and Survived Vampire Games: 1
+Vampire Win Percentage: 50.0%
+Total Peasant Role Games: 1
+Won Peasant Role Games: 0
+Peasant Role Win Percentage: 0.0%
+Total Clown Games: 1
+Won Clown Games: 0
+Clown Win Percentage: 0.0%

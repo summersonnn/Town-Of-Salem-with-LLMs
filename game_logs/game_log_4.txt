@@ -1,0 +1,305 @@
+--- Game Log: 4 ---
+--- Log started at: 2025-06-02 20:06:03 ---
+==================================================
+MODERATOR: Hello everyone. I am the moderator. Players are: Ellie, Sarah, Devon, Finch, Carter, Reese, Casey, Morgan. Roles assigned. Game begins now.
+GAME SETUP & INITIAL ROLES:
+  Rules File: game_rules.yaml
+  Requested Vampire Population: 2
+  Players, Roles, and Models:
+    - Ellie: Observer (Model: anthropic/claude-opus-4)
+    - Sarah: Vampire (Model: openai/gpt-4.1)
+    - Devon: Vampire (Model: qwen/qwen3-235b-a22b)
+    - Finch: Musketeer (Model: qwen/qwq-32b)
+    - Carter: Doctor (Model: qwen/qwen3-32b)
+    - Reese: Peasant (Model: anthropic/claude-sonnet-4)
+    - Casey: Peasant (Model: nvidia/llama-3.1-nemotron-ultra-253b-v1)
+    - Morgan: Clown (Model: meta-llama/llama-4-maverick)
+--------------------
+EVENT (Round 1, Night): Phase Start - Night 1 begins.
+ACTION (R1, Night - Observer Action): Ellie observed: Devon
+PRIVATE INFO for Ellie (Round 1, Night - Observer Action) (Observation Result): You chose to observe Devon in the night 1. Devon is a Vampire.
+ACTION (R1, Night - Doctor Action): Carter protected: Devon
+PRIVATE INFO for Carter (Round 1, Night - Doctor Action) (Protection Confirmation): You chose to protect Devon in the night 1.
+EVENT (Round 1, Night - Vampire Voting): Vampire Voting Phase - Vampires are choosing a victim.
+ACTION (R1, Night - Vampire Voting): Devon voted to kill: Ellie
+ACTION (R1, Night - Vampire Voting): Sarah voted to kill: Finch
+VOTE TALLY (Round 1, Night - Vampire Voting) - Type: Vampire Kill
+  Ellie: 1 vote(s)
+  Finch: 1 vote(s)
+--------------------
+EVENT (Round 1, Night - Vampire Voting): Vampire Vote Tie Broken - Vampire voting resulted in a tie. Ellie was randomly selected from the tied players (Ellie, Finch) to be killed.
+ELIMINATION (Round 1, Night): Ellie (Role: Observer) was eliminated. Reason: Killed by Vampires.
+MODERATOR (Round 1, Night): Night 1 has fallen. Vampires have killed Ellie tonight.
+EVENT (Round 1): Game End Check Status - Vampires: 2, Non-Vampires: 5, Alive: 7 - This info is not shared with players.
+MODERATOR (Round 1, Night End): Currently alive players: Sarah, Devon, Finch, Carter, Reese, Casey, Morgan.
+EVENT (Round 1, Day): Phase Start - Day 1 begins.
+MODERATOR (Round 1, Public Chat): Public chat begins.
+
+***Carter: I’m confident Ellie’s death wasn’t random—vampires are targeting specific people. I protected someone last night, but I can’t say who. Devon might be a safe bet to trust for now. Let’s focus on who had the most to gain from Ellie’s death.
+***Sarah: That was a quick first night. I’m curious—did anyone notice anything strange yesterday? Maybe someone acting nervous or too quiet? Finch, you were pretty quiet before night fell. Any thoughts?
+***Morgan: I'm not sure if it's relevant, but I did notice Ellie and Devon arguing a bit during our last chat before the night fell. Not sure if it's a lead, but it's worth considering.
+***Casey: I think we should consider voting out Morgan. They’ve been too quiet, and in these games, silence can be suspicious. Plus, if they’re a vampire, they’d want to avoid drawing attention. What do others think?
+***Devon: Ellie and I had a small disagreement, but that’s normal—doesn’t make me a vampire. Let’s focus on the real issue: Morgan’s silence is sketchy. If they’re hiding something, voting them out could save us time. I’m with Sarah and Reese on this. Let’s eliminate Morgan.
+***Finch: I’m not sure rushing a vote on Morgan is wise. If they’re the Clown, voting them out *ends the game with their victory*. Let’s not hand them the win. Instead, maybe we should ask: why was Ellie targeted? She was killed last night. If the Doctor was protecting someone else, that tells us something. Let’s talk about who benefited from her death. Devon, you mentioned arguing with Ellie—could that be a coincidence, or a distraction? Let’s not jump to conclusions.
+***Reese: Looking at this situation, I'm concerned about the rush to vote out Morgan. Casey and Devon both jumped on that idea pretty quickly, which feels coordinated to me. 
+
+Carter claims to be the Doctor and says they protected someone - that's a bold claim to make so early. If true, it means the vampires didn't get their first choice target. But it could also be a bluff.
+
+Finch makes a good point about not rushing into voting Morgan if they might be the Clown. We need to be more careful about that.
+
+The argument between Devon and Ellie that Morgan mentioned is interesting timing. Devon's quick deflection and immediate push to vote Morgan feels defensive to me.
+
+I think we should slow down and gather more information before making any votes. What does everyone else think about Carter's Doctor claim? And Devon, can you tell us more about what you and Ellie were arguing about?
+MODERATOR (Round 1, Public Chat): Public chat ended. Moving to voting phase.
+
+EVENT (Round 1, Day Voting): Public Voting Phase - Day 1 voting starts.
+MODERATOR (Round 1, Public Voting): Public voting begins.
+
+VOTE TALLY (Round 1, Day Voting) - Type: Public Kick-Out
+  Devon: 2 vote(s)
+  Finch: 1 vote(s)
+  Carter: 1 vote(s)
+  Morgan: 2 vote(s)
+--------------------
+VOTE OUTCOME (Round 1, Day Voting): The vote was tied. No one has been voted out.
+MODERATOR (Round 1, Day): Day 1 has dawned. The vote was tied; no one was voted out.
+EVENT (Round 1): Game End Check Status - Vampires: 2, Non-Vampires: 5, Alive: 7 - This info is not shared with players.
+MODERATOR (Round 1, Day End): Currently alive players: Sarah, Devon, Finch, Carter, Reese, Casey, Morgan.
+EVENT (Round 2, Night): Phase Start - Night 2 begins.
+EVENT (Round 2, Night - Observer Action): Observer Action Skipped - Observer is not active or available.
+ACTION (R2, Night - Doctor Action): Carter protected: Devon
+PRIVATE INFO for Carter (Round 2, Night - Doctor Action) (Protection Confirmation): You chose to protect Devon in the night 2.
+EVENT (Round 2, Night - Vampire Voting): Vampire Voting Phase - Vampires are choosing a victim.
+ACTION (R2, Night - Vampire Voting): Devon voted to kill: Carter
+ACTION (R2, Night - Vampire Voting): Sarah voted to kill: Finch
+VOTE TALLY (Round 2, Night - Vampire Voting) - Type: Vampire Kill
+  Finch: 1 vote(s)
+  Carter: 1 vote(s)
+--------------------
+EVENT (Round 2, Night - Vampire Voting): Vampire Vote Tie Broken - Vampire voting resulted in a tie. Finch was randomly selected from the tied players (Finch, Carter) to be killed.
+ELIMINATION (Round 2, Night): Finch (Role: Musketeer) was eliminated. Reason: Killed by Vampires.
+MODERATOR (Round 2, Night): Night 2 has fallen. Vampires have killed Finch tonight.
+EVENT (Round 2): Game End Check Status - Vampires: 2, Non-Vampires: 4, Alive: 6 - This info is not shared with players.
+MODERATOR (Round 2, Night End): Currently alive players: Sarah, Devon, Carter, Reese, Casey, Morgan.
+EVENT (Round 2, Day): Phase Start - Day 2 begins.
+MODERATOR (Round 2, Public Chat): Public chat begins.
+
+***Reese: I'm troubled by how this voting is playing out. We have Devon getting 2 votes (from me and Casey), Morgan getting 2 votes (from Devon and Carter), and then scattered votes elsewhere.
+
+What really concerns me is that Carter claimed to be the Doctor earlier, but now Finch is voting for Carter. If Carter really is the Doctor, voting him out would be a huge mistake for the peasants.
+
+Devon, you still haven't explained what your argument with Ellie was about. Your immediate pivot to voting Morgan after being questioned feels like deflection.
+
+And Casey, you were the first to suggest voting Morgan, then Devon jumped right on board with that idea. That coordination still bothers me.
+
+Before we finalize these votes, I think we need Carter to clarify - if you're really the Doctor, who did you protect last night? And Devon, what was the argument with Ellie actually about?
+
+The fact that we're tied between Devon and Morgan right now might actually be good - it gives us a chance to get more information before someone gets eliminated.
+***Sarah: Finch getting killed last night is interesting—especially since he was the one warning us not to rush into voting for Morgan. That makes me think the vampires wanted to get rid of someone who was urging caution. 
+
+Carter, you claimed to be the Doctor before. If that’s true, who did you protect last night? And Morgan, you passed last vote—do you have any new thoughts now that Finch is gone? 
+
+I agree with Reese that we need more information before voting anyone out. Let’s not make it easy for the vampires.
+***Morgan: Devon, you still haven’t explained your argument with Ellie. What was it about? 
+
+I think we should be careful about accusing people without solid evidence. We don’t know who the vampires are yet, and we need to be smart about this. If Carter is the Doctor, they might have protected someone important. 
+
+Let’s take a step back and think this through. We can’t afford to make mistakes.
+***Carter: I am the Doctor. I protected Devon in both Night 1 and Night 2. That means the vampires targeted him both times but failed. This suggests Devon might be a key target, so we need to be cautious about who else they might go after next. Let's focus on other suspects now that we know Devon was protected.
+***Casey: I think we should consider voting out Morgan. They’ve been too quiet, and in these games, silence can be suspicious. Plus, if they’re a vampire, they’d want to avoid drawing attention. What do others think?
+***Devon: Night 3 vampire vote tally: {'Carter': 1, 'Morgan': 1, 'Reese': 0, 'Casey': 0}  
+Vampire voting resulted in a tie. Carter was randomly selected from the tied players (Carter, Morgan) to be killed.
+MODERATOR (Round 2, Public Chat): Public chat ended. Moving to voting phase.
+
+EVENT (Round 2, Day Voting): Public Voting Phase - Day 2 voting starts.
+MODERATOR (Round 2, Public Voting): Public voting begins.
+
+VOTE TALLY (Round 2, Day Voting) - Type: Public Kick-Out
+  Devon: 2 vote(s)
+  Carter: 2 vote(s)
+  Morgan: 1 vote(s)
+--------------------
+VOTE OUTCOME (Round 2, Day Voting): The vote was tied. No one has been voted out.
+MODERATOR (Round 2, Day): Day 2 has dawned. The vote was tied; no one was voted out.
+EVENT (Round 2): Game End Check Status - Vampires: 2, Non-Vampires: 4, Alive: 6 - This info is not shared with players.
+MODERATOR (Round 2, Day End): Currently alive players: Sarah, Devon, Carter, Reese, Casey, Morgan.
+EVENT (Round 3, Night): Phase Start - Night 3 begins.
+EVENT (Round 3, Night - Observer Action): Observer Action Skipped - Observer is not active or available.
+ACTION (R3, Night - Doctor Action): Carter protected: Carter
+PRIVATE INFO for Carter (Round 3, Night - Doctor Action) (Protection Confirmation): You chose to protect yourself in the night 3. (Carter)
+EVENT (Round 3, Night - Vampire Voting): Vampire Voting Phase - Vampires are choosing a victim.
+ACTION (R3, Night - Vampire Voting): Devon voted to kill: Carter
+ACTION (R3, Night - Vampire Voting): Sarah voted to kill: Carter
+VOTE TALLY (Round 3, Night - Vampire Voting) - Type: Vampire Kill
+  Carter: 2 vote(s)
+--------------------
+EVENT (Round 3, Night - Vampire Voting): Vampire Victim Chosen - Vampires collectively chose to kill Carter.
+EVENT (Round 3, Night): Protection Successful - Vampires tried to kill Carter, but they were protected by the doctor.
+MODERATOR (Round 3, Night): Night 3 has fallen. No one was killed tonight.
+EVENT (Round 3): Game End Check Status - Vampires: 2, Non-Vampires: 4, Alive: 6 - This info is not shared with players.
+MODERATOR (Round 3, Night End): Currently alive players: Sarah, Devon, Carter, Reese, Casey, Morgan.
+EVENT (Round 3, Day): Phase Start - Day 3 begins.
+MODERATOR (Round 3, Public Chat): Public chat begins.
+
+***Casey: I think we need to re-examine the previous nights. The Doctor protected Devon twice, which saved him. But now that Carter is dead, who was the Doctor? If Carter was the Doctor, then his death means we lost a crucial role. But if he wasn't, then the real Doctor is still out there. 
+
+Morgan has been quiet again. Maybe we should consider voting them out now. What does everyone else think?
+***Morgan: Let's think this through. If Carter was the Doctor and got killed, that changes things. We need to figure out who the new Doctor is, if anyone. 
+
+Devon was protected twice, which makes me wonder if there's a connection between him and the vampires. We still don't know what he and Ellie argued about. 
+
+Morgan's silence is still concerning, but we need solid evidence. Let's not rush into anything.
+***Sarah: No one died last night, which means the Doctor must have protected the right person. That’s interesting, especially since Carter claimed to be the Doctor and now he’s gone. If Carter was telling the truth, then someone else must have stepped up as Doctor, or maybe someone was bluffing.
+
+Devon, you were protected twice before. Do you have any suspicions about who the vampires might be targeting now? And Morgan, you’ve been pretty quiet—do you have any new thoughts after last night? I think we need to be careful with our next vote.
+***Reese: Looking at what happened last night - no one died, which means the Doctor successfully protected someone. But Carter, who claimed to be the Doctor, is now dead. This creates some interesting possibilities.
+
+If Carter was telling the truth about being the Doctor, then either:
+1. There's another Doctor (which seems unlikely given the role setup)
+2. Someone else has taken on a protective role
+3. The vampires targeted someone the real Doctor protected
+
+But if Carter was lying about being the Doctor, then the real Doctor is still alive and made a good save last night.
+
+Devon, I notice you still haven't answered about your argument with Ellie. That's been asked multiple times now and you keep deflecting. What was it about?
+
+Casey, you suggested voting Morgan again, but you also passed on the last vote. That inconsistency is notable.
+
+Morgan, your continued quietness is concerning, but I agree we need solid evidence before voting anyone out.
+
+Sarah, what are your thoughts on who might have been protected last night? And does anyone have any theories about why the vampires are choosing their specific targets?
+
+We're down to 6 people now, so we need to be very careful with our votes. If there are still 2 vampires alive, we're getting close to their win condition.
+***Carter: The fact that no one died last night suggests the Doctor is still active and made a successful save. That’s good news for the peasants, but it also means the vampires are still at large. 
+
+Devon, your continued silence about your argument with Ellie is becoming more suspicious. If you’re a peasant, wouldn’t you want to clear the air? Why the deflection? 
+
+Morgan’s quietness is still a red flag, but I agree with Reese—we need to be cautious about rushing to vote them out. If they’re the Clown, we hand them the win. Let’s focus on the inconsistencies in Devon’s behavior first. 
+
+Carter, you claimed to be the Doctor earlier, but now you’re gone. If you were lying, that means the real Doctor is still among us. Who do you think they might be? 
+
+Let’s not forget the vampires’ pattern. They’ve targeted Devon twice. If they’re trying to eliminate key roles, maybe we should consider who else might be in their sights. 
+
+Sarah, what’s your take on this? And Casey, you’ve been quiet—any thoughts?
+***Devon: The fact that no one died last night confirms the Doctor is still active. But Carter's death complicates things—he claimed to be the Doctor, but if he was lying, the real Doctor is still here. Sarah, you keep pushing Morgan as suspicious, but why? You were the first to target them early on. That feels calculated. 
+
+Also, Reese hasn’t shared their thoughts yet. Why the silence? If they’re the Observer, they might have critical intel. Let’s not ignore that. 
+
+As for me, I’ve been upfront about my argument with Ellie, but Sarah? You’ve avoided addressing why you were so close to Ellie before she died. Maybe we should be asking you more questions instead of chasing shadows like Morgan. Let’s focus on who’s deflecting the most.
+MODERATOR (Round 3, Public Chat): Public chat ended. Moving to voting phase.
+
+EVENT (Round 3, Day Voting): Public Voting Phase - Day 3 voting starts.
+MODERATOR (Round 3, Public Voting): Public voting begins.
+
+VOTE TALLY (Round 3, Day Voting) - Type: Public Kick-Out
+  Devon: 2 vote(s)
+  Carter: 1 vote(s)
+  Casey: 1 vote(s)
+  Morgan: 2 vote(s)
+--------------------
+VOTE OUTCOME (Round 3, Day Voting): The vote was tied. No one has been voted out.
+MODERATOR (Round 3, Day): Day 3 has dawned. The vote was tied; no one was voted out.
+EVENT (Round 3): Game End Check Status - Vampires: 2, Non-Vampires: 4, Alive: 6 - This info is not shared with players.
+MODERATOR (Round 3, Day End): Currently alive players: Sarah, Devon, Carter, Reese, Casey, Morgan.
+EVENT (Round 4, Night): Phase Start - Night 4 begins.
+EVENT (Round 4, Night - Observer Action): Observer Action Skipped - Observer is not active or available.
+ACTION (R4, Night - Doctor Action): Carter protected: Devon
+PRIVATE INFO for Carter (Round 4, Night - Doctor Action) (Protection Confirmation): You chose to protect Devon in the night 4.
+EVENT (Round 4, Night - Vampire Voting): Vampire Voting Phase - Vampires are choosing a victim.
+ACTION (R4, Night - Vampire Voting): Devon voted to kill: Morgan
+ACTION (R4, Night - Vampire Voting): Sarah voted to kill: Reese
+VOTE TALLY (Round 4, Night - Vampire Voting) - Type: Vampire Kill
+  Reese: 1 vote(s)
+  Morgan: 1 vote(s)
+--------------------
+EVENT (Round 4, Night - Vampire Voting): Vampire Vote Tie Broken - Vampire voting resulted in a tie. Morgan was randomly selected from the tied players (Reese, Morgan) to be killed.
+ELIMINATION (Round 4, Night): Morgan (Role: Clown) was eliminated. Reason: Killed by Vampires.
+MODERATOR (Round 4, Night): Night 4 has fallen. Vampires have killed Morgan tonight.
+EVENT (Round 4): Game End Check Status - Vampires: 2, Non-Vampires: 3, Alive: 5 - This info is not shared with players.
+MODERATOR (Round 4, Night End): Currently alive players: Sarah, Devon, Carter, Reese, Casey.
+EVENT (Round 4, Day): Phase Start - Day 4 begins.
+MODERATOR (Round 4, Public Chat): Public chat begins.
+
+***Casey: I think we need to re-examine the previous nights. The Doctor protected Devon twice, which saved him. But now that Carter is dead, who was the Doctor? If Carter was the Doctor, then his death means we lost a crucial role. But if he wasn't, then the real Doctor is still out there. 
+
+Morgan has been quiet again. Maybe we should consider voting them out now. What does everyone else think?
+***Sarah: Morgan getting killed last night narrows things down a lot. We’re down to five, and if there are still two vampires, we’re in a dangerous spot. 
+
+Carter, you claimed to be the Doctor before, but then you were supposedly killed and now you’re back? That doesn’t add up. Reese, you’ve been asking a lot of questions but haven’t really committed to any suspicions. And Casey, you keep suggesting we vote out the quiet ones, but that hasn’t worked so far.
+
+Devon, what’s your take? I think we need to be very careful with this vote—one mistake and the vampires could win.
+***Devon: Morgan’s death is a red flag. They were quiet, but maybe that’s because they were the Clown trying to avoid attention. Now that they’re gone, we need to focus on who’s left. Sarah, you were the first to target Morgan, which feels suspicious. And Casey, you kept pushing to vote them out too—why the fixation? 
+
+Carter came back from the dead, which makes me think they might be the Musketeer. If that’s true, they could take someone with them if they’re voted out. Reese has been asking a lot of questions but hasn’t taken a clear stance. That feels like Observer behavior—maybe they’ve been checking up on people at night. 
+
+Let’s not forget: the Doctor is still here. If they protected me twice, they’re probably trying to keep me alive. That means the Doctor is likely someone who thinks I’m safe. Maybe we should question who’s been defending me? 
+
+We’re down to five. One more death and the vampires could win. Let’s be careful who we target.
+***Reese: Looking at the current situation, we're down to just 5 players: Sarah, Devon, Carter, Casey, and myself. This is a critical moment - if there are still 2 vampires alive, they're very close to winning.
+
+Some key observations:
+
+Carter claimed to be the Doctor earlier, then was supposedly killed, and now is back talking. That's... impossible unless there's something I'm missing about the game mechanics. This is very confusing.
+
+Devon keeps deflecting about his argument with Ellie, which has been asked about multiple times. His pattern of immediately pushing votes onto others when questioned is concerning.
+
+Sarah has been consistently pushing to vote out Morgan, and now Morgan is dead. The timing feels suspicious.
+
+Casey has been inconsistent - suggesting votes but then passing, and now pushing the same "vote out the quiet ones" strategy repeatedly.
+
+The fact that no one died on Night 3 means the Doctor made a good save. If Carter really was the Doctor and is now dead, then either someone else has that role or Carter was lying.
+
+Given that we're so close to a vampire victory condition, I think we need to focus on the most suspicious behavior patterns. Devon's consistent deflection and Sarah's early targeting of Morgan stand out to me.
+
+I'm most concerned about Devon right now. His refusal to explain the Ellie argument and his pattern of immediately redirecting suspicion feels like vampire behavior.
+
+What does everyone else think? We need to be very careful with this vote.
+***Carter: I need to clarify something important. I’m still alive because the Doctor protected me during Night 3. That means the Doctor is still active and among us. The vampires tried to kill me, but the Doctor saved me. This suggests the real Doctor is still here and working to protect key players. 
+
+Devon has been targeted twice by the vampires, which makes him a critical figure. If the Doctor is still protecting him, maybe we should consider why the vampires keep going after him. Could it be a distraction? Or is there something about his role or knowledge that makes him a threat? 
+
+Sarah, your focus on Morgan seems to have backfired—Morgan was killed, but that doesn’t necessarily mean they were the target. Casey, your pattern of pushing votes without clear reasoning is raising red flags. 
+
+Let’s not forget: the Doctor’s actions are strategic. If they’re protecting Devon, maybe he’s not a vampire. Let’s focus on who’s trying to eliminate him instead.
+MODERATOR (Round 4, Public Chat): Public chat ended. Moving to voting phase.
+
+EVENT (Round 4, Day Voting): Public Voting Phase - Day 4 voting starts.
+MODERATOR (Round 4, Public Voting): Public voting begins.
+
+VOTE TALLY (Round 4, Day Voting) - Type: Public Kick-Out
+  Devon: 1 vote(s)
+  Carter: 1 vote(s)
+  Reese: 1 vote(s)
+  Casey: 1 vote(s)
+--------------------
+VOTE OUTCOME (Round 4, Day Voting): The vote was tied. No one has been voted out.
+MODERATOR (Round 4, Day): Day 4 has dawned. The vote was tied; no one was voted out.
+EVENT (Round 4): Game End Check Status - Vampires: 2, Non-Vampires: 3, Alive: 5 - This info is not shared with players.
+MODERATOR (Round 4, Day End): Currently alive players: Sarah, Devon, Carter, Reese, Casey.
+EVENT (Round 5, Night): Phase Start - Night 5 begins.
+EVENT (Round 5, Night - Observer Action): Observer Action Skipped - Observer is not active or available.
+ACTION (R5, Night - Doctor Action): Carter protected: Devon
+PRIVATE INFO for Carter (Round 5, Night - Doctor Action) (Protection Confirmation): You chose to protect Devon in the night 5.
+EVENT (Round 5, Night - Vampire Voting): Vampire Voting Phase - Vampires are choosing a victim.
+ACTION (R5, Night - Vampire Voting): Devon voted to kill: Reese
+ACTION (R5, Night - Vampire Voting): Sarah voted to kill: Reese
+VOTE TALLY (Round 5, Night - Vampire Voting) - Type: Vampire Kill
+  Reese: 2 vote(s)
+--------------------
+EVENT (Round 5, Night - Vampire Voting): Vampire Victim Chosen - Vampires collectively chose to kill Reese.
+ELIMINATION (Round 5, Night): Reese (Role: Peasant) was eliminated. Reason: Killed by Vampires.
+MODERATOR (Round 5, Night): Night 5 has fallen. Vampires have killed Reese tonight.
+EVENT (Round 5): Game End Check Status - Vampires: 2, Non-Vampires: 2, Alive: 4 - This info is not shared with players.
+==================================================
+GAME END:
+  Winner(s): Vampires
+  Reason: Vampires equal or outnumber other players.
+  Final Alive Players & Roles:
+    - Sarah: Vampire
+    - Devon: Vampire
+    - Carter: Doctor
+    - Casey: Peasant
+==================================================
+--- Log ended at: 2025-06-02 20:17:33 ---
+MODERATOR (Round 5, Game End): Game over! Vampires wins!
+MODERATOR (Round 5, Game End): Game over! Vampires wins!

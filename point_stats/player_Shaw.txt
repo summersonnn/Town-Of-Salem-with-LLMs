@@ -1,0 +1,22 @@
+Game ID: 1
+Players in Game (Name: Model): {'Sarah': 'deepseek/deepseek-r1-0528-qwen3-8b', 'Casey': 'meta-llama/llama-4-maverick', 'Root': 'qwen/qwen3-32b', 'Shaw': 'anthropic/claude-opus-4', 'Reese': 'nvidia/llama-3.1-nemotron-ultra-253b-v1', 'Finch': 'anthropic/claude-3.7-sonnet', 'Jeff': 'qwen/qwq-32b', 'Carter': 'deepseek/deepseek-r1-0528'}
+Your Role: Peasant
+Game Outcome for You: Lost
+Rounds Survived by Player: 1
+Total Rounds in this Game: 4
+Points Gained This Game: 0.0
+------------------------------------
+--- Summary Statistics ---
+Total Points: 0.0
+Total Rounds Survived (Non-Vampire Games): 1
+Total Rounds in all Non-Vampire Games: 4
+Total Vampire Games: 0
+Won Vampire Games: 0
+Won and Survived Vampire Games: 0
+Vampire Win Percentage: 0.0%
+Total Peasant Role Games: 1
+Won Peasant Role Games: 0
+Peasant Role Win Percentage: 0.0%
+Total Clown Games: 0
+Won Clown Games: 0
+Clown Win Percentage: 0.0%

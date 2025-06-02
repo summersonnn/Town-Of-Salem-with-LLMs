@@ -1,0 +1,38 @@
+Game ID: 1
+Played by (Player Name): Root
+Player's Role in this Game: Vampire
+Game Outcome for Player: Won
+Rounds Survived by Player: 1 (Vampire Game - survival stats not tracked for summary)
+Total Rounds in this Game: 4 (Vampire Game - total rounds not tracked for non-vampire summary)
+Points Gained This Game (for Model via Player): 0.5
+------------------------------------
+Game ID: 3
+Played by (Player Name): Reese
+Player's Role in this Game: Doctor
+Game Outcome for Player: Lost
+Rounds Survived by Player: 2
+Total Rounds in this Game: 3
+Points Gained This Game (for Model via Player): 0.2
+------------------------------------
+Game ID: 4
+Played by (Player Name): Carter
+Player's Role in this Game: Doctor
+Game Outcome for Player: Lost
+Rounds Survived by Player: 5
+Total Rounds in this Game: 5
+Points Gained This Game (for Model via Player): 0.5
+------------------------------------
+--- Summary Statistics ---
+Total Points: 1.2
+Total Rounds Survived (Non-Vampire Games): 7
+Total Rounds in all Non-Vampire Games: 8
+Total Vampire Games: 1
+Won Vampire Games: 1
+Won and Survived Vampire Games: 0
+Vampire Win Percentage: 100.0%
+Total Peasant Role Games: 2
+Won Peasant Role Games: 0
+Peasant Role Win Percentage: 0.0%
+Total Clown Games: 0
+Won Clown Games: 0
+Clown Win Percentage: 0.0%

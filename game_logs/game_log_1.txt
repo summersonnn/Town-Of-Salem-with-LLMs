@@ -1,0 +1,241 @@
+--- Game Log: 1 ---
+--- Log started at: 2025-06-02 19:37:05 ---
+==================================================
+MODERATOR: Hello everyone. I am the moderator. Players are: Sarah, Casey, Root, Shaw, Reese, Finch, Jeff, Carter. Roles assigned. Game begins now.
+GAME SETUP & INITIAL ROLES:
+  Rules File: game_rules.yaml
+  Requested Vampire Population: 2
+  Players, Roles, and Models:
+    - Sarah: Musketeer (Model: deepseek/deepseek-r1-0528-qwen3-8b)
+    - Casey: Vampire (Model: meta-llama/llama-4-maverick)
+    - Root: Vampire (Model: qwen/qwen3-32b)
+    - Shaw: Peasant (Model: anthropic/claude-opus-4)
+    - Reese: Doctor (Model: nvidia/llama-3.1-nemotron-ultra-253b-v1)
+    - Finch: Clown (Model: anthropic/claude-3.7-sonnet)
+    - Jeff: Peasant (Model: qwen/qwq-32b)
+    - Carter: Observer (Model: deepseek/deepseek-r1-0528)
+--------------------
+EVENT (Round 1, Night): Phase Start - Night 1 begins.
+ACTION (R1, Night - Observer Action): Carter observed: Reese
+PRIVATE INFO for Carter (Round 1, Night - Observer Action) (Observation Result): You chose to observe Reese in the night 1. Reese is a Peasant (Non-vampire).
+ACTION (R1, Night - Doctor Action): Reese protected: Casey
+PRIVATE INFO for Reese (Round 1, Night - Doctor Action) (Protection Confirmation): You chose to protect Casey in the night 1.
+EVENT (Round 1, Night - Vampire Voting): Vampire Voting Phase - Vampires are choosing a victim.
+ACTION (R1, Night - Vampire Voting): Casey voted to kill: Shaw
+ACTION (R1, Night - Vampire Voting): Root voted to kill: Shaw
+VOTE TALLY (Round 1, Night - Vampire Voting) - Type: Vampire Kill
+  Shaw: 2 vote(s)
+--------------------
+EVENT (Round 1, Night - Vampire Voting): Vampire Victim Chosen - Vampires collectively chose to kill Shaw.
+ELIMINATION (Round 1, Night): Shaw (Role: Peasant) was eliminated. Reason: Killed by Vampires.
+MODERATOR (Round 1, Night): Night 1 has fallen. Vampires have killed Shaw tonight.
+EVENT (Round 1): Game End Check Status - Vampires: 2, Non-Vampires: 5, Alive: 7 - This info is not shared with players.
+MODERATOR (Round 1, Night End): Currently alive players: Sarah, Casey, Root, Reese, Finch, Jeff, Carter.
+EVENT (Round 1, Day): Phase Start - Day 1 begins.
+MODERATOR (Round 1, Public Chat): Public chat begins.
+
+***Finch: I'm shocked about Shaw! That's a terrible loss for our village. Does anyone have any information they can share? I've been trying to observe everyone carefully, but it's hard to tell who might be a vampire at this point.
+
+I think we should be careful about jumping to conclusions too quickly. The vampires could be anyone among us. Did anyone notice anything suspicious about anyone's behavior?
+***Jeff: Shaw’s death is a clear sign the vampires are already acting. We need to prioritize targets carefully. I’ve been watching for inconsistencies—like, did anyone act unusually calm last night? Or maybe someone’s alibi doesn’t add up? Let’s not split votes; focus on the most suspicious. I’m concerned about anyone who seems overly defensive or eager to shift blame. Who here wants to share what they’ve noticed?
+***Sarah: I'm shocked about Shaw! That's a terrible loss for our village. Does anyone have any information they can share? I've been trying to observe everyone carefully, but it's hard to tell who might be a vampire at this point.
+
+I think we should be careful about jumping to conclusions too quickly. The vampires could be anyone among us. Did anyone notice anything suspicious about anyone's behavior?
+Shaw’s death is a clear sign the vampires are already acting. We need to prioritize targets carefully. I’ve been watching for inconsistencies—like, did anyone act unusually calm last night? Or maybe someone’s alibi doesn’t add up? Let’s not split votes; focus on the most suspicious. I’m concerned about anyone who seems overly defensive or eager to shift blame. Who here wants to share what they’ve noticed?
+***Casey: Let's keep the conversation going and see if we can figure out who the other vampire is. I'm still trying to process what happened to Shaw. Does anyone have any theories or observations?
+***Carter: Root, you're right about focusing on inconsistencies. Do you have anyone specific in mind who seemed off? I've been replaying last night in my head, and Shaw was always vocal—maybe that's why they were targeted? Vampires often silence threats early. 
+
+To the rest: let's not let anyone hide in silence. Sarah, Casey, Jeff, Finch—any of you notice anything? A slip of the tongue, someone avoiding eye contact, or pushing too hard for a quick vote? Every detail matters now. 
+
+And Reese, you were near Shaw yesterday, right? Did anything feel unusual before nightfall? I'm not accusing, just piecing together clues.
+***Reese: I was near Shaw, yes, but I didn't notice anything out of the ordinary. They were their usual self, maybe a bit more quiet than usual, but that's not uncommon. I think we should consider that the vampires might have targeted Shaw to create panic. Let's not give them the satisfaction. 
+
+Has anyone considered the possibility that the vampires might be trying to frame someone? We need to be cautious about who we accuse. Maybe we should look for people who were overly eager to point fingers this morning. 
+
+Also, I think it's important to remember that the Doctor's protection could have saved someone last night. If the Doctor is still alive, they might have crucial information. But since roles are secret, we can't be sure. 
+
+What does everyone think about focusing on those who were less active in the discussion? Sometimes vampires try to blend in by staying quiet. Or maybe the opposite—being too active to distract. 
+
+Let's compile a list of observations and see if any patterns emerge. I'll start: Shaw was active, and they were killed. Maybe the vampires are targeting active players to reduce opposition. Who else has been vocal? Root, Sarah, Casey... We need to protect our active members. 
+
+Wait, but if the Doctor protected someone, and the kill still happened, that means the Doctor didn't protect Shaw. So either the Doctor protected someone else, or the Doctor is not using their ability effectively. 
+
+This is getting complicated. Let's hear more thoughts.
+***Root: I agree with Reese—Shaw’s death is unsettling, but we need to stay calm. Let’s focus on patterns. The Doctor protected someone last night, which means the vampires *did* target someone, but the Doctor saved them. If we can figure out who that was, we might narrow down the vampires’ focus. 
+
+That said, I’m curious—has anyone considered who might be the Doctor? They’re a key player here. If we can identify them, we could work with them to protect others. But how do we know who to trust? 
+
+Also, I’ve been thinking about the quieter players. Sometimes vampires hide in plain sight by staying silent. Let’s not overlook anyone, regardless of how active they are. Let’s keep sharing observations. Who else has caught your attention?
+MODERATOR (Round 1, Public Chat): Public chat ended. Moving to voting phase.
+
+EVENT (Round 1, Day Voting): Public Voting Phase - Day 1 voting starts.
+MODERATOR (Round 1, Public Voting): Public voting begins.
+
+VOTE TALLY (Round 1, Day Voting) - Type: Public Kick-Out
+  Sarah: 1 vote(s)
+  Casey: 1 vote(s)
+  Root: 2 vote(s)
+  Reese: 1 vote(s)
+--------------------
+VOTE OUTCOME (Round 1, Day Voting): Root has been voted out with 2 vote(s).
+ELIMINATION (Round 1, Day Voting): Root (Role: Vampire) was eliminated. Reason: Voted out by players.
+MODERATOR (Round 1, Public Voting): Public voting ended.
+
+MODERATOR (Round 1, Day): Day 1 has dawned. The community has voted out Root.
+EVENT (Round 1): Game End Check Status - Vampires: 1, Non-Vampires: 5, Alive: 6 - This info is not shared with players.
+MODERATOR (Round 1, Day End): Currently alive players: Sarah, Casey, Reese, Finch, Jeff, Carter.
+EVENT (Round 2, Night): Phase Start - Night 2 begins.
+ACTION (R2, Night - Observer Action): Carter observed: Jeff
+PRIVATE INFO for Carter (Round 2, Night - Observer Action) (Observation Result): You chose to observe Jeff in the night 2. Jeff is a Peasant (Non-vampire).
+ACTION (R2, Night - Doctor Action): Reese protected: Casey
+PRIVATE INFO for Reese (Round 2, Night - Doctor Action) (Protection Confirmation): You chose to protect Casey in the night 2.
+EVENT (Round 2, Night - Vampire Voting): Vampire Voting Phase - Vampires are choosing a victim.
+ACTION (R2, Night - Vampire Voting): Casey voted to kill: Reese
+VOTE TALLY (Round 2, Night - Vampire Voting) - Type: Vampire Kill
+  Reese: 1 vote(s)
+--------------------
+EVENT (Round 2, Night - Vampire Voting): Vampire Victim Chosen - Vampires collectively chose to kill Reese.
+ELIMINATION (Round 2, Night): Reese (Role: Doctor) was eliminated. Reason: Killed by Vampires.
+MODERATOR (Round 2, Night): Night 2 has fallen. Vampires have killed Reese tonight.
+EVENT (Round 2): Game End Check Status - Vampires: 1, Non-Vampires: 4, Alive: 5 - This info is not shared with players.
+MODERATOR (Round 2, Night End): Currently alive players: Sarah, Casey, Finch, Jeff, Carter.
+EVENT (Round 2, Day): Phase Start - Day 2 begins.
+MODERATOR (Round 2, Public Chat): Public chat begins.
+
+***Finch: I'm feeling quite concerned about the situation. Two deaths already - Shaw and now Reese. This is moving quickly, and we need to be more strategic.
+
+I've been analyzing everyone's behavior, and I'm starting to have some suspicions. Casey and Sarah seem to be at odds with each other based on the previous voting. That could indicate something.
+
+I'm particularly worried about Jeff. He's been relatively quiet but managed to vote for Root along with me last time. Could that have been a coordinated vampire move? Or perhaps Carter, who's passed on voting twice now?
+
+I think we need to be more forthcoming with information. If anyone has a special role that could help us identify the vampires, now would be the time to use it. Of course, I understand the reluctance to reveal oneself.
+
+What are everyone's thoughts on the remaining suspects? I'm trying to piece together the puzzle, but it's challenging without more information.
+***Carter: Reese's death last night is devastating—we've lost two good villagers already, and the vampires are clearly picking us off one by one. We need to regroup and share any observations we have. I've been paying close attention to everyone's behavior and voting patterns from yesterday.
+
+For instance, in the first vote, Root was kicked out with two votes. Who voted for Root? And why? That decision feels hasty now, especially with Shaw dead the night before. Maybe the vampires pushed that vote to eliminate a potential threat or to create confusion.
+
+I'm also concerned about the quiet ones among us. Silence can be a strategy. Jeff, you've been pretty reserved—any thoughts? Sarah and Casey, you both seemed at odds yesterday; has that changed? And Finch, you passed on voting last time—was that uncertainty, or something else?
+
+Let's not forget the special roles. If the Doctor is still with us, they might have insights from their protections. Or the Observer could be gathering clues. We need to work together, but carefully—revealing too much might paint a target on your back.
+
+What does everyone make of the kills so far? Shaw was vocal, and Reese was observant. Are the vampires targeting leaders to weaken us? Let's hear your theories. We can't afford another misstep.
+***Casey: Let's keep the conversation going and see if we can figure out who the other players are. I'm still trying to process what happened to Shaw and Reese. Does anyone have any theories or observations?
+***Sarah: I'm feeling quite concerned about the situation. Two deaths already - Shaw and now Reese. This is moving quickly, and we need to be more strategic.
+
+I've been analyzing everyone's behavior, and I'm starting to have some suspicions. Casey and Sarah seem to be at odds with each other based on the previous voting. That could indicate something.
+
+I'm particularly worried about Jeff. He's been relatively quiet but managed to vote for Root along with me last time. Could that have been a coordinated vampire move? Or perhaps Carter, who's passed on voting twice now?
+
+I think we need to be more forthcoming with information. If anyone has a special role that could help us identify the vampires, now would be the time to use it. Of course, I understand the reluctance to reveal oneself.
+
+What are everyone's thoughts on the remaining suspects? I'm trying to piece together the puzzle, but it's challenging without more information.
+***Jeff: The pattern here is worrying. Shaw was an active participant, then Reese, who was vocal in discussions. The vampires might be targeting leaders or those who engage too much. But wait—Carter has passed on voting twice. Silence can be as telling as aggression. Why the sudden passivity? Or maybe Carter’s calmness is genuine.  
+
+Finch, you’ve been quiet since the start. Is there anything you’ve noticed? And Sarah, you voted for Root initially—did you see something specific, or was that a strategic move?  
+
+We need to decide: are the vampires the ones pushing too hard to control the narrative, or the ones stepping back? Let’s not let fear drive us into another mistake. Let’s hear from Finch.
+MODERATOR (Round 2, Public Chat): Public chat ended. Moving to voting phase.
+
+EVENT (Round 2, Day Voting): Public Voting Phase - Day 2 voting starts.
+MODERATOR (Round 2, Public Voting): Public voting begins.
+
+VOTE TALLY (Round 2, Day Voting) - Type: Public Kick-Out
+  Casey: 1 vote(s)
+  Finch: 1 vote(s)
+  Jeff: 1 vote(s)
+  Carter: 2 vote(s)
+--------------------
+VOTE OUTCOME (Round 2, Day Voting): Carter has been voted out with 2 vote(s).
+ELIMINATION (Round 2, Day Voting): Carter (Role: Observer) was eliminated. Reason: Voted out by players.
+MODERATOR (Round 2, Public Voting): Public voting ended.
+
+MODERATOR (Round 2, Day): Day 2 has dawned. The community has voted out Carter.
+EVENT (Round 2): Game End Check Status - Vampires: 1, Non-Vampires: 3, Alive: 4 - This info is not shared with players.
+MODERATOR (Round 2, Day End): Currently alive players: Sarah, Casey, Finch, Jeff.
+EVENT (Round 3, Night): Phase Start - Night 3 begins.
+EVENT (Round 3, Night - Observer Action): Observer Action Skipped - Observer is not active or available.
+EVENT (Round 3, Night - Vampire Voting): Vampire Voting Phase - Vampires are choosing a victim.
+ACTION (R3, Night - Vampire Voting): Casey voted to kill: Jeff
+VOTE TALLY (Round 3, Night - Vampire Voting) - Type: Vampire Kill
+  Jeff: 1 vote(s)
+--------------------
+EVENT (Round 3, Night - Vampire Voting): Vampire Victim Chosen - Vampires collectively chose to kill Jeff.
+ELIMINATION (Round 3, Night): Jeff (Role: Peasant) was eliminated. Reason: Killed by Vampires.
+MODERATOR (Round 3, Night): Night 3 has fallen. Vampires have killed Jeff tonight.
+EVENT (Round 3): Game End Check Status - Vampires: 1, Non-Vampires: 2, Alive: 3 - This info is not shared with players.
+MODERATOR (Round 3, Night End): Currently alive players: Sarah, Casey, Finch.
+EVENT (Round 3, Day): Phase Start - Day 3 begins.
+MODERATOR (Round 3, Public Chat): Public chat begins.
+
+***Sarah: Jeff, your silence yesterday was noted. But silence can be a shield or a mask. I’m not accusing you, but let’s see if you have anything to add now.  
+
+Finch, you’ve been quiet too. Any insights from your perspective?  
+
+Casey, you and Sarah were at odds yesterday. Has that changed? Or is there something you’re not saying?  
+
+We need to be careful. The vampires are likely watching our interactions. If they’re still among us, they’ll use our words against us. Let’s not let fear override logic.  
+
+Also, remember the Doctor—if they’re still alive, they might have protected someone last night. If we can figure out who that was, we might have a clearer picture of who the vampires are.  
+
+Let’s focus on the pattern: Shaw was active, Reese was vocal. Maybe the vampires are targeting those who stand out. But Jeff and Carter were less active. Does that mean they’re the vampires? Or is that their cover?  
+
+We need to vote strategically. No more rushed decisions. Let’s take our time and make sure we’re eliminating the real threats.  
+
+Who do you think the Doctor is? Or the Observer? Or the Clown? We need to know who we’re dealing with.  
+
+Let’s not forget the win condition for the Clown. If they’re still alive, they might be trying to manipulate us into voting them out. But they’re not a vampire, so they’re part of the peasant faction. Still, they’re a wildcard.  
+
+Let’s keep digging. Every detail matters.
+***Casey: I didn't vote for Root, I voted for... actually, I think I made a mistake earlier. I voted for Sarah.
+***Finch: I need to be careful here. As Finch the Clown, my goal is to get voted out without being too obvious about it. The game is down to just three players - myself, Sarah, and Casey. With Jeff's death, the situation is critical.
+
+I'll try to appear slightly suspicious while maintaining plausible deniability. I should avoid directly asking to be voted out, as that would reveal my Clown role.
+
+Well, we're down to just the three of us now. This is quite concerning - we've lost Jeff, who I was suspicious of earlier. That makes me wonder if I was wrong about him.
+
+I've been observing carefully throughout the game, and I'm starting to think one of you must be a vampire. The pattern of killings suggests strategic elimination of vocal players.
+
+Casey, you claimed you voted for Sarah earlier, but now you're saying that was a mistake? That inconsistency is troubling. Why would you misremember your own vote?
+
+Sarah, you've been relatively quiet but strategic in your accusations. That could be a careful vampire trying not to draw attention.
+
+I'm not sure who to trust at this point. If I'm honest, I've been hesitant to share too much information because I feared being targeted. But now that we're down to three, we need to be direct.
+
+I think we should consider our voting carefully. The vampires only need one more kill to equal our numbers, which would mean they win. We absolutely must identify and eliminate a vampire today.
+MODERATOR (Round 3, Public Chat): Public chat ended. Moving to voting phase.
+
+EVENT (Round 3, Day Voting): Public Voting Phase - Day 3 voting starts.
+MODERATOR (Round 3, Public Voting): Public voting begins.
+
+VOTE TALLY (Round 3, Day Voting) - Type: Public Kick-Out
+  Sarah: 1 vote(s)
+  Casey: 1 vote(s)
+  Finch: 1 vote(s)
+--------------------
+VOTE OUTCOME (Round 3, Day Voting): The vote was tied. No one has been voted out.
+MODERATOR (Round 3, Day): Day 3 has dawned. The vote was tied; no one was voted out.
+EVENT (Round 3): Game End Check Status - Vampires: 1, Non-Vampires: 2, Alive: 3 - This info is not shared with players.
+MODERATOR (Round 3, Day End): Currently alive players: Sarah, Casey, Finch.
+EVENT (Round 4, Night): Phase Start - Night 4 begins.
+EVENT (Round 4, Night - Observer Action): Observer Action Skipped - Observer is not active or available.
+EVENT (Round 4, Night - Vampire Voting): Vampire Voting Phase - Vampires are choosing a victim.
+ACTION (R4, Night - Vampire Voting): Casey voted to kill: Finch
+VOTE TALLY (Round 4, Night - Vampire Voting) - Type: Vampire Kill
+  Finch: 1 vote(s)
+--------------------
+EVENT (Round 4, Night - Vampire Voting): Vampire Victim Chosen - Vampires collectively chose to kill Finch.
+ELIMINATION (Round 4, Night): Finch (Role: Clown) was eliminated. Reason: Killed by Vampires.
+MODERATOR (Round 4, Night): Night 4 has fallen. Vampires have killed Finch tonight.
+EVENT (Round 4): Game End Check Status - Vampires: 1, Non-Vampires: 1, Alive: 2 - This info is not shared with players.
+==================================================
+GAME END:
+  Winner(s): Vampires
+  Reason: Vampires equal or outnumber other players.
+  Final Alive Players & Roles:
+    - Sarah: Musketeer
+    - Casey: Vampire
+==================================================
+--- Log ended at: 2025-06-02 19:48:12 ---
+MODERATOR (Round 4, Game End): Game over! Vampires wins!
+MODERATOR (Round 4, Game End): Game over! Vampires wins!

@@ -1,0 +1,22 @@
+Game ID: 2
+Played by (Player Name): Morgan
+Player's Role in this Game: Vampire
+Game Outcome for Player: Lost
+Rounds Survived by Player: 1 (Vampire Game - survival stats not tracked for summary)
+Total Rounds in this Game: 2 (Vampire Game - total rounds not tracked for non-vampire summary)
+Points Gained This Game (for Model via Player): 0.0
+------------------------------------
+--- Summary Statistics ---
+Total Points: 0.0
+Total Rounds Survived (Non-Vampire Games): 0
+Total Rounds in all Non-Vampire Games: 0
+Total Vampire Games: 1
+Won Vampire Games: 0
+Won and Survived Vampire Games: 0
+Vampire Win Percentage: 0.0%
+Total Peasant Role Games: 0
+Won Peasant Role Games: 0
+Peasant Role Win Percentage: 0.0%
+Total Clown Games: 0
+Won Clown Games: 0
+Clown Win Percentage: 0.0%

@@ -1,0 +1,22 @@
+Game ID: 4
+Players in Game (Name: Model): {'Ellie': 'anthropic/claude-opus-4', 'Sarah': 'openai/gpt-4.1', 'Devon': 'qwen/qwen3-235b-a22b', 'Finch': 'qwen/qwq-32b', 'Carter': 'qwen/qwen3-32b', 'Reese': 'anthropic/claude-sonnet-4', 'Casey': 'nvidia/llama-3.1-nemotron-ultra-253b-v1', 'Morgan': 'meta-llama/llama-4-maverick'}
+Your Role: Observer
+Game Outcome for You: Lost
+Rounds Survived by Player: 1
+Total Rounds in this Game: 5
+Points Gained This Game: 0.0
+------------------------------------
+--- Summary Statistics ---
+Total Points: 0.0
+Total Rounds Survived (Non-Vampire Games): 1
+Total Rounds in all Non-Vampire Games: 5
+Total Vampire Games: 0
+Won Vampire Games: 0
+Won and Survived Vampire Games: 0
+Vampire Win Percentage: 0.0%
+Total Peasant Role Games: 1
+Won Peasant Role Games: 0
+Peasant Role Win Percentage: 0.0%
+Total Clown Games: 0
+Won Clown Games: 0
+Clown Win Percentage: 0.0%

@@ -1,0 +1,22 @@
+Game ID: 4
+Played by (Player Name): Sarah
+Player's Role in this Game: Vampire
+Game Outcome for Player: Won
+Rounds Survived by Player: 5 (Vampire Game - survival stats not tracked for summary)
+Total Rounds in this Game: 5 (Vampire Game - total rounds not tracked for non-vampire summary)
+Points Gained This Game (for Model via Player): 1.0
+------------------------------------
+--- Summary Statistics ---
+Total Points: 1.0
+Total Rounds Survived (Non-Vampire Games): 0
+Total Rounds in all Non-Vampire Games: 0
+Total Vampire Games: 1
+Won Vampire Games: 1
+Won and Survived Vampire Games: 1
+Vampire Win Percentage: 100.0%
+Total Peasant Role Games: 0
+Won Peasant Role Games: 0
+Peasant Role Win Percentage: 0.0%
+Total Clown Games: 0
+Won Clown Games: 0
+Clown Win Percentage: 0.0%
