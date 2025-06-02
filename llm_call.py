@@ -69,7 +69,7 @@ def chat_completion(
         "messages": chat_history.copy(), # Use a copy
         "temperature": temperature,
         #"extra_body": {"max_tokens": 2048},  # Default max tokens
-        "max_tokens": 2048*round,  # Default max tokens
+        "max_tokens": 4096*round,  # Default max tokens
     }
     
     # Enable extended thinking for Anthropic models
