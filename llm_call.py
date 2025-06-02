@@ -23,7 +23,8 @@ def chat_completion(
     player_name: str = "Player",
     player_model_map: Optional[Dict[str, str]] = None,
     is_a_decision: bool = False,
-    choices: List[str] = None
+    choices: List[str] = None,
+    round: Optional[int] = 1,
 ) -> str | Vote:
 
     base_url_env = os.getenv("LLM_BASE_URL")
@@ -67,10 +68,12 @@ def chat_completion(
         "model": model_to_use,
         "messages": chat_history.copy(), # Use a copy
         "temperature": temperature,
+        #"extra_body": {"max_tokens": 2048},  # Default max tokens
+        "max_tokens": 2048*round,  # Default max tokens
     }
     
     # Enable extended thinking for Anthropic models
-    if "anthropic" in model_to_use and "extra_body" not in request_params:
+    if "anthropic" in model_to_use:
         request_params["extra_body"] = {}
         request_params["extra_body"]["thinking"] = {"type": "enabled", "budget_tokens": 2048}
 
@@ -152,7 +155,7 @@ if __name__ == "__main__":
 
     # 2. Define the player_model_map
     model_map = {
-        "Max": "nvidia/llama-3.1-nemotron-ultra-253b-v1",
+        "Max": "openai/gpt-4.1",
     }
 
     # 3. Create a sample chat history
