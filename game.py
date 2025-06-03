@@ -881,6 +881,12 @@ if __name__ == "__main__":
         print("Exiting.")
         exit(1) # Exit if we can't load essential config
 
+    # Ensure we have enough unique players and models for selection
+    if len(ALL_PLAYERS) < NUM_PLAYERS_PER_GAME:
+        raise ValueError(f"Not enough players in ALL_PLAYERS ({len(ALL_PLAYERS)}) to select {NUM_PLAYERS_PER_GAME}.")
+    if len(ALL_MODELS) < NUM_PLAYERS_PER_GAME:
+        raise ValueError(f"Not enough models in ALL_MODELS ({len(ALL_MODELS)}) to select {NUM_PLAYERS_PER_GAME}.")
+    
     rules_file = "game_rules.yaml"
 
     for game_num in range(49, NUM_GAMES_TO_RUN + 1):
@@ -890,7 +896,7 @@ if __name__ == "__main__":
         # Ensure player names are unique for the game. random.sample handles this.
         selected_players = random.sample(ALL_PLAYERS, NUM_PLAYERS_PER_GAME)
         # Ensure model names are unique for the game. random.sample handles this.
-        selected_models = random.sample(ALL_MODELS, NUM_PLAYERS_PER_GAME-3)
+        selected_models = random.sample(ALL_MODELS, NUM_PLAYERS_PER_GAME)
 
         print(f"Selected for Game {game_num}:")
         print(f"Players: {selected_players}")
