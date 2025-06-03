@@ -150,17 +150,41 @@ Rounds Survived by Player: 3
 Total Rounds in this Game: 3
 Points Gained This Game: 0.3
 ------------------------------------
+Game ID: 44
+Players in Game (Name: Model): {'Lester': 'anthropic/claude-sonnet-4', 'Sarah': 'anthropic/claude-opus-4', 'Greer': 'deepseek/deepseek-r1-0528', 'Devon': 'google/gemini-2.5-pro-preview', 'Jeff': 'nvidia/llama-3.1-nemotron-ultra-253b-v1', 'Casey': 'qwen/qwen3-32b', 'Fusco': 'openai/gpt-4.1', 'Finch': 'x-ai/grok-3-beta'}
+Your Role: Doctor
+Game Outcome for You: Won
+Rounds Survived by Player: 2
+Total Rounds in this Game: 3
+Points Gained This Game: 0.1
+------------------------------------
+Game ID: 45
+Players in Game (Name: Model): {'Finch': 'anthropic/claude-opus-4', 'Lester': 'openai/gpt-4.1', 'Jeff': 'anthropic/claude-sonnet-4', 'Morgan': 'google/gemini-2.5-flash-preview-05-20:thinking', 'Reese': 'deepseek/deepseek-r1-0528-qwen3-8b', 'Casey': 'google/gemini-2.5-pro-preview', 'Root': 'meta-llama/llama-4-scout', 'Sarah': 'qwen/qwen3-32b'}
+Your Role: Vampire
+Game Outcome for You: Lost
+Rounds Survived by Player: 2 (Vampire Game - survival stats not tracked for summary)
+Total Rounds in this Game: 2 (Vampire Game - total rounds not tracked for non-vampire summary)
+Points Gained This Game: 0.0
+------------------------------------
+Game ID: 46
+Players in Game (Name: Model): {'Devon': 'google/gemini-2.5-pro-preview', 'Root': 'deepseek/deepseek-r1-0528-qwen3-8b', 'Finch': 'anthropic/claude-sonnet-4', 'Sarah': 'qwen/qwq-32b', 'Ellie': 'qwen/qwen3-235b-a22b', 'Reese': 'meta-llama/llama-4-scout', 'Chuck': 'google/gemini-2.5-flash-preview-05-20:thinking', 'Casey': 'anthropic/claude-opus-4'}
+Your Role: Vampire
+Game Outcome for You: Lost
+Rounds Survived by Player: 2 (Vampire Game - survival stats not tracked for summary)
+Total Rounds in this Game: 2 (Vampire Game - total rounds not tracked for non-vampire summary)
+Points Gained This Game: 0.0
+------------------------------------
 --- Summary Statistics ---
-Total Points: 4.5
-Total Rounds Survived (Non-Vampire Games): 33
-Total Rounds in all Non-Vampire Games: 49
-Total Vampire Games: 4
+Total Points: 4.6
+Total Rounds Survived (Non-Vampire Games): 35
+Total Rounds in all Non-Vampire Games: 52
+Total Vampire Games: 6
 Won Vampire Games: 2
 Won and Survived Vampire Games: 2
-Vampire Win Percentage: 50.0%
-Total Peasant Role Games: 14
-Won Peasant Role Games: 5
-Peasant Role Win Percentage: 35.7%
+Vampire Win Percentage: 33.3%
+Total Peasant Role Games: 15
+Won Peasant Role Games: 6
+Peasant Role Win Percentage: 40.0%
 Total Clown Games: 1
 Won Clown Games: 0
 Clown Win Percentage: 0.0%

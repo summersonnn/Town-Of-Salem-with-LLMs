@@ -110,17 +110,25 @@ Rounds Survived by Player: 2
 Total Rounds in this Game: 2
 Points Gained This Game (for Model via Player): 0.2
 ------------------------------------
+Game ID: 43
+Played by (Player Name): Lester
+Player's Role in this Game: Musketeer
+Game Outcome for Player: Won
+Rounds Survived by Player: 3
+Total Rounds in this Game: 3
+Points Gained This Game (for Model via Player): 0.3
+------------------------------------
 --- Summary Statistics ---
-Total Points: 2.9
-Total Rounds Survived (Non-Vampire Games): 24
-Total Rounds in all Non-Vampire Games: 35
+Total Points: 3.2
+Total Rounds Survived (Non-Vampire Games): 27
+Total Rounds in all Non-Vampire Games: 38
 Total Vampire Games: 3
 Won Vampire Games: 1
 Won and Survived Vampire Games: 1
 Vampire Win Percentage: 33.3%
-Total Peasant Role Games: 11
-Won Peasant Role Games: 4
-Peasant Role Win Percentage: 36.4%
+Total Peasant Role Games: 12
+Won Peasant Role Games: 5
+Peasant Role Win Percentage: 41.7%
 Total Clown Games: 0
 Won Clown Games: 0
 Clown Win Percentage: 0.0%

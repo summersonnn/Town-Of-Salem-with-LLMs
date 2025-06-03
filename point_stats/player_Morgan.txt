@@ -142,17 +142,65 @@ Rounds Survived by Player: 1
 Total Rounds in this Game: 4
 Points Gained This Game: 0.0
 ------------------------------------
+Game ID: 41
+Players in Game (Name: Model): {'Root': 'anthropic/claude-sonnet-4', 'Sarah': 'qwen/qwen3-32b', 'Greer': 'qwen/qwq-32b', 'Morgan': 'meta-llama/llama-4-scout', 'Chuck': 'deepseek/deepseek-r1-0528', 'Reese': 'google/gemini-2.5-pro-preview', 'Jeff': 'anthropic/claude-opus-4', 'Lester': 'anthropic/claude-opus-4'}
+Your Role: Musketeer
+Game Outcome for You: Won
+Rounds Survived by Player: 3
+Total Rounds in this Game: 3
+Points Gained This Game: 0.3
+------------------------------------
+Game ID: 42
+Players in Game (Name: Model): {'Casey': 'deepseek/deepseek-r1-0528-qwen3-8b', 'Shaw': 'google/gemini-2.5-flash-preview-05-20:thinking', 'Carter': 'deepseek/deepseek-r1-0528', 'Reese': 'qwen/qwq-32b', 'Lester': 'anthropic/claude-opus-4', 'Chuck': 'anthropic/claude-sonnet-4', 'Morgan': 'google/gemini-2.5-pro-preview', 'Ellie': 'anthropic/claude-3.7-sonnet'}
+Your Role: Doctor
+Game Outcome for You: Won
+Rounds Survived by Player: 2
+Total Rounds in this Game: 3
+Points Gained This Game: 0.1
+------------------------------------
+Game ID: 43
+Players in Game (Name: Model): {'Lester': 'openai/o1', 'Shaw': 'nvidia/llama-3.1-nemotron-ultra-253b-v1', 'Morgan': 'meta-llama/llama-4-maverick', 'Elias': 'google/gemini-2.5-pro-preview', 'Jeff': 'meta-llama/llama-4-scout', 'Casey': 'anthropic/claude-sonnet-4', 'Fusco': 'google/gemini-2.5-flash-preview-05-20:thinking', 'Ellie': 'anthropic/claude-opus-4'}
+Your Role: Vampire
+Game Outcome for You: Lost
+Rounds Survived by Player: 1 (Vampire Game - survival stats not tracked for summary)
+Total Rounds in this Game: 3 (Vampire Game - total rounds not tracked for non-vampire summary)
+Points Gained This Game: 0.0
+------------------------------------
+Game ID: 45
+Players in Game (Name: Model): {'Finch': 'anthropic/claude-opus-4', 'Lester': 'openai/gpt-4.1', 'Jeff': 'anthropic/claude-sonnet-4', 'Morgan': 'google/gemini-2.5-flash-preview-05-20:thinking', 'Reese': 'deepseek/deepseek-r1-0528-qwen3-8b', 'Casey': 'google/gemini-2.5-pro-preview', 'Root': 'meta-llama/llama-4-scout', 'Sarah': 'qwen/qwen3-32b'}
+Your Role: Doctor
+Game Outcome for You: Won
+Rounds Survived by Player: 1
+Total Rounds in this Game: 2
+Points Gained This Game: 0.0
+------------------------------------
+Game ID: 47
+Players in Game (Name: Model): {'Shaw': 'anthropic/claude-sonnet-4', 'Casey': 'qwen/qwq-32b', 'Reese': 'google/gemini-2.5-flash-preview-05-20:thinking', 'Devon': 'deepseek/deepseek-r1-0528', 'Root': 'google/gemini-2.5-pro-preview', 'Sarah': 'deepseek/deepseek-r1-0528-qwen3-8b', 'Morgan': 'anthropic/claude-opus-4', 'Jeff': 'x-ai/grok-3-beta'}
+Your Role: Musketeer
+Game Outcome for You: Lost
+Rounds Survived by Player: 1
+Total Rounds in this Game: 5
+Points Gained This Game: 0.0
+------------------------------------
+Game ID: 48
+Players in Game (Name: Model): {'Devon': 'google/gemini-2.5-pro-preview', 'Jeff': 'nvidia/llama-3.1-nemotron-ultra-253b-v1', 'Elias': 'anthropic/claude-opus-4', 'Reese': 'anthropic/claude-sonnet-4', 'Chuck': 'x-ai/grok-3-beta', 'Carter': 'google/gemini-2.5-flash-preview-05-20:thinking', 'Morgan': 'meta-llama/llama-4-maverick', 'Greer': 'deepseek/deepseek-r1-0528-qwen3-8b'}
+Your Role: Musketeer
+Game Outcome for You: Lost
+Rounds Survived by Player: 2
+Total Rounds in this Game: 2
+Points Gained This Game: 0.2
+------------------------------------
 --- Summary Statistics ---
-Total Points: 5.8
-Total Rounds Survived (Non-Vampire Games): 30
-Total Rounds in all Non-Vampire Games: 37
-Total Vampire Games: 7
+Total Points: 6.4
+Total Rounds Survived (Non-Vampire Games): 39
+Total Rounds in all Non-Vampire Games: 52
+Total Vampire Games: 8
 Won Vampire Games: 3
 Won and Survived Vampire Games: 2
-Vampire Win Percentage: 42.9%
-Total Peasant Role Games: 7
-Won Peasant Role Games: 2
-Peasant Role Win Percentage: 28.6%
+Vampire Win Percentage: 37.5%
+Total Peasant Role Games: 12
+Won Peasant Role Games: 5
+Peasant Role Win Percentage: 41.7%
 Total Clown Games: 4
 Won Clown Games: 1
 Clown Win Percentage: 25.0%

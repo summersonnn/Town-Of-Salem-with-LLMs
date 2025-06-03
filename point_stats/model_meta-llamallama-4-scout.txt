@@ -150,17 +150,49 @@ Rounds Survived by Player: 3 (Vampire Game - survival stats not tracked for summ
 Total Rounds in this Game: 4 (Vampire Game - total rounds not tracked for non-vampire summary)
 Points Gained This Game (for Model via Player): 0.0
 ------------------------------------
+Game ID: 41
+Played by (Player Name): Morgan
+Player's Role in this Game: Musketeer
+Game Outcome for Player: Won
+Rounds Survived by Player: 3
+Total Rounds in this Game: 3
+Points Gained This Game (for Model via Player): 0.3
+------------------------------------
+Game ID: 43
+Played by (Player Name): Jeff
+Player's Role in this Game: Vampire
+Game Outcome for Player: Lost
+Rounds Survived by Player: 3 (Vampire Game - survival stats not tracked for summary)
+Total Rounds in this Game: 3 (Vampire Game - total rounds not tracked for non-vampire summary)
+Points Gained This Game (for Model via Player): 0.0
+------------------------------------
+Game ID: 45
+Played by (Player Name): Root
+Player's Role in this Game: Observer
+Game Outcome for Player: Won
+Rounds Survived by Player: 2
+Total Rounds in this Game: 2
+Points Gained This Game (for Model via Player): 0.2
+------------------------------------
+Game ID: 46
+Played by (Player Name): Reese
+Player's Role in this Game: Doctor
+Game Outcome for Player: Won
+Rounds Survived by Player: 2
+Total Rounds in this Game: 2
+Points Gained This Game (for Model via Player): 0.1
+------------------------------------
 --- Summary Statistics ---
-Total Points: 4.0
-Total Rounds Survived (Non-Vampire Games): 29
-Total Rounds in all Non-Vampire Games: 40
-Total Vampire Games: 6
+Total Points: 4.6
+Total Rounds Survived (Non-Vampire Games): 36
+Total Rounds in all Non-Vampire Games: 47
+Total Vampire Games: 7
 Won Vampire Games: 2
 Won and Survived Vampire Games: 1
-Vampire Win Percentage: 33.3%
-Total Peasant Role Games: 10
-Won Peasant Role Games: 2
-Peasant Role Win Percentage: 20.0%
+Vampire Win Percentage: 28.6%
+Total Peasant Role Games: 13
+Won Peasant Role Games: 5
+Peasant Role Win Percentage: 38.5%
 Total Clown Games: 3
 Won Clown Games: 0
 Clown Win Percentage: 0.0%

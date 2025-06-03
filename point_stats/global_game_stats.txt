@@ -70,7 +70,23 @@ Game 39
 Won by Peasants
 Game 40
 Won by Peasants
+Game 41
+Won by Peasants
+Game 42
+Won by Peasants
+Game 43
+Won by Peasants
+Game 44
+Won by Peasants
+Game 45
+Won by Peasants
+Game 46
+Won by Peasants
+Game 47
+Won by Vampires
+Game 48
+Won by Clown
 
-Vampires win ratio: 15/36 : 41.7%
-Peasants win ratio: 17/36 : 47.2%
-Clown win ratio: 4/36 : 11.1%
+Vampires win ratio: 16/44 : 36.4%
+Peasants win ratio: 23/44 : 52.3%
+Clown win ratio: 5/44 : 11.4%

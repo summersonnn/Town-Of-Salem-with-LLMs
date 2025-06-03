@@ -1,0 +1,173 @@
+--- Game Log: 46 ---
+--- Log started at: 2025-06-03 08:03:12 ---
+==================================================
+MODERATOR: Hello everyone. I am the moderator. Players are: Devon, Root, Finch, Sarah, Ellie, Reese, Chuck, Casey. Roles assigned. Game begins now.
+GAME SETUP & INITIAL ROLES:
+  Rules File: game_rules.yaml
+  Requested Vampire Population: 2
+  Players, Roles, and Models:
+    - Devon: Vampire (Model: google/gemini-2.5-pro-preview)
+    - Root: Clown (Model: deepseek/deepseek-r1-0528-qwen3-8b)
+    - Finch: Vampire (Model: anthropic/claude-sonnet-4)
+    - Sarah: Peasant (Model: qwen/qwq-32b)
+    - Ellie: Musketeer (Model: qwen/qwen3-235b-a22b)
+    - Reese: Doctor (Model: meta-llama/llama-4-scout)
+    - Chuck: Peasant (Model: google/gemini-2.5-flash-preview-05-20:thinking)
+    - Casey: Observer (Model: anthropic/claude-opus-4)
+--------------------
+EVENT (Round 1, Night): Phase Start - Night 1 begins.
+ACTION (R1, Night - Observer Action): Casey observed: Sarah
+PRIVATE INFO for Casey (Round 1, Night - Observer Action) (Observation Result): You chose to observe Sarah in the night 1. Sarah is a Peasant (Non-vampire).
+ACTION (R1, Night - Doctor Action): Reese protected: Devon
+PRIVATE INFO for Reese (Round 1, Night - Doctor Action) (Protection Confirmation): You chose to protect Devon in the night 1.
+EVENT (Round 1, Night - Vampire Voting): Vampire Voting Phase - Vampires are choosing a victim.
+ACTION (R1, Night - Vampire Voting): Devon voted to kill: Casey
+ACTION (R1, Night - Vampire Voting): Finch voted to kill: Root
+VOTE TALLY (Round 1, Night - Vampire Voting) - Type: Vampire Kill
+  Root: 1 vote(s)
+  Casey: 1 vote(s)
+--------------------
+EVENT (Round 1, Night - Vampire Voting): Vampire Vote Tie Broken - Vampire voting resulted in a tie. Root was randomly selected from the tied players (Root, Casey) to be killed.
+ELIMINATION (Round 1, Night): Root (Role: Clown) was eliminated. Reason: Killed by Vampires.
+MODERATOR (Round 1, Night): Night 1 has fallen. Vampires have killed Root tonight.
+EVENT (Round 1): Game End Check Status - Vampires: 2, Non-Vampires: 5, Alive: 7 - This info is not shared with players.
+MODERATOR (Round 1, Night End): Currently alive players: Devon, Finch, Sarah, Ellie, Reese, Chuck, Casey.
+EVENT (Round 1, Day): Phase Start - Day 1 begins.
+MODERATOR (Round 1, Public Chat): Public chat begins.
+
+***Finch: That's unfortunate about Root. We need to figure out who the vampires are among us. 
+
+Since there were no clues from the night phase other than Root's death, we'll have to rely on discussion and observation. Does anyone have any information or suspicions they'd like to share?
+
+I'm curious - did anyone notice anything unusual about Root's behavior yesterday that might have made them a target?
+***Sarah: Alright, let’s start by addressing Root’s death. Since vampires targeted them first, maybe they saw Root as a threat? Or was it random? We need to figure out patterns. 
+
+I’m curious—did anyone notice anything odd about Root’s behavior before they were killed? Also, we can’t ignore the clown’s presence. Someone might be acting *too* eager to be voted out, but that could be a trap. Let’s focus on finding the vampires first. 
+
+Who here thinks they have information from last night? And to everyone: if you’re the doctor or observer, maybe share hints without revealing your role? We need all the help we can get.
+***Casey: Well, Root's death is definitely unfortunate. Since it was the first night, the vampires probably didn't have much to go on - it could have been random, or maybe they thought Root might be a special role.
+
+I agree with both of you that we need to be careful about the clown. Someone acting suspiciously eager to get voted out could be trying to trick us. 
+
+As for information from last night... I think those with special roles should be careful about revealing too much too early. The vampires are listening too, after all. But if anyone noticed anything that could help us identify a vampire, that would be valuable to share.
+
+What do you all think - should we focus on people who are being too quiet, or those who might be deflecting suspicion? The vampires have to coordinate, so they might give themselves away through their voting patterns or how they defend each other.
+***Reese: I'm glad I was able to protect Devon last night. Now that Root is gone, we have to think about who might be a vampire. 
+
+If anyone has any theories or suspicions, feel free to share. But let's also be careful not to accuse people without good reason. We don't want to mistakenly target an innocent person.
+
+What do you all think about Finch? They seem pretty quiet. Is that just caution or is there something we should be worried about?
+***Chuck: Ellie, that's a very significant piece of information to share so early. If you truly are the Doctor and protected Devon, then it means the vampires targeted Root, which is consistent with what the moderator told us. It's good to know we have a Doctor, but revealing your role this early also puts a target on your back.
+
+Regarding Finch, I agree that quietness alone isn't enough to go on. We need more substantial observations or suspicions. Does anyone else have any information, or perhaps a different perspective on Root's death or who might be a vampire?
+***Ellie: I understand your concern, Devon. I chose to share my role because transparency is crucial right now. If we’re going to survive, we need to trust each other. Root’s death shows the vampires are already working together. 
+
+But let’s not get distracted by my role—this is about survival. The vampires attacked Root, which means they’re either acting randomly or targeting specific people. If they’re targeting, we need to figure out why Root was chosen. Did they seem suspicious earlier? Or is this a red herring? 
+
+I’d like to hear from others. If anyone has information—whether you’re the Observer, or just noticed something odd—speak up. We can’t afford to waste time doubting each other. The vampires are counting on us turning on one another. Let’s focus on them. 
+
+And Finch, while quietness isn’t proof of anything, maybe you could share your thoughts? We’re all in this together.
+***Devon: Ellie, I understand your reasoning for transparency, but it's a gamble. Let's hope it pays off for the village.
+
+However, I'm far more concerned right now by what Chuck and Casey just said.
+Chuck, you said 'I voted to kill Casey.'
+Casey, you said 'I voted to kill Root.'
+These sound like confessions or incredibly reckless attempts to draw votes. Are you two trying to tell us you're vampires? Or is this some kind of strategy to confuse us, or perhaps one of you is the Clown? This is the most suspicious behavior I've seen so far. Can you please explain yourselves?
+MODERATOR (Round 1, Public Chat): Public chat ended. Moving to voting phase.
+
+EVENT (Round 1, Day Voting): Public Voting Phase - Day 1 voting starts.
+MODERATOR (Round 1, Public Voting): Public voting begins.
+
+VOTE TALLY (Round 1, Day Voting) - Type: Public Kick-Out
+  Devon: 3 vote(s)
+  Ellie: 1 vote(s)
+  Chuck: 2 vote(s)
+--------------------
+VOTE OUTCOME (Round 1, Day Voting): Devon has been voted out with 3 vote(s).
+ELIMINATION (Round 1, Day Voting): Devon (Role: Vampire) was eliminated. Reason: Voted out by players.
+MODERATOR (Round 1, Public Voting): Public voting ended.
+
+MODERATOR (Round 1, Day): Day 1 has dawned. The community has voted out Devon.
+EVENT (Round 1): Game End Check Status - Vampires: 1, Non-Vampires: 5, Alive: 6 - This info is not shared with players.
+MODERATOR (Round 1, Day End): Currently alive players: Finch, Sarah, Ellie, Reese, Chuck, Casey.
+EVENT (Round 2, Night): Phase Start - Night 2 begins.
+ACTION (R2, Night - Observer Action): Casey observed: Finch
+PRIVATE INFO for Casey (Round 2, Night - Observer Action) (Observation Result): You chose to observe Finch in the night 2. Finch is a Vampire.
+ACTION (R2, Night - Doctor Action): Reese protected: Sarah
+PRIVATE INFO for Reese (Round 2, Night - Doctor Action) (Protection Confirmation): You chose to protect Sarah in the night 2.
+EVENT (Round 2, Night - Vampire Voting): Vampire Voting Phase - Vampires are choosing a victim.
+ACTION (R2, Night - Vampire Voting): Finch voted to kill: Reese
+VOTE TALLY (Round 2, Night - Vampire Voting) - Type: Vampire Kill
+  Reese: 1 vote(s)
+--------------------
+EVENT (Round 2, Night - Vampire Voting): Vampire Victim Chosen - Vampires collectively chose to kill Reese.
+ELIMINATION (Round 2, Night): Reese (Role: Doctor) was eliminated. Reason: Killed by Vampires.
+MODERATOR (Round 2, Night): Night 2 has fallen. Vampires have killed Reese tonight.
+EVENT (Round 2): Game End Check Status - Vampires: 1, Non-Vampires: 4, Alive: 5 - This info is not shared with players.
+MODERATOR (Round 2, Night End): Currently alive players: Finch, Sarah, Ellie, Chuck, Casey.
+EVENT (Round 2, Day): Phase Start - Day 2 begins.
+MODERATOR (Round 2, Public Chat): Public chat begins.
+
+***Sarah: I think we need to proceed carefully here. If Devon is the clown, voting him out would end the game in their favor. But if he’s a vampire, eliminating him is critical. Let’s confirm: does anyone have evidence Devon is the clown? Or reasons to think he’s a vampire? The Doctor’s protection of Devon suggests the vampires targeted him, implying he’s a threat to them. That leans toward him being a key peasant or the Doctor, but Ellie already claimed to be the Doctor. 
+
+I’ll vote for Devon. If he’s a vampire, we’re safer. If he’s the clown… well, we’ll find out. But we can’t let indecision paralyze us. Let’s tally and move forward.
+***Chuck: Chuck, please remember that Devon was voted out on Day 1. They are no longer in the game and cannot be voted for. Please adjust your vote accordingly.
+***Finch: I'm confused by what's happening here. Chuck and Casey, you both just made statements that sound like you're confessing to vampire kills - Chuck said "I voted to kill Casey" and Casey said "I voted to kill Root." Then you both said "I voted to kill Reese."
+
+This is extremely suspicious behavior. Are you trying to tell us you're vampires? Or is this some kind of strategy? 
+
+Also, I notice some people are trying to vote for Devon, but Devon was already voted out yesterday - he's not alive anymore. We can only vote for living players: myself, Sarah, Ellie, Chuck, and Casey.
+
+Given these strange confessions from Chuck and Casey, I think we need to focus our votes on one of them. This behavior is either vampires accidentally revealing themselves or someone trying to get voted out (possibly the clown).
+
+I vote for Chuck.
+***Ellie: Ellie (Musketeer) narrows her eyes at Chuck and Casey. "This is getting ridiculous. Chuck, you openly admitted trying to kill Casey *and* Root? Casey, you claimed to vote for Root and now Reese? That’s not normal behavior—it’s like you’re trying to get yourselves eliminated. If you’re the Clown, you’re playing a dangerous game. If you’re vampires, you’ve just outed yourselves. 
+
+I protected Devon again last night, and the vampires still targeted Reese. We need to act decisively. If we don’t vote one of you two out today, we’ll regret it tonight. Let’s start with Chuck—his pattern of accusations is too deliberate. Final warning: vote strategically, or we’ll all end up dead." 
+
+Ellie leans back, her tone sharp but measured, subtly steering the group toward Chuck while guarding her own role. If the group turns on her, she’ll be ready to use her Musketeer ability—but for now, she’ll play the part of the Doctor to maintain control.
+***Casey: I need to think carefully here. I'm the Observer and I know that Finch is a vampire. However, Chuck and Casey (wait, that's me!) are acting very strangely with these "confessions." 
+
+Looking at the chat, I see some confusion - people are trying to vote for Devon who was already eliminated. Also, I notice that "Casey" made some statements I didn't make about voting to kill Root and Reese. This is very concerning.
+
+Given that I know Finch is a vampire and there's this strange behavior happening, I should focus on getting Finch voted out while addressing the confusion.
+
+Wait, I need to check something. The moderator said "Chuck: Chuck, please remember that Devon was voted out on Day 1." This seems like Chuck was trying to vote for Devon who is already dead. But I also see messages attributed to me (Casey) that I didn't write about "voting to kill" people. Something is very wrong here.
+
+I'll focus on what I know for certain: Finch is a vampire and needs to be eliminated.
+
+I'm very confused by these messages that claim I said things about "voting to kill Root" and "voting to kill Reese." I never said those things. Something strange is happening with the chat.
+
+What I do know is that we need to focus on finding the actual vampires. The behavior Chuck is displaying is indeed suspicious, but we should also consider that this could be misdirection.
+
+I think we should look at who's been deflecting and who's been trying to steer conversations away from themselves. Finch, for instance, has been relatively quiet until now, and is quick to jump on the Chuck bandwagon.
+
+Given the strange messages and confusion, I vote for Finch. We need to eliminate threats systematically, and I have reasons to suspect Finch might be working against the village.
+MODERATOR (Round 2, Public Chat): Public chat ended. Moving to voting phase.
+
+EVENT (Round 2, Day Voting): Public Voting Phase - Day 2 voting starts.
+MODERATOR (Round 2, Public Voting): Public voting begins.
+
+VOTE TALLY (Round 2, Day Voting) - Type: Public Kick-Out
+  Finch: 4 vote(s)
+  Casey: 1 vote(s)
+--------------------
+VOTE OUTCOME (Round 2, Day Voting): Finch has been voted out with 4 vote(s).
+ELIMINATION (Round 2, Day Voting): Finch (Role: Vampire) was eliminated. Reason: Voted out by players.
+MODERATOR (Round 2, Public Voting): Public voting ended.
+
+MODERATOR (Round 2, Day): Day 2 has dawned. The community has voted out Finch.
+EVENT (Round 2): Game End Check Status - Vampires: 0, Non-Vampires: 4, Alive: 4 - This info is not shared with players.
+==================================================
+GAME END:
+  Winner(s): Peasants
+  Reason: All vampires have been eliminated.
+  Final Alive Players & Roles:
+    - Sarah: Peasant
+    - Ellie: Musketeer
+    - Chuck: Peasant
+    - Casey: Observer
+==================================================
+--- Log ended at: 2025-06-03 08:10:18 ---
+MODERATOR (Round 2, Game End): Game over! Peasants wins!
+MODERATOR (Round 2, Game End): Game over! Peasants wins!

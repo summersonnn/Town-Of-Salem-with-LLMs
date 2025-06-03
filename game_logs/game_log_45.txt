@@ -1,0 +1,134 @@
+--- Game Log: 45 ---
+--- Log started at: 2025-06-03 07:57:11 ---
+==================================================
+MODERATOR: Hello everyone. I am the moderator. Players are: Finch, Lester, Jeff, Morgan, Reese, Casey, Root, Sarah. Roles assigned. Game begins now.
+GAME SETUP & INITIAL ROLES:
+  Rules File: game_rules.yaml
+  Requested Vampire Population: 2
+  Players, Roles, and Models:
+    - Finch: Vampire (Model: anthropic/claude-opus-4)
+    - Lester: Musketeer (Model: openai/gpt-4.1)
+    - Jeff: Peasant (Model: anthropic/claude-sonnet-4)
+    - Morgan: Doctor (Model: google/gemini-2.5-flash-preview-05-20:thinking)
+    - Reese: Peasant (Model: deepseek/deepseek-r1-0528-qwen3-8b)
+    - Casey: Vampire (Model: google/gemini-2.5-pro-preview)
+    - Root: Observer (Model: meta-llama/llama-4-scout)
+    - Sarah: Clown (Model: qwen/qwen3-32b)
+--------------------
+EVENT (Round 1, Night): Phase Start - Night 1 begins.
+ACTION (R1, Night - Observer Action): Root observed: Finch
+PRIVATE INFO for Root (Round 1, Night - Observer Action) (Observation Result): You chose to observe Finch in the night 1. Finch is a Vampire.
+ACTION (R1, Night - Doctor Action): Morgan protected: Reese
+PRIVATE INFO for Morgan (Round 1, Night - Doctor Action) (Protection Confirmation): You chose to protect Reese in the night 1.
+EVENT (Round 1, Night - Vampire Voting): Vampire Voting Phase - Vampires are choosing a victim.
+ACTION (R1, Night - Vampire Voting): Finch voted to kill: Morgan
+ACTION (R1, Night - Vampire Voting): Casey voted to kill: Reese
+VOTE TALLY (Round 1, Night - Vampire Voting) - Type: Vampire Kill
+  Morgan: 1 vote(s)
+  Reese: 1 vote(s)
+--------------------
+EVENT (Round 1, Night - Vampire Voting): Vampire Vote Tie Broken - Vampire voting resulted in a tie. Morgan was randomly selected from the tied players (Morgan, Reese) to be killed.
+ELIMINATION (Round 1, Night): Morgan (Role: Doctor) was eliminated. Reason: Killed by Vampires.
+MODERATOR (Round 1, Night): Night 1 has fallen. Vampires have killed Morgan tonight.
+EVENT (Round 1): Game End Check Status - Vampires: 2, Non-Vampires: 5, Alive: 7 - This info is not shared with players.
+MODERATOR (Round 1, Night End): Currently alive players: Finch, Lester, Jeff, Reese, Casey, Root, Sarah.
+EVENT (Round 1, Day): Phase Start - Day 1 begins.
+MODERATOR (Round 1, Public Chat): Public chat begins.
+
+***Reese: Hello everyone, I have no special abilities, so I need your help to figure out who the vampires are. Morgan was killed last night, which means the vampires are still among us. Let's work together to identify them.
+***Lester: Well, that was quick. Morgan’s out already. Anyone have any suspicions, or did anyone notice anything odd last night? If anyone has information, now’s the time to share it. We need to be careful with our votes—don’t want to help the vampires by accident.
+***Finch: This is unfortunate - Morgan's death on the first night leaves us with limited information to work with. 
+
+I'm particularly interested in hearing from those who haven't spoken yet - Jeff, Root, and Sarah. In games like this, both excessive talking and complete silence can be telling.
+
+Since we have special roles among us, I'd encourage anyone with useful information to share it, but be strategic about it. We don't want to expose our key players too early to the vampires.
+
+Does anyone have any initial reads or observations they'd like to share?
+***Root: Let's think this through. If we can figure out who's a vampire, we might be able to save ourselves. Finch seems suspicious to me, but I don't have any concrete evidence. What do you guys think?
+***Casey: Okay, this is a lot. Finch says he voted to kill Morgan. I said I voted to kill Reese. Morgan was the one who died. So... does that mean Finch and I were the ones making the vampire choices last night? Why on earth would we *both* admit that if we were vampires? That seems like a terrible strategy for them.
+Jeff, you singled out Finch even before he made that statement. What made you suspicious of him so early?
+***Sarah: Hmm, I think we need to be careful about jumping to conclusions. Finch and Jeff, you both mentioned who you voted for, but remember—votes are only counted if they’re not "Pass." Just because someone says they voted for someone doesn’t mean it influenced the outcome. Morgan was killed, so we know the vampires targeted them. Maybe we should focus on who had the chance to protect someone? Doctor, if you’re out there, did you try to save Morgan? Or maybe someone else? Let’s not let accusations spiral without evidence.
+***Jeff: This is really concerning. Casey just said that both she and Finch admitted to voting to kill people last night, but that doesn't make sense - we're in the day phase now, and last night was when the vampires attacked Morgan. 
+
+Casey, I think you're confused about the game mechanics. During the night phase, only vampires choose who to kill, and the doctor chooses who to protect. There's no voting during the night phase. The voting happens during the day phase, which is now.
+
+Are you mixing up the phases, or are you accidentally revealing that you were involved in the vampire attack last night? This seems like a major slip-up.
+
+Also, I never said I voted to kill anyone - I haven't made any votes yet since we're just starting the day phase discussion.
+MODERATOR (Round 1, Public Chat): Public chat ended. Moving to voting phase.
+
+EVENT (Round 1, Day Voting): Public Voting Phase - Day 1 voting starts.
+MODERATOR (Round 1, Public Voting): Public voting begins.
+
+VOTE TALLY (Round 1, Day Voting) - Type: Public Kick-Out
+  Finch: 1 vote(s)
+  Lester: 2 vote(s)
+  Casey: 4 vote(s)
+--------------------
+VOTE OUTCOME (Round 1, Day Voting): Casey has been voted out with 4 vote(s).
+ELIMINATION (Round 1, Day Voting): Casey (Role: Vampire) was eliminated. Reason: Voted out by players.
+MODERATOR (Round 1, Public Voting): Public voting ended.
+
+MODERATOR (Round 1, Day): Day 1 has dawned. The community has voted out Casey.
+EVENT (Round 1): Game End Check Status - Vampires: 1, Non-Vampires: 5, Alive: 6 - This info is not shared with players.
+MODERATOR (Round 1, Day End): Currently alive players: Finch, Lester, Jeff, Reese, Root, Sarah.
+EVENT (Round 2, Night): Phase Start - Night 2 begins.
+ACTION (R2, Night - Observer Action): Root observed: Lester
+PRIVATE INFO for Root (Round 2, Night - Observer Action) (Observation Result): You chose to observe Lester in the night 2. Lester is a Peasant (Non-vampire).
+EVENT (Round 2, Night - Vampire Voting): Vampire Voting Phase - Vampires are choosing a victim.
+ACTION (R2, Night - Vampire Voting): Finch voted to kill: Jeff
+VOTE TALLY (Round 2, Night - Vampire Voting) - Type: Vampire Kill
+  Jeff: 1 vote(s)
+--------------------
+EVENT (Round 2, Night - Vampire Voting): Vampire Victim Chosen - Vampires collectively chose to kill Jeff.
+ELIMINATION (Round 2, Night): Jeff (Role: Peasant) was eliminated. Reason: Killed by Vampires.
+MODERATOR (Round 2, Night): Night 2 has fallen. Vampires have killed Jeff tonight.
+EVENT (Round 2): Game End Check Status - Vampires: 1, Non-Vampires: 4, Alive: 5 - This info is not shared with players.
+MODERATOR (Round 2, Night End): Currently alive players: Finch, Lester, Reese, Root, Sarah.
+EVENT (Round 2, Day): Phase Start - Day 2 begins.
+MODERATOR (Round 2, Public Chat): Public chat begins.
+
+***Root: The votes are: 
+{'Finch':2, 'Lester':2, 'Casey':3}
+
+It looks like Casey is going to be kicked out. Let's see what happens.
+***Lester: Well, that was a rough night. We lost Jeff, which means the vampires are still picking us off. We need to be smart about this next vote. Did anyone notice anything odd yesterday, or does anyone have any information to share? If anyone has suspicions, now’s the time to speak up. We can’t afford to lose another peasant.
+***Reese: I vote for Casey.
+***Finch: Wait, what? I need to clarify something here. Casey was voted out yesterday - she's no longer in the game. The moderator announced that Casey was eliminated at the end of Day 1.
+
+Also, I'm confused by these sudden statements about voting to kill people. Are you all talking about the vampire night phase? Because only vampires vote on who to kill at night, and that happens privately. 
+
+If Casey and I are both claiming we voted to kill people during the night phases, that would mean we're both vampires - but Casey is already dead, so this doesn't make sense.
+
+I think there's been some serious confusion here. Let me be clear: I am NOT a vampire. I don't know why these messages about "voting to kill" are appearing, but something seems very wrong with how this conversation is going.
+
+We need to focus on finding the actual vampires among the living players: myself, Lester, Reese, Root, and Sarah.
+***Sarah: I think we need to be careful who we target next. Finch and Lester both had high votes yesterday, but maybe they’re just being strategic. I’ve been paying attention to Reese and Root—they haven’t said much. Silence can be dangerous in games like this. Could one of them be hiding something? Let’s not rush to judgment, though. We’ve only got one vote left before another night.
+MODERATOR (Round 2, Public Chat): Public chat ended. Moving to voting phase.
+
+EVENT (Round 2, Day Voting): Public Voting Phase - Day 2 voting starts.
+MODERATOR (Round 2, Public Voting): Public voting begins.
+
+VOTE TALLY (Round 2, Day Voting) - Type: Public Kick-Out
+  Finch: 4 vote(s)
+  Lester: 1 vote(s)
+--------------------
+VOTE OUTCOME (Round 2, Day Voting): Finch has been voted out with 4 vote(s).
+ELIMINATION (Round 2, Day Voting): Finch (Role: Vampire) was eliminated. Reason: Voted out by players.
+MODERATOR (Round 2, Public Voting): Public voting ended.
+
+MODERATOR (Round 2, Day): Day 2 has dawned. The community has voted out Finch.
+EVENT (Round 2): Game End Check Status - Vampires: 0, Non-Vampires: 4, Alive: 4 - This info is not shared with players.
+==================================================
+GAME END:
+  Winner(s): Peasants
+  Reason: All vampires have been eliminated.
+  Final Alive Players & Roles:
+    - Lester: Musketeer
+    - Reese: Peasant
+    - Root: Observer
+    - Sarah: Clown
+==================================================
+--- Log ended at: 2025-06-03 08:03:12 ---
+MODERATOR (Round 2, Game End): Game over! Peasants wins!
+MODERATOR (Round 2, Game End): Game over! Peasants wins!

@@ -134,17 +134,41 @@ Rounds Survived by Player: 1
 Total Rounds in this Game: 2
 Points Gained This Game (for Model via Player): 0.0
 ------------------------------------
+Game ID: 41
+Played by (Player Name): Sarah
+Player's Role in this Game: Vampire
+Game Outcome for Player: Lost
+Rounds Survived by Player: 1 (Vampire Game - survival stats not tracked for summary)
+Total Rounds in this Game: 3 (Vampire Game - total rounds not tracked for non-vampire summary)
+Points Gained This Game (for Model via Player): 0.0
+------------------------------------
+Game ID: 44
+Played by (Player Name): Casey
+Player's Role in this Game: Peasant
+Game Outcome for Player: Won
+Rounds Survived by Player: 3
+Total Rounds in this Game: 3
+Points Gained This Game (for Model via Player): 0.2
+------------------------------------
+Game ID: 45
+Played by (Player Name): Sarah
+Player's Role in this Game: Clown
+Game Outcome for Player: Lost
+Rounds Survived by Player: 2
+Total Rounds in this Game: 2
+Points Gained This Game (for Model via Player): 0.2
+------------------------------------
 --- Summary Statistics ---
-Total Points: 4.7
-Total Rounds Survived (Non-Vampire Games): 27
-Total Rounds in all Non-Vampire Games: 36
-Total Vampire Games: 4
+Total Points: 5.1
+Total Rounds Survived (Non-Vampire Games): 32
+Total Rounds in all Non-Vampire Games: 41
+Total Vampire Games: 5
 Won Vampire Games: 3
 Won and Survived Vampire Games: 2
-Vampire Win Percentage: 75.0%
-Total Peasant Role Games: 10
-Won Peasant Role Games: 3
-Peasant Role Win Percentage: 30.0%
-Total Clown Games: 3
+Vampire Win Percentage: 60.0%
+Total Peasant Role Games: 11
+Won Peasant Role Games: 4
+Peasant Role Win Percentage: 36.4%
+Total Clown Games: 4
 Won Clown Games: 0
 Clown Win Percentage: 0.0%

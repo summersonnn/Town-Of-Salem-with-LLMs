@@ -869,7 +869,7 @@ if __name__ == "__main__":
     # --- Configuration ---
     CONFIG_FILE = "game_config.yaml" # Name of your new config file
     RULES_FILE = "game_rules.yaml"
-    NUM_GAMES_TO_RUN = 40
+    NUM_GAMES_TO_RUN = 100
     NUM_PLAYERS_PER_GAME = 8
 
     # Load players and models from the external file
@@ -881,22 +881,16 @@ if __name__ == "__main__":
         print("Exiting.")
         exit(1) # Exit if we can't load essential config
 
-    # Ensure we have enough unique players and models for selection
-    if len(ALL_PLAYERS) < NUM_PLAYERS_PER_GAME:
-        raise ValueError(f"Not enough players in ALL_PLAYERS ({len(ALL_PLAYERS)}) to select {NUM_PLAYERS_PER_GAME}.")
-    if len(ALL_MODELS) < NUM_PLAYERS_PER_GAME:
-        raise ValueError(f"Not enough models in ALL_MODELS ({len(ALL_MODELS)}) to select {NUM_PLAYERS_PER_GAME}.")
-    
     rules_file = "game_rules.yaml"
 
-    for game_num in range(11, NUM_GAMES_TO_RUN + 1):
+    for game_num in range(49, NUM_GAMES_TO_RUN + 1):
         print(f"\n\n===== INITIALIZING GAME {game_num} / {NUM_GAMES_TO_RUN} =====")
         
         # Select a random subset of players and models for this game
         # Ensure player names are unique for the game. random.sample handles this.
         selected_players = random.sample(ALL_PLAYERS, NUM_PLAYERS_PER_GAME)
         # Ensure model names are unique for the game. random.sample handles this.
-        selected_models = random.sample(ALL_MODELS, NUM_PLAYERS_PER_GAME)
+        selected_models = random.sample(ALL_MODELS, NUM_PLAYERS_PER_GAME-3)
 
         print(f"Selected for Game {game_num}:")
         print(f"Players: {selected_players}")

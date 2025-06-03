@@ -118,17 +118,33 @@ Rounds Survived by Player: 2
 Total Rounds in this Game: 2
 Points Gained This Game: 0.2
 ------------------------------------
+Game ID: 43
+Players in Game (Name: Model): {'Lester': 'openai/o1', 'Shaw': 'nvidia/llama-3.1-nemotron-ultra-253b-v1', 'Morgan': 'meta-llama/llama-4-maverick', 'Elias': 'google/gemini-2.5-pro-preview', 'Jeff': 'meta-llama/llama-4-scout', 'Casey': 'anthropic/claude-sonnet-4', 'Fusco': 'google/gemini-2.5-flash-preview-05-20:thinking', 'Ellie': 'anthropic/claude-opus-4'}
+Your Role: Observer
+Game Outcome for You: Won
+Rounds Survived by Player: 2
+Total Rounds in this Game: 3
+Points Gained This Game: 0.2
+------------------------------------
+Game ID: 44
+Players in Game (Name: Model): {'Lester': 'anthropic/claude-sonnet-4', 'Sarah': 'anthropic/claude-opus-4', 'Greer': 'deepseek/deepseek-r1-0528', 'Devon': 'google/gemini-2.5-pro-preview', 'Jeff': 'nvidia/llama-3.1-nemotron-ultra-253b-v1', 'Casey': 'qwen/qwen3-32b', 'Fusco': 'openai/gpt-4.1', 'Finch': 'x-ai/grok-3-beta'}
+Your Role: Vampire
+Game Outcome for You: Lost
+Rounds Survived by Player: 3 (Vampire Game - survival stats not tracked for summary)
+Total Rounds in this Game: 3 (Vampire Game - total rounds not tracked for non-vampire summary)
+Points Gained This Game: 0.0
+------------------------------------
 --- Summary Statistics ---
-Total Points: 3.2
-Total Rounds Survived (Non-Vampire Games): 20
-Total Rounds in all Non-Vampire Games: 22
-Total Vampire Games: 7
+Total Points: 3.4
+Total Rounds Survived (Non-Vampire Games): 22
+Total Rounds in all Non-Vampire Games: 25
+Total Vampire Games: 8
 Won Vampire Games: 2
 Won and Survived Vampire Games: 1
-Vampire Win Percentage: 28.6%
-Total Peasant Role Games: 7
-Won Peasant Role Games: 3
-Peasant Role Win Percentage: 42.9%
+Vampire Win Percentage: 25.0%
+Total Peasant Role Games: 8
+Won Peasant Role Games: 4
+Peasant Role Win Percentage: 50.0%
 Total Clown Games: 1
 Won Clown Games: 0
 Clown Win Percentage: 0.0%

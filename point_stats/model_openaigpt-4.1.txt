@@ -166,17 +166,33 @@ Rounds Survived by Player: 4
 Total Rounds in this Game: 4
 Points Gained This Game (for Model via Player): 0.3
 ------------------------------------
+Game ID: 44
+Played by (Player Name): Fusco
+Player's Role in this Game: Vampire
+Game Outcome for Player: Lost
+Rounds Survived by Player: 3 (Vampire Game - survival stats not tracked for summary)
+Total Rounds in this Game: 3 (Vampire Game - total rounds not tracked for non-vampire summary)
+Points Gained This Game (for Model via Player): 0.0
+------------------------------------
+Game ID: 45
+Played by (Player Name): Lester
+Player's Role in this Game: Musketeer
+Game Outcome for Player: Won
+Rounds Survived by Player: 2
+Total Rounds in this Game: 2
+Points Gained This Game (for Model via Player): 0.2
+------------------------------------
 --- Summary Statistics ---
-Total Points: 7.8
-Total Rounds Survived (Non-Vampire Games): 29
-Total Rounds in all Non-Vampire Games: 34
-Total Vampire Games: 9
+Total Points: 8.0
+Total Rounds Survived (Non-Vampire Games): 31
+Total Rounds in all Non-Vampire Games: 36
+Total Vampire Games: 10
 Won Vampire Games: 6
 Won and Survived Vampire Games: 3
-Vampire Win Percentage: 66.7%
-Total Peasant Role Games: 11
-Won Peasant Role Games: 6
-Peasant Role Win Percentage: 54.5%
+Vampire Win Percentage: 60.0%
+Total Peasant Role Games: 12
+Won Peasant Role Games: 7
+Peasant Role Win Percentage: 58.3%
 Total Clown Games: 1
 Won Clown Games: 1
 Clown Win Percentage: 100.0%

@@ -134,10 +134,18 @@ Rounds Survived by Player: 2
 Total Rounds in this Game: 2
 Points Gained This Game (for Model via Player): 0.2
 ------------------------------------
+Game ID: 42
+Played by (Player Name): Ellie
+Player's Role in this Game: Clown
+Game Outcome for Player: Lost
+Rounds Survived by Player: 3
+Total Rounds in this Game: 3
+Points Gained This Game (for Model via Player): 0.2
+------------------------------------
 --- Summary Statistics ---
-Total Points: 3.2
-Total Rounds Survived (Non-Vampire Games): 28
-Total Rounds in all Non-Vampire Games: 42
+Total Points: 3.4
+Total Rounds Survived (Non-Vampire Games): 31
+Total Rounds in all Non-Vampire Games: 45
 Total Vampire Games: 4
 Won Vampire Games: 1
 Won and Survived Vampire Games: 1
@@ -145,6 +153,6 @@ Vampire Win Percentage: 25.0%
 Total Peasant Role Games: 11
 Won Peasant Role Games: 4
 Peasant Role Win Percentage: 36.4%
-Total Clown Games: 2
+Total Clown Games: 3
 Won Clown Games: 0
 Clown Win Percentage: 0.0%

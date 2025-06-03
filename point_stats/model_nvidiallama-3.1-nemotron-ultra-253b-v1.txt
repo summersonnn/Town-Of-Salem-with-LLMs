@@ -166,17 +166,41 @@ Rounds Survived by Player: 4
 Total Rounds in this Game: 4
 Points Gained This Game (for Model via Player): 0.4
 ------------------------------------
+Game ID: 43
+Played by (Player Name): Shaw
+Player's Role in this Game: Clown
+Game Outcome for Player: Lost
+Rounds Survived by Player: 3
+Total Rounds in this Game: 3
+Points Gained This Game (for Model via Player): 0.2
+------------------------------------
+Game ID: 44
+Played by (Player Name): Jeff
+Player's Role in this Game: Peasant
+Game Outcome for Player: Won
+Rounds Survived by Player: 3
+Total Rounds in this Game: 3
+Points Gained This Game (for Model via Player): 0.3
+------------------------------------
+Game ID: 48
+Played by (Player Name): Jeff
+Player's Role in this Game: Observer
+Game Outcome for Player: Lost
+Rounds Survived by Player: 2
+Total Rounds in this Game: 2
+Points Gained This Game (for Model via Player): 0.1
+------------------------------------
 --- Summary Statistics ---
-Total Points: 5.5
-Total Rounds Survived (Non-Vampire Games): 49
-Total Rounds in all Non-Vampire Games: 59
+Total Points: 6.1
+Total Rounds Survived (Non-Vampire Games): 57
+Total Rounds in all Non-Vampire Games: 67
 Total Vampire Games: 3
 Won Vampire Games: 1
 Won and Survived Vampire Games: 1
 Vampire Win Percentage: 33.3%
-Total Peasant Role Games: 16
-Won Peasant Role Games: 7
-Peasant Role Win Percentage: 43.8%
-Total Clown Games: 2
+Total Peasant Role Games: 18
+Won Peasant Role Games: 8
+Peasant Role Win Percentage: 44.4%
+Total Clown Games: 3
 Won Clown Games: 0
 Clown Win Percentage: 0.0%

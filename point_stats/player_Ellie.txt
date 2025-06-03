@@ -142,17 +142,41 @@ Rounds Survived by Player: 4
 Total Rounds in this Game: 4
 Points Gained This Game: 0.4
 ------------------------------------
+Game ID: 42
+Players in Game (Name: Model): {'Casey': 'deepseek/deepseek-r1-0528-qwen3-8b', 'Shaw': 'google/gemini-2.5-flash-preview-05-20:thinking', 'Carter': 'deepseek/deepseek-r1-0528', 'Reese': 'qwen/qwq-32b', 'Lester': 'anthropic/claude-opus-4', 'Chuck': 'anthropic/claude-sonnet-4', 'Morgan': 'google/gemini-2.5-pro-preview', 'Ellie': 'anthropic/claude-3.7-sonnet'}
+Your Role: Clown
+Game Outcome for You: Lost
+Rounds Survived by Player: 3
+Total Rounds in this Game: 3
+Points Gained This Game: 0.2
+------------------------------------
+Game ID: 43
+Players in Game (Name: Model): {'Lester': 'openai/o1', 'Shaw': 'nvidia/llama-3.1-nemotron-ultra-253b-v1', 'Morgan': 'meta-llama/llama-4-maverick', 'Elias': 'google/gemini-2.5-pro-preview', 'Jeff': 'meta-llama/llama-4-scout', 'Casey': 'anthropic/claude-sonnet-4', 'Fusco': 'google/gemini-2.5-flash-preview-05-20:thinking', 'Ellie': 'anthropic/claude-opus-4'}
+Your Role: Peasant
+Game Outcome for You: Won
+Rounds Survived by Player: 2
+Total Rounds in this Game: 3
+Points Gained This Game: 0.1
+------------------------------------
+Game ID: 46
+Players in Game (Name: Model): {'Devon': 'google/gemini-2.5-pro-preview', 'Root': 'deepseek/deepseek-r1-0528-qwen3-8b', 'Finch': 'anthropic/claude-sonnet-4', 'Sarah': 'qwen/qwq-32b', 'Ellie': 'qwen/qwen3-235b-a22b', 'Reese': 'meta-llama/llama-4-scout', 'Chuck': 'google/gemini-2.5-flash-preview-05-20:thinking', 'Casey': 'anthropic/claude-opus-4'}
+Your Role: Musketeer
+Game Outcome for You: Won
+Rounds Survived by Player: 2
+Total Rounds in this Game: 2
+Points Gained This Game: 0.2
+------------------------------------
 --- Summary Statistics ---
-Total Points: 3.7
-Total Rounds Survived (Non-Vampire Games): 35
-Total Rounds in all Non-Vampire Games: 51
+Total Points: 4.2
+Total Rounds Survived (Non-Vampire Games): 42
+Total Rounds in all Non-Vampire Games: 59
 Total Vampire Games: 3
 Won Vampire Games: 1
 Won and Survived Vampire Games: 1
 Vampire Win Percentage: 33.3%
-Total Peasant Role Games: 14
-Won Peasant Role Games: 5
-Peasant Role Win Percentage: 35.7%
-Total Clown Games: 1
+Total Peasant Role Games: 16
+Won Peasant Role Games: 7
+Peasant Role Win Percentage: 43.8%
+Total Clown Games: 2
 Won Clown Games: 0
 Clown Win Percentage: 0.0%

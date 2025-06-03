@@ -110,17 +110,49 @@ Rounds Survived by Player: 3
 Total Rounds in this Game: 3
 Points Gained This Game: 0.3
 ------------------------------------
+Game ID: 41
+Players in Game (Name: Model): {'Root': 'anthropic/claude-sonnet-4', 'Sarah': 'qwen/qwen3-32b', 'Greer': 'qwen/qwq-32b', 'Morgan': 'meta-llama/llama-4-scout', 'Chuck': 'deepseek/deepseek-r1-0528', 'Reese': 'google/gemini-2.5-pro-preview', 'Jeff': 'anthropic/claude-opus-4', 'Lester': 'anthropic/claude-opus-4'}
+Your Role: Peasant
+Game Outcome for You: Won
+Rounds Survived by Player: 1
+Total Rounds in this Game: 3
+Points Gained This Game: 0.0
+------------------------------------
+Game ID: 42
+Players in Game (Name: Model): {'Casey': 'deepseek/deepseek-r1-0528-qwen3-8b', 'Shaw': 'google/gemini-2.5-flash-preview-05-20:thinking', 'Carter': 'deepseek/deepseek-r1-0528', 'Reese': 'qwen/qwq-32b', 'Lester': 'anthropic/claude-opus-4', 'Chuck': 'anthropic/claude-sonnet-4', 'Morgan': 'google/gemini-2.5-pro-preview', 'Ellie': 'anthropic/claude-3.7-sonnet'}
+Your Role: Vampire
+Game Outcome for You: Lost
+Rounds Survived by Player: 1 (Vampire Game - survival stats not tracked for summary)
+Total Rounds in this Game: 3 (Vampire Game - total rounds not tracked for non-vampire summary)
+Points Gained This Game: 0.0
+------------------------------------
+Game ID: 46
+Players in Game (Name: Model): {'Devon': 'google/gemini-2.5-pro-preview', 'Root': 'deepseek/deepseek-r1-0528-qwen3-8b', 'Finch': 'anthropic/claude-sonnet-4', 'Sarah': 'qwen/qwq-32b', 'Ellie': 'qwen/qwen3-235b-a22b', 'Reese': 'meta-llama/llama-4-scout', 'Chuck': 'google/gemini-2.5-flash-preview-05-20:thinking', 'Casey': 'anthropic/claude-opus-4'}
+Your Role: Peasant
+Game Outcome for You: Won
+Rounds Survived by Player: 2
+Total Rounds in this Game: 2
+Points Gained This Game: 0.2
+------------------------------------
+Game ID: 48
+Players in Game (Name: Model): {'Devon': 'google/gemini-2.5-pro-preview', 'Jeff': 'nvidia/llama-3.1-nemotron-ultra-253b-v1', 'Elias': 'anthropic/claude-opus-4', 'Reese': 'anthropic/claude-sonnet-4', 'Chuck': 'x-ai/grok-3-beta', 'Carter': 'google/gemini-2.5-flash-preview-05-20:thinking', 'Morgan': 'meta-llama/llama-4-maverick', 'Greer': 'deepseek/deepseek-r1-0528-qwen3-8b'}
+Your Role: Clown
+Game Outcome for You: Won
+Rounds Survived by Player: 2
+Total Rounds in this Game: 2
+Points Gained This Game: 1.2
+------------------------------------
 --- Summary Statistics ---
-Total Points: 4.9
-Total Rounds Survived (Non-Vampire Games): 20
-Total Rounds in all Non-Vampire Games: 30
-Total Vampire Games: 4
+Total Points: 6.3
+Total Rounds Survived (Non-Vampire Games): 25
+Total Rounds in all Non-Vampire Games: 37
+Total Vampire Games: 5
 Won Vampire Games: 3
 Won and Survived Vampire Games: 3
-Vampire Win Percentage: 75.0%
-Total Peasant Role Games: 8
-Won Peasant Role Games: 5
-Peasant Role Win Percentage: 62.5%
-Total Clown Games: 2
-Won Clown Games: 0
-Clown Win Percentage: 0.0%
+Vampire Win Percentage: 60.0%
+Total Peasant Role Games: 10
+Won Peasant Role Games: 7
+Peasant Role Win Percentage: 70.0%
+Total Clown Games: 3
+Won Clown Games: 1
+Clown Win Percentage: 33.3%
