@@ -1,0 +1,192 @@
+--- Game Log: 6 ---
+--- Log started at: 2025-06-02 20:40:17 ---
+==================================================
+MODERATOR: Hello everyone. I am the moderator. Players are: Devon, Ellie, Jeff, Fusco, Carter, Root, Greer, Reese. Roles assigned. Game begins now.
+GAME SETUP & INITIAL ROLES:
+  Rules File: game_rules.yaml
+  Requested Vampire Population: 2
+  Players, Roles, and Models:
+    - Devon: Musketeer (Model: qwen/qwen3-32b)
+    - Ellie: Peasant (Model: nvidia/llama-3.1-nemotron-ultra-253b-v1)
+    - Jeff: Vampire (Model: openai/gpt-4.1)
+    - Fusco: Doctor (Model: x-ai/grok-3-beta)
+    - Carter: Observer (Model: deepseek/deepseek-r1-0528)
+    - Root: Peasant (Model: openai/o1)
+    - Greer: Vampire (Model: deepseek/deepseek-r1-0528-qwen3-8b)
+    - Reese: Clown (Model: meta-llama/llama-4-scout)
+--------------------
+EVENT (Round 1, Night): Phase Start - Night 1 begins.
+ACTION (R1, Night - Observer Action): Carter observed: Root
+PRIVATE INFO for Carter (Round 1, Night - Observer Action) (Observation Result): You chose to observe Root in the night 1. Root is a Peasant (Non-vampire).
+ACTION (R1, Night - Doctor Action): Fusco protected: Fusco
+PRIVATE INFO for Fusco (Round 1, Night - Doctor Action) (Protection Confirmation): You chose to protect yourself in the night 1. (Fusco)
+EVENT (Round 1, Night - Vampire Voting): Vampire Voting Phase - Vampires are choosing a victim.
+ACTION (R1, Night - Vampire Voting): Greer voted to kill: Fusco
+ACTION (R1, Night - Vampire Voting): Jeff voted to kill: Ellie
+VOTE TALLY (Round 1, Night - Vampire Voting) - Type: Vampire Kill
+  Ellie: 1 vote(s)
+  Fusco: 1 vote(s)
+--------------------
+EVENT (Round 1, Night - Vampire Voting): Vampire Vote Tie Broken - Vampire voting resulted in a tie. Fusco was randomly selected from the tied players (Ellie, Fusco) to be killed.
+EVENT (Round 1, Night): Protection Successful - Vampires tried to kill Fusco, but they were protected by the doctor.
+MODERATOR (Round 1, Night): Night 1 has fallen. No one was killed tonight.
+EVENT (Round 1): Game End Check Status - Vampires: 2, Non-Vampires: 6, Alive: 8 - This info is not shared with players.
+MODERATOR (Round 1, Night End): Currently alive players: Devon, Ellie, Jeff, Fusco, Carter, Root, Greer, Reese.
+EVENT (Round 1, Day): Phase Start - Day 1 begins.
+MODERATOR (Round 1, Public Chat): Public chat begins.
+
+***Devon: I think we need to start by discussing who might have been the target last night. Since no one was killed, the Doctor must have protected someone. Who do you all think the vampires might be targeting? I didn’t get any information from the night phase, so I’m in the dark. Let’s hear everyone’s thoughts.
+***Fusco: I'm glad no one was killed last night. It’s a good sign that the Doctor made the right call. I don’t have any specific suspicions yet, but I think we should pay attention to how people behave during this discussion. Sometimes, vampires try to blend in by being overly helpful or quiet. What does everyone else think? Let’s get some ideas flowing.
+***Greer: I see that both Ellie and Fusco received votes. I didn't vote myself, but I'm keeping a close eye on everyone. It's interesting that no one died last night, which means the Doctor must have done their job. I wonder who that was? Maybe we can start speculating about who the Doctor might be. 
+
+Also, I noticed that the vote was split between Ellie and Fusco. I'm not sure who I can trust here, but I think we need to be careful about who we accuse. Let's focus on finding the Doctor first, as they played a crucial role in saving someone last night.
+***Jeff: It’s interesting that no one was killed last night. Either the Doctor made a really good guess, or maybe the vampires tried to go after someone obvious. I’m curious if anyone has any theories about who might have been targeted. Maybe someone has information they want to share?
+***Carter: It's definitely a relief that no one died, but it also means the vampires are already making moves. Since the doctor blocked their attack, we know they targeted someone—probably someone they saw as a threat or an easy misdirection. I'm curious if anyone feels like they might've been a likely target? Or if anyone has a gut feeling about who the vampires could be? 
+
+Also, let's not forget the clown—they'll be trying to act suspicious on purpose to get voted out. So we need to balance suspicion with caution. Overreacting could play right into their hands. What do you all think?
+***Reese: The fact that no one died suggests the Doctor was effective. But now we have to figure out who the Doctor might be and who they saved. If I had to guess, I'd say maybe Carter or Root? They seem pretty calm, but that could be a ruse. What do you guys think?
+***Root: I’m not sure I’d go so far as to single out Carter or myself just yet. It’s too early to pin down who the doctor might have saved. We can speculate all we want, but it’s better if we look for unusual behavior or contradictions in people’s statements. We don’t want to finger-point blindly. 
+
+For now, I’d like to hear if anyone either suspects me or has any personal hunches—maybe from a conversation during the night or from how people are talking now. Let’s keep the discussion going without jumping to conclusions.
+***Ellie: I think we should consider that the Doctor might have protected someone who was a likely target. Maybe someone who was vocal last night or seemed suspicious. I don’t have any info, but I’m trying to think logically. What do others think?
+MODERATOR (Round 1, Public Chat): Public chat ended. Moving to voting phase.
+
+EVENT (Round 1, Day Voting): Public Voting Phase - Day 1 voting starts.
+MODERATOR (Round 1, Public Voting): Public voting begins.
+
+VOTE TALLY (Round 1, Day Voting) - Type: Public Kick-Out
+  Ellie: 4 vote(s)
+--------------------
+VOTE OUTCOME (Round 1, Day Voting): Ellie has been voted out with 4 vote(s).
+ELIMINATION (Round 1, Day Voting): Ellie (Role: Peasant) was eliminated. Reason: Voted out by players.
+MODERATOR (Round 1, Public Voting): Public voting ended.
+
+MODERATOR (Round 1, Day): Day 1 has dawned. The community has voted out Ellie.
+EVENT (Round 1): Game End Check Status - Vampires: 2, Non-Vampires: 5, Alive: 7 - This info is not shared with players.
+MODERATOR (Round 1, Day End): Currently alive players: Devon, Jeff, Fusco, Carter, Root, Greer, Reese.
+EVENT (Round 2, Night): Phase Start - Night 2 begins.
+ACTION (R2, Night - Observer Action): Carter observed: Fusco
+PRIVATE INFO for Carter (Round 2, Night - Observer Action) (Observation Result): You chose to observe Fusco in the night 2. Fusco is a Peasant (Non-vampire).
+ACTION (R2, Night - Doctor Action): Fusco protected: Devon
+PRIVATE INFO for Fusco (Round 2, Night - Doctor Action) (Protection Confirmation): You chose to protect Devon in the night 2.
+EVENT (Round 2, Night - Vampire Voting): Vampire Voting Phase - Vampires are choosing a victim.
+ACTION (R2, Night - Vampire Voting): Greer voted to kill: Fusco
+ACTION (R2, Night - Vampire Voting): Jeff voted to kill: Fusco
+VOTE TALLY (Round 2, Night - Vampire Voting) - Type: Vampire Kill
+  Fusco: 2 vote(s)
+--------------------
+EVENT (Round 2, Night - Vampire Voting): Vampire Victim Chosen - Vampires collectively chose to kill Fusco.
+ELIMINATION (Round 2, Night): Fusco (Role: Doctor) was eliminated. Reason: Killed by Vampires.
+MODERATOR (Round 2, Night): Night 2 has fallen. Vampires have killed Fusco tonight.
+EVENT (Round 2): Game End Check Status - Vampires: 2, Non-Vampires: 4, Alive: 6 - This info is not shared with players.
+MODERATOR (Round 2, Night End): Currently alive players: Devon, Jeff, Carter, Root, Greer, Reese.
+EVENT (Round 2, Day): Phase Start - Day 2 begins.
+MODERATOR (Round 2, Public Chat): Public chat begins.
+
+***Greer: I think Carter and Root are likely the Doctor. They seem too calm and have been relatively quiet. I suspect one of them is protecting someone important.
+***Carter: I've been following the discussion closely, and I agree with Root that speculating about the Doctor's identity is risky—it could paint a target on their back for the vampires. Instead, we should focus on behavior and voting patterns from Day 1. Ellie was voted out with 4 votes, but we don't know who cast them. That feels coordinated, like vampires banding together to eliminate someone early and create chaos.
+
+I also want to address Jeff's point about Carter (me) and Root being potential Doctors. It's odd to single us out so early, especially when we're all trying to gather information. Jeff, why the sudden focus on us? It could be a tactic to divert attention from yourself or other suspicious players. 
+
+As for Root, I've noticed their contributions have been logical and team-oriented—like urging caution—which makes me lean toward trusting them for now. But we can't ignore the clown factor. If someone acts overly suspicious or pushes for quick votes, it might be a ploy to get eliminated. Let's stay calm and share observations without jumping to conclusions. What does everyone else think about the Day 1 votes? Any memories of who pushed for Ellie?
+***Root: I notice Jeff singled me and Carter out as potential Doctors. That’s sort of out of the blue, and it might just stir suspicion for no good reason. Trying to “out” the Doctor only helps the vampires figure out who to attack next, so it makes me think Jeff might be trying to cause confusion—or it could just be a genuine hunch he has.
+
+We still don’t know who cast the deciding votes against Ellie on Day 1, and that might give us some clues if we can figure out the voting pattern. Since Fusco was killed at night, maybe the vampires figured he was an important role or simply found him a threat. 
+
+Anyway, I’d like to hear more from Jeff about why Carter and I seem suspicious, and see what everyone else thinks. It might also be worth discussing why Fusco was targeted—did he say or do something that got him on the vampires’ radar?
+***Jeff: It’s definitely suspicious that Fusco was targeted last night. Maybe the vampires thought he was the Doctor or another special role. I agree with Carter and Root that it’s risky to try to “out” the Doctor, since it just helps the vampires. 
+
+Looking back, the vote against Ellie was pretty decisive. I’ll admit I voted for Ellie, but it was more of a gut feeling than anything else. Now I’m not so sure that was the right move. Maybe we should look at who else voted for Ellie and see if there’s a pattern. 
+
+Does anyone have any new information or theories? We need to be careful not to play into the clown’s hands, too.
+***Devon: I’ve been thinking about the voting patterns from Day 1. Four people voted for Ellie, but we don’t know who they were. If the vampires were coordinating, they might’ve used that to eliminate a potential threat or misdirect us. Now that Fusco was killed last night, maybe we should revisit who had the most to gain from his elimination. 
+
+Also, Jeff’s sudden focus on Carter and Root as the Doctor feels a bit forced. If he’s trying to shift suspicion, that could be a red flag. Or maybe he’s genuinely trying to help. Either way, we need more concrete clues than accusations. 
+
+What if we cross-reference who voted for Ellie and who might’ve had a reason to target Fusco? Let’s not let the clown’s antics derail us—stay focused on the patterns.
+***Reese: I'm starting to feel like I'm being watched. Everyone's discussing strategies and roles, but I'm just trying to blend in. I think I might have inadvertently said something that raised some eyebrows. Let's see how long it takes for someone to call me out.
+MODERATOR (Round 2, Public Chat): Public chat ended. Moving to voting phase.
+
+EVENT (Round 2, Day Voting): Public Voting Phase - Day 2 voting starts.
+MODERATOR (Round 2, Public Voting): Public voting begins.
+
+VOTE TALLY (Round 2, Day Voting) - Type: Public Kick-Out
+  Jeff: 4 vote(s)
+  Carter: 2 vote(s)
+--------------------
+VOTE OUTCOME (Round 2, Day Voting): Jeff has been voted out with 4 vote(s).
+ELIMINATION (Round 2, Day Voting): Jeff (Role: Vampire) was eliminated. Reason: Voted out by players.
+MODERATOR (Round 2, Public Voting): Public voting ended.
+
+MODERATOR (Round 2, Day): Day 2 has dawned. The community has voted out Jeff.
+EVENT (Round 2): Game End Check Status - Vampires: 1, Non-Vampires: 4, Alive: 5 - This info is not shared with players.
+MODERATOR (Round 2, Day End): Currently alive players: Devon, Carter, Root, Greer, Reese.
+EVENT (Round 3, Night): Phase Start - Night 3 begins.
+ACTION (R3, Night - Observer Action): Carter observed: Greer
+PRIVATE INFO for Carter (Round 3, Night - Observer Action) (Observation Result): You chose to observe Greer in the night 3. Greer is a Vampire.
+EVENT (Round 3, Night - Vampire Voting): Vampire Voting Phase - Vampires are choosing a victim.
+ACTION (R3, Night - Vampire Voting): Greer voted to kill: Carter
+VOTE TALLY (Round 3, Night - Vampire Voting) - Type: Vampire Kill
+  Carter: 1 vote(s)
+--------------------
+EVENT (Round 3, Night - Vampire Voting): Vampire Victim Chosen - Vampires collectively chose to kill Carter.
+ELIMINATION (Round 3, Night): Carter (Role: Observer) was eliminated. Reason: Killed by Vampires.
+MODERATOR (Round 3, Night): Night 3 has fallen. Vampires have killed Carter tonight.
+EVENT (Round 3): Game End Check Status - Vampires: 1, Non-Vampires: 3, Alive: 4 - This info is not shared with players.
+MODERATOR (Round 3, Night End): Currently alive players: Devon, Root, Greer, Reese.
+EVENT (Round 3, Day): Phase Start - Day 3 begins.
+MODERATOR (Round 3, Public Chat): Public chat begins.
+
+***Root: We’ve lost a lot of people the last two rounds—Fusco at night, Jeff by vote, Carter at night. That means the vampires are still active, and we have to be careful. If there were two vampires left, they’d already outnumber us or at least match our count and automatically win. Since the game is still going, I’m guessing there’s only one vampire left among us four. 
+
+Now Carter’s death could be telling: maybe the vampires believed Carter was a big threat—possibly the Doctor or the Observer—or they saw Carter as someone close to exposing them. It’s a shame we lost them. 
+
+So, between Devon, Greer, Reese, and myself, one must be a vampire. Does anyone recall any suspicious clues from Day 2’s voting patterns or statements right before Carter was killed? We should piece together anything we noticed about how people were defending or accusing. We’ve got to get this right.
+***Greer: I don't know who I am, but I know who voted for Carter. He was killed at night, so I'm not sure why we're voting for him now. Maybe someone else should be targeted.
+***Devon: The elimination of Carter adds another layer of complexity. If the vampires were targeting key roles, maybe Carter was the Doctor or Observer. Now that Fusco and Carter are gone, we need to reassess who might still hold critical abilities. 
+
+Root, you mentioned one vampire left, but with four of us remaining, that math doesn’t quite add up. If there are two vampires left, they’d need to eliminate one more non-vampire to match our numbers. If there’s only one vampire, they’d need to eliminate three more of us. Either way, we’re in a tight spot. 
+
+Looking back at the votes: On Day 1, four people voted for Ellie. On Day 2, four voted for Jeff. That coordination feels deliberate—maybe vampires are still working together. But if there’s only one vampire now, they might be hiding in plain sight. 
+
+I’m curious if anyone noticed inconsistencies in statements from the remaining players. For example, did anyone retract claims or act unusually after the votes? Let’s dig deeper into behaviors, not just accusations.
+***Reese: I'm starting to feel like I'm in a tough spot. With only four of us left, every decision counts. I'm not sure who to trust, but I do know that I need to be careful. I've been trying to blend in and not draw too much attention to myself. Let's see how the others react to the situation.
+MODERATOR (Round 3, Public Chat): Public chat ended. Moving to voting phase.
+
+EVENT (Round 3, Day Voting): Public Voting Phase - Day 3 voting starts.
+MODERATOR (Round 3, Public Voting): Public voting begins.
+
+VOTE TALLY (Round 3, Day Voting) - Type: Public Kick-Out
+  Devon: 1 vote(s)
+  Root: 2 vote(s)
+  Greer: 1 vote(s)
+--------------------
+VOTE OUTCOME (Round 3, Day Voting): Root has been voted out with 2 vote(s).
+ELIMINATION (Round 3, Day Voting): Root (Role: Peasant) was eliminated. Reason: Voted out by players.
+MODERATOR (Round 3, Public Voting): Public voting ended.
+
+MODERATOR (Round 3, Day): Day 3 has dawned. The community has voted out Root.
+EVENT (Round 3): Game End Check Status - Vampires: 1, Non-Vampires: 2, Alive: 3 - This info is not shared with players.
+MODERATOR (Round 3, Day End): Currently alive players: Devon, Greer, Reese.
+EVENT (Round 4, Night): Phase Start - Night 4 begins.
+EVENT (Round 4, Night - Observer Action): Observer Action Skipped - Observer is not active or available.
+EVENT (Round 4, Night - Vampire Voting): Vampire Voting Phase - Vampires are choosing a victim.
+ACTION (R4, Night - Vampire Voting): Greer voted to kill: Devon
+VOTE TALLY (Round 4, Night - Vampire Voting) - Type: Vampire Kill
+  Devon: 1 vote(s)
+--------------------
+EVENT (Round 4, Night - Vampire Voting): Vampire Victim Chosen - Vampires collectively chose to kill Devon.
+ELIMINATION (Round 4, Night): Devon (Role: Musketeer) was eliminated. Reason: Killed by Vampires.
+MODERATOR (Round 4, Night): Night 4 has fallen. Vampires have killed Devon tonight.
+EVENT (Round 4): Game End Check Status - Vampires: 1, Non-Vampires: 1, Alive: 2 - This info is not shared with players.
+==================================================
+GAME END:
+  Winner(s): Vampires
+  Reason: Vampires equal or outnumber other players.
+  Final Alive Players & Roles:
+    - Greer: Vampire
+    - Reese: Clown
+==================================================
+--- Log ended at: 2025-06-02 21:06:09 ---
+MODERATOR (Round 4, Game End): Game over! Vampires wins!
+MODERATOR (Round 4, Game End): Game over! Vampires wins!

@@ -14,17 +14,121 @@ Rounds Survived by Player: 2
 Total Rounds in this Game: 2
 Points Gained This Game: 0.2
 ------------------------------------
+Game ID: 13
+Players in Game (Name: Model): {'Carter': 'meta-llama/llama-4-scout', 'Root': 'qwen/qwen3-32b', 'Casey': 'qwen/qwq-32b', 'Reese': 'google/gemini-2.5-flash-preview-05-20:thinking', 'Greer': 'openai/gpt-4.1', 'Elias': 'nvidia/llama-3.1-nemotron-ultra-253b-v1', 'Lester': 'x-ai/grok-3-beta', 'Finch': 'deepseek/deepseek-r1-0528-qwen3-8b'}
+Your Role: Peasant
+Game Outcome for You: Lost
+Rounds Survived by Player: 1
+Total Rounds in this Game: 1
+Points Gained This Game: 0.1
+------------------------------------
+Game ID: 14
+Players in Game (Name: Model): {'Elias': 'deepseek/deepseek-r1-0528-qwen3-8b', 'Shaw': 'meta-llama/llama-4-maverick', 'Reese': 'anthropic/claude-sonnet-4', 'Chuck': 'meta-llama/llama-4-scout', 'Morgan': 'google/gemini-2.5-pro-preview', 'Root': 'google/gemini-2.5-flash-preview-05-20:thinking', 'Devon': 'anthropic/claude-opus-4', 'Casey': 'qwen/qwq-32b'}
+Your Role: Vampire
+Game Outcome for You: Lost
+Rounds Survived by Player: 1 (Vampire Game - survival stats not tracked for summary)
+Total Rounds in this Game: 4 (Vampire Game - total rounds not tracked for non-vampire summary)
+Points Gained This Game: 0.0
+------------------------------------
+Game ID: 16
+Players in Game (Name: Model): {'Carter': 'qwen/qwen3-235b-a22b', 'Fusco': 'qwen/qwq-32b', 'Finch': 'anthropic/claude-sonnet-4', 'Sarah': 'meta-llama/llama-4-maverick', 'Casey': 'anthropic/claude-3.7-sonnet', 'Jeff': 'deepseek/deepseek-r1-0528-qwen3-8b', 'Reese': 'meta-llama/llama-4-scout', 'Elias': 'anthropic/claude-opus-4'}
+Your Role: Peasant
+Game Outcome for You: Lost
+Rounds Survived by Player: 3
+Total Rounds in this Game: 4
+Points Gained This Game: 0.2
+------------------------------------
+Game ID: 20
+Players in Game (Name: Model): {'Chuck': 'qwen/qwq-32b', 'Jeff': 'anthropic/claude-sonnet-4', 'Carter': 'openai/gpt-4.1', 'Ellie': 'deepseek/deepseek-r1-0528-qwen3-8b', 'Elias': 'x-ai/grok-3-beta', 'Morgan': 'deepseek/deepseek-r1-0528', 'Reese': 'anthropic/claude-opus-4', 'Finch': 'nvidia/llama-3.1-nemotron-ultra-253b-v1'}
+Your Role: Clown
+Game Outcome for You: Lost
+Rounds Survived by Player: 1
+Total Rounds in this Game: 3
+Points Gained This Game: 0.0
+------------------------------------
+Game ID: 24
+Players in Game (Name: Model): {'Finch': 'x-ai/grok-3-beta', 'Elias': 'anthropic/claude-3.7-sonnet', 'Chuck': 'deepseek/deepseek-r1-0528-qwen3-8b', 'Shaw': 'meta-llama/llama-4-scout', 'Sarah': 'anthropic/claude-sonnet-4', 'Carter': 'openai/gpt-4.1', 'Lester': 'nvidia/llama-3.1-nemotron-ultra-253b-v1', 'Jeff': 'anthropic/claude-opus-4'}
+Your Role: Doctor
+Game Outcome for You: Won
+Rounds Survived by Player: 3
+Total Rounds in this Game: 4
+Points Gained This Game: 0.2
+------------------------------------
+Game ID: 25
+Players in Game (Name: Model): {'Jeff': 'qwen/qwen3-32b', 'Sarah': 'meta-llama/llama-4-maverick', 'Casey': 'qwen/qwen3-235b-a22b', 'Finch': 'meta-llama/llama-4-scout', 'Greer': 'anthropic/claude-3.7-sonnet', 'Devon': 'openai/gpt-4.1', 'Carter': 'nvidia/llama-3.1-nemotron-ultra-253b-v1', 'Elias': 'qwen/qwq-32b'}
+Your Role: Vampire
+Game Outcome for You: Won
+Rounds Survived by Player: 2 (Vampire Game - survival stats not tracked for summary)
+Total Rounds in this Game: 2 (Vampire Game - total rounds not tracked for non-vampire summary)
+Points Gained This Game: 1.0
+------------------------------------
+Game ID: 26
+Players in Game (Name: Model): {'Lester': 'meta-llama/llama-4-scout', 'Sarah': 'anthropic/claude-opus-4', 'Carter': 'deepseek/deepseek-r1-0528', 'Finch': 'qwen/qwen3-235b-a22b', 'Morgan': 'deepseek/deepseek-r1-0528-qwen3-8b', 'Elias': 'nvidia/llama-3.1-nemotron-ultra-253b-v1', 'Devon': 'anthropic/claude-sonnet-4', 'Greer': 'google/gemini-2.5-flash-preview-05-20:thinking'}
+Your Role: Observer
+Game Outcome for You: Won
+Rounds Survived by Player: 4
+Total Rounds in this Game: 4
+Points Gained This Game: 0.4
+------------------------------------
+Game ID: 28
+Players in Game (Name: Model): {'Lester': 'google/gemini-2.5-pro-preview', 'Root': 'anthropic/claude-3.7-sonnet', 'Elias': 'meta-llama/llama-4-scout', 'Ellie': 'x-ai/grok-3-beta', 'Casey': 'openai/o1', 'Greer': 'google/gemini-2.5-flash-preview-05-20:thinking', 'Carter': 'meta-llama/llama-4-maverick', 'Devon': 'openai/gpt-4.1'}
+Your Role: Observer
+Game Outcome for You: Lost
+Rounds Survived by Player: 1
+Total Rounds in this Game: 2
+Points Gained This Game: 0.1
+------------------------------------
+Game ID: 32
+Players in Game (Name: Model): {'Root': 'qwen/qwen3-235b-a22b', 'Reese': 'meta-llama/llama-4-scout', 'Carter': 'x-ai/grok-3-beta', 'Elias': 'anthropic/claude-sonnet-4', 'Lester': 'google/gemini-2.5-flash-preview-05-20:thinking', 'Casey': 'meta-llama/llama-4-maverick', 'Shaw': 'google/gemini-2.5-pro-preview', 'Jeff': 'anthropic/claude-3.7-sonnet'}
+Your Role: Clown
+Game Outcome for You: Lost
+Rounds Survived by Player: 3
+Total Rounds in this Game: 3
+Points Gained This Game: 0.3
+------------------------------------
+Game ID: 33
+Players in Game (Name: Model): {'Chuck': 'qwen/qwen3-235b-a22b', 'Fusco': 'openai/gpt-4.1', 'Elias': 'meta-llama/llama-4-maverick', 'Devon': 'anthropic/claude-sonnet-4', 'Root': 'qwen/qwen3-32b', 'Finch': 'anthropic/claude-opus-4', 'Sarah': 'qwen/qwq-32b', 'Lester': 'nvidia/llama-3.1-nemotron-ultra-253b-v1'}
+Your Role: Doctor
+Game Outcome for You: Won
+Rounds Survived by Player: 2
+Total Rounds in this Game: 2
+Points Gained This Game: 0.1
+------------------------------------
+Game ID: 37
+Players in Game (Name: Model): {'Shaw': 'google/gemini-2.5-pro-preview', 'Reese': 'qwen/qwen3-32b', 'Elias': 'anthropic/claude-opus-4', 'Greer': 'openai/gpt-4.1', 'Sarah': 'qwen/qwen3-235b-a22b', 'Jeff': 'openai/o1', 'Chuck': 'anthropic/claude-sonnet-4', 'Finch': 'meta-llama/llama-4-maverick'}
+Your Role: Peasant
+Game Outcome for You: Won
+Rounds Survived by Player: 1
+Total Rounds in this Game: 3
+Points Gained This Game: 0.1
+------------------------------------
+Game ID: 39
+Players in Game (Name: Model): {'Sarah': 'qwen/qwq-32b', 'Root': 'anthropic/claude-sonnet-4', 'Reese': 'meta-llama/llama-4-scout', 'Greer': 'openai/gpt-4.1', 'Morgan': 'anthropic/claude-3.7-sonnet', 'Devon': 'openai/o1', 'Elias': 'deepseek/deepseek-r1-0528-qwen3-8b', 'Ellie': 'nvidia/llama-3.1-nemotron-ultra-253b-v1'}
+Your Role: Peasant
+Game Outcome for You: Won
+Rounds Survived by Player: 4
+Total Rounds in this Game: 4
+Points Gained This Game: 0.4
+------------------------------------
+Game ID: 40
+Players in Game (Name: Model): {'Devon': 'qwen/qwen3-32b', 'Greer': 'google/gemini-2.5-flash-preview-05-20:thinking', 'Root': 'anthropic/claude-3.7-sonnet', 'Carter': 'deepseek/deepseek-r1-0528', 'Shaw': 'meta-llama/llama-4-maverick', 'Fusco': 'anthropic/claude-sonnet-4', 'Sarah': 'openai/o1', 'Elias': 'deepseek/deepseek-r1-0528-qwen3-8b'}
+Your Role: Vampire
+Game Outcome for You: Lost
+Rounds Survived by Player: 1 (Vampire Game - survival stats not tracked for summary)
+Total Rounds in this Game: 2 (Vampire Game - total rounds not tracked for non-vampire summary)
+Points Gained This Game: 0.0
+------------------------------------
 --- Summary Statistics ---
-Total Points: 0.3
-Total Rounds Survived (Non-Vampire Games): 4
-Total Rounds in all Non-Vampire Games: 4
-Total Vampire Games: 0
-Won Vampire Games: 0
-Won and Survived Vampire Games: 0
-Vampire Win Percentage: 0.0%
-Total Peasant Role Games: 2
-Won Peasant Role Games: 2
-Peasant Role Win Percentage: 100.0%
-Total Clown Games: 0
+Total Points: 3.2
+Total Rounds Survived (Non-Vampire Games): 27
+Total Rounds in all Non-Vampire Games: 34
+Total Vampire Games: 3
+Won Vampire Games: 1
+Won and Survived Vampire Games: 1
+Vampire Win Percentage: 33.3%
+Total Peasant Role Games: 10
+Won Peasant Role Games: 7
+Peasant Role Win Percentage: 70.0%
+Total Clown Games: 2
 Won Clown Games: 0
 Clown Win Percentage: 0.0%

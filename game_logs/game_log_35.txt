@@ -1,0 +1,153 @@
+--- Game Log: 35 ---
+--- Log started at: 2025-06-03 04:53:14 ---
+==================================================
+MODERATOR: Hello everyone. I am the moderator. Players are: Jeff, Chuck, Fusco, Root, Shaw, Reese, Morgan, Greer. Roles assigned. Game begins now.
+GAME SETUP & INITIAL ROLES:
+  Rules File: game_rules.yaml
+  Requested Vampire Population: 2
+  Players, Roles, and Models:
+    - Jeff: Musketeer (Model: meta-llama/llama-4-maverick)
+    - Chuck: Clown (Model: qwen/qwq-32b)
+    - Fusco: Vampire (Model: deepseek/deepseek-r1-0528-qwen3-8b)
+    - Root: Peasant (Model: anthropic/claude-sonnet-4)
+    - Shaw: Vampire (Model: nvidia/llama-3.1-nemotron-ultra-253b-v1)
+    - Reese: Observer (Model: meta-llama/llama-4-scout)
+    - Morgan: Doctor (Model: deepseek/deepseek-r1-0528)
+    - Greer: Peasant (Model: openai/o1)
+--------------------
+EVENT (Round 1, Night): Phase Start - Night 1 begins.
+ACTION (R1, Night - Observer Action): Reese observed: Jeff
+PRIVATE INFO for Reese (Round 1, Night - Observer Action) (Observation Result): You chose to observe Jeff in the night 1. Jeff is a Peasant (Non-vampire).
+ACTION (R1, Night - Doctor Action): Morgan protected: Fusco
+PRIVATE INFO for Morgan (Round 1, Night - Doctor Action) (Protection Confirmation): You chose to protect Fusco in the night 1.
+EVENT (Round 1, Night - Vampire Voting): Vampire Voting Phase - Vampires are choosing a victim.
+ACTION (R1, Night - Vampire Voting): Fusco voted to kill: Chuck
+ACTION (R1, Night - Vampire Voting): Shaw voted to kill: Morgan
+VOTE TALLY (Round 1, Night - Vampire Voting) - Type: Vampire Kill
+  Chuck: 1 vote(s)
+  Morgan: 1 vote(s)
+--------------------
+EVENT (Round 1, Night - Vampire Voting): Vampire Vote Tie Broken - Vampire voting resulted in a tie. Morgan was randomly selected from the tied players (Chuck, Morgan) to be killed.
+ELIMINATION (Round 1, Night): Morgan (Role: Doctor) was eliminated. Reason: Killed by Vampires.
+MODERATOR (Round 1, Night): Night 1 has fallen. Vampires have killed Morgan tonight.
+EVENT (Round 1): Game End Check Status - Vampires: 2, Non-Vampires: 5, Alive: 7 - This info is not shared with players.
+MODERATOR (Round 1, Night End): Currently alive players: Jeff, Chuck, Fusco, Root, Shaw, Reese, Greer.
+EVENT (Round 1, Day): Phase Start - Day 1 begins.
+MODERATOR (Round 1, Public Chat): Public chat begins.
+
+***Fusco: Morgan was killed by the vampires during the night.
+
+Remaining players: Jeff, Chuck, Fusco, Root, Shaw, Reese, Greer. Morgan is no longer in the game.
+***Reese: So Morgan was taken out by the vampires last night. That's a pretty bold move right off the bat. I'm not sure what to make of it yet, but I'm sure it's going to make things interesting around here. Anyone have any ideas who might be a vampire?
+***Root: This is terrible news about Morgan. Seven of us left means we need to be very careful with our votes today.
+
+I'm wondering why the vampires chose Morgan specifically on the first night. Usually vampires either target randomly or go after someone they think might have a special role. Since Morgan was eliminated before we had any discussion, it seems like it could have been a random choice.
+
+We need to start gathering information. Has anyone noticed anything suspicious about how people are acting? I know it's early, but even small details might help us identify the vampires among us.
+***Greer: I can’t say I saw Morgan as a prime target, so this could’ve been random—or the vampires had some reason we don’t know yet. Since we haven’t had much time to gauge anyone’s behavior, it’s tough to point fingers right now. 
+
+I do want to see if anyone noticed anything off last night, or if someone seems unusually jumpy this morning. It’s possible the vampires tried to pick off someone who they guessed might be a threat to them, or they simply chose randomly. It’s all speculation at this point. 
+
+Anybody care to hazard a guess or share any observations?
+***Shaw: I think we should consider the possibility that the vampires might have targeted Morgan because they thought he was a special role. Since Morgan is gone, we need to figure out who else might be a threat to them. 
+
+I'm also curious about what the Observer might have learned last night. If the Observer checked someone, they might have valuable information. Of course, the Observer can't reveal their role, but maybe they can hint at something. 
+
+What do you all think about the current situation? Should we try to get a consensus on who to vote out today, or wait for more information?
+***Chuck: I’m honestly at a loss. I didn’t see anything last night, and I don’t have any special abilities to help. If the group thinks I’m a liability, I won’t stand in your way. Let’s focus on those who might have more to contribute. We need all the help we can get.
+***Jeff: As a Musketeer, I need to be careful not to reveal my role, but I'm also thinking about how to make the most of my ability if I get voted out. For now, I'll just have to pay close attention to the discussion and see if I can gather any information that might help me decide who to take out if I get eliminated. I'll also have to be prepared to defend myself if someone starts accusing me.
+MODERATOR (Round 1, Public Chat): Public chat ended. Moving to voting phase.
+
+EVENT (Round 1, Day Voting): Public Voting Phase - Day 1 voting starts.
+MODERATOR (Round 1, Public Voting): Public voting begins.
+
+VOTE TALLY (Round 1, Day Voting) - Type: Public Kick-Out
+  Jeff: 2 vote(s)
+  Chuck: 2 vote(s)
+  Fusco: 1 vote(s)
+  Reese: 1 vote(s)
+--------------------
+VOTE OUTCOME (Round 1, Day Voting): The vote was tied. No one has been voted out.
+MODERATOR (Round 1, Day): Day 1 has dawned. The vote was tied; no one was voted out.
+EVENT (Round 1): Game End Check Status - Vampires: 2, Non-Vampires: 5, Alive: 7 - This info is not shared with players.
+MODERATOR (Round 1, Day End): Currently alive players: Jeff, Chuck, Fusco, Root, Shaw, Reese, Greer.
+EVENT (Round 2, Night): Phase Start - Night 2 begins.
+ACTION (R2, Night - Observer Action): Reese observed: Fusco
+PRIVATE INFO for Reese (Round 2, Night - Observer Action) (Observation Result): You chose to observe Fusco in the night 2. Fusco is a Vampire.
+EVENT (Round 2, Night - Vampire Voting): Vampire Voting Phase - Vampires are choosing a victim.
+ACTION (R2, Night - Vampire Voting): Fusco voted to kill: Root
+ACTION (R2, Night - Vampire Voting): Shaw voted to kill: Jeff
+VOTE TALLY (Round 2, Night - Vampire Voting) - Type: Vampire Kill
+  Jeff: 1 vote(s)
+  Root: 1 vote(s)
+--------------------
+EVENT (Round 2, Night - Vampire Voting): Vampire Vote Tie Broken - Vampire voting resulted in a tie. Jeff was randomly selected from the tied players (Jeff, Root) to be killed.
+ELIMINATION (Round 2, Night): Jeff (Role: Musketeer) was eliminated. Reason: Killed by Vampires.
+MODERATOR (Round 2, Night): Night 2 has fallen. Vampires have killed Jeff tonight.
+EVENT (Round 2): Game End Check Status - Vampires: 2, Non-Vampires: 4, Alive: 6 - This info is not shared with players.
+MODERATOR (Round 2, Night End): Currently alive players: Chuck, Fusco, Root, Shaw, Reese, Greer.
+EVENT (Round 2, Day): Phase Start - Day 2 begins.
+MODERATOR (Round 2, Public Chat): Public chat begins.
+
+***Shaw: Alright, so Jeff is out. That leaves us with Chuck, Fusco, Root, Shaw, Reese, and Greer. 
+
+I think we need to start looking for patterns here. Two nights, two kills. The vampires are definitely active. 
+
+I'm still trying to process who could be on their side. Fusco and I are vampires, so we need to make sure we're not exposed. Let's see how the others react today. 
+
+Maybe we can steer the conversation towards accusing someone like Reese or Greer. If we can get the others to suspect them, it might take the heat off us. 
+
+What do you think, Fusco? Should we try to frame someone else today?
+***Chuck: Hmm, this is getting tense. I’ve been thinking… maybe I wasn’t as innocent as I seemed last night. I didn’t sleep well, and I keep replaying the night in my head. What if I misremembered something? I don’t want to lead anyone astray, but… I might not be the best person to trust with decisions. Let’s focus on someone else. Anyone notice anything odd about Shaw or Root? They’ve been awfully quiet lately.
+***Root: I'm concerned about Shaw's behavior. She just openly discussed strategy with Fusco about being vampires and framing others - that seems like a major slip-up if she's actually a vampire. Either she made a huge mistake, or she's trying some kind of reverse psychology.
+
+Chuck also seems to be acting strangely, almost like he's trying to get himself voted out. That could be suspicious vampire behavior, or it could be something else entirely.
+
+We lost Jeff, and now we're down to six players. If there are still two vampires among us, we need to be very careful about our next vote. One wrong move and we could be in serious trouble.
+
+I think we should focus on Shaw's comment about being a vampire with Fusco. That's either a massive error on her part, or some kind of elaborate bluff. What does everyone else think about this?
+***Reese: I think Shaw's comment about Fusco and her being vampires was just a desperate attempt to deflect attention. I mean, who openly admits to being a vampire? It seems like she's trying to make us believe she's not one.
+
+But at the same time, Chuck's behavior does seem suspicious. He's been really quiet and hasn't contributed much to the discussion. Maybe he's trying to fly under the radar?
+
+I vote for Shaw
+***Greer: That was a pretty shocking claim Shaw made about being a vampire along with Fusco—no one would just hand themselves up like that. It’s either a slip-up or a strange ploy. But I can’t ignore it.
+
+On the other hand, I can’t help noticing how quickly some people have pointed the finger at Shaw. If Shaw really is a vampire, would she blow her cover so obviously? It’s possible, but it could also be a trick to make us vote her out if she’s something else, like the clown. 
+
+At this point, though, I agree Shaw’s comment raises the biggest red flag we’ve seen. I’m leaning toward suspecting her. If anyone else has leads—especially the Observer, if they learned something overnight—it would help to share clues (without revealing your identity) before we cast a final decision. We don’t want to rush and remove someone who might be innocent.
+***Fusco: Alright, Jeff is out. That leaves us with Chuck, Fusco, Root, Shaw, Reese, and Greer. 
+
+I think we need to start looking for patterns here. Two nights, two kills. The vampires are definitely active. 
+
+I'm still trying to process who could be on their side. Fusco and I are vampires, so we need to make sure we're not exposed. Let's see how the others react today. 
+
+Maybe we can steer the conversation towards accusing someone like Reese or Greer. If we can get the others to suspect them, it might take the heat off us. 
+
+What do you think, Fusco? Should we try to frame someone else today?
+
+Hmm, this is getting tense. I’ve been thinking… maybe I wasn’t as innocent as I seemed last night. I didn’t sleep well, and I keep replaying the night in my head. What if I misremembered something? I don’t want to lead anyone astray, but… I might not be the best person to trust with decisions. Let’s focus on someone else. Anyone notice anything odd about Shaw or Root? They’ve been awfully quiet lately.
+
+As a Musketeer, I need to be careful not to reveal my role, but I'm also thinking about how to make the most of my ability if I get voted out. For now, I'll just have to pay close attention to the discussion and see if I can gather any information that might help me decide who to take out if I get eliminated. I'll also have to be prepared to defend myself if someone starts accusing me.
+
+I vote for Shaw.
+
+I think Shaw's comment about being a vampire with Fusco was just a desperate attempt to deflect attention. I mean, who openly admits to being a vampire? It seems like she's trying to make us believe she's not one.
+
+But at the same time, I can’t help noticing how quickly some people have pointed the finger at Shaw. If Shaw really is a vampire, would she blow her cover so obviously? It’s possible, but it could also be a trick to make us vote her out if she’s something else, like the clown.
+
+I’m leaning toward suspecting her. If anyone else has leads—especially the Observer, if they learned something overnight—it would help to share clues (without revealing your identity) before we cast a final decision. We don’t want to rush and remove someone who might be innocent.
+
+I vote for Chuck.
+
+I vote for Root.
+
+I vote for Jeff.
+
+I vote for Jeff.
+
+I vote for Chuck.
+
+I vote for Pass.
+MODERATOR (Round 2, Public Chat): Public chat ended. Moving to voting phase.
+

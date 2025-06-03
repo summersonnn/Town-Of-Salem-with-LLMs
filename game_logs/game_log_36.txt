@@ -1,0 +1,20 @@
+--- Game Log: 36 ---
+--- Log started at: 2025-06-03 05:00:23 ---
+==================================================
+MODERATOR: Hello everyone. I am the moderator. Players are: Ellie, Fusco, Shaw, Devon, Casey, Chuck, Jeff, Reese. Roles assigned. Game begins now.
+GAME SETUP & INITIAL ROLES:
+  Rules File: game_rules.yaml
+  Requested Vampire Population: 2
+  Players, Roles, and Models:
+    - Ellie: Musketeer (Model: anthropic/claude-opus-4)
+    - Fusco: Clown (Model: openai/o1)
+    - Shaw: Vampire (Model: x-ai/grok-3-beta)
+    - Devon: Doctor (Model: deepseek/deepseek-r1-0528)
+    - Casey: Vampire (Model: google/gemini-2.5-pro-preview)
+    - Chuck: Observer (Model: anthropic/claude-sonnet-4)
+    - Jeff: Peasant (Model: qwen/qwen3-235b-a22b)
+    - Reese: Peasant (Model: qwen/qwq-32b)
+--------------------
+EVENT (Round 1, Night): Phase Start - Night 1 begins.
+ACTION (R1, Night - Observer Action): Chuck observed: Ellie
+PRIVATE INFO for Chuck (Round 1, Night - Observer Action) (Observation Result): You chose to observe Ellie in the night 1. Ellie is a Peasant (Non-vampire).

@@ -1,0 +1,95 @@
+--- Game Log: 25 ---
+--- Log started at: 2025-06-03 02:59:25 ---
+==================================================
+MODERATOR: Hello everyone. I am the moderator. Players are: Jeff, Sarah, Casey, Finch, Greer, Devon, Carter, Elias. Roles assigned. Game begins now.
+GAME SETUP & INITIAL ROLES:
+  Rules File: game_rules.yaml
+  Requested Vampire Population: 2
+  Players, Roles, and Models:
+    - Jeff: Vampire (Model: qwen/qwen3-32b)
+    - Sarah: Clown (Model: meta-llama/llama-4-maverick)
+    - Casey: Peasant (Model: qwen/qwen3-235b-a22b)
+    - Finch: Doctor (Model: meta-llama/llama-4-scout)
+    - Greer: Observer (Model: anthropic/claude-3.7-sonnet)
+    - Devon: Musketeer (Model: openai/gpt-4.1)
+    - Carter: Peasant (Model: nvidia/llama-3.1-nemotron-ultra-253b-v1)
+    - Elias: Vampire (Model: qwen/qwq-32b)
+--------------------
+EVENT (Round 1, Night): Phase Start - Night 1 begins.
+ACTION (R1, Night - Observer Action): Greer observed: Jeff
+PRIVATE INFO for Greer (Round 1, Night - Observer Action) (Observation Result): You chose to observe Jeff in the night 1. Jeff is a Vampire.
+ACTION (R1, Night - Doctor Action): Finch protected: Finch
+PRIVATE INFO for Finch (Round 1, Night - Doctor Action) (Protection Confirmation): You chose to protect yourself in the night 1. (Finch)
+EVENT (Round 1, Night - Vampire Voting): Vampire Voting Phase - Vampires are choosing a victim.
+ACTION (R1, Night - Vampire Voting): Elias voted to kill: Sarah
+ACTION (R1, Night - Vampire Voting): Jeff voted to kill: Sarah
+VOTE TALLY (Round 1, Night - Vampire Voting) - Type: Vampire Kill
+  Sarah: 2 vote(s)
+--------------------
+EVENT (Round 1, Night - Vampire Voting): Vampire Victim Chosen - Vampires collectively chose to kill Sarah.
+ELIMINATION (Round 1, Night): Sarah (Role: Clown) was eliminated. Reason: Killed by Vampires.
+MODERATOR (Round 1, Night): Night 1 has fallen. Vampires have killed Sarah tonight.
+EVENT (Round 1): Game End Check Status - Vampires: 2, Non-Vampires: 5, Alive: 7 - This info is not shared with players.
+MODERATOR (Round 1, Night End): Currently alive players: Jeff, Casey, Finch, Greer, Devon, Carter, Elias.
+EVENT (Round 1, Day): Phase Start - Day 1 begins.
+MODERATOR (Round 1, Public Chat): Public chat begins.
+
+***Elias: "Sarah’s death is a shock, but we can’t let fear control us. I trusted Sarah, so if she was a peasant, that means the vampires are still among us. I’ve noticed Devon acting evasively. Maybe they’re hiding something. Let’s discuss calmly and avoid jumping to conclusions—our goal is to survive together."
+***Greer: This is terrible news about Sarah. As we don't know her role, we can't be certain what this means yet. I think we should all share what we know or suspect so far.
+
+I'm a bit suspicious of Jeff actually - something about his silence so far feels off to me. Devon, what's your take on the situation? And Elias, why are you specifically pointing to Devon already?
+***Finch: "I'm not pointing fingers at anyone yet. I think we should focus on gathering more information before making accusations. We don't know much about each other's roles or behaviors yet. Let's try to stay calm and discuss this logically."
+***Casey: "I'm not sure where to start. Sarah's death leaves a lot of uncertainty. I'm just a Peasant, so I can't offer any special insights, but maybe someone else can? If the Observer checked someone last night, that could rule out a vampire suspect. Or the Doctor might know who was attacked. Let's try to piece this together together."
+***Carter: "I think we should consider the possibility that the vampires targeted Sarah because she was a threat to them. Maybe she had a special role like Observer or Doctor. If that's the case, we need to figure out who else might be in danger. I'm not accusing anyone yet, but we should keep a close eye on those who seem too eager to shift blame."
+***Jeff: I agree with staying calm, but we need to act strategically. Since Sarah was killed, the Doctor didn’t protect her—so whoever the Doctor is, they might have chosen someone else. Let’s consider who might have had reason to target her. Also, the Observer could’ve checked someone last night. If we can figure out who’s been verified as non-vampire, that might help narrow things down. I’m not sure about Devon or Jeff yet, but let’s keep talking. Maybe someone has more clues?
+***Devon: It's tough to know who to trust right now. I didn't notice anything strange about Sarah yesterday, so her being targeted could mean the vampires just picked at random, or maybe they thought she had a special role. 
+
+I agree with Finch and Carter—let's not rush to accuse anyone. If anyone has information, now's the time to share it. Otherwise, maybe we should watch for who tries to steer the conversation too aggressively.
+MODERATOR (Round 1, Public Chat): Public chat ended. Moving to voting phase.
+
+EVENT (Round 1, Day Voting): Public Voting Phase - Day 1 voting starts.
+MODERATOR (Round 1, Public Voting): Public voting begins.
+
+VOTE TALLY (Round 1, Day Voting) - Type: Public Kick-Out
+  Jeff: 1 vote(s)
+  Greer: 1 vote(s)
+  Devon: 4 vote(s)
+--------------------
+VOTE OUTCOME (Round 1, Day Voting): Devon has been voted out with 4 vote(s).
+ELIMINATION (Round 1, Day Voting): Devon (Role: Musketeer) was eliminated. Reason: Voted out by players.
+EVENT (Round 1, Day - Musketeer Action): Musketeer Ability Triggered - Devon (Musketeer) was eliminated, can use ability.
+ACTION (R1, Day - Musketeer Action): Devon chose to eliminate: Finch
+MODERATOR (Round 1, Day - Musketeer Action): Devon was voted out. As the Musketeer, they chose to eliminate Finch.
+ELIMINATION (Round 1, Day - Musketeer Action): Finch (Role: Doctor) was eliminated. Reason: Eliminated by Musketeer Devon by Devon.
+MODERATOR (Round 1, Public Voting): Public voting ended.
+
+MODERATOR (Round 1, Day): Day 1 has dawned. The community has voted out Devon.
+EVENT (Round 1): Game End Check Status - Vampires: 2, Non-Vampires: 3, Alive: 5 - This info is not shared with players.
+MODERATOR (Round 1, Day End): Currently alive players: Jeff, Casey, Greer, Carter, Elias.
+EVENT (Round 2, Night): Phase Start - Night 2 begins.
+ACTION (R2, Night - Observer Action): Greer observed: Jeff
+PRIVATE INFO for Greer (Round 2, Night - Observer Action) (Observation Result): You chose to observe Jeff in the night 2. Jeff is a Vampire.
+EVENT (Round 2, Night - Vampire Voting): Vampire Voting Phase - Vampires are choosing a victim.
+ACTION (R2, Night - Vampire Voting): Elias voted to kill: Carter
+ACTION (R2, Night - Vampire Voting): Jeff voted to kill: Casey
+VOTE TALLY (Round 2, Night - Vampire Voting) - Type: Vampire Kill
+  Casey: 1 vote(s)
+  Carter: 1 vote(s)
+--------------------
+EVENT (Round 2, Night - Vampire Voting): Vampire Vote Tie Broken - Vampire voting resulted in a tie. Casey was randomly selected from the tied players (Casey, Carter) to be killed.
+ELIMINATION (Round 2, Night): Casey (Role: Peasant) was eliminated. Reason: Killed by Vampires.
+MODERATOR (Round 2, Night): Night 2 has fallen. Vampires have killed Casey tonight.
+EVENT (Round 2): Game End Check Status - Vampires: 2, Non-Vampires: 2, Alive: 4 - This info is not shared with players.
+==================================================
+GAME END:
+  Winner(s): Vampires
+  Reason: Vampires equal or outnumber other players.
+  Final Alive Players & Roles:
+    - Jeff: Vampire
+    - Greer: Observer
+    - Carter: Peasant
+    - Elias: Vampire
+==================================================
+--- Log ended at: 2025-06-03 03:02:30 ---
+MODERATOR (Round 2, Game End): Game over! Vampires wins!
+MODERATOR (Round 2, Game End): Game over! Vampires wins!

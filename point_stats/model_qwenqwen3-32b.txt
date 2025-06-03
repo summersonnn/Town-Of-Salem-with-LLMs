@@ -22,17 +22,129 @@ Rounds Survived by Player: 5
 Total Rounds in this Game: 5
 Points Gained This Game (for Model via Player): 0.5
 ------------------------------------
+Game ID: 6
+Played by (Player Name): Devon
+Player's Role in this Game: Musketeer
+Game Outcome for Player: Lost
+Rounds Survived by Player: 4
+Total Rounds in this Game: 4
+Points Gained This Game (for Model via Player): 0.3
+------------------------------------
+Game ID: 7
+Played by (Player Name): Ellie
+Player's Role in this Game: Doctor
+Game Outcome for Player: Won
+Rounds Survived by Player: 2
+Total Rounds in this Game: 2
+Points Gained This Game (for Model via Player): 0.2
+------------------------------------
+Game ID: 11
+Played by (Player Name): Root
+Player's Role in this Game: Clown
+Game Outcome for Player: Lost
+Rounds Survived by Player: 1
+Total Rounds in this Game: 4
+Points Gained This Game (for Model via Player): 0.0
+------------------------------------
+Game ID: 12
+Played by (Player Name): Shaw
+Player's Role in this Game: Peasant
+Game Outcome for Player: Won
+Rounds Survived by Player: 2
+Total Rounds in this Game: 2
+Points Gained This Game (for Model via Player): 0.2
+------------------------------------
+Game ID: 13
+Played by (Player Name): Root
+Player's Role in this Game: Musketeer
+Game Outcome for Player: Lost
+Rounds Survived by Player: 1
+Total Rounds in this Game: 1
+Points Gained This Game (for Model via Player): 0.1
+------------------------------------
+Game ID: 17
+Played by (Player Name): Reese
+Player's Role in this Game: Vampire
+Game Outcome for Player: Won
+Rounds Survived by Player: 4 (Vampire Game - survival stats not tracked for summary)
+Total Rounds in this Game: 4 (Vampire Game - total rounds not tracked for non-vampire summary)
+Points Gained This Game (for Model via Player): 1.0
+------------------------------------
+Game ID: 23
+Played by (Player Name): Jeff
+Player's Role in this Game: Observer
+Game Outcome for Player: Lost
+Rounds Survived by Player: 1
+Total Rounds in this Game: 4
+Points Gained This Game (for Model via Player): 0.1
+------------------------------------
+Game ID: 25
+Played by (Player Name): Jeff
+Player's Role in this Game: Vampire
+Game Outcome for Player: Won
+Rounds Survived by Player: 2 (Vampire Game - survival stats not tracked for summary)
+Total Rounds in this Game: 2 (Vampire Game - total rounds not tracked for non-vampire summary)
+Points Gained This Game (for Model via Player): 1.0
+------------------------------------
+Game ID: 27
+Played by (Player Name): Lester
+Player's Role in this Game: Peasant
+Game Outcome for Player: Lost
+Rounds Survived by Player: 1
+Total Rounds in this Game: 1
+Points Gained This Game (for Model via Player): 0.1
+------------------------------------
+Game ID: 29
+Played by (Player Name): Greer
+Player's Role in this Game: Doctor
+Game Outcome for Player: Lost
+Rounds Survived by Player: 2
+Total Rounds in this Game: 3
+Points Gained This Game (for Model via Player): 0.1
+------------------------------------
+Game ID: 33
+Played by (Player Name): Root
+Player's Role in this Game: Clown
+Game Outcome for Player: Lost
+Rounds Survived by Player: 2
+Total Rounds in this Game: 2
+Points Gained This Game (for Model via Player): 0.2
+------------------------------------
+Game ID: 37
+Played by (Player Name): Reese
+Player's Role in this Game: Vampire
+Game Outcome for Player: Lost
+Rounds Survived by Player: 2 (Vampire Game - survival stats not tracked for summary)
+Total Rounds in this Game: 3 (Vampire Game - total rounds not tracked for non-vampire summary)
+Points Gained This Game (for Model via Player): 0.0
+------------------------------------
+Game ID: 38
+Played by (Player Name): Greer
+Player's Role in this Game: Musketeer
+Game Outcome for Player: Won
+Rounds Survived by Player: 3
+Total Rounds in this Game: 3
+Points Gained This Game (for Model via Player): 0.2
+------------------------------------
+Game ID: 40
+Played by (Player Name): Devon
+Player's Role in this Game: Clown
+Game Outcome for Player: Lost
+Rounds Survived by Player: 1
+Total Rounds in this Game: 2
+Points Gained This Game (for Model via Player): 0.0
+------------------------------------
 --- Summary Statistics ---
-Total Points: 1.2
-Total Rounds Survived (Non-Vampire Games): 7
-Total Rounds in all Non-Vampire Games: 8
-Total Vampire Games: 1
-Won Vampire Games: 1
-Won and Survived Vampire Games: 0
-Vampire Win Percentage: 100.0%
-Total Peasant Role Games: 2
-Won Peasant Role Games: 0
-Peasant Role Win Percentage: 0.0%
-Total Clown Games: 0
+Total Points: 4.7
+Total Rounds Survived (Non-Vampire Games): 27
+Total Rounds in all Non-Vampire Games: 36
+Total Vampire Games: 4
+Won Vampire Games: 3
+Won and Survived Vampire Games: 2
+Vampire Win Percentage: 75.0%
+Total Peasant Role Games: 10
+Won Peasant Role Games: 3
+Peasant Role Win Percentage: 30.0%
+Total Clown Games: 3
 Won Clown Games: 0
 Clown Win Percentage: 0.0%

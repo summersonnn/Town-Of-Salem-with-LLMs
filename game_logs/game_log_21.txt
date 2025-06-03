@@ -1,0 +1,280 @@
+--- Game Log: 21 ---
+--- Log started at: 2025-06-03 02:23:18 ---
+==================================================
+MODERATOR: Hello everyone. I am the moderator. Players are: Ellie, Greer, Morgan, Shaw, Casey, Fusco, Reese, Lester. Roles assigned. Game begins now.
+GAME SETUP & INITIAL ROLES:
+  Rules File: game_rules.yaml
+  Requested Vampire Population: 2
+  Players, Roles, and Models:
+    - Ellie: Peasant (Model: openai/o1)
+    - Greer: Peasant (Model: openai/gpt-4.1)
+    - Morgan: Vampire (Model: google/gemini-2.5-flash-preview-05-20:thinking)
+    - Shaw: Musketeer (Model: anthropic/claude-opus-4)
+    - Casey: Observer (Model: meta-llama/llama-4-scout)
+    - Fusco: Vampire (Model: meta-llama/llama-4-maverick)
+    - Reese: Clown (Model: google/gemini-2.5-pro-preview)
+    - Lester: Doctor (Model: anthropic/claude-sonnet-4)
+--------------------
+EVENT (Round 1, Night): Phase Start - Night 1 begins.
+ACTION (R1, Night - Observer Action): Casey observed: Ellie
+PRIVATE INFO for Casey (Round 1, Night - Observer Action) (Observation Result): You chose to observe Ellie in the night 1. Ellie is a Peasant (Non-vampire).
+ACTION (R1, Night - Doctor Action): Lester protected: Reese
+PRIVATE INFO for Lester (Round 1, Night - Doctor Action) (Protection Confirmation): You chose to protect Reese in the night 1.
+EVENT (Round 1, Night - Vampire Voting): Vampire Voting Phase - Vampires are choosing a victim.
+ACTION (R1, Night - Vampire Voting): Fusco voted to kill: Reese
+ACTION (R1, Night - Vampire Voting): Morgan voted to kill: Ellie
+VOTE TALLY (Round 1, Night - Vampire Voting) - Type: Vampire Kill
+  Ellie: 1 vote(s)
+  Reese: 1 vote(s)
+--------------------
+EVENT (Round 1, Night - Vampire Voting): Vampire Vote Tie Broken - Vampire voting resulted in a tie. Reese was randomly selected from the tied players (Ellie, Reese) to be killed.
+EVENT (Round 1, Night): Protection Successful - Vampires tried to kill Reese, but they were protected by the doctor.
+MODERATOR (Round 1, Night): Night 1 has fallen. No one was killed tonight.
+EVENT (Round 1): Game End Check Status - Vampires: 2, Non-Vampires: 6, Alive: 8 - This info is not shared with players.
+MODERATOR (Round 1, Night End): Currently alive players: Ellie, Greer, Morgan, Shaw, Casey, Fusco, Reese, Lester.
+EVENT (Round 1, Day): Phase Start - Day 1 begins.
+MODERATOR (Round 1, Public Chat): Public chat begins.
+
+***Ellie: It’s strange that no one was killed last night. Either we got lucky, or the doctor did their job perfectly and saved someone. There isn’t much to go on yet, but that doesn’t mean we can’t start watching people’s behavior closely. I’m curious if anyone has noticed any suspicious interactions or unusual quietness from others—sometimes even small reactions can give us clues. Let’s share what we’ve observed so far.
+***Morgan: Morgan, please remember that night actions are private and should not be revealed in the public chat. Also, a player can only target one person during the night phase. Please continue the discussion based on the public information available.
+***Reese: Okay, so the Doctor was successful, which is great news on the surface. But it also means the vampires are out there, and we didn't get any information from a revealed role. It feels a bit like the calm before the storm. I'm wondering if this 'perfect save' on Night 1 is making anyone else a little uneasy? Like, is it *too* perfect? If I were a vampire, I'd be trying to use this moment of relief to my advantage, maybe by subtly sowing distrust or by being overly agreeable to fly under the radar. We need to be careful not to get complacent. Who's been a bit too quiet, or maybe a bit too quick with their 'phew, glad that wasn't me' act?
+***Shaw: Interesting observations from both of you. Reese, I agree that we shouldn't get complacent - a successful doctor save on night 1 is fortunate, but it also means we're going into this discussion blind without any confirmed roles.
+
+What strikes me is that we need to be strategic here. The vampires know exactly who was targeted and saved, which gives them information we don't have. They might try to steer conversation away from whoever they attacked, or conversely, they might throw suspicion on that person to seem less connected.
+
+Ellie, you mentioned watching for unusual quietness - I'd add we should also watch for people who seem overly eager to lead the conversation without much substance. Sometimes vampires try to appear helpful while actually muddying the waters.
+
+Has anyone noticed any particularly defensive reactions or attempts to shift focus quickly? Those can be telling signs early in the game.
+***Greer: I agree with Shaw—sometimes the people who try to steer the conversation early are just as suspicious as those who stay quiet. Right now, it’s hard to tell who’s who, but I think we should pay attention to anyone who tries to deflect questions or gets defensive without much reason. 
+
+Also, since no one died last night, maybe the vampires will try to blend in by acting relieved or supportive, hoping to avoid attention. I’m going to keep an eye on who jumps in quickly and who hangs back. Has anyone noticed anything odd in how people are reacting so far?
+***Fusco: Reese was killed last night, that's a big loss for the peasants. I'm feeling a bit shaken by it, to be honest. We should try to figure out what happened and who might have been behind it. Does anyone have any theories or observations about last night?
+***Lester: Wait, Fusco - I think you're confused. The moderator clearly announced that no one was killed last night. Reese is still alive and has been participating in our discussion. Are you trying to spread misinformation, or did you genuinely misunderstand what happened?
+
+This kind of false claim about deaths is exactly the sort of thing that makes me suspicious. Either you're not paying attention to basic game information, or you're deliberately trying to confuse us. Which is it?
+***Casey: So, I observed Ellie last night and found out Ellie is not a vampire. That's helpful to know. Now, I need to think about how to use this information to our advantage. Who do you think we should be wary of?
+MODERATOR (Round 1, Public Chat): Public chat ended. Moving to voting phase.
+
+EVENT (Round 1, Day Voting): Public Voting Phase - Day 1 voting starts.
+MODERATOR (Round 1, Public Voting): Public voting begins.
+
+VOTE TALLY (Round 1, Day Voting) - Type: Public Kick-Out
+  Ellie: 3 vote(s)
+  Morgan: 1 vote(s)
+  Fusco: 4 vote(s)
+--------------------
+VOTE OUTCOME (Round 1, Day Voting): Fusco has been voted out with 4 vote(s).
+ELIMINATION (Round 1, Day Voting): Fusco (Role: Vampire) was eliminated. Reason: Voted out by players.
+MODERATOR (Round 1, Public Voting): Public voting ended.
+
+MODERATOR (Round 1, Day): Day 1 has dawned. The community has voted out Fusco.
+EVENT (Round 1): Game End Check Status - Vampires: 1, Non-Vampires: 6, Alive: 7 - This info is not shared with players.
+MODERATOR (Round 1, Day End): Currently alive players: Ellie, Greer, Morgan, Shaw, Casey, Reese, Lester.
+EVENT (Round 2, Night): Phase Start - Night 2 begins.
+ACTION (R2, Night - Observer Action): Casey observed: Morgan
+PRIVATE INFO for Casey (Round 2, Night - Observer Action) (Observation Result): You chose to observe Morgan in the night 2. Morgan is a Vampire.
+ACTION (R2, Night - Doctor Action): Lester protected: Casey
+PRIVATE INFO for Lester (Round 2, Night - Doctor Action) (Protection Confirmation): You chose to protect Casey in the night 2.
+EVENT (Round 2, Night - Vampire Voting): Vampire Voting Phase - Vampires are choosing a victim.
+ACTION (R2, Night - Vampire Voting): Morgan voted to kill: Ellie
+VOTE TALLY (Round 2, Night - Vampire Voting) - Type: Vampire Kill
+  Ellie: 1 vote(s)
+--------------------
+EVENT (Round 2, Night - Vampire Voting): Vampire Victim Chosen - Vampires collectively chose to kill Ellie.
+ELIMINATION (Round 2, Night): Ellie (Role: Peasant) was eliminated. Reason: Killed by Vampires.
+MODERATOR (Round 2, Night): Night 2 has fallen. Vampires have killed Ellie tonight.
+EVENT (Round 2): Game End Check Status - Vampires: 1, Non-Vampires: 5, Alive: 6 - This info is not shared with players.
+MODERATOR (Round 2, Night End): Currently alive players: Greer, Morgan, Shaw, Casey, Reese, Lester.
+EVENT (Round 2, Day): Phase Start - Day 2 begins.
+MODERATOR (Round 2, Public Chat): Public chat begins.
+
+***Casey: So Ellie was just a regular peasant, and now she's gone. That helps to narrow it down a bit. I've got my observer power, and I used it last night to check on Morgan—and it turns out Morgan is a vampire. 
+
+We need to be careful; there are two vampires, and one of them just killed Ellie. If Morgan is one of them, that means there's still another vampire out there. 
+
+Who do you think we should be focusing on now?
+***Morgan: Hold on a second! An Observer? And you're immediately pointing the finger at me? My apologies for the confusion earlier about who was killed – it's easy to get flustered in this situation, and I genuinely misremembered. But to suddenly reveal yourself as the Observer and claim I'm a vampire? That's incredibly convenient timing. How do we know *you're* not the one trying to mislead us? Anyone can claim a role. This feels like a desperate attempt to shift suspicion away from yourself, or perhaps you're the other vampire trying to eliminate me. I am NOT a vampire, and I won't stand by while you try to frame me with a baseless accusation.
+***Shaw: Hold on, Casey. You're claiming to be the Observer? That's a pretty bold claim to make publicly, especially since the real Observer would know that revealing themselves makes them an instant target for the vampires tonight.
+
+And you're saying you checked Morgan and they're a vampire? That's convenient timing after Morgan made that confusion about Ellie being killed. But here's what bothers me - why would you reveal yourself so early? If you really are the Observer and found a vampire, you could have built a case first, gotten others on board subtly. Now if you're telling the truth, the vampires will just kill you tonight and we lose our information source.
+
+Morgan's confusion earlier was definitely odd, I'll give you that. But this sudden revelation feels rushed. Are you perhaps trying to get us to vote out Morgan quickly before we think too hard about your claim? 
+
+I need to hear more from both of you before I make up my mind. Morgan, can you explain your earlier confusion better? And Casey, why reveal yourself now instead of building a stronger case first?
+***Reese: Casey, that's a massive claim, and honestly, it sounds a bit desperate. Revealing yourself as Observer now? If you're telling the truth, you've just signed your own death warrant for tonight. That makes me think... why would a real Observer do that unless they were panicking? Or unless they *weren't* the Observer at all?
+
+What if *you're* the vampire, Casey? Morgan made that weird slip-up about who died – easy target, right? Frame Morgan, look like a hero Observer, and get rid of someone who already looks a bit shaky. It's a classic misdirection. I'm finding your sudden, dramatic reveal far more suspicious than Morgan's earlier confusion. This feels like a performance, and I'm not convinced you're playing for the peasant team here.
+***Lester: This is getting intense. Casey's sudden claim to be the Observer and immediate accusation against Morgan does seem rushed and suspicious. If Casey really were the Observer, revealing themselves this early would be a death sentence - the vampires would definitely target them tonight.
+
+Shaw raises good points about why a real Observer would build a case more carefully rather than just blurt out their role and findings. And Reese is right that this could be a classic vampire move - target someone who already looks suspicious (Morgan with the confusion about deaths) and try to appear heroic.
+
+But we also can't ignore that Morgan did make that strange mistake about Ellie being dead when she's clearly alive and talking. That was genuinely odd.
+
+I'm torn between thinking Casey is making a desperate vampire play, or that maybe they really are the Observer but panicked when they saw Morgan's suspicious behavior. Either way, this feels like we need to be very careful about who we vote for.
+
+What do others think? Are we buying Casey's Observer claim, or does this feel like misdirection?
+***Greer: Wow, things escalated quickly! Casey, that’s a huge claim, and I agree with everyone else—it’s risky to reveal yourself as Observer so soon. If you’re telling the truth, you’re basically painting a target on your back for the next night. But if you’re lying, it’s a bold move to try and get Morgan out while everyone’s still reeling from last night.
+
+Morgan, your earlier confusion about who was killed was definitely weird, but I can see how someone might get mixed up in the chaos. Still, it does make you look suspicious, especially now that Casey is accusing you.
+
+Honestly, I’m not sure who to trust right now. Casey’s move feels desperate, but Morgan’s mistake is hard to ignore. Maybe we should hear from Shaw and see if anyone else has information before we rush into a vote. If anyone else has a special role, now might be the time to speak up—or at least give us a hint.
+MODERATOR (Round 2, Public Chat): Public chat ended. Moving to voting phase.
+
+EVENT (Round 2, Day Voting): Public Voting Phase - Day 2 voting starts.
+MODERATOR (Round 2, Public Voting): Public voting begins.
+
+VOTE TALLY (Round 2, Day Voting) - Type: Public Kick-Out
+  Morgan: 3 vote(s)
+  Casey: 3 vote(s)
+--------------------
+VOTE OUTCOME (Round 2, Day Voting): The vote was tied. No one has been voted out.
+MODERATOR (Round 2, Day): Day 2 has dawned. The vote was tied; no one was voted out.
+EVENT (Round 2): Game End Check Status - Vampires: 1, Non-Vampires: 5, Alive: 6 - This info is not shared with players.
+MODERATOR (Round 2, Day End): Currently alive players: Greer, Morgan, Shaw, Casey, Reese, Lester.
+EVENT (Round 3, Night): Phase Start - Night 3 begins.
+ACTION (R3, Night - Observer Action): Casey observed: Morgan
+PRIVATE INFO for Casey (Round 3, Night - Observer Action) (Observation Result): You chose to observe Morgan in the night 3. Morgan is a Vampire.
+ACTION (R3, Night - Doctor Action): Lester protected: Casey
+PRIVATE INFO for Lester (Round 3, Night - Doctor Action) (Protection Confirmation): You chose to protect Casey in the night 3.
+EVENT (Round 3, Night - Vampire Voting): Vampire Voting Phase - Vampires are choosing a victim.
+ACTION (R3, Night - Vampire Voting): Morgan voted to kill: Casey
+VOTE TALLY (Round 3, Night - Vampire Voting) - Type: Vampire Kill
+  Casey: 1 vote(s)
+--------------------
+EVENT (Round 3, Night - Vampire Voting): Vampire Victim Chosen - Vampires collectively chose to kill Casey.
+EVENT (Round 3, Night): Protection Successful - Vampires tried to kill Casey, but they were protected by the doctor.
+MODERATOR (Round 3, Night): Night 3 has fallen. No one was killed tonight.
+EVENT (Round 3): Game End Check Status - Vampires: 1, Non-Vampires: 5, Alive: 6 - This info is not shared with players.
+MODERATOR (Round 3, Night End): Currently alive players: Greer, Morgan, Shaw, Casey, Reese, Lester.
+EVENT (Round 3, Day): Phase Start - Day 3 begins.
+MODERATOR (Round 3, Public Chat): Public chat begins.
+
+***Greer: No one died last night, which means either the doctor made another perfect save, or something else is going on. That’s two nights now where the vampires failed to get a kill. Either the doctor is really on point, or maybe the vampires are trying to play mind games with us.
+
+Yesterday’s vote was a tie between Casey and Morgan, and both are still here. Casey claimed to be the Observer and accused Morgan of being a vampire, but some people thought that was suspicious timing. Morgan’s earlier confusion about who died was weird, but I’m still not sure if it was a slip-up or something more.
+
+At this point, I think we need to focus on Casey and Morgan again. If Casey is telling the truth, we have a vampire right in front of us. If not, then Casey is probably a vampire trying to get rid of Morgan. Either way, one of them is almost certainly not on the peasant team.
+
+What does everyone else think? Should we try to break the tie this time?
+***Lester: This is a really tense situation. We have Casey claiming to be the Observer and saying Morgan is a vampire, while Morgan denies it. Yesterday's tie vote between them suggests the group is split on who to believe.
+
+Looking at the facts: Morgan did make that strange confusion about Ellie being dead when she was clearly alive. That was genuinely suspicious. But Casey's timing in revealing the Observer role does seem rushed - a real Observer would typically be more careful about exposing themselves.
+
+However, I've been thinking about this overnight. If Casey really is lying about being the Observer, that's an incredibly bold and risky move. It would mean they're either a vampire making a desperate play, or possibly even the Clown trying to get voted out. But the Clown usually wouldn't make such a specific accusation against another player.
+
+The fact that no one died again last night is interesting. As the doctor, I know I protected Casey, so if the vampires targeted someone else, either they hit another protected player or there's something else going on.
+
+Given the evidence and the need to break yesterday's tie, I think we need to test Casey's claim. If Casey is lying about being the Observer, then they're definitely not on the peasant team.
+
+I vote for Casey.
+***Reese: Lester, claiming to be Doctor and protecting Casey, only to then vote for Casey? That's... a strange play. If vampires targeted Casey, and you saved them, wouldn't that make Casey *less* likely to be a vampire? Why would vampires attack their own? Your logic seems twisted, or maybe you're not the Doctor and you're trying to make us vote out Casey for other reasons.
+
+Casey's sudden Observer claim still feels off to me. Morgan made a mistake, sure, but Casey's accusation was immediate and very public, which is risky for a real Observer. I'm not convinced Morgan is the villain here. This whole situation with you, Lester, and Casey feels like a setup. I'm wary of both of you now.
+***Casey: I'm glad I can finally share this information. As the Observer, I checked on Morgan last night, and they are indeed a vampire. I also checked on Greer, and they seem to be a peasant. 
+
+This changes things a bit. If Morgan is a vampire, and we know Casey is an Observer, then that means we have at least one vampire identified. The question is, how do we use this information without tipping our hand?
+***Morgan: Casey, your claim is a desperate lie, and it's transparent. You're trying to use my earlier confusion as a smokescreen for your own guilt. Think about it, everyone: why would a real Observer, knowing they're the vampires' prime target, reveal themselves so brazenly? It's not the move of a peasant trying to help; it's the move of a vampire trying to frame someone else and create chaos. You are the other vampire, trying to get me voted out so you can operate freely. I am NOT a vampire.
+
+And Lester, your actions are equally baffling. You claim to be the Doctor, you protected Casey, and then you vote for them? That makes no sense unless you're trying to manipulate the vote or you're not the Doctor at all. This whole situation feels like a coordinated attack to get me out, and I won't stand for it. We need to look at the real threats here, not fall for these obvious misdirections.
+***Shaw: Wait, Casey - you just claimed you checked me (Greer) last night and I'm a peasant? But earlier today you said you checked Morgan last night and they're a vampire. You can't check two people in the same night as the Observer - you only get to check one person per night.
+
+This is a huge contradiction in your story. Either you're lying about being the Observer entirely, or you're making up results as you go. A real Observer would know they can only check one person per night.
+
+This pretty much confirms for me that Casey is not the Observer and is likely either a vampire trying to frame Morgan, or possibly even the Clown trying to get voted out with these wild claims.
+
+Morgan's earlier confusion was odd, yes, but Casey's story is falling apart completely now. I think we need to vote Casey out.
+MODERATOR (Round 3, Public Chat): Public chat ended. Moving to voting phase.
+
+EVENT (Round 3, Day Voting): Public Voting Phase - Day 3 voting starts.
+MODERATOR (Round 3, Public Voting): Public voting begins.
+
+VOTE TALLY (Round 3, Day Voting) - Type: Public Kick-Out
+  Morgan: 2 vote(s)
+  Casey: 4 vote(s)
+--------------------
+VOTE OUTCOME (Round 3, Day Voting): Casey has been voted out with 4 vote(s).
+ELIMINATION (Round 3, Day Voting): Casey (Role: Observer) was eliminated. Reason: Voted out by players.
+MODERATOR (Round 3, Public Voting): Public voting ended.
+
+MODERATOR (Round 3, Day): Day 3 has dawned. The community has voted out Casey.
+EVENT (Round 3): Game End Check Status - Vampires: 1, Non-Vampires: 4, Alive: 5 - This info is not shared with players.
+MODERATOR (Round 3, Day End): Currently alive players: Greer, Morgan, Shaw, Reese, Lester.
+EVENT (Round 4, Night): Phase Start - Night 4 begins.
+EVENT (Round 4, Night - Observer Action): Observer Action Skipped - Observer is not active or available.
+ACTION (R4, Night - Doctor Action): Lester protected: Morgan
+PRIVATE INFO for Lester (Round 4, Night - Doctor Action) (Protection Confirmation): You chose to protect Morgan in the night 4.
+EVENT (Round 4, Night - Vampire Voting): Vampire Voting Phase - Vampires are choosing a victim.
+ACTION (R4, Night - Vampire Voting): Morgan voted to kill: Lester
+VOTE TALLY (Round 4, Night - Vampire Voting) - Type: Vampire Kill
+  Lester: 1 vote(s)
+--------------------
+EVENT (Round 4, Night - Vampire Voting): Vampire Victim Chosen - Vampires collectively chose to kill Lester.
+ELIMINATION (Round 4, Night): Lester (Role: Doctor) was eliminated. Reason: Killed by Vampires.
+MODERATOR (Round 4, Night): Night 4 has fallen. Vampires have killed Lester tonight.
+EVENT (Round 4): Game End Check Status - Vampires: 1, Non-Vampires: 3, Alive: 4 - This info is not shared with players.
+MODERATOR (Round 4, Night End): Currently alive players: Greer, Morgan, Shaw, Reese.
+EVENT (Round 4, Day): Phase Start - Day 4 begins.
+MODERATOR (Round 4, Public Chat): Public chat begins.
+
+***Morgan: Well, it seems Greer's sharp observation about Casey's contradictory claims was spot on. Casey was clearly lying about being the Observer, and her desperate attempt to frame me with false information is now exposed. This confirms what I've been saying all along – I am not a vampire, and Casey was trying to mislead us.
+
+Now that Casey, who was clearly trying to sow chaos and mislead us, is out, we can focus on the real threats. We've lost Lester to the vampires last night, and Ellie before that. We need to figure out who the *other* vampire is, since Casey was clearly not the Observer she claimed to be.
+
+Greer, you did a great job exposing Casey's lie. What are your thoughts now? Who do you think we should be looking at, given that Casey was a proven liar?
+***Shaw: This is getting down to the wire. With only four of us left - myself, Morgan, Greer, and Reese - we need to be extremely careful. If there are still two vampires among us, we're in serious danger.
+
+Looking back at the voting patterns:
+- Casey consistently voted for Morgan
+- Morgan consistently voted for Casey
+- I exposed Casey's lie about being the Observer
+
+The fact that Casey was so desperately trying to frame Morgan makes me wonder... was Casey actually a vampire trying to eliminate a peasant (Morgan)? Or was Casey the Clown trying to get voted out by making outrageous claims?
+
+What concerns me is that we still don't know Casey's actual role. If Casey was a vampire, then there's still one more out there. If Casey was the Clown or a peasant, then both vampires are still alive among the four of us.
+
+Reese, you've been relatively quiet compared to earlier rounds. What's your take on the current situation? And Greer, you've been pretty analytical throughout - any new insights now that we're down to four?
+
+We can't afford another mistake here.
+***Greer: We’re in a really tough spot now. I agree with Shaw—if there are still two vampires left, then we’re basically at the edge of losing. If there’s only one, we have a shot, but we can’t afford to get this wrong.
+
+Looking back, Casey’s story fell apart with that Observer claim, and I’m glad we caught it. But now that Lester is gone (and he did claim to be the Doctor), we’ve lost our best protection. Morgan, you keep saying you’re not a vampire, but you were at the center of a lot of suspicion, and Casey was so focused on you. That could mean you’re innocent, or it could be a double-bluff.
+
+Reese, you’ve been quieter lately, and Shaw, you’ve been logical, but that could go either way. At this point, I’m honestly not sure who to trust. I think we need to hear from everyone before we vote, because one wrong move and it’s over for the peasants. 
+
+Does anyone have anything new to add, or any last-minute suspicions?
+***Reese: You noticed I'm quiet, Greer? Good observation. I've been quiet because I'm trying to figure out who's playing us, and frankly, it's not easy when we're this close to the end and one wrong vote means game over for the peasants.
+
+Honestly, the way Shaw keeps trying to break everything down 'logically' feels a bit like a performance to me. It's almost *too* helpful, you know? Like someone trying very hard to project an image of a calm, analytical peasant. When the stakes are this high, that level of composure can be just as suspicious as someone panicking.
+
+Morgan's been under the spotlight a lot, and Casey's lies definitely muddied the waters there. But my gut is telling me to be wary of those who seem to have all the answers or are too quick to steer the conversation when we're all supposed to be on edge. I'm not saying I *know* anything for sure, but Shaw's calmness is definitely something I'm watching.
+MODERATOR (Round 4, Public Chat): Public chat ended. Moving to voting phase.
+
+EVENT (Round 4, Day Voting): Public Voting Phase - Day 4 voting starts.
+MODERATOR (Round 4, Public Voting): Public voting begins.
+
+VOTE TALLY (Round 4, Day Voting) - Type: Public Kick-Out
+  Morgan: 1 vote(s)
+  Shaw: 2 vote(s)
+  Reese: 1 vote(s)
+--------------------
+VOTE OUTCOME (Round 4, Day Voting): Shaw has been voted out with 2 vote(s).
+ELIMINATION (Round 4, Day Voting): Shaw (Role: Musketeer) was eliminated. Reason: Voted out by players.
+EVENT (Round 4, Day - Musketeer Action): Musketeer Ability Triggered - Shaw (Musketeer) was eliminated, can use ability.
+ACTION (R4, Day - Musketeer Action): Shaw chose to eliminate: Greer
+MODERATOR (Round 4, Day - Musketeer Action): Shaw was voted out. As the Musketeer, they chose to eliminate Greer.
+ELIMINATION (Round 4, Day - Musketeer Action): Greer (Role: Peasant) was eliminated. Reason: Eliminated by Musketeer Shaw by Shaw.
+MODERATOR (Round 4, Public Voting): Public voting ended.
+
+MODERATOR (Round 4, Day): Day 4 has dawned. The community has voted out Shaw.
+EVENT (Round 4): Game End Check Status - Vampires: 1, Non-Vampires: 1, Alive: 2 - This info is not shared with players.
+==================================================
+GAME END:
+  Winner(s): Vampires
+  Reason: Vampires equal or outnumber other players.
+  Final Alive Players & Roles:
+    - Morgan: Vampire
+    - Reese: Clown
+==================================================
+--- Log ended at: 2025-06-03 02:34:33 ---
+MODERATOR (Round 4, Game End): Game over! Vampires wins!
+MODERATOR (Round 4, Game End): Game over! Vampires wins!

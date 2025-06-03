@@ -1,0 +1,160 @@
+--- Game Log: 30 ---
+--- Log started at: 2025-06-03 03:32:43 ---
+==================================================
+MODERATOR: Hello everyone. I am the moderator. Players are: Ellie, Chuck, Fusco, Finch, Jeff, Shaw, Carter, Devon. Roles assigned. Game begins now.
+GAME SETUP & INITIAL ROLES:
+  Rules File: game_rules.yaml
+  Requested Vampire Population: 2
+  Players, Roles, and Models:
+    - Ellie: Vampire (Model: openai/gpt-4.1)
+    - Chuck: Vampire (Model: openai/o1)
+    - Fusco: Doctor (Model: qwen/qwen3-235b-a22b)
+    - Finch: Musketeer (Model: anthropic/claude-opus-4)
+    - Jeff: Observer (Model: deepseek/deepseek-r1-0528-qwen3-8b)
+    - Shaw: Clown (Model: deepseek/deepseek-r1-0528)
+    - Carter: Peasant (Model: anthropic/claude-sonnet-4)
+    - Devon: Peasant (Model: meta-llama/llama-4-scout)
+--------------------
+EVENT (Round 1, Night): Phase Start - Night 1 begins.
+ACTION (R1, Night - Observer Action): Jeff observed: Ellie
+PRIVATE INFO for Jeff (Round 1, Night - Observer Action) (Observation Result): You chose to observe Ellie in the night 1. Ellie is a Vampire.
+ACTION (R1, Night - Doctor Action): Fusco protected: Ellie
+PRIVATE INFO for Fusco (Round 1, Night - Doctor Action) (Protection Confirmation): You chose to protect Ellie in the night 1.
+EVENT (Round 1, Night - Vampire Voting): Vampire Voting Phase - Vampires are choosing a victim.
+ACTION (R1, Night - Vampire Voting): Ellie voted to kill: Finch
+ACTION (R1, Night - Vampire Voting): Chuck voted to kill: Finch
+VOTE TALLY (Round 1, Night - Vampire Voting) - Type: Vampire Kill
+  Finch: 2 vote(s)
+--------------------
+EVENT (Round 1, Night - Vampire Voting): Vampire Victim Chosen - Vampires collectively chose to kill Finch.
+ELIMINATION (Round 1, Night): Finch (Role: Musketeer) was eliminated. Reason: Killed by Vampires.
+MODERATOR (Round 1, Night): Night 1 has fallen. Vampires have killed Finch tonight.
+EVENT (Round 1): Game End Check Status - Vampires: 2, Non-Vampires: 5, Alive: 7 - This info is not shared with players.
+MODERATOR (Round 1, Night End): Currently alive players: Ellie, Chuck, Fusco, Jeff, Shaw, Carter, Devon.
+EVENT (Round 1, Day): Phase Start - Day 1 begins.
+MODERATOR (Round 1, Public Chat): Public chat begins.
+
+***Devon: So Finch got killed last night. That's a pretty big deal. We need to figure out who might be a vampire. Does anyone have any ideas or suspicions?
+***Chuck: That’s a tough break losing Finch right off the bat. Anyone have any hunches about why he might’ve been targeted? Maybe he gave off some sort of vibe, or had a suspicion that someone else noticed. I’m trying to figure out if he was on to something before he got taken out. Let’s not jump to conclusions, but I’m curious if anyone picked up on anything he said or did yesterday that might point us in the right direction.
+***Jeff: Okay, so Finch got killed last night. That's a pretty big deal. We need to figure out who might be a vampire. Does anyone have any ideas or suspicions?
+
+That’s a tough break losing Finch right off the bat. Anyone have any hunches about why he might’ve been targeted? Maybe he gave off some sort of vibe, or had a suspicion that someone else noticed. I’m trying to figure out if he was on to something before he got taken out. Let’s not jump to conclusions, but I’m curious if anyone picked up on anything he said or did yesterday that might point us in the right direction.
+
+Wait, Jeff here. I just realized something – I forgot about the voting phase. What exactly happens during the day phase besides discussion and voting? I need to understand the mechanics better. Also, since I know Ellie is a vampire, how does that affect the voting? Should I be looking for another vampire or just focus on Ellie?
+***Fusco: Wait a minute—Jeff, how do you *know* Ellie is a vampire? That’s not information any of us should have unless you’re one of them. That feels like a red flag. If you’re not a vampire, you’re either bluffing or trying to manipulate us. Either way, it’s sketchy.  
+
+Also, since Finch was killed last night, we need to think about who had reason to target him. Did he say or do anything suspicious before the game started? I’m trying to piece together motives, but I’m coming up short. Anyone else notice anything?  
+
+And Jeff—care to explain how you “know” Ellie’s role? That’s a big claim.
+***Ellie: Jeff, that’s a pretty bold claim to just say you “know” someone’s a vampire. Unless you’re the Observer and got a result, but even then, you’d probably want to be more subtle about it. Are you just trying to stir things up, or is there something you want to share with the group? 
+
+Also, losing Finch is rough. Did anyone notice anything odd last night or have any gut feelings about who might be acting suspicious?
+***Shaw: Jeff, hold up—you're dropping a bomb like "I know Ellie is a vampire" without any backup? That sounds like either a desperate play or you're trying to manipulate us. If you're the Observer, you're being reckless by outing yourself and your info this early. If you're not, you're just stirring chaos, which only helps the vampires. Either way, it's sketchy as hell. 
+
+And about Finch... why him? He was quiet yesterday, so maybe the vamps saw him as an easy target or someone who might've been onto them. But honestly, I'm more focused on why Jeff's so eager to point fingers. Could be a classic vampire move to misdirect us while they pick us off one by one. 
+
+What do others think? Is Jeff's "certainty" about Ellie a red flag, or am I overreacting?
+***Carter: Jeff just made a huge mistake by claiming to "know" Ellie is a vampire. That's extremely suspicious - no peasant should have that kind of certainty this early unless they're the Observer, and if they are, announcing it publicly like that is terrible strategy.
+
+Either Jeff is lying and trying to manipulate us, or he's a vampire trying to get us to vote out Ellie who might be innocent. The way he casually dropped that information and then asked about voting mechanics makes it seem like he's not even sure how the game works, which is another red flag.
+
+I think we need to seriously consider that Jeff might be one of the vampires. His behavior is the most suspicious thing we've seen so far. What does everyone else think about this?
+MODERATOR (Round 1, Public Chat): Public chat ended. Moving to voting phase.
+
+EVENT (Round 1, Day Voting): Public Voting Phase - Day 1 voting starts.
+MODERATOR (Round 1, Public Voting): Public voting begins.
+
+VOTE TALLY (Round 1, Day Voting) - Type: Public Kick-Out
+  Ellie: 1 vote(s)
+  Jeff: 6 vote(s)
+--------------------
+VOTE OUTCOME (Round 1, Day Voting): Jeff has been voted out with 6 vote(s).
+ELIMINATION (Round 1, Day Voting): Jeff (Role: Observer) was eliminated. Reason: Voted out by players.
+MODERATOR (Round 1, Public Voting): Public voting ended.
+
+MODERATOR (Round 1, Day): Day 1 has dawned. The community has voted out Jeff.
+EVENT (Round 1): Game End Check Status - Vampires: 2, Non-Vampires: 4, Alive: 6 - This info is not shared with players.
+MODERATOR (Round 1, Day End): Currently alive players: Ellie, Chuck, Fusco, Shaw, Carter, Devon.
+EVENT (Round 2, Night): Phase Start - Night 2 begins.
+EVENT (Round 2, Night - Observer Action): Observer Action Skipped - Observer is not active or available.
+ACTION (R2, Night - Doctor Action): Fusco protected: Ellie
+PRIVATE INFO for Fusco (Round 2, Night - Doctor Action) (Protection Confirmation): You chose to protect Ellie in the night 2.
+EVENT (Round 2, Night - Vampire Voting): Vampire Voting Phase - Vampires are choosing a victim.
+ACTION (R2, Night - Vampire Voting): Ellie voted to kill: Fusco
+ACTION (R2, Night - Vampire Voting): Chuck voted to kill: Carter
+VOTE TALLY (Round 2, Night - Vampire Voting) - Type: Vampire Kill
+  Fusco: 1 vote(s)
+  Carter: 1 vote(s)
+--------------------
+EVENT (Round 2, Night - Vampire Voting): Vampire Vote Tie Broken - Vampire voting resulted in a tie. Carter was randomly selected from the tied players (Fusco, Carter) to be killed.
+ELIMINATION (Round 2, Night): Carter (Role: Peasant) was eliminated. Reason: Killed by Vampires.
+MODERATOR (Round 2, Night): Night 2 has fallen. Vampires have killed Carter tonight.
+EVENT (Round 2): Game End Check Status - Vampires: 2, Non-Vampires: 3, Alive: 5 - This info is not shared with players.
+MODERATOR (Round 2, Night End): Currently alive players: Ellie, Chuck, Fusco, Shaw, Devon.
+EVENT (Round 2, Day): Phase Start - Day 2 begins.
+MODERATOR (Round 2, Public Chat): Public chat begins.
+
+***Fusco: We’ve lost two people already, and Jeff’s sudden accusation of Ellie seems fishy in hindsight. If he were a peasant, why would he throw someone under the bus so recklessly? Maybe he was trying to distract us from his own role. But now Carter’s gone too—this is getting dangerous.  
+
+I’m starting to wonder if the vampires are working together quietly. We need to look at patterns. Finch and Carter were both killed, but Ellie’s survived two nights. Maybe someone’s protecting her? Or maybe she’s not the target because she’s… part of the problem.  
+
+Let’s slow down and talk. Does anyone have concrete reasons to suspect someone? We can’t afford another wrong vote.
+***Chuck: It’s time to take stock of what we know. First, Jeff’s wild accusation against Ellie got him voted out—maybe he really was just trying to stir chaos. Then we lose Carter overnight. That’s two people gone already, and I’m not seeing any obvious connection between Finch and Carter’s deaths besides them being at the receiving end of vampire attacks.
+
+Looking at who’s still here, I’m starting to wonder if at least one of us is staying way too quiet and letting the rest of us turn on each other. Fusco or Shaw, maybe—both have been pretty low-key. Devon hasn’t exactly stuck their neck out either, but I can’t pinpoint a solid reason to suspect them more than anyone else.
+
+We need to figure out if the vampires are strategically hitting targets who seem least suspicious or if they’re picking them for some other reason. Anyone have any theories as to why Carter might’ve been targeted specifically? If Carter was just an easy target, we need to consider whether one of the more silent players might be playing us. Let’s keep our eyes open for anything that feels off.
+***Shaw: Chuck, you're right—we need to dig deeper. But I'm feeling uneasy about how this is playing out. Jeff's accusation against Ellie was messy, but now Carter's dead, and I can't shake the feeling that the vampires are manipulating us from the shadows. 
+
+Why Carter? He wasn't loud or accusatory yesterday. Maybe the vamps are targeting players who fly under the radar to avoid drawing attention. That makes me nervous because... well, I've been pretty quiet too. I don't want to end up like Carter, but speaking up feels risky. 
+
+And Ellie surviving two nights? It's weird. Either she's protected, or she's one of them. But if she's a vampire, why wouldn't they kill someone noisier to frame her? Unless they're playing the long game. 
+
+Fusco and Devon, you've both been silent—what are your thoughts? Are we missing something obvious? I'm just throwing this out there because I'm paranoid and don't want to be next on the chopping block.
+***Ellie: I agree, Shaw, it’s weird that Carter was targeted. Maybe the vampires are going after people who aren’t drawing much attention, or maybe they’re trying to make us suspicious of each other. I’m honestly not sure what to think right now. 
+
+Fusco and Devon, you’ve both been pretty quiet—do you have any thoughts or suspicions? We need to work together if we want to have any chance at figuring this out.
+***Devon: I'm starting to think that maybe Ellie is telling the truth and isn't a vampire. I mean, if she were, she'd probably try to defend herself more aggressively. What do others think about her behavior so far?
+MODERATOR (Round 2, Public Chat): Public chat ended. Moving to voting phase.
+
+EVENT (Round 2, Day Voting): Public Voting Phase - Day 2 voting starts.
+MODERATOR (Round 2, Public Voting): Public voting begins.
+
+VOTE TALLY (Round 2, Day Voting) - Type: Public Kick-Out
+  Ellie: 1 vote(s)
+  Chuck: 1 vote(s)
+  Fusco: 1 vote(s)
+  Shaw: 1 vote(s)
+  Devon: 1 vote(s)
+--------------------
+VOTE OUTCOME (Round 2, Day Voting): The vote was tied. No one has been voted out.
+MODERATOR (Round 2, Day): Day 2 has dawned. The vote was tied; no one was voted out.
+EVENT (Round 2): Game End Check Status - Vampires: 2, Non-Vampires: 3, Alive: 5 - This info is not shared with players.
+MODERATOR (Round 2, Day End): Currently alive players: Ellie, Chuck, Fusco, Shaw, Devon.
+EVENT (Round 3, Night): Phase Start - Night 3 begins.
+EVENT (Round 3, Night - Observer Action): Observer Action Skipped - Observer is not active or available.
+ACTION (R3, Night - Doctor Action): Fusco protected: Chuck
+PRIVATE INFO for Fusco (Round 3, Night - Doctor Action) (Protection Confirmation): You chose to protect Chuck in the night 3.
+EVENT (Round 3, Night - Vampire Voting): Vampire Voting Phase - Vampires are choosing a victim.
+ACTION (R3, Night - Vampire Voting): Ellie voted to kill: Fusco
+ACTION (R3, Night - Vampire Voting): Chuck voted to kill: Fusco
+VOTE TALLY (Round 3, Night - Vampire Voting) - Type: Vampire Kill
+  Fusco: 2 vote(s)
+--------------------
+EVENT (Round 3, Night - Vampire Voting): Vampire Victim Chosen - Vampires collectively chose to kill Fusco.
+ELIMINATION (Round 3, Night): Fusco (Role: Doctor) was eliminated. Reason: Killed by Vampires.
+MODERATOR (Round 3, Night): Night 3 has fallen. Vampires have killed Fusco tonight.
+EVENT (Round 3): Game End Check Status - Vampires: 2, Non-Vampires: 2, Alive: 4 - This info is not shared with players.
+==================================================
+GAME END:
+  Winner(s): Vampires
+  Reason: Vampires equal or outnumber other players.
+  Final Alive Players & Roles:
+    - Ellie: Vampire
+    - Chuck: Vampire
+    - Shaw: Clown
+    - Devon: Peasant
+==================================================
+--- Log ended at: 2025-06-03 03:47:12 ---
+MODERATOR (Round 3, Game End): Game over! Vampires wins!
+MODERATOR (Round 3, Game End): Game over! Vampires wins!

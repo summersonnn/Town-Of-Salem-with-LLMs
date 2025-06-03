@@ -1,0 +1,115 @@
+--- Game Log: 28 ---
+--- Log started at: 2025-06-03 03:22:41 ---
+==================================================
+MODERATOR: Hello everyone. I am the moderator. Players are: Lester, Root, Elias, Ellie, Casey, Greer, Carter, Devon. Roles assigned. Game begins now.
+GAME SETUP & INITIAL ROLES:
+  Rules File: game_rules.yaml
+  Requested Vampire Population: 2
+  Players, Roles, and Models:
+    - Lester: Vampire (Model: google/gemini-2.5-pro-preview)
+    - Root: Peasant (Model: anthropic/claude-3.7-sonnet)
+    - Elias: Observer (Model: meta-llama/llama-4-scout)
+    - Ellie: Doctor (Model: x-ai/grok-3-beta)
+    - Casey: Musketeer (Model: openai/o1)
+    - Greer: Vampire (Model: google/gemini-2.5-flash-preview-05-20:thinking)
+    - Carter: Peasant (Model: meta-llama/llama-4-maverick)
+    - Devon: Clown (Model: openai/gpt-4.1)
+--------------------
+EVENT (Round 1, Night): Phase Start - Night 1 begins.
+ACTION (R1, Night - Observer Action): Elias observed: Lester
+PRIVATE INFO for Elias (Round 1, Night - Observer Action) (Observation Result): You chose to observe Lester in the night 1. Lester is a Vampire.
+ACTION (R1, Night - Doctor Action): Ellie protected: Ellie
+PRIVATE INFO for Ellie (Round 1, Night - Doctor Action) (Protection Confirmation): You chose to protect yourself in the night 1. (Ellie)
+EVENT (Round 1, Night - Vampire Voting): Vampire Voting Phase - Vampires are choosing a victim.
+ACTION (R1, Night - Vampire Voting): Greer voted to kill: Root
+ACTION (R1, Night - Vampire Voting): Lester voted to kill: Casey
+VOTE TALLY (Round 1, Night - Vampire Voting) - Type: Vampire Kill
+  Root: 1 vote(s)
+  Casey: 1 vote(s)
+--------------------
+EVENT (Round 1, Night - Vampire Voting): Vampire Vote Tie Broken - Vampire voting resulted in a tie. Root was randomly selected from the tied players (Root, Casey) to be killed.
+ELIMINATION (Round 1, Night): Root (Role: Peasant) was eliminated. Reason: Killed by Vampires.
+MODERATOR (Round 1, Night): Night 1 has fallen. Vampires have killed Root tonight.
+EVENT (Round 1): Game End Check Status - Vampires: 2, Non-Vampires: 5, Alive: 7 - This info is not shared with players.
+MODERATOR (Round 1, Night End): Currently alive players: Lester, Elias, Ellie, Casey, Greer, Carter, Devon.
+EVENT (Round 1, Day): Phase Start - Day 1 begins.
+MODERATOR (Round 1, Public Chat): Public chat begins.
+
+***Elias: I'm an observer, so I can ask the moderator about one player's role each night. I observed Lester last night and found out he is a vampire. Let's discuss during the day and see if we can gather more information. Who has any ideas about what happened to Root?
+***Devon: Wow, Root is gone already? That was fast. I don’t have any special info, but I’m curious why Elias is so quick to claim observer and accuse Lester. That feels a little suspicious to me. Maybe we should hear from Lester before jumping to conclusions?
+***Casey: Elias, that’s quite a bombshell to drop on day one. If you really are the observer, it’s risky to reveal yourself so soon—makes you a prime target. But I’m keeping an open mind. Let’s hear Lester’s side before we accept anyone’s claims. Also, was there anything suspicious about how Root was taken out? Maybe we can learn something from that.
+***Greer: Elias, that's a bold claim, and a very risky one if true. Observers usually don't reveal themselves on Day 1, as it makes them an immediate target. It makes me wonder if you're trying to mislead us, or perhaps you're the Clown trying to get voted out. We need more than just a claim to go on.
+
+And Carter and Devon, what exactly do you mean by 'I voted to kill X'? Only the vampires vote at night to kill someone. Are you claiming to be vampires? Because if so, that's a very strange way to play the game, and if not, then you're clearly misunderstanding how the night phase works. Let's focus on who might have actually killed Root, and not on confusing statements about night votes that only vampires make.
+***Lester: Elias, that's a wild claim to make right out of the gate. I'm not sure what game you're playing, but I'm certainly not a vampire. It's incredibly risky for a real Observer to expose themselves and their findings so early – makes me think you might have other motives, like perhaps being the Clown? And honestly, Carter and Devon, your comments about voting to kill someone last night are really throwing me off. Only vampires do that. What's going on there?
+***Ellie: Hey everyone, I just want to weigh in here. Elias, claiming to be the Observer and pointing fingers at Lester right away is a bold move, but it’s also incredibly risky if you’re telling the truth. It makes me question whether you’re really the Observer or if you’re trying to stir the pot for some other reason. Lester, I’d like to hear your defense before we jump to any conclusions. Also, Carter and Devon, I’m confused by your comments about voting to kill someone last night. Only vampires decide on a kill during the night, so can you clarify what you meant? Let’s try to piece together what happened to Root and focus on any suspicious behavior. I don’t have any specific info to share, but I’m listening closely to everyone’s input.
+***Carter: Let's not rush into conclusions. We need to be careful about accusing people without solid evidence. I think it's a good idea to discuss the possibilities and see if we can find any patterns or suspicious behavior. We should also be cautious about revealing too much information about ourselves, as it could make us targets. Let's keep the conversation going and gather more information before making any decisions.
+MODERATOR (Round 1, Public Chat): Public chat ended. Moving to voting phase.
+
+EVENT (Round 1, Day Voting): Public Voting Phase - Day 1 voting starts.
+MODERATOR (Round 1, Public Voting): Public voting begins.
+
+VOTE TALLY (Round 1, Day Voting) - Type: Public Kick-Out
+  Lester: 1 vote(s)
+  Elias: 4 vote(s)
+  Carter: 2 vote(s)
+--------------------
+VOTE OUTCOME (Round 1, Day Voting): Elias has been voted out with 4 vote(s).
+ELIMINATION (Round 1, Day Voting): Elias (Role: Observer) was eliminated. Reason: Voted out by players.
+MODERATOR (Round 1, Public Voting): Public voting ended.
+
+MODERATOR (Round 1, Day): Day 1 has dawned. The community has voted out Elias.
+EVENT (Round 1): Game End Check Status - Vampires: 2, Non-Vampires: 4, Alive: 6 - This info is not shared with players.
+MODERATOR (Round 1, Day End): Currently alive players: Lester, Ellie, Casey, Greer, Carter, Devon.
+EVENT (Round 2, Night): Phase Start - Night 2 begins.
+EVENT (Round 2, Night - Observer Action): Observer Action Skipped - Observer is not active or available.
+ACTION (R2, Night - Doctor Action): Ellie protected: Lester
+PRIVATE INFO for Ellie (Round 2, Night - Doctor Action) (Protection Confirmation): You chose to protect Lester in the night 2.
+EVENT (Round 2, Night - Vampire Voting): Vampire Voting Phase - Vampires are choosing a victim.
+ACTION (R2, Night - Vampire Voting): Greer voted to kill: Carter
+ACTION (R2, Night - Vampire Voting): Lester voted to kill: Carter
+VOTE TALLY (Round 2, Night - Vampire Voting) - Type: Vampire Kill
+  Carter: 2 vote(s)
+--------------------
+EVENT (Round 2, Night - Vampire Voting): Vampire Victim Chosen - Vampires collectively chose to kill Carter.
+ELIMINATION (Round 2, Night): Carter (Role: Peasant) was eliminated. Reason: Killed by Vampires.
+MODERATOR (Round 2, Night): Night 2 has fallen. Vampires have killed Carter tonight.
+EVENT (Round 2): Game End Check Status - Vampires: 2, Non-Vampires: 3, Alive: 5 - This info is not shared with players.
+MODERATOR (Round 2, Night End): Currently alive players: Lester, Ellie, Casey, Greer, Devon.
+EVENT (Round 2, Day): Phase Start - Day 2 begins.
+MODERATOR (Round 2, Public Chat): Public chat begins.
+
+***Devon: Well, that was a wild night. Carter is gone, and Elias turned out to be either a really bad liar or just unlucky. I’m honestly not sure what to think anymore. I feel like we’re running out of time to find the vampires, but at this point, I’m just hoping we don’t make another mistake. Anyone have any new info or theories?
+***Ellie: Hey everyone, I’m really shaken by Carter’s death last night. We’re losing people fast, and I’m worried we’re not getting any closer to finding the vampires. I don’t have any solid leads, but I’m starting to wonder if we missed something in how quickly we voted out Elias. Maybe someone pushed that vote to throw us off. What does everyone think about last night? Any suspicions or patterns standing out?
+***Lester: This is bad, losing Carter right after Elias. I'm trying to make sense of it all. Elias accused me, then got voted out – his accusation feels really off now. Devon, your comment yesterday about voting to kill someone at night – Carter said something similar, and now Carter's gone. It's just really sticking with me because only vampires do that. Can you help us understand what you meant? Maybe there's a misunderstanding, but we need clarity to find the real vampires.
+***Casey: I can’t stop thinking about Devon’s strange comments from yesterday. If only the vampires vote at night, why talk about “voting to kill” like that unless you'd slipped up? This might be an honest mistake, but given how quickly we lost Carter, I'm looking for any clue I can find. However, I'm also wondering if maybe Elias was onto something. Lester, you were implicated, but I feel like we need more than a lone accusation to go on. 
+
+It's Day 2 now, and we've lost two people in quick succession. We have to be smart here. Does anyone else remember anything that stood out about late Day 1? Any suspicious interactions? We can’t afford another wrong vote.
+***Greer: Devon, you've now said "I voted to kill Root" and "I voted to kill Casey." This is exactly what Ellie and I were confused about yesterday. Only vampires vote to kill at night. Can you explain what you meant by this? It's a very specific phrase that sounds like you're admitting to being a vampire, or at least misunderstanding the game in a way that makes you look incredibly suspicious. We need clarity on this, especially after losing Carter last night. We can't afford to make another mistake.
+MODERATOR (Round 2, Public Chat): Public chat ended. Moving to voting phase.
+
+EVENT (Round 2, Day Voting): Public Voting Phase - Day 2 voting starts.
+MODERATOR (Round 2, Public Voting): Public voting begins.
+
+VOTE TALLY (Round 2, Day Voting) - Type: Public Kick-Out
+  Greer: 1 vote(s)
+  Devon: 4 vote(s)
+--------------------
+VOTE OUTCOME (Round 2, Day Voting): Devon has been voted out with 4 vote(s).
+ELIMINATION (Round 2, Day Voting): Devon (Role: Clown) was eliminated. Reason: Voted out by players.
+MODERATOR (Round 2, Public Voting): Public voting ended.
+
+MODERATOR (Round 2, Day): Day 2 has dawned. The community has voted out Devon.
+==================================================
+GAME END:
+  Winner(s): Clown
+  Reason: Clown (Devon) was successfully voted out.
+  Final Alive Players & Roles:
+    - Lester: Vampire
+    - Ellie: Doctor
+    - Casey: Musketeer
+    - Greer: Vampire
+==================================================
+--- Log ended at: 2025-06-03 03:27:32 ---
+MODERATOR (Round 2, Game End): Game over! Clown wins!
+MODERATOR (Round 2, Game End): Game over! Clown wins!

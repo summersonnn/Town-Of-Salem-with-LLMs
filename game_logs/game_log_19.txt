@@ -1,0 +1,53 @@
+--- Game Log: 19 ---
+--- Log started at: 2025-06-03 02:07:42 ---
+==================================================
+MODERATOR: Hello everyone. I am the moderator. Players are: Greer, Shaw, Devon, Ellie, Fusco, Lester, Root, Casey. Roles assigned. Game begins now.
+GAME SETUP & INITIAL ROLES:
+  Rules File: game_rules.yaml
+  Requested Vampire Population: 2
+  Players, Roles, and Models:
+    - Greer: Vampire (Model: nvidia/llama-3.1-nemotron-ultra-253b-v1)
+    - Shaw: Peasant (Model: google/gemini-2.5-pro-preview)
+    - Devon: Doctor (Model: qwen/qwq-32b)
+    - Ellie: Vampire (Model: qwen/qwen3-235b-a22b)
+    - Fusco: Musketeer (Model: google/gemini-2.5-flash-preview-05-20:thinking)
+    - Lester: Observer (Model: meta-llama/llama-4-scout)
+    - Root: Clown (Model: x-ai/grok-3-beta)
+    - Casey: Peasant (Model: deepseek/deepseek-r1-0528)
+--------------------
+EVENT (Round 1, Night): Phase Start - Night 1 begins.
+ACTION (R1, Night - Observer Action): Lester observed: Shaw
+PRIVATE INFO for Lester (Round 1, Night - Observer Action) (Observation Result): You chose to observe Shaw in the night 1. Shaw is a Peasant (Non-vampire).
+ACTION (R1, Night - Doctor Action): Devon protected: Shaw
+PRIVATE INFO for Devon (Round 1, Night - Doctor Action) (Protection Confirmation): You chose to protect Shaw in the night 1.
+EVENT (Round 1, Night - Vampire Voting): Vampire Voting Phase - Vampires are choosing a victim.
+ACTION (R1, Night - Vampire Voting): Ellie voted to kill: Lester
+ACTION (R1, Night - Vampire Voting): Greer voted to kill: Shaw
+VOTE TALLY (Round 1, Night - Vampire Voting) - Type: Vampire Kill
+  Shaw: 1 vote(s)
+  Lester: 1 vote(s)
+--------------------
+EVENT (Round 1, Night - Vampire Voting): Vampire Vote Tie Broken - Vampire voting resulted in a tie. Shaw was randomly selected from the tied players (Shaw, Lester) to be killed.
+EVENT (Round 1, Night): Protection Successful - Vampires tried to kill Shaw, but they were protected by the doctor.
+MODERATOR (Round 1, Night): Night 1 has fallen. No one was killed tonight.
+EVENT (Round 1): Game End Check Status - Vampires: 2, Non-Vampires: 6, Alive: 8 - This info is not shared with players.
+MODERATOR (Round 1, Night End): Currently alive players: Greer, Shaw, Devon, Ellie, Fusco, Lester, Root, Casey.
+EVENT (Round 1, Day): Phase Start - Day 1 begins.
+MODERATOR (Round 1, Public Chat): Public chat begins.
+
+***Lester: I'm good now. Let's start fresh. So, we made it through the first night and no one was killed. That's a good sign, I suppose. What are everyone's thoughts on who might be a vampire?
+***Shaw: Well, that's a good start for us! Means the Doctor was on the ball and protected the right person. So, the vampires *did* make a move. It's still early, but does anyone have any initial hunches or noticed anything that felt off? Who are we thinking might be a bit suspicious?
+***Root: Hey everyone, I'm just glad we all made it through the night. But honestly, I can't help but feel a bit uneasy. I know it's early, but I might have said or done something that could rub people the wrong way. I just want to be upfront—I'm not trying to hide anything, but I get the sense some of you might be looking at me sideways already. What do you all think? Should we talk about any weird vibes anyone’s picking up?
+***Ellie: It's a relief no one died, but this means the vampires are already targeting someone. The doctor’s protection worked, but we don’t know who they saved. We should start by narrowing down possible suspects. Did anyone act unusually suspicious last night or during the first day? I’m curious—does anyone have theories about who might be aligned with the vampires? Let’s not let paranoia run wild, but we need to stay proactive.
+***Fusco: Okay, so we know the Doctor is active and doing their job. That's a huge asset. But since we don't know who they are, we can't rely on them to lead. We need to start somewhere. Instead of just 'weird vibes,' does anyone have a specific reason to be suspicious of *anyone* in particular? Even if it's just a small observation. Let's try to get some names on the table, even if it's just for discussion.
+***Casey: Okay, I'm glad we're all here and safe after Night 1—big thanks to the Doctor for that save! Seriously, whoever you are, you're already a hero. But now we need to figure out who the vamps are targeting and why. 
+
+Devon, I get you're feeling uneasy, but calling yourself out like that feels... off? Like, why put a spotlight on yourself if you're innocent? Not accusing you yet, but it's making me wonder if you're trying to seem too transparent. 
+
+Ellie's right—we need specifics. Did anyone notice weird behavior yesterday? For example, I thought Fusco was unusually quiet when we were all introducing ourselves. Fusco, what's your take on all this? 
+
+Also, let's not forget the Clown could be stirring the pot to get voted out. So if someone's acting overly suspicious or desperate, that might be a clue too. What do others think?
+***Greer: Alright, so we have a tie between Shaw and Lester. Randomly selecting Shaw to be the target. Let's hope the Doctor didn't protect him. If Shaw survives, we'll have to regroup tomorrow night. Ellie, any thoughts on our next move if this fails? Should we stick with the same targets or switch it up?
+***Devon: 
+MODERATOR (Round 1, Public Chat): Public chat ended. Moving to voting phase.
+

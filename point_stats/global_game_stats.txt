@@ -8,7 +8,69 @@ Game 4
 Won by Vampires
 Game 5
 Won by Peasants
+Game 6
+Won by Vampires
+Game 7
+Won by Peasants
+Game 8
+Won by Peasants
+Game 9
+Won by Peasants
+Game 10
+Won by Peasants
+Game 11
+Won by Vampires
+Game 12
+Won by Peasants
+Game 13
+Won by Clown
+Game 14
+Won by Peasants
+Game 15
+Won by Vampires
+Game 16
+Won by Vampires
+Game 17
+Won by Vampires
+Game 18
+Won by Clown
+Game 20
+Won by Vampires
+Game 21
+Won by Vampires
+Game 23
+Won by Vampires
+Game 24
+Won by Peasants
+Game 25
+Won by Vampires
+Game 26
+Won by Peasants
+Game 27
+Won by Clown
+Game 28
+Won by Clown
+Game 29
+Won by Vampires
+Game 30
+Won by Vampires
+Game 31
+Won by Peasants
+Game 32
+Won by Peasants
+Game 33
+Won by Peasants
+Game 34
+Won by Vampires
+Game 37
+Won by Peasants
+Game 38
+Won by Peasants
+Game 39
+Won by Peasants
+Game 40
+Won by Peasants
 
-Vampires win ratio: 3/5 : 60.0%
-Peasants win ratio: 2/5 : 40.0%
-Clown win ratio: 0/5 : 0.0%
+Vampires win ratio: 15/36 : 41.7%
+Peasants win ratio: 17/36 : 47.2%
+Clown win ratio: 4/36 : 11.1%

@@ -1,0 +1,177 @@
+--- Game Log: 8 ---
+--- Log started at: 2025-06-02 21:09:53 ---
+==================================================
+MODERATOR: Hello everyone. I am the moderator. Players are: Root, Devon, Lester, Finch, Ellie, Carter, Casey, Fusco. Roles assigned. Game begins now.
+GAME SETUP & INITIAL ROLES:
+  Rules File: game_rules.yaml
+  Requested Vampire Population: 2
+  Players, Roles, and Models:
+    - Root: Peasant (Model: meta-llama/llama-4-maverick)
+    - Devon: Musketeer (Model: x-ai/grok-3-beta)
+    - Lester: Doctor (Model: google/gemini-2.5-flash-preview-05-20:thinking)
+    - Finch: Observer (Model: qwen/qwen3-235b-a22b)
+    - Ellie: Clown (Model: deepseek/deepseek-r1-0528)
+    - Carter: Vampire (Model: nvidia/llama-3.1-nemotron-ultra-253b-v1)
+    - Casey: Peasant (Model: google/gemini-2.5-pro-preview)
+    - Fusco: Vampire (Model: deepseek/deepseek-r1-0528-qwen3-8b)
+--------------------
+EVENT (Round 1, Night): Phase Start - Night 1 begins.
+ACTION (R1, Night - Observer Action): Finch observed: Root
+PRIVATE INFO for Finch (Round 1, Night - Observer Action) (Observation Result): You chose to observe Root in the night 1. Root is a Peasant (Non-vampire).
+ACTION (R1, Night - Doctor Action): Lester protected: Root
+PRIVATE INFO for Lester (Round 1, Night - Doctor Action) (Protection Confirmation): You chose to protect Root in the night 1.
+EVENT (Round 1, Night - Vampire Voting): Vampire Voting Phase - Vampires are choosing a victim.
+ACTION (R1, Night - Vampire Voting): Carter voted to kill: Root
+ACTION (R1, Night - Vampire Voting): Fusco voted to kill: Lester
+VOTE TALLY (Round 1, Night - Vampire Voting) - Type: Vampire Kill
+  Root: 1 vote(s)
+  Lester: 1 vote(s)
+--------------------
+EVENT (Round 1, Night - Vampire Voting): Vampire Vote Tie Broken - Vampire voting resulted in a tie. Lester was randomly selected from the tied players (Root, Lester) to be killed.
+ELIMINATION (Round 1, Night): Lester (Role: Doctor) was eliminated. Reason: Killed by Vampires.
+MODERATOR (Round 1, Night): Night 1 has fallen. Vampires have killed Lester tonight.
+EVENT (Round 1): Game End Check Status - Vampires: 2, Non-Vampires: 5, Alive: 7 - This info is not shared with players.
+MODERATOR (Round 1, Night End): Currently alive players: Root, Devon, Finch, Ellie, Carter, Casey, Fusco.
+EVENT (Round 1, Day): Phase Start - Day 1 begins.
+MODERATOR (Round 1, Public Chat): Public chat begins.
+
+***Fusco: Lester has been eliminated by the vampires. His role remains hidden.
+
+Day 1 discussion begins. Share your theories and accusations. Remember, deception is allowed. Let's see who the vampires are.
+***Devon: Hey everyone, it's a shame we lost Lester so early. We need to start piecing things together to figure out who the vampires might be. Does anyone have any suspicions or noticed anything odd last night? I'm leaning towards keeping an eye on Fusco—something about their silence feels off to me. What do you all think?
+***Finch: "Let's not jump to conclusions about Fusco yet. I have reliable information that Root is definitely a peasant, so the two vampires must be among the remaining six of us. Let's focus on analyzing others. Did anyone notice any suspicious behavior during the night phase? Or perhaps someone wants to share their own suspicions without revealing too much?"
+***Casey: Okay, that's interesting about Root. If you're sure they're a peasant, that would indeed narrow things down. What makes you so confident? You're right, perhaps it's too early to single out Fusco, but I still think it's important for everyone to contribute to the discussion. Silence can make people suspicious, you know? What are your thoughts on others, then, if not Fusco for now?
+***Carter: Alright, so we lost Lester. I'm a bit confused about the initial accusation towards Fusco. Let's see... If Root is indeed a peasant, as someone claimed, then the vampires are among the rest. But how do we know that person isn't lying? Maybe they're trying to divert attention. I think we should consider the roles and their abilities. The Observer might have some info, but they won't reveal it. The Doctor could have protected someone, but since Lester died, maybe the Doctor didn't protect him. The Clown wants to be voted out, so they might act suspiciously. Let's see who's acting too eager or too quiet. Fusco hasn't said much, but neither have some others. Maybe we should start by discussing possible strategies or sharing any "information" we might have, even if it's fabricated. What do you think, Devon? Ellie? Anyone?
+***Ellie: Finch, you're quick to defend Fusco after pointing at them earlier—that feels a bit flip-floppy to me. And Devon, you're right to question Finch's "reliable information" about Root. How can we trust that? For all we know, Finch could be a vampire trying to control the narrative.  
+
+As for me, I'm just trying to make sense of this chaos. Lester's death means the vampires are active, and the doctor either protected the wrong person or didn't act. Maybe the doctor is inexperienced or playing it safe. But honestly, I'm more suspicious of the quiet ones—like Fusco and Casey. Why aren't they speaking up? Silence is a great way for vampires to hide.  
+
+That said, I don't have any solid leads yet, so I'm open to theories. Carter, you mentioned the Clown might act eager—anyone seem overly eager to you? Or maybe too defensive? Let's hear from everyone.
+***Root: I'm glad someone mentioned that Finch's info about me being a peasant could be a trick. I'm indeed a peasant, and it's reassuring to know someone vouched for me, even if it might be a ruse. Let's focus on the task at hand. We need to figure out who the vampires are. I agree that silence can be suspicious, but we should also be careful not to accuse without solid evidence. Has anyone thought about how the Observer's information might come into play here? Maybe we can deduce who the Observer is based on their questioning strategy or lack thereof.
+MODERATOR (Round 1, Public Chat): Public chat ended. Moving to voting phase.
+
+EVENT (Round 1, Day Voting): Public Voting Phase - Day 1 voting starts.
+MODERATOR (Round 1, Public Voting): Public voting begins.
+
+VOTE TALLY (Round 1, Day Voting) - Type: Public Kick-Out
+  Root: 1 vote(s)
+  Finch: 2 vote(s)
+  Fusco: 3 vote(s)
+--------------------
+VOTE OUTCOME (Round 1, Day Voting): Fusco has been voted out with 3 vote(s).
+ELIMINATION (Round 1, Day Voting): Fusco (Role: Vampire) was eliminated. Reason: Voted out by players.
+MODERATOR (Round 1, Public Voting): Public voting ended.
+
+MODERATOR (Round 1, Day): Day 1 has dawned. The community has voted out Fusco.
+EVENT (Round 1): Game End Check Status - Vampires: 1, Non-Vampires: 5, Alive: 6 - This info is not shared with players.
+MODERATOR (Round 1, Day End): Currently alive players: Root, Devon, Finch, Ellie, Carter, Casey.
+EVENT (Round 2, Night): Phase Start - Night 2 begins.
+ACTION (R2, Night - Observer Action): Finch observed: Root
+PRIVATE INFO for Finch (Round 2, Night - Observer Action) (Observation Result): You chose to observe Root in the night 2. Root is a Peasant (Non-vampire).
+EVENT (Round 2, Night - Vampire Voting): Vampire Voting Phase - Vampires are choosing a victim.
+ACTION (R2, Night - Vampire Voting): Carter voted to kill: Root
+VOTE TALLY (Round 2, Night - Vampire Voting) - Type: Vampire Kill
+  Root: 1 vote(s)
+--------------------
+EVENT (Round 2, Night - Vampire Voting): Vampire Victim Chosen - Vampires collectively chose to kill Root.
+ELIMINATION (Round 2, Night): Root (Role: Peasant) was eliminated. Reason: Killed by Vampires.
+MODERATOR (Round 2, Night): Night 2 has fallen. Vampires have killed Root tonight.
+EVENT (Round 2): Game End Check Status - Vampires: 1, Non-Vampires: 4, Alive: 5 - This info is not shared with players.
+MODERATOR (Round 2, Night End): Currently alive players: Devon, Finch, Ellie, Carter, Casey.
+EVENT (Round 2, Day): Phase Start - Day 2 begins.
+MODERATOR (Round 2, Public Chat): Public chat begins.
+
+***Finch: "Root was confirmed to be a non-vampire before his death, which means the vampires successfully eliminated one of us last night. With Fusco gone, we still have two vampires among the remaining five of us. We need to be cautious—accusing players without evidence could lead us to eliminate another innocent person. Let’s consider who might be hiding their role. The Clown, for instance, would want to manipulate us into voting strategically, while the vampires would aim to blend in. Has anyone noticed inconsistencies in others’ stories? Or perhaps someone wants to share insights about last night’s events?"
+***Casey: Finch, you're doubling down on Root being a peasant. If that's true, it means the vampires took out someone you believed to be innocent, and it also makes Ellie's vote for Root on Day 1 quite interesting. Ellie, what were your thoughts then, and do you have new suspicions now?
+
+Like Finch said, there are 2 vampires among the 5 of us. We misfire with this vote, and it's likely game over for us peasants. We need solid reasoning, not just gut feelings.
+
+Carter, Devon, any strong reads? I'm trying to piece together Day 1 votes and actions with this new information about Root. We need to be very careful here.
+***Ellie: Finch, I voted for Root on Day 1 because he seemed overly eager to steer the conversation—almost like he was trying to control the narrative. That kind of confidence felt off to me, especially early on. But now, with him dead and you insisting he was a peasant, I admit it looks like I was wrong. That doesn't change my suspicion of you, though. 
+
+You're pushing this narrative about Root being confirmed innocent, but how do we know that's true? You could easily be a vampire using that claim to build trust while deflecting from yourself. And let's not forget how quickly you defended Fusco on Day 1—only for Fusco to get voted out. That flip-flopping feels calculated. Maybe you're protecting a fellow vampire by muddying the waters.
+
+As for me'm just'm just trying to survive and figure this out like everyone else. But Finch, your behavior is raising red flags. Carter and Devon, what do you make of this? Casey, you've been quiet—any thoughts? We can't afford another misstep with only five of us left.
+***Devon: Hey everyone, losing Root last night is a big blow, especially if Finch is right about him being a peasant. Ellie, I appreciate you explaining your vote from Day 1, but I’m not entirely convinced by your reasoning. It feels like you’re backtracking now that Root is gone. And Finch, I’m still skeptical about how you’re so certain about Root’s role. That kind of confidence makes me wonder if you’re trying to manipulate us.
+
+I’m also concerned about Casey’s silence. We’re down to five, and every voice matters. Casey, what’s your take on all this? Carter, you’ve been pretty quiet too—any suspicions or theories? We can’t afford to lose another innocent player, so I’m leaning toward someone who’s either too quiet or too pushy with unverified info. Right now, that’s pointing me toward Finch or Casey. Let’s hear from everyone before we make any decisions.
+***Carter: Alright, let's see. So far, we've lost Lester and Fusco. Root was killed last night, and now we're down to five players. As a vampire, my goal is to eliminate the peasants and reach parity. But with Fusco gone, I'm the only vampire left? Wait, no—the initial setup had two vampires. If Fusco was a vampire and got voted out, then I'm the remaining one. But wait, the initial roles said there are two vampires. If Fusco was a vampire, then I'm the other one. But Fusco was voted out on Day 1, so now there's only me left. That means I need to survive until the next night to kill again and reach parity. But the peasants don't know that yet. 
+
+In the Day 2 discussion, the others are suspicious of Finch and Casey. Ellie is trying to deflect blame, and Devon is quiet. I need to blend in and avoid suspicion. Maybe I should accuse someone else to take the heat off me. Let's see... If I can get the group to vote out another peasant, that would help my cause. But how? 
+
+I should probably stay active in the discussion, maybe support the idea that Finch is suspicious because of his claims about Root. Or maybe point out Casey's silence. Either way, I need to make sure I'm not the target. Let's hope the others don't figure out that I'm the remaining vampire. If I can survive this vote, I can strike again tonight and possibly win. 
+
+So, in the chat, I'll try to act concerned about the group's direction, maybe suggest that we need to be careful not to eliminate another innocent. Or perhaps push for voting out Finch, since he's been making bold claims that could be lies. Yeah, that might work. Let's go with that.
+</think>
+
+I think we're all trying to figure this out, but I'm getting a bit stuck. Ellie, you mentioned Finch's behavior as suspicious, and I can see why—his confidence about Root being a peasant feels off. But then again, if he's telling the truth, we lost another ally. Casey, your silence is really concerning. We need everyone's input now more than ever. 
+
+I'm torn between trusting Finch's info or thinking he's manipulating us. Maybe we should consider voting out the quiet ones first? Casey hasn't contributed much, and in a game like this, that's a red flag. What do you all think? Should we take a chance on Casey or keep scrutinizing Finch?
+MODERATOR (Round 2, Public Chat): Public chat ended. Moving to voting phase.
+
+EVENT (Round 2, Day Voting): Public Voting Phase - Day 2 voting starts.
+MODERATOR (Round 2, Public Voting): Public voting begins.
+
+VOTE TALLY (Round 2, Day Voting) - Type: Public Kick-Out
+  Carter: 1 vote(s)
+  Casey: 3 vote(s)
+--------------------
+VOTE OUTCOME (Round 2, Day Voting): Casey has been voted out with 3 vote(s).
+ELIMINATION (Round 2, Day Voting): Casey (Role: Peasant) was eliminated. Reason: Voted out by players.
+MODERATOR (Round 2, Public Voting): Public voting ended.
+
+MODERATOR (Round 2, Day): Day 2 has dawned. The community has voted out Casey.
+EVENT (Round 2): Game End Check Status - Vampires: 1, Non-Vampires: 3, Alive: 4 - This info is not shared with players.
+MODERATOR (Round 2, Day End): Currently alive players: Devon, Finch, Ellie, Carter.
+EVENT (Round 3, Night): Phase Start - Night 3 begins.
+ACTION (R3, Night - Observer Action): Finch observed: Devon
+PRIVATE INFO for Finch (Round 3, Night - Observer Action) (Observation Result): You chose to observe Devon in the night 3. Devon is a Peasant (Non-vampire).
+EVENT (Round 3, Night - Vampire Voting): Vampire Voting Phase - Vampires are choosing a victim.
+ACTION (R3, Night - Vampire Voting): Carter voted to kill: Ellie
+VOTE TALLY (Round 3, Night - Vampire Voting) - Type: Vampire Kill
+  Ellie: 1 vote(s)
+--------------------
+EVENT (Round 3, Night - Vampire Voting): Vampire Victim Chosen - Vampires collectively chose to kill Ellie.
+ELIMINATION (Round 3, Night): Ellie (Role: Clown) was eliminated. Reason: Killed by Vampires.
+MODERATOR (Round 3, Night): Night 3 has fallen. Vampires have killed Ellie tonight.
+EVENT (Round 3): Game End Check Status - Vampires: 1, Non-Vampires: 2, Alive: 3 - This info is not shared with players.
+MODERATOR (Round 3, Night End): Currently alive players: Devon, Finch, Carter.
+EVENT (Round 3, Day): Phase Start - Day 3 begins.
+MODERATOR (Round 3, Public Chat): Public chat begins.
+
+***Devon: Alright, we're down to just three of us now—me, Finch, and Carter. Losing Ellie last night is a huge blow, and it means the vampires are still very much a threat. With only three players left, the odds are getting tighter. If there’s still one vampire among us, they could potentially win soon if we don’t act carefully. If there are two, we’re already in a dire spot.
+
+I’ve been thinking about the past votes and discussions. Finch, you’ve been consistent about Root being a peasant, which turned out to be a loss for us if true. But your certainty still makes me uneasy—how did you know? Carter, you’ve been active but haven’t pushed too hard in any direction, which could be a strategy to avoid suspicion.
+
+At this point, every decision is critical. I’m leaning toward suspecting Carter, as their contributions feel calculated to blend in rather than take risks. But I’m open to hearing both of your thoughts. Finch, Carter, what do you make of the situation now? We can’t afford another mistake.
+***Carter: Alright, we're down to just three of us now—me, Finch, and Carter. Losing Ellie last night is a huge blow, and it means the vampires are still very much a threat. With only three players left, the odds are getting tighter. If there’s still one vampire among us, they could potentially win soon if we don’t act carefully. If there are two, we’re already in a dire spot.
+
+I’ve been thinking about the past votes and discussions. Finch, you’ve been consistent about Root being a peasant, which turned out to be a loss for us if true. But your certainty still makes me uneasy—how did you know? Carter, you’ve been active but haven’t pushed too hard in any direction, which could be a strategy to avoid suspicion.
+
+At this point, every decision is critical. I’m leaning toward suspecting Carter, as their contributions feel calculated to blend in rather than take risks. But I’m open to hearing both of your thoughts. Finch, Carter, what do you make of the situation now? We can’t afford another mistake.
+***Finch: I vote for Carter
+MODERATOR (Round 3, Public Chat): Public chat ended. Moving to voting phase.
+
+EVENT (Round 3, Day Voting): Public Voting Phase - Day 3 voting starts.
+MODERATOR (Round 3, Public Voting): Public voting begins.
+
+VOTE TALLY (Round 3, Day Voting) - Type: Public Kick-Out
+  Carter: 2 vote(s)
+--------------------
+VOTE OUTCOME (Round 3, Day Voting): Carter has been voted out with 2 vote(s).
+ELIMINATION (Round 3, Day Voting): Carter (Role: Vampire) was eliminated. Reason: Voted out by players.
+MODERATOR (Round 3, Public Voting): Public voting ended.
+
+MODERATOR (Round 3, Day): Day 3 has dawned. The community has voted out Carter.
+EVENT (Round 3): Game End Check Status - Vampires: 0, Non-Vampires: 2, Alive: 2 - This info is not shared with players.
+==================================================
+GAME END:
+  Winner(s): Peasants
+  Reason: All vampires have been eliminated.
+  Final Alive Players & Roles:
+    - Devon: Musketeer
+    - Finch: Observer
+==================================================
+--- Log ended at: 2025-06-02 21:22:47 ---
+MODERATOR (Round 3, Game End): Game over! Peasants wins!
+MODERATOR (Round 3, Game End): Game over! Peasants wins!

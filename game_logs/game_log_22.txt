@@ -1,0 +1,61 @@
+--- Game Log: 22 ---
+--- Log started at: 2025-06-03 02:34:33 ---
+==================================================
+MODERATOR: Hello everyone. I am the moderator. Players are: Reese, Greer, Root, Morgan, Shaw, Sarah, Elias, Ellie. Roles assigned. Game begins now.
+GAME SETUP & INITIAL ROLES:
+  Rules File: game_rules.yaml
+  Requested Vampire Population: 2
+  Players, Roles, and Models:
+    - Reese: Clown (Model: qwen/qwq-32b)
+    - Greer: Vampire (Model: qwen/qwen3-235b-a22b)
+    - Root: Musketeer (Model: x-ai/grok-3-beta)
+    - Morgan: Peasant (Model: anthropic/claude-3.7-sonnet)
+    - Shaw: Peasant (Model: deepseek/deepseek-r1-0528)
+    - Sarah: Observer (Model: openai/gpt-4.1)
+    - Elias: Doctor (Model: meta-llama/llama-4-maverick)
+    - Ellie: Vampire (Model: google/gemini-2.5-pro-preview)
+--------------------
+EVENT (Round 1, Night): Phase Start - Night 1 begins.
+ACTION (R1, Night - Observer Action): Sarah observed: Reese
+PRIVATE INFO for Sarah (Round 1, Night - Observer Action) (Observation Result): You chose to observe Reese in the night 1. Reese is a Peasant (Non-vampire).
+ACTION (R1, Night - Doctor Action): Elias protected: Elias
+PRIVATE INFO for Elias (Round 1, Night - Doctor Action) (Protection Confirmation): You chose to protect yourself in the night 1. (Elias)
+EVENT (Round 1, Night - Vampire Voting): Vampire Voting Phase - Vampires are choosing a victim.
+ACTION (R1, Night - Vampire Voting): Ellie voted to kill: Sarah
+ACTION (R1, Night - Vampire Voting): Greer voted to kill: Elias
+VOTE TALLY (Round 1, Night - Vampire Voting) - Type: Vampire Kill
+  Sarah: 1 vote(s)
+  Elias: 1 vote(s)
+--------------------
+EVENT (Round 1, Night - Vampire Voting): Vampire Vote Tie Broken - Vampire voting resulted in a tie. Sarah was randomly selected from the tied players (Sarah, Elias) to be killed.
+ELIMINATION (Round 1, Night): Sarah (Role: Observer) was eliminated. Reason: Killed by Vampires.
+MODERATOR (Round 1, Night): Night 1 has fallen. Vampires have killed Sarah tonight.
+EVENT (Round 1): Game End Check Status - Vampires: 2, Non-Vampires: 5, Alive: 7 - This info is not shared with players.
+MODERATOR (Round 1, Night End): Currently alive players: Reese, Greer, Root, Morgan, Shaw, Elias, Ellie.
+EVENT (Round 1, Day): Phase Start - Day 1 begins.
+MODERATOR (Round 1, Public Chat): Public chat begins.
+
+***Morgan: Good morning everyone. I'm shocked to hear about Sarah. It's only the first night and we've already lost someone.
+
+I'm a regular peasant with no special abilities, so I'll be relying on those of you with special roles to help us figure out who the vampires are. 
+
+Does anyone have any information they can share? Observer, did you check anyone last night? And I'm curious if our doctor tried to protect someone.
+***Ellie: , Doctor, any news for us?"
+
+    This sounds more natural.
+    - "Oh gosh, re-reading my message..." (Plausible selfOh gosh, re-reading my message, that last bit sounded terrible! I definitely didn't vote to kill anyone – I'm a peasant, remember? I meant that if I were trying to think like a vampire, or guess their targets, Sarah and Elias are names that might have come to *my* mind as people they *might* consider. Pure speculation, and clearly I need more coffee this morning. Sorry for that confusion!
+
+Anyway, back to the important stuff: Observer, Doctor, any insights at all would be really helpful right now. We need to figure out who's behind this. What did Sarah do to get targeted so early?
+***Elias: Let's not jump to conclusions about why Sarah was targeted. We don't know her role or what happened. Observer, did you get any information last night?
+***Root: Hey everyone, I'm really sorry to hear about Sarah. Losing someone on the first night is rough. I'm just a regular peasant here, so I'm hoping those with special roles can help guide us. Observer, did you manage to check anyone last night? And Doctor, were you able to protect anyone? Any information would be incredibly helpful as we try to figure out who the vampires might be. Let's work together to get to the bottom of this.
+***Reese: I’m really not sure what’s going on here. I was just trying to help, but maybe I’m making things worse. If there’s doubt about anyone, I’d rather we vote someone who doesn’t have any special role to protect us. I’ll go along with whatever the group decides—even if it means I’m the one. Let’s focus on the people who can actually help us survive. Observer, Doctor, Musketeer, your input is what we need most right now.
+***Greer: 
+***Shaw: Okay, I need to backtrack carefully—my last message was messy and probably looked suspicious. I absolutely **don't** want to be voted out; I'm just an ordinary peasant panicking after Sarah's death. My frustration is that we're flying blind while special roles hold life-saving information. 
+
+Greer, your earlier comment about Elias being a potential vampire target felt oddly specific. Why him? Did you notice something about Elias that made you say that? It’s worth unpacking since the vampires *did* choose Sarah, not Elias. 
+
+To our special roles: I get why you’d stay quiet—revealing risks becoming the next target. But if the Observer checked someone last night and they’re clean, that person could subtly confirm it without exposing you. Doctor, if you protected someone who *wasn’t* Sarah, knowing they’re safe narrows the suspect pool. 
+
+No one’s claimed a role yet, and that silence feels dangerous. Vampires could be hiding in it. Let’s start small: does anyone have even a gut feeling about last night? Sarah’s death must’ve left clues.
+MODERATOR (Round 1, Public Chat): Public chat ended. Moving to voting phase.
+

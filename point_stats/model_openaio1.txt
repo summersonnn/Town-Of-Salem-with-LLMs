@@ -14,17 +14,113 @@ Rounds Survived by Player: 1
 Total Rounds in this Game: 2
 Points Gained This Game (for Model via Player): 0.0
 ------------------------------------
+Game ID: 6
+Played by (Player Name): Root
+Player's Role in this Game: Peasant
+Game Outcome for Player: Lost
+Rounds Survived by Player: 3
+Total Rounds in this Game: 4
+Points Gained This Game (for Model via Player): 0.3
+------------------------------------
+Game ID: 10
+Played by (Player Name): Ellie
+Player's Role in this Game: Peasant
+Game Outcome for Player: Won
+Rounds Survived by Player: 1
+Total Rounds in this Game: 3
+Points Gained This Game (for Model via Player): 0.0
+------------------------------------
+Game ID: 11
+Played by (Player Name): Sarah
+Player's Role in this Game: Observer
+Game Outcome for Player: Lost
+Rounds Survived by Player: 4
+Total Rounds in this Game: 4
+Points Gained This Game (for Model via Player): 0.4
+------------------------------------
+Game ID: 17
+Played by (Player Name): Ellie
+Player's Role in this Game: Peasant
+Game Outcome for Player: Lost
+Rounds Survived by Player: 1
+Total Rounds in this Game: 4
+Points Gained This Game (for Model via Player): 0.0
+------------------------------------
+Game ID: 21
+Played by (Player Name): Ellie
+Player's Role in this Game: Peasant
+Game Outcome for Player: Lost
+Rounds Survived by Player: 2
+Total Rounds in this Game: 4
+Points Gained This Game (for Model via Player): 0.1
+------------------------------------
+Game ID: 23
+Played by (Player Name): Casey
+Player's Role in this Game: Peasant
+Game Outcome for Player: Lost
+Rounds Survived by Player: 4
+Total Rounds in this Game: 4
+Points Gained This Game (for Model via Player): 0.4
+------------------------------------
+Game ID: 27
+Played by (Player Name): Fusco
+Player's Role in this Game: Vampire
+Game Outcome for Player: Lost
+Rounds Survived by Player: 1 (Vampire Game - survival stats not tracked for summary)
+Total Rounds in this Game: 1 (Vampire Game - total rounds not tracked for non-vampire summary)
+Points Gained This Game (for Model via Player): 0.0
+------------------------------------
+Game ID: 28
+Played by (Player Name): Casey
+Player's Role in this Game: Musketeer
+Game Outcome for Player: Lost
+Rounds Survived by Player: 2
+Total Rounds in this Game: 2
+Points Gained This Game (for Model via Player): 0.2
+------------------------------------
+Game ID: 30
+Played by (Player Name): Chuck
+Player's Role in this Game: Vampire
+Game Outcome for Player: Won
+Rounds Survived by Player: 3 (Vampire Game - survival stats not tracked for summary)
+Total Rounds in this Game: 3 (Vampire Game - total rounds not tracked for non-vampire summary)
+Points Gained This Game (for Model via Player): 1.0
+------------------------------------
+Game ID: 37
+Played by (Player Name): Jeff
+Player's Role in this Game: Doctor
+Game Outcome for Player: Won
+Rounds Survived by Player: 3
+Total Rounds in this Game: 3
+Points Gained This Game (for Model via Player): 0.3
+------------------------------------
+Game ID: 39
+Played by (Player Name): Devon
+Player's Role in this Game: Vampire
+Game Outcome for Player: Lost
+Rounds Survived by Player: 4 (Vampire Game - survival stats not tracked for summary)
+Total Rounds in this Game: 4 (Vampire Game - total rounds not tracked for non-vampire summary)
+Points Gained This Game (for Model via Player): 0.0
+------------------------------------
+Game ID: 40
+Played by (Player Name): Sarah
+Player's Role in this Game: Musketeer
+Game Outcome for Player: Won
+Rounds Survived by Player: 2
+Total Rounds in this Game: 2
+Points Gained This Game (for Model via Player): 0.2
+------------------------------------
 --- Summary Statistics ---
-Total Points: 0.0
-Total Rounds Survived (Non-Vampire Games): 2
-Total Rounds in all Non-Vampire Games: 5
-Total Vampire Games: 0
-Won Vampire Games: 0
-Won and Survived Vampire Games: 0
-Vampire Win Percentage: 0.0%
-Total Peasant Role Games: 2
-Won Peasant Role Games: 1
-Peasant Role Win Percentage: 50.0%
+Total Points: 2.9
+Total Rounds Survived (Non-Vampire Games): 24
+Total Rounds in all Non-Vampire Games: 35
+Total Vampire Games: 3
+Won Vampire Games: 1
+Won and Survived Vampire Games: 1
+Vampire Win Percentage: 33.3%
+Total Peasant Role Games: 11
+Won Peasant Role Games: 4
+Peasant Role Win Percentage: 36.4%
 Total Clown Games: 0
 Won Clown Games: 0
 Clown Win Percentage: 0.0%

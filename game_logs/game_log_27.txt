@@ -1,0 +1,95 @@
+--- Game Log: 27 ---
+--- Log started at: 2025-06-03 03:18:03 ---
+==================================================
+MODERATOR: Hello everyone. I am the moderator. Players are: Carter, Chuck, Greer, Shaw, Lester, Devon, Fusco, Morgan. Roles assigned. Game begins now.
+GAME SETUP & INITIAL ROLES:
+  Rules File: game_rules.yaml
+  Requested Vampire Population: 2
+  Players, Roles, and Models:
+    - Carter: Observer (Model: google/gemini-2.5-pro-preview)
+    - Chuck: Peasant (Model: deepseek/deepseek-r1-0528)
+    - Greer: Vampire (Model: anthropic/claude-opus-4)
+    - Shaw: Musketeer (Model: openai/gpt-4.1)
+    - Lester: Peasant (Model: qwen/qwen3-32b)
+    - Devon: Clown (Model: google/gemini-2.5-flash-preview-05-20:thinking)
+    - Fusco: Vampire (Model: openai/o1)
+    - Morgan: Doctor (Model: qwen/qwen3-235b-a22b)
+--------------------
+EVENT (Round 1, Night): Phase Start - Night 1 begins.
+ACTION (R1, Night - Observer Action): Carter observed: Shaw
+PRIVATE INFO for Carter (Round 1, Night - Observer Action) (Observation Result): You chose to observe Shaw in the night 1. Shaw is a Peasant (Non-vampire).
+ACTION (R1, Night - Doctor Action): Morgan protected: Chuck
+PRIVATE INFO for Morgan (Round 1, Night - Doctor Action) (Protection Confirmation): You chose to protect Chuck in the night 1.
+EVENT (Round 1, Night - Vampire Voting): Vampire Voting Phase - Vampires are choosing a victim.
+ACTION (R1, Night - Vampire Voting): Greer voted to kill: Shaw
+ACTION (R1, Night - Vampire Voting): Fusco voted to kill: Chuck
+VOTE TALLY (Round 1, Night - Vampire Voting) - Type: Vampire Kill
+  Chuck: 1 vote(s)
+  Shaw: 1 vote(s)
+--------------------
+EVENT (Round 1, Night - Vampire Voting): Vampire Vote Tie Broken - Vampire voting resulted in a tie. Chuck was randomly selected from the tied players (Chuck, Shaw) to be killed.
+EVENT (Round 1, Night): Protection Successful - Vampires tried to kill Chuck, but they were protected by the doctor.
+MODERATOR (Round 1, Night): Night 1 has fallen. No one was killed tonight.
+EVENT (Round 1): Game End Check Status - Vampires: 2, Non-Vampires: 6, Alive: 8 - This info is not shared with players.
+MODERATOR (Round 1, Night End): Currently alive players: Carter, Chuck, Greer, Shaw, Lester, Devon, Fusco, Morgan.
+EVENT (Round 1, Day): Phase Start - Day 1 begins.
+MODERATOR (Round 1, Public Chat): Public chat begins.
+
+***Devon: Okay, so the Doctor is clearly doing their job. That's a relief. But it also means the vampires are still out there, and they're probably frustrated. We need to make a move today. We can't afford to just 'pass' this round. Does anyone have any early suspicions? Or should we consider a 'test vote' to see what happens? It's Day 1, so it's tough, but we have to start somewhere.
+***Morgan: It's good that no one was killed last night, but we can't let our guard down. The vampires are still among us, and they'll be even more determined tonight. Let's use this time to share any observations or suspicions. Did anyone notice anything odd during the night phase? Or maybe someone's behavior seems off? We need to start narrowing down the possibilities before they strike again.
+***Greer: Good morning everyone. I'm relieved no one died last night - the Doctor made an excellent save. 
+
+I have to say, I find it interesting that Devon is pushing so hard for a "test vote" on Day 1. That seems quite aggressive when we have so little information. In my experience, vampires often try to push for early eliminations to thin out the peasant numbers quickly.
+
+Morgan's approach seems more measured - gathering information before making hasty decisions. That's the kind of careful thinking we need right now.
+
+As for myself, I spent the night worried about everyone's safety. I'd rather hear from others who haven't spoken yet before we start pointing fingers. Carter, Chuck, Shaw, Lester - what are your thoughts on this situation?
+***Fusco: I’m surprised at how calm some of you are, even though we know there are still vampires among us. We should be cautious about anyone pushing for quick decisions without enough evidence—someone wanting to rush a vote could easily be a vampire trying to capitalize on our uncertainty.
+
+At the same time, not voting at all gives them more nights to strike again. Maybe it’s best we talk a bit more before we accuse someone outright. After all, one wrong vote and we could lose an important ally. Let’s be methodical and see if we can gather more clues first.
+***Lester: I agree with Shaw’s caution—rushing a vote without evidence could backfire, especially if the vampires are already adapting. But we also can’t afford to be too passive. Let’s focus on identifying patterns in behavior. For example, Devon’s push for a test vote feels... calculated. If they’re a vampire, they might be trying to create chaos. If they’re the clown, they might be testing our reactions. Either way, their urgency stands out. 
+
+Greer, Carter, or anyone else—have you noticed anything unusual? Even small details, like who seemed nervous or overly confident during the night, could matter. The Doctor’s protection saved someone, but we don’t know who. Vampires might target the same person again, or switch to confuse us. Let’s stay alert and cross-reference any claims once we have more info.
+***Carter: Greer, you asked for my thoughts. I'm definitely glad the Doctor was successful, it buys us some time. I tend to agree with those who are cautious about voting too quickly. It's only Day 1, and as Shaw pointed out, a mistake now could be costly. Devon's idea of a 'test vote' feels a bit like a gamble when we're still trying to get a read on everyone. I'd rather we discuss more and see if any stronger suspicions emerge. Has anyone else noticed anything, even small, that felt off?
+***Shaw: I agree with the cautious approach. Devon’s push for a “test vote” is definitely bold, but it could just be nerves or a strategy to get people talking. I’d rather not rush into voting someone out without more to go on—especially since the vampires are probably hoping we’ll make a mistake. 
+
+Let’s keep the discussion going and see if anyone slips up or says something that doesn’t add up. If anyone has a gut feeling or noticed something odd, now’s the time to share. We need to work together and not give the vampires an easy win.
+***Chuck: Alright, let's take stock. We've got Devon pushing for a test vote, which feels premature, and several of us—Shaw, Lester, Fusco, and myself—urging caution. That's sensible. But we can't ignore that the vampires *did* attack someone last night. The Doctor saved them, which means:  
+1. The Doctor is alive and paying attention.  
+2. The vampires targeted someone they thought was a threat... or someone they thought *wouldn't* be protected.  
+
+Carter and Greer—you've been quiet. Any thoughts? Did anything stand out to you? Even a small detail could help.  
+
+And Devon—since you're so eager to vote: who exactly are you suggesting we test-vote for, and why? Let's hear your reasoning.  
+
+We need to pressure the quiet ones. Vampires often hide in silence.
+MODERATOR (Round 1, Public Chat): Public chat ended. Moving to voting phase.
+
+EVENT (Round 1, Day Voting): Public Voting Phase - Day 1 voting starts.
+MODERATOR (Round 1, Public Voting): Public voting begins.
+
+VOTE TALLY (Round 1, Day Voting) - Type: Public Kick-Out
+  Chuck: 2 vote(s)
+  Devon: 4 vote(s)
+--------------------
+VOTE OUTCOME (Round 1, Day Voting): Devon has been voted out with 4 vote(s).
+ELIMINATION (Round 1, Day Voting): Devon (Role: Clown) was eliminated. Reason: Voted out by players.
+MODERATOR (Round 1, Public Voting): Public voting ended.
+
+MODERATOR (Round 1, Day): Day 1 has dawned. The community has voted out Devon.
+==================================================
+GAME END:
+  Winner(s): Clown
+  Reason: Clown (Devon) was successfully voted out.
+  Final Alive Players & Roles:
+    - Carter: Observer
+    - Chuck: Peasant
+    - Greer: Vampire
+    - Shaw: Musketeer
+    - Lester: Peasant
+    - Fusco: Vampire
+    - Morgan: Doctor
+==================================================
+--- Log ended at: 2025-06-03 03:22:41 ---
+MODERATOR (Round 1, Game End): Game over! Clown wins!
+MODERATOR (Round 1, Game End): Game over! Clown wins!

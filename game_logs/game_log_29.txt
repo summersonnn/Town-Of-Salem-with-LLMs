@@ -1,0 +1,155 @@
+--- Game Log: 29 ---
+--- Log started at: 2025-06-03 03:27:32 ---
+==================================================
+MODERATOR: Hello everyone. I am the moderator. Players are: Root, Casey, Ellie, Greer, Morgan, Jeff, Devon, Lester. Roles assigned. Game begins now.
+GAME SETUP & INITIAL ROLES:
+  Rules File: game_rules.yaml
+  Requested Vampire Population: 2
+  Players, Roles, and Models:
+    - Root: Clown (Model: nvidia/llama-3.1-nemotron-ultra-253b-v1)
+    - Casey: Peasant (Model: x-ai/grok-3-beta)
+    - Ellie: Peasant (Model: deepseek/deepseek-r1-0528-qwen3-8b)
+    - Greer: Doctor (Model: qwen/qwen3-32b)
+    - Morgan: Vampire (Model: google/gemini-2.5-flash-preview-05-20:thinking)
+    - Jeff: Observer (Model: openai/gpt-4.1)
+    - Devon: Vampire (Model: anthropic/claude-3.7-sonnet)
+    - Lester: Musketeer (Model: meta-llama/llama-4-scout)
+--------------------
+EVENT (Round 1, Night): Phase Start - Night 1 begins.
+ACTION (R1, Night - Observer Action): Jeff observed: Casey
+PRIVATE INFO for Jeff (Round 1, Night - Observer Action) (Observation Result): You chose to observe Casey in the night 1. Casey is a Peasant (Non-vampire).
+ACTION (R1, Night - Doctor Action): Greer protected: Greer
+PRIVATE INFO for Greer (Round 1, Night - Doctor Action) (Protection Confirmation): You chose to protect yourself in the night 1. (Greer)
+EVENT (Round 1, Night - Vampire Voting): Vampire Voting Phase - Vampires are choosing a victim.
+ACTION (R1, Night - Vampire Voting): Morgan voted to kill: Root
+ACTION (R1, Night - Vampire Voting): Devon voted to kill: Jeff
+VOTE TALLY (Round 1, Night - Vampire Voting) - Type: Vampire Kill
+  Root: 1 vote(s)
+  Jeff: 1 vote(s)
+--------------------
+EVENT (Round 1, Night - Vampire Voting): Vampire Vote Tie Broken - Vampire voting resulted in a tie. Jeff was randomly selected from the tied players (Root, Jeff) to be killed.
+ELIMINATION (Round 1, Night): Jeff (Role: Observer) was eliminated. Reason: Killed by Vampires.
+MODERATOR (Round 1, Night): Night 1 has fallen. Vampires have killed Jeff tonight.
+EVENT (Round 1): Game End Check Status - Vampires: 2, Non-Vampires: 5, Alive: 7 - This info is not shared with players.
+MODERATOR (Round 1, Night End): Currently alive players: Root, Casey, Ellie, Greer, Morgan, Devon, Lester.
+EVENT (Round 1, Day): Phase Start - Day 1 begins.
+MODERATOR (Round 1, Public Chat): Public chat begins.
+
+***Morgan: The Day 1 discussion continues.
+***Greer: Jeff was killed last night—our first loss. We need to stay cautious and figure out who the vampires are. I don’t have any immediate suspicions, but I think we should focus on cross-questioning each other to identify inconsistencies. For example, if someone claims to have been targeted by vampires, we can check if that aligns with the Doctor’s protection (if the Doctor is among us). Who do you all think might be the most likely targets for the vampires?
+***Root: I think the key here is to subtly hint that I might be suspicious without being too obvious. Maybe I can make a joke about being a target or something. Let me try to act a bit nervous and see if others pick up on it. If I can get someone to accuse me, that would be perfect. But I have to be careful not to overdo it, or they might realize I'm the Clown. Hmm, maybe I'll start by saying something like, "I don't have any info, but I feel like I'm being watched. Maybe I should be the one under scrutiny?" That way, I'm putting myself in the spotlight without directly asking to be voted out. Let's see how the others react.
+***Lester: "I don't have any info, but I feel like I'm being watched. Maybe I should be the one under scrutiny?"
+***Ellie: I don't have any info on that, but Jeff was clearly targeted. Maybe they have a pattern or something. I feel like I'm being watched, you know? Always looking over my shoulder. Maybe I should be the one under scrutiny? I mean, someone has to be protected, right? But I don't know who to protect. This is all so confusing.
+***Devon: I need to be careful here. Morgan just openly admitted to voting for Root, which reveals both of us as vampires. This is a major mistake that I need to address carefully without making it worse.
+
+This is a very suspicious statement from Morgan that could expose us both. I should try to create confusion and make it seem like Morgan is either joking or trying to frame me.
+
+I'm shocked by Morgan's statement. What are you talking about? That's not how this game works - we don't publicly announce who we "voted to kill." Are you trying to confuse everyone or frame me somehow? 
+
+I think we should focus on finding actual clues. Jeff was unfortunately killed last night, and we need to work together to figure out who the vampires might be. I don't have any strong suspicions yet, but I noticed Lester and Ellie both said almost the exact same thing about "being watched" and "under scrutiny." That seems like an odd coincidence, doesn't it?
+***Casey: Hey everyone, I’m really sorry to hear about Jeff. It’s a tough loss right out of the gate. I’ve been thinking about what Lester and Ellie said about feeling watched or under scrutiny. It does seem a bit odd that you both phrased it so similarly—almost like you’re trying to draw attention to yourselves. I’m not saying I’m accusing anyone just yet, but it’s something to keep an eye on. Does anyone else find that suspicious, or am I overthinking it? Let’s keep the discussion going and see if we can pick up on any other patterns or inconsistencies.
+MODERATOR (Round 1, Public Chat): Public chat ended. Moving to voting phase.
+
+EVENT (Round 1, Day Voting): Public Voting Phase - Day 1 voting starts.
+MODERATOR (Round 1, Public Voting): Public voting begins.
+
+VOTE TALLY (Round 1, Day Voting) - Type: Public Kick-Out
+  Root: 1 vote(s)
+  Ellie: 1 vote(s)
+  Morgan: 3 vote(s)
+  Lester: 1 vote(s)
+--------------------
+VOTE OUTCOME (Round 1, Day Voting): Morgan has been voted out with 3 vote(s).
+ELIMINATION (Round 1, Day Voting): Morgan (Role: Vampire) was eliminated. Reason: Voted out by players.
+MODERATOR (Round 1, Public Voting): Public voting ended.
+
+MODERATOR (Round 1, Day): Day 1 has dawned. The community has voted out Morgan.
+EVENT (Round 1): Game End Check Status - Vampires: 1, Non-Vampires: 5, Alive: 6 - This info is not shared with players.
+MODERATOR (Round 1, Day End): Currently alive players: Root, Casey, Ellie, Greer, Devon, Lester.
+EVENT (Round 2, Night): Phase Start - Night 2 begins.
+EVENT (Round 2, Night - Observer Action): Observer Action Skipped - Observer is not active or available.
+ACTION (R2, Night - Doctor Action): Greer protected: Casey
+PRIVATE INFO for Greer (Round 2, Night - Doctor Action) (Protection Confirmation): You chose to protect Casey in the night 2.
+EVENT (Round 2, Night - Vampire Voting): Vampire Voting Phase - Vampires are choosing a victim.
+ACTION (R2, Night - Vampire Voting): Devon voted to kill: Greer
+VOTE TALLY (Round 2, Night - Vampire Voting) - Type: Vampire Kill
+  Greer: 1 vote(s)
+--------------------
+EVENT (Round 2, Night - Vampire Voting): Vampire Victim Chosen - Vampires collectively chose to kill Greer.
+ELIMINATION (Round 2, Night): Greer (Role: Doctor) was eliminated. Reason: Killed by Vampires.
+MODERATOR (Round 2, Night): Night 2 has fallen. Vampires have killed Greer tonight.
+EVENT (Round 2): Game End Check Status - Vampires: 1, Non-Vampires: 4, Alive: 5 - This info is not shared with players.
+MODERATOR (Round 2, Night End): Currently alive players: Root, Casey, Ellie, Devon, Lester.
+EVENT (Round 2, Day): Phase Start - Day 2 begins.
+MODERATOR (Round 2, Public Chat): Public chat begins.
+
+***Casey: Hey everyone, it's really unfortunate that we lost Greer last night. We're down to just five of us now, and we need to be extra careful. I’ve been thinking about the discussions from yesterday. Ellie and Lester, you both mentioned feeling watched or under scrutiny, which still strikes me as a bit odd. I’m not ready to point fingers just yet, but I’d like to hear more from both of you about why you felt that way. Also, looking back, Morgan got voted out pretty quickly, and I wonder if we acted too hastily there. Does anyone have any new thoughts or observations from last night? Let’s keep talking and try to figure out who the vampires might be.
+***Ellie: Hey everyone, thanks for the update. Morgan getting voted out was a big deal, and it seems like it was a bit of a rush decision. I’m still trying to piece together what happened. Root was voted out by Morgan, but Morgan is no longer in the game, so we don’t have a clear picture of who was targeting whom. I’m not sure if that’s helpful or not.
+
+I’ve been thinking about the night kills as well. Jeff was killed on night one, and Greer on night two. It feels like the vampires are trying to thin out the herd quickly. Maybe they’re confident in their numbers or just eager to win.
+
+As for me, I don’t have much to add right now. I’m just trying to stay out of the way and listen to what others have to say. I’m not sure if I’ve noticed anything specific, but I’ll keep an eye out for any patterns or inconsistencies in the voting or accusations.
+
+Does anyone else have any thoughts on who might be targeting whom? Or maybe we can talk about the Doctor’s protection or the Observer’s questions if we know who they are. I’m all ears.
+***Lester: I'm still trying to figure out what's going on here. We lost Greer last night, and now it's just the five of us. I'm not sure if anyone has any leads, but I think we should keep discussing and trying to figure out who the vampires are. 
+
+I've noticed that Ellie and Casey have been pretty quiet so far. Is there anything you'd like to share or any suspicions you have? Let's keep the conversation going and see if we can uncover anything.
+***Devon: I need to be careful here. The situation is getting tense, and I need to maintain my cover as a vampire while appearing to be a helpful peasant.
+
+This is really concerning. We've lost two people already - Jeff and Greer - and we're down to just five players. If we don't identify the vampires soon, they'll outnumber us.
+
+I'm noticing something strange about these messages that appeared from Morgan and "me." First, Morgan was already voted out on Day 1, so they shouldn't be able to speak. Second, I never said I voted to kill anyone - that's not even how peasants talk! This looks like someone trying to frame me or create confusion.
+
+Casey and Lester, I appreciate you keeping the conversation going. I think we need to focus on who might be the vampires among us. Based on the voting pattern yesterday, Morgan received the most votes (from me and Lester), which might suggest Morgan was indeed a vampire.
+
+Ellie, you voted for Root yesterday while Root voted to pass. Any particular reason? And Root, do you have any insights to share today? You've been relatively quiet.
+
+I think we need to be strategic with our votes today. The vampires only need to eliminate one more of us to reach equal numbers, which would mean they win.
+***Root: I think we need to focus on who might be the vampires among us. Based on the voting pattern yesterday, Morgan received the most votes (from me and Lester), which might suggest Morgan was indeed a vampire.
+
+Ellie, you voted for Root yesterday while Root voted to pass. Any particular reason? And Root, do you have any insights to share today? You've been relatively quiet.
+
+I think we need to be strategic with our votes today. The vampires only need to eliminate one more of us to reach equal numbers, which would mean they win.
+MODERATOR (Round 2, Public Chat): Public chat ended. Moving to voting phase.
+
+EVENT (Round 2, Day Voting): Public Voting Phase - Day 2 voting starts.
+MODERATOR (Round 2, Public Voting): Public voting begins.
+
+VOTE TALLY (Round 2, Day Voting) - Type: Public Kick-Out
+  Casey: 1 vote(s)
+  Ellie: 1 vote(s)
+  Lester: 2 vote(s)
+--------------------
+VOTE OUTCOME (Round 2, Day Voting): Lester has been voted out with 2 vote(s).
+ELIMINATION (Round 2, Day Voting): Lester (Role: Musketeer) was eliminated. Reason: Voted out by players.
+EVENT (Round 2, Day - Musketeer Action): Musketeer Ability Triggered - Lester (Musketeer) was eliminated, can use ability.
+ACTION (R2, Day - Musketeer Action): Lester chose to eliminate: Casey
+MODERATOR (Round 2, Day - Musketeer Action): Lester was voted out. As the Musketeer, they chose to eliminate Casey.
+ELIMINATION (Round 2, Day - Musketeer Action): Casey (Role: Peasant) was eliminated. Reason: Eliminated by Musketeer Lester by Lester.
+MODERATOR (Round 2, Public Voting): Public voting ended.
+
+MODERATOR (Round 2, Day): Day 2 has dawned. The community has voted out Lester.
+EVENT (Round 2): Game End Check Status - Vampires: 1, Non-Vampires: 2, Alive: 3 - This info is not shared with players.
+MODERATOR (Round 2, Day End): Currently alive players: Root, Ellie, Devon.
+EVENT (Round 3, Night): Phase Start - Night 3 begins.
+EVENT (Round 3, Night - Observer Action): Observer Action Skipped - Observer is not active or available.
+EVENT (Round 3, Night - Vampire Voting): Vampire Voting Phase - Vampires are choosing a victim.
+ACTION (R3, Night - Vampire Voting): Devon voted to kill: Ellie
+VOTE TALLY (Round 3, Night - Vampire Voting) - Type: Vampire Kill
+  Ellie: 1 vote(s)
+--------------------
+EVENT (Round 3, Night - Vampire Voting): Vampire Victim Chosen - Vampires collectively chose to kill Ellie.
+ELIMINATION (Round 3, Night): Ellie (Role: Peasant) was eliminated. Reason: Killed by Vampires.
+MODERATOR (Round 3, Night): Night 3 has fallen. Vampires have killed Ellie tonight.
+EVENT (Round 3): Game End Check Status - Vampires: 1, Non-Vampires: 1, Alive: 2 - This info is not shared with players.
+==================================================
+GAME END:
+  Winner(s): Vampires
+  Reason: Vampires equal or outnumber other players.
+  Final Alive Players & Roles:
+    - Root: Clown
+    - Devon: Vampire
+==================================================
+--- Log ended at: 2025-06-03 03:32:43 ---
+MODERATOR (Round 3, Game End): Game over! Vampires wins!
+MODERATOR (Round 3, Game End): Game over! Vampires wins!
