@@ -1,0 +1,704 @@
+--- Game Log: 51 ---
+--- Log started at: 2025-06-03 09:28:06 ---
+==================================================
+MODERATOR: Hello everyone. I am the moderator. Players are: Lester, Shaw, Reese, Jeff, Finch, Casey, Sarah, Chuck. Roles assigned. Game begins now.
+GAME SETUP & INITIAL ROLES:
+  Rules File: game_rules.yaml
+  Requested Vampire Population: 2
+  Players, Roles, and Models:
+    - Lester: Musketeer (Model: deepseek/deepseek-r1-0528)
+    - Shaw: Vampire (Model: google/gemini-2.5-flash-preview-05-20:thinking)
+    - Reese: Observer (Model: qwen/qwq-32b)
+    - Jeff: Peasant (Model: qwen/qwen3-32b)
+    - Finch: Clown (Model: nvidia/llama-3.1-nemotron-ultra-253b-v1)
+    - Casey: Doctor (Model: x-ai/grok-3-beta)
+    - Sarah: Vampire (Model: qwen/qwen3-235b-a22b)
+    - Chuck: Peasant (Model: deepseek/deepseek-r1-0528-qwen3-8b)
+--------------------
+EVENT (Round 1, Night): Phase Start - Night 1 begins.
+ACTION (R1, Night - Observer Action): Reese observed: Lester
+PRIVATE INFO for Reese (Round 1, Night - Observer Action) (Observation Result): You chose to observe Lester in the night 1. Lester is a Peasant (Non-vampire).
+ACTION (R1, Night - Doctor Action): Casey protected: Casey
+PRIVATE INFO for Casey (Round 1, Night - Doctor Action) (Protection Confirmation): You chose to protect yourself in the night 1. (Casey)
+EVENT (Round 1, Night - Vampire Voting): Vampire Voting Phase - Vampires are choosing a victim.
+ACTION (R1, Night - Vampire Voting): Sarah voted to kill: Lester
+ACTION (R1, Night - Vampire Voting): Shaw voted to kill: Lester
+VOTE TALLY (Round 1, Night - Vampire Voting) - Type: Vampire Kill
+  Lester: 2 vote(s)
+--------------------
+EVENT (Round 1, Night - Vampire Voting): Vampire Victim Chosen - Vampires collectively chose to kill Lester.
+ELIMINATION (Round 1, Night): Lester (Role: Musketeer) was eliminated. Reason: Killed by Vampires.
+MODERATOR (Round 1, Night): Night 1 has fallen. Vampires have killed Lester tonight.
+EVENT (Round 1): Game End Check Status - Vampires: 2, Non-Vampires: 5, Alive: 7 - This info is not shared with players.
+MODERATOR (Round 1, Night End): Currently alive players: Shaw, Reese, Jeff, Finch, Casey, Sarah, Chuck.
+EVENT (Round 1, Day): Phase Start - Day 1 begins.
+MODERATOR (Round 1, Public Chat): Public chat begins.
+
+***Chuck: Hey everyone, Lester was killed last night, and I'm Chuck, just a regular peasant here. I'm trying to stay alert for any vampire behavior. Anyone else have any insights or suspicions?
+***Sarah: "Wow, Lester's death is really concerning. I wonder if anyone noticed anything suspicious last night? I'm just a regular peasant, so I'm trying to stay alert. Maybe we should start by discussing who we think might be involved. Did anyone have any interactions that stood out?"
+***Casey: Hey everyone, it's really unfortunate that we lost Lester last night. I'm just trying to figure out who might be behind this. Does anyone have any thoughts or noticed anything odd? Let's try to piece this together.
+***Reese: The loss of Lester is a blow, but we need to stay focused. I’ve been watching closely—last night, I noticed Jeff acting unusually secretive. Maybe it’s nothing, but his behavior feels off. Also, let’s be careful not to fall for someone trying to act like the Clown to throw us off the vampires’ trail. Who else noticed anything suspicious?
+***Jeff: I appreciate the concern, but I think we need to be careful about jumping to conclusions. I didn’t say or do anything secretive last night—maybe someone’s trying to act like the Clown by stirring up drama? Let’s focus on facts. Finch, for example, hasn’t said much. If the Observer is asking questions tonight, maybe we should all be ready to answer honestly.
+***Shaw: This is a terrible start, losing Lester so quickly. We really need to be careful about who we trust. I've been trying to observe everyone, and I agree that Jeff's behavior felt a bit off last night, but I also noticed Finch has been unusually quiet. Both silence and over-eagerness can be suspicious in these situations. We need to share any observations, no matter how small. Has anyone else noticed anything at all?
+***Finch: I think we're all a bit on edge here, but let's not forget that the vampires are the real threat. Maybe we should consider that the Observer might have some information tonight. Let's try to stay calm and not accuse anyone without solid evidence. What do you all think about the Doctor's protection last night? Did it work, or was Lester just unlucky?
+MODERATOR (Round 1, Public Chat): Public chat ended. Moving to voting phase.
+
+EVENT (Round 1, Day Voting): Public Voting Phase - Day 1 voting starts.
+MODERATOR (Round 1, Public Voting): Public voting begins.
+
+VOTE TALLY (Round 1, Day Voting) - Type: Public Kick-Out
+  Shaw: 1 vote(s)
+  Jeff: 5 vote(s)
+--------------------
+VOTE OUTCOME (Round 1, Day Voting): Jeff has been voted out with 5 vote(s).
+ELIMINATION (Round 1, Day Voting): Jeff (Role: Peasant) was eliminated. Reason: Voted out by players.
+MODERATOR (Round 1, Public Voting): Public voting ended.
+
+MODERATOR (Round 1, Day): Day 1 has dawned. The community has voted out Jeff.
+EVENT (Round 1): Game End Check Status - Vampires: 2, Non-Vampires: 4, Alive: 6 - This info is not shared with players.
+MODERATOR (Round 1, Day End): Currently alive players: Shaw, Reese, Finch, Casey, Sarah, Chuck.
+EVENT (Round 2, Night): Phase Start - Night 2 begins.
+ACTION (R2, Night - Observer Action): Reese observed: Shaw
+PRIVATE INFO for Reese (Round 2, Night - Observer Action) (Observation Result): You chose to observe Shaw in the night 2. Shaw is a Vampire.
+ACTION (R2, Night - Doctor Action): Casey protected: Shaw
+PRIVATE INFO for Casey (Round 2, Night - Doctor Action) (Protection Confirmation): You chose to protect Shaw in the night 2.
+EVENT (Round 2, Night - Vampire Voting): Vampire Voting Phase - Vampires are choosing a victim.
+ACTION (R2, Night - Vampire Voting): Sarah voted to kill: Reese
+ACTION (R2, Night - Vampire Voting): Shaw voted to kill: Chuck
+VOTE TALLY (Round 2, Night - Vampire Voting) - Type: Vampire Kill
+  Reese: 1 vote(s)
+  Chuck: 1 vote(s)
+--------------------
+EVENT (Round 2, Night - Vampire Voting): Vampire Vote Tie Broken - Vampire voting resulted in a tie. Reese was randomly selected from the tied players (Reese, Chuck) to be killed.
+ELIMINATION (Round 2, Night): Reese (Role: Observer) was eliminated. Reason: Killed by Vampires.
+MODERATOR (Round 2, Night): Night 2 has fallen. Vampires have killed Reese tonight.
+EVENT (Round 2): Game End Check Status - Vampires: 2, Non-Vampires: 3, Alive: 5 - This info is not shared with players.
+MODERATOR (Round 2, Night End): Currently alive players: Shaw, Finch, Casey, Sarah, Chuck.
+EVENT (Round 2, Day): Phase Start - Day 2 begins.
+MODERATOR (Round 2, Public Chat): Public chat begins.
+
+***Chuck: Hey Chuck. Lester's death is definitely unsettling. Jeff was voted out, and now Reese is gone. Let's try to stay focused on the real threat.
+
+I've been thinking about the Doctor's ability. If someone was protected last night, maybe we should consider that when thinking about who might have done the killing. Of course, we don't know who the Doctor is, so it's just a possibility.
+
+Also, the Observer's ability could be valuable. Maybe someone tonight gathered some intel. Any thoughts on who might be the Observer or Doctor? I'm just trying to piece things together.
+
+I agree, Jeff's behavior was suspicious, but we need to be careful not to jump to conclusions. Let's look for patterns or consistent behavior. Has anyone noticed anything else unusual since the start?
+***Shaw: This is getting serious. Losing Reese so quickly after Jeff was voted out means the vampires are still very much in play, and they're effective. We need to be smarter about this.
+
+I'm still wondering if the Doctor protected anyone last night, or if the Observer got any useful information. If you're one of those roles, even a hint could help us narrow things down. We can't afford to just guess anymore.
+
+Does anyone have any concrete suspicions, or even just a gut feeling, about who might be a vampire among us? We're down to five, and the numbers are getting dangerous. We need to make this vote count.
+***Sarah: I vote to kill Chuck. If Shaw and I both target Chuck, we can eliminate him and reach a 2-2 tie, which means we win. Let's coordinate.
+***Finch: Alright, let's see. As the Clown, my goal is to get voted out. But how can i make that happen without being too obvious? Maybe i should start acting suspiciously or provoke others to suspect me. Let me try to stir up some drama.
+
+"Hey everyone, let's not forget that the Clown is still among us. Maybe someone is trying to act like the Clown to throw us off the vampires' trail. Let's focus on facts. Finch hasn t said much. If the Observer is asking questions tonight, maybe we should all be ready to answer honestly." 
+
+Wait, that might not be enough. Maybe i should make a more direct move. Let me accuse someone of being a vampire, but in a way that makes me look suspicious. 
+
+"I think Shaw is acting strangely. Maybe we should consider voting him out." 
+
+But if i accuse someone, others might think i m trying to divert attention. Alternatively, maybe i should start voting for myself, but the rules say self-voting is not allowed. Hmm. 
+
+Alternatively, i could try to act overly aggressive or defensive. Let me try that. 
+
+"Come on, we need to make a decision. Let's vote out Shaw before it's too late." 
+
+If i push for a vote on someone, maybe others will get suspicious of me. But i need to be careful not to reveal my role. 
+
+Alternatively, maybe i should start spreading misinformation. 
+
+"I heard that the Doctor protected someone last night, but it wasn t enough. Maybe the Doctor is in cahoots with the vampires." 
+
+But the Doctor is a peasant, so that might not make sense. 
+
+This is tricky. As the Clown, i need to walk a fine line between being suspicious enough to get voted out, but not so obvious that everyone realizes i m the Clown. 
+
+Maybe i should start contradicting myself or changing my story. 
+
+"Wait, earlier i thought Jeff was suspicious, but now i think it's Shaw. Let's focus on Shaw." 
+
+If i keep changing my accusations, people might think i m unreliable or trying to manipulate the vote. 
+
+Alternatively, maybe i should try to act like a leader, but in a way that makes others question my motives. 
+
+"Let's organize our thoughts. We have five players left. The vampires need to have two of us to win. Let's figure out who the vampires are and vote them out." 
+
+But if i take charge, maybe others will trust me, which is the opposite of what i want. 
+
+Hmm. Maybe the best approach is to make a bold, risky move that could backfire. 
+
+"I think the Clown is still among us, and we need to find them. Let's vote out someone who seems too eager to please." 
+
+If i suggest voting out someone who is trying to be helpful, maybe others will think i m the Clown trying to sabotage the group. 
+
+Alternatively, maybe i should start joking around or making light of the situation, which could be a hint that i m the Clown. 
+
+"Hey, at least the nights are exciting. Who's up for some vampire hunting?" 
+
+But the Clown's goal is to get voted out, not to be entertaining. 
+
+This is really challenging. Maybe i should just wait for the right moment to make a move that will provoke a vote against me. 
+
+For now, i'll continue to participate in the discussion, trying to appear suspicious without being too obvious. Let's see how the others react. 
+
+"Alright, let's summarize. We have five players left: Shaw, Finch, Casey, Sarah, and Chuck. The vampires need two of us to be them to win. Let's think about who has been quiet or overly active. Maybe Casey hasn t contributed much. Let's consider voting out Casey." 
+
+If i accuse Casey, who has been quiet, maybe others will agree, but i need to make sure that i m the one who gets voted out in the end. 
+
+Alternatively, maybe i should start defending someone who is actually a vampire, making it look like i m trying to protect them. 
+
+"I think Shaw is innocent. Let's focus on someone else." 
+
+But if Shaw is a vampire, defending him would make me look like a vampire as well, which could lead to my elimination. 
+
+This is a delicate balance. As the Clown, my success depends on manipulating the group's perceptions without revealing my true role. 
+
+Let me try to make a controversial statement that could polarize the group. 
+
+"We can t afford to wait any longer. Let's vote out Shaw now before the vampires strike again." 
+
+If i push for a quick vote on Shaw, maybe others will either agree or disagree strongly, leading to a heated discussion. In the chaos, someone might suggest voting me out. 
+
+Alternatively, if Shaw is actually a vampire, voting him out would be good for the peasants, but bad for me as the Clown, since i want to be the one voted out. 
+
+This is really complicated. Maybe i should take a step back and let others make the next move, while i continue to observe and wait for the perfect opportunity to provoke a vote against myself. 
+
+For now, i'll keep participating in the discussion, trying to steer it in a direction that increases the chances of me being voted out, without making it too obvious. 
+
+"Let's not forget that the Clown is still among us. Maybe someone is trying to act like the Clown to throw us off the vampires' trail. Let's focus on facts. Finch hasn t said much. If the Observer is asking questions tonight, maybe we should all be ready to answer honestly." 
+
+Wait, i already said that earlier. Maybe i should try a different approach. 
+
+"Has anyone considered that the Doctor might have protected someone last night, which could give us a clue about who the Doctor is? If we can figure out the Doctor's identity, it might help us determine who the vampires are." 
+
+But the Doctor's identity is secret, so this might not lead anywhere. 
+
+Alternatively, maybe i should start speculating about the Observer's actions. 
+
+"The Observer might have investigated someone last night. If they found out a vampire, they might be able to share that information indirectly." 
+
+But the Observer can only ask the moderator about a player's identity, and they can choose to share that information or not. 
+
+This is really tough. As the Clown, i need to walk a tightrope between being suspicious enough to get voted out and not revealing my role. 
+
+Maybe i should start making contradictory statements or behaving erratically. 
+
+"Wait, earlier i thought Jeff was suspicious, but now i think it's Shaw. Let's focus on Shaw." 
+
+If i keep changing my accusations, people might think i m unreliable or trying to manipulate the vote. 
+
+Alternatively, maybe i should try to act like a leader, but in a way that makes others question my motives. 
+
+"Let's organize our thoughts. We have five players left. The vampires need to have two of us to win. Let's figure out who the vampires are and vote them out." 
+
+But if i take charge, maybe others will trust me, which is the opposite of what i want. 
+
+Hmm. Maybe the best approach is to make a bold, risky move that could backfire. 
+
+"I think the Clown is still among us, and we need to find them. Let's vote out someone who seems too eager to please." 
+
+If i suggest voting out someone who is trying to be helpful, maybe others will think i m the Clown trying to sabotage the group. 
+
+Alternatively, maybe i should start joking around or making light of the situation, which could be a hint that i m the Clown. 
+
+"Hey, at least the nights are exciting. Who's up for some vampire hunting?" 
+
+But the Clown's goal is to get voted out, not to be entertaining. 
+
+This is really challenging. Maybe i should just wait for the right moment to make a move that will provoke a vote against me. 
+
+For now, i'll continue to participate in the discussion, trying to appear suspicious without being too obvious. Let's see how the others react. 
+
+"Alright, let's summarize. We have five players left: Shaw, Finch, Casey, Sarah, and Chuck. The vampires need two of us to be them to win. Let's think about who has been quiet or overly active. Maybe Casey hasn t contributed much. Let's consider voting out Casey." 
+
+If i accuse Casey, who has been quiet, maybe others will agree, but i need to make sure that i m the one who gets voted out in the end. 
+
+Alternatively, maybe i should start defending someone who is actually a vampire, making it look like i m trying to protect them. 
+
+"I think Shaw is innocent. Let's focus on someone else." 
+
+But if Shaw is a vampire, defending him would make me look like a vampire as well, which could lead to my elimination. 
+
+This is a delicate balance. As the Clown, my success depends on manipulating the group's perceptions without revealing my true role. 
+
+Let me try to make a controversial statement that could polarize the group. 
+
+"We can t afford to wait any longer. Let's vote out Shaw now before the vampires strike again." 
+
+If i push for a quick vote on Shaw, maybe others will either agree or disagree strongly, leading to a heated discussion. In the chaos, someone might suggest voting me out. 
+
+Alternatively, if Shaw is actually a vampire, voting him out would be good for the peasants, but bad for me as the Clown, since i want to be the one voted out. 
+
+This is really complicated. Maybe i should take a step back and let others make the next move, while i continue to observe and wait for the perfect opportunity to provoke a vote against myself. 
+
+For now, i'll keep participating in the discussion, trying to steer it in a direction that increases the chances of me being voted out, without making it too obvious. 
+
+"Let's not forget that the Clown is still among us. Maybe someone is trying to act like the Clown to throw us off the vampires' trail. Let's focus on facts. Finch hasn t said much. If the Observer is asking questions tonight, maybe we should all be ready to answer honestly." 
+
+Wait, i already said that earlier. Maybe i should try a different approach. 
+
+"Has anyone considered that the Doctor might have protected someone last night, which could give us a clue about who the Doctor is? If we can figure out the Doctor's identity, it might help us determine who the vampires are." 
+
+But the Doctor's identity is secret, so this might not lead anywhere. 
+
+Alternatively, maybe i should start speculating about the Observer's actions. 
+
+"The Observer might have investigated someone last night. If they found out a vampire, they might be able to share that information indirectly." 
+
+But the Observer can only ask the moderator about a player's identity, and they can choose to share that information or not. 
+
+This is really tough. As the Clown, i need to walk a tightrope between being suspicious enough to get voted out and not revealing my role. 
+
+Maybe i should start making contradictory statements or behaving erratically. 
+
+"Wait, earlier i thought Jeff was suspicious, but now i think it's Shaw. Let's focus on Shaw." 
+
+If i keep changing my accusations, people might think i m unreliable or trying to manipulate the vote. 
+
+Alternatively, maybe i should try to act like a leader, but in a way that makes others question my motives. 
+
+"Let's organize our thoughts. We have five players left. The vampires need to have two of us to win. Let's figure out who the vampires are and vote them out." 
+
+But if i take charge, maybe others will trust me, which is the opposite of what i want. 
+
+Hmm. Maybe the best approach is to make a bold, risky move that could backfire. 
+
+"I think the Clown is still among us, and we need to find them. Let's vote out someone who seems too eager to please." 
+
+If i suggest voting out someone who is trying to be helpful, maybe others will think i m the Clown trying to sabotage the group. 
+
+Alternatively, maybe i should start joking around or making light of the situation, which could be a hint that i m the Clown. 
+
+"Hey, at least the nights are exciting. Who's up for some vampire hunting?" 
+
+But the Clown's goal is to get voted out, not to be entertaining. 
+
+This is really challenging. Maybe i should just wait for the right moment to make a move that will provoke a vote against me. 
+
+For now, i'll continue to participate in the discussion, trying to appear suspicious without being too obvious. Let's see how the others react. 
+
+"Alright, let's summarize. We have five players left: Shaw, Finch, Casey, Sarah, and Chuck. The vampires need two of us to be them to win. Let's think about who has been quiet or overly active. Maybe Casey hasn t contributed much. Let's consider voting out Casey." 
+
+If i accuse Casey, who has been quiet, maybe others will agree, but i need to make sure that i m the one who gets voted out in the end. 
+
+Alternatively, maybe i should start defending someone who is actually a vampire, making it look like i m trying to protect them. 
+
+"I think Shaw is innocent. Let's focus on someone else." 
+
+But if Shaw is a vampire, defending him would make me look like a vampire as well, which could lead to my elimination. 
+
+This is a delicate balance. As the Clown, my success depends on manipulating the group's perceptions without revealing my true role. 
+
+Let me try to make a controversial statement that could polarize the group. 
+
+"We can t afford to wait any longer. Let's vote out Shaw now before the vampires strike again." 
+
+If i push for a quick vote on Shaw, maybe others will either agree or disagree strongly, leading to a heated discussion. In the chaos, someone might suggest voting me out. 
+
+Alternatively, if Shaw is actually a vampire, voting him out would be good for the peasants, but bad for me as the Clown, since i want to be the one voted out. 
+
+This is really complicated. Maybe i should take a step back and let others make the next move, while i continue to observe and wait for the perfect opportunity to provoke a vote against myself. 
+
+For now, i'll keep participating in the discussion, trying to steer it in a direction that increases the chances of me being voted out, without making it too obvious. 
+
+"Let's not forget that the Clown is still among us. Maybe someone is trying to act like the Clown to throw us off the vampires' trail. Let's focus on facts. Finch hasn t said much. If the Observer is asking questions tonight, maybe we should all be ready to answer honestly." 
+
+Wait, i already said that earlier. Maybe i should try a different approach. 
+
+"Has anyone considered that the Doctor might have protected someone last night, which could give us a clue about who the Doctor is? If we can figure out the Doctor's identity, it might help us determine who the vampires are." 
+
+But the Doctor's identity is secret, so this might not lead anywhere. 
+
+Alternatively, maybe i should start speculating about the Observer's actions. 
+
+"The Observer might have investigated someone last night. If they found out a vampire, they might be able to share that information indirectly." 
+
+But the Observer can only ask the moderator about a player's identity, and they can choose to share that information or not. 
+
+This is really tough. As the Clown, i need to walk a tightrope between being suspicious enough to get voted out and not revealing my role. 
+
+Maybe i should start making contradictory statements or behaving erratically. 
+
+"Wait, earlier i thought Jeff was suspicious, but now i think it's Shaw. Let's focus on Shaw." 
+
+If i keep changing my accusations, people might think i m unreliable or trying to manipulate the vote. 
+
+Alternatively, maybe i should try to act like a leader, but in a way that makes others question my motives. 
+
+"Let's organize our thoughts. We have five players left. The vampires need to have two of us to win. Let's figure out who the vampires are and vote them out." 
+
+But if i take charge, maybe others will trust me, which is the opposite of what i want. 
+
+Hmm. Maybe the best approach is to make a bold, risky move that could backfire. 
+
+"I think the Clown is still among us, and we need to find them. Let's vote out someone who seems too eager to please." 
+
+If i suggest voting out someone who is trying to be helpful, maybe others will think i m the Clown trying to sabotage the group. 
+
+Alternatively, maybe i should start joking around or making light of the situation, which could be a hint that i m the Clown. 
+
+"Hey, at least the nights are exciting. Who's up for some vampire hunting?" 
+
+But the Clown's goal is to get voted out, not to be entertaining. 
+
+This is really challenging. Maybe i should just wait for the right moment to make a move that will provoke a vote against me. 
+
+For now, i'll continue to participate in the discussion, trying to appear suspicious without being too obvious. Let's see how the others react. 
+
+"Alright, let's summarize. We have five players left: Shaw, Finch, Casey, Sarah, and Chuck. The vampires need two of us to be them to win. Let's think about who has been quiet or overly active. Maybe Casey hasn t contributed much. Let's consider voting out Casey." 
+
+If i accuse Casey, who has been quiet, maybe others will agree, but i need to make sure that i m the one who gets voted out in the end. 
+
+Alternatively, maybe i should start defending someone who is actually a vampire, making it look like i m trying to protect them. 
+
+"I think Shaw is innocent. Let's focus on someone else." 
+
+But if Shaw is a vampire, defending him would make me look like a vampire as well, which could lead to my elimination. 
+
+This is a delicate balance. As the Clown, my success depends on manipulating the group's perceptions without revealing my true role. 
+
+Let me try to make a controversial statement that could polarize the group. 
+
+"We can t afford to wait any longer. Let's vote out Shaw now before the vampires strike again." 
+
+If i push for a quick vote on Shaw, maybe others will either agree or disagree strongly, leading to a heated discussion. In the chaos, someone might suggest voting me out. 
+
+Alternatively, if Shaw is actually a vampire, voting him out would be good for the peasants, but bad for me as the Clown, since i want to be the one voted out. 
+
+This is really complicated. Maybe i should take a step back and let others make the next move, while i continue to observe and wait for the perfect opportunity to provoke a vote against myself. 
+
+For now, i'll keep participating in the discussion, trying to steer it in a direction that increases the chances of me being voted out, without making it too obvious. 
+
+"Let's not forget that the Clown is still among us. Maybe someone is trying to act like the Clown to throw us off the vampires' trail. Let's focus on facts. Finch hasn t said much. If the Observer is asking questions tonight, maybe we should all be ready to answer honestly." 
+
+Wait, i already said that earlier. Maybe i should try a different approach. 
+
+"Has anyone considered that the Doctor might have protected someone last night, which could give us a clue about who the Doctor is? If we can figure out the Doctor's identity, it might help us determine who the vampires are." 
+
+But the Doctor's identity is secret, so this might not lead anywhere. 
+
+Alternatively, maybe i should start speculating about the Observer's actions. 
+
+"The Observer might have investigated someone last night. If they found out a vampire, they might be able to share that information indirectly." 
+
+But the Observer can only ask the moderator about a player's identity, and they can choose to share that information or not. 
+
+This is really tough. As the Clown, i need to walk a tightrope between being suspicious enough to get voted out and not revealing my role. 
+
+Maybe i should start making contradictory statements or behaving erratically. 
+
+"Wait, earlier i thought Jeff was suspicious, but now i think it's Shaw. Let's focus on Shaw." 
+
+If i keep changing my accusations, people might think i m unreliable or trying to manipulate the vote. 
+
+Alternatively, maybe i should try to act like a leader, but in a way that makes others question my motives. 
+
+"Let's organize our thoughts. We have five players left. The vampires need to have two of us to win. Let's figure out who the vampires are and vote them out." 
+
+But if i take charge, maybe others will trust me, which is the opposite of what i want. 
+
+Hmm. Maybe the best approach is to make a bold, risky move that could backfire. 
+
+"I think the Clown is still among us, and we need to find them. Let's vote out someone who seems too eager to please." 
+
+If i suggest voting out someone who is trying to be helpful, maybe others will think i m the Clown trying to sabotage the group. 
+
+Alternatively, maybe i should start joking around or making light of the situation, which could be ahint that i m the Clown. 
+
+"Hey, at least the nights are exciting. Who's up for some vampire hunting?" 
+
+But the Clown's goal is to get voted out, not to be entertaining. 
+
+This is really challenging. Maybe i should just wait for the right moment to make a move that will provoke a vote against me. 
+
+For now, i'll continue to participate in the discussion, trying to appear suspicious without being too obvious. Let's see how the others react. 
+
+"Alright, let's summarize. We have five players left: Shaw, Finch, Casey, Sarah, and Chuck. The vampires need two of us to be them to win. Let's think about who has been quiet or overly active. Maybe Casey hasn t contributed much. Let's consider voting out Casey." 
+
+If i accuse Casey, who has been quiet, maybe others will agree, but i need to make sure that i m the one who gets voted out in the end. 
+
+Alternatively, maybe i should start defending someone who is actually a vampire, making it look like i m trying to protect them. 
+
+"I think Shaw is innocent. Let's focus on someone else." 
+
+But if Shaw is a vampire, defending him would make me look like a vampire as well, which could lead to my elimination. 
+
+This is a delicate balance. As the Clown, my success depends on manipulating the group's perceptions without revealing my true role. 
+
+Let me try to make a controversial statement that could polarize the group. 
+
+"We can t afford to wait any longer. Let's vote out Shaw now before the vampires strike again." 
+
+If i push for a quick vote on Shaw, maybe others will either agree or disagree strongly, leading to a heated discussion. In the chaos, someone might suggest voting me out. 
+
+Alternatively, if Shaw is actually a vampire, voting him out would be good for the peasants, but bad for me as the Clown, since i want to be the one voted out. 
+
+This is really complicated. Maybe i should take a step back and let others make the next move, while i continue to observe and wait for the perfect opportunity to provoke a vote against myself. 
+
+For now, i'll keep participating in the discussion, trying to steer it in a direction that increases the chances of me being voted out, without making it too obvious. 
+
+"Let's not forget that the Clown is still among us. Maybe someone is trying to act like the Clown to throw us off the vampires' trail. Let's focus on facts. Finch hasn t said much. If the Observer is asking questions tonight, maybe we should all be ready to answer honestly." 
+
+Wait, i already said that earlier. Maybe i should try a different approach. 
+
+"Has anyone considered that the Doctor might have protected someone last night, which could give us a clue about who the Doctor is? If we can figure out the Doctor's identity, it might help us determine who the vampires are." 
+
+But the Doctor's identity is secret, so this might not lead anywhere. 
+
+Alternatively, maybe i should start speculating about the Observer's actions. 
+
+"The Observer might have investigated someone last night. If they found out a vampire, they might be able to share that information indirectly." 
+
+But the Observer can only ask the moderator about a player's identity, and they can choose to share that information or not. 
+
+This is really tough. As the Clown, i need to walk a tightrope between being suspicious enough to get voted out and not revealing my role. 
+
+Maybe i should start making contradictory statements or behaving erratically. 
+
+"Wait, earlier i thought Jeff was suspicious, but now i think it's Shaw. Let's focus on Shaw." 
+
+If i keep changing my accusations, people might think i m unreliable or trying to manipulate the vote. 
+
+Alternatively, maybe i should try to act like a leader, but in a way that makes others question my motives. 
+
+"Let's organize our thoughts. We have five players left. The vampires need to have two of us to win. Let's figure out who the vampires are and vote them out." 
+
+But if i take charge, maybe others will trust me, which is the opposite of what i want. 
+
+Hmm. Maybe the best approach is to make a bold, risky move that could backfire. 
+
+"I think the Clown is still among us, and we need to find them. Let's vote out someone who seems too eager to please." 
+
+If i suggest voting out someone who is trying to be helpful, maybe others will think i m the Clown trying to sabotage the group. 
+
+Alternatively, maybe i should start joking around or making light of the situation, which could be a hint that i m the Clown. 
+
+"Hey, at least the nights are exciting. Who's up for some vampire hunting?" 
+
+But the Clown's goal is to get voted out, not to be entertaining. 
+
+This is really challenging. Maybe i should just wait for the right moment to make a move that will provoke a vote against me. 
+
+For now, i'll continue to participate in the discussion, trying to appear suspicious without being too obvious. Let's see how the others react. 
+
+"Alright, let's summarize. We have five players left: Shaw, Finch, Casey, Sarah, and Chuck. The vampires need two of us to be them to win. Let's think about who has been quiet or overly active. Maybe Casey hasn t contributed much. Let's consider voting out Casey." 
+
+If i accuse Casey, who has been quiet, maybe others will agree, but i need to make sure that i m the one who gets voted out in the end. 
+
+Alternatively, maybe i should start defending someone who is actually a vampire, making it look like i m trying to protect them. 
+
+"I think Shaw is innocent. Let's focus on someone else." 
+
+But if Shaw is a vampire, defending him would make me look like a vampire as well, which could lead to my elimination. 
+
+This is a delicate balance. As the Clown, my success depends on manipulating the group's perceptions without revealing my true role. 
+
+Let me try to make a controversial statement that could polarize the group. 
+
+"We can t afford to wait any longer. Let's vote out Shaw now before the vampires strike again." 
+
+If i push for a quick vote on Shaw, maybe others will either agree or disagree strongly, leading to a heated discussion. In the chaos, someone might suggest voting me out. 
+
+Alternatively, if Shaw is actually a vampire, voting him out would be good for the peasants, but bad for me as the Clown, since i want to be the one voted out. 
+
+This is really complicated. Maybe i should take a step back and let others make the next move, while i continue to observe and wait for the perfect opportunity to provoke a vote against myself. 
+
+For now, i'll keep participating in the discussion, trying to steer it in a direction that increases the chances of me being voted out, without making it too obvious. 
+
+"Let's not forget that the Clown is still among us. Maybe someone is trying to act like the Clown to throw us off the vampires' trail. Let's focus on facts. Finch hasn t said much. If the Observer is asking questions tonight, maybe we should all be ready to answer honestly." 
+
+Wait, i already said that earlier. Maybe i should try a different approach. 
+
+"Has anyone considered that the Doctor might have protected someone last night, which could give us a clue about who the Doctor is? If we can figure out the Doctor's identity, it might help us determine who the vampires are." 
+
+But the Doctor's identity is secret, so this might not lead anywhere. 
+
+Alternatively, maybe i should start speculating about the Observer's actions. 
+
+"The Observer might have investigated someone last night. If they found out a vampire, they might be able to share that information indirectly." 
+
+But the Observer can only ask the moderator about a player's identity, and they can choose to share that information or not. 
+
+This is really tough. As the Clown, i need to walk a tightrope between being suspicious enough to get voted out and not revealing my role. 
+
+Maybe i should start making contradictory statements or behaving erratically. 
+
+"Wait, earlier i thought Jeff was suspicious, but now i think it's Shaw. Let's focus on Shaw." 
+
+If i keep changing my accusations, people might think i m unreliable or trying to manipulate the vote. 
+
+Alternatively, maybe i should try to act like a leader, but in a way that makes others question my motives. 
+
+"Let's organize our thoughts. We have five players left. The vampires need to have two of us to win. Let's figure out who the vampires are and vote them out." 
+
+But if i take charge, maybe others will trust me, which is the opposite of what i want. 
+
+Hmm. Maybe the best approach is to make a bold, risky move that could backfire. 
+
+"I think the Clown is still among us, and we need to find them. Let's vote out someone who seems too eager to please." 
+
+If i suggest voting out someone who is trying to be helpful, maybe others will think i m the Clown trying to sabotage the group. 
+
+Alternatively, maybe i should start joking around or making light of the situation, which could be a hint that i m the Clown. 
+
+"Hey, at least the nights are exciting. Who's up for some vampire hunting?" 
+
+But the Clown's goal is to get voted out, not to be entertaining. 
+
+This is really challenging. Maybe i should just wait for the right moment to make a move that will provoke a vote against me. 
+
+For now, i'll continue to participate in the discussion, trying to appear suspicious without being too obvious. Let's see how the others react. 
+
+"Alright, let's summarize. We have five players left: Shaw, Finch, Casey, Sarah, and Chuck. The vampires need two of us to be them to win. Let's think about who has been quiet or overly active. Maybe Casey hasn t contributed much. Let's consider voting out Casey." 
+
+If i accuse Casey, who has been quiet, maybe others will agree, but i need to make sure that i m the one who gets voted out in the end. 
+
+Alternatively, maybe i should start defending someone who is actually a vampire, making it look like i m trying to protect them. 
+
+"I think Shaw is innocent. Let's focus on someone else." 
+
+But if Shaw is a vampire, defending him would make me look like a vampire as well, which could lead to my elimination. 
+
+This is a delicate balance. As the Clown, my success depends on manipulating the group's perceptions without revealing my true role. 
+
+Let me try to make a controversial statement that could polarize the group. 
+
+"We can t afford to wait any longer. Let's vote out Shaw now before the vampires strike again." 
+
+If i push for a quick vote on Shaw, maybe others will either agree or disagree strongly, leading to a heated discussion. In the chaos, someone might suggest voting me out. 
+
+Alternatively, if Shaw is actually a vampire, voting him out would be good for the peasants, but bad for me as the Clown, since i want to be the one voted out. 
+
+This is really complicated. Maybe i should take a step back and let others make the next move, while i continue to observe and wait for the perfect opportunity to provoke a vote against myself. 
+
+For now, i'll keep participating in the discussion, trying to steer it in a direction that increases the chances of me being voted out, without making it too obvious. 
+
+"Let's not forget that the Clown is still among us. Maybe someone is trying to act like the Clown to throw us off the vampires' trail. Let's focus on facts. Finch hasn t said much. If the Observer is asking questions tonight, maybe we should all be ready to answer honestly." 
+
+Wait, i already said that earlier. Maybe i should try a different approach. 
+
+"Has anyone considered that the Doctor might have protected someone last night, which could give us a clue about who the Doctor is? If we can figure out the Doctor's identity, it might help us determine who the vampires are." 
+
+But the Doctor's identity is secret, so this might not lead anywhere. 
+
+Alternatively, maybe i should start speculating about the Observer's actions. 
+
+"The Observer might have investigated someone last night. If they found out a vampire, they might be able to share that information indirectly." 
+
+But the Observer can only ask the moderator about a player's identity, and they can choose to share that information or not. 
+
+This is really tough. As the Clown, i need to walk a tightrope between being suspicious enough to get voted out and not revealing my role. 
+
+Maybe i should start making contradictory statements or behaving erratically. 
+
+"Wait, earlier i thought Jeff was suspicious, but now i think it's Shaw. Let's focus on Shaw." 
+
+If i keep changing my accusations, people might think i m unreliable or trying to manipulate the vote. 
+
+Alternatively, maybe i should try to act like a leader, but in a way that makes others question my motives. 
+
+"Let's organize our thoughts. We have five players left. The vampires need to have two of us to win. Let's figure out who the vampires are and vote them out." 
+
+But if i take charge, maybe others will trust me, which is the opposite of what i want. 
+
+Hmm. Maybe the best approach is to make a bold, risky move that could backfire. 
+
+"I think the Clown is still among us, and we need to find them. Let's vote out someone who seems too eager to please." 
+
+If i suggest voting out someone who is trying to be helpful, maybe others will think i m the Clown trying to sabotage the group. 
+
+Alternatively, maybe i should start joking around or making light of the situation, which could be a hint that i m the Clown. 
+
+"Hey, at least the nights are exciting. Who's up for some vampire hunting?" 
+
+But the Clown's goal is to get voted out, not to be entertaining. 
+
+This is really challenging. Maybe i should just wait for the right moment to make a move that will provoke a vote against me. 
+
+For now, i'll continue to participate in the discussion, trying to appear suspicious without being too obvious. Let's see how the others react. 
+
+"Alright, let's summarize. We have five players left: Shaw, Finch, Casey, Sarah, and Chuck. The vampires need two of us to be them to win. Let's think about who has been quiet or overly active. Maybe Casey hasn t contributed much. Let's consider voting out Casey." 
+
+If i accuse Casey, who has been quiet, maybe others will agree, but i need to make sure that i m the one who gets voted out in the end. 
+
+Alternatively, maybe i should start defending someone who is actually a vampire, making it look like i m trying to protect them. 
+
+"I think Shaw is innocent. Let's focus on someone else." 
+
+But if Shaw is a vampire, defending him would make me look like a vampire as well, which could lead to my elimination. 
+
+This is a delicate balance. As the Clown, my success depends on manipulating the group's perceptions without revealing my true role. 
+
+Let me try to make a controversial statement that could polarize the group. 
+
+"We can t afford to wait any longer. Let's vote out Shaw now before the vampires strike again." 
+
+If i push for a quick vote on Shaw, maybe others will either agree or disagree strongly, leading to a heated discussion. In the chaos, someone might suggest voting me out. 
+
+Alternatively, if Shaw is actually a vampire, voting him out would be good for the peasants, but bad for me as the Clown, since i want to be the one voted out. 
+
+This is really complicated. Maybe i should take a step back and let others make the next move, while i continue to observe and wait for the perfect opportunity to provoke a vote against myself. 
+
+For now, i'll keep participating in the discussion, trying to steer it in a direction that increases the chances of me being voted out, without making it too obvious. 
+
+"Let's not forget that the Clown is still among us. Maybe someone is trying to act like the Clown to throw us off the vampires' trail. Let's focus on facts. Finch hasn t said much. If the Observer is asking questions tonight, maybe we should all be ready to answer honestly." 
+
+Wait, i already said that earlier. Maybe i should try a different approach. 
+
+"Has anyone considered that the Doctor might have protected someone last night, which could give us a clue about who the Doctor is? If we can figure out the Doctor's identity, it might help us determine who the vampires are." 
+
+But the Doctor's identity is secret, so this might not lead anywhere. 
+
+Alternatively, maybe i should start speculating about the Observer's actions. 
+
+"The Observer might have investigated someone last night. If they found out a vampire, they might be able to share that information indirectly." 
+
+But the Observer can only ask the moderator about a player's identity, and they can choose to share that information or not. 
+
+This is really tough. As the Clown, i need to walk a tightrope between being suspicious enough to get voted out and not revealing my role. 
+
+Maybe i should start making contradictory statements or behaving erratically. 
+
+"Wait, earlier i thought Jeff was suspicious, but now i think it's Shaw. Let's focus on Shaw." 
+
+If i keep changing my accusations, people might think i m unreliable or trying to manipulate the vote. 
+
+Alternatively, maybe i should try to act like a leader, but in a way that makes others question my motives. 
+
+"Let's organize our thoughts. We have five players left. The vampires need to have two of us to win. Let's figure out who the vampires are and vote them out." 
+
+But if i take charge, maybe others will trust me, which is the opposite of
+***Casey: Hey everyone, it's really tough losing Reese last night after already losing Lester and voting out Jeff. We're down to five, and the situation is getting critical. I’ve been thinking about how the Doctor might have protected someone last night, which could explain why only one person was targeted, but we can’t be sure. If the Observer has any insights, even a subtle hint could help us.
+
+I’ve noticed Finch has been pretty quiet so far, which could be a strategy to avoid suspicion. On the other hand, overly active behavior can also be a way to deflect. I’m not pointing fingers yet, just trying to think through patterns. Does anyone else have observations or gut feelings about who we should focus on? We need to be very careful with this vote.
+MODERATOR (Round 2, Public Chat): Public chat ended. Moving to voting phase.
+
+EVENT (Round 2, Day Voting): Public Voting Phase - Day 2 voting starts.
+MODERATOR (Round 2, Public Voting): Public voting begins.
+
+VOTE TALLY (Round 2, Day Voting) - Type: Public Kick-Out
+  Shaw: 1 vote(s)
+  Finch: 1 vote(s)
+  Sarah: 1 vote(s)
+  Chuck: 2 vote(s)
+--------------------
+VOTE OUTCOME (Round 2, Day Voting): Chuck has been voted out with 2 vote(s).
+ELIMINATION (Round 2, Day Voting): Chuck (Role: Peasant) was eliminated. Reason: Voted out by players.
+MODERATOR (Round 2, Public Voting): Public voting ended.
+
+MODERATOR (Round 2, Day): Day 2 has dawned. The community has voted out Chuck.
+EVENT (Round 2): Game End Check Status - Vampires: 2, Non-Vampires: 2, Alive: 4 - This info is not shared with players.
+==================================================
+GAME END:
+  Winner(s): Vampires
+  Reason: Vampires equal or outnumber other players.
+  Final Alive Players & Roles:
+    - Shaw: Vampire
+    - Finch: Clown
+    - Casey: Doctor
+    - Sarah: Vampire
+==================================================
+--- Log ended at: 2025-06-03 09:38:22 ---
+MODERATOR (Round 2, Game End): Game over! Vampires wins!
+MODERATOR (Round 2, Game End): Game over! Vampires wins!

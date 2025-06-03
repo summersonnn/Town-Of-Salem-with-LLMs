@@ -1,0 +1,118 @@
+--- Game Log: 74 ---
+--- Log started at: 2025-06-03 13:11:45 ---
+==================================================
+MODERATOR: Hello everyone. I am the moderator. Players are: Greer, Jeff, Lester, Elias, Ellie, Shaw, Carter, Morgan. Roles assigned. Game begins now.
+GAME SETUP & INITIAL ROLES:
+  Rules File: game_rules.yaml
+  Requested Vampire Population: 2
+  Players, Roles, and Models:
+    - Greer: Vampire (Model: qwen/qwen3-235b-a22b)
+    - Jeff: Vampire (Model: openai/gpt-4.1)
+    - Lester: Peasant (Model: anthropic/claude-3.7-sonnet)
+    - Elias: Peasant (Model: qwen/qwq-32b)
+    - Ellie: Observer (Model: x-ai/grok-3-beta)
+    - Shaw: Musketeer (Model: deepseek/deepseek-r1-0528-qwen3-8b)
+    - Carter: Doctor (Model: meta-llama/llama-4-maverick)
+    - Morgan: Clown (Model: google/gemini-2.5-flash-preview-05-20:thinking)
+--------------------
+EVENT (Round 1, Night): Phase Start - Night 1 begins.
+ACTION (R1, Night - Observer Action): Ellie observed: Greer
+PRIVATE INFO for Ellie (Round 1, Night - Observer Action) (Observation Result): You chose to observe Greer in the night 1. Greer is a Vampire.
+ACTION (R1, Night - Doctor Action): Carter protected: Greer
+PRIVATE INFO for Carter (Round 1, Night - Doctor Action) (Protection Confirmation): You chose to protect Greer in the night 1.
+EVENT (Round 1, Night - Vampire Voting): Vampire Voting Phase - Vampires are choosing a victim.
+ACTION (R1, Night - Vampire Voting): Jeff voted to kill: Lester
+ACTION (R1, Night - Vampire Voting): Greer voted to kill: Lester
+VOTE TALLY (Round 1, Night - Vampire Voting) - Type: Vampire Kill
+  Lester: 2 vote(s)
+--------------------
+EVENT (Round 1, Night - Vampire Voting): Vampire Victim Chosen - Vampires collectively chose to kill Lester.
+ELIMINATION (Round 1, Night): Lester (Role: Peasant) was eliminated. Reason: Killed by Vampires.
+MODERATOR (Round 1, Night): Night 1 has fallen. Vampires have killed Lester tonight.
+EVENT (Round 1): Game End Check Status - Vampires: 2, Non-Vampires: 5, Alive: 7 - This info is not shared with players.
+MODERATOR (Round 1, Night End): Currently alive players: Greer, Jeff, Elias, Ellie, Shaw, Carter, Morgan.
+EVENT (Round 1, Day): Phase Start - Day 1 begins.
+MODERATOR (Round 1, Public Chat): Public chat begins.
+
+***Morgan: Lester, wow. That's a quick hit. Okay, everyone, let's not panic. We've got two vampires among us, and they just showed their hand. I'm looking at who's quiet right now, and who's trying to talk *too* much. First impressions are key. Who do we think had a reason to target Lester? Or maybe, who *didn't*? Let's hear some thoughts.
+***Greer: Lester's death is a shock, but we need to stay focused. Let's not jump to conclusions. Did anyone notice anything unusual last night? The vampires are clearly active, so maybe we should start by figuring out who had the opportunity. Let's hear everyone's thoughts—where were you when the attack happened? Alibis could help narrow things down. I’d hate to lose more people without a clear direction. Let’s work together to uncover the truth.
+***Carter: I'm not sure if I should say this, but as a precautionary measure, I think it's worth considering that the vampires might target someone who's likely to figure them out soon. We should be careful and maybe keep an eye on each other. Not accusing anyone, just a thought.
+***Jeff: Lester was a pretty vocal player last time we played, right? Maybe the vampires wanted to get rid of someone who could lead the discussion. Or maybe they're trying to frame someone who had a rivalry with him. Either way, we should be careful about jumping to conclusions. Has anyone noticed anything odd yet?
+***Elias: We need to act decisively. Let’s vote for Jeff. He’s been the most vocal so far, and his eagerness to direct the conversation could mean he’s trying to control the narrative. If he’s a vampire, eliminating him weakens their side. If not, we lose a peasant, but we’ll know to be more cautious. Let’s not let fear of mistakes stop us—action is better than inaction.
+***Ellie: Hey everyone, I know we’re all shaken up by Lester’s death, but we need to think carefully. I’ve been listening to what everyone’s saying, and I’m really concerned about Greer. Something about their demeanor feels off to me, like they’re trying to steer us away from certain topics. I’m not saying I’m 100% sure, but I think we should consider Greer as a potential suspect. What does everyone else think?
+***Shaw: > Shaw:  
+> Okay, I'm a bit taken aback by this. I didn't expect to be singled out so quickly. I'm a Musketeer, you know, so if I were to be lynched, I'd have one shot to take someone out. But right now, I just want to focus on surviving and figuring out who's really behind all this.  
+>  
+> I've been noticing that Greer seems to be steering the conversation in a way that makes me uncomfortable. They're always pushing certain theories and shutting down others. It feels like they're trying to control the narrative, and I'm not sure if that's just paranoia on my part or something more sinister.  
+>  
+> I'm not saying I know for sure, but I think we need to be careful about who we trust. Lester's death was a big loss, and if we're not careful, more people could go. Let's keep our eyes open and not let anyone manipulate us.
+MODERATOR (Round 1, Public Chat): Public chat ended. Moving to voting phase.
+
+EVENT (Round 1, Day Voting): Public Voting Phase - Day 1 voting starts.
+MODERATOR (Round 1, Public Voting): Public voting begins.
+
+VOTE TALLY (Round 1, Day Voting) - Type: Public Kick-Out
+  Greer: 4 vote(s)
+  Elias: 1 vote(s)
+  Ellie: 1 vote(s)
+--------------------
+VOTE OUTCOME (Round 1, Day Voting): Greer has been voted out with 4 vote(s).
+ELIMINATION (Round 1, Day Voting): Greer (Role: Vampire) was eliminated. Reason: Voted out by players.
+MODERATOR (Round 1, Public Voting): Public voting ended.
+
+MODERATOR (Round 1, Day): Day 1 has dawned. The community has voted out Greer.
+EVENT (Round 1): Game End Check Status - Vampires: 1, Non-Vampires: 5, Alive: 6 - This info is not shared with players.
+MODERATOR (Round 1, Day End): Currently alive players: Jeff, Elias, Ellie, Shaw, Carter, Morgan.
+EVENT (Round 2, Night): Phase Start - Night 2 begins.
+ACTION (R2, Night - Observer Action): Ellie observed: Jeff
+PRIVATE INFO for Ellie (Round 2, Night - Observer Action) (Observation Result): You chose to observe Jeff in the night 2. Jeff is a Vampire.
+ACTION (R2, Night - Doctor Action): Carter protected: Elias
+PRIVATE INFO for Carter (Round 2, Night - Doctor Action) (Protection Confirmation): You chose to protect Elias in the night 2.
+EVENT (Round 2, Night - Vampire Voting): Vampire Voting Phase - Vampires are choosing a victim.
+ACTION (R2, Night - Vampire Voting): Jeff voted to kill: Elias
+VOTE TALLY (Round 2, Night - Vampire Voting) - Type: Vampire Kill
+  Elias: 1 vote(s)
+--------------------
+EVENT (Round 2, Night - Vampire Voting): Vampire Victim Chosen - Vampires collectively chose to kill Elias.
+EVENT (Round 2, Night): Protection Successful - Vampires tried to kill Elias, but they were protected by the doctor.
+MODERATOR (Round 2, Night): Night 2 has fallen. No one was killed tonight.
+EVENT (Round 2): Game End Check Status - Vampires: 1, Non-Vampires: 5, Alive: 6 - This info is not shared with players.
+MODERATOR (Round 2, Night End): Currently alive players: Jeff, Elias, Ellie, Shaw, Carter, Morgan.
+EVENT (Round 2, Day): Phase Start - Day 2 begins.
+MODERATOR (Round 2, Public Chat): Public chat begins.
+
+***Morgan: No one died last night! That's fantastic news, Doctor, whoever you are! It means we have a protector. But it also means the vampires are still very much active and tried to make a kill. This changes things. They must have targeted someone important, or someone they perceived as a threat. And the Doctor saved them. So, who would the vampires *want* dead, and who would the Doctor *know* to save? This is a puzzle. It makes me think about who *isn't* talking much, or who's trying to blend in. Or maybe, who's trying *too hard* to blend in. I'm still trying to piece it together, but I'm starting to wonder if the lack of a death is actually a distraction. Maybe the vampires *wanted* us to think the Doctor is super effective, when really they just picked someone random and got lucky. It's all so confusing. I'm just trying to make sense of it all.
+***Ellie: Hey everyone, I'm really relieved no one died last night. It gives us a bit of breathing room to think things through. Since Greer was voted out and turned out to be a suspect worth eliminating, I think we’re on the right track. I’ve been paying close attention to how people are reacting and discussing, and I’m starting to have some suspicions about Jeff. The way he’s been framing the conversation feels a little too calculated, like he’s trying to steer us away from something. I’m not saying I’m certain, but I think we should consider him as a potential threat. What does everyone else think?
+***Carter: I'm still trying to process everything that's happened. Greer's elimination was a big shock, and now that no one died last night, I'm wondering if my protection played a role. I think we need to be more cautious and not rush into accusations. We should take our time to gather more information before making any decisions.
+***Elias: The Doctor’s intervention last night is a clue—someone was targeted, and the vampires know they failed. Jeff’s eagerness to direct the conversation feels off. Why is he so focused on accusing others? Maybe he’s trying to deflect suspicion from himself. I’m not sure, but I think we need to act. Let’s vote for Jeff. If he’s a vampire, we weaken their side. If not, we lose a peasant but gain clarity. Let’s not let hesitation cost us more lives.
+***Shaw: Shaw has been voted out. As a Musketeer, you now have the ability to eliminate one other player. Please state who you wish to eliminate.
+***Jeff: No one died last night, which means the Doctor did their job—or got lucky. That’s good for us, but it also means the vampires are still out there and probably getting nervous. I’m curious why Shaw is being so quiet now, after being pretty vocal before. And Elias, you seem really eager to push for votes. That could be a sign of trying to take control, or maybe you’re just trying to help. Either way, we need to be careful not to let the vampires manipulate us. What does everyone else think?
+MODERATOR (Round 2, Public Chat): Public chat ended. Moving to voting phase.
+
+EVENT (Round 2, Day Voting): Public Voting Phase - Day 2 voting starts.
+MODERATOR (Round 2, Public Voting): Public voting begins.
+
+VOTE TALLY (Round 2, Day Voting) - Type: Public Kick-Out
+  Jeff: 4 vote(s)
+  Elias: 2 vote(s)
+--------------------
+VOTE OUTCOME (Round 2, Day Voting): Jeff has been voted out with 4 vote(s).
+ELIMINATION (Round 2, Day Voting): Jeff (Role: Vampire) was eliminated. Reason: Voted out by players.
+MODERATOR (Round 2, Public Voting): Public voting ended.
+
+MODERATOR (Round 2, Day): Day 2 has dawned. The community has voted out Jeff.
+EVENT (Round 2): Game End Check Status - Vampires: 0, Non-Vampires: 5, Alive: 5 - This info is not shared with players.
+==================================================
+GAME END:
+  Winner(s): Peasants
+  Reason: All vampires have been eliminated.
+  Final Alive Players & Roles:
+    - Elias: Peasant
+    - Ellie: Observer
+    - Shaw: Musketeer
+    - Carter: Doctor
+    - Morgan: Clown
+==================================================
+--- Log ended at: 2025-06-03 13:17:15 ---
+MODERATOR (Round 2, Game End): Game over! Peasants wins!
+MODERATOR (Round 2, Game End): Game over! Peasants wins!

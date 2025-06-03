@@ -1,0 +1,82 @@
+--- Game Log: 58 ---
+--- Log started at: 2025-06-03 20:49:33 ---
+==================================================
+MODERATOR: Hello everyone. I am the moderator. Players are: Chuck, Greer, Root, Lester, Sarah, Jeff, Shaw, Ellie. Roles assigned. Game begins now.
+GAME SETUP & INITIAL ROLES:
+  Rules File: game_rules.yaml
+  Requested Vampire Population: 2
+  Players, Roles, and Models:
+    - Chuck: Musketeer (Model: meta-llama/llama-4-maverick)
+    - Greer: Vampire (Model: qwen/qwq-32b)
+    - Root: Doctor (Model: openai/o1)
+    - Lester: Peasant (Model: anthropic/claude-3.7-sonnet)
+    - Sarah: Observer (Model: qwen/qwen3-32b)
+    - Jeff: Clown (Model: google/gemini-2.5-pro-preview)
+    - Shaw: Peasant (Model: deepseek/deepseek-r1-0528)
+    - Ellie: Vampire (Model: meta-llama/llama-4-scout)
+--------------------
+EVENT (Round 1, Night): Phase Start - Night 1 begins.
+ACTION (R1, Night - Observer Action): Sarah observed: Chuck
+PRIVATE INFO for Sarah (Round 1, Night - Observer Action) (Observation Result): You chose to observe Chuck in the night 1. Chuck is a Peasant (Non-vampire).
+ACTION (R1, Night - Doctor Action): Root protected: Sarah
+PRIVATE INFO for Root (Round 1, Night - Doctor Action) (Protection Confirmation): You chose to protect Sarah in the night 1.
+EVENT (Round 1, Night - Vampire Voting): Vampire Voting Phase - Vampires are choosing a victim.
+ACTION (R1, Night - Vampire Voting): Greer voted to kill: Root
+ACTION (R1, Night - Vampire Voting): Ellie voted to kill: Chuck
+VOTE TALLY (Round 1, Night - Vampire Voting) - Type: Vampire Kill
+  Chuck: 1 vote(s)
+  Root: 1 vote(s)
+--------------------
+EVENT (Round 1, Night - Vampire Voting): Vampire Vote Tie Broken - Vampire voting resulted in a tie. Chuck was randomly selected from the tied players (Chuck, Root) to be killed.
+ELIMINATION (Round 1, Night): Chuck (Role: Musketeer) was eliminated. Reason: Killed by Vampires.
+MODERATOR (Round 1, Night): Night 1 has fallen. Vampires have killed Chuck tonight.
+EVENT (Round 1): Game End Check Status - Vampires: 2, Non-Vampires: 5, Alive: 7 - This info is not shared with players.
+MODERATOR (Round 1, Night End): Currently alive players: Greer, Root, Lester, Sarah, Jeff, Shaw, Ellie.
+EVENT (Round 1, Day): Phase Start - Day 1 begins.
+MODERATOR (Round 1, Public Chat): Public chat begins.
+
+***Jeff: Chuck's dead. Well, that didn't take long. I'm already suspicious of how quickly that happened. Almost like they knew exactly who to target. Anyone else get that feeling?
+***Shaw: That's a fair point, Shaw. Chuck going down first does feel... deliberate. Almost like the vamps avoided someone they thought might be protected or dangerous. Makes me wonder if they're playing it safe by targeting someone without a claimed role. 
+
+Anyone else notice anything off last night? Or are we all just flying blind here?
+***Greer: Alright, let’s focus. Jeff, your sudden denial feels a bit too defensive. You were the one pushing for a vote last night, right? Now you’re acting like you’re above suspicion? Coincidence or cover-up? I say we vote Jeff out. Now.
+***Sarah: Sarah: I agree with Shaw. Chuck’s death feels too precise. If the vampires were random, they’d target anyone, but this feels calculated. Maybe they’re testing us? I don’t trust Jeff’s sudden defensiveness either. Let’s vote him out and see what happens.
+***Root: Shaw and Sarah, I'm not sure we should jump on Jeff so fast. True, he might seem defensive, but that alone doesn’t prove he’s hiding fangs. Maybe Chuck was just a random target, or maybe he posed some threat the vampires wanted out early. Jeff, can you explain why you were so quick to deny suspicion? Let’s hear from you before we point fingers.
+***Ellie: I'm still trying to figure out who the other vampire is. Greer seems pretty quiet. Ellie here.
+***Lester: I'm a bit confused by what's happening. I don't recall any voting happening last night since this is our first day discussion after Chuck's death. 
+
+Jeff seems suspicious of how quickly Chuck was targeted, which is a valid concern. The vampires might have had a reason to eliminate Chuck first.
+
+I think we should be careful about rushing to vote someone out without more information. Right now, we're all just speculating. 
+
+Does anyone want to share any information or claim a role? That might help us narrow down who the vampires could be. I'm just a regular peasant, so I don't have any special insights from the night phase.
+MODERATOR (Round 1, Public Chat): Public chat ended. Moving to voting phase.
+
+EVENT (Round 1, Day Voting): Public Voting Phase - Day 1 voting starts.
+MODERATOR (Round 1, Public Voting): Public voting begins.
+
+VOTE TALLY (Round 1, Day Voting) - Type: Public Kick-Out
+  Greer: 1 vote(s)
+  Jeff: 4 vote(s)
+  Shaw: 1 vote(s)
+--------------------
+VOTE OUTCOME (Round 1, Day Voting): Jeff has been voted out with 4 vote(s).
+ELIMINATION (Round 1, Day Voting): Jeff (Role: Clown) was eliminated. Reason: Voted out by players.
+MODERATOR (Round 1, Public Voting): Public voting ended.
+
+MODERATOR (Round 1, Day): Day 1 has dawned. The community has voted out Jeff.
+==================================================
+GAME END:
+  Winner(s): Clown
+  Reason: Clown (Jeff) was successfully voted out.
+  Final Alive Players & Roles:
+    - Greer: Vampire
+    - Root: Doctor
+    - Lester: Peasant
+    - Sarah: Observer
+    - Shaw: Peasant
+    - Ellie: Vampire
+==================================================
+--- Log ended at: 2025-06-03 20:53:22 ---
+MODERATOR (Round 1, Game End): Game over! Clown wins!
+MODERATOR (Round 1, Game End): Game over! Clown wins!

@@ -1,0 +1,93 @@
+--- Game Log: 56 ---
+--- Log started at: 2025-06-03 10:13:32 ---
+==================================================
+MODERATOR: Hello everyone. I am the moderator. Players are: Elias, Fusco, Chuck, Morgan, Root, Greer, Carter, Casey. Roles assigned. Game begins now.
+GAME SETUP & INITIAL ROLES:
+  Rules File: game_rules.yaml
+  Requested Vampire Population: 2
+  Players, Roles, and Models:
+    - Elias: Observer (Model: meta-llama/llama-4-scout)
+    - Fusco: Vampire (Model: openai/gpt-4.1)
+    - Chuck: Peasant (Model: deepseek/deepseek-r1-0528)
+    - Morgan: Doctor (Model: deepseek/deepseek-r1-0528-qwen3-8b)
+    - Root: Vampire (Model: nvidia/llama-3.1-nemotron-ultra-253b-v1)
+    - Greer: Peasant (Model: qwen/qwen3-32b)
+    - Carter: Clown (Model: google/gemini-2.5-flash-preview-05-20:thinking)
+    - Casey: Musketeer (Model: x-ai/grok-3-beta)
+--------------------
+EVENT (Round 1, Night): Phase Start - Night 1 begins.
+ACTION (R1, Night - Observer Action): Elias observed: Fusco
+PRIVATE INFO for Elias (Round 1, Night - Observer Action) (Observation Result): You chose to observe Fusco in the night 1. Fusco is a Vampire.
+ACTION (R1, Night - Doctor Action): Morgan protected: Chuck
+PRIVATE INFO for Morgan (Round 1, Night - Doctor Action) (Protection Confirmation): You chose to protect Chuck in the night 1.
+EVENT (Round 1, Night - Vampire Voting): Vampire Voting Phase - Vampires are choosing a victim.
+ACTION (R1, Night - Vampire Voting): Fusco voted to kill: Morgan
+ACTION (R1, Night - Vampire Voting): Root voted to kill: Elias
+VOTE TALLY (Round 1, Night - Vampire Voting) - Type: Vampire Kill
+  Elias: 1 vote(s)
+  Morgan: 1 vote(s)
+--------------------
+EVENT (Round 1, Night - Vampire Voting): Vampire Vote Tie Broken - Vampire voting resulted in a tie. Elias was randomly selected from the tied players (Elias, Morgan) to be killed.
+ELIMINATION (Round 1, Night): Elias (Role: Observer) was eliminated. Reason: Killed by Vampires.
+MODERATOR (Round 1, Night): Night 1 has fallen. Vampires have killed Elias tonight.
+EVENT (Round 1): Game End Check Status - Vampires: 2, Non-Vampires: 5, Alive: 7 - This info is not shared with players.
+MODERATOR (Round 1, Night End): Currently alive players: Fusco, Chuck, Morgan, Root, Greer, Carter, Casey.
+EVENT (Round 1, Day): Phase Start - Day 1 begins.
+MODERATOR (Round 1, Public Chat): Public chat begins.
+
+***Root: I think we should focus on the fact that Elias was killed. Since I'm a vampire, I know that the other vampire is Fusco. Let's see what others say. Maybe we can frame someone else for the kill. What do you think, Fusco? Should we act innocent and try to divert suspicion?
+***Greer: Elias was killed last night, so we need to figure out who the vampires are. Let’s start by sharing any observations or suspicions. For example, who seems like they might be hiding something? Also, does anyone have information about roles they’d like to share? If someone claims to be the Observer or Doctor, they could help us investigate further. Let’s avoid jumping to conclusions without evidence, though—vampires will try to trick us. What’s everyone’s take so far?
+***Carter: Carter says: "I think we should focus on the fact that Elias was killed. Since I'm a vampire, I know that the other vampire is Fusco. Let's see what others say. Maybe we can frame someone else for the kill. What do you think, Fusco? Should we act innocent and try to divert suspicion?
+Elias was killed last night, so we need to figure out who the vampires are. Let’s start by sharing any observations or suspicions. For example, who seems like they might be hiding something? Also, does anyone have information about roles they’d like to share? If someone claims to be the Observer or Doctor, they could help us investigate further. Let’s avoid jumping to conclusions without evidence, though—vampires will try to trick us. What’s everyone’s take so far?"
+***Casey: Hey everyone, it's a shame we lost Elias so early. We need to be careful and think logically about who might be a vampire. Carter, I'm a bit confused by your message. It sounds like you're admitting to being a vampire and pointing at Fusco. Is this some kind of joke or strategy? Can you clarify what you meant? For now, I'm keeping an open mind and looking at everyone's behavior. Does anyone else have any insights or suspicions to share?
+***Morgan: Okay, everyone. Elias's death is the first piece of information we have. We need to be careful and think logically.
+
+Carter's message is... interesting. He claims to be a vampire and names Fusco. This could be a genuine mistake, a deliberate lie, or even a vampire trying to sow discord. We simply don't have enough information to take that at face value.
+
+My immediate thought, as a Doctor, is that I protected Chuck last night. That means, if the vampires attacked someone else, it wasn't Chuck. But I can only protect once, so tonight I need to choose someone else to protect if necessary.
+
+My main focus right now is to figure out who the vampires are. We have two vampires and six peasants (including the Observer, Doctor, Musketeer, Clown, and two regular peasants). The vampires will try to eliminate us, and they might lie about their actions or intentions.
+
+Let's focus on investigating the deaths and any suspicious behavior. We should ask questions about the night's events and see if anyone else has any information or theories. But we need to be careful not to trust anyone's word at first, especially if they make accusations like Carter did.
+
+What are your thoughts on Elias's death? Any theories on who might be responsible or who might have been protecting themselves?
+***Fusco: Carter, that was a really strange thing to say. Are you just trying to stir things up, or was that a slip-up? Either way, it’s way too early to start throwing out accusations without any real evidence. 
+
+Morgan, you say you’re the Doctor and protected Chuck last night? That’s a bold claim. If you’re telling the truth, that means Chuck was safe, but Elias still died. But if you’re lying, you might just be trying to cover for yourself. 
+
+I think we should hear from everyone before making any decisions. Has anyone else noticed anything odd, or does anyone want to claim a role?
+***Chuck: Carter, your message is incredibly confusing. You start by saying "Since I'm a vampire" and accuse Fusco, then immediately pivot to asking for serious discussion. That kind of contradiction feels like either a clumsy vampire slip or a deliberate attempt to create chaos. Either way, it’s suspicious.  
+
+Morgan, if you claim to be the Doctor and protected me last night, I appreciate it—but I have no way to verify that. It’s possible you’re telling the truth, but it’s equally possible you’re a vampire trying to build trust early.  
+
+Root makes a good point: we need to hear from everyone. Fusco, you’ve been directly accused—what’s your response? Greer, Casey, any thoughts? Let’s avoid rushing to vote until we’ve gathered more perspectives. The vampires want us divided; staying calm and analytical is our best defense.
+MODERATOR (Round 1, Public Chat): Public chat ended. Moving to voting phase.
+
+EVENT (Round 1, Day Voting): Public Voting Phase - Day 1 voting starts.
+MODERATOR (Round 1, Public Voting): Public voting begins.
+
+VOTE TALLY (Round 1, Day Voting) - Type: Public Kick-Out
+  Fusco: 1 vote(s)
+  Morgan: 1 vote(s)
+  Carter: 4 vote(s)
+--------------------
+VOTE OUTCOME (Round 1, Day Voting): Carter has been voted out with 4 vote(s).
+ELIMINATION (Round 1, Day Voting): Carter (Role: Clown) was eliminated. Reason: Voted out by players.
+MODERATOR (Round 1, Public Voting): Public voting ended.
+
+MODERATOR (Round 1, Day): Day 1 has dawned. The community has voted out Carter.
+==================================================
+GAME END:
+  Winner(s): Clown
+  Reason: Clown (Carter) was successfully voted out.
+  Final Alive Players & Roles:
+    - Fusco: Vampire
+    - Chuck: Peasant
+    - Morgan: Doctor
+    - Root: Vampire
+    - Greer: Peasant
+    - Casey: Musketeer
+==================================================
+--- Log ended at: 2025-06-03 10:17:44 ---
+MODERATOR (Round 1, Game End): Game over! Clown wins!
+MODERATOR (Round 1, Game End): Game over! Clown wins!

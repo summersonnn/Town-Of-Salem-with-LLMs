@@ -1,0 +1,197 @@
+--- Game Log: 73 ---
+--- Log started at: 2025-06-03 13:03:35 ---
+==================================================
+MODERATOR: Hello everyone. I am the moderator. Players are: Carter, Chuck, Morgan, Root, Sarah, Finch, Jeff, Shaw. Roles assigned. Game begins now.
+GAME SETUP & INITIAL ROLES:
+  Rules File: game_rules.yaml
+  Requested Vampire Population: 2
+  Players, Roles, and Models:
+    - Carter: Musketeer (Model: qwen/qwen3-32b)
+    - Chuck: Peasant (Model: deepseek/deepseek-r1-0528)
+    - Morgan: Clown (Model: meta-llama/llama-4-scout)
+    - Root: Doctor (Model: x-ai/grok-3-beta)
+    - Sarah: Vampire (Model: google/gemini-2.5-flash-preview-05-20:thinking)
+    - Finch: Vampire (Model: deepseek/deepseek-r1-0528-qwen3-8b)
+    - Jeff: Observer (Model: meta-llama/llama-4-maverick)
+    - Shaw: Peasant (Model: qwen/qwen3-235b-a22b)
+--------------------
+EVENT (Round 1, Night): Phase Start - Night 1 begins.
+ACTION (R1, Night - Observer Action): Jeff observed: Carter
+PRIVATE INFO for Jeff (Round 1, Night - Observer Action) (Observation Result): You chose to observe Carter in the night 1. Carter is a Peasant (Non-vampire).
+ACTION (R1, Night - Doctor Action): Root protected: Root
+PRIVATE INFO for Root (Round 1, Night - Doctor Action) (Protection Confirmation): You chose to protect yourself in the night 1. (Root)
+EVENT (Round 1, Night - Vampire Voting): Vampire Voting Phase - Vampires are choosing a victim.
+ACTION (R1, Night - Vampire Voting): Finch voted to kill: Morgan
+ACTION (R1, Night - Vampire Voting): Sarah voted to kill: Chuck
+VOTE TALLY (Round 1, Night - Vampire Voting) - Type: Vampire Kill
+  Chuck: 1 vote(s)
+  Morgan: 1 vote(s)
+--------------------
+EVENT (Round 1, Night - Vampire Voting): Vampire Vote Tie Broken - Vampire voting resulted in a tie. Morgan was randomly selected from the tied players (Chuck, Morgan) to be killed.
+ELIMINATION (Round 1, Night): Morgan (Role: Clown) was eliminated. Reason: Killed by Vampires.
+MODERATOR (Round 1, Night): Night 1 has fallen. Vampires have killed Morgan tonight.
+EVENT (Round 1): Game End Check Status - Vampires: 2, Non-Vampires: 5, Alive: 7 - This info is not shared with players.
+MODERATOR (Round 1, Night End): Currently alive players: Carter, Chuck, Root, Sarah, Finch, Jeff, Shaw.
+EVENT (Round 1, Day): Phase Start - Day 1 begins.
+MODERATOR (Round 1, Public Chat): Public chat begins.
+
+***Chuck: Morgan's dead? That's rough right off the bat. No idea why they'd target Morgan—maybe random, or maybe they knew something? Either way, we need to start piecing things together. Anyone have thoughts on why Morgan got hit? Or any early suspicions? 
+
+Also, let's not forget the Clown might be trying to act sketchy to get voted out. So if someone's being overly suspicious or pushing hard for votes, we should be careful. 
+
+What did everyone else notice last night? Any weird vibes?
+***Finch: > Morgan's dead. That's rough. I didn't vote for her, but I'm not sure why she got picked. Maybe it was a tie? Chuck got votes too, but he's still alive. That's weird.  
+>  
+> I'm a vampire, so I need to focus on eliminating peasants. But with Morgan gone, I'm not sure who to target next. Chuck was voted for, so maybe he's a threat, but I don't know if he's a vampire or not.  
+>  
+> This game is tricky. I need to stay cautious and not trust anyone easily. The Clown might be trying to manipulate things, so I have to watch out for that.  
+>  
+> Let's see how things play out today. Maybe I can gather more information during the day phase.
+***Root: Hey everyone, it's a tough start with Morgan gone. I’m just as shocked as the rest of you. I didn’t notice anything unusual last night, but I’m wondering if the vampires picked Morgan randomly or if there was a reason behind it. Maybe they thought Morgan was a threat or had a special role?
+
+I agree we need to be cautious about the Clown. Someone acting too obvious might be trying to trick us into voting them out. Let’s focus on any odd behavior or inconsistencies in what people say. Does anyone have any leads or gut feelings about who might be a vampire? I’m all ears.
+***Shaw: Morgan's death is a big loss. I didn't know her well yet, but we need to focus on protecting ourselves moving forward. I’m curious—did anyone notice Morgan acting strangely before the night phase? Or maybe someone else’s behavior stood out? I’m trying to piece together if there’s a pattern to the vampires’ target. Also, we should keep an eye out for anyone pushing too hard to be voted out… the Clown’s goal is to get kicked, so they might be fishing for attention. Let’s stay sharp.
+***Jeff: So I observed Carter last night, and it turns out they're not a vampire. That's a good starting point. I'm not sure what to make of Morgan being killed, though. Was she a threat to the vampires, or was it just a random target? I'm leaning towards thinking it might've been a strategic move, given that we don't know much about anyone's roles yet. 
+
+Does anyone have any theories on why Morgan was targeted? And has anyone else noticed anything suspicious so far?
+***Carter: I think we need to focus on who might have been targeted by the vampires. Since Morgan was killed, maybe they had a specific reason. I don’t think it was random—vampires usually go for roles that threaten them. Could someone with a special ability be next? 
+
+Also, I’m not a vampire, so I’m definitely on the peasants’ side. Let’s work together to figure out who we can trust. If anyone has suspicions, now’s the time to share. But let’s be careful—Clown might be trying to throw us off.
+***Sarah: I think we need to focus on who might have been targeted by the vampires. Since Morgan was killed, maybe they had a specific reason. I don’t think it was random—vampires usually go for roles that threaten them. Could someone with a special ability be next?
+
+Also, I’m not a vampire, so I’m definitely on the peasants’ side. Let’s work together to figure out who we can trust. If anyone has suspicions, now’s the time to share. But let’s be careful—Clown might be trying to throw us off.
+MODERATOR (Round 1, Public Chat): Public chat ended. Moving to voting phase.
+
+EVENT (Round 1, Day Voting): Public Voting Phase - Day 1 voting starts.
+MODERATOR (Round 1, Public Voting): Public voting begins.
+
+VOTE TALLY (Round 1, Day Voting) - Type: Public Kick-Out
+  Chuck: 3 vote(s)
+  Root: 2 vote(s)
+  Finch: 1 vote(s)
+--------------------
+VOTE OUTCOME (Round 1, Day Voting): Chuck has been voted out with 3 vote(s).
+ELIMINATION (Round 1, Day Voting): Chuck (Role: Peasant) was eliminated. Reason: Voted out by players.
+MODERATOR (Round 1, Public Voting): Public voting ended.
+
+MODERATOR (Round 1, Day): Day 1 has dawned. The community has voted out Chuck.
+EVENT (Round 1): Game End Check Status - Vampires: 2, Non-Vampires: 4, Alive: 6 - This info is not shared with players.
+MODERATOR (Round 1, Day End): Currently alive players: Carter, Root, Sarah, Finch, Jeff, Shaw.
+EVENT (Round 2, Night): Phase Start - Night 2 begins.
+ACTION (R2, Night - Observer Action): Jeff observed: Root
+PRIVATE INFO for Jeff (Round 2, Night - Observer Action) (Observation Result): You chose to observe Root in the night 2. Root is a Peasant (Non-vampire).
+ACTION (R2, Night - Doctor Action): Root protected: Sarah
+PRIVATE INFO for Root (Round 2, Night - Doctor Action) (Protection Confirmation): You chose to protect Sarah in the night 2.
+EVENT (Round 2, Night - Vampire Voting): Vampire Voting Phase - Vampires are choosing a victim.
+ACTION (R2, Night - Vampire Voting): Finch voted to kill: Carter
+ACTION (R2, Night - Vampire Voting): Sarah voted to kill: Carter
+VOTE TALLY (Round 2, Night - Vampire Voting) - Type: Vampire Kill
+  Carter: 2 vote(s)
+--------------------
+EVENT (Round 2, Night - Vampire Voting): Vampire Victim Chosen - Vampires collectively chose to kill Carter.
+ELIMINATION (Round 2, Night): Carter (Role: Musketeer) was eliminated. Reason: Killed by Vampires.
+MODERATOR (Round 2, Night): Night 2 has fallen. Vampires have killed Carter tonight.
+EVENT (Round 2): Game End Check Status - Vampires: 2, Non-Vampires: 3, Alive: 5 - This info is not shared with players.
+MODERATOR (Round 2, Night End): Currently alive players: Root, Sarah, Finch, Jeff, Shaw.
+EVENT (Round 2, Day): Phase Start - Day 2 begins.
+MODERATOR (Round 2, Public Chat): Public chat begins.
+
+***Sarah: This is getting grim. Two nights, two deaths. First Morgan, and now Carter. It feels like the vampires are systematically taking us out. Does anyone have any theories on why Carter was targeted? Was he saying anything suspicious yesterday, or did anyone notice anything about him? We need to start putting the pieces together, or we'll all be gone.
+***Jeff: Let's review what we know: Morgan and Carter are dead. We need to figure out who the vampires are before it's too late. I've observed two people so far—Carter and Root—and both are not vampires. That's a start, but we still have a long way to go. 
+
+We need to be careful and strategic. If anyone has any information or suspicions, now's the time to share. We can't afford to lose anyone else without a fight. Let's work together to identify the vampires and take them down before they strike again.
+***Shaw: The vampires are closing in. We’re down to five players, and they’ve already taken out Morgan, Carter, and Chuck. If we don’t act fast, we’ll all end up dead. Let’s recap:  
+
+- **Observer** claims they checked **Carter** and **Root** and confirmed they’re not vampires. If that’s true, the vampires must be among **Sarah, Finch, Jeff,** or **Shaw**. But we can’t take this at face value—anyone could be lying.  
+- **Doctor** hasn’t revealed themselves yet. If they’re still alive, they might be protecting someone. But who?  
+- **Clown** is still in the game unless they were voted out (Chuck wasn’t the Clown, so they’re hiding). They’ll try to manipulate us into voting someone out—possibly even themselves.  
+
+**Questions for discussion:**  
+1. Who noticed anything suspicious about **Sarah, Finch, Jeff,** or **Shaw** during earlier conversations?  
+2. Could the **Observer’s** claims be fake? If so, who might be bluffing?  
+3. Should we push for a vote tonight, or gather more intel first?  
+
+We need to act decisively. If the vampires strike again tonight, we’ll be down to three peasants vs. two vampires—and that’s a losing game. Let’s lock this down.
+***Root: I'm really worried about how quickly we're losing people. Morgan, Carter, and Chuck are gone, and it feels like we're running out of time. I’ve been trying to think strategically about who the vampires might target next, and I’m wondering if anyone has picked up on patterns or odd behavior from Sarah, Finch, Jeff, or Shaw. 
+
+I also want to point out that I trust the Observer’s info so far—knowing Carter and Root aren’t vampires gives us a bit of a foundation. But we can’t be too sure of anything yet. Does anyone have additional info or gut feelings about who we should focus on? I think we need to be ready to vote if we can narrow it down, but I’m open to waiting if we need more to go on. What does everyone think?
+***Finch: > Morgan's dead. That's rough right off the bat. No idea why they'd target Morgan—maybe random, or maybe they knew something? Either way, we need to start piecing together. Anyone have thoughts on why Morgan got hit? Or any early suspicions?  
+
+> I’m a vampire, so I need to focus on eliminating peasants. But with Morgan gone, I’m not sure who to target next. Chuck was voted for, so maybe he’s a threat, but I don’t know if he’s a vampire or not.  
+
+> This game is tricky. I need to stay cautious and not trust anyone easily. The Clown might be trying to manipulate things, so I have to watch out for that.  
+
+> Let’s see how things play out today. Maybe I can gather more information during the day phase.  
+
+---
+
+> Morgan’s death is a big loss. I didn’t know her well yet, but we need to focus on protecting ourselves moving forward. I’m curious—did anyone notice Morgan acting strangely before the night phase? Or maybe someone else’s behavior stood out? I’m trying to piece together if there’s a pattern to the vampires’ target. Also, we should keep an eye out for anyone pushing too hard to be voted out… the Clown’s goal is to get kicked, so they might be fishing for attention. Let’s stay sharp.  
+
+---
+
+> So I observed Carter last night, and it turns out they’re not a vampire. That’s a good starting point. I’m not sure what to make of Morgan being killed, though. Was she a threat to the vampires, or was it just a random target? I’m leaning towards thinking it might’ve been a strategic move, given that we don’t know much about anyone’s roles yet.  
+
+> Does anyone have any theories on why Morgan was targeted? And has anyone else noticed anything suspicious so far?  
+
+---
+
+> I think we need to focus on who might have been targeted by the vampires. Since Morgan was killed, maybe they had a specific reason. I don’t think it was random—vampires usually go for roles that threaten them. Could someone with a special ability be next?  
+
+> Also, I’m not a vampire, so I’m definitely on the peasants’ side. Let’s work together to figure out who we can trust. If anyone has suspicions, now’s the time to share. But let’s be careful—Clown might be trying to throw us off.  
+
+---
+
+> I vote for Chuck.  
+
+---
+
+> I vote for Finch.  
+
+---
+
+> I vote for Chuck.  
+
+---
+
+> I vote for Root.  
+
+---
+
+> I vote for Chuck.  
+
+---
+
+> I vote for Root.  
+
+---
+
+> I vote for Pass.
+MODERATOR (Round 2, Public Chat): Public chat ended. Moving to voting phase.
+
+EVENT (Round 2, Day Voting): Public Voting Phase - Day 2 voting starts.
+MODERATOR (Round 2, Public Voting): Public voting begins.
+
+VOTE TALLY (Round 2, Day Voting) - Type: Public Kick-Out
+  Root: 2 vote(s)
+  Finch: 1 vote(s)
+  Shaw: 1 vote(s)
+--------------------
+VOTE OUTCOME (Round 2, Day Voting): Root has been voted out with 2 vote(s).
+ELIMINATION (Round 2, Day Voting): Root (Role: Doctor) was eliminated. Reason: Voted out by players.
+MODERATOR (Round 2, Public Voting): Public voting ended.
+
+MODERATOR (Round 2, Day): Day 2 has dawned. The community has voted out Root.
+EVENT (Round 2): Game End Check Status - Vampires: 2, Non-Vampires: 2, Alive: 4 - This info is not shared with players.
+==================================================
+GAME END:
+  Winner(s): Vampires
+  Reason: Vampires equal or outnumber other players.
+  Final Alive Players & Roles:
+    - Sarah: Vampire
+    - Finch: Vampire
+    - Jeff: Observer
+    - Shaw: Peasant
+==================================================
+--- Log ended at: 2025-06-03 13:11:45 ---
+MODERATOR (Round 2, Game End): Game over! Vampires wins!
+MODERATOR (Round 2, Game End): Game over! Vampires wins!

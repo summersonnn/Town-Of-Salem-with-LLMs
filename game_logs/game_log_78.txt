@@ -1,0 +1,78 @@
+--- Game Log: 78 ---
+--- Log started at: 2025-06-03 17:22:04 ---
+==================================================
+MODERATOR: Hello everyone. I am the moderator. Players are: Root, Devon, Ellie, Elias, Casey, Jeff, Reese, Shaw. Roles assigned. Game begins now.
+GAME SETUP & INITIAL ROLES:
+  Rules File: game_rules.yaml
+  Requested Vampire Population: 2
+  Players, Roles, and Models:
+    - Root: Peasant (Model: x-ai/grok-3-beta)
+    - Devon: Clown (Model: qwen/qwen3-32b)
+    - Ellie: Vampire (Model: qwen/qwen3-235b-a22b)
+    - Elias: Observer (Model: meta-llama/llama-4-maverick)
+    - Casey: Vampire (Model: meta-llama/llama-4-scout)
+    - Jeff: Peasant (Model: deepseek/deepseek-r1-0528-qwen3-8b)
+    - Reese: Musketeer (Model: openai/gpt-4.1)
+    - Shaw: Doctor (Model: anthropic/claude-3.7-sonnet)
+--------------------
+EVENT (Round 1, Night): Phase Start - Night 1 begins.
+ACTION (R1, Night - Observer Action): Elias observed: Root
+PRIVATE INFO for Elias (Round 1, Night - Observer Action) (Observation Result): You chose to observe Root in the night 1. Root is a Peasant (Non-vampire).
+ACTION (R1, Night - Doctor Action): Shaw protected: Ellie
+PRIVATE INFO for Shaw (Round 1, Night - Doctor Action) (Protection Confirmation): You chose to protect Ellie in the night 1.
+EVENT (Round 1, Night - Vampire Voting): Vampire Voting Phase - Vampires are choosing a victim.
+ACTION (R1, Night - Vampire Voting): Casey voted to kill: Devon
+ACTION (R1, Night - Vampire Voting): Ellie voted to kill: Jeff
+VOTE TALLY (Round 1, Night - Vampire Voting) - Type: Vampire Kill
+  Devon: 1 vote(s)
+  Jeff: 1 vote(s)
+--------------------
+EVENT (Round 1, Night - Vampire Voting): Vampire Vote Tie Broken - Vampire voting resulted in a tie. Jeff was randomly selected from the tied players (Devon, Jeff) to be killed.
+ELIMINATION (Round 1, Night): Jeff (Role: Peasant) was eliminated. Reason: Killed by Vampires.
+MODERATOR (Round 1, Night): Night 1 has fallen. Vampires have killed Jeff tonight.
+EVENT (Round 1): Game End Check Status - Vampires: 2, Non-Vampires: 5, Alive: 7 - This info is not shared with players.
+MODERATOR (Round 1, Night End): Currently alive players: Root, Devon, Ellie, Elias, Casey, Reese, Shaw.
+EVENT (Round 1, Day): Phase Start - Day 1 begins.
+MODERATOR (Round 1, Public Chat): Public chat begins.
+
+***Devon: I think we need to act quickly. Jeff was killed, so there are vampires among us. I’ve been thinking, and I’m starting to suspect Shaw. They were unusually quiet last night, which makes me uneasy. What do others think? Let’s discuss who else could be involved.
+***Shaw: Good morning everyone. I'm sorry to hear about Jeff. This is a terrible loss for our village.
+
+Devon, I understand your suspicion, but I was simply being cautious last night. As we all know, speaking too much can reveal information to the vampires. I'm definitely not a vampire - I'm a peasant trying to survive like most of us.
+
+I think we should all share what we observed last night, if anything. Did anyone notice suspicious behavior from others? I personally didn't see anything conclusive, but I'm keeping my eyes open.
+***Casey: Ellie, how about you? You seem pretty calm. What's your take on all this?
+***Ellie: "Jeff’s death is really concerning. I didn’t notice anything obvious last night, but Devon’s suspicion about Shaw’s silence is worth exploring. Let’s not jump to conclusions, though—maybe others saw something? We should all share what we noticed to avoid mistakes."
+***Reese: I agree with Ellie—let’s not rush to blame anyone just yet. Devon, what made you focus on Shaw specifically? Was it just the quiet, or did you notice anything else? Sometimes the vampires try to blend in by talking a lot, too. Maybe we should hear from everyone before pointing fingers.
+***Root: I'm really shaken by Jeff's death. It's a stark reminder of the danger we're in. I didn't notice anything specific last night, but I agree that we need to be cautious and not rush to judgment. Devon, I get why Shaw's silence might seem odd, but like Casey said, sometimes vampires hide by being vocal too. Shaw, thanks for explaining yourself. Does anyone else have any observations or gut feelings about who might be a threat? We need to pool all our thoughts to figure this out.
+***Elias: I've got some info that might help. I observed Root last night, and they're not a vampire. Let's keep that in mind as we discuss. I'm not sure who to trust yet, but I'm leaning towards believing Shaw's explanation for being quiet. We need to be careful and gather more information before making any accusations.
+MODERATOR (Round 1, Public Chat): Public chat ended. Moving to voting phase.
+
+EVENT (Round 1, Day Voting): Public Voting Phase - Day 1 voting starts.
+MODERATOR (Round 1, Public Voting): Public voting begins.
+
+VOTE TALLY (Round 1, Day Voting) - Type: Public Kick-Out
+  Root: 1 vote(s)
+  Devon: 2 vote(s)
+  Shaw: 1 vote(s)
+--------------------
+VOTE OUTCOME (Round 1, Day Voting): Devon has been voted out with 2 vote(s).
+ELIMINATION (Round 1, Day Voting): Devon (Role: Clown) was eliminated. Reason: Voted out by players.
+MODERATOR (Round 1, Public Voting): Public voting ended.
+
+MODERATOR (Round 1, Day): Day 1 has dawned. The community has voted out Devon.
+==================================================
+GAME END:
+  Winner(s): Clown
+  Reason: Clown (Devon) was successfully voted out.
+  Final Alive Players & Roles:
+    - Root: Peasant
+    - Ellie: Vampire
+    - Elias: Observer
+    - Casey: Vampire
+    - Reese: Musketeer
+    - Shaw: Doctor
+==================================================
+--- Log ended at: 2025-06-03 17:23:52 ---
+MODERATOR (Round 1, Game End): Game over! Clown wins!
+MODERATOR (Round 1, Game End): Game over! Clown wins!

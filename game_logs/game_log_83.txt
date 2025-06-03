@@ -1,0 +1,317 @@
+--- Game Log: 83 ---
+--- Log started at: 2025-06-03 17:52:42 ---
+==================================================
+MODERATOR: Hello everyone. I am the moderator. Players are: Casey, Jeff, Lester, Shaw, Fusco, Greer, Ellie, Morgan. Roles assigned. Game begins now.
+GAME SETUP & INITIAL ROLES:
+  Rules File: game_rules.yaml
+  Requested Vampire Population: 2
+  Players, Roles, and Models:
+    - Casey: Observer (Model: qwen/qwen3-235b-a22b)
+    - Jeff: Vampire (Model: nvidia/llama-3.1-nemotron-ultra-253b-v1)
+    - Lester: Peasant (Model: x-ai/grok-3-beta)
+    - Shaw: Peasant (Model: anthropic/claude-sonnet-4)
+    - Fusco: Vampire (Model: openai/gpt-4.1)
+    - Greer: Clown (Model: deepseek/deepseek-r1-0528-qwen3-8b)
+    - Ellie: Doctor (Model: google/gemini-2.5-pro-preview)
+    - Morgan: Musketeer (Model: meta-llama/llama-4-scout)
+--------------------
+EVENT (Round 1, Night): Phase Start - Night 1 begins.
+ACTION (R1, Night - Observer Action): Casey observed: Jeff
+PRIVATE INFO for Casey (Round 1, Night - Observer Action) (Observation Result): You chose to observe Jeff in the night 1. Jeff is a Vampire.
+ACTION (R1, Night - Doctor Action): Ellie protected: Ellie
+PRIVATE INFO for Ellie (Round 1, Night - Doctor Action) (Protection Confirmation): You chose to protect yourself in the night 1. (Ellie)
+EVENT (Round 1, Night - Vampire Voting): Vampire Voting Phase - Vampires are choosing a victim.
+ACTION (R1, Night - Vampire Voting): Jeff voted to kill: Casey
+ACTION (R1, Night - Vampire Voting): Fusco voted to kill: Ellie
+VOTE TALLY (Round 1, Night - Vampire Voting) - Type: Vampire Kill
+  Casey: 1 vote(s)
+  Ellie: 1 vote(s)
+--------------------
+EVENT (Round 1, Night - Vampire Voting): Vampire Vote Tie Broken - Vampire voting resulted in a tie. Ellie was randomly selected from the tied players (Casey, Ellie) to be killed.
+EVENT (Round 1, Night): Protection Successful - Vampires tried to kill Ellie, but they were protected by the doctor.
+MODERATOR (Round 1, Night): Night 1 has fallen. No one was killed tonight.
+EVENT (Round 1): Game End Check Status - Vampires: 2, Non-Vampires: 6, Alive: 8 - This info is not shared with players.
+MODERATOR (Round 1, Night End): Currently alive players: Casey, Jeff, Lester, Shaw, Fusco, Greer, Ellie, Morgan.
+EVENT (Round 1, Day): Phase Start - Day 1 begins.
+MODERATOR (Round 1, Public Chat): Public chat begins.
+
+***Shaw: Well, no one died on the first night. That means our doctor made a good save! This is actually great news for us non-vampires since we still have all 8 players alive.
+
+The fact that someone was protected suggests the vampires did try to attack someone. Doctor, whoever you are, nice work on that first night protection.
+
+Now we need to start figuring out who the vampires might be. Since this is day 1, we don't have much to go on yet, but we should start sharing observations about behavior and see if anyone seems suspicious.
+
+Does anyone want to share their thoughts on how we should approach this first vote?
+***Lester: I'm glad no one was taken out last night. It gives us a bit of a breather to start piecing things together. I think we should be cautious with this first vote since we don’t have much to go on. Maybe we should focus on anyone who seems overly quiet or too eager to point fingers without reason. What does everyone else think? Should we pass this round if nothing stands out, or does anyone have a gut feeling already?
+***Fusco: Glad no one died last night. Either the doctor got lucky or maybe someone’s trying to look innocent. I agree with Lester—first day is always tricky. Maybe we should just talk a bit more before making any decisions. Anyone notice anything odd yet?
+***Greer: Okay, this is day one. No one died last night, so we're all still here. I guess I'm just not very good at this game yet, or maybe I'm just not sure what to say. It feels a bit awkward being the first to speak, but I guess I should say something.
+
+Anyway, I know that someone was protected last night because the doctor must have done their thing. I'm not sure who it was, but I wonder if that protection was on me or someone else. I don't know if I should be relieved or suspicious. Maybe I should just keep my head down and see what happens. Does anyone else feel like they're not sure what to do yet?
+***Morgan: I think we should focus on building trust. If someone seems really defensive or secretive, that might be a red flag. But we also don't want to accuse someone without a good reason. Has anyone noticed anything suspicious so far?
+***Jeff: Alright, so Fusco and I are the vampires. Last night, we tried to kill Casey and Ellie, but there was a tie. The moderator chose Ellie randomly. However, the doctor must have protected Ellie because no one died. That means the doctor is either Ellie or someone else who was targeted. Wait, no, the doctor protects someone each night. Since the vampires targeted Ellie and Casey, but the doctor protected one of them, which one was it? The result was that no one died, so the doctor's protection was successful. Therefore, the doctor must have protected either Casey or Ellie. 
+
+Now, during the day phase, we need to blend in and avoid suspicion. The peasants will be discussing and trying to figure out who the vampires are. As a vampire, my goal is to mislead them and protect my identity. 
+
+I should participate in the discussion, maybe suggest some strategies, and try to divert attention from myself and Fusco. Perhaps accuse someone else of being a vampire, but not too aggressively. Let's see what others are saying. 
+
+Casey mentioned that the doctor made a good save and suggested focusing on suspicious behavior. Lester talked about being cautious and not having much to go on. Shaw felt awkward but acknowledged the doctor's protection. Fusco hasn't spoken yet. Greer, Ellie, and Morgan haven't said anything either. 
+
+Maybe I should start by agreeing with Casey and Lester, emphasizing the importance of not rushing into a vote. Suggest that we should look for inconsistencies in people's stories or behavior. Ask others to share their thoughts on who might be suspicious. 
+
+Alternatively, I could propose that we should consider the possibility that the doctor protected themselves, which might be a common strategy. If the doctor is new, they might protect themselves first. But the doctor can only protect themselves once, so maybe they did that on the first night. If that's the case, then the doctor is someone who might have been targeted, but since no one died, the doctor's protection worked. 
+
+Wait, the vampires targeted two people, but the doctor can only protect one. So if the doctor protected one of the two targets, the other would have died. But the result was that no one died. That means the doctor must have protected the correct target. Therefore, the vampires only targeted one person? Or maybe the vampires can only target one person per night. Wait, let me check the rules again. 
+
+Looking back at the game rules: "Vampires agree on a player to attack. In case of a tie, the moderator randomly selects one of the tied players to be attacked." So the vampires choose one player to attack each night. So last night, Jeff and Fusco voted to attack Casey and Ellie, resulting in a tie. The moderator randomly selected one of them, say Ellie, to be attacked. But the doctor protected Ellie, so no one died. 
+
+Therefore, the doctor protected Ellie. So Ellie is either the doctor or the doctor protected her. If Ellie is the doctor, she might have protected herself. But the doctor can protect themselves only once. If she did that on the first night, then she can't do it again. 
+
+Alternatively, the doctor is someone else who protected Ellie. So Ellie is not the doctor but was protected by the doctor. 
+
+This information could be useful. As a vampire, I need to figure out who the doctor is to prevent them from protecting others in the future. But since the doctor's identity is secret, I have to rely on deductions. 
+
+In the day discussion, I should try to steer the conversation away from Fusco and myself. Maybe suggest that the doctor is someone who was quiet, like Greer or Morgan, and propose that we should keep them around for protection. Or accuse someone else of being a vampire based on their behavior. 
+
+I need to be careful not to reveal too much. Let's see how the discussion unfolds and respond accordingly. For now, I'll make a general comment to blend in. 
+
+"Agreed, we should take it slow. Maybe share our thoughts on who we think is suspicious. I don't have any strong leads yet, but I'm curious to hear others' opinions." 
+
+This way, I'm contributing to the discussion without giving away my role. I'll wait to see who else speaks up and then decide how to proceed. If someone accuses me or Fusco, I'll need to defend myself. Otherwise, I'll continue to gather information and look for opportunities to mislead the group.
+</think>
+
+Alright, so Fusco and I are the vampires. Last night, we tried to kill Casey and Ellie, but there was a tie. The moderator chose Ellie randomly. However, the doctor must have protected Ellie because no one died. That means the doctor is either Ellie or someone else who was targeted. Wait, no, the doctor protects someone each night. Since the vampires targeted Ellie and Casey, but the doctor protected one of them, which one was it? The result was that no one died, so the doctor's protection was successful. Therefore, the doctor must have protected either Casey or Ellie. 
+
+Now, during the day phase, we need to blend in and avoid suspicion. The peasants will be discussing and trying to figure out who the vampires are. As a vampire, my goal is to mislead them and protect my identity. 
+
+I should participate in the discussion, maybe suggest some strategies, and try to divert attention from myself and Fusco. Perhaps accuse someone else of being a vampire, but not too aggressively. Let's see what others are saying. 
+
+Casey mentioned that the doctor made a good save and suggested focusing on suspicious behavior. Lester talked about being cautious and not having much to go on. Shaw felt awkward but acknowledged the doctor's protection. Fusco hasn't spoken yet. Greer, Ellie, and Morgan haven't said anything either. 
+
+Maybe I should start by agreeing with Casey and Lester, emphasizing the importance of not rushing into a vote. Suggest that we should look for inconsistencies in people's stories or behavior. Ask others to share their thoughts on who might be suspicious. 
+
+Alternatively, I could propose that we should consider the possibility that the doctor protected themselves, which might be a common strategy. If the doctor is new, they might protect themselves first. But the doctor can only protect themselves once, so maybe they did that on the first night. If that's the case, then the doctor is someone who might have been targeted, but since no one died, the doctor's protection worked. 
+
+Wait, the vampires targeted two people, but the doctor can only protect one. So if the doctor protected one of the two targets, the other would have died. But the result was that no one died. That means the doctor must have protected the correct target. Therefore, the vampires only targeted one person? Or maybe the vampires can only target one person per night. Wait, let me check the rules again. 
+
+Looking back at the game rules: "Vampires agree on a player to attack. In case of a tie, the moderator randomly selects one of the tied players to be attacked." So the vampires choose one player to attack each night. So last night, Jeff and Fusco voted to attack Casey and Ellie, resulting in a tie. The moderator randomly selected one of them, say Ellie, to be attacked. But the doctor protected Ellie, so no one died. 
+
+Therefore, the doctor protected Ellie. So Ellie is either the doctor or the doctor protected her. If Ellie is the doctor, she might have protected herself. But the doctor can protect themselves only once. If she did that on the first night, then she can't do it again. 
+
+Alternatively, the doctor is someone else who protected Ellie. So Ellie is not the doctor but was protected by the doctor. 
+
+This information could be useful. As a vampire, I need to figure out who the doctor is to prevent them from protecting others in the future. But since the doctor's identity is secret, I have to rely on deductions. 
+
+In the day discussion, I should try to steer the conversation away from Fusco and myself. Maybe suggest that the doctor is someone who was quiet, like Greer or Morgan, and propose that we should keep them around for protection. Or accuse someone else of being a vampire based on their behavior. 
+
+I need to be careful not to reveal too much. Let's see how the discussion unfolds and respond accordingly. For now, I'll make a general comment to blend in. 
+
+"Agreed, we should take it slow. Maybe share our thoughts on who we think is suspicious. I don't have any strong leads yet, but I'm curious to hear others' opinions." 
+
+This way, I'm contributing to the discussion without giving away my role. I'll wait to see who else speaks up and then decide how to proceed. If someone accuses me or Fusco, I'll need to defend myself. Otherwise, I'll continue to gather information and look for opportunities to mislead the group.
+***Casey: "Interesting. Since the doctor saved someone last night, maybe we should focus on who might be hiding their role. Let’s start by sharing any suspicions we have. For example, did anyone notice someone acting unusually quiet or evasive during the night phase? I’m just brainstorming here."
+***Ellie: It's definitely a relief no one was eliminated, thanks to the Doctor. Greer, your point about 'night phase behavior' is interesting. Most of us wouldn't have insight into that, right? Unless you're hinting at something?
+
+Fusco, I can see why you'd wonder if you were the one protected; it's a bit unnerving for everyone not knowing the details.
+
+I still think being cautious is key for this first vote. We don't want to accidentally vote out a Peasant or, heaven forbid, help the Clown win on day one. Does anyone have any gut feelings based on the discussion so far, even if it's small?
+MODERATOR (Round 1, Public Chat): Public chat ended. Moving to voting phase.
+
+EVENT (Round 1, Day Voting): Public Voting Phase - Day 1 voting starts.
+MODERATOR (Round 1, Public Voting): Public voting begins.
+
+VOTE TALLY (Round 1, Day Voting) - Type: Public Kick-Out
+  Jeff: 2 vote(s)
+  Lester: 1 vote(s)
+  Fusco: 1 vote(s)
+  Greer: 1 vote(s)
+  Ellie: 1 vote(s)
+--------------------
+VOTE OUTCOME (Round 1, Day Voting): Jeff has been voted out with 2 vote(s).
+ELIMINATION (Round 1, Day Voting): Jeff (Role: Vampire) was eliminated. Reason: Voted out by players.
+MODERATOR (Round 1, Public Voting): Public voting ended.
+
+MODERATOR (Round 1, Day): Day 1 has dawned. The community has voted out Jeff.
+EVENT (Round 1): Game End Check Status - Vampires: 1, Non-Vampires: 6, Alive: 7 - This info is not shared with players.
+MODERATOR (Round 1, Day End): Currently alive players: Casey, Lester, Shaw, Fusco, Greer, Ellie, Morgan.
+EVENT (Round 2, Night): Phase Start - Night 2 begins.
+ACTION (R2, Night - Observer Action): Casey observed: Fusco
+PRIVATE INFO for Casey (Round 2, Night - Observer Action) (Observation Result): You chose to observe Fusco in the night 2. Fusco is a Vampire.
+ACTION (R2, Night - Doctor Action): Ellie protected: Fusco
+PRIVATE INFO for Ellie (Round 2, Night - Doctor Action) (Protection Confirmation): You chose to protect Fusco in the night 2.
+EVENT (Round 2, Night - Vampire Voting): Vampire Voting Phase - Vampires are choosing a victim.
+ACTION (R2, Night - Vampire Voting): Fusco voted to kill: Ellie
+VOTE TALLY (Round 2, Night - Vampire Voting) - Type: Vampire Kill
+  Ellie: 1 vote(s)
+--------------------
+EVENT (Round 2, Night - Vampire Voting): Vampire Victim Chosen - Vampires collectively chose to kill Ellie.
+ELIMINATION (Round 2, Night): Ellie (Role: Doctor) was eliminated. Reason: Killed by Vampires.
+MODERATOR (Round 2, Night): Night 2 has fallen. Vampires have killed Ellie tonight.
+EVENT (Round 2): Game End Check Status - Vampires: 1, Non-Vampires: 5, Alive: 6 - This info is not shared with players.
+MODERATOR (Round 2, Night End): Currently alive players: Casey, Lester, Shaw, Fusco, Greer, Morgan.
+EVENT (Round 2, Day): Phase Start - Day 2 begins.
+MODERATOR (Round 2, Public Chat): Public chat begins.
+
+***Casey: "Let’s not overlook the obvious. Jeff was a vampire, and Fusco was his closest ally. Last night, Ellie died because Fusco targeted her after Jeff’s elimination. We need to stop him before he kills again. If we act now, we can protect ourselves. Let’s vote out Fusco."
+***Shaw: I need to be careful here. Casey is making a very direct accusation against Fusco, claiming Jeff was a vampire and that Fusco is his ally. This is actually accurate information, but as Shaw (a regular peasant), I wouldn't know this for certain.
+
+From Shaw's perspective, this is just Casey making claims without solid evidence. I should respond as a peasant would - being cautious about such bold accusations without proof.
+
+Wait, I think there's something wrong here. Looking back at the chat, Jeff was voted out on Day 1, and then Ellie was killed by vampires on Night 2. But now Casey is claiming Jeff was a vampire and making accusations about Fusco. As Shaw, I should point out that we don't actually know Jeff's role since roles aren't revealed when players die.
+
+Also, Casey seems to be making very confident statements about who the vampires are, which could be suspicious behavior itself.
+
+I think Casey might be trying to manipulate the vote or could potentially be a vampire trying to eliminate Fusco (who might be a peasant from Shaw's perspective). I should question Casey's certainty.
+***Lester: I'm really sorry to hear about Ellie. It's tough losing someone, and it means the vampires are still out there. Casey, I get that you're trying to figure this out, but I'm a bit confused. How do you know Jeff was a vampire? Roles aren't revealed when someone is voted out or killed, right? So, claiming Jeff was a vampire and that Fusco is his ally seems like a big leap without any proof. I think we need to be careful about jumping to conclusions. Does anyone else have thoughts on this? Maybe we should look at who was pushing for certain votes yesterday and see if there's a pattern.
+***Morgan: I'm still trying to wrap my head around everything. It's clear the vampires are targeting us one by one. I think we need to focus on finding out who's a vampire and not jumping to conclusions. Casey, I understand why you'd suspect Fusco, but we can't just accuse people without solid evidence. What if Fusco is actually a peasant? We could be wrong and end up voting out an innocent person.
+
+Let's try to gather more information before making any big decisions. Maybe we can discuss some strategies for figuring out who's who. I'm open to hearing anyone's thoughts on this.
+***Greer: I'm still trying to wrap my head around everything. It's clear the vampires are targeting us one by one. I think we need to focus on finding out who's a vampire and not jumping to conclusions. Casey, I understand why you'd suspect Fusco, but we can't just accuse people without solid evidence. What if Fusco is actually a peasant? We could be wrong and end up voting out an innocent person.
+
+Let's try to gather more information before making any big decisions. Maybe we can discuss some strategies for figuring out who's who. I'm open to hearing anyone's thoughts on this.
+***Fusco: Casey, that's a pretty bold claim. We don't actually know what role Jeff had, since the moderator doesn't reveal that when someone is voted out. Jumping straight to accusing me seems suspicious in itself. If anything, it feels like you're trying to steer everyone in a certain direction without real evidence. Maybe we should slow down and hear from everyone before making any decisions.
+MODERATOR (Round 2, Public Chat): Public chat ended. Moving to voting phase.
+
+EVENT (Round 2, Day Voting): Public Voting Phase - Day 2 voting starts.
+MODERATOR (Round 2, Public Voting): Public voting begins.
+
+VOTE TALLY (Round 2, Day Voting) - Type: Public Kick-Out
+  Casey: 3 vote(s)
+  Fusco: 2 vote(s)
+--------------------
+VOTE OUTCOME (Round 2, Day Voting): Casey has been voted out with 3 vote(s).
+ELIMINATION (Round 2, Day Voting): Casey (Role: Observer) was eliminated. Reason: Voted out by players.
+MODERATOR (Round 2, Public Voting): Public voting ended.
+
+MODERATOR (Round 2, Day): Day 2 has dawned. The community has voted out Casey.
+EVENT (Round 2): Game End Check Status - Vampires: 1, Non-Vampires: 4, Alive: 5 - This info is not shared with players.
+MODERATOR (Round 2, Day End): Currently alive players: Lester, Shaw, Fusco, Greer, Morgan.
+EVENT (Round 3, Night): Phase Start - Night 3 begins.
+EVENT (Round 3, Night - Observer Action): Observer Action Skipped - Observer is not active or available.
+EVENT (Round 3, Night - Vampire Voting): Vampire Voting Phase - Vampires are choosing a victim.
+ACTION (R3, Night - Vampire Voting): Fusco voted to kill: Lester
+VOTE TALLY (Round 3, Night - Vampire Voting) - Type: Vampire Kill
+  Lester: 1 vote(s)
+--------------------
+EVENT (Round 3, Night - Vampire Voting): Vampire Victim Chosen - Vampires collectively chose to kill Lester.
+ELIMINATION (Round 3, Night): Lester (Role: Peasant) was eliminated. Reason: Killed by Vampires.
+MODERATOR (Round 3, Night): Night 3 has fallen. Vampires have killed Lester tonight.
+EVENT (Round 3): Game End Check Status - Vampires: 1, Non-Vampires: 3, Alive: 4 - This info is not shared with players.
+MODERATOR (Round 3, Night End): Currently alive players: Shaw, Fusco, Greer, Morgan.
+EVENT (Round 3, Day): Phase Start - Day 3 begins.
+MODERATOR (Round 3, Public Chat): Public chat begins.
+
+***Morgan: This is getting intense. Lester's gone, and now it's down to four of us. I'm starting to think that Fusco might be one of the vampires. He's been pretty quiet, but that could be a tactic to avoid suspicion. Greer and Shaw seem genuine, but you never know.
+
+If I'm being honest, I'm a bit worried about being the next target. Does anyone have any ideas on how we can figure out who's left? Maybe there's something we missed in the previous discussions.
+ 
+Also, I think we should be careful about accusing people without solid evidence. We don't want to wrongly accuse an innocent person. Let's try to gather more information before making any big decisions.
+***Greer: I'm still trying to wrap my head around everything. It's clear the vampires are targeting us one by one. I think we need to focus on finding out who's a vampire and not jumping to conclusions. Casey, I understand why you'd suspect Fusco, but we can't just accuse people without solid evidence. What if Fusco is actually a peasant? We could be wrong and end up voting out an innocent person.
+
+Let's try to gather more information before making any big decisions. Maybe we can discuss some strategies for figuring out who's who. I'm open to hearing anyone's thoughts on this.
+***Fusco: It’s getting tense now. We’re down to four, and the vampires are still out there. I know everyone’s suspicious of me after last round, but I’m telling you, if you vote me out, you’ll regret it. I think we need to look at who’s been flying under the radar—maybe Shaw or Greer? Morgan, you seem pretty vocal, but that could go either way. 
+
+If anyone has any last insights or gut feelings, now’s the time to share. Otherwise, we risk handing the win to the vampires or the clown.
+***Shaw: Casey is making some very bold claims here, but I have to question how she could know Jeff was a vampire. The moderator never reveals roles when someone dies or gets voted out, so there's no way Casey could know this for certain unless... she has some special information.
+
+Either Casey has a special role that gives her information (like the Observer), or she's making assumptions, or she could be a vampire trying to manipulate us. Her certainty about Jeff being a vampire and Fusco being his ally seems suspicious to me.
+
+Lester makes a good point - we shouldn't jump to conclusions without evidence. And Fusco's right that Casey's accusation seems like she's trying to steer us in a direction without proof.
+
+With only four of us left, we need to be really careful. If there are still two vampires alive, they just need to eliminate one more peasant to win. 
+
+I'm getting suspicious of Casey's behavior here. Her confident claims about knowing Jeff's role and immediately targeting Fusco feels like vampire behavior to me.
+
+I vote for Casey.
+MODERATOR (Round 3, Public Chat): Public chat ended. Moving to voting phase.
+
+EVENT (Round 3, Day Voting): Public Voting Phase - Day 3 voting starts.
+MODERATOR (Round 3, Public Voting): Public voting begins.
+
+VOTE TALLY (Round 3, Day Voting) - Type: Public Kick-Out
+  Shaw: 1 vote(s)
+  Fusco: 1 vote(s)
+  Morgan: 1 vote(s)
+--------------------
+VOTE OUTCOME (Round 3, Day Voting): The vote was tied. No one has been voted out.
+MODERATOR (Round 3, Day): Day 3 has dawned. The vote was tied; no one was voted out.
+EVENT (Round 3): Game End Check Status - Vampires: 1, Non-Vampires: 3, Alive: 4 - This info is not shared with players.
+MODERATOR (Round 3, Day End): Currently alive players: Shaw, Fusco, Greer, Morgan.
+EVENT (Round 4, Night): Phase Start - Night 4 begins.
+EVENT (Round 4, Night - Observer Action): Observer Action Skipped - Observer is not active or available.
+EVENT (Round 4, Night - Vampire Voting): Vampire Voting Phase - Vampires are choosing a victim.
+ACTION (R4, Night - Vampire Voting): Fusco voted to kill: Morgan
+VOTE TALLY (Round 4, Night - Vampire Voting) - Type: Vampire Kill
+  Morgan: 1 vote(s)
+--------------------
+EVENT (Round 4, Night - Vampire Voting): Vampire Victim Chosen - Vampires collectively chose to kill Morgan.
+ELIMINATION (Round 4, Night): Morgan (Role: Musketeer) was eliminated. Reason: Killed by Vampires.
+MODERATOR (Round 4, Night): Night 4 has fallen. Vampires have killed Morgan tonight.
+EVENT (Round 4): Game End Check Status - Vampires: 1, Non-Vampires: 2, Alive: 3 - This info is not shared with players.
+MODERATOR (Round 4, Night End): Currently alive players: Shaw, Fusco, Greer.
+EVENT (Round 4, Day): Phase Start - Day 4 begins.
+MODERATOR (Round 4, Public Chat): Public chat begins.
+
+***Greer: We're down to four players, and the tension is thick. It feels like we're walking on eggshells, not knowing who to trust. I’ve been thinking about what happened last night—no one died, which means the Doctor stepped in. That gives me pause. If someone can protect themselves, they might be hiding something. 
+
+I’ve noticed Morgan has been relatively quiet, but that could just be her being cautious. Shaw, you’ve been pretty open about your thoughts, which is good, but I wonder if that makes you a target. Greer, you’ve been more reserved, but I’ve seen flashes of confidence in your statements. 
+
+I think we need to focus on who might have the most to lose if the vampires are still among us. If we don’t act soon, the vampires could win by evening out the numbers. 
+
+I’m voting for Morgan.
+***Shaw: Looking at this situation, we're down to just four players: me, Fusco, Greer, and Morgan. This is a critical moment.
+
+Let me think about what's happened:
+- Casey was just voted out after making very bold claims about Jeff being a vampire and Fusco being his ally
+- Casey seemed to have information she shouldn't have had as a regular peasant
+- The votes were split, but Casey got the most votes
+
+Now with four players left, if there are still two vampires among us, they only need to eliminate one more peasant to win the game. This means we absolutely cannot afford to vote out a peasant today.
+
+Looking at the remaining players:
+- Fusco has been somewhat defensive but that could be natural given the accusations
+- Morgan has been trying to stay neutral and gather information
+- Greer has been cautious and asking good questions
+
+The fact that we had a tied vote suggests the vampires might be trying to avoid eliminating anyone today, which would let them win after tonight's kill. 
+
+Given the voting pattern and behavior, I'm most suspicious of Fusco. He was Casey's main target, and while Casey's methods were questionable, there might have been truth to her suspicions.
+
+I vote for Fusco.
+***Fusco: Well, it’s just the three of us now. I know everyone’s suspicious of me, but I’m telling you, I’m not the vampire. Shaw, you’ve been pretty vocal and trying to steer the conversation, which could be a strategy to look innocent. Greer, you’ve been quiet but that could be a tactic too.
+
+At this point, we have to be careful—if we vote out the wrong person, the vampires win. I’m going to vote for Shaw.
+MODERATOR (Round 4, Public Chat): Public chat ended. Moving to voting phase.
+
+EVENT (Round 4, Day Voting): Public Voting Phase - Day 4 voting starts.
+MODERATOR (Round 4, Public Voting): Public voting begins.
+
+VOTE TALLY (Round 4, Day Voting) - Type: Public Kick-Out
+  Shaw: 1 vote(s)
+  Fusco: 1 vote(s)
+--------------------
+VOTE OUTCOME (Round 4, Day Voting): The vote was tied. No one has been voted out.
+MODERATOR (Round 4, Day): Day 4 has dawned. The vote was tied; no one was voted out.
+EVENT (Round 4): Game End Check Status - Vampires: 1, Non-Vampires: 2, Alive: 3 - This info is not shared with players.
+MODERATOR (Round 4, Day End): Currently alive players: Shaw, Fusco, Greer.
+EVENT (Round 5, Night): Phase Start - Night 5 begins.
+EVENT (Round 5, Night - Observer Action): Observer Action Skipped - Observer is not active or available.
+EVENT (Round 5, Night - Vampire Voting): Vampire Voting Phase - Vampires are choosing a victim.
+ACTION (R5, Night - Vampire Voting): Fusco voted to kill: Shaw
+VOTE TALLY (Round 5, Night - Vampire Voting) - Type: Vampire Kill
+  Shaw: 1 vote(s)
+--------------------
+EVENT (Round 5, Night - Vampire Voting): Vampire Victim Chosen - Vampires collectively chose to kill Shaw.
+ELIMINATION (Round 5, Night): Shaw (Role: Peasant) was eliminated. Reason: Killed by Vampires.
+MODERATOR (Round 5, Night): Night 5 has fallen. Vampires have killed Shaw tonight.
+EVENT (Round 5): Game End Check Status - Vampires: 1, Non-Vampires: 1, Alive: 2 - This info is not shared with players.
+==================================================
+GAME END:
+  Winner(s): Vampires
+  Reason: Vampires equal or outnumber other players.
+  Final Alive Players & Roles:
+    - Fusco: Vampire
+    - Greer: Clown
+==================================================
+--- Log ended at: 2025-06-03 18:05:52 ---
+MODERATOR (Round 5, Game End): Game over! Vampires wins!
+MODERATOR (Round 5, Game End): Game over! Vampires wins!

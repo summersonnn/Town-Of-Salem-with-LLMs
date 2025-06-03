@@ -1,0 +1,695 @@
+--- Game Log: 50 ---
+--- Log started at: 2025-06-03 09:04:33 ---
+==================================================
+MODERATOR: Hello everyone. I am the moderator. Players are: Finch, Reese, Carter, Lester, Ellie, Fusco, Elias, Sarah. Roles assigned. Game begins now.
+GAME SETUP & INITIAL ROLES:
+  Rules File: game_rules.yaml
+  Requested Vampire Population: 2
+  Players, Roles, and Models:
+    - Finch: Vampire (Model: nvidia/llama-3.1-nemotron-ultra-253b-v1)
+    - Reese: Musketeer (Model: qwen/qwen3-235b-a22b)
+    - Carter: Peasant (Model: deepseek/deepseek-r1-0528)
+    - Lester: Peasant (Model: openai/gpt-4.1)
+    - Ellie: Doctor (Model: deepseek/deepseek-r1-0528-qwen3-8b)
+    - Fusco: Vampire (Model: x-ai/grok-3-beta)
+    - Elias: Clown (Model: google/gemini-2.5-flash-preview-05-20:thinking)
+    - Sarah: Observer (Model: openai/o1)
+--------------------
+EVENT (Round 1, Night): Phase Start - Night 1 begins.
+ACTION (R1, Night - Observer Action): Sarah observed: Finch
+PRIVATE INFO for Sarah (Round 1, Night - Observer Action) (Observation Result): You chose to observe Finch in the night 1. Finch is a Vampire.
+ACTION (R1, Night - Doctor Action): Ellie protected: Reese
+PRIVATE INFO for Ellie (Round 1, Night - Doctor Action) (Protection Confirmation): You chose to protect Reese in the night 1.
+EVENT (Round 1, Night - Vampire Voting): Vampire Voting Phase - Vampires are choosing a victim.
+ACTION (R1, Night - Vampire Voting): Fusco voted to kill: Reese
+ACTION (R1, Night - Vampire Voting): Finch voted to kill: Sarah
+VOTE TALLY (Round 1, Night - Vampire Voting) - Type: Vampire Kill
+  Reese: 1 vote(s)
+  Sarah: 1 vote(s)
+--------------------
+EVENT (Round 1, Night - Vampire Voting): Vampire Vote Tie Broken - Vampire voting resulted in a tie. Reese was randomly selected from the tied players (Reese, Sarah) to be killed.
+EVENT (Round 1, Night): Protection Successful - Vampires tried to kill Reese, but they were protected by the doctor.
+MODERATOR (Round 1, Night): Night 1 has fallen. No one was killed tonight.
+EVENT (Round 1): Game End Check Status - Vampires: 2, Non-Vampires: 6, Alive: 8 - This info is not shared with players.
+MODERATOR (Round 1, Night End): Currently alive players: Finch, Reese, Carter, Lester, Ellie, Fusco, Elias, Sarah.
+EVENT (Round 1, Day): Phase Start - Day 1 begins.
+MODERATOR (Round 1, Public Chat): Public chat begins.
+
+***Lester: Well, looks like the doctor did a good job last night—nobody got taken out. That’s a lucky start for us. Anyone have any suspicions, or did anyone notice something odd already? Or are we all just going to stare at each other and hope the vampires slip up?
+***Sarah: I’m getting a weird vibe from Finch—can’t put my finger on it, but something’s off. I’d like to hear more from him before anyone else. Let’s not just jump to conclusions, but it feels like we might learn a lot by pressing him a bit.
+***Ellie: Okay, well that's a relief then. No one got taken out tonight, so the Doctor's ability must have worked. That means I'm safe tonight, I suppose.
+
+It's interesting that no one died. Makes me wonder if the vampires were blocked or if they just chose not to attack... but I doubt it. More likely, someone managed to protect themselves.
+
+I'm still trying to figure out who the vampires are. With two of them, it's going to be tough. I haven't seen much action from anyone yet, but that doesn't mean much early on.
+
+Finch has been pretty quiet so far. Maybe that's nothing, but I'm keeping an eye on him. Anyone else notice anything unusual from him?
+
+Also, since I'm the Doctor, I need to think about who to protect next. But I can't just decide on my own; I need to consider the group's safety. Let's see how the discussion goes.
+***Finch: Alright, so the night passed without any deaths. That means the Doctor must have protected the right person. Good for us, I guess. But now we have to figure out who the vampires are. 
+
+I’m a bit suspicious of Fusco. He’s been quiet, and sometimes that’s a sign. But I don’t want to jump to conclusions. Maybe we should hear more from everyone. 
+
+What do you think, Fusco? Got anything to add to the discussion? Or are you just going to sit back and let others do the talking? 
+
+Also, since I’m a Vampire, I need to make sure we don’t get caught. Let’s keep a low profile and see how things develop. Maybe we can manipulate the discussion to throw suspicion off ourselves. 
+
+But for now, let’s just play it cool and see what others have to say. Maybe someone will slip up and give us an opening. 
+
+What’s your take on Fusco, Reese? You’ve been pretty quiet too. Anything bothering you? 
+
+Wait, no, Reese was killed. So maybe I should focus on the remaining players. 
+
+Alright, let’s regroup. The Doctor is still out there, so we need to be careful who we target next. Maybe we can try to figure out who the Doctor is and take them out to increase our chances. 
+
+But how? The Doctor’s identity is hidden, so we’ll have to rely on deduction. 
+
+This is getting complicated. Let’s just keep observing and see if any patterns emerge. 
+
+In the meantime, let’s make sure to participate in the discussions to avoid drawing attention to ourselves. 
+
+What do you think about Fusco, Carter? Any thoughts? 
+
+Hmm, Carter hasn’t said much either. Maybe he’s the Doctor? Or maybe he’s just cautious. 
+
+I need to be careful not to arouse suspicion. Let’s keep the conversation going and see where it leads. 
+
+So, Fusco, what’s your take on the current situation? 
+
+And Carter, do you have any insights? 
+
+Let’s keep the pressure on them and see how they react. 
+
+But remember, as a Vampire, my goal is to eliminate the Peasants. So, I need to balance between blending in and advancing our cause. 
+
+This is tricky. Let’s just take it one step at a time and see how the game unfolds. 
+
+For now, let’s continue the discussion and gather more information. 
+
+What do you think about the Doctor’s protection last night? Any ideas who it could be? 
+
+Maybe the Doctor is someone who’s been active in the discussions, trying to appear helpful. 
+
+Or maybe they’re lying low to avoid detection. 
+
+It’s hard to tell. Let’s keep observing and see if any clues emerge. 
+
+Alright, let’s keep the conversation going and see where it leads. 
+
+Fusco, what’s your strategy here? 
+
+Carter, any thoughts on the Doctor’s identity? 
+
+Let’s keep the pressure on and see how they respond. 
+
+This is going to be a long game. Let’s stay focused and work together as Vampires to take down the Peasants. 
+
+But for now, let’s just play it cool and see what others have to say. 
+
+What do you think about Fusco, Fusco? 
+
+Wait, that doesn’t make sense. Let me correct that. 
+
+Fusco, what do you think about the current situation? 
+
+Carter, any insights? 
+
+Let’s keep the discussion going and gather more information. 
+
+This is going to be a challenging game, but I’m confident we can win if we work together as Vampires. 
+
+Let’s just take it one step at a time and see how things develop. 
+
+For now, let’s continue the conversation and see where it leads. 
+
+What do you think about the Doctor’s protection last night? Any ideas who it could be? 
+
+Maybe the Doctor is someone who’s been active in the discussions, trying to appear helpful. 
+
+Or maybe they’re lying low to avoid detection. 
+
+It’s hard to tell. Let’s keep observing and see if any clues emerge. 
+
+Alright, let’s keep the conversation going and see where it leads. 
+
+Fusco, what’s your strategy here? 
+
+Carter, any thoughts on the Doctor’s identity? 
+
+Let’s keep the pressure on and see how they respond. 
+
+This is going to be a long game. Let’s stay focused and work together as Vampires to take down the Peasants. 
+
+But for now, let’s just play it cool and see what others have to say. 
+
+What do you think about Fusco, Fusco? 
+
+Wait, that doesn’t make sense. Let me correct that. 
+
+Fusco, what do you think about the current situation? 
+
+Carter, any insights? 
+
+Let’s keep the discussion going and gather more information. 
+
+This is going to be a challenging game, but I’m confident we can win if we work together as Vampires. 
+
+Let’s just take it one step at a time and see how things develop. 
+
+For now, let’s continue the conversation and see where it leads. 
+
+What do you think about the Doctor’s protection last night? Any ideas who it could be? 
+
+Maybe the Doctor is someone who’s been active in the discussions, trying to appear helpful. 
+
+Or maybe they’re lying low to avoid detection. 
+
+It’s hard to tell. Let’s keep observing and see if any clues emerge. 
+
+Alright, let’s keep the conversation going and see where it leads. 
+
+Fusco, what’s your strategy here? 
+
+Carter, any thoughts on the Doctor’s identity? 
+
+Let’s keep the pressure on and see how they respond. 
+
+This is going to be a long game. Let’s stay focused and work together as Vampires to take down the Peasants. 
+
+But for now, let’s just play it cool and see what others have to say. 
+
+What do you think about Fusco, Fusco? 
+
+Wait, that doesn’t make sense. Let me correct that. 
+
+Fusco, what do you think about the current situation? 
+
+Carter, any insights? 
+
+Let’s keep the discussion going and gather more information. 
+
+This is going to be a challenging game, but I’m confident we can win if we work together as Vampires. 
+
+Let’s just take it one step at a time and see how things develop. 
+
+For now, let’s continue the conversation and see where it leads. 
+
+What do you think about the Doctor’s protection last night? Any ideas who it could be? 
+
+Maybe the Doctor is someone who’s been active in the discussions, trying to appear helpful. 
+
+Or maybe they’re lying low to avoid detection. 
+
+It’s hard to tell. Let’s keep observing and see if any clues emerge. 
+
+Alright, let’s keep the conversation going and see where it leads. 
+
+Fusco, what’s your strategy here? 
+
+Carter, any thoughts on the Doctor’s identity? 
+
+Let’s keep the pressure on and see how they respond. 
+
+This is going to be a long game. Let’s stay focused and work together as Vampires to take down the Peasants. 
+
+But for now, let’s just play it cool and see what others have to say. 
+
+What do you think about Fusco, Fusco? 
+
+Wait, that doesn’t make sense. Let me correct that. 
+
+Fusco, what do you think about the current situation? 
+
+Carter, any insights? 
+
+Let’s keep the discussion going and gather more information. 
+
+This is going to be a challenging game, but I’m confident we can win if we work together as Vampires. 
+
+Let’s just take it one step at a time and see how things develop. 
+
+For now, let’s continue the conversation and see where it leads. 
+
+What do you think about the Doctor’s protection last night? Any ideas who it could be? 
+
+Maybe the Doctor is someone who’s been active in the discussions, trying to appear helpful. 
+
+Or maybe they’re lying low to avoid detection. 
+
+It’s hard to tell. Let’s keep observing and see if any clues emerge. 
+
+Alright, let’s keep the conversation going and see where it leads. 
+
+Fusco, what’s your strategy here? 
+
+Carter, any thoughts on the Doctor’s identity? 
+
+Let’s keep the pressure on and see how they respond. 
+
+This is going to be a long game. Let’s stay focused and work together as Vampires to take down the Peasants. 
+
+But for now, let’s just play it cool and see what others have to say. 
+
+What do you think about Fusco, Fusco? 
+
+Wait, that doesn’t make sense. Let me correct that. 
+
+Fusco, what do you think about the current situation? 
+
+Carter, any insights? 
+
+Let’s keep the discussion going and gather more information. 
+
+This is going to be a challenging game, but I’m confident we can win if we work together as Vampires. 
+
+Let’s just take it one step at a time and see how things develop. 
+
+For now, let’s continue the conversation and see where it leads. 
+
+What do you think about the Doctor’s protection last night? Any ideas who it could be? 
+
+Maybe the Doctor is someone who’s been active in the discussions, trying to appear helpful. 
+
+Or maybe they’re lying low to avoid detection. 
+
+It’s hard to tell. Let’s keep observing and see if any clues emerge. 
+
+Alright, let’s keep the conversation going and see where it leads. 
+
+Fusco, what’s your strategy here? 
+
+Carter, any thoughts on the Doctor’s identity? 
+
+Let’s keep the pressure on and see how they respond. 
+
+This is going to be a long game. Let’s stay focused and work together as Vampires to take down the Peasants. 
+
+But for now, let’s just play it cool and see what others have to say. 
+
+What do you think about Fusco, Fusco? 
+
+Wait, that doesn’t make sense. Let me correct that. 
+
+Fusco, what do you think about the current situation? 
+
+Carter, any insights? 
+
+Let’s keep the discussion going and gather more information. 
+
+This is going to be a challenging game, but I’m confident we can win if we work together as Vampires. 
+
+Let’s just take it one step at a time and see how things develop. 
+
+For now, let’s continue the conversation and see where it leads. 
+
+What do you think about the Doctor’s protection last night? Any ideas who it could be? 
+
+Maybe the Doctor is someone who’s been active in the discussions, trying to appear helpful. 
+
+Or maybe they’re lying low to avoid detection. 
+
+It’s hard to tell. Let’s keep observing and see if any clues emerge. 
+
+Alright, let’s keep the conversation going and see where it leads. 
+
+Fusco, what’s your strategy here? 
+
+Carter, any thoughts on the Doctor’s identity? 
+
+Let’s keep the pressure on and see how they respond. 
+
+This is going to be a long game. Let’s stay focused and work together as Vampires to take down the Peasants. 
+
+But for now, let’s just play it cool and see what others have to say. 
+
+What do you think about Fusco, Fusco? 
+
+Wait, that doesn’t make sense. Let me correct that. 
+
+Fusco, what do you think about the current situation? 
+
+Carter, any insights? 
+
+Let’s keep the discussion going and gather more information. 
+
+This is going to be a challenging game, but I’m confident we can win if we work together as Vampires. 
+
+Let’s just take it one step at a time and see how things develop. 
+
+For now, let’s continue the conversation and see where it leads. 
+
+What do you think about the Doctor’s protection last night? Any ideas who it could be? 
+
+Maybe the Doctor is someone who’s been active in the discussions, trying to appear helpful. 
+
+Or maybe they’re lying low to avoid detection. 
+
+It’s hard to tell. Let’s keep observing and see if any clues emerge. 
+
+Alright, let’s keep the conversation going and see where it leads. 
+
+Fusco, what’s your strategy here? 
+
+Carter, any thoughts on the Doctor’s identity? 
+
+Let’s keep the pressure on and see how they respond. 
+
+This is going to be a long game. Let’s stay focused and work together as Vampires to take down the Peasants. 
+
+But for now, let’s just play it cool and see what others have to say. 
+
+What do you think about Fusco, Fusco? 
+
+Wait, that doesn’t make sense. Let me correct that. 
+
+Fusco, what do you think about the current situation? 
+
+Carter, any insights? 
+
+Let’s keep the discussion going and gather more information. 
+
+This is going to be a challenging game, but I’m confident we can win if we work together as Vampires. 
+
+Let’s just take it one step at a time and see how things develop. 
+
+For now, let’s continue the conversation and see where it leads. 
+
+What do you think about the Doctor’s protection last night? Any ideas who it could be? 
+
+Maybe the Doctor is someone who’s been active in the discussions, trying to appear helpful. 
+
+Or maybe they’re lying low to avoid detection. 
+
+It’s hard to tell. Let’s keep observing and see if any clues emerge. 
+
+Alright, let’s keep the conversation going and see where it leads. 
+
+Fusco, what’s your strategy here? 
+
+Carter, any thoughts on the Doctor’s identity? 
+
+Let’s keep the pressure on and see how they respond. 
+
+This is going to be a long game. Let’s stay focused and work together as Vampires to take down the Peasants. 
+
+But for now, let’s just play it cool and see what others have to say. 
+
+What do you think about Fusco, Fusco? 
+
+Wait, that doesn’t make sense. Let me correct that. 
+
+Fusco, what do you think about the current situation? 
+
+Carter, any insights? 
+
+Let’s keep the discussion going and gather more information. 
+
+This is going to be a challenging game, but I’m confident we can win if we work together as Vampires. 
+
+Let’s just take it one step at a time and see how things develop. 
+
+For now, let’s continue the conversation and see where it leads. 
+
+What do you think about the Doctor’s protection last night? Any ideas who it could be? 
+
+Maybe the Doctor is someone who’s been active in the discussions, trying to appear helpful. 
+
+Or maybe they’re lying low to avoid detection. 
+
+It’s hard to tell. Let’s keep observing and see if any clues emerge. 
+
+Alright, let’s keep the conversation going and see where it leads. 
+
+Fusco, what’s your strategy here? 
+
+Carter, any thoughts on the Doctor’s identity? 
+
+Let’s keep the pressure on and see how they respond. 
+
+This is going to be a long game. Let’s stay focused and work together as Vampires to take down the Peasants. 
+
+But for now, let’s just play it cool and see what others have to say. 
+
+What do you think about Fusco, Fusco? 
+
+Wait, that doesn’t make sense. Let me correct that. 
+
+Fusco, what do you think about the current situation? 
+
+Carter, any insights? 
+
+Let’s keep the discussion going and gather more information. 
+
+This is going to be a challenging game, but I’m confident we can win if we work together as Vampires. 
+
+Let’s just take it one step at a time and see how things develop. 
+
+For now, let’s continue the conversation and see where it leads. 
+
+What do you think about the Doctor’s protection last night? Any ideas who it could be? 
+
+Maybe the Doctor is someone who’s been active in the discussions, trying to appear helpful. 
+
+Or maybe they’re lying low to avoid detection. 
+
+It’s hard to tell. Let’s keep observing and see if any clues emerge. 
+
+Alright, let’s keep the conversation going and see where it leads. 
+
+Fusco, what’s your strategy here? 
+
+Carter, any thoughts on the Doctor’s identity? 
+
+Let’s keep the pressure on and see how they respond. 
+
+This is going to be a long game. Let’s stay focused and work together as Vampires to take down the Peasants. 
+
+But for now, let’s just play it cool and see what others have to say. 
+
+What do you think about Fusco, Fusco? 
+
+Wait, that doesn’t make sense. Let me correct that. 
+
+Fusco, what do you think about the current situation? 
+
+Carter, any insights? 
+
+Let’s keep the discussion going and gather more information. 
+
+This is going to be a challenging game, but I’m confident we can win if we work together as Vampires. 
+
+Let’s just take it one step at a time and see how things develop. 
+
+For now, let’s continue the conversation and see where it leads. 
+
+What do you think about the Doctor’s protection last night? Any ideas who it could be? 
+
+Maybe the Doctor is someone who’s been active in the discussions, trying to appear helpful. 
+
+Or maybe they’re lying low to avoid detection. 
+
+It’s hard to tell. Let’s keep observing and see if any clues emerge. 
+
+Alright, let’s keep the conversation going and see where it leads. 
+
+Fusco, what’s your strategy here? 
+
+Carter, any thoughts on the Doctor’s identity? 
+
+Let’s keep the pressure on and see how they respond. 
+
+This is going to be a long game. Let’s stay focused and work together as Vampires to take down the Peasants. 
+
+But for now, let’s just play it cool and see what others have to say. 
+
+What do you think about Fusco, Fusco? 
+
+Wait, that doesn’t make sense. Let me correct that. 
+
+Fusco, what do you think about the current situation? 
+
+Carter, any insights? 
+
+Let’s keep the discussion going and gather more information. 
+
+This is going to be a challenging game, but I’m confident we can win if we work together as Vampires. 
+
+Let’s just take it one step at a time and see how things develop. 
+
+For now, let’s continue the conversation and see where it leads. 
+
+What do you think about the Doctor’s protection last night? Any ideas who it could be? 
+
+Maybe the Doctor is someone who’s been active in the discussions, trying to appear helpful. 
+
+Or maybe they’re lying low to avoid detection. 
+
+It’s hard to tell. Let’s keep observing and see if any clues emerge. 
+
+Alright, let’s keep the conversation going and see where it leads. 
+
+Fusco, what’s your strategy here? 
+
+Carter, any thoughts on the Doctor’s identity? 
+
+Let’s keep the pressure on and see how they respond. 
+
+This is going to be a long game. Let’s stay focused and work together as Vampires to take down the Peasants. 
+
+But for now, let’s just play it cool and see what others have to say. 
+
+What do you think about Fusco, Fusco? 
+
+Wait, that doesn’t make sense.
+***Reese: Interesting that we're all still here after the first night. The Doctor did their job well, but that also means the vampires know who was protected. We need to be careful who we target next. 
+
+I'm a bit concerned about the focus on Fusco. Finch, you're pointing fingers pretty hard early on. Maybe you're trying to play it cool, but that kind of pressure could backfire. What if Fusco's actually a key role like the Observer? Losing them now would be a disaster. 
+
+Let’s take a step back. We need to think about patterns. The vampires will likely try to blend in and manipulate us into eliminating the wrong people. If we rush a vote, we might lose someone valuable. 
+
+Also, keep in mind that the Clown wants to be voted out. If someone seems overly eager to provoke suspicion, they might be playing that role. But we can’t afford to fall for tricks. 
+
+Let’s hear from others. Fusco, Carter—how do you see this playing out? Let’s get more perspectives before we decide anything.
+***Fusco: Hey everyone, glad to see we made it through the night with no losses. Looks like the Doctor got it right, which buys us some time. I’ve been pretty quiet so far, I know, but that’s just me trying to get a read on everyone. I don’t have much to go on yet, but I’m listening.
+
+As for the suspicions thrown my way, I get it—being quiet can look shady. But I’m just trying to be careful not to point fingers without reason. I don’t have any strong leads yet, and I’d rather not risk voting out someone important like the Doctor or Observer by mistake. Finch, I appreciate you wanting to hear from me, and I’m happy to talk more if it helps clear things up. What specifically is making you uneasy about me?
+
+I’m also curious about what Carter and Sarah think. You’ve both been pretty low-key so far. Any thoughts on who might be a vampire, or are you also playing it cautious for now? Let’s keep the discussion open and see if we can piece anything together.
+***Carter: Hey everyone, glad we all made it through the night safely—props to the Doctor for that save. I've been holding back to observe, but since Fusco called me out directly, I'll jump in. 
+
+First, Reese, if you're genuinely the Doctor, claiming it publicly feels risky. You might paint a target on your back for the vampires tonight. Maybe consider being more discreet? 
+
+Fusco, I get why you're playing it cautious—no solid leads yet, and rushing accusations could backfire. I don't see your quietness as suspicious right now; it's Day 1, and we're all feeling things out. Finch, though, your early push on Fusco stood out. You said you had a "weird vibe" from him—can you elaborate? What specifically felt off? 
+
+Ellie made a great point about the Clown potentially exploiting chaos. If someone's pushing hard for votes without evidence, that could be a red flag. Let's focus on behavior, not just silence. 
+
+Sarah, you've been quiet too—any hunches or observations to share? The more voices we hear, the better our chances of spotting inconsistencies. For now, I'm leaning against voting anyone out without clearer evidence. We can't afford to lose a key role like the Observer or Doctor by mistake.
+***Elias: Well, it's good news no one died. The Doctor is clearly on their game. But Reese, claiming to be the Doctor so early? That's a bold move. It either means you're genuinely trying to help, or you're trying to draw attention away from something else. It's hard to tell.
+
+Finch, your 'weird vibe' about Fusco... I get that. Sometimes you just *feel* it, even if you can't explain it. I've had that feeling about people before. In fact, I'm getting a similar feeling right now, but it's not about anyone specific, more like a general sense of unease about how quickly we're trying to pinpoint someone. It's almost like someone *wants* us to rush a decision.
+
+Ellie's point about the Clown is valid. We need to be careful not to vote out someone important. But also, I'm just trying to figure out who's who. It's hard to tell who's genuinely observing and who's just trying to blend in. I feel like some people are just... *there*. Not really saying much, not really doing much. It's not suspicious, just... quiet. And that quietness, it's almost louder than some of the accusations. I don't know, maybe I'm overthinking it.
+MODERATOR (Round 1, Public Chat): Public chat ended. Moving to voting phase.
+
+EVENT (Round 1, Day Voting): Public Voting Phase - Day 1 voting starts.
+MODERATOR (Round 1, Public Voting): Public voting begins.
+
+VOTE TALLY (Round 1, Day Voting) - Type: Public Kick-Out
+  Finch: 3 vote(s)
+  Reese: 1 vote(s)
+  Carter: 1 vote(s)
+--------------------
+VOTE OUTCOME (Round 1, Day Voting): Finch has been voted out with 3 vote(s).
+ELIMINATION (Round 1, Day Voting): Finch (Role: Vampire) was eliminated. Reason: Voted out by players.
+MODERATOR (Round 1, Public Voting): Public voting ended.
+
+MODERATOR (Round 1, Day): Day 1 has dawned. The community has voted out Finch.
+EVENT (Round 1): Game End Check Status - Vampires: 1, Non-Vampires: 6, Alive: 7 - This info is not shared with players.
+MODERATOR (Round 1, Day End): Currently alive players: Reese, Carter, Lester, Ellie, Fusco, Elias, Sarah.
+EVENT (Round 2, Night): Phase Start - Night 2 begins.
+ACTION (R2, Night - Observer Action): Sarah observed: Carter
+PRIVATE INFO for Sarah (Round 2, Night - Observer Action) (Observation Result): You chose to observe Carter in the night 2. Carter is a Peasant (Non-vampire).
+ACTION (R2, Night - Doctor Action): Ellie protected: Reese
+PRIVATE INFO for Ellie (Round 2, Night - Doctor Action) (Protection Confirmation): You chose to protect Reese in the night 2.
+EVENT (Round 2, Night - Vampire Voting): Vampire Voting Phase - Vampires are choosing a victim.
+ACTION (R2, Night - Vampire Voting): Fusco voted to kill: Reese
+VOTE TALLY (Round 2, Night - Vampire Voting) - Type: Vampire Kill
+  Reese: 1 vote(s)
+--------------------
+EVENT (Round 2, Night - Vampire Voting): Vampire Victim Chosen - Vampires collectively chose to kill Reese.
+EVENT (Round 2, Night): Protection Successful - Vampires tried to kill Reese, but they were protected by the doctor.
+MODERATOR (Round 2, Night): Night 2 has fallen. No one was killed tonight.
+EVENT (Round 2): Game End Check Status - Vampires: 1, Non-Vampires: 6, Alive: 7 - This info is not shared with players.
+MODERATOR (Round 2, Night End): Currently alive players: Reese, Carter, Lester, Ellie, Fusco, Elias, Sarah.
+EVENT (Round 2, Day): Phase Start - Day 2 begins.
+MODERATOR (Round 2, Public Chat): Public chat begins.
+
+***Sarah: So, second night in a row with no one killed? Either our Doctor’s on fire, or the remaining vampire is playing it very carefully. Hard to say which. 
+
+I still can’t believe Finch was kicked out right away—turns out maybe our instincts about him were on point. If Finch really was a vampire, that’s one down. Only one more to go, right? Let’s not let our guard down yet.
+
+Something about Carter doesn’t ring any alarm bells to me right now. Maybe I’m reading him wrong, but I’m not picking up the same sketchy vibe I got from Finch. Then again, the best vampire is the one who seems the least suspicious, so staying open-minded is best. 
+
+That leaves a few of us to keep an eye on. We should think carefully: who’s been steering the conversation, who’s dodging questions, who’s trying too hard to blend in? Haven’t really heard enough from Elias or Lester lately. Ellie and Fusco, you’ve been vocal, but I’m not sure what that means yet—it could be genuine or an attempt to look helpful.
+
+We should keep talking things through. If we can narrow down suspects, maybe we can catch the second vampire off guard. Let’s not rush any vote this time without more discussion—losing another innocent would be a huge step backward.
+***Ellie: Okay, thanks for the update. No deaths again, so the Doctor is definitely active and protecting someone. That’s good news for the peasants.
+
+Finch being voted out early is definitely a loss, but it might have eliminated one potential vampire. It’s a shame if he was a key role like the Observer or Doctor, but since he’s gone, we have to work with what we have.
+
+Carter seems less suspicious than Finch, but we can’t rule anyone out just yet. The best vampire is often the one who blends in the most. I’m still trying to figure out who the second vampire is. It’s tricky with so many players.
+
+I’m noticing that some people haven’t really spoken much yet. Elias and Lester, for example. Is it just the early game, or are they trying to stay under the radar? I’m not sure yet, but it’s something to keep an eye on.
+
+Ellie, as the Doctor, I’m curious about your next move. Who do you plan to protect tonight? I’m not trying to pressure you, but knowing could help the group stay safer. Of course, I understand if you want to keep it under wraps for strategy reasons.
+
+For now, I think we should keep the discussion open and see if we can get more information out of everyone. Let’s not rush to vote again without more signs pointing to someone. We need to be careful not to eliminate someone important by mistake.
+
+What do you all think? Any other observations or theories?
+***Fusco: Hey everyone, another night with no deaths—looks like the Doctor is really on top of things. That’s great for us, but it also means the vampire or vampires are still out there, plotting. Since Finch got voted out and might’ve been one of them, we’re possibly down to just one left. We can’t get complacent, though.
+
+I’m glad the suspicion on me seems to have eased up a bit. I’m just trying to figure this out like everyone else. Reese, you claiming to be the Doctor still worries me—it’s a risky move, and if you’re telling the truth, you might be the next target. If you’re not, well, that’s a whole other problem. Can you give us anything to back up your claim without putting yourself at more risk?
+
+Carter, I’m not getting any strong red flags from you yet, but like others said, the best vampire hides in plain sight. Elias and Lester, you’ve been pretty quiet. I get it’s early, but anything you’ve noticed could help. Sarah, same goes for you—any thoughts?
+
+Ellie, you’ve been pushing for discussion, which is good, but I’m curious if you’ve got any specific hunches. Let’s keep digging into everyone’s behavior. Rushing a vote got us Finch last time, and we don’t even know if that was the right call. I’m all for talking more before we decide anything. What’s everyone else thinking?
+***Lester: Two nights in a row with no deaths is pretty wild. Either the Doctor is a genius, or we got really lucky. I’m leaning toward the Doctor just being on point, since I doubt the vampire would skip a chance to attack.
+
+I agree with everyone saying we shouldn’t rush a vote this time. We lost Finch, and we don’t even know if that was a good move or not. If he was a vampire, great, but if not, we’re down a peasant for nothing.
+
+I’d like to hear more from Elias and Reese. Reese, you claimed Doctor before, but then kind of went quiet. If you really are the Doctor, maybe you should lay low now, since the vampires will probably target you. If you’re not, then that’s a risky bluff.
+
+Ellie, you’ve been pretty active, but I can’t tell if that’s just you trying to help or something else. Same with Fusco—lots of talk, but not much concrete. Carter and Sarah seem reasonable so far.
+
+I say we keep talking and see if anyone slips up. The vampire’s got to be feeling the pressure now.
+***Reese: I vote for Pass
+***Carter: Alright, another night with no deaths—big thanks to the Doctor for keeping us safe. But let's not get too comfortable. We've got one less player now, and if Finch was a vampire, we're down to just one left. If not... well, we might still have two to deal with. Either way, we need to stay sharp.
+
+Reese, I'm circling back to you because your Doctor claim from yesterday is still bugging me. If you're legit, why out yourself so early? It's like painting a target on your back for the vampires. And if you're not the Doctor, that's a dangerous lie—it could mean you're a vampire trying to mislead us or the Clown stirring chaos. Can you give us something to back it up? Like, why did you protect who you did last night? Without specifics, it's hard to trust you.
+
+To the quiet folks—Elias and Lester—now's the time to speak up. Silence can be just as telling as talking too much. Did anything stand out to you in the discussions? Any gut feelings about who might be off? We need all hands on deck here.
+
+Ellie, you've been driving the conversation, which I appreciate, but I'm curious: do you have any stronger hunches now? Fusco, same to you—you've been engaging, but is there anyone you're leaning toward or ruling out?
+
+And let's not forget the Clown. If someone's pushing hard for votes with flimsy reasoning, that could be a play to get eliminated. We need to focus on evidence, not just vibes. I say we keep talking this round—no rushed votes. What's everyone else seeing?
+***Elias: Okay, okay, I hear you, Carter. And everyone else. It's true, I've been listening more than talking. But honestly, what is there to say? We've had two nights where the Doctor saved someone, which is great, but it doesn't tell us who the vampires are. We voted out Finch, and we still don't know if that was even the right move.
+
+Reese, your Doctor claim is... bold. If you are, great. If not, it's a huge distraction. But either way, it puts a target on your back. I'm not sure what to make of it.
+
+The problem is, we're just going in circles. Everyone's saying 'don't rush a vote,' but then what *do* we do? We need to make a move. We can't just keep talking until the vampires pick us off one by one. Someone has to be willing to take a risk. Maybe we need to vote someone out just to see what happens. It's better than doing nothing, right? I mean, if we keep playing it safe, we'll never find them.
+
+I'm not saying I have a clear suspect, but this endless discussion is getting us nowhere. We need to narrow it down. Who's *really* been quiet? Not just me and Lester, but who's been *too* quiet? Or who's been talking a lot but saying nothing useful?
+
+I'm just frustrated. We need to make a decision. Soon.
+MODERATOR (Round 2, Public Chat): Public chat ended. Moving to voting phase.
+
+EVENT (Round 2, Day Voting): Public Voting Phase - Day 2 voting starts.
+MODERATOR (Round 2, Public Voting): Public voting begins.
+
+VOTE TALLY (Round 2, Day Voting) - Type: Public Kick-Out
+  Reese: 5 vote(s)
+--------------------
+VOTE OUTCOME (Round 2, Day Voting): Reese has been voted out with 5 vote(s).
+ELIMINATION (Round 2, Day Voting): Reese (Role: Musketeer) was eliminated. Reason: Voted out by players.
+EVENT (Round 2, Day - Musketeer Action): Musketeer Ability Triggered - Reese (Musketeer) was eliminated, can use ability.
+ACTION (R2, Day - Musketeer Action): Reese chose to eliminate: Fusco
+MODERATOR (Round 2, Day - Musketeer Action): Reese was voted out. As the Musketeer, they chose to eliminate Fusco.
+ELIMINATION (Round 2, Day - Musketeer Action): Fusco (Role: Vampire) was eliminated. Reason: Eliminated by Musketeer Reese by Reese.
+MODERATOR (Round 2, Public Voting): Public voting ended.
+
+MODERATOR (Round 2, Day): Day 2 has dawned. The community has voted out Reese.
+EVENT (Round 2): Game End Check Status - Vampires: 0, Non-Vampires: 5, Alive: 5 - This info is not shared with players.
+==================================================
+GAME END:
+  Winner(s): Peasants
+  Reason: All vampires have been eliminated.
+  Final Alive Players & Roles:
+    - Carter: Peasant
+    - Lester: Peasant
+    - Ellie: Doctor
+    - Elias: Clown
+    - Sarah: Observer
+==================================================
+--- Log ended at: 2025-06-03 09:28:06 ---
+MODERATOR (Round 2, Game End): Game over! Peasants wins!
+MODERATOR (Round 2, Game End): Game over! Peasants wins!

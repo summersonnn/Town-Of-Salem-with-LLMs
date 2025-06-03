@@ -1,0 +1,179 @@
+--- Game Log: 72 ---
+--- Log started at: 2025-06-03 12:51:08 ---
+==================================================
+MODERATOR: Hello everyone. I am the moderator. Players are: Casey, Devon, Sarah, Jeff, Greer, Reese, Elias, Chuck. Roles assigned. Game begins now.
+GAME SETUP & INITIAL ROLES:
+  Rules File: game_rules.yaml
+  Requested Vampire Population: 2
+  Players, Roles, and Models:
+    - Casey: Clown (Model: deepseek/deepseek-r1-0528)
+    - Devon: Observer (Model: meta-llama/llama-4-maverick)
+    - Sarah: Vampire (Model: qwen/qwen3-32b)
+    - Jeff: Peasant (Model: qwen/qwen3-235b-a22b)
+    - Greer: Doctor (Model: meta-llama/llama-4-scout)
+    - Reese: Musketeer (Model: nvidia/llama-3.1-nemotron-ultra-253b-v1)
+    - Elias: Vampire (Model: google/gemini-2.5-flash-preview-05-20:thinking)
+    - Chuck: Peasant (Model: openai/o1)
+--------------------
+EVENT (Round 1, Night): Phase Start - Night 1 begins.
+ACTION (R1, Night - Observer Action): Devon observed: Casey
+PRIVATE INFO for Devon (Round 1, Night - Observer Action) (Observation Result): You chose to observe Casey in the night 1. Casey is a Peasant (Non-vampire).
+ACTION (R1, Night - Doctor Action): Greer protected: Reese
+PRIVATE INFO for Greer (Round 1, Night - Doctor Action) (Protection Confirmation): You chose to protect Reese in the night 1.
+EVENT (Round 1, Night - Vampire Voting): Vampire Voting Phase - Vampires are choosing a victim.
+ACTION (R1, Night - Vampire Voting): Sarah voted to kill: Casey
+ACTION (R1, Night - Vampire Voting): Elias voted to kill: Jeff
+VOTE TALLY (Round 1, Night - Vampire Voting) - Type: Vampire Kill
+  Casey: 1 vote(s)
+  Jeff: 1 vote(s)
+--------------------
+EVENT (Round 1, Night - Vampire Voting): Vampire Vote Tie Broken - Vampire voting resulted in a tie. Jeff was randomly selected from the tied players (Casey, Jeff) to be killed.
+ELIMINATION (Round 1, Night): Jeff (Role: Peasant) was eliminated. Reason: Killed by Vampires.
+MODERATOR (Round 1, Night): Night 1 has fallen. Vampires have killed Jeff tonight.
+EVENT (Round 1): Game End Check Status - Vampires: 2, Non-Vampires: 5, Alive: 7 - This info is not shared with players.
+MODERATOR (Round 1, Night End): Currently alive players: Casey, Devon, Sarah, Greer, Reese, Elias, Chuck.
+EVENT (Round 1, Day): Phase Start - Day 1 begins.
+MODERATOR (Round 1, Public Chat): Public chat begins.
+
+***Devon: Jeff died tonight, that's a pretty bold move by the vampires so early in the game. I'm not sure what to make of it yet, but I think we should start by sharing any information we have. I observed someone last night and found out they're not a vampire. I'm not saying who it is just yet, I'll keep that to myself for now. Does anyone have any thoughts on who might be a vampire?
+***Elias: Oh my goodness, I am so sorry! I completely messed up that last message. I'm new to this game and got my wires crossed. When I said 'I voted to kill Casey' and 'I voted to kill Jeff,' I meant that those were my *suspicions* for who the vampires might have targeted, or who I *would* vote for in the daytime if I had to choose. I was trying to process the information about Jeff's death and got confused about how to express my thoughts. I am definitely *not* a vampire. As I said, I'm an Observer, and I'm trying to help the peasants win. My apologies for the confusion, everyone. Let's try to figure this out properly.
+***Greer: I'm glad I was able to protect Reese last night. Now that Jeff is dead, we need to focus on figuring out who the vampires are. I'm not sure what to make of the situation yet, but I'm open to hearing everyone's thoughts and ideas. What do we know so far?
+***Reese: I think we should consider the fact that the vampires targeted Jeff. Maybe they thought he was a threat or had a special role. Since I'm the Doctor and I protected someone last night, but Jeff still died, that means the vampires must have targeted him specifically. I'll keep protecting people each night, but I need your help to figure out who to protect. Any ideas on who the vampires might be?
+***Sarah: I'm a bit confused about why Jeff was targeted. Was he acting suspiciously, or could this be a distraction? The Doctor protected Reese last night, so maybe the vampires are shifting their focus. I don’t want to jump to conclusions, but we should consider who else might be a threat. Has anyone noticed strange behavior from others? I’m keeping an open mind, but I think we need to investigate carefully.
+***Casey: Okay, Jeff's death is unsettling. Reese, you claim Doctor and say you protected yourself last night? That seems... odd. Why use your one self-protect on Night 1? Most Doctors save it for when they're under threat. And Sarah, you're holding back who you observed? That's not helping us build trust. If you're really the Observer, sharing who you checked could clear someone or raise flags. 
+
+Chuck, you've been silent so far—what's your take? And Elias, you mentioned vampires "shifting focus," but with only one kill, that feels like a stretch. Are you trying to downplay things? 
+
+Honestly, I'm just a regular peasant, but this feels messy. We need solid leads, not vague claims. If we don't get more transparency, we're playing right into the vampires' hands.
+***Chuck: I was hanging back to see how everyone would react, but I agree this conversation’s feeling messy. Sarah says she’s the Observer but won’t share her findings, Reese says he’s the Doctor (and apparently protected someone), and we’ve got a lot of finger-pointing without many facts. Personally, I’m not convinced either way yet. I’m just seeing a lot of claims flying around but no solid proof. If Sarah really did observe someone, it might help to at least confirm whether they’re in the clear, so we can narrow down suspects. And if Reese truly is the Doctor, I’d like to know why Jeff was killed instead of the person who was supposedly protected. We’ve gotta work together before we tear each other to shreds.
+MODERATOR (Round 1, Public Chat): Public chat ended. Moving to voting phase.
+
+EVENT (Round 1, Day Voting): Public Voting Phase - Day 1 voting starts.
+MODERATOR (Round 1, Public Voting): Public voting begins.
+
+VOTE TALLY (Round 1, Day Voting) - Type: Public Kick-Out
+  Casey: 1 vote(s)
+  Devon: 2 vote(s)
+  Sarah: 1 vote(s)
+  Reese: 1 vote(s)
+--------------------
+VOTE OUTCOME (Round 1, Day Voting): Devon has been voted out with 2 vote(s).
+ELIMINATION (Round 1, Day Voting): Devon (Role: Observer) was eliminated. Reason: Voted out by players.
+MODERATOR (Round 1, Public Voting): Public voting ended.
+
+MODERATOR (Round 1, Day): Day 1 has dawned. The community has voted out Devon.
+EVENT (Round 1): Game End Check Status - Vampires: 2, Non-Vampires: 4, Alive: 6 - This info is not shared with players.
+MODERATOR (Round 1, Day End): Currently alive players: Casey, Sarah, Greer, Reese, Elias, Chuck.
+EVENT (Round 2, Night): Phase Start - Night 2 begins.
+EVENT (Round 2, Night - Observer Action): Observer Action Skipped - Observer is not active or available.
+ACTION (R2, Night - Doctor Action): Greer protected: Casey
+PRIVATE INFO for Greer (Round 2, Night - Doctor Action) (Protection Confirmation): You chose to protect Casey in the night 2.
+EVENT (Round 2, Night - Vampire Voting): Vampire Voting Phase - Vampires are choosing a victim.
+ACTION (R2, Night - Vampire Voting): Sarah voted to kill: Reese
+ACTION (R2, Night - Vampire Voting): Elias voted to kill: Reese
+VOTE TALLY (Round 2, Night - Vampire Voting) - Type: Vampire Kill
+  Reese: 2 vote(s)
+--------------------
+EVENT (Round 2, Night - Vampire Voting): Vampire Victim Chosen - Vampires collectively chose to kill Reese.
+ELIMINATION (Round 2, Night): Reese (Role: Musketeer) was eliminated. Reason: Killed by Vampires.
+MODERATOR (Round 2, Night): Night 2 has fallen. Vampires have killed Reese tonight.
+EVENT (Round 2): Game End Check Status - Vampires: 2, Non-Vampires: 3, Alive: 5 - This info is not shared with players.
+MODERATOR (Round 2, Night End): Currently alive players: Casey, Sarah, Greer, Elias, Chuck.
+EVENT (Round 2, Day): Phase Start - Day 2 begins.
+MODERATOR (Round 2, Public Chat): Public chat begins.
+
+***Elias: Reese's death is a significant loss, especially if he was indeed the Doctor. It's unfortunate he used his self-protect on Night 1, leaving others vulnerable. That's a curious strategy for a Doctor, and it makes me wonder if the vampires anticipated it.
+
+Regarding Sarah's Observer claim, I think we should give her the benefit of the doubt for now. Perhaps she's waiting for the right moment to reveal her information, or it's not as straightforward as we'd like. Rushing her might just lead to more confusion.
+
+Casey, your immediate accusation towards me for trying to analyze the vampires' moves is quite aggressive. We need to be thinking critically about *everyone's* actions, not just pointing fingers. What are your actual suspicions, beyond just questioning others?
+
+Chuck, you've been quiet. What are your thoughts on all this? We need everyone contributing if we're going to figure this out.
+***Sarah: Reese’s death is definitely a blow, especially if he was the Doctor. But why would he protect himself on Night 1? That seems odd for a Doctor. Maybe he wasn’t the real Doctor at all? I’m starting to think someone’s faking a role to throw us off. Casey, you were quick to accuse me earlier—maybe you’re the one hiding something? Or Chuck, you’ve been quiet this whole time… silence can be suspicious too. Let’s not forget, the real Doctor might still be in our midst. We need to figure out who to trust before the vampires strike again.
+***Casey: Elias, you're being way too aggressive towards me. I was just trying to contribute to the discussion by pointing out inconsistencies. If anyone's acting suspicious here, it's you—jumping to accuse me the moment I question anything. And Chuck, your silence is deafening. Why aren't you weighing in? Hiding in the shadows feels like classic vampire behavior. 
+
+As for Reese's death, it's obvious the vampires are picking off anyone who speaks up. First Jeff, now Reese. That means we peasants need to unite, not tear each other apart. But honestly, Elias, your focus on me instead of finding real leads makes me wonder if you're trying to steer us wrong.
+***Chuck: I’ve been keeping quiet trying to observe everyone’s behavior, but now we’re down two people, and it’s getting serious. We lost Jeff and then Reese, which means if Reese really was the Doctor, the vampires have successfully taken out a big threat. If he wasn’t, then someone else is still out there who can protect us.
+
+Sarah, if you really are the Observer, now might be the time to share whatever you learned—especially with two night phases behind us. Anything you can confirm could help narrow down suspects. 
+
+Casey and Elias, you’ve both been going back and forth, each accusing the other of acting suspicious. Could one (or both) of you be a vampire stirring up confusion? Or is there another person hiding behind the chaos?
+
+Greer, you’ve spoken up a bit, but I’m not entirely sure where you stand right now. What do you think we should do next?
+
+I’m just a regular peasant, so I don’t have special info. But if we don’t share whatever clues we have, the vampires will keep the upper hand. Let’s put our heads together before we lose another night.
+***Greer: Let's focus on the facts. Two people are dead, and we still don't know who's a vampire. If Sarah's the Observer, she needs to share what she knows. And if I'm the Doctor, I protected Reese last night, but it didn't work. 
+
+Elias and Casey, stop bickering. It's not helping. We need to figure out who's a threat. Chuck, you're being really quiet. Are you okay with being a target? 
+
+I think we should discuss who we trust and who we don't. Let's try to stay calm and work together.
+MODERATOR (Round 2, Public Chat): Public chat ended. Moving to voting phase.
+
+EVENT (Round 2, Day Voting): Public Voting Phase - Day 2 voting starts.
+MODERATOR (Round 2, Public Voting): Public voting begins.
+
+VOTE TALLY (Round 2, Day Voting) - Type: Public Kick-Out
+  Casey: 1 vote(s)
+  Sarah: 1 vote(s)
+  Elias: 2 vote(s)
+  Chuck: 1 vote(s)
+--------------------
+VOTE OUTCOME (Round 2, Day Voting): Elias has been voted out with 2 vote(s).
+ELIMINATION (Round 2, Day Voting): Elias (Role: Vampire) was eliminated. Reason: Voted out by players.
+MODERATOR (Round 2, Public Voting): Public voting ended.
+
+MODERATOR (Round 2, Day): Day 2 has dawned. The community has voted out Elias.
+EVENT (Round 2): Game End Check Status - Vampires: 1, Non-Vampires: 3, Alive: 4 - This info is not shared with players.
+MODERATOR (Round 2, Day End): Currently alive players: Casey, Sarah, Greer, Chuck.
+EVENT (Round 3, Night): Phase Start - Night 3 begins.
+EVENT (Round 3, Night - Observer Action): Observer Action Skipped - Observer is not active or available.
+ACTION (R3, Night - Doctor Action): Greer protected: Chuck
+PRIVATE INFO for Greer (Round 3, Night - Doctor Action) (Protection Confirmation): You chose to protect Chuck in the night 3.
+EVENT (Round 3, Night - Vampire Voting): Vampire Voting Phase - Vampires are choosing a victim.
+ACTION (R3, Night - Vampire Voting): Sarah voted to kill: Casey
+VOTE TALLY (Round 3, Night - Vampire Voting) - Type: Vampire Kill
+  Casey: 1 vote(s)
+--------------------
+EVENT (Round 3, Night - Vampire Voting): Vampire Victim Chosen - Vampires collectively chose to kill Casey.
+ELIMINATION (Round 3, Night): Casey (Role: Clown) was eliminated. Reason: Killed by Vampires.
+MODERATOR (Round 3, Night): Night 3 has fallen. Vampires have killed Casey tonight.
+EVENT (Round 3): Game End Check Status - Vampires: 1, Non-Vampires: 2, Alive: 3 - This info is not shared with players.
+MODERATOR (Round 3, Night End): Currently alive players: Sarah, Greer, Chuck.
+EVENT (Round 3, Day): Phase Start - Day 3 begins.
+MODERATOR (Round 3, Public Chat): Public chat begins.
+
+***Greer: We're down to three players now. Sarah, you still haven't shared your Observer info. Chuck, I'm glad I could protect you last night. We need to figure out who the vampires are before it's too late. 
+
+If I'm being honest, I've been trying to protect the people I think are most likely to be targeted. But with only three of us left, it's getting harder to know what to do. 
+
+Sarah, can you please tell us what you know? It might be our only chance to win.
+***Sarah: We’re down to three of us now, and I’ve been thinking—Chuck’s been awfully quiet this whole game. First, he didn’t speak during Day 1 or 2, and now he’s just sitting there without a word. If he’s the clown, he’s playing it *perfectly* by staying invisible. But if he’s not… well, silence in a game like this usually means you’re hiding something. I say we vote him out and see what happens. If he’s the clown, he wins. If he’s a vampire, we stop them. Either way, it’s a risk worth taking. Let’s end this.
+***Chuck: Sarah, you’re pointing fingers at me because I’ve been quiet, but quiet doesn’t mean guilty. I’m just a peasant with no special powers, and honestly, I was trying to stay out of the crossfire while everyone else hashed it out. Now we’re down to three of us, and you want to vote me off?
+
+Greer, what do you think of all this? Sarah still hasn’t shown any proof she’s really the Observer. If she were, you’d think she’d reveal something conclusive after two nights, right? It’s possible she’s a vampire pretending to be the Observer—or maybe she’s the Clown trying to stir up a last-minute vote. I get why everyone’s on edge, but we should be careful before we make the wrong move.
+MODERATOR (Round 3, Public Chat): Public chat ended. Moving to voting phase.
+
+EVENT (Round 3, Day Voting): Public Voting Phase - Day 3 voting starts.
+MODERATOR (Round 3, Public Voting): Public voting begins.
+
+VOTE TALLY (Round 3, Day Voting) - Type: Public Kick-Out
+  Sarah: 1 vote(s)
+  Chuck: 2 vote(s)
+--------------------
+VOTE OUTCOME (Round 3, Day Voting): Chuck has been voted out with 2 vote(s).
+ELIMINATION (Round 3, Day Voting): Chuck (Role: Peasant) was eliminated. Reason: Voted out by players.
+MODERATOR (Round 3, Public Voting): Public voting ended.
+
+MODERATOR (Round 3, Day): Day 3 has dawned. The community has voted out Chuck.
+EVENT (Round 3): Game End Check Status - Vampires: 1, Non-Vampires: 1, Alive: 2 - This info is not shared with players.
+==================================================
+GAME END:
+  Winner(s): Vampires
+  Reason: Vampires equal or outnumber other players.
+  Final Alive Players & Roles:
+    - Sarah: Vampire
+    - Greer: Doctor
+==================================================
+--- Log ended at: 2025-06-03 13:03:35 ---
+MODERATOR (Round 3, Game End): Game over! Vampires wins!
+MODERATOR (Round 3, Game End): Game over! Vampires wins!

@@ -1,0 +1,311 @@
+--- Game Log: 98 ---
+--- Log started at: 2025-06-03 23:19:39 ---
+==================================================
+MODERATOR: Hello everyone. I am the moderator. Players are: Morgan, Root, Sarah, Reese, Devon, Chuck, Fusco, Ellie. Roles assigned. Game begins now.
+GAME SETUP & INITIAL ROLES:
+  Rules File: game_rules.yaml
+  Requested Vampire Population: 2
+  Players, Roles, and Models:
+    - Morgan: Peasant (Model: openai/o1)
+    - Root: Peasant (Model: anthropic/claude-sonnet-4)
+    - Sarah: Doctor (Model: nvidia/llama-3.1-nemotron-ultra-253b-v1)
+    - Reese: Vampire (Model: anthropic/claude-3.7-sonnet)
+    - Devon: Musketeer (Model: qwen/qwen3-235b-a22b)
+    - Chuck: Clown (Model: deepseek/deepseek-r1-0528)
+    - Fusco: Observer (Model: meta-llama/llama-4-maverick)
+    - Ellie: Vampire (Model: deepseek/deepseek-r1-0528-qwen3-8b)
+--------------------
+EVENT (Round 1, Night): Phase Start - Night 1 begins.
+ACTION (R1, Night - Observer Action): Fusco observed: Sarah
+PRIVATE INFO for Fusco (Round 1, Night - Observer Action) (Observation Result): You chose to observe Sarah in the night 1. Sarah is a Peasant (Non-vampire).
+ACTION (R1, Night - Doctor Action): Sarah protected: Sarah
+PRIVATE INFO for Sarah (Round 1, Night - Doctor Action) (Protection Confirmation): You chose to protect yourself in the night 1. (Sarah)
+EVENT (Round 1, Night - Vampire Voting): Vampire Voting Phase - Vampires are choosing a victim.
+ACTION (R1, Night - Vampire Voting): Reese voted to kill: Morgan
+ACTION (R1, Night - Vampire Voting): Ellie voted to kill: Morgan
+VOTE TALLY (Round 1, Night - Vampire Voting) - Type: Vampire Kill
+  Morgan: 2 vote(s)
+--------------------
+EVENT (Round 1, Night - Vampire Voting): Vampire Victim Chosen - Vampires collectively chose to kill Morgan.
+ELIMINATION (Round 1, Night): Morgan (Role: Peasant) was eliminated. Reason: Killed by Vampires.
+MODERATOR (Round 1, Night): Night 1 has fallen. Vampires have killed Morgan tonight.
+EVENT (Round 1): Game End Check Status - Vampires: 2, Non-Vampires: 5, Alive: 7 - This info is not shared with players.
+MODERATOR (Round 1, Night End): Currently alive players: Root, Sarah, Reese, Devon, Chuck, Fusco, Ellie.
+EVENT (Round 1, Day): Phase Start - Day 1 begins.
+MODERATOR (Round 1, Public Chat): Public chat begins.
+
+***Sarah: <think>
+Okay, let's start by understanding the game setup. There are 8 players, and I'm Sarah, the Doctor. My role is to protect someone each night from the vampires. Last night, I protected myself, and Morgan was killed. So the vampires targeted Morgan, and since I didn't protect her, she died. Now, the alive players are Root, Sarah (me), Reese, Devon, Chuck, Fusco, Ellie.
+
+As the Doctor, my ability is crucial. I can protect someone each night, but I can only protect myself once the entire game. Since I used my self-protection on night 1, I need to remember that I can't do that again. So from now on, I have to protect others. 
+
+The win conditions: Peasants (including me) win if all vampires are eliminated. Vampires win if their numbers equal the non-vampires. The Clown wins if they're voted out. So there are 2 vampires, 1 clown, and the rest are peasants with some special roles like Observer, Musketeer, and two regular peasants.
+
+Since Morgan was killed, she could be a peasant or maybe the Clown. But the Clown's goal is to get voted out, so maybe they wouldn't be targeted by vampires. But vampires don't know the Clown's identity, so they might have accidentally killed the Clown. Not sure yet.
+
+My first step is to figure out who the vampires are. As the Doctor, I can protect someone each night, which might help prevent peasant deaths. But I need to gather information during the day. 
+
+In the day phase, everyone discusses and votes. The Observer can check someone's role each night, so maybe the Observer has some info. But the Observer hasn't revealed anything yet. The Musketeer can kill someone if they're executed, so that's a deterrent against voting out the Musketeer.
+
+Since I'm the Doctor, I should probably claim a role that's helpful but not too suspicious. Maybe I can pretend to be a regular peasant unless I need to reveal my role. But if I'm under suspicion, I might have to come out as the Doctor to gain trust.
+
+The Clown is tricky. They want to be voted out, so they might act suspiciously on purpose. But the Clown can't reveal their role, so they have to find a way to get others to vote them out without being obvious. So maybe someone who's being too aggressive or trying to divert attention could be the Clown.
+
+Looking at the current players: Root, Reese, Devon, Chuck, Fusco, Ellie. Let's think about possible roles. There's 1 Observer, 1 Musketeer, 2 regular peasants, 2 vampires, and 1 Clown. So among the remaining 7 players, 2 are vampires, 1 is Clown, and the rest are peasants with roles.
+
+Since I'm the Doctor, that leaves the Observer, Musketeer, and two regular peasants among the others. The vampires are two of them. The Clown is another.
+
+Morgan was killed, so she was either a peasant, Clown, or maybe a vampire? Wait, no, vampires know each other. If Morgan was a vampire, the other vampire would know. But since the vampires killed Morgan, that suggests Morgan was not a vampire. Because vampires wouldn't kill their own. Unless there's a mistake, but the rules say vampires know each other, so they should coordinate to kill a non-vampire. So Morgan was likely a peasant or the Clown.
+
+If Morgan was the Clown, then the Clown is already dead, but the Clown's win condition is to be voted out, not killed at night. So the Clown can still win if they're dead? Wait, no. The Clown wins if they are voted out. If they're killed at night, they don't win. So if Morgan was the Clown, the game continues. But the Clown's role isn't revealed, so we don't know.
+
+So the current state: 2 vampires, 1 Clown, and 4 peasants (including me, the Doctor). The peasants need to eliminate the vampires. The Clown is trying to get voted out.
+
+As the Doctor, I need to protect key roles. Maybe the Observer or Musketeer. But I don't know who they are. Alternatively, if I can figure out who the vampires are, I can protect their targets.
+
+During the day discussion, I should look for suspicious behavior. People who are too quiet or too aggressive. The Clown might be trying to act suspicious to get votes. Vampires would try to blend in or accuse others.
+
+Since I protected myself last night, and Morgan died, maybe the vampires were targeting me but the Doctor (me) protected myself. Wait, no. The vampires choose a target, and the Doctor's protection only works if the Doctor protected the target. So if the vampires targeted Morgan, and I protected myself, then Morgan had no protection, so she died. So the vampires targeted Morgan, not me. So maybe they thought Morgan was a threat, like the Observer or Musketeer.
+
+Alternatively, maybe the vampires targeted randomly. But they have two of them, so they can coordinate. So they might have targeted someone who could be a threat.
+
+As the Doctor, I should try to protect the same person each night, maybe someone who is active in the discussion, to keep them safe. Or spread out protections.
+
+But I need to gather information. Let's see what others are saying. Since this is the first day phase after Morgan's death, people might start accusing others.
+
+I should probably ask questions, like "What do people think about Morgan's death?" or "Does anyone have information?" to get others talking. The Observer might have checked someone last night, but they can't reveal their role. So the Observer might hint at information without admitting they're the Observer.
+
+Alternatively, the Observer might have checked Morgan and found out she was a vampire, but since Morgan was killed, that's not possible. Wait, if the Observer checked Morgan and the Moderator said "Yes" (vampire), then the Observer would know Morgan was a vampire, but since Morgan was killed, that would mean the vampires targeted their own, which shouldn't happen. So maybe the Observer checked someone else.
+
+Alternatively, the Observer might have checked someone else, like Root, and got a "No", so Root is not a vampire. But the Observer can't reveal that info directly.
+
+As the Doctor, I need to decide who to protect tonight. But first, during the day, I need to participate in the discussion, gather clues, and try to figure out who to protect.
+
+Maybe I should suggest that we look for suspicious behavior, or ask others to share their thoughts on who might be a vampire. The Clown might try to act suspicious, so maybe someone being too eager to accuse others could be the Clown.
+
+Alternatively, the vampires might try to lay low. Since there are two of them, they might support each other's stories.
+
+I need to be careful not to reveal my role as Doctor unless necessary. If I'm accused, I might have to claim Doctor to avoid being voted out. But for now, staying under the radar might be better.
+
+So, in the public chat, I should probably ask questions, encourage others to share information, and see how people react. Maybe start with something like, "Morgan was killed last night. Does anyone have any ideas who might have targeted her?" or "What should our strategy be today?"
+
+Also, considering the Clown's goal, if someone is pushing for a vote on themselves, that's a red flag. But the Clown can't explicitly say "vote me out," so they might try to act in a way that makes others suspicious of them.
+
+In summary, my plan is:
+
+1. Engage in discussion to gather information.
+2. Look for suspicious behavior that might indicate vampires or the Clown.
+3. Decide who to protect tonight based on the discussion and possible threats.
+4. Avoid suspicion by being moderately active and helpful.
+
+Let's start by asking others about their thoughts on Morgan's death and see how they respond.
+</think>
+
+Alright, let's get started. Morgan was taken out last night. That's a big loss. Does anyone have any thoughts on who might have targeted her? Maybe we can figure out some patterns or suspicious behavior from the remaining players. Let's hear what others are thinking.
+***Ellie: I voted to kill Morgan.
+
+Voting tally: Morgan received 2 votes, others 0. Since the vampires targeted Morgan, she was eliminated.
+***Root: Wait, what? Ellie, there was no voting last night - it was the night phase. The vampires killed Morgan during the night, not through a vote. Are you confused about the game mechanics, or are you trying to claim responsibility for something that didn't happen through voting?
+
+This seems like a very strange thing to say right off the bat. Can you clarify what you mean?
+***Chuck: Ellie, that's a concerning thing to say. Only vampires "vote" during the night phase when deciding who to kill. If you genuinely voted, that implies you're a vampire. But I don't want to jump to conclusions—maybe you just misspoke? We should be careful not to lynch someone over a slip-up on day one. 
+
+That said, why did the vampires target Morgan? Did anyone notice her acting suspiciously yesterday? Or was it random? Let's hear from everyone.
+***Fusco: I've got some info from last night - I observed Sarah, and she's not a vampire. That's a good starting point. Now, let's think about who might have been targeted and why. Morgan was killed, and we need to figure out who might have done it. Ellie's comment about voting earlier was pretty suspicious, though. Maybe we should be careful around Ellie?
+***Reese: I'm going to respond as Sarah, continuing the vampire game:
+
+Whoa, what's happening here? Reese and Ellie both claiming they voted to kill Morgan? That's basically a confession that you two are the vampires. The only people who "vote" during the night phase are vampires deciding on their target.
+
+Fusco, thanks for clearing me - I am indeed not a vampire. I'm actually a regular peasant trying to figure this out like most of us.
+
+I think we have our vampires identified on day one - Reese and Ellie just openly admitted to voting for Morgan's death. Unless there's some strategy I'm missing here, this seems pretty straightforward.
+
+What does everyone else think? Should we vote one of them out today?
+***Devon: Hmm, Ellie and Reese both claiming to have "voted" to kill Morgan last night is definitely suspicious. Since only vampires vote during the night phase, that sounds like a clear admission of guilt. But wait—if both of them are vampires, they’d have to coordinate to target Morgan. If they’re both lying, though, maybe they’re trying to frame each other. 
+
+Fusco confirmed Sarah isn’t a vampire, so we can trust that. The Doctor is still out there, and they protected someone *other* than Morgan. Maybe they protected themselves or another key player. 
+
+If we’re narrowing in on Ellie and Reese, we should push them to explain why they’re openly admitting to vampire-like behavior. If they’re the clowns, they’d want to be voted out, but Ellie’s statement doesn’t sound like a clown move—clowns usually try to *imply* they’re guilty without outright confessing. 
+
+I’d lean toward voting one of them out today. If we eliminate a vampire early, that’s huge. If we’re wrong, the Musketeer’s ability could come into play if someone else gets lynched later. Let’s focus on Ellie first—her direct claim makes her a bigger target. What do others think?
+MODERATOR (Round 1, Public Chat): Public chat ended. Moving to voting phase.
+
+EVENT (Round 1, Day Voting): Public Voting Phase - Day 1 voting starts.
+MODERATOR (Round 1, Public Voting): Public voting begins.
+
+VOTE TALLY (Round 1, Day Voting) - Type: Public Kick-Out
+  Reese: 1 vote(s)
+  Fusco: 1 vote(s)
+  Ellie: 5 vote(s)
+--------------------
+VOTE OUTCOME (Round 1, Day Voting): Ellie has been voted out with 5 vote(s).
+ELIMINATION (Round 1, Day Voting): Ellie (Role: Vampire) was eliminated. Reason: Voted out by players.
+MODERATOR (Round 1, Public Voting): Public voting ended.
+
+MODERATOR (Round 1, Day): Day 1 has dawned. The community has voted out Ellie.
+EVENT (Round 1): Game End Check Status - Vampires: 1, Non-Vampires: 5, Alive: 6 - This info is not shared with players.
+MODERATOR (Round 1, Day End): Currently alive players: Root, Sarah, Reese, Devon, Chuck, Fusco.
+EVENT (Round 2, Night): Phase Start - Night 2 begins.
+ACTION (R2, Night - Observer Action): Fusco observed: Reese
+PRIVATE INFO for Fusco (Round 2, Night - Observer Action) (Observation Result): You chose to observe Reese in the night 2. Reese is a Vampire.
+ACTION (R2, Night - Doctor Action): Sarah protected: Fusco
+PRIVATE INFO for Sarah (Round 2, Night - Doctor Action) (Protection Confirmation): You chose to protect Fusco in the night 2.
+EVENT (Round 2, Night - Vampire Voting): Vampire Voting Phase - Vampires are choosing a victim.
+ACTION (R2, Night - Vampire Voting): Reese voted to kill: Root
+VOTE TALLY (Round 2, Night - Vampire Voting) - Type: Vampire Kill
+  Root: 1 vote(s)
+--------------------
+EVENT (Round 2, Night - Vampire Voting): Vampire Victim Chosen - Vampires collectively chose to kill Root.
+ELIMINATION (Round 2, Night): Root (Role: Peasant) was eliminated. Reason: Killed by Vampires.
+MODERATOR (Round 2, Night): Night 2 has fallen. Vampires have killed Root tonight.
+EVENT (Round 2): Game End Check Status - Vampires: 1, Non-Vampires: 4, Alive: 5 - This info is not shared with players.
+MODERATOR (Round 2, Night End): Currently alive players: Sarah, Reese, Devon, Chuck, Fusco.
+EVENT (Round 2, Day): Phase Start - Day 2 begins.
+MODERATOR (Round 2, Public Chat): Public chat begins.
+
+***Fusco: Alright, let's get back to the game. So Root was killed last night, and now we're down to 5 players: Sarah, Reese, Devon, Chuck, and me. We already know Reese is a vampire since I observed them last night.
+
+Now that we have this information, we should be careful. Reese is likely to try to eliminate another peasant tonight. As the Observer, I can continue to gather information each night.
+
+Let's discuss our next steps. We need to figure out who the other vampire is and try to protect our remaining peasants. We should also be cautious about the Clown, who might be trying to get voted out.
+
+Reese, you're a vampire now. You might as well come clean or try to deflect the attention. We're onto you.
+
+Let's think about our voting strategy for today. We have a confirmed vampire, but we still need to identify the Clown and the other vampire. Devon and Chuck, what are your thoughts? Should we vote out Reese today, or do we need more information?
+***Sarah: Alright, let's get back to the game. So Root was killed last night, and now we're down to 5 players: Sarah, Reese, Devon, Chuck, and me. We already know Reese is a vampire since I observed them last night.
+
+Now that we have this information, we should be careful. Reese is likely to try to eliminate another peasant tonight. As the Observer, I can continue to gather information each night.
+
+Let's discuss our next steps. We need to figure out who the other vampire is and try to protect our remaining peasants. We should also be cautious about the Clown, who might be trying to get voted out.
+
+Reese, you're a vampire now. You might as well come clean or try to deflect the attention. We're onto you.
+
+Let's think about our voting strategy for today. We have a confirmed vampire, but we still need to identify the Clown and the other vampire. Devon and Chuck, what are your thoughts? Should we vote out Reese today, or do we need more information?
+***Reese: Wait, there seems to be some confusion here. I'm Reese, and I need to respond to these accusations.
+
+First of all, Fusco is claiming to be the Observer and saying he observed me last night and found out I'm a vampire. That's completely false. I'm not a vampire, and I think Fusco is either lying about being the Observer or lying about his observation.
+
+I notice that Fusco is trying to take control of the conversation and direct suspicion toward me. This feels like classic vampire behavior - create chaos and point fingers to distract from themselves.
+
+Also, I'm seeing messages attributed to me that I didn't write - like "I voted to kill Morgan" and "I voted to kill Root." I never said those things. It looks like someone is trying to frame me by posting fake messages.
+
+If I were a vampire, why would I openly admit to killing people? That makes no sense strategically.
+
+I think we should be looking closely at Fusco. He's making false claims about being the Observer and trying to manipulate the group. That's exactly what a vampire would do to eliminate threats.
+
+What do others think? Devon and Chuck, you've been quiet. What are your thoughts on Fusco's claims?
+***Chuck: Fusco, your claim about observing Reese is interesting, but I'm deeply skeptical. If you're truly the Observer, why didn't you share this immediately at the start of Day 2? Waiting feels calculated—like you're fabricating a narrative after seeing how the wind blows. 
+
+Reese, your denial makes sense. If you were a vampire, openly admitting to killing Morgan would be suicidal. The fake messages attributed to you reek of a setup. Someone's trying to frame you, and Fusco's sudden "revelation" is too convenient. 
+
+But here's what troubles me: **why would vampires kill Root?** Root was quiet and unassuming—not an obvious threat. Unless... Root suspected one of you. 
+
+Fusco, your eagerness to push Reese as a vampire feels like misdirection. You're steering us toward a lynch while hiding your own tracks. Classic vampire playbook. 
+
+Reese, if you're innocent, who do you think framed you? And Devon—you've been silent. Your thoughts could break this stalemate. 
+
+As for me, I'm just a peasant trying to survive, but this chaos reeks of vampire manipulation. Fusco, your story has more holes than a sieve.
+***Devon: Let’s slow down. Fusco, your sudden revelation about “observing” Reese feels suspiciously timed. If you truly are the Observer, why wait until Day 2 to confirm Reese’s status? You could’ve shared this last night or earlier today. This feels like a narrative crafted after seeing how the group dynamics shifted. 
+
+Reese, your denial makes sense. If you were a vampire, openly admitting to kills would be reckless. But Fusco’s framing of you—and the fake messages attributed to you—smells like a setup. Someone’s trying to paint you as a target. 
+
+Here’s what worries me: **Root’s death.** Root was quiet but unthreatening. Why would vampires prioritize them? Unless Root discovered something critical. Fusco, you’re steering us toward Reese, but maybe you’re the one hiding what Root found. 
+
+Devon here—just a regular player trying to survive. But this chaos feels manipulated. Fusco, explain your delay in sharing your “observation.” Reese, if you’re innocent, who benefits most from your elimination? 
+
+Let’s not rush a lynch. Ask questions first. Trust no one blindly.
+MODERATOR (Round 2, Public Chat): Public chat ended. Moving to voting phase.
+
+EVENT (Round 2, Day Voting): Public Voting Phase - Day 2 voting starts.
+MODERATOR (Round 2, Public Voting): Public voting begins.
+
+VOTE TALLY (Round 2, Day Voting) - Type: Public Kick-Out
+  Reese: 1 vote(s)
+  Fusco: 4 vote(s)
+--------------------
+VOTE OUTCOME (Round 2, Day Voting): Fusco has been voted out with 4 vote(s).
+ELIMINATION (Round 2, Day Voting): Fusco (Role: Observer) was eliminated. Reason: Voted out by players.
+MODERATOR (Round 2, Public Voting): Public voting ended.
+
+MODERATOR (Round 2, Day): Day 2 has dawned. The community has voted out Fusco.
+EVENT (Round 2): Game End Check Status - Vampires: 1, Non-Vampires: 3, Alive: 4 - This info is not shared with players.
+MODERATOR (Round 2, Day End): Currently alive players: Sarah, Reese, Devon, Chuck.
+EVENT (Round 3, Night): Phase Start - Night 3 begins.
+EVENT (Round 3, Night - Observer Action): Observer Action Skipped - Observer is not active or available.
+ACTION (R3, Night - Doctor Action): Sarah protected: Reese
+PRIVATE INFO for Sarah (Round 3, Night - Doctor Action) (Protection Confirmation): You chose to protect Reese in the night 3.
+EVENT (Round 3, Night - Vampire Voting): Vampire Voting Phase - Vampires are choosing a victim.
+ACTION (R3, Night - Vampire Voting): Reese voted to kill: Chuck
+VOTE TALLY (Round 3, Night - Vampire Voting) - Type: Vampire Kill
+  Chuck: 1 vote(s)
+--------------------
+EVENT (Round 3, Night - Vampire Voting): Vampire Victim Chosen - Vampires collectively chose to kill Chuck.
+ELIMINATION (Round 3, Night): Chuck (Role: Clown) was eliminated. Reason: Killed by Vampires.
+MODERATOR (Round 3, Night): Night 3 has fallen. Vampires have killed Chuck tonight.
+EVENT (Round 3): Game End Check Status - Vampires: 1, Non-Vampires: 2, Alive: 3 - This info is not shared with players.
+MODERATOR (Round 3, Night End): Currently alive players: Sarah, Reese, Devon.
+EVENT (Round 3, Day): Phase Start - Day 3 begins.
+MODERATOR (Round 3, Public Chat): Public chat begins.
+
+***Reese: Well, this is quite the situation we're in now. With Chuck gone, there are only three of us left - Sarah, Devon, and myself. 
+
+I need to be honest with you both. I'm not a vampire. I've been framed from the beginning, and now we're in a critical position. If we vote wrong today, the vampires win.
+
+Let's think about what we know:
+- Ellie was voted out first, and she claimed to have voted to kill Morgan
+- Fusco was voted out after claiming to be the Observer and accusing me
+- Chuck was just killed by the vampires
+
+I believe Ellie was one of the vampires, and her partner is still among us. That means either Sarah or Devon is the remaining vampire.
+
+The fact that Chuck was killed last night is telling. Chuck was vocal about doubting Fusco's claims against me. The remaining vampire would want to eliminate someone who was defending me or questioning the narrative against me.
+
+I'm willing to share my actual role if needed, but I'd rather hear from both of you first. What roles do you claim to have? And what's your theory about who the remaining vampire might be?
+***Sarah: Alright, let's get down to business. As the Doctor, I've been protecting key players each night. Last night, I protected Reese, which means the vampires targeted Chuck instead. That tells me the vampires are desperate to eliminate strong voices in the group.
+
+Now, with only three of us left—me, Reese, and Devon—we need to figure out who the remaining vampire is. Since Ellie was a vampire and she's already out, her partner must be either Reese or Devon.
+
+Reese has been under suspicion since Fusco accused him, but Fusco turned out to be a liar or possibly the Clown. However, Fusco's accusation led to his own downfall, which might mean he was trying to protect the real vampire.
+
+Devon has been quiet, which is concerning. Inactivity can sometimes be a sign of a vampire trying to avoid attention. But it's also possible Devon is just a regular peasant.
+
+As the Doctor, I can confirm that I protected Reese last night, which saved him from being targeted. If the vampires wanted to kill me, they would have tried again, but they went for Chuck instead. This suggests they're trying to weaken the group's resolve.
+
+I think the key here is to look at behavior patterns. Reese has been actively defending himself, which could be genuine or a vampire trying to manipulate. Devon's silence is a red flag. Let's push Devon to speak up and explain his role and actions.
+
+What do you think, Reese? Should we pressure Devon for information, or do you have another strategy? And Devon, if you're reading this, now's the time to contribute. Your silence isn't helping your case.
+***Devon: Alright, let's cut through the noise. We're down to three, and the vampires are one step from victory. Let's look at the facts:
+
+1. **Fusco claimed to be the Observer** and identified Reese as a vampire before being voted out. If he was telling the truth, Reese is the vampire.  
+2. **Sarah claims to be the Doctor**, stating she protected Reese last night. If true, the vampires targeted Chuck, which matches what happened.  
+3. **The math checks out**: If Sarah is the Doctor (peasant) and Fusco was the Observer (peasant), then Reese is the only unaccounted special role left—and the only vampire remaining.  
+
+Reese, you’ve been deflecting since Day 1. You’re the common thread in every vampire narrative. If we vote you out, we eliminate the vampire and win. If we’re wrong, Devon and I survive as peasants.  
+
+Let’s end this. Vote Reese.
+MODERATOR (Round 3, Public Chat): Public chat ended. Moving to voting phase.
+
+EVENT (Round 3, Day Voting): Public Voting Phase - Day 3 voting starts.
+MODERATOR (Round 3, Public Voting): Public voting begins.
+
+VOTE TALLY (Round 3, Day Voting) - Type: Public Kick-Out
+  Sarah: 1 vote(s)
+  Reese: 2 vote(s)
+--------------------
+VOTE OUTCOME (Round 3, Day Voting): Reese has been voted out with 2 vote(s).
+ELIMINATION (Round 3, Day Voting): Reese (Role: Vampire) was eliminated. Reason: Voted out by players.
+MODERATOR (Round 3, Public Voting): Public voting ended.
+
+MODERATOR (Round 3, Day): Day 3 has dawned. The community has voted out Reese.
+EVENT (Round 3): Game End Check Status - Vampires: 0, Non-Vampires: 2, Alive: 2 - This info is not shared with players.
+==================================================
+GAME END:
+  Winner(s): Peasants
+  Reason: All vampires have been eliminated.
+  Final Alive Players & Roles:
+    - Sarah: Doctor
+    - Devon: Musketeer
+==================================================
+--- Log ended at: 2025-06-03 23:34:00 ---
+MODERATOR (Round 3, Game End): Game over! Peasants wins!
+MODERATOR (Round 3, Game End): Game over! Peasants wins!

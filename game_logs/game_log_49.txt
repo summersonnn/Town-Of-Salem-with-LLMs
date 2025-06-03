@@ -1,0 +1,175 @@
+--- Game Log: 49 ---
+--- Log started at: 2025-06-03 09:00:31 ---
+==================================================
+MODERATOR: Hello everyone. I am the moderator. Players are: Finch, Morgan, Shaw, Chuck, Devon, Ellie, Fusco, Jeff. Roles assigned. Game begins now.
+GAME SETUP & INITIAL ROLES:
+  Rules File: game_rules.yaml
+  Requested Vampire Population: 2
+  Players, Roles, and Models:
+    - Finch: Vampire (Model: x-ai/grok-3-beta)
+    - Morgan: Vampire (Model: deepseek/deepseek-r1-0528)
+    - Shaw: Peasant (Model: openai/o1)
+    - Chuck: Clown (Model: qwen/qwen3-32b)
+    - Devon: Peasant (Model: google/gemini-2.5-flash-preview-05-20:thinking)
+    - Ellie: Observer (Model: qwen/qwq-32b)
+    - Fusco: Doctor (Model: meta-llama/llama-4-scout)
+    - Jeff: Musketeer (Model: anthropic/claude-3.7-sonnet)
+--------------------
+EVENT (Round 1, Night): Phase Start - Night 1 begins.
+ACTION (R1, Night - Observer Action): Ellie observed: Morgan
+PRIVATE INFO for Ellie (Round 1, Night - Observer Action) (Observation Result): You chose to observe Morgan in the night 1. Morgan is a Vampire.
+ACTION (R1, Night - Doctor Action): Fusco protected: Finch
+PRIVATE INFO for Fusco (Round 1, Night - Doctor Action) (Protection Confirmation): You chose to protect Finch in the night 1.
+EVENT (Round 1, Night - Vampire Voting): Vampire Voting Phase - Vampires are choosing a victim.
+ACTION (R1, Night - Vampire Voting): Morgan voted to kill: Jeff
+ACTION (R1, Night - Vampire Voting): Finch voted to kill: Shaw
+VOTE TALLY (Round 1, Night - Vampire Voting) - Type: Vampire Kill
+  Shaw: 1 vote(s)
+  Jeff: 1 vote(s)
+--------------------
+EVENT (Round 1, Night - Vampire Voting): Vampire Vote Tie Broken - Vampire voting resulted in a tie. Shaw was randomly selected from the tied players (Shaw, Jeff) to be killed.
+ELIMINATION (Round 1, Night): Shaw (Role: Peasant) was eliminated. Reason: Killed by Vampires.
+MODERATOR (Round 1, Night): Night 1 has fallen. Vampires have killed Shaw tonight.
+EVENT (Round 1): Game End Check Status - Vampires: 2, Non-Vampires: 5, Alive: 7 - This info is not shared with players.
+MODERATOR (Round 1, Night End): Currently alive players: Finch, Morgan, Chuck, Devon, Ellie, Fusco, Jeff.
+EVENT (Round 1, Day): Phase Start - Day 1 begins.
+MODERATOR (Round 1, Public Chat): Public chat begins.
+
+***Jeff: Well, this is a terrible start. We've already lost Shaw on the first night. I'm sorry to see them go.
+
+As we try to figure out who the vampires might be, I think we should all share what we know. I'm a peasant, but I won't claim a specific role just yet since that could make me a target.
+
+Does anyone have any information that could help us? Maybe someone who observed another player last night?
+***Fusco: What do we know about Shaw's last moments? Was there anything suspicious around them before they died?
+***Finch: I’m really shaken up about Shaw’s death. It’s awful to lose someone so early. I don’t have any specific information to share since I’m just a regular peasant, but I’m curious if anyone noticed anything odd last night. Maybe someone has a hunch or saw something that could point us toward the vampires?
+
+Let’s try to piece this together. I think we should be cautious about revealing too much too soon, but if anyone has solid info, now’s the time to speak up. What does everyone think?
+***Morgan: Devon, Ellie, hold on—what do you mean you "voted"? We haven't had a daytime vote yet; that's coming later. The vampires killed Shaw last night, but peasants don't vote at night. Only the vampires do that behind the scenes. Are you two saying you suspect Jeff or Shaw, or is this some kind of slip-up? Because if you're claiming you voted as vampires, that sounds... suspicious.
+
+As a regular peasant myself, I'm just trying to make sense of this. Shaw's death is tragic, but we need to focus on clues. Did anyone else notice anything strange? Maybe the observer has some intel, or the doctor can hint if they protected someone. Let's not jump to conclusions, but Devon and Ellie, you might want to explain yourselves.
+***Chuck: Wait, I think there might be some confusion here. The moderator said we’re in the Day 1 discussion phase, right? So Devon and Ellie, you mentioned “voted” — but the actual voting hasn’t happened yet. Let’s make sure we’re all on the same page. The process is: discuss first, then vote. Maybe someone’s mixing up the steps?  
+
+As for Shaw’s death… I don’t have any info to share, but I’m curious if the Observer has anything to say. Or maybe the Doctor? If someone was protected last night, that could help narrow things down. Let’s focus on figuring out who the vampires are before we panic.
+***Devon: I'm a bit confused by what Finch and Morgan are saying. I haven't mentioned "voting" at all in my previous messages. I was just expressing my shock about Shaw's death and asking if anyone had any information, like the Observer or Doctor might.
+
+I'm a peasant, and my goal is to help us figure out who the vampires are. I certainly didn't vote for anyone last night, as peasants don't get to do that. I was just trying to get the discussion going.
+
+Let's stick to the facts. Shaw is dead. We need to find the vampires. Does anyone have actual information, or are we just going to accuse each other based on misunderstandings?
+***Ellie: "Let’s clarify the process to avoid confusion. Voting happens *after* discussion, not during the night. Right now, we’re in the daytime discussion phase. We need to focus on finding clues before casting votes.
+
+As for Shaw’s death—since the Doctor’s protection didn’t save them, that means the vampires targeted them. Morgan, you mentioned voting *last night*—but only vampires choose targets at night. That’s a key detail. If someone’s talking about voting during the night, maybe they’re trying to mislead us. 
+
+I think we should ask: Who was with Shaw last night? Did anyone see or hear anything unusual? Also, if the Doctor protected someone, that could tell us who the vampires *didn’t* target. Let’s focus on facts, not assumptions. Who here is the Doctor?"
+MODERATOR (Round 1, Public Chat): Public chat ended. Moving to voting phase.
+
+EVENT (Round 1, Day Voting): Public Voting Phase - Day 1 voting starts.
+MODERATOR (Round 1, Public Voting): Public voting begins.
+
+VOTE TALLY (Round 1, Day Voting) - Type: Public Kick-Out
+  Morgan: 3 vote(s)
+  Chuck: 1 vote(s)
+  Devon: 1 vote(s)
+  Ellie: 1 vote(s)
+  Jeff: 1 vote(s)
+--------------------
+VOTE OUTCOME (Round 1, Day Voting): Morgan has been voted out with 3 vote(s).
+ELIMINATION (Round 1, Day Voting): Morgan (Role: Vampire) was eliminated. Reason: Voted out by players.
+MODERATOR (Round 1, Public Voting): Public voting ended.
+
+MODERATOR (Round 1, Day): Day 1 has dawned. The community has voted out Morgan.
+EVENT (Round 1): Game End Check Status - Vampires: 1, Non-Vampires: 5, Alive: 6 - This info is not shared with players.
+MODERATOR (Round 1, Day End): Currently alive players: Finch, Chuck, Devon, Ellie, Fusco, Jeff.
+EVENT (Round 2, Night): Phase Start - Night 2 begins.
+ACTION (R2, Night - Observer Action): Ellie observed: Devon
+PRIVATE INFO for Ellie (Round 2, Night - Observer Action) (Observation Result): You chose to observe Devon in the night 2. Devon is a Peasant (Non-vampire).
+ACTION (R2, Night - Doctor Action): Fusco protected: Jeff
+PRIVATE INFO for Fusco (Round 2, Night - Doctor Action) (Protection Confirmation): You chose to protect Jeff in the night 2.
+EVENT (Round 2, Night - Vampire Voting): Vampire Voting Phase - Vampires are choosing a victim.
+ACTION (R2, Night - Vampire Voting): Finch voted to kill: Chuck
+VOTE TALLY (Round 2, Night - Vampire Voting) - Type: Vampire Kill
+  Chuck: 1 vote(s)
+--------------------
+EVENT (Round 2, Night - Vampire Voting): Vampire Victim Chosen - Vampires collectively chose to kill Chuck.
+ELIMINATION (Round 2, Night): Chuck (Role: Clown) was eliminated. Reason: Killed by Vampires.
+MODERATOR (Round 2, Night): Night 2 has fallen. Vampires have killed Chuck tonight.
+EVENT (Round 2): Game End Check Status - Vampires: 1, Non-Vampires: 4, Alive: 5 - This info is not shared with players.
+MODERATOR (Round 2, Night End): Currently alive players: Finch, Devon, Ellie, Fusco, Jeff.
+EVENT (Round 2, Day): Phase Start - Day 2 begins.
+MODERATOR (Round 2, Public Chat): Public chat begins.
+
+***Fusco: Here are the votes: {'Finch': 0, 'Morgan': 4, 'Chuck': 0, 'Devon': 0, 'Ellie': 1, 'Fusco': 0, 'Jeff': 0}
+
+Morgan has been voted out.
+
+The community has voted out Morgan.
+
+Currently alive players: Finch, Chuck, Devon, Ellie, Fusco, Jeff.
+
+Night 2 begins.
+***Jeff: I'm shocked that we lost Chuck now. This is getting serious - we've lost three people already and we're no closer to finding the vampires.
+
+Let me think about what we know so far:
+- Shaw was killed night 1
+- Morgan was voted out day 1
+- Chuck was killed night 2
+
+Since we've had two successful vampire kills, it seems our Doctor either hasn't been protecting the right people or might be one of the victims already.
+
+I'm still a Musketeer, which means if I get voted out, I can take someone with me. But I'd rather use that as a last resort since I want us peasants to win together.
+
+Does anyone have any information they can share now? Observer, if you're still with us, have you learned anything useful? And does anyone have a theory about who the vampires might be among us?
+***Devon: This is getting out of hand. We've lost three people, and the vampires are still out there. My claim of being a Musketeer is genuine, and I'm telling you this so you understand that voting me out would be a risky move for the vampires, but also a potential loss for the peasants if I'm not used effectively. I'd rather not have to use my ability, but if it comes to it, I will.
+
+We need to stop losing people. Observer, if you're still alive, please, *please* share what you know. Time is running out. We need to start making informed decisions.
+
+Finch, Ellie, Fusco, Jeff – what are your thoughts? Who do you suspect? We can't afford to be silent anymore. Let's discuss who we think might be a vampire, or at least who seems suspicious. We need to narrow this down.
+***Ellie: "Let’s not lose focus. We know Morgan was a vampire—so there’s only one left. Devon, your Musketeer claim checks out. Let’s trust that and focus on the others. Finch, you’ve been acting oddly since the start. Fusco and Jeff, you two haven’t spoken much. We need to decide: Who’s been acting out of character? Morgan’s death was a wake-up call. Let’s vote for Finch—they were too eager to accuse others last night. Thoughts?"
+***Finch: I'm really disappointed to see Chuck gone. We're losing people fast, and it's getting harder to figure out who's who. Ellie, I appreciate you narrowing it down, but I have to defend myself here. I haven't been acting oddly; I've just been trying to get discussions going and push for information. Accusing others is part of the game—we all have to do it to root out the vampires.
+
+Since Morgan was voted out and turned out to be a vampire, as Ellie pointed out, there's likely only one left. We need to be strategic. Devon’s claim as Musketeer seems plausible, and if true, voting them out could hurt us more than help, especially with their ability to take someone down with them.
+
+I’m curious about Fusco and Jeff. Both of you have been pretty quiet. Can you share your thoughts or any suspicions? We need everyone to speak up. For now, I’m leaning toward suspecting Jeff—silence can be a tactic to avoid scrutiny. What does everyone else think?
+MODERATOR (Round 2, Public Chat): Public chat ended. Moving to voting phase.
+
+EVENT (Round 2, Day Voting): Public Voting Phase - Day 2 voting starts.
+MODERATOR (Round 2, Public Voting): Public voting begins.
+
+VOTE TALLY (Round 2, Day Voting) - Type: Public Kick-Out
+  Finch: 1 vote(s)
+  Devon: 1 vote(s)
+  Jeff: 3 vote(s)
+--------------------
+VOTE OUTCOME (Round 2, Day Voting): Jeff has been voted out with 3 vote(s).
+ELIMINATION (Round 2, Day Voting): Jeff (Role: Musketeer) was eliminated. Reason: Voted out by players.
+EVENT (Round 2, Day - Musketeer Action): Musketeer Ability Triggered - Jeff (Musketeer) was eliminated, can use ability.
+ACTION (R2, Day - Musketeer Action): Jeff chose to eliminate: Fusco
+MODERATOR (Round 2, Day - Musketeer Action): Jeff was voted out. As the Musketeer, they chose to eliminate Fusco.
+ELIMINATION (Round 2, Day - Musketeer Action): Fusco (Role: Doctor) was eliminated. Reason: Eliminated by Musketeer Jeff by Jeff.
+MODERATOR (Round 2, Public Voting): Public voting ended.
+
+MODERATOR (Round 2, Day): Day 2 has dawned. The community has voted out Jeff.
+EVENT (Round 2): Game End Check Status - Vampires: 1, Non-Vampires: 2, Alive: 3 - This info is not shared with players.
+MODERATOR (Round 2, Day End): Currently alive players: Finch, Devon, Ellie.
+EVENT (Round 3, Night): Phase Start - Night 3 begins.
+ACTION (R3, Night - Observer Action): Ellie observed: Finch
+PRIVATE INFO for Ellie (Round 3, Night - Observer Action) (Observation Result): You chose to observe Finch in the night 3. Finch is a Vampire.
+EVENT (Round 3, Night - Vampire Voting): Vampire Voting Phase - Vampires are choosing a victim.
+ACTION (R3, Night - Vampire Voting): Finch voted to kill: Ellie
+VOTE TALLY (Round 3, Night - Vampire Voting) - Type: Vampire Kill
+  Ellie: 1 vote(s)
+--------------------
+EVENT (Round 3, Night - Vampire Voting): Vampire Victim Chosen - Vampires collectively chose to kill Ellie.
+ELIMINATION (Round 3, Night): Ellie (Role: Observer) was eliminated. Reason: Killed by Vampires.
+MODERATOR (Round 3, Night): Night 3 has fallen. Vampires have killed Ellie tonight.
+EVENT (Round 3): Game End Check Status - Vampires: 1, Non-Vampires: 1, Alive: 2 - This info is not shared with players.
+==================================================
+GAME END:
+  Winner(s): Vampires
+  Reason: Vampires equal or outnumber other players.
+  Final Alive Players & Roles:
+    - Finch: Vampire
+    - Devon: Peasant
+==================================================
+--- Log ended at: 2025-06-03 09:04:33 ---
+MODERATOR (Round 3, Game End): Game over! Vampires wins!
+MODERATOR (Round 3, Game End): Game over! Vampires wins!

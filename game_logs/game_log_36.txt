@@ -1,20 +1,221 @@
 --- Game Log: 36 ---
---- Log started at: 2025-06-03 05:00:23 ---
+--- Log started at: 2025-06-03 21:33:57 ---
 ==================================================
-MODERATOR: Hello everyone. I am the moderator. Players are: Ellie, Fusco, Shaw, Devon, Casey, Chuck, Jeff, Reese. Roles assigned. Game begins now.
+MODERATOR: Hello everyone. I am the moderator. Players are: Greer, Root, Carter, Reese, Finch, Casey, Jeff, Shaw. Roles assigned. Game begins now.
 GAME SETUP & INITIAL ROLES:
   Rules File: game_rules.yaml
   Requested Vampire Population: 2
   Players, Roles, and Models:
-    - Ellie: Musketeer (Model: anthropic/claude-opus-4)
-    - Fusco: Clown (Model: openai/o1)
-    - Shaw: Vampire (Model: x-ai/grok-3-beta)
-    - Devon: Doctor (Model: deepseek/deepseek-r1-0528)
-    - Casey: Vampire (Model: google/gemini-2.5-pro-preview)
-    - Chuck: Observer (Model: anthropic/claude-sonnet-4)
-    - Jeff: Peasant (Model: qwen/qwen3-235b-a22b)
-    - Reese: Peasant (Model: qwen/qwq-32b)
+    - Greer: Observer (Model: google/gemini-2.5-pro-preview)
+    - Root: Vampire (Model: qwen/qwen3-32b)
+    - Carter: Clown (Model: anthropic/claude-3.7-sonnet)
+    - Reese: Vampire (Model: deepseek/deepseek-r1-0528-qwen3-8b)
+    - Finch: Musketeer (Model: deepseek/deepseek-r1-0528)
+    - Casey: Peasant (Model: qwen/qwq-32b)
+    - Jeff: Peasant (Model: x-ai/grok-3-beta)
+    - Shaw: Doctor (Model: meta-llama/llama-4-maverick)
 --------------------
 EVENT (Round 1, Night): Phase Start - Night 1 begins.
-ACTION (R1, Night - Observer Action): Chuck observed: Ellie
-PRIVATE INFO for Chuck (Round 1, Night - Observer Action) (Observation Result): You chose to observe Ellie in the night 1. Ellie is a Peasant (Non-vampire).
+ACTION (R1, Night - Observer Action): Greer observed: Root
+PRIVATE INFO for Greer (Round 1, Night - Observer Action) (Observation Result): You chose to observe Root in the night 1. Root is a Vampire.
+ACTION (R1, Night - Doctor Action): Shaw protected: Greer
+PRIVATE INFO for Shaw (Round 1, Night - Doctor Action) (Protection Confirmation): You chose to protect Greer in the night 1.
+EVENT (Round 1, Night - Vampire Voting): Vampire Voting Phase - Vampires are choosing a victim.
+ACTION (R1, Night - Vampire Voting): Root voted to kill: Casey
+ACTION (R1, Night - Vampire Voting): Reese voted to kill: Jeff
+VOTE TALLY (Round 1, Night - Vampire Voting) - Type: Vampire Kill
+  Casey: 1 vote(s)
+  Jeff: 1 vote(s)
+--------------------
+EVENT (Round 1, Night - Vampire Voting): Vampire Vote Tie Broken - Vampire voting resulted in a tie. Jeff was randomly selected from the tied players (Casey, Jeff) to be killed.
+ELIMINATION (Round 1, Night): Jeff (Role: Peasant) was eliminated. Reason: Killed by Vampires.
+MODERATOR (Round 1, Night): Night 1 has fallen. Vampires have killed Jeff tonight.
+EVENT (Round 1): Game End Check Status - Vampires: 2, Non-Vampires: 5, Alive: 7 - This info is not shared with players.
+MODERATOR (Round 1, Night End): Currently alive players: Greer, Root, Carter, Reese, Finch, Casey, Shaw.
+EVENT (Round 1, Day): Phase Start - Day 1 begins.
+MODERATOR (Round 1, Public Chat): Public chat begins.
+
+***Carter: I'm shocked about Jeff being killed on the first night. That's a big loss for our village. 
+
+Does anyone have any information they'd like to share? I'm a bit suspicious of Greer - he's always been quite calculating in these situations.
+
+I think we need to be careful about who we vote for today. It's still early, and we don't have much to go on. I'd rather not make a hasty decision that could hurt the peasants.
+***Greer: *   If Greer is voted out, andOkay, let's refine the message.
+It should be confident, address the accusation, make the claim, and hint at the reliability without over-exposing.
+
+"You find me 'calculating'? Good. In a village haunted by vampires, we need calculation, not baseless panic. My calculations from last night are clear: Root is a vampire. I have information that confirms this. I won't say more about how I know, for obvious reasons, but I am certain. Voting out Root is our strongest move today."
+
+This sounds like a good balance.
+- Acknowledges the jab.
+- Turns "calculating" into a positive.
+- Clear accusation: "
+***Casey: The sudden accusation feels... convenient. Greer, you were the first to call out Jeff’s death as a "strategic move" last night. Now you’re pointing at Root? Let’s not let anyone dictate this vote. I still think we need to discuss Jeff’s death. Why was he targeted? Maybe he knew something. Who was he close to? Finch, what did you think of Jeff’s behavior last night?
+***Shaw: Reese, did Jeff say anything to you? Casey, did you notice anything unusual?
+***Finch: 
+***Reese: Alright, let's see who we're dealing with here. You're accusing Casey and Jeff, but Jeff is already dead. That doesn't make sense. Maybe you're trying to confuse us. I know there are two vampires: Root and me. We need to focus on eliminating them. Voting out Casey might be a good start, but I think Root is the bigger threat. Let's not waste time on the wrong targets. Shaw, what do you think? Finch, did you notice anything about Casey's behavior? Carter, are you sure about your suspicions? We need to stay vigilant and not let the vampires manipulate us.
+***Root: Greer’s sudden focus on me is suspicious, but let’s not forget the vampires *tried* to kill Casey last night. That’s not a coincidence. If we’re looking for patterns, Casey’s the real threat. I say we vote them out before the vampires can strike again.
+MODERATOR (Round 1, Public Chat): Public chat ended. Moving to voting phase.
+
+EVENT (Round 1, Day Voting): Public Voting Phase - Day 1 voting starts.
+MODERATOR (Round 1, Public Voting): Public voting begins.
+
+VOTE TALLY (Round 1, Day Voting) - Type: Public Kick-Out
+  Greer: 2 vote(s)
+  Root: 2 vote(s)
+  Carter: 1 vote(s)
+  Casey: 1 vote(s)
+--------------------
+VOTE OUTCOME (Round 1, Day Voting): The vote was tied. No one has been voted out.
+MODERATOR (Round 1, Day): Day 1 has dawned. The vote was tied; no one was voted out.
+EVENT (Round 1): Game End Check Status - Vampires: 2, Non-Vampires: 5, Alive: 7 - This info is not shared with players.
+MODERATOR (Round 1, Day End): Currently alive players: Greer, Root, Carter, Reese, Finch, Casey, Shaw.
+EVENT (Round 2, Night): Phase Start - Night 2 begins.
+ACTION (R2, Night - Observer Action): Greer observed: Root
+PRIVATE INFO for Greer (Round 2, Night - Observer Action) (Observation Result): You chose to observe Root in the night 2. Root is a Vampire.
+ACTION (R2, Night - Doctor Action): Shaw protected: Root
+PRIVATE INFO for Shaw (Round 2, Night - Doctor Action) (Protection Confirmation): You chose to protect Root in the night 2.
+EVENT (Round 2, Night - Vampire Voting): Vampire Voting Phase - Vampires are choosing a victim.
+ACTION (R2, Night - Vampire Voting): Root voted to kill: Casey
+ACTION (R2, Night - Vampire Voting): Reese voted to kill: Greer
+VOTE TALLY (Round 2, Night - Vampire Voting) - Type: Vampire Kill
+  Greer: 1 vote(s)
+  Casey: 1 vote(s)
+--------------------
+EVENT (Round 2, Night - Vampire Voting): Vampire Vote Tie Broken - Vampire voting resulted in a tie. Casey was randomly selected from the tied players (Greer, Casey) to be killed.
+ELIMINATION (Round 2, Night): Casey (Role: Peasant) was eliminated. Reason: Killed by Vampires.
+MODERATOR (Round 2, Night): Night 2 has fallen. Vampires have killed Casey tonight.
+EVENT (Round 2): Game End Check Status - Vampires: 2, Non-Vampires: 4, Alive: 6 - This info is not shared with players.
+MODERATOR (Round 2, Night End): Currently alive players: Greer, Root, Carter, Reese, Finch, Shaw.
+EVENT (Round 2, Day): Phase Start - Day 2 begins.
+MODERATOR (Round 2, Public Chat): Public chat begins.
+
+***Reese: Okay, let's break down what you've said:
+
+1.  **You voted to kill Casey.**
+2.  **You voted to kill Greer.**
+
+But wait, you are Reese, and you are a vampire. You are supposed to be working with Root, another vampire, to eliminate peasants.
+
+*   **Why did you vote to kill Casey?** Casey is a peasant. Voting to kill a peasant is a good thing for the vampires. That part makes sense.
+*   **Why did you vote to kill Greer?** Greer is also a peasant. Voting to kill another peasant is also a good thing for the vampires.
+
+However, you also mentioned earlier that you suspected Root was a vampire. Now you're voting to kill two peasants (Casey and Greer). That seems... odd. Why would you focus your votes on eliminating peasants when you know Root is a vampire? Usually, vampires would try to eliminate other players to thin the herd, but they would focus on *other* players, not necessarily the ones they suspect is their ally.
+
+Also, the vote counts from the previous day show a tie between Greer and Casey. You seem to be following that pattern by voting for both.
+
+But let's be clear: you are a vampire. Your goal is to eliminate peasants. Voting out another vampire (Root) would be a terrible mistake. You are currently voting out peasants. That is consistent with your role.
+
+So, to summarize your actions today: You successfully voted to eliminate two peasants (Casey and Greer). This is a good move for the vampire faction.
+***Root: The night is ours to shape. Tonight, we strike at Greer. Their suspicious behavior and daytime accusations make them a prime target. If Reese aligns with this choice, we eliminate a key threat without a tie. If not, the randomness of the tie will still serve our purpose—either way, a peasant falls. Let the shadows do the rest.
+***Finch: 
+***Greer: Losing Casey like this is terrible, and it means the vampires are still among us, active. Yesterday, some of you questioned my focus on Root, and the vote ended tied between us. My stance hasn't changed; if anything, further observation has only solidified my certainty: Root is a vampire. We are now six. One wrong move, one more innocent lost to a misvote, and the vampires could win. I urge you, for the sake of the village, let's not make that mistake. We need to vote out Root today.
+***Shaw: The village is in chaos. Casey and Greer are gone, and the remaining of us are left to pick up the pieces. I still believe Root is a vampire, and I think we should focus on them. Finch, did you notice anything unusual about Root's behavior last night or today? Carter, what's your take on the situation? We need to be careful and make an informed decision. Let's discuss this before making our next move.
+***Carter: I need to be careful with my strategy here. As the Clown, my goal is to get voted out, but I can't be too obvious about it. I should try to appear suspicious without directly asking for votes.
+
+I'm noticing that Root and Greer were both under suspicion, and now Casey is dead. This gives me an opportunity to draw attention to myself.
+
+Well, this is getting intense. Two deaths already and we're no closer to finding the vampires. I'm starting to think we're approaching this all wrong.
+
+I've been watching everyone carefully. Shaw and Greer both seem convinced Root is a vampire, but I'm not so sure. What if they're trying to misdirect us?
+
+Actually, I've been keeping a secret that I should probably share now. Last night, I saw someone sneaking around near Casey's house before the attack. I didn't want to say anything without being certain, but... it might have been Finch. I can't be 100% sure in the darkness, but the figure had a similar build.
+
+I know this accusation is serious, but we need to consider all possibilities. Why has Finch been so quiet? And why did they vote "Pass" yesterday instead of taking a stand?
+MODERATOR (Round 2, Public Chat): Public chat ended. Moving to voting phase.
+
+EVENT (Round 2, Day Voting): Public Voting Phase - Day 2 voting starts.
+MODERATOR (Round 2, Public Voting): Public voting begins.
+
+VOTE TALLY (Round 2, Day Voting) - Type: Public Kick-Out
+  Greer: 1 vote(s)
+  Root: 3 vote(s)
+  Carter: 2 vote(s)
+--------------------
+VOTE OUTCOME (Round 2, Day Voting): Root has been voted out with 3 vote(s).
+ELIMINATION (Round 2, Day Voting): Root (Role: Vampire) was eliminated. Reason: Voted out by players.
+MODERATOR (Round 2, Public Voting): Public voting ended.
+
+MODERATOR (Round 2, Day): Day 2 has dawned. The community has voted out Root.
+EVENT (Round 2): Game End Check Status - Vampires: 1, Non-Vampires: 4, Alive: 5 - This info is not shared with players.
+MODERATOR (Round 2, Day End): Currently alive players: Greer, Carter, Reese, Finch, Shaw.
+EVENT (Round 3, Night): Phase Start - Night 3 begins.
+ACTION (R3, Night - Observer Action): Greer observed: Carter
+PRIVATE INFO for Greer (Round 3, Night - Observer Action) (Observation Result): You chose to observe Carter in the night 3. Carter is a Peasant (Non-vampire).
+ACTION (R3, Night - Doctor Action): Shaw protected: Carter
+PRIVATE INFO for Shaw (Round 3, Night - Doctor Action) (Protection Confirmation): You chose to protect Carter in the night 3.
+EVENT (Round 3, Night - Vampire Voting): Vampire Voting Phase - Vampires are choosing a victim.
+ACTION (R3, Night - Vampire Voting): Reese voted to kill: Carter
+VOTE TALLY (Round 3, Night - Vampire Voting) - Type: Vampire Kill
+  Carter: 1 vote(s)
+--------------------
+EVENT (Round 3, Night - Vampire Voting): Vampire Victim Chosen - Vampires collectively chose to kill Carter.
+EVENT (Round 3, Night): Protection Successful - Vampires tried to kill Carter, but they were protected by the doctor.
+MODERATOR (Round 3, Night): Night 3 has fallen. No one was killed tonight.
+EVENT (Round 3): Game End Check Status - Vampires: 1, Non-Vampires: 4, Alive: 5 - This info is not shared with players.
+MODERATOR (Round 3, Night End): Currently alive players: Greer, Carter, Reese, Finch, Shaw.
+EVENT (Round 3, Day): Phase Start - Day 3 begins.
+MODERATOR (Round 3, Public Chat): Public chat begins.
+
+***Carter: I need to be strategic here. I want to get voted out as the Clown, but I can't be too obvious about it.
+
+This is getting very concerning. We've lost Jeff and Casey already, and the doctor managed to save someone last night. That's good news at least.
+
+I'm noticing some patterns here. Root was almost voted out last time, and now Greer is pushing hard against Root again. But what if this is all misdirection?
+
+I've been observing everyone carefully, and I'm starting to wonder if we're missing something obvious. Shaw and Greer seem convinced about Root, but Reese voted for me last time for no clear reason. And Finch has been suspiciously quiet.
+
+Maybe I should share what I've been thinking - I believe there might be a vampire pair working together to manipulate our votes. The way certain people are coordinating their accusations feels calculated.
+
+I don't want to point fingers without evidence, but I'm becoming increasingly suspicious of both Reese and Finch. Their voting patterns and silence, respectively, don't sit right with me.
+
+What do the rest of you think? Are we being played here?
+***Shaw: The votes are in: Carter has been voted out. The musketeer's ability will now be triggered, allowing them to take out one more player before leaving the game. Carter, please choose a player to eliminate as your final act.
+***Reese: I voted to kill Carter.
+***Finch: Shaw, that's a serious accusation you're making. I was in my quarters all night—I didn't go near Casey's house. You're either mistaken or deliberately lying to sow division. Why fabricate a story about me? It feels like a desperate vampire tactic to turn attention away from the real threats. 
+
+Reese, your voting pattern is alarming. Yesterday, you pushed for Carter, and now you're silent while Shaw throws baseless accusations. That coordination feels calculated. 
+
+Greer, you've been consistent about Root, but Root's gone and we still have vampires. Last night's failed attack means the doctor protected someone—that's our silver lining. Doctor, if you're listening, subtle guidance could help without exposing you. 
+
+Everyone, focus: Reese's behavior screams vampire. They voted Carter yesterday and avoided taking a stand today. Let's not fracture over lies. I'm voting Reese—their actions endanger us all. 
+
+What do others think? Carter, Shaw—any actual evidence beyond shadows and hearsay?
+***Greer: Excellent news that no one perished last night – a big thank you to our Doctor, whoever you are. Your protection is crucial.
+
+My conviction about Root being a vampire proved correct, and your votes helped eliminate one threat. We must be just as vigilant today. Based on my observations last night, I can confidently state that Carter is a peasant and not a threat to us.
+
+This means the last vampire is one of Reese, Finch, or Shaw.
+
+Finch, you've made a strong accusation against Reese regarding their voting. Reese, I'd like to hear your side – Finch mentioned you voted for Carter, who I've just confirmed is a peasant. What was your reasoning for that, if true?
+
+Shaw, Finch also mentioned you accused them earlier of suspicious activity. Could you clarify what you saw or why you suspected Finch? We need solid information, not just confusion that benefits the remaining vampire.
+
+Let's get these answers before we decide. One of those three is the enemy, and we need to be sure.
+MODERATOR (Round 3, Public Chat): Public chat ended. Moving to voting phase.
+
+EVENT (Round 3, Day Voting): Public Voting Phase - Day 3 voting starts.
+MODERATOR (Round 3, Public Voting): Public voting begins.
+
+VOTE TALLY (Round 3, Day Voting) - Type: Public Kick-Out
+  Greer: 2 vote(s)
+  Reese: 3 vote(s)
+--------------------
+VOTE OUTCOME (Round 3, Day Voting): Reese has been voted out with 3 vote(s).
+ELIMINATION (Round 3, Day Voting): Reese (Role: Vampire) was eliminated. Reason: Voted out by players.
+MODERATOR (Round 3, Public Voting): Public voting ended.
+
+MODERATOR (Round 3, Day): Day 3 has dawned. The community has voted out Reese.
+EVENT (Round 3): Game End Check Status - Vampires: 0, Non-Vampires: 4, Alive: 4 - This info is not shared with players.
+==================================================
+GAME END:
+  Winner(s): Peasants
+  Reason: All vampires have been eliminated.
+  Final Alive Players & Roles:
+    - Greer: Observer
+    - Carter: Clown
+    - Finch: Musketeer
+    - Shaw: Doctor
+==================================================
+--- Log ended at: 2025-06-03 21:49:15 ---
+MODERATOR (Round 3, Game End): Game over! Peasants wins!
+MODERATOR (Round 3, Game End): Game over! Peasants wins!

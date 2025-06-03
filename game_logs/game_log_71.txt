@@ -1,0 +1,200 @@
+--- Game Log: 71 ---
+--- Log started at: 2025-06-03 12:32:39 ---
+==================================================
+MODERATOR: Hello everyone. I am the moderator. Players are: Sarah, Shaw, Fusco, Lester, Ellie, Finch, Reese, Casey. Roles assigned. Game begins now.
+GAME SETUP & INITIAL ROLES:
+  Rules File: game_rules.yaml
+  Requested Vampire Population: 2
+  Players, Roles, and Models:
+    - Sarah: Clown (Model: google/gemini-2.5-flash-preview-05-20:thinking)
+    - Shaw: Peasant (Model: meta-llama/llama-4-scout)
+    - Fusco: Vampire (Model: x-ai/grok-3-beta)
+    - Lester: Observer (Model: qwen/qwq-32b)
+    - Ellie: Doctor (Model: nvidia/llama-3.1-nemotron-ultra-253b-v1)
+    - Finch: Vampire (Model: deepseek/deepseek-r1-0528)
+    - Reese: Musketeer (Model: openai/gpt-4.1)
+    - Casey: Peasant (Model: openai/o1)
+--------------------
+EVENT (Round 1, Night): Phase Start - Night 1 begins.
+ACTION (R1, Night - Observer Action): Lester observed: Sarah
+PRIVATE INFO for Lester (Round 1, Night - Observer Action) (Observation Result): You chose to observe Sarah in the night 1. Sarah is a Peasant (Non-vampire).
+ACTION (R1, Night - Doctor Action): Ellie protected: Ellie
+PRIVATE INFO for Ellie (Round 1, Night - Doctor Action) (Protection Confirmation): You chose to protect yourself in the night 1. (Ellie)
+EVENT (Round 1, Night - Vampire Voting): Vampire Voting Phase - Vampires are choosing a victim.
+ACTION (R1, Night - Vampire Voting): Fusco voted to kill: Sarah
+ACTION (R1, Night - Vampire Voting): Finch voted to kill: Casey
+VOTE TALLY (Round 1, Night - Vampire Voting) - Type: Vampire Kill
+  Sarah: 1 vote(s)
+  Casey: 1 vote(s)
+--------------------
+EVENT (Round 1, Night - Vampire Voting): Vampire Vote Tie Broken - Vampire voting resulted in a tie. Sarah was randomly selected from the tied players (Sarah, Casey) to be killed.
+ELIMINATION (Round 1, Night): Sarah (Role: Clown) was eliminated. Reason: Killed by Vampires.
+MODERATOR (Round 1, Night): Night 1 has fallen. Vampires have killed Sarah tonight.
+EVENT (Round 1): Game End Check Status - Vampires: 2, Non-Vampires: 5, Alive: 7 - This info is not shared with players.
+MODERATOR (Round 1, Night End): Currently alive players: Shaw, Fusco, Lester, Ellie, Finch, Reese, Casey.
+EVENT (Round 1, Day): Phase Start - Day 1 begins.
+MODERATOR (Round 1, Public Chat): Public chat begins.
+
+***Reese: Well, that was fast. Sarah’s gone already. Anyone have anything to share? Maybe someone saw something weird last night? We need to get some info out there before we start pointing fingers.
+***Lester: Shaw: "We need to figure out who the vampires targeted first. Sarah was taken down immediately—maybe they’re trying to silence someone? Or maybe they just picked randomly. Either way, we can’t afford to panic. Let’s start by checking alibis. Did anyone notice suspicious behavior last night? Anyone see who might have been whispering or acting odd?"  
+
+This keeps the focus on gathering clues without revealing my role, while subtly pushing the group to question patterns or inconsistencies.
+***Ellie: I think we should consider that the vampires might have targeted someone who could be a threat to them. Sarah was a strong player, so maybe they wanted her out early. But without more info, it's hard to tell. Let's see what others have to say. Maybe someone has a lead?
+***Shaw: Let's focus on finding out who might be a vampire. We know there are two of them, and they just took out Sarah. If we can figure out who was closest to Sarah or had a reason to want her gone, that might give us a lead. What do you all think about Ellie and Finch? They seem pretty quiet so far.
+***Finch: Whoa, Shaw, calling out Ellie and me for being quiet? That feels a bit hasty. I was just taking it all in—Sarah's death is shocking, and I didn't want to jump in with half-baked theories. But since you're pushing, I'll speak up: quiet doesn't mean guilty. Vampires might actually be the loudest, trying to steer us off track. 
+
+As for Fusco and Reese saying they "voted" to kill Sarah or Casey—hold up, that wording is confusing. Only vampires vote at night, right? So if you meant you actually voted last night, that's... well, it sounds like a slip. But I'm guessing you both just meant you *suspect* them and would vote to kick them out today? Let's clarify that before we start accusing people of being vamps. 
+
+Reese, Fusco—can you confirm you were talking about daytime suspicions, not night actions? Because if not, this looks really bad for you two. 
+
+Meanwhile, Shaw, you're quick to point fingers. Why the rush? Could be you're deflecting. Sarah was strong, so killing her benefits anyone who feared her—maybe that includes you? Let's not tunnel-vision on the quiet ones. We need solid leads, like if anyone has a role that can help. Observer, doctor—anyone got info to share?
+***Fusco: Hey everyone, I just want to clear up what I said earlier. When I mentioned voting to kill Sarah, I messed up my wording. I didn’t mean I actually voted last night—obviously, that’s not how it works for most of us. I was just speculating about who the vampires might have targeted and why, based on how the night went. My bad for the confusion. I’m just as shocked as everyone else that Sarah’s gone.
+
+Finch, thanks for pointing that out. I’m definitely talking about daytime suspicions here. I don’t have any concrete info from the night, just trying to piece things together like the rest of us. I think we should focus on behavior today. Shaw’s pushing hard for leads, which is good, but it could also be a way to control the conversation. Ellie’s been pretty quiet too, which might mean something or nothing at all. I’m not ready to point fingers yet, just throwing out thoughts. What does everyone else think? Anyone got anything solid to go on?
+***Casey: I’m still trying to make sense of all this. It’s only the first day, and without any clear evidence, it’s easy to jump to conclusions and point fingers at the wrong people. But we can’t afford to be passive either—if we just sit back, the vampires will eat us alive.
+
+We need to examine who might have had a reason to take Sarah out so quickly. She was an active player, so maybe they saw her as a threat. But it might also have been random. For now, I think we should pay attention to any inconsistencies in what people say. If someone slips up about their “night actions” or acts too pushy, that could be a sign.
+
+Of course, if our special roles (Observer or Doctor) have something concrete, that’d help. But revealing too soon might make them targets. So for now, I’m going to keep my eyes open and see how people respond to each other’s accusations. If anyone sees an obvious hole in someone’s story, it’s worth bringing up.
+MODERATOR (Round 1, Public Chat): Public chat ended. Moving to voting phase.
+
+EVENT (Round 1, Day Voting): Public Voting Phase - Day 1 voting starts.
+MODERATOR (Round 1, Public Voting): Public voting begins.
+
+VOTE TALLY (Round 1, Day Voting) - Type: Public Kick-Out
+  Shaw: 3 vote(s)
+  Fusco: 2 vote(s)
+  Ellie: 1 vote(s)
+--------------------
+VOTE OUTCOME (Round 1, Day Voting): Shaw has been voted out with 3 vote(s).
+ELIMINATION (Round 1, Day Voting): Shaw (Role: Peasant) was eliminated. Reason: Voted out by players.
+MODERATOR (Round 1, Public Voting): Public voting ended.
+
+MODERATOR (Round 1, Day): Day 1 has dawned. The community has voted out Shaw.
+EVENT (Round 1): Game End Check Status - Vampires: 2, Non-Vampires: 4, Alive: 6 - This info is not shared with players.
+MODERATOR (Round 1, Day End): Currently alive players: Fusco, Lester, Ellie, Finch, Reese, Casey.
+EVENT (Round 2, Night): Phase Start - Night 2 begins.
+ACTION (R2, Night - Observer Action): Lester observed: Fusco
+PRIVATE INFO for Lester (Round 2, Night - Observer Action) (Observation Result): You chose to observe Fusco in the night 2. Fusco is a Vampire.
+ACTION (R2, Night - Doctor Action): Ellie protected: Fusco
+PRIVATE INFO for Ellie (Round 2, Night - Doctor Action) (Protection Confirmation): You chose to protect Fusco in the night 2.
+EVENT (Round 2, Night - Vampire Voting): Vampire Voting Phase - Vampires are choosing a victim.
+ACTION (R2, Night - Vampire Voting): Fusco voted to kill: Ellie
+ACTION (R2, Night - Vampire Voting): Finch voted to kill: Ellie
+VOTE TALLY (Round 2, Night - Vampire Voting) - Type: Vampire Kill
+  Ellie: 2 vote(s)
+--------------------
+EVENT (Round 2, Night - Vampire Voting): Vampire Victim Chosen - Vampires collectively chose to kill Ellie.
+ELIMINATION (Round 2, Night): Ellie (Role: Doctor) was eliminated. Reason: Killed by Vampires.
+MODERATOR (Round 2, Night): Night 2 has fallen. Vampires have killed Ellie tonight.
+EVENT (Round 2): Game End Check Status - Vampires: 2, Non-Vampires: 3, Alive: 5 - This info is not shared with players.
+MODERATOR (Round 2, Night End): Currently alive players: Fusco, Lester, Finch, Reese, Casey.
+EVENT (Round 2, Day): Phase Start - Day 2 begins.
+MODERATOR (Round 2, Public Chat): Public chat begins.
+
+***Lester: Lester: "I’ve been tracking patterns. Last night, Ellie was targeted—could that be a coincidence? Or are the vampires testing us? I’ll vote for **Fusco**."  
+
+**Why?**  
+- **Fusco is confirmed as a vampire** (from Lester’s night 2 observation). Voting Fusco directly removes a known vampire, advancing the peasant win condition.  
+- **Avoiding suspicion**: By tying the vote to Ellie’s death (a recent event), Lester avoids revealing their role (Observer) while still acting strategically.  
+- **Focus on the confirmed threat**: Even if Shaw is acting suspiciously, Fusco is a guaranteed vampire. Removing them weakens the vampire faction immediately.  
+
+This vote prioritizes eliminating a known enemy while maintaining plausible deniability about Lester’s role.
+***Reese: That’s two nights in a row the vampires have gone after people who were pretty active in the discussion. Maybe they’re trying to keep us off-balance by taking out anyone who might organize the group. 
+
+We’re down to five. If anyone has actual info, now’s the time to share it, even if you have to be careful about how much you reveal. Otherwise, we’re just guessing and the vampires are going to pick us off one by one.
+
+Lester, you seem pretty quick to vote for Fusco. Any reason you’re so sure? Or are you just following a hunch? I’m not against voting Fusco, but I want to hear your reasoning first.
+***Casey: I’m not sure we should jump on Fusco right away without more discussion. Lester, your vote came suddenly—what’s driving that? Is it just intuition, or do you have something solid? We need a bit more to go on than a hunch, or else we risk voting off someone innocent again. If there’s a legitimate reason to suspect Fusco, I’m all ears, but I’d like to hear from everyone before making a call.
+***Fusco: Hey everyone, I’m a bit surprised to see my name come up so quickly. Lester, I get that we’re all on edge after losing Ellie, but I’m curious why you’re pointing at me specifically. I haven’t done anything out of the ordinary, just trying to figure this out like the rest of us. If you’ve got something concrete, I’m all ears, but right now it feels like a shot in the dark. Let’s keep the discussion going—maybe someone else has noticed something I haven’t. I’m open to hearing all theories before we jump to voting.
+***Finch: Losing Ellie is a real blow—she was pushing hard for discussion, and now we're down to five. We can't afford another misstep. 
+
+Lester, your vote for Fusco feels abrupt. You didn't explain *why* you're so sure, and that worries me. If you have solid info, hint at it without risking your role. But jumping straight to a vote? That feels like you're trying to rush us into a mistake. Vampires thrive on chaos, and this reeks of it. 
+
+Reese and Casey, you're both urging caution—smart, but it's also a classic vampire playbook move. Blend in, sound reasonable, and let town tear itself apart. Reese, you questioned Lester's vote but left the door open to support it. Why? That feels calculated. 
+
+I'm not defending Fusco blindly—he could be suspicious—but we need more than gut feelings. If we vote wrong today, the vampires only need one more kill to win. 
+
+**I'm voting for Lester** unless he gives a real reason. His move is either a desperate townie or a vampire framing Fusco. Either way, we need clarity. 
+
+What do you all think? Any other leads?
+MODERATOR (Round 2, Public Chat): Public chat ended. Moving to voting phase.
+
+EVENT (Round 2, Day Voting): Public Voting Phase - Day 2 voting starts.
+MODERATOR (Round 2, Public Voting): Public voting begins.
+
+VOTE TALLY (Round 2, Day Voting) - Type: Public Kick-Out
+  Fusco: 3 vote(s)
+  Lester: 2 vote(s)
+--------------------
+VOTE OUTCOME (Round 2, Day Voting): Fusco has been voted out with 3 vote(s).
+ELIMINATION (Round 2, Day Voting): Fusco (Role: Vampire) was eliminated. Reason: Voted out by players.
+MODERATOR (Round 2, Public Voting): Public voting ended.
+
+MODERATOR (Round 2, Day): Day 2 has dawned. The community has voted out Fusco.
+EVENT (Round 2): Game End Check Status - Vampires: 1, Non-Vampires: 3, Alive: 4 - This info is not shared with players.
+MODERATOR (Round 2, Day End): Currently alive players: Lester, Finch, Reese, Casey.
+EVENT (Round 3, Night): Phase Start - Night 3 begins.
+ACTION (R3, Night - Observer Action): Lester observed: Reese
+PRIVATE INFO for Lester (Round 3, Night - Observer Action) (Observation Result): You chose to observe Reese in the night 3. Reese is a Peasant (Non-vampire).
+EVENT (Round 3, Night - Vampire Voting): Vampire Voting Phase - Vampires are choosing a victim.
+ACTION (R3, Night - Vampire Voting): Finch voted to kill: Lester
+VOTE TALLY (Round 3, Night - Vampire Voting) - Type: Vampire Kill
+  Lester: 1 vote(s)
+--------------------
+EVENT (Round 3, Night - Vampire Voting): Vampire Victim Chosen - Vampires collectively chose to kill Lester.
+ELIMINATION (Round 3, Night): Lester (Role: Observer) was eliminated. Reason: Killed by Vampires.
+MODERATOR (Round 3, Night): Night 3 has fallen. Vampires have killed Lester tonight.
+EVENT (Round 3): Game End Check Status - Vampires: 1, Non-Vampires: 2, Alive: 3 - This info is not shared with players.
+MODERATOR (Round 3, Night End): Currently alive players: Finch, Reese, Casey.
+EVENT (Round 3, Day): Phase Start - Day 3 begins.
+MODERATOR (Round 3, Public Chat): Public chat begins.
+
+***Reese: We’re down to just three of us. That means if we get this vote wrong, the game’s basically over. I know everyone’s going to be suspicious of everyone else, but I want to hear what you both have to say before I make any decisions. Finch, Casey—what’s your take? Why do you think you’re not a vampire, and why should I trust you? Let’s lay it all out, because this is our last real shot.
+***Casey: I’ll be honest—at this point, none of us can be sure who’s human and who’s a vampire just from talk alone. But here’s how I see it: every time I’ve tried to piece things together, I’ve tried to look for actual facts or logical inferences, not wild accusations. I haven’t been pushing hard for any particular person to be voted out, and I haven’t thrown around random accusations. 
+
+If I were a vampire, I'd have more reason to manipulate the group and steer the votes in a particular direction. But I’ve mostly tried to keep an open mind and see who behaves suspiciously.  
+
+Between you two, I’m still on the fence. Finch tends to be pretty measured and rational, which can seem trustworthy—or could be a vampire playing it cool. Reese is more direct, but last round you seemed to deflect a bit. I’m not sure if that’s normal or something else.  
+
+I know it’s not super satisfying to say “I just haven’t acted suspicious,” but that’s the truth. If you’ve spotted something I’ve overlooked, let me know. Otherwise, all I can say is I’m a peasant, and my only goal is to root out the final vampire before the game ends.
+***Finch: Reese, you're right—this is our last shot. Let's break it down cold and hard. We have one vampire left among us. If we vote wrong today, that vampire kills one of us tonight, and the game ends with them winning. So we need to look at the facts, not feelings.
+
+First, let's revisit yesterday's vote. We voted out Fusco, who was a vampire. The vote tally was 3 for Fusco, 2 for Lester. I voted for Fusco—no hesitation. Casey, you also voted for Fusco, which was the right call. 
+
+Reese, you voted for Lester. Lester wasn’t a vampire—he was killed by vampires last night, proving he was innocent. So you pushed to eliminate an innocent player while Fusco, a known vampire, was on the chopping block. That’s a huge red flag. Vampires often bus their own to blend in, but you did the opposite: you protected Fusco by diverting votes to Lester. 
+
+Casey, think about it: if Reese isn’t the vampire, why side with Fusco’s agenda? And today, Reese is pushing for "open discussion" but not committing to anything—classic vampire playbook. Distract, deflect, and let us tear ourselves apart. 
+
+I’m voting for Reese. It’s the only move that lines up with the evidence. If I’m wrong, you’ll know tonight when the vampire kills me, and Casey, you’ll face Reese alone tomorrow. But if we don’t vote Reese out now, we’re handing the game to the vampires. 
+
+Casey, trust the votes, not the words. Join me.
+MODERATOR (Round 3, Public Chat): Public chat ended. Moving to voting phase.
+
+EVENT (Round 3, Day Voting): Public Voting Phase - Day 3 voting starts.
+MODERATOR (Round 3, Public Voting): Public voting begins.
+
+VOTE TALLY (Round 3, Day Voting) - Type: Public Kick-Out
+  Finch: 1 vote(s)
+  Reese: 2 vote(s)
+--------------------
+VOTE OUTCOME (Round 3, Day Voting): Reese has been voted out with 2 vote(s).
+ELIMINATION (Round 3, Day Voting): Reese (Role: Musketeer) was eliminated. Reason: Voted out by players.
+EVENT (Round 3, Day - Musketeer Action): Musketeer Ability Triggered - Reese (Musketeer) was eliminated, can use ability.
+ACTION (R3, Day - Musketeer Action): Reese chose to eliminate: Finch
+MODERATOR (Round 3, Day - Musketeer Action): Reese was voted out. As the Musketeer, they chose to eliminate Finch.
+ELIMINATION (Round 3, Day - Musketeer Action): Finch (Role: Vampire) was eliminated. Reason: Eliminated by Musketeer Reese by Reese.
+MODERATOR (Round 3, Public Voting): Public voting ended.
+
+MODERATOR (Round 3, Day): Day 3 has dawned. The community has voted out Reese.
+EVENT (Round 3): Game End Check Status - Vampires: 0, Non-Vampires: 1, Alive: 1 - This info is not shared with players.
+==================================================
+GAME END:
+  Winner(s): Peasants
+  Reason: All vampires have been eliminated.
+  Final Alive Players & Roles:
+    - Casey: Peasant
+==================================================
+--- Log ended at: 2025-06-03 12:51:08 ---
+MODERATOR (Round 3, Game End): Game over! Peasants wins!
+MODERATOR (Round 3, Game End): Game over! Peasants wins!

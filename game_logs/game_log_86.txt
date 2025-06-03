@@ -1,0 +1,180 @@
+--- Game Log: 86 ---
+--- Log started at: 2025-06-03 18:43:46 ---
+==================================================
+MODERATOR: Hello everyone. I am the moderator. Players are: Reese, Jeff, Ellie, Lester, Devon, Sarah, Fusco, Morgan. Roles assigned. Game begins now.
+GAME SETUP & INITIAL ROLES:
+  Rules File: game_rules.yaml
+  Requested Vampire Population: 2
+  Players, Roles, and Models:
+    - Reese: Observer (Model: google/gemini-2.5-pro-preview)
+    - Jeff: Musketeer (Model: google/gemini-2.5-flash-preview-05-20:thinking)
+    - Ellie: Peasant (Model: deepseek/deepseek-r1-0528-qwen3-8b)
+    - Lester: Doctor (Model: meta-llama/llama-4-maverick)
+    - Devon: Vampire (Model: x-ai/grok-3-beta)
+    - Sarah: Vampire (Model: qwen/qwen3-235b-a22b)
+    - Fusco: Clown (Model: nvidia/llama-3.1-nemotron-ultra-253b-v1)
+    - Morgan: Peasant (Model: deepseek/deepseek-r1-0528)
+--------------------
+EVENT (Round 1, Night): Phase Start - Night 1 begins.
+ACTION (R1, Night - Observer Action): Reese observed: Jeff
+PRIVATE INFO for Reese (Round 1, Night - Observer Action) (Observation Result): You chose to observe Jeff in the night 1. Jeff is a Peasant (Non-vampire).
+ACTION (R1, Night - Doctor Action): Lester protected: Reese
+PRIVATE INFO for Lester (Round 1, Night - Doctor Action) (Protection Confirmation): You chose to protect Reese in the night 1.
+EVENT (Round 1, Night - Vampire Voting): Vampire Voting Phase - Vampires are choosing a victim.
+ACTION (R1, Night - Vampire Voting): Devon voted to kill: Reese
+ACTION (R1, Night - Vampire Voting): Sarah voted to kill: Jeff
+VOTE TALLY (Round 1, Night - Vampire Voting) - Type: Vampire Kill
+  Reese: 1 vote(s)
+  Jeff: 1 vote(s)
+--------------------
+EVENT (Round 1, Night - Vampire Voting): Vampire Vote Tie Broken - Vampire voting resulted in a tie. Reese was randomly selected from the tied players (Reese, Jeff) to be killed.
+EVENT (Round 1, Night): Protection Successful - Vampires tried to kill Reese, but they were protected by the doctor.
+MODERATOR (Round 1, Night): Night 1 has fallen. No one was killed tonight.
+EVENT (Round 1): Game End Check Status - Vampires: 2, Non-Vampires: 6, Alive: 8 - This info is not shared with players.
+MODERATOR (Round 1, Night End): Currently alive players: Reese, Jeff, Ellie, Lester, Devon, Sarah, Fusco, Morgan.
+EVENT (Round 1, Day): Phase Start - Day 1 begins.
+MODERATOR (Round 1, Public Chat): Public chat begins.
+
+***Jeff: Well, it's good news that no one was killed last night. It means our Doctor is on the ball! That's a relief.
+
+So, what are we thinking? Anyone have any initial suspicions or observations from the quiet night? We need to start narrowing down who the vampires might be. Let's hear some thoughts.
+***Fusco: I think we should consider that the vampires might have tried to attack someone but the Doctor protected them. So the Doctor is active and doing their job. That's a good sign. But we can't let our guard down. Maybe we should start by discussing possible strategies for identifying vampires. For example, looking for inconsistencies in people's stories or behavior. What do others think?
+***Sarah: The fact that the Doctor protected someone last night gives us a clue—they’re actively working to keep us safe, which is great, but it also means we need to stay sharp. Since the vampires tried and failed to kill someone, they’ll likely adjust their strategy. I think we should focus on identifying patterns. For example, if someone is targeted again and survives, the Doctor might be protecting them consistently. That could help us narrow down who the Doctor is.  
+
+I’d also suggest we pay attention to anyone who seems overly eager to deflect suspicion or push blame elsewhere. Vampires might try to manipulate the group into eliminating key roles like the Observer or Doctor. Let’s ask each other questions to see who’s giving vague answers versus concrete reasoning.  
+
+On another note, the Clown’s goal is to get voted out, so we shouldn’t rush into eliminating someone unless we’re confident. Let’s use this time to build trust and share observations. Who’s got thoughts on who might be a risk?
+***Morgan: It's definitely reassuring that the Doctor acted last night—shows they're paying attention. But like Ellie said, vampires will adapt quickly. We should use this time wisely since we have no concrete leads yet.  
+
+I suggest we start by sharing our thoughts on who might be suspicious based on behavior so far. For example:  
+- Is anyone being unusually quiet or overly defensive?  
+- Does someone seem to be steering the conversation toward voting without solid reasoning?  
+
+Also, a reminder: the Clown wins if we vote them out, so we need to avoid rash decisions. Let’s focus on building trust through open discussion.  
+
+**To everyone:** What’s your take on why the vampires might have targeted whoever they did last night? Any theories?
+***Reese: Lester, that's a good question. On the first night, it's hard for vampires to have much information. They might have picked someone:
+1.  At random.
+2.  Who seemed like a potential threat – maybe someone who's been talkative or seems analytical from any initial impressions.
+3.  Or they might have tried to guess who a special role is, hoping for an early lucky hit on someone like the Doctor or Observer.
+
+It's tough to say without more information. The fact the Doctor saved them means we have another day with all 8 of us, which is a small win for us peasants.
+
+I agree with Ellie and Lester about being careful with the Clown. We need solid reasons before voting. Does anyone have any specific observations about how people are reacting to the 'no death' news, or any gut feelings they want to share, however small? Sometimes little things can be telling.
+***Ellie: Okay, thanks for the clear thoughts, Ellie. It's good to have a starting point.
+
+The Doctor definitely played a crucial role last night. That means we have one active peasant protecting us. We should keep an eye on who the Doctor might be, but it's too early to jump on anyone.
+
+As for the vampires, their first attempt failed. They might have chosen someone randomly, or perhaps someone they thought was less likely to be protected. It's hard to tell from here.
+
+I think building trust is essential. Let's focus on sharing observations about people's behavior and reasoning during this day. Maybe we can start by asking each other questions to see who provides detailed answers and who seems evasive.
+
+Also, let's be mindful of the Clown. We shouldn't vote someone out unless we have strong evidence they are a vampire. Otherwise, we might accidentally eliminate a peasant or the Clown.
+
+What are your initial thoughts, everyone? Let's try to keep the conversation open and collaborative.
+***Devon: Hey everyone, I'm glad no one was taken out last night. It’s a good sign that the Doctor is on top of things. I agree with what’s been said so far—let’s not rush into voting anyone out just yet. We need to be careful not to play into the Clown’s hands or accidentally eliminate a key peasant role.
+
+As for theories on the vampires’ target, I think they probably picked someone at random since it’s the first night and there’s not much to go on. They might’ve been hoping to get lucky and hit a special role early. Since the Doctor protected whoever it was, we’ve got a bit of breathing room to figure things out.
+
+I’m curious about how everyone’s feeling right now. Does anyone have a gut instinct or notice anything odd in how people are talking? Even small stuff could help us start piecing things together. Let’s keep the discussion open and see where it leads.
+***Lester: Since I'm the Doctor and I protected Reese last night, I'm glad it worked out. I'll keep that in mind for future nights. For now, let's keep discussing and gathering information. I'm still trying to figure out who might be a vampire, and I'm paying attention to everyone's behavior. Does anyone have any thoughts on how we can identify the vampires or if there's anyone who's acting suspiciously?
+MODERATOR (Round 1, Public Chat): Public chat ended. Moving to voting phase.
+
+EVENT (Round 1, Day Voting): Public Voting Phase - Day 1 voting starts.
+MODERATOR (Round 1, Public Voting): Public voting begins.
+
+VOTE TALLY (Round 1, Day Voting) - Type: Public Kick-Out
+  Reese: 2 vote(s)
+--------------------
+VOTE OUTCOME (Round 1, Day Voting): Reese has been voted out with 2 vote(s).
+ELIMINATION (Round 1, Day Voting): Reese (Role: Observer) was eliminated. Reason: Voted out by players.
+MODERATOR (Round 1, Public Voting): Public voting ended.
+
+MODERATOR (Round 1, Day): Day 1 has dawned. The community has voted out Reese.
+EVENT (Round 1): Game End Check Status - Vampires: 2, Non-Vampires: 5, Alive: 7 - This info is not shared with players.
+MODERATOR (Round 1, Day End): Currently alive players: Jeff, Ellie, Lester, Devon, Sarah, Fusco, Morgan.
+EVENT (Round 2, Night): Phase Start - Night 2 begins.
+EVENT (Round 2, Night - Observer Action): Observer Action Skipped - Observer is not active or available.
+ACTION (R2, Night - Doctor Action): Lester protected: Ellie
+PRIVATE INFO for Lester (Round 2, Night - Doctor Action) (Protection Confirmation): You chose to protect Ellie in the night 2.
+EVENT (Round 2, Night - Vampire Voting): Vampire Voting Phase - Vampires are choosing a victim.
+ACTION (R2, Night - Vampire Voting): Devon voted to kill: Jeff
+ACTION (R2, Night - Vampire Voting): Sarah voted to kill: Jeff
+VOTE TALLY (Round 2, Night - Vampire Voting) - Type: Vampire Kill
+  Jeff: 2 vote(s)
+--------------------
+EVENT (Round 2, Night - Vampire Voting): Vampire Victim Chosen - Vampires collectively chose to kill Jeff.
+ELIMINATION (Round 2, Night): Jeff (Role: Musketeer) was eliminated. Reason: Killed by Vampires.
+MODERATOR (Round 2, Night): Night 2 has fallen. Vampires have killed Jeff tonight.
+EVENT (Round 2): Game End Check Status - Vampires: 2, Non-Vampires: 4, Alive: 6 - This info is not shared with players.
+MODERATOR (Round 2, Night End): Currently alive players: Ellie, Lester, Devon, Sarah, Fusco, Morgan.
+EVENT (Round 2, Day): Phase Start - Day 2 begins.
+MODERATOR (Round 2, Public Chat): Public chat begins.
+
+***Ellie: Okay, thanks for the clear thoughts, Ellie. It's good to have a starting point.
+
+The Doctor definitely played a crucial role last night. That means we have one active peasant protecting us. We should keep an eye on who the Doctor might be, but it's too early to jump on anyone.
+
+As for vampires, their first attempt failed. They might have chosen someone randomly, or perhaps someone they thought was less likely to be protected. It's hard to tell from here.
+
+I think building trust is essential. Let's focus on sharing observations about people's behavior and reasoning during this day. Maybe we can start by asking each other questions to see who provides detailed answers and who seems evasive.
+
+Also, let's be mindful of the Clown. We shouldn't vote someone out unless we have strong evidence they are a vampire. Otherwise, we might accidentally eliminate a peasant or the Clown.
+
+What are your initial thoughts, everyone? Let's try to keep the discussion open and collaborative.
+***Sarah: The fact that Jeff was killed last night is concerning. We need to be more cautious about who we trust. Since the vampires succeeded this time, they might be gaining confidence. Let's think: who had the opportunity to target Jeff? Maybe we should look at who was acting suspiciously during the day or night discussions. Also, we shouldn't forget that the Clown is still among us, trying to manipulate us into voting them out. Let's focus on logical deductions rather than rushing to conclusions. Does anyone have any insights or observations they'd like to share?
+***Devon: I'm really sorry to hear about Jeff. Losing someone is tough, and it means the vampires are getting bolder. We need to step up our game. I agree that we should look at who might have had a reason to target Jeff. Was there anyone who seemed to disagree with him or acted off during our last discussion? Also, since the Doctor wasn’t able to protect last night, we can’t rely on that safety net every time. Let’s share any hunches or observations, even if they seem small. I’m curious what everyone thinks about who the vampires might target next. Any ideas?
+***Morgan: It's really unsettling that Jeff was killed last night—he seemed like a solid player, and losing him puts us at a disadvantage. Since the vampires succeeded this time, it means they're actively hunting, and we need to piece together why they chose Jeff. He was quiet in our last discussion, only voting to pass, so maybe they saw him as an easy target or suspected he had a role. But it's also possible they're trying to create chaos by picking someone low-key.
+
+I agree with Ellie and Lester that we should look back at Day 1 for clues. Specifically, Reese was voted out with only two votes—from Sarah and Fusco—while the rest of us passed. Sarah and Fusco, can you explain why you voted for Reese? It felt rushed, and with no deaths that first night, it seemed premature to push for an elimination. Now that Jeff is gone, it makes me wonder if that vote was a vampire tactic to thin our numbers early.
+
+Also, Devon claimed to be the Doctor in Day 1, saying he protected Reese. But Reese was voted out anyway, so that protection didn't help in the end. Devon, since you're the claimed Doctor, did you protect anyone last night? And if not, why not? If you're genuine, sharing your protection choices (without revealing who, to avoid painting a target) might help us understand the vampires' patterns. But if you're lying about being the Doctor, that's a huge red flag.
+
+To everyone else: Let's not forget the Clown is lurking. We need concrete reasons before voting, or we risk handing them a win. What did you all notice about Jeff's interactions or anyone's behavior that felt off? Small details could be key here.
+***Lester: Since I'm the Doctor, I protected Reese on the first night, and then I protected Ellie last night. I didn't protect Jeff, unfortunately. I'm still trying to figure out who the vampires are and how to help the group. I'll keep protecting people to the best of my ability. Does anyone have any thoughts on who might be a vampire or any observations that could help us?
+***Fusco: I think we should consider voting out Ellie. She's been pretty quiet, and I'm not sure where she stands. What do others think?
+MODERATOR (Round 2, Public Chat): Public chat ended. Moving to voting phase.
+
+EVENT (Round 2, Day Voting): Public Voting Phase - Day 2 voting starts.
+MODERATOR (Round 2, Public Voting): Public voting begins.
+
+VOTE TALLY (Round 2, Day Voting) - Type: Public Kick-Out
+  Ellie: 3 vote(s)
+  Sarah: 1 vote(s)
+  Morgan: 1 vote(s)
+--------------------
+VOTE OUTCOME (Round 2, Day Voting): Ellie has been voted out with 3 vote(s).
+ELIMINATION (Round 2, Day Voting): Ellie (Role: Peasant) was eliminated. Reason: Voted out by players.
+MODERATOR (Round 2, Public Voting): Public voting ended.
+
+MODERATOR (Round 2, Day): Day 2 has dawned. The community has voted out Ellie.
+EVENT (Round 2): Game End Check Status - Vampires: 2, Non-Vampires: 3, Alive: 5 - This info is not shared with players.
+MODERATOR (Round 2, Day End): Currently alive players: Lester, Devon, Sarah, Fusco, Morgan.
+EVENT (Round 3, Night): Phase Start - Night 3 begins.
+EVENT (Round 3, Night - Observer Action): Observer Action Skipped - Observer is not active or available.
+ACTION (R3, Night - Doctor Action): Lester protected: Fusco
+PRIVATE INFO for Lester (Round 3, Night - Doctor Action) (Protection Confirmation): You chose to protect Fusco in the night 3.
+EVENT (Round 3, Night - Vampire Voting): Vampire Voting Phase - Vampires are choosing a victim.
+ACTION (R3, Night - Vampire Voting): Devon voted to kill: Lester
+ACTION (R3, Night - Vampire Voting): Sarah voted to kill: Morgan
+VOTE TALLY (Round 3, Night - Vampire Voting) - Type: Vampire Kill
+  Lester: 1 vote(s)
+  Morgan: 1 vote(s)
+--------------------
+EVENT (Round 3, Night - Vampire Voting): Vampire Vote Tie Broken - Vampire voting resulted in a tie. Morgan was randomly selected from the tied players (Lester, Morgan) to be killed.
+ELIMINATION (Round 3, Night): Morgan (Role: Peasant) was eliminated. Reason: Killed by Vampires.
+MODERATOR (Round 3, Night): Night 3 has fallen. Vampires have killed Morgan tonight.
+EVENT (Round 3): Game End Check Status - Vampires: 2, Non-Vampires: 2, Alive: 4 - This info is not shared with players.
+==================================================
+GAME END:
+  Winner(s): Vampires
+  Reason: Vampires equal or outnumber other players.
+  Final Alive Players & Roles:
+    - Lester: Doctor
+    - Devon: Vampire
+    - Sarah: Vampire
+    - Fusco: Clown
+==================================================
+--- Log ended at: 2025-06-03 18:58:44 ---
+MODERATOR (Round 3, Game End): Game over! Vampires wins!
+MODERATOR (Round 3, Game End): Game over! Vampires wins!

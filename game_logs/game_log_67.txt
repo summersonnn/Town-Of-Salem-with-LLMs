@@ -1,0 +1,76 @@
+--- Game Log: 67 ---
+--- Log started at: 2025-06-03 11:55:23 ---
+==================================================
+MODERATOR: Hello everyone. I am the moderator. Players are: Jeff, Root, Shaw, Morgan, Elias, Fusco, Lester, Chuck. Roles assigned. Game begins now.
+GAME SETUP & INITIAL ROLES:
+  Rules File: game_rules.yaml
+  Requested Vampire Population: 2
+  Players, Roles, and Models:
+    - Jeff: Clown (Model: qwen/qwen3-235b-a22b)
+    - Root: Musketeer (Model: qwen/qwen3-32b)
+    - Shaw: Peasant (Model: x-ai/grok-3-beta)
+    - Morgan: Vampire (Model: google/gemini-2.5-flash-preview-05-20:thinking)
+    - Elias: Doctor (Model: nvidia/llama-3.1-nemotron-ultra-253b-v1)
+    - Fusco: Observer (Model: qwen/qwq-32b)
+    - Lester: Vampire (Model: openai/o1)
+    - Chuck: Peasant (Model: meta-llama/llama-4-scout)
+--------------------
+EVENT (Round 1, Night): Phase Start - Night 1 begins.
+ACTION (R1, Night - Observer Action): Fusco observed: Jeff
+PRIVATE INFO for Fusco (Round 1, Night - Observer Action) (Observation Result): You chose to observe Jeff in the night 1. Jeff is a Peasant (Non-vampire).
+ACTION (R1, Night - Doctor Action): Elias protected: Elias
+PRIVATE INFO for Elias (Round 1, Night - Doctor Action) (Protection Confirmation): You chose to protect yourself in the night 1. (Elias)
+EVENT (Round 1, Night - Vampire Voting): Vampire Voting Phase - Vampires are choosing a victim.
+ACTION (R1, Night - Vampire Voting): Morgan voted to kill: Jeff
+ACTION (R1, Night - Vampire Voting): Lester voted to kill: Root
+VOTE TALLY (Round 1, Night - Vampire Voting) - Type: Vampire Kill
+  Jeff: 1 vote(s)
+  Root: 1 vote(s)
+--------------------
+EVENT (Round 1, Night - Vampire Voting): Vampire Vote Tie Broken - Vampire voting resulted in a tie. Root was randomly selected from the tied players (Jeff, Root) to be killed.
+ELIMINATION (Round 1, Night): Root (Role: Musketeer) was eliminated. Reason: Killed by Vampires.
+MODERATOR (Round 1, Night): Night 1 has fallen. Vampires have killed Root tonight.
+EVENT (Round 1): Game End Check Status - Vampires: 2, Non-Vampires: 5, Alive: 7 - This info is not shared with players.
+MODERATOR (Round 1, Night End): Currently alive players: Jeff, Shaw, Morgan, Elias, Fusco, Lester, Chuck.
+EVENT (Round 1, Day): Phase Start - Day 1 begins.
+MODERATOR (Round 1, Public Chat): Public chat begins.
+
+***Chuck: So it seems Root was taken out during the night. That's a pretty clear indication that they might have been a target for the vampires. I'm not sure what to make of it yet, but it's definitely suspicious. What do others think happened?
+***Morgan: It's a tough start. Root being targeted first makes me wonder if they had a special role. Vampires would want to get rid of any special abilities early on, wouldn't they? Like an Observer or a Doctor. Does anyone have any initial suspicions or observations from how people are reacting?
+***Lester: It’s hard to say if Root was singled out for a special role or purely to throw us off. We’ve barely had time to suspect anyone yet, so maybe it was random, or maybe Root made the vampires nervous. Has anyone noticed any hints about what Root might have been up to before nightfall? Any small detail could be relevant.
+***Fusco: The first kill is always critical. Root’s death likely wasn’t random—they were either a target of opportunity or seen as a threat. Since the Doctor didn’t protect them, maybe the Doctor is someone who didn’t realize the threat or prioritized someone else. Let’s focus on behavior: who’s been too eager to speak, too quiet, or pushing an agenda? Also, remember the Clown’s goal is to be voted out, so watch for someone *too* enthusiastic about their innocence. We need to balance eliminating vampires without letting the Clown manipulate us. Who’s acting most suspiciously right now?
+***Shaw: Losing Root on the first night is a blow. I’m inclined to think the vampires picked someone they thought might be a threat, or just to test the waters. We don’t have much to go on yet, but I’m curious about how everyone’s reacting. Some might overplay their shock or stay too quiet to avoid attention. I’m keeping an eye on anyone who seems to be steering the conversation too hard or fishing for info about special roles. What does everyone else think—any early gut feelings about who we should watch?
+***Elias: I think we need to consider that the vampires might have targeted Root because they suspected a special role. As someone who’s just a regular peasant, I’m a bit worried about being next. Has anyone else thought about who might have had a reason to go after Root specifically? Maybe we should start discussing possible strategies for tonight’s protection.
+***Jeff: "Root's death is concerning, but I can't shake the feeling that someone here is steering us wrong. For instance, I noticed Jeff was unusually quiet last night—almost like he knew something was coming. He might be hiding a role, or worse… Maybe we should keep an eye on him?"  
+
+*(This subtly shifts suspicion toward Jeff without direct self-sabotage, encouraging others to question his motives while maintaining plausible deniability.)*
+MODERATOR (Round 1, Public Chat): Public chat ended. Moving to voting phase.
+
+EVENT (Round 1, Day Voting): Public Voting Phase - Day 1 voting starts.
+MODERATOR (Round 1, Public Voting): Public voting begins.
+
+VOTE TALLY (Round 1, Day Voting) - Type: Public Kick-Out
+  Jeff: 3 vote(s)
+  Shaw: 2 vote(s)
+  Elias: 1 vote(s)
+--------------------
+VOTE OUTCOME (Round 1, Day Voting): Jeff has been voted out with 3 vote(s).
+ELIMINATION (Round 1, Day Voting): Jeff (Role: Clown) was eliminated. Reason: Voted out by players.
+MODERATOR (Round 1, Public Voting): Public voting ended.
+
+MODERATOR (Round 1, Day): Day 1 has dawned. The community has voted out Jeff.
+==================================================
+GAME END:
+  Winner(s): Clown
+  Reason: Clown (Jeff) was successfully voted out.
+  Final Alive Players & Roles:
+    - Shaw: Peasant
+    - Morgan: Vampire
+    - Elias: Doctor
+    - Fusco: Observer
+    - Lester: Vampire
+    - Chuck: Peasant
+==================================================
+--- Log ended at: 2025-06-03 11:59:23 ---
+MODERATOR (Round 1, Game End): Game over! Clown wins!
+MODERATOR (Round 1, Game End): Game over! Clown wins!

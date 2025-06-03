@@ -1,0 +1,314 @@
+--- Game Log: 87 ---
+--- Log started at: 2025-06-03 18:58:44 ---
+==================================================
+MODERATOR: Hello everyone. I am the moderator. Players are: Devon, Morgan, Sarah, Jeff, Greer, Reese, Carter, Casey. Roles assigned. Game begins now.
+GAME SETUP & INITIAL ROLES:
+  Rules File: game_rules.yaml
+  Requested Vampire Population: 2
+  Players, Roles, and Models:
+    - Devon: Vampire (Model: qwen/qwen3-32b)
+    - Morgan: Clown (Model: qwen/qwen3-235b-a22b)
+    - Sarah: Peasant (Model: google/gemini-2.5-flash-preview-05-20:thinking)
+    - Jeff: Observer (Model: x-ai/grok-3-beta)
+    - Greer: Musketeer (Model: deepseek/deepseek-r1-0528-qwen3-8b)
+    - Reese: Peasant (Model: deepseek/deepseek-r1-0528)
+    - Carter: Vampire (Model: nvidia/llama-3.1-nemotron-ultra-253b-v1)
+    - Casey: Doctor (Model: qwen/qwq-32b)
+--------------------
+EVENT (Round 1, Night): Phase Start - Night 1 begins.
+ACTION (R1, Night - Observer Action): Jeff observed: Devon
+PRIVATE INFO for Jeff (Round 1, Night - Observer Action) (Observation Result): You chose to observe Devon in the night 1. Devon is a Vampire.
+ACTION (R1, Night - Doctor Action): Casey protected: Devon
+PRIVATE INFO for Casey (Round 1, Night - Doctor Action) (Protection Confirmation): You chose to protect Devon in the night 1.
+EVENT (Round 1, Night - Vampire Voting): Vampire Voting Phase - Vampires are choosing a victim.
+ACTION (R1, Night - Vampire Voting): Devon voted to kill: Morgan
+ACTION (R1, Night - Vampire Voting): Carter voted to kill: Morgan
+VOTE TALLY (Round 1, Night - Vampire Voting) - Type: Vampire Kill
+  Morgan: 2 vote(s)
+--------------------
+EVENT (Round 1, Night - Vampire Voting): Vampire Victim Chosen - Vampires collectively chose to kill Morgan.
+ELIMINATION (Round 1, Night): Morgan (Role: Clown) was eliminated. Reason: Killed by Vampires.
+MODERATOR (Round 1, Night): Night 1 has fallen. Vampires have killed Morgan tonight.
+EVENT (Round 1): Game End Check Status - Vampires: 2, Non-Vampires: 5, Alive: 7 - This info is not shared with players.
+MODERATOR (Round 1, Night End): Currently alive players: Devon, Sarah, Jeff, Greer, Reese, Carter, Casey.
+EVENT (Round 1, Day): Phase Start - Day 1 begins.
+MODERATOR (Round 1, Public Chat): Public chat begins.
+
+***Sarah: This is terrible news about Morgan. It's always hard when someone is taken out so early.
+
+Okay, everyone, we need to start thinking. Who do we think could have done this? Does anyone have any initial thoughts or suspicions based on anything? We need to work together to figure this out.
+***Reese: This is awful—Morgan gone on the first night. We need to be careful and share anything that feels off. Did anyone notice Morgan acting strangely yesterday or have any theories? I don't have special information, but we should all speak up if something seemed suspicious. Let's not rush accusations yet, though.
+***Devon: Morgan’s death is shocking. We need to stay calm and figure out who could’ve done this. Since the doctor could’ve tried to protect them but failed, maybe we should keep an eye on who might be the doctor. Also, the observer might have information—they can check identities each night. If anyone has leads, now’s the time to share. Let’s not jump to conclusions, but we should consider all possibilities.
+***Casey: The sudden loss of Morgan is unsettling, but we can’t afford to panic. Let’s start by recalling who Morgan was interacting with earlier—maybe the vampires targeted them for a reason. The Doctor is out there doing their job, but we can’t rely solely on that. Meanwhile, the Clown’s presence means someone might be trying to mislead us by acting overly cooperative. Let’s share concrete observations, not just suspicions. Who here seemed unusually calm about Morgan’s death?
+***Jeff: Morgan's death is a tough blow, and we need to be strategic about this. I’ve been thinking about everyone’s behavior so far, and I’m wondering if anyone noticed anything odd last night or before. I don’t want to point fingers without reason, but I’m keeping my eyes open. If anyone has any solid leads or observations, let’s hear them. We can’t afford to lose more people.
+***Carter: I think we should consider the possibility that the Doctor tried to protect Morgan but failed. That might mean the Doctor is still out there, and we need to figure out who they are. Also, the Observer might have some information from last night. Let’s see if anyone comes forward with clues. I’m not sure who to suspect yet, but we need to be careful not to let the Vampires strike again.
+***Greer: Okay, everyone. This is... unexpected. Losing Morgan so early in the game is a huge blow. We need to be extra careful now.
+
+Morgan's death definitely points towards the vampires. But who among us could they have targeted? Let's think about who Morgan might have been interacting with, or perhaps who seemed like an easy target. I don't have any specific suspicions yet, but I'm definitely keeping an eye out for any patterns or suspicious behavior.
+
+We need to work together and be careful with our votes. Let's try to figure out who the vampires are without making rash decisions. Does anyone else have any initial thoughts or observations about Morgan's situation?
+MODERATOR (Round 1, Public Chat): Public chat ended. Moving to voting phase.
+
+EVENT (Round 1, Day Voting): Public Voting Phase - Day 1 voting starts.
+MODERATOR (Round 1, Public Voting): Public voting begins.
+
+VOTE TALLY (Round 1, Day Voting) - Type: Public Kick-Out
+  Devon: 2 vote(s)
+  Sarah: 1 vote(s)
+--------------------
+VOTE OUTCOME (Round 1, Day Voting): Devon has been voted out with 2 vote(s).
+ELIMINATION (Round 1, Day Voting): Devon (Role: Vampire) was eliminated. Reason: Voted out by players.
+MODERATOR (Round 1, Public Voting): Public voting ended.
+
+MODERATOR (Round 1, Day): Day 1 has dawned. The community has voted out Devon.
+EVENT (Round 1): Game End Check Status - Vampires: 1, Non-Vampires: 5, Alive: 6 - This info is not shared with players.
+MODERATOR (Round 1, Day End): Currently alive players: Sarah, Jeff, Greer, Reese, Carter, Casey.
+EVENT (Round 2, Night): Phase Start - Night 2 begins.
+ACTION (R2, Night - Observer Action): Jeff observed: Sarah
+PRIVATE INFO for Jeff (Round 2, Night - Observer Action) (Observation Result): You chose to observe Sarah in the night 2. Sarah is a Peasant (Non-vampire).
+ACTION (R2, Night - Doctor Action): Casey protected: Sarah
+PRIVATE INFO for Casey (Round 2, Night - Doctor Action) (Protection Confirmation): You chose to protect Sarah in the night 2.
+EVENT (Round 2, Night - Vampire Voting): Vampire Voting Phase - Vampires are choosing a victim.
+ACTION (R2, Night - Vampire Voting): Carter voted to kill: Jeff
+VOTE TALLY (Round 2, Night - Vampire Voting) - Type: Vampire Kill
+  Jeff: 1 vote(s)
+--------------------
+EVENT (Round 2, Night - Vampire Voting): Vampire Victim Chosen - Vampires collectively chose to kill Jeff.
+ELIMINATION (Round 2, Night): Jeff (Role: Observer) was eliminated. Reason: Killed by Vampires.
+MODERATOR (Round 2, Night): Night 2 has fallen. Vampires have killed Jeff tonight.
+EVENT (Round 2): Game End Check Status - Vampires: 1, Non-Vampires: 4, Alive: 5 - This info is not shared with players.
+MODERATOR (Round 2, Night End): Currently alive players: Sarah, Greer, Reese, Carter, Casey.
+EVENT (Round 2, Day): Phase Start - Day 2 begins.
+MODERATOR (Round 2, Public Chat): Public chat begins.
+
+***Reese: This is devastating... Jeff gone too? We're dropping like flies. Three players dead in two nights, and we still have no clear leads. 
+
+First Morgan, then Devon voted out, and now Jeff killed. We need to seriously regroup. 
+
+Some thoughts:
+- The vampires are clearly active and coordinated. They took out Jeff, who was vocal yesterday but not overly aggressive. That might mean they're targeting players who could become leaders.
+- About Devon's vote-out: two people pushed hard for Devon while most passed. That feels coordinated too. Vampires might have been in that voting bloc to eliminate a potential threat.
+- With only five of us left (Sarah, Greer, me, Carter, Casey), we can't afford a misvote. The clown is definitely among us, trying to bait us into voting them out. Watch for anyone acting overly suspicious or eager to accuse.
+
+Observer or Doctor—if you have any insights from the nights, now's the time to hint at it. We need concrete clues before the vampires thin us out completely. 
+
+What does everyone else think? Any patterns or gut feelings?
+***Carter: I think we need to focus on the fact that two strong players are gone. Morgan and Jeff were both active, and their deaths might indicate the vampires are targeting vocal members. 
+
+As for Devon being voted out, I was one of the ones who voted for them. I had a hunch, but clearly, that didn't help. Now, with only five of us left, we can't make mistakes. 
+
+I'm watching everyone closely. If I were to guess, maybe Sarah or Greer could be vampires? They've been quieter, but that's not necessarily a sign. 
+
+What do others think? Should we try to get more information from the Observer or Doctor? Or maybe someone has a lead they can share without revealing their role? 
+
+We need to act fast before the next night.
+***Sarah: This is truly grim. Losing Jeff after Morgan, and Devon being voted out... it feels like we're losing ground fast. Reese, I understand why you might look at Greer and me for being quieter. It's true I haven't been as vocal as Morgan or Jeff, but I've been trying to observe and process everything, especially after the first night's shock and then Devon's vote-out. It's hard to speak up when you're trying to make sense of who's who, and I'm trying to avoid making rash accusations without solid reasoning.
+
+You're right, Reese, Morgan and Jeff were both active players. That's a very concerning pattern. It suggests the vampires are targeting those who might lead or gather information, or perhaps those who seem like a threat. This makes it even more crucial for anyone with special abilities to find a way to share what they know, even subtly. Observer, Doctor, if you have *any* insights from the nights, please, we need them. We can't afford another misstep.
+
+And let's not forget the Clown. Someone among us wants to be voted out. We need to be wary of anyone trying to manipulate the vote in a way that seems too obvious or too self-sacrificing. That's another layer of deception we have to navigate.
+
+What are others thinking? Carter, Casey? We need to hear from everyone.
+***Casey: The pattern here is too deliberate. Morgan, then Jeff—both were vocal, but Devon was voted out by a small group. That’s not a coincidence. The vampires are testing us, seeing who we trust. I’ve been watching and thinking: who stood to gain from Devon’s elimination? The push to vote him out was sudden. Maybe the ones advocating hardest for that vote were trying to remove a genuine threat. 
+
+But let’s not repeat that mistake. If the vampires are targeting leaders, maybe we need to protect the quieter ones instead? Or is someone *too* quiet? The Clown’s still out there too—someone might be playing the martyr. 
+
+Sarah, you were protected last night—did you notice anything unusual before Jeff’s death? And Observer, if you’re here, we need your input. Without concrete clues, we’ll just keep feeding the vampires. 
+
+We’re down to five. Next vote has to be smarter. Let’s not let panic drive us.
+***Greer: I'm so sorry about Morgan and Jeff. This is a tough spot, but we need to stay focused. Let's take a deep breath and think this through carefully.
+
+First, Morgan was killed on night 1, Devon was voted out on day 1, and Jeff was killed on night 2. That's three eliminations in just two days. We're down to five players, and the vampires are clearly active.
+
+I've been thinking about this, and here's what I'm noticing:
+
+1.  **Vampire Targeting:** They seem to be targeting players who are more visible or vocal. Morgan was a strong player, Devon was targeted in the vote, and Jeff was also vocal. This suggests they're trying to eliminate potential leaders or information gatherers.
+2.  **Devon's Elimination:** The vote for Devon was interesting. Only two people pushed for it, while the rest passed. This feels coordinated, like the vampires were trying to remove a potential threat or someone who might have figured something out.
+3.  **Clown Factor:** The clown is definitely trying to manipulate us. They might be playing dead or acting overly concerned to bait us into voting them out. We need to be careful not to fall for that.
+4.  **Special Roles:** The doctor or observer might have information. If the doctor protected someone successfully, or the observer got a "yes" or "no" from the moderator, they might be able to subtly hint at it without breaking rules. But we have to be careful not to push them too hard.
+
+As a Musketeer, I'm especially cautious. If I were to be eliminated by vote, I'd have the ability to kill one player. That means I need to be careful who I trust. But right now, I don't have enough information to suspect anyone specifically.
+
+What about you, Reese? You were one of the ones who voted for Devon. Did you notice anything unusual about that vote? Carter, Casey, Sarah - any thoughts on who might be the vampires?
+
+We need to be careful with our votes next round. We can't afford to misvote and eliminate one of our own. Let's try to gather more information before we act. Observer or Doctor, if you have any insights from the nights, please share them in a way that doesn't reveal your role. We need to figure out who we're playing against.
+MODERATOR (Round 2, Public Chat): Public chat ended. Moving to voting phase.
+
+EVENT (Round 2, Day Voting): Public Voting Phase - Day 2 voting starts.
+MODERATOR (Round 2, Public Voting): Public voting begins.
+
+VOTE TALLY (Round 2, Day Voting) - Type: Public Kick-Out
+  Sarah: 1 vote(s)
+  Greer: 1 vote(s)
+  Carter: 1 vote(s)
+--------------------
+VOTE OUTCOME (Round 2, Day Voting): The vote was tied. No one has been voted out.
+MODERATOR (Round 2, Day): Day 2 has dawned. The vote was tied; no one was voted out.
+EVENT (Round 2): Game End Check Status - Vampires: 1, Non-Vampires: 4, Alive: 5 - This info is not shared with players.
+MODERATOR (Round 2, Day End): Currently alive players: Sarah, Greer, Reese, Carter, Casey.
+EVENT (Round 3, Night): Phase Start - Night 3 begins.
+EVENT (Round 3, Night - Observer Action): Observer Action Skipped - Observer is not active or available.
+ACTION (R3, Night - Doctor Action): Casey protected: Sarah
+PRIVATE INFO for Casey (Round 3, Night - Doctor Action) (Protection Confirmation): You chose to protect Sarah in the night 3.
+EVENT (Round 3, Night - Vampire Voting): Vampire Voting Phase - Vampires are choosing a victim.
+ACTION (R3, Night - Vampire Voting): Carter voted to kill: Sarah
+VOTE TALLY (Round 3, Night - Vampire Voting) - Type: Vampire Kill
+  Sarah: 1 vote(s)
+--------------------
+EVENT (Round 3, Night - Vampire Voting): Vampire Victim Chosen - Vampires collectively chose to kill Sarah.
+EVENT (Round 3, Night): Protection Successful - Vampires tried to kill Sarah, but they were protected by the doctor.
+MODERATOR (Round 3, Night): Night 3 has fallen. No one was killed tonight.
+EVENT (Round 3): Game End Check Status - Vampires: 1, Non-Vampires: 4, Alive: 5 - This info is not shared with players.
+MODERATOR (Round 3, Night End): Currently alive players: Sarah, Greer, Reese, Carter, Casey.
+EVENT (Round 3, Day): Phase Start - Day 3 begins.
+MODERATOR (Round 3, Public Chat): Public chat begins.
+
+***Casey: Alright, let’s cut through the noise. The vampires are methodically targeting leaders—Morgan, Jeff, and now Devon’s gone. We’re down to five, and we’re still circling the same suspects. Here’s what I’m seeing:  
+
+1. **The Pattern**: The vampires took Morgan (vocal) and Jeff (also vocal), then Devon (voted out). They’re silencing leaders. If Sarah and I are being protected (no one’s died the last two nights), maybe that’s a clue. The vampires might be trying to keep Sarah alive to manipulate us.  
+
+2. **Carter’s Push for Sarah**: Why target her now? If Sarah were a vampire, wouldn’t they want to avoid suspicion? Carter’s sudden focus on her feels… *too* aggressive. Maybe they’re trying to misdirect us.  
+
+3. **The Quiet Ones**: Greer and Reese have been oddly passive. The observer or doctor might’ve seen something. If the observer checked someone, let’s hear it. And the musketeer—if you’re here, we need to protect you.  
+
+**Proposal**: Let’s not vote today. We need more info. If the observer has a “yes/no” from last night, now’s the time to hint. If not, maybe we should test Carter’s motives. But let’s not split votes again. The vampires win if we stay stuck here.  
+
+Thoughts? Who’s holding back info?
+***Reese: Okay, everyone, let's take a deep breath. No one dying last night is a huge relief—it means the doctor is still with us and made a successful play. That's our first real win! But it also tells us something important: the vampires targeted someone who isn't a vampire (since they wouldn't attack their own), and the doctor protected them. That person is confirmed innocent for now. 
+
+Now, we need to use this. Vampires are clearly going after vocal players—Morgan and Jeff were both active and gone. Last night's target was likely someone who stood out in Day 2. Who was in the spotlight? Sarah, Greer, and Carter all had votes against them in the tied vote. One of them was probably the target the doctor saved. 
+
+But here's the problem: if that person reveals themselves, they become the next vampire target. And if the doctor reveals, they're in danger too. We can't afford to lose either. So I'm not asking for a full reveal—just a subtle nudge. Doctor or protected player, if you can hint at anything without risking too much, now's the time. For example, maybe say something like, "I feel lucky to be here today," or "Last night was close." Anything to help us narrow things down.
+
+Observer, you're our other key piece. If you checked someone last night (or earlier), we need your insights. A simple "I have a strong read on Player X" or "I'm suspicious of Player Y" could steer us. Don't name your role—just share the vibe.
+
+As for the clown... they're loving this chaos. Watch for anyone acting overly eager to accuse or be accused. Carter, your self-vote attempt earlier was messy—was that a slip or a clown move? And Greer, you tried to self-vote too. Both invalid, but it feels like either panic or performance art. 
+
+We're down to five. If we misvote today, the vampires only need one more kill to win. So let's not repeat yesterday's tie. I'm leaning toward pooling our observations: 
+- Sarah, you've been observant but quiet—any gut feelings? 
+- Carter, you jumped on Sarah hard. Why? 
+- Greer, you've been under the radar—what's your take? 
+- Casey, you passed last vote. Any suspicions now?
+
+I'll start: I think the vampires are playing it safe by blending in. Carter's aggression feels off to me, like he's pushing us toward a misdirection. But I'm open to other theories. Let's build a case together—no votes until we talk this through. What do you all see?
+***Sarah: Reese, that was an incredibly insightful summary, and I agree with so much of what you've said. The fact that no one died last night is indeed a huge win for us, and it confirms the Doctor is active and effective. Your deduction that the target was likely one of the three who received votes (Sarah, Greer, Carter) is very logical, and it means that person is confirmed innocent for now. I completely understand why that person, or the Doctor, can't reveal themselves fully, but any subtle hint would be invaluable.
+
+You're right, I have been more on the quiet side, trying to observe and process everything. It's been a lot to take in, especially with the rapid losses of Morgan and Jeff, and then Devon being voted out. I've been trying to avoid making rash accusations without solid reasoning, as I think that's how we end up misvoting.
+
+Regarding Carter's aggressive push against me, I'm still trying to understand the motivation behind it. Carter, why did you jump on me so hard? Reese is right, it felt very sudden and almost like a misdirection. It's something I'm definitely keeping an eye on.
+
+And speaking of observations, the self-voting attempts by both Carter and Greer are also something to consider. Was that panic, or perhaps a clumsy attempt by the Clown to draw attention? It's hard to tell, but it adds another layer of complexity to our situation.
+
+We're down to five, and every move counts. We absolutely cannot afford another misvote. Greer, Casey, what are your thoughts on all of this? We need everyone contributing their observations and suspicions. Let's try to build a stronger case before we even think about voting.
+***Greer: Alright, let’s cut through the noise. The vampires are methodically targeting leaders—Morgan, Jeff, and now Devon’s gone. We’re down to five, and we’re still circling the same suspects. Here’s what I’m seeing:  
+
+1. **The Pattern**: The vampires took Morgan (vocal) and Jeff (also vocal), then Devon (voted out). They’re silencing leaders. If Sarah and I are being protected (no one’s died the last two nights), maybe that’s a clue. The vampires might be trying to keep Sarah alive to manipulate us.  
+
+2. **Carter’s Push for Sarah**: Why target her now? If Sarah were a vampire, wouldn’t they want to avoid suspicion? Carter’s sudden focus on her feels… *too* aggressive. Maybe they’re trying to misdirect us.  
+
+3. **The Quiet Ones**: Greer and Reese have been oddly passive. The observer or doctor might’ve seen something. If the observer checked someone, let’s hear it. And the musketeer—if you’re here, we need to protect you.  
+
+**Proposal**: Let’s not vote today. We need more info. If the observer has a “yes/no” from last night, now’s the time to hint. If not, maybe we should test Carter’s motives. But let’s not split votes again. The vampires win if we stay stuck here.  
+
+Thoughts? Who’s holding back info?
+***Carter: I vote for Sarah
+MODERATOR (Round 3, Public Chat): Public chat ended. Moving to voting phase.
+
+EVENT (Round 3, Day Voting): Public Voting Phase - Day 3 voting starts.
+MODERATOR (Round 3, Public Voting): Public voting begins.
+
+VOTE TALLY (Round 3, Day Voting) - Type: Public Kick-Out
+  Sarah: 2 vote(s)
+  Carter: 2 vote(s)
+--------------------
+VOTE OUTCOME (Round 3, Day Voting): The vote was tied. No one has been voted out.
+MODERATOR (Round 3, Day): Day 3 has dawned. The vote was tied; no one was voted out.
+EVENT (Round 3): Game End Check Status - Vampires: 1, Non-Vampires: 4, Alive: 5 - This info is not shared with players.
+MODERATOR (Round 3, Day End): Currently alive players: Sarah, Greer, Reese, Carter, Casey.
+EVENT (Round 4, Night): Phase Start - Night 4 begins.
+EVENT (Round 4, Night - Observer Action): Observer Action Skipped - Observer is not active or available.
+ACTION (R4, Night - Doctor Action): Casey protected: Sarah
+PRIVATE INFO for Casey (Round 4, Night - Doctor Action) (Protection Confirmation): You chose to protect Sarah in the night 4.
+EVENT (Round 4, Night - Vampire Voting): Vampire Voting Phase - Vampires are choosing a victim.
+ACTION (R4, Night - Vampire Voting): Carter voted to kill: Sarah
+VOTE TALLY (Round 4, Night - Vampire Voting) - Type: Vampire Kill
+  Sarah: 1 vote(s)
+--------------------
+EVENT (Round 4, Night - Vampire Voting): Vampire Victim Chosen - Vampires collectively chose to kill Sarah.
+EVENT (Round 4, Night): Protection Successful - Vampires tried to kill Sarah, but they were protected by the doctor.
+MODERATOR (Round 4, Night): Night 4 has fallen. No one was killed tonight.
+EVENT (Round 4): Game End Check Status - Vampires: 1, Non-Vampires: 4, Alive: 5 - This info is not shared with players.
+MODERATOR (Round 4, Night End): Currently alive players: Sarah, Greer, Reese, Carter, Casey.
+EVENT (Round 4, Day): Phase Start - Day 4 begins.
+MODERATOR (Round 4, Public Chat): Public chat begins.
+
+***Reese: This deadlock is killing us—literally. Two nights with no kills thanks to the doctor's heroics, but we're stuck in a loop of ties and indecision. We have to break it today, or the vampires will pick us off one by one. Here's where my head's at:
+
+- **Carter's relentless push against Sarah feels orchestrated.** He's been hyper-aggressive since Day 2, trying to force a vote on her with little substance. If Sarah were a vampire, why would the vampires target her faction so openly? It reeks of misdirection. Vampires thrive on chaos, and Carter's stirring it.
+  
+- **The doctor's protections are our lifeline.** No kills for two nights means the doctor saved someone who isn't a vampire. That person is confirmed innocent—and they're one of us five. If it's Sarah, Carter's accusations look even worse. If it's not, we need that person (or the doctor) to hint *now*. A simple "I trust Sarah" or "I'm wary of Carter" could shift everything. Don't reveal your role—just nudge us.
+
+- **Greer and Casey, you're flying under the radar.** Greer, your self-vote attempt earlier screamed clown desperation—invalid, but telling. Casey, you've passed votes consistently, which feels safe but unhelpful. We need your thoughts. Who do you suspect? If you're holding back info as the observer or another role, speak up subtly.
+
+- **The clown is loving this.** They want us to vote recklessly. Carter's aggression or Greer's self-target could be clown antics, but we can't afford to indulge them. If we vote out the clown, game over—they win alone. So let's focus on vampire tells: pushing divisions, avoiding real discussion, or fixating on one player.
+
+I'm leaning toward voting Carter today. His pattern matches vampire playbook: eliminate strong voices (like Morgan and Jeff) and now manufacture a scapegoat. If I'm wrong, and he's the musketeer, he can take someone down with him—but that's a risk we might need to take. Sarah, if you're innocent, now's the time to rally. Observer, if you checked Carter or Sarah, give us a sign.
+
+What do you all think? Let's unite behind one suspect. No more ties.
+***Sarah: Reese, your summary is spot on. The fact that the Doctor has saved someone two nights in a row is our biggest lead, and it means someone innocent was targeted. That's a huge relief, but it also means the vampires are still very active and trying to take out key players.
+
+I completely agree with your assessment of Carter's behavior. His relentless focus on me, especially after the tied votes, feels incredibly suspicious and, as you said, almost orchestrated. It doesn't feel like a genuine attempt to find a vampire; it feels like a misdirection. If he's a vampire, he's trying to get rid of a peasant.
+
+Greer, Casey, we desperately need your input. Your silence is making it very difficult to build a consensus. We can't afford another tied vote, and we certainly can't afford to misvote. Who do you suspect? What are your observations?
+
+I think Reese has laid out a very compelling case. We need to make a decisive move today. We can't let the vampires continue to pick us off while we're stuck in indecision.
+***Casey: Sarah, I’m with you—this is a trap. The vampires want us fixated on you because you’re a leader. Carter’s all-in on you, but why? If he’s a vampire, he’d want to eliminate you, sure, but his *method* is too aggressive. He’s been pushing this since Day 1. Meanwhile, the Doctor’s protections have kept you alive twice. That’s a clue. *Someone* is safe. Let’s not let the vampires win by splitting us further.  
+
+Greer, you’ve been eerily quiet since the start. Casey, you’ve passed every vote—what have you noticed? And Carter, if you’re so sure about Sarah, why not back it up with proof? We’re down to five. If we misvote now, the vampires only need one more kill to win. Let’s not repeat yesterday’s chaos.  
+
+**Proposal**: Let’s table Sarah for a moment. Who else has been *too* consistent? The vampires need to vote together—they’ll have matching stories. If two of us are vampires, they’ll align. Let’s compare notes:  
+- Who was with Morgan the night she died?  
+- Who’s been avoiding direct answers?  
+- Why is the Clown still here?  
+
+We need facts, not just accusations. Talk first, vote last.
+***Carter: I vote for Sarah
+***Greer: Alright, let's cut through the noise. The vampires are methodically targeting leaders—Morgan, Jeff, and now Devon’s gone. We’re down to five, and we’re still circling the same suspects. Here’s what I’m seeing:  
+
+1. **The Pattern**: The vampires took Morgan (vocal) and Jeff (also vocal), then Devon (voted out). They’re silencing leaders. If Sarah and I are being protected (no one’s died the last two nights), maybe that’s a clue. The vampires might be trying to keep Sarah alive to manipulate us.  
+
+2. **Carter’s Push for Sarah**: Why target her now? If Sarah were a vampire, wouldn’t they want to avoid suspicion? Carter’s sudden focus on her feels… *too* aggressive. Maybe they’re trying to misdirect us.  
+
+3. **The Quiet Ones**: Greer and Reese have been oddly passive. The observer or doctor might’ve seen something. If the observer checked someone, let’s hear it. And the musketeer—if you’re here, we need to protect you.  
+
+**Proposal**: Let’s not vote today. We need more info. If the observer has a “yes/no” from last night, now’s the time to hint. If not, maybe we should test Carter’s motives. But let’s not split votes again. The vampires win if we stay stuck here.  
+
+Thoughts? Who’s holding back info?
+MODERATOR (Round 4, Public Chat): Public chat ended. Moving to voting phase.
+
+EVENT (Round 4, Day Voting): Public Voting Phase - Day 4 voting starts.
+MODERATOR (Round 4, Public Voting): Public voting begins.
+
+VOTE TALLY (Round 4, Day Voting) - Type: Public Kick-Out
+  Sarah: 1 vote(s)
+  Carter: 3 vote(s)
+--------------------
+VOTE OUTCOME (Round 4, Day Voting): Carter has been voted out with 3 vote(s).
+ELIMINATION (Round 4, Day Voting): Carter (Role: Vampire) was eliminated. Reason: Voted out by players.
+MODERATOR (Round 4, Public Voting): Public voting ended.
+
+MODERATOR (Round 4, Day): Day 4 has dawned. The community has voted out Carter.
+EVENT (Round 4): Game End Check Status - Vampires: 0, Non-Vampires: 4, Alive: 4 - This info is not shared with players.
+==================================================
+GAME END:
+  Winner(s): Peasants
+  Reason: All vampires have been eliminated.
+  Final Alive Players & Roles:
+    - Sarah: Peasant
+    - Greer: Musketeer
+    - Reese: Peasant
+    - Casey: Doctor
+==================================================
+--- Log ended at: 2025-06-03 19:17:27 ---
+MODERATOR (Round 4, Game End): Game over! Peasants wins!
+MODERATOR (Round 4, Game End): Game over! Peasants wins!

@@ -1,0 +1,86 @@
+--- Game Log: 80 ---
+--- Log started at: 2025-06-03 17:33:15 ---
+==================================================
+MODERATOR: Hello everyone. I am the moderator. Players are: Chuck, Ellie, Finch, Carter, Devon, Lester, Elias, Reese. Roles assigned. Game begins now.
+GAME SETUP & INITIAL ROLES:
+  Rules File: game_rules.yaml
+  Requested Vampire Population: 2
+  Players, Roles, and Models:
+    - Chuck: Musketeer (Model: openai/gpt-4.1)
+    - Ellie: Doctor (Model: meta-llama/llama-4-scout)
+    - Finch: Peasant (Model: qwen/qwen3-32b)
+    - Carter: Peasant (Model: deepseek/deepseek-r1-0528)
+    - Devon: Vampire (Model: qwen/qwen3-235b-a22b)
+    - Lester: Clown (Model: google/gemini-2.5-flash-preview-05-20:thinking)
+    - Elias: Vampire (Model: nvidia/llama-3.1-nemotron-ultra-253b-v1)
+    - Reese: Observer (Model: meta-llama/llama-4-maverick)
+--------------------
+EVENT (Round 1, Night): Phase Start - Night 1 begins.
+ACTION (R1, Night - Observer Action): Reese observed: Chuck
+PRIVATE INFO for Reese (Round 1, Night - Observer Action) (Observation Result): You chose to observe Chuck in the night 1. Chuck is a Peasant (Non-vampire).
+ACTION (R1, Night - Doctor Action): Ellie protected: Chuck
+PRIVATE INFO for Ellie (Round 1, Night - Doctor Action) (Protection Confirmation): You chose to protect Chuck in the night 1.
+EVENT (Round 1, Night - Vampire Voting): Vampire Voting Phase - Vampires are choosing a victim.
+ACTION (R1, Night - Vampire Voting): Devon voted to kill: Reese
+ACTION (R1, Night - Vampire Voting): Elias voted to kill: Chuck
+VOTE TALLY (Round 1, Night - Vampire Voting) - Type: Vampire Kill
+  Chuck: 1 vote(s)
+  Reese: 1 vote(s)
+--------------------
+EVENT (Round 1, Night - Vampire Voting): Vampire Vote Tie Broken - Vampire voting resulted in a tie. Reese was randomly selected from the tied players (Chuck, Reese) to be killed.
+ELIMINATION (Round 1, Night): Reese (Role: Observer) was eliminated. Reason: Killed by Vampires.
+MODERATOR (Round 1, Night): Night 1 has fallen. Vampires have killed Reese tonight.
+EVENT (Round 1): Game End Check Status - Vampires: 2, Non-Vampires: 5, Alive: 7 - This info is not shared with players.
+MODERATOR (Round 1, Night End): Currently alive players: Chuck, Ellie, Finch, Carter, Devon, Lester, Elias.
+EVENT (Round 1, Day): Phase Start - Day 1 begins.
+MODERATOR (Round 1, Public Chat): Public chat begins.
+
+***Finch: Reese was killed last night. We need to figure out who the vampires are before they strike again. Does anyone have any information or observations they can share? Let's discuss who might be suspicious and why.
+***Lester: Reese is gone. That's a shame. I'm not sure what to make of it yet, honestly. It's hard to know if it was a strategic kill or just random. I'm just trying to listen to what everyone else has to say. Does anyone have a strong feeling about anything?
+***Ellie: I'm glad I protected Chuck last night. Hopefully, that was the right call. Does anyone have any theories about who might be a vampire?
+***Elias: I think we should consider voting out someone who hasn't been very active in the discussion. Maybe Lester? He hasn't said much so far. What do you all think?
+***Carter: Reese's death is troubling, but it's too early to jump to conclusions. Ellie, you claim you're the Doctor and protected Chuck—why did you choose him specifically? That seems like an odd first-night pick with no information. 
+
+Finch, pushing to vote out Lester for being quiet feels premature. Lester, care to share your thoughts? Inactivity could mean anything—nervousness, strategy, or just processing. 
+
+Everyone, let's slow down. We need more discussion before voting blindly. Vampires benefit from rushed decisions. I suggest we:
+1. Share any subtle observations from yesterday
+2. Discuss who might be avoiding certain topics
+3. Consider why Reese was targeted—was it random or strategic?
+
+No votes yet. More voices needed.
+***Devon: The Doctor’s claim raises questions—protecting Chuck without prior discussion seems risky. If Ellie is genuine, that means Chuck survived last night’s attack, but why would vampires target Reese randomly? Maybe we should ask the Observer if they checked anyone last night? Also, Lester’s silence could be strategic, but inactivity often hides something. Let’s not rush the vote—dig deeper first. Who here thinks they’ve noticed something off?
+***Chuck: Ellie, that's a bold claim. If you really are the Doctor, you just made yourself a target for the vampires tonight. Why did you pick me to protect? I didn't do anything suspicious (at least, I don't think I did). 
+
+Elias, voting out someone for being quiet on the first day is risky. Sometimes people just need a minute to get their bearings. 
+
+I agree with Carter and Devon—let's not rush. If anyone has real info, now's the time to share. Otherwise, we risk helping the vampires by making a random vote.
+MODERATOR (Round 1, Public Chat): Public chat ended. Moving to voting phase.
+
+EVENT (Round 1, Day Voting): Public Voting Phase - Day 1 voting starts.
+MODERATOR (Round 1, Public Voting): Public voting begins.
+
+VOTE TALLY (Round 1, Day Voting) - Type: Public Kick-Out
+  Ellie: 1 vote(s)
+  Lester: 3 vote(s)
+--------------------
+VOTE OUTCOME (Round 1, Day Voting): Lester has been voted out with 3 vote(s).
+ELIMINATION (Round 1, Day Voting): Lester (Role: Clown) was eliminated. Reason: Voted out by players.
+MODERATOR (Round 1, Public Voting): Public voting ended.
+
+MODERATOR (Round 1, Day): Day 1 has dawned. The community has voted out Lester.
+==================================================
+GAME END:
+  Winner(s): Clown
+  Reason: Clown (Lester) was successfully voted out.
+  Final Alive Players & Roles:
+    - Chuck: Musketeer
+    - Ellie: Doctor
+    - Finch: Peasant
+    - Carter: Peasant
+    - Devon: Vampire
+    - Elias: Vampire
+==================================================
+--- Log ended at: 2025-06-03 17:36:40 ---
+MODERATOR (Round 1, Game End): Game over! Clown wins!
+MODERATOR (Round 1, Game End): Game over! Clown wins!

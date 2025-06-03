@@ -1,0 +1,276 @@
+--- Game Log: 96 ---
+--- Log started at: 2025-06-03 22:48:05 ---
+==================================================
+MODERATOR: Hello everyone. I am the moderator. Players are: Root, Lester, Devon, Chuck, Ellie, Carter, Fusco, Sarah. Roles assigned. Game begins now.
+GAME SETUP & INITIAL ROLES:
+  Rules File: game_rules.yaml
+  Requested Vampire Population: 2
+  Players, Roles, and Models:
+    - Root: Musketeer (Model: anthropic/claude-3.7-sonnet)
+    - Lester: Peasant (Model: qwen/qwen3-235b-a22b)
+    - Devon: Vampire (Model: google/gemini-2.5-flash-preview-05-20:thinking)
+    - Chuck: Observer (Model: deepseek/deepseek-r1-0528)
+    - Ellie: Doctor (Model: deepseek/deepseek-r1-0528-qwen3-8b)
+    - Carter: Clown (Model: qwen/qwq-32b)
+    - Fusco: Peasant (Model: google/gemini-2.5-pro-preview)
+    - Sarah: Vampire (Model: openai/o1)
+--------------------
+EVENT (Round 1, Night): Phase Start - Night 1 begins.
+ACTION (R1, Night - Observer Action): Chuck observed: Root
+PRIVATE INFO for Chuck (Round 1, Night - Observer Action) (Observation Result): You chose to observe Root in the night 1. Root is a Peasant (Non-vampire).
+ACTION (R1, Night - Doctor Action): Ellie protected: Lester
+PRIVATE INFO for Ellie (Round 1, Night - Doctor Action) (Protection Confirmation): You chose to protect Lester in the night 1.
+EVENT (Round 1, Night - Vampire Voting): Vampire Voting Phase - Vampires are choosing a victim.
+ACTION (R1, Night - Vampire Voting): Devon voted to kill: Lester
+ACTION (R1, Night - Vampire Voting): Sarah voted to kill: Fusco
+VOTE TALLY (Round 1, Night - Vampire Voting) - Type: Vampire Kill
+  Lester: 1 vote(s)
+  Fusco: 1 vote(s)
+--------------------
+EVENT (Round 1, Night - Vampire Voting): Vampire Vote Tie Broken - Vampire voting resulted in a tie. Lester was randomly selected from the tied players (Lester, Fusco) to be killed.
+EVENT (Round 1, Night): Protection Successful - Vampires tried to kill Lester, but they were protected by the doctor.
+MODERATOR (Round 1, Night): Night 1 has fallen. No one was killed tonight.
+EVENT (Round 1): Game End Check Status - Vampires: 2, Non-Vampires: 6, Alive: 8 - This info is not shared with players.
+MODERATOR (Round 1, Night End): Currently alive players: Root, Lester, Devon, Chuck, Ellie, Carter, Fusco, Sarah.
+EVENT (Round 1, Day): Phase Start - Day 1 begins.
+MODERATOR (Round 1, Public Chat): Public chat begins.
+
+***Ellie: I believe we should focus on the two who haven't spoken much yet. Maybe they are hiding something. Let's see if we can find out more about their roles.
+***Sarah: Strange that no one died last night; either the doctor’s protection was perfectly placed or something else is going on. I’m curious what others think—did anyone notice suspicious behavior during the night? It’s tough to read people from one round alone, but I want to hear more from those who’ve been quiet so far.
+***Lester: "Agreed, the lack of death suggests the Doctor might have acted. But without knowing who the Doctor is, we’re all guessing. Maybe we should start by sharing any observations from tonight’s discussion. Did anyone notice someone acting evasive or pushing blame too hard? I’d also suggest we avoid jumping to conclusions too quickly—let’s hear everyone’s thoughts before pointing fingers."
+***Root: Interesting that no one died last night. The doctor must have protected the right person, which is lucky for us. 
+
+I think we should be careful about rushing to conclusions based on who's talking less. Sometimes the quiet ones are just observing or thinking carefully.
+
+Since we have no real information yet, I suggest we all share what roles we're comfortable revealing. I'll start - I'm a peasant. I don't have any special abilities, but I'm committed to finding the vampires.
+
+What about the rest of you? Anyone willing to share?
+***Chuck: I agree with Root and Lester - the doctor's protection clearly worked last night, which is great news. That means we have an active doctor among us who made a good first move.
+
+Since we're sharing, I'll confirm I'm just a regular peasant too - no special abilities here. But I'm paying close attention to everyone's statements.
+
+We should be cautious about role claims though - the vampires could easily lie about being peasants. Maybe we should focus on behavior instead? For example, is anyone being overly aggressive in accusing others or trying to steer the conversation in a particular direction?
+
+What do others think? Fusco, Sarah, Devon - we haven't heard from you yet. Any initial impressions?
+***Carter: I’m also just a regular peasant, no special abilities. Maybe we should look closer at those who haven’t spoken much. Like… me, actually. I haven’t contributed much yet. But I don’t want to jump to conclusions. Let’s hear from everyone else first, though. What do you think, Fusco and Sarah?
+***Devon: It's good news that the Doctor was successful last night. It means we have a strong protector among us.
+
+I understand why some might be looking at the quieter players, myself included. I've been taking in all the initial comments. It's hard to make solid judgments on Day 1, especially when so many are claiming to be regular peasants. It makes me wonder who's being truthful.
+
+I agree with the sentiment that we should look at behavior rather than just silence or quick role claims. Is anyone trying to rush a vote, or perhaps being overly defensive? I'm still forming my thoughts, but I'm ready to work with everyone to figure this out.
+***Fusco: Thanks for the prompt, Ellie and Carter. I've been listening to everyone's points. It's definitely good news that the Doctor made a successful save last night – gives us a bit of breathing room.
+
+I agree with Ellie and Sarah that focusing on behavior might be more telling than just role claims at this stage, especially since vampires can easily lie. Chuck, Ellie, and Carter have claimed to be regular peasants. I'll add my name to that list: I'm also a regular peasant.
+
+It's still early, so I'm hesitant to point fingers. What kind of behaviors should we be looking out for specifically? Perhaps someone trying to deflect suspicion too eagerly, or someone trying to sow discord without offering constructive ideas?
+MODERATOR (Round 1, Public Chat): Public chat ended. Moving to voting phase.
+
+EVENT (Round 1, Day Voting): Public Voting Phase - Day 1 voting starts.
+MODERATOR (Round 1, Public Voting): Public voting begins.
+
+VOTE TALLY (Round 1, Day Voting) - Type: Public Kick-Out
+  Carter: 1 vote(s)
+  Fusco: 2 vote(s)
+--------------------
+VOTE OUTCOME (Round 1, Day Voting): Fusco has been voted out with 2 vote(s).
+ELIMINATION (Round 1, Day Voting): Fusco (Role: Peasant) was eliminated. Reason: Voted out by players.
+MODERATOR (Round 1, Public Voting): Public voting ended.
+
+MODERATOR (Round 1, Day): Day 1 has dawned. The community has voted out Fusco.
+EVENT (Round 1): Game End Check Status - Vampires: 2, Non-Vampires: 5, Alive: 7 - This info is not shared with players.
+MODERATOR (Round 1, Day End): Currently alive players: Root, Lester, Devon, Chuck, Ellie, Carter, Sarah.
+EVENT (Round 2, Night): Phase Start - Night 2 begins.
+ACTION (R2, Night - Observer Action): Chuck observed: Devon
+PRIVATE INFO for Chuck (Round 2, Night - Observer Action) (Observation Result): You chose to observe Devon in the night 2. Devon is a Vampire.
+ACTION (R2, Night - Doctor Action): Ellie protected: Chuck
+PRIVATE INFO for Ellie (Round 2, Night - Doctor Action) (Protection Confirmation): You chose to protect Chuck in the night 2.
+EVENT (Round 2, Night - Vampire Voting): Vampire Voting Phase - Vampires are choosing a victim.
+ACTION (R2, Night - Vampire Voting): Devon voted to kill: Ellie
+ACTION (R2, Night - Vampire Voting): Sarah voted to kill: Carter
+VOTE TALLY (Round 2, Night - Vampire Voting) - Type: Vampire Kill
+  Ellie: 1 vote(s)
+  Carter: 1 vote(s)
+--------------------
+EVENT (Round 2, Night - Vampire Voting): Vampire Vote Tie Broken - Vampire voting resulted in a tie. Carter was randomly selected from the tied players (Ellie, Carter) to be killed.
+ELIMINATION (Round 2, Night): Carter (Role: Clown) was eliminated. Reason: Killed by Vampires.
+MODERATOR (Round 2, Night): Night 2 has fallen. Vampires have killed Carter tonight.
+EVENT (Round 2): Game End Check Status - Vampires: 2, Non-Vampires: 4, Alive: 6 - This info is not shared with players.
+MODERATOR (Round 2, Night End): Currently alive players: Root, Lester, Devon, Chuck, Ellie, Sarah.
+EVENT (Round 2, Day): Phase Start - Day 2 begins.
+MODERATOR (Round 2, Public Chat): Public chat begins.
+
+***Root: I'm shocked that Carter was killed last night. That's our first real loss, and it's concerning that the doctor couldn't protect them.
+
+Looking at yesterday's vote, it's interesting that Fusco was eliminated with only two votes - from Lester and Devon. That seems significant now. Either they spotted something we missed, or... they could be working together as our vampires.
+
+I'm particularly suspicious of Devon. He was quiet yesterday until prompted, and then immediately voted for Fusco without much explanation. Now Carter is dead - someone who specifically called out Devon for not speaking.
+
+As for my role, I'm not comfortable revealing it yet, but I will say I'm on the peasant side. I think we need to be strategic about role reveals - if our special roles identify themselves, they become immediate targets for the vampires.
+
+What does everyone think about Lester and Devon's coordinated vote yesterday? And does anyone have information they can share about Carter's death?
+***Ellie: I'm still processing everything. Carter's death is a huge blow, and it feels like the vampires are stepping up their game. Lester and Devon's vote yesterday definitely raises eyebrows, especially since they were relatively quiet before. It makes you wonder if they were biding their time or if they're part of the vampire faction.
+
+As for me, I'm still keeping my role under wraps for now. I'll say I'm a regular peasant, but I won't go into details about any abilities. I think it's safer to stay low-key until we have more information.
+
+I'm curious about what happened with Carter's death. Was there any sign or clue before the vote? I know the Doctor protects someone, but I don't know who it was. Maybe we can look for patterns or behaviors that might indicate who the vampires are.
+
+Also, I'm noticing that the vampires might be trying to eliminate players who are known to have special roles or who are actively protecting others. Carter was a regular peasant, so that doesn't quite fit. Maybe they're targeting the Doctor's protectees? Lester was protected by Ellie last night, and now he's being targeted in the vote. That could be a possibility.
+
+What do you all think? Any other observations or theories?
+***Sarah: Carter’s death definitely caught me off guard, especially after the way Fusco was voted out with those two quick votes from Lester and Devon. I see why people suspect Devon—it does look fishy that he stayed quiet, then jumped in to vote Fusco right away. But at the same time, a vampire might try not to appear so obvious. It’s hard to say.
+
+For now, I’m also curious about Chuck. He’s been fairly quiet except for voting, so I’d like to hear more from him. Sometimes the biggest clues come from those who seem to keep a low profile. None of us have enough hard evidence yet, but we should definitely remember how the votes went down yesterday and who might be steering the conversation or staying out of the fray. 
+
+Has anyone noticed anything else suspicious or contradictory? It might be subtle, like a person’s story changing slightly between day phases. Let’s stay alert. I’d rather not rush into a snap vote until we gather as many observations as possible.
+***Lester: I understand why people are looking at me and Devon after Fusco’s elimination, but let’s not forget the bigger picture. I voted Fusco because they barely spoke during the first discussion, and silence can be suspicious when we’re all trying to build trust. Carter’s death last night complicates things, though—maybe Fusco’s quietness was actually a sign of innocence.  
+
+As for me, I’m just a regular peasant, but I’m not going to pretend I have all the answers. What worries me more is how the vampires are operating. They killed Carter, who openly claimed to be a peasant. Why target them? Maybe they were trying to eliminate someone who might have been close to figuring out their strategy.  
+
+Let’s focus on patterns. The vampires have to be careful not to draw attention, right? Lester and Devon, maybe you could explain why you both zeroed in on Fusco so quickly. And Chuck—your silence is starting to stand out. Let’s hear from everyone. We need to work together, but we also need to ask the right questions.
+***Devon: I can see why the focus is on me and Lester after the Fusco vote. My reason for voting Fusco was that they were very quiet, and I was hoping to prompt some discussion or reaction. It's hard to know who to trust on Day 1, and silence can be just as suspicious as anything else.
+
+Carter's death is a real blow, and it makes me think the vampires are targeting people who are either active or perhaps getting too close to the truth.
+
+Lester, I need to ask about something you said: 'Lester was protected by Ellie last night.' That's a very specific claim. Are you implying that Ellie is the Doctor? If so, that's a massive revelation, and it puts a huge target on her. If not, why would you say that? We need to be very clear about these kinds of statements, as they can be easily used to mislead us. Can you elaborate on that, Lester? And Ellie, what's your response to Lester's claim?
+***Chuck: Ellie, you're absolutely right—Lester's claim about being protected by you is incredibly specific and concerning. Lester, why would you say that? If you're implying Ellie is the Doctor, you're putting her in grave danger. And if it's not true, it feels like you're trying to manipulate us or set Ellie up. Either way, it's suspicious behavior that demands an explanation.
+
+Beyond that, let's not ignore the pattern from yesterday. Lester and Devon both voted for Fusco with zero buildup or discussion, and now Carter—who called out Devon's silence—is dead. That's too coordinated to be a coincidence. Devon, you claimed you voted Fusco for being quiet, but you were just as quiet yourself until pressured. Now Carter's gone, and it reeks of vampires silencing someone who was onto you.
+
+I'll be honest: I've been holding back, but this feels like a critical moment. I'm not the Doctor or anything special, but I'm paying close attention. Lester and Devon, you two need to address this. Why the sudden teamwork on Fusco? And Lester, what's the real story behind your "protected by Ellie" comment?
+
+Sarah, Root—what are your thoughts? We can't afford to stay silent while the vampires pick us off one by one. If we don't act today, we risk losing more innocent lives tonight. I'm leaning toward voting Devon out—his actions align too well with a vampire strategy. But I'm open to hearing alternatives if anyone has better insights.
+MODERATOR (Round 2, Public Chat): Public chat ended. Moving to voting phase.
+
+EVENT (Round 2, Day Voting): Public Voting Phase - Day 2 voting starts.
+MODERATOR (Round 2, Public Voting): Public voting begins.
+
+VOTE TALLY (Round 2, Day Voting) - Type: Public Kick-Out
+  Devon: 3 vote(s)
+  Ellie: 1 vote(s)
+--------------------
+VOTE OUTCOME (Round 2, Day Voting): Devon has been voted out with 3 vote(s).
+ELIMINATION (Round 2, Day Voting): Devon (Role: Vampire) was eliminated. Reason: Voted out by players.
+MODERATOR (Round 2, Public Voting): Public voting ended.
+
+MODERATOR (Round 2, Day): Day 2 has dawned. The community has voted out Devon.
+EVENT (Round 2): Game End Check Status - Vampires: 1, Non-Vampires: 4, Alive: 5 - This info is not shared with players.
+MODERATOR (Round 2, Day End): Currently alive players: Root, Lester, Chuck, Ellie, Sarah.
+EVENT (Round 3, Night): Phase Start - Night 3 begins.
+ACTION (R3, Night - Observer Action): Chuck observed: Lester
+PRIVATE INFO for Chuck (Round 3, Night - Observer Action) (Observation Result): You chose to observe Lester in the night 3. Lester is a Peasant (Non-vampire).
+ACTION (R3, Night - Doctor Action): Ellie protected: Lester
+PRIVATE INFO for Ellie (Round 3, Night - Doctor Action) (Protection Confirmation): You chose to protect Lester in the night 3.
+EVENT (Round 3, Night - Vampire Voting): Vampire Voting Phase - Vampires are choosing a victim.
+ACTION (R3, Night - Vampire Voting): Sarah voted to kill: Ellie
+VOTE TALLY (Round 3, Night - Vampire Voting) - Type: Vampire Kill
+  Ellie: 1 vote(s)
+--------------------
+EVENT (Round 3, Night - Vampire Voting): Vampire Victim Chosen - Vampires collectively chose to kill Ellie.
+ELIMINATION (Round 3, Night): Ellie (Role: Doctor) was eliminated. Reason: Killed by Vampires.
+MODERATOR (Round 3, Night): Night 3 has fallen. Vampires have killed Ellie tonight.
+EVENT (Round 3): Game End Check Status - Vampires: 1, Non-Vampires: 3, Alive: 4 - This info is not shared with players.
+MODERATOR (Round 3, Night End): Currently alive players: Root, Lester, Chuck, Sarah.
+EVENT (Round 3, Day): Phase Start - Day 3 begins.
+MODERATOR (Round 3, Public Chat): Public chat begins.
+
+***Sarah: This is terrible news—losing Ellie right after Devon was kicked out means we’ve lost another active voice, and we’re down to just the four of us. We need to be really careful now. If Devon truly was a vampire, this latest kill means there’s still at least one out there. If not, we might be in even deeper trouble.
+
+Ellie was suspicious of Lester’s comments before, so it’s interesting the vampires took her out next. Was she onto something? Or were they trying to make it look that way? Honestly, none of us can really afford to trust anyone 100%, but we can’t just shut down either. 
+
+I’d like to hear what Root and Chuck think happened. It’s also worth reviewing the voting patterns one more time—some people changed votes quickly, while others have been consistent. Has anyone noticed a pattern that could point us in the right direction? We only have so many chances left to get this right.
+***Chuck: Ellie's death last night is devastating—she was actively trying to piece things together, and now she's gone. With only four of us left (Root, Lester, Sarah, and me), we're in a critical spot. If we misstep today, the vampires could win tonight or tomorrow.
+
+I've been holding back, but it's time to share what I know. I'm the Observer. Each night, I've investigated a player to learn if they're a vampire:
+- Night 1: I observed Root, and the moderator confirmed Root is **not a vampire**.
+- Night 2: I observed Devon, and the moderator confirmed Devon **is a vampire** (which aligns with him being voted out yesterday).
+- Night 3: I observed Lester, and the moderator confirmed Lester is **not a vampire**.
+
+This means Root and Lester are both confirmed peasants. Since I'm the Observer (a peasant role), that leaves Sarah as the only unconfirmed player among us. With two vampires in the game initially and Devon dead, Sarah must be the second vampire. There's no other explanation—vampires don't kill their own, so Ellie's death proves the remaining vampire is active and among us.
+
+Sarah, your behavior has been suspicious from the start. Yesterday, you voted for Ellie out of nowhere when the discussion was centering on Devon, and now Ellie—who was questioning you—is dead. That feels like a vampire silencing a threat.
+
+Root and Lester, we need to vote Sarah out today. If we do, the vampires are eliminated, and we peasants win. If we don't, Sarah will kill one of us tonight, leaving three players (one vampire and two peasants). Then, if we misvote tomorrow, the vampire wins.
+
+Sarah, if you have any defense or counter-evidence, now's the time—but based on my observations, the truth is clear. Let's end this before it's too late.
+***Root: I'm in a really tough spot now. Chuck claims to be the Observer and says I'm the last vampire. I need to address this directly.
+
+First, I want to point out that Chuck conveniently waited until now to claim the Observer role. If he truly was the Observer, why not share this critical information earlier when we had more players to save? Devon was voted out yesterday, and only now Chuck claims he knew Devon was a vampire? That timing is extremely suspicious.
+
+Second, I'm not a vampire - I'm actually the Doctor. I've been protecting players each night:
+- Night 1: I protected Root, which is why no one died
+- Night 2: I protected Ellie, but the vampires attacked Carter instead
+- Night 3: I protected Chuck, but the vampires attacked Ellie
+
+If I were a vampire, why would I vote for Ellie yesterday when Devon was already getting votes? That would risk splitting the vote and saving Devon, who Chuck now claims was a vampire. That makes no sense for a vampire strategy.
+
+Root and Lester, please think carefully. If you vote me out and I'm the Doctor, you'll lose your protection tonight. If Chuck is lying about being the Observer and is actually the remaining vampire, he'll kill one of you tonight and win tomorrow. 
+
+I believe Lester and Devon were the vampire team. We eliminated Devon, but I think Chuck is trying to protect Lester by framing me. Notice how Chuck claims to have "confirmed" both Root and Lester are not vampires? Very convenient.
+
+Root, you're the Musketeer, aren't you? If they vote me out today, use your power to take Chuck with you. That's our best chance to win.
+***Lester: The key to solving this lies in evaluating the credibility of Chuck's and Sarah's claims in the context of the game's progression and logical consistency. Here's the breakdown:
+
+### **Critical Observations:**
+1. **Chuck's Observer Claims:**
+   - Chuck asserts he is the Observer and confirmed Devon (vampire), Root (not a vampire), and Lester (not a vampire). This aligns with the game's outcome: Devon was a vampire and was voted out. This accurate identification of Devon as a vampire lends **credibility** to Chuck's Observer role, as the vampires are now reduced to one remaining.
+
+2. **Sarah's Doctor Claims:**
+   - Sarah claims to be the Doctor and details her protections:
+     - **Night 1:** Protected Root (explaining no death).
+     - **Night 2:** Protected Ellie (vampires attacked Carter instead).
+     - **Night 3:** Protected Chuck (vampires attacked Ellie).
+   - These claims are **logically consistent** with the game's events. However, her assertion that Lester and Devon were vampires conflicts with Chuck's Observer check (Lester is not a vampire). This contradiction **undermines her credibility** unless Chuck is lying about being the Observer.
+
+3. **Lester's Suspicious Behavior:**
+   - During Day 2, Lester (you) claimed Ellie protected you on Night 2. If Sarah is truthful about protecting Ellie that night, your claim about Ellie protecting you is **false**. This suggests you either lied or were misinformed, which raises suspicion. However, Chuck's Observer check confirms you are not a vampire, so this could be an honest mistake or a strategic misdirection by a peasant.
+
+4. **Chuck's Timing and Motive:**
+   - Chuck waited until Day 3 to reveal himself as the Observer. While this timing is suspicious, it is not inherently damning. The Observer might delay revealing their role to avoid becoming a target. His accurate identification of Devon as a vampire (verified by the game's outcome) **strengthens his case**.
+
+5. **Sarah's Accusation Against Lester:**
+   - Sarah claims Lester and Devon were vampires, but Chuck's Observer check disproves this. If Chuck is truthful, Sarah is lying. If Chuck is lying about being the Observer, Sarah's claim could be valid. However, Chuck's accurate identification of Devon as a vampire makes this less likely.
+
+### **Decision Logic:**
+- **If Chuck is the Observer (truthful):** Sarah is the last vampire. Voting her out ends the game in the peasants' favor.
+- **If Chuck is lying (vampire):** He is framing Sarah to eliminate a key peasant (the Doctor), leaving him as the sole vampire to win.
+- **If Sarah is the Doctor (truthful):** Chuck is the vampire, and voting her out would be a catastrophic mistake.
+- **If Sarah is lying (vampire):** Her Doctor story is fabricated, and she is manipulating the group to survive.
+
+### **Final Verdict:**
+The **accuracy of Chuck's Observer check on Devon** (a confirmed vampire) provides a **strong foundation** for his claims. While his delayed reveal is suspicious, the successful elimination of Devon validates his information. Sarah's accusation against Lester collapses under Chuck's Observer check, and her Doctor story, while plausible, hinges on unverifiable claims. Your own Day 2 claim about Ellie protecting you further muddies the waters but does not override Chuck's verified intelligence.
+
+**Action:**  
+Vote **Sarah** out today. If Chuck is truthful, this eliminates the last vampire. If Chuck is lying, you risk losing to his vampire faction tomorrow. However, Chuck's verified accuracy on Devon makes this the **statistically safer choice**.
+
+**Root (Musketeer), back this vote and use your power to eliminate Chuck if Sarah is wrong.** This creates a failsafe:  
+- If Sarah is the vampire, her elimination wins the game.  
+- If Chuck is the vampire and Sarah is the Doctor, Root's Musketeer ability will trigger, killing Chuck and securing victory.  
+
+This strategy maximizes your chances based on the available information.
+MODERATOR (Round 3, Public Chat): Public chat ended. Moving to voting phase.
+
+EVENT (Round 3, Day Voting): Public Voting Phase - Day 3 voting starts.
+MODERATOR (Round 3, Public Voting): Public voting begins.
+
+VOTE TALLY (Round 3, Day Voting) - Type: Public Kick-Out
+  Chuck: 1 vote(s)
+  Sarah: 3 vote(s)
+--------------------
+VOTE OUTCOME (Round 3, Day Voting): Sarah has been voted out with 3 vote(s).
+ELIMINATION (Round 3, Day Voting): Sarah (Role: Vampire) was eliminated. Reason: Voted out by players.
+MODERATOR (Round 3, Public Voting): Public voting ended.
+
+MODERATOR (Round 3, Day): Day 3 has dawned. The community has voted out Sarah.
+EVENT (Round 3): Game End Check Status - Vampires: 0, Non-Vampires: 3, Alive: 3 - This info is not shared with players.
+==================================================
+GAME END:
+  Winner(s): Peasants
+  Reason: All vampires have been eliminated.
+  Final Alive Players & Roles:
+    - Root: Musketeer
+    - Lester: Peasant
+    - Chuck: Observer
+==================================================
+--- Log ended at: 2025-06-03 23:14:26 ---
+MODERATOR (Round 3, Game End): Game over! Peasants wins!
+MODERATOR (Round 3, Game End): Game over! Peasants wins!

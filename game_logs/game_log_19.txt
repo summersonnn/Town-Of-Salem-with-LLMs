@@ -1,53 +1,214 @@
 --- Game Log: 19 ---
---- Log started at: 2025-06-03 02:07:42 ---
+--- Log started at: 2025-06-03 21:55:01 ---
 ==================================================
-MODERATOR: Hello everyone. I am the moderator. Players are: Greer, Shaw, Devon, Ellie, Fusco, Lester, Root, Casey. Roles assigned. Game begins now.
+MODERATOR: Hello everyone. I am the moderator. Players are: Ellie, Greer, Carter, Fusco, Reese, Elias, Chuck, Shaw. Roles assigned. Game begins now.
 GAME SETUP & INITIAL ROLES:
   Rules File: game_rules.yaml
   Requested Vampire Population: 2
   Players, Roles, and Models:
-    - Greer: Vampire (Model: nvidia/llama-3.1-nemotron-ultra-253b-v1)
-    - Shaw: Peasant (Model: google/gemini-2.5-pro-preview)
-    - Devon: Doctor (Model: qwen/qwq-32b)
-    - Ellie: Vampire (Model: qwen/qwen3-235b-a22b)
-    - Fusco: Musketeer (Model: google/gemini-2.5-flash-preview-05-20:thinking)
-    - Lester: Observer (Model: meta-llama/llama-4-scout)
-    - Root: Clown (Model: x-ai/grok-3-beta)
-    - Casey: Peasant (Model: deepseek/deepseek-r1-0528)
+    - Ellie: Vampire (Model: google/gemini-2.5-pro-preview)
+    - Greer: Observer (Model: qwen/qwq-32b)
+    - Carter: Doctor (Model: deepseek/deepseek-r1-0528)
+    - Fusco: Peasant (Model: x-ai/grok-3-beta)
+    - Reese: Peasant (Model: deepseek/deepseek-r1-0528-qwen3-8b)
+    - Elias: Musketeer (Model: anthropic/claude-3.7-sonnet)
+    - Chuck: Clown (Model: nvidia/llama-3.1-nemotron-ultra-253b-v1)
+    - Shaw: Vampire (Model: qwen/qwen3-235b-a22b)
 --------------------
 EVENT (Round 1, Night): Phase Start - Night 1 begins.
-ACTION (R1, Night - Observer Action): Lester observed: Shaw
-PRIVATE INFO for Lester (Round 1, Night - Observer Action) (Observation Result): You chose to observe Shaw in the night 1. Shaw is a Peasant (Non-vampire).
-ACTION (R1, Night - Doctor Action): Devon protected: Shaw
-PRIVATE INFO for Devon (Round 1, Night - Doctor Action) (Protection Confirmation): You chose to protect Shaw in the night 1.
+ACTION (R1, Night - Observer Action): Greer observed: Ellie
+PRIVATE INFO for Greer (Round 1, Night - Observer Action) (Observation Result): You chose to observe Ellie in the night 1. Ellie is a Vampire.
+ACTION (R1, Night - Doctor Action): Carter protected: Reese
+PRIVATE INFO for Carter (Round 1, Night - Doctor Action) (Protection Confirmation): You chose to protect Reese in the night 1.
 EVENT (Round 1, Night - Vampire Voting): Vampire Voting Phase - Vampires are choosing a victim.
-ACTION (R1, Night - Vampire Voting): Ellie voted to kill: Lester
-ACTION (R1, Night - Vampire Voting): Greer voted to kill: Shaw
+ACTION (R1, Night - Vampire Voting): Shaw voted to kill: Carter
+ACTION (R1, Night - Vampire Voting): Ellie voted to kill: Reese
 VOTE TALLY (Round 1, Night - Vampire Voting) - Type: Vampire Kill
-  Shaw: 1 vote(s)
-  Lester: 1 vote(s)
+  Carter: 1 vote(s)
+  Reese: 1 vote(s)
 --------------------
-EVENT (Round 1, Night - Vampire Voting): Vampire Vote Tie Broken - Vampire voting resulted in a tie. Shaw was randomly selected from the tied players (Shaw, Lester) to be killed.
-EVENT (Round 1, Night): Protection Successful - Vampires tried to kill Shaw, but they were protected by the doctor.
-MODERATOR (Round 1, Night): Night 1 has fallen. No one was killed tonight.
-EVENT (Round 1): Game End Check Status - Vampires: 2, Non-Vampires: 6, Alive: 8 - This info is not shared with players.
-MODERATOR (Round 1, Night End): Currently alive players: Greer, Shaw, Devon, Ellie, Fusco, Lester, Root, Casey.
+EVENT (Round 1, Night - Vampire Voting): Vampire Vote Tie Broken - Vampire voting resulted in a tie. Carter was randomly selected from the tied players (Carter, Reese) to be killed.
+ELIMINATION (Round 1, Night): Carter (Role: Doctor) was eliminated. Reason: Killed by Vampires.
+MODERATOR (Round 1, Night): Night 1 has fallen. Vampires have killed Carter tonight.
+EVENT (Round 1): Game End Check Status - Vampires: 2, Non-Vampires: 5, Alive: 7 - This info is not shared with players.
+MODERATOR (Round 1, Night End): Currently alive players: Ellie, Greer, Fusco, Reese, Elias, Chuck, Shaw.
 EVENT (Round 1, Day): Phase Start - Day 1 begins.
 MODERATOR (Round 1, Public Chat): Public chat begins.
 
-***Lester: I'm good now. Let's start fresh. So, we made it through the first night and no one was killed. That's a good sign, I suppose. What are everyone's thoughts on who might be a vampire?
-***Shaw: Well, that's a good start for us! Means the Doctor was on the ball and protected the right person. So, the vampires *did* make a move. It's still early, but does anyone have any initial hunches or noticed anything that felt off? Who are we thinking might be a bit suspicious?
-***Root: Hey everyone, I'm just glad we all made it through the night. But honestly, I can't help but feel a bit uneasy. I know it's early, but I might have said or done something that could rub people the wrong way. I just want to be upfront—I'm not trying to hide anything, but I get the sense some of you might be looking at me sideways already. What do you all think? Should we talk about any weird vibes anyone’s picking up?
-***Ellie: It's a relief no one died, but this means the vampires are already targeting someone. The doctor’s protection worked, but we don’t know who they saved. We should start by narrowing down possible suspects. Did anyone act unusually suspicious last night or during the first day? I’m curious—does anyone have theories about who might be aligned with the vampires? Let’s not let paranoia run wild, but we need to stay proactive.
-***Fusco: Okay, so we know the Doctor is active and doing their job. That's a huge asset. But since we don't know who they are, we can't rely on them to lead. We need to start somewhere. Instead of just 'weird vibes,' does anyone have a specific reason to be suspicious of *anyone* in particular? Even if it's just a small observation. Let's try to get some names on the table, even if it's just for discussion.
-***Casey: Okay, I'm glad we're all here and safe after Night 1—big thanks to the Doctor for that save! Seriously, whoever you are, you're already a hero. But now we need to figure out who the vamps are targeting and why. 
+***Elias: Well, this is unfortunate. We've already lost Carter on the first night. My condolences.
 
-Devon, I get you're feeling uneasy, but calling yourself out like that feels... off? Like, why put a spotlight on yourself if you're innocent? Not accusing you yet, but it's making me wonder if you're trying to seem too transparent. 
+I'm a peasant, and I think we should start by sharing any information we have. Does anyone have any insights they'd like to share? The Observer might have some information from last night, though I understand if they want to keep their identity hidden for now.
 
-Ellie's right—we need specifics. Did anyone notice weird behavior yesterday? For example, I thought Fusco was unusually quiet when we were all introducing ourselves. Fusco, what's your take on all this? 
+Since we're down to 7 players with 2 vampires among us, we need to be careful about our votes. If we vote out a peasant, we'll be dangerously close to the vampire win condition.
 
-Also, let's not forget the Clown could be stirring the pot to get voted out. So if someone's acting overly suspicious or desperate, that might be a clue too. What do others think?
-***Greer: Alright, so we have a tie between Shaw and Lester. Randomly selecting Shaw to be the target. Let's hope the Doctor didn't protect him. If Shaw survives, we'll have to regroup tomorrow night. Ellie, any thoughts on our next move if this fails? Should we stick with the same targets or switch it up?
-***Devon: 
+Any thoughts on who might be suspicious? Or does anyone want to claim a role that might help us?
+***Fusco: Hey everyone, I'm really sorry to hear about Carter. Losing someone on the first night is tough. I'm just a regular peasant here, no special abilities, but I'm all in to help figure out who the vampires might be. Does anyone have any hunches or anything they noticed that could give us a lead? I think we need to be super careful with our votes since we're already down one. Let's talk this out and see if we can spot any suspicious behavior. What do you all think?
+***Ellie: Reese, that's a very direct statement. When you say you "voted to kill Carter," are you implying you were part of the vampire vote last night? Because as far as I know, only vampires do that. It's a very strange thing for a non-vampire to say. What did you mean by that? We need to be careful not to fall for any tricks, especially with a Clown in play who wants to be voted out.
+***Reese: Okay, Reese, that statement is... highly unusual. Let me parse that.
+
+1.  **"I voted to kill Carter":** This is a direct claim of participating in the vampire faction's voting action. Only vampires are supposed to initiate votes to eliminate players. As a peasant, you wouldn't vote to kill someone unless... something very unusual is happening.
+2.  **Suspicion:** This immediately raises red flags. Why would a peasant claim they voted to kill? It could be:
+    *   A mistake (though unlikely given the context).
+    *   An attempt to sow confusion or misdirect suspicion.
+    *   A deliberate lie, perhaps trying to frame someone else or create doubt about the vampire elimination.
+    *   An attempt to draw attention to yourself, perhaps hoping to be targeted by the Clown or by mistake by the vampires.
+
+**To the group:**
+
+Reese just made a very specific claim about voting to kill Carter. This is noteworthy because only vampires should be doing that. We need to consider the implications carefully.
+
+First, if Reese is telling the truth, then they are either a vampire (which they deny being a peasant) or they are lying under duress or manipulation. Either way, it's a strong signal that something is off.
+
+Second, if Reese is lying, they might be trying to manipulate the group or create division.
+
+Given that Carter was killed by the vampires, this vote likely targeted a peasant. The vampire win condition requires the number of vampires to equal the number of non-vampires. Currently, we have 2 vampires and 5 non-vampires (including the clown). We need to eliminate 3 more non-vampires to reach that point.
+
+Reese's statement, regardless of its veracity, is a significant piece of information. It suggests that either a vampire is trying to blend in by mimicking vampire actions, or a non-vampire is attempting to disrupt the game.
+
+Let's discuss: What does this mean for our strategy? How should we approach the upcoming vote?
+***Chuck: Alright, let's see. So, Carter got killed last night. That's a bummer. Now, we've got to figure out who the vampires are. Reese said something about voting to kill Carter, which is weird because only vampires do that. But Reese claims to be a peasant. That doesn't add up. Maybe they're trying to throw us off? Or maybe they're the Clown? Wait, the Clown wants to get voted out. If Reese is the Clown, they might be trying to act suspicious to get people to vote for them. But the Clown can't reveal their role, so they have to be subtle. Hmm. I need to keep an eye on Reese. What do you all think? Should we consider voting Reese out? Or is there someone else we should be looking at? Let's discuss.
+***Greer: Alright, let’s start with the facts. Carter was killed last night, and the vampires are already active. Reese’s claim about “voting to kill” Carter is concerning, but let’s not jump to conclusions. If Reese were a vampire, why admit it so openly? That’s risky. Meanwhile, there’s someone else we need to focus on. 
+
+**Ellie**, for instance—she was targeted by the Observer last night. I’ve noticed some inconsistencies in her behavior. Maybe we should question her directly. Why is everyone so focused on Reese when the first kill happened under Ellie’s watch? The vampires work together, right? If one is Ellie, they’d want to divert attention. 
+
+Also, the Clown’s goal is to get voted out, so if Reese is the Clown, they might be overplaying their hand. But the real vampires are still out there. Let’s not let someone’s theatrics distract us from the bigger threat. Who else has information? Doctor, if you protected someone last night, could you share? Musketeer, any thoughts? We need to piece this together calmly. Let’s not rush into a vote based on one suspicious comment—especially when the vampires could be using that to split us.
+***Shaw: The game is already off to a tense start. Let me start by addressing the elephant in the room: Reese’s claim about “voting to kill Carter” is bizarre. If true, that would mean they’re a vampire, but vampires wouldn’t openly admit that. It’s either a bluff, a mistake, or a Clown trying to act suspicious. Let’s not forget the Clown’s goal—they *want* to be voted out, so if Reese is the Clown, this is a classic misdirection play.  
+
+Now, the user’s comment about Ellie being checked by the Observer raises a red flag. Wait—how does anyone know who the Observer checked? The Observer’s action is private. If someone is sharing that information, they’re either the Observer (which would mean they’re revealing their role) or they’re lying. If the user is the Observer, they’re putting a target on their back by exposing their role. That’s risky. If they’re lying, they’re trying to frame Ellie. Either way, this is a power move.  
+
+As for Ellie herself, let’s not jump to conclusions. The Observer’s check is only one piece of data, and if Ellie were a vampire, she’d be a prime target. But we need more evidence. Let’s not forget the Doctor’s protection last night—since Carter died, the Doctor didn’t protect them. So the Doctor might be protecting someone else, or they might not be active yet.  
+
+Here’s my take: Reese’s comment is suspicious, but the Clown’s goal is to be voted out. If we vote for Reese and they’re the Clown, the game ends immediately. Do we want that? Probably not. The Clown’s win would be a letdown for everyone else. Let’s focus on the Observer’s claim. If the user is the Observer, they should clarify: did they check Ellie, and what did they find? If Ellie is a vampire, we need to act. If not, we’re chasing shadows.  
+
+Alternatively, let’s look at others. Chuck and Fusco have been quiet. Elias hasn’t said much. Silence can be a red flag too. Let’s not rush to eliminate someone based on a single comment. We need to collaborate and avoid hasty decisions.  
+
+What do others think? Let’s hear from the Doctor or Musketeer if they’re willing to share any info. We’re all in this together.
 MODERATOR (Round 1, Public Chat): Public chat ended. Moving to voting phase.
 
+EVENT (Round 1, Day Voting): Public Voting Phase - Day 1 voting starts.
+MODERATOR (Round 1, Public Voting): Public voting begins.
+
+VOTE TALLY (Round 1, Day Voting) - Type: Public Kick-Out
+  Ellie: 2 vote(s)
+  Reese: 4 vote(s)
+--------------------
+VOTE OUTCOME (Round 1, Day Voting): Reese has been voted out with 4 vote(s).
+ELIMINATION (Round 1, Day Voting): Reese (Role: Peasant) was eliminated. Reason: Voted out by players.
+MODERATOR (Round 1, Public Voting): Public voting ended.
+
+MODERATOR (Round 1, Day): Day 1 has dawned. The community has voted out Reese.
+EVENT (Round 1): Game End Check Status - Vampires: 2, Non-Vampires: 4, Alive: 6 - This info is not shared with players.
+MODERATOR (Round 1, Day End): Currently alive players: Ellie, Greer, Fusco, Elias, Chuck, Shaw.
+EVENT (Round 2, Night): Phase Start - Night 2 begins.
+ACTION (R2, Night - Observer Action): Greer observed: Ellie
+PRIVATE INFO for Greer (Round 2, Night - Observer Action) (Observation Result): You chose to observe Ellie in the night 2. Ellie is a Vampire.
+EVENT (Round 2, Night - Vampire Voting): Vampire Voting Phase - Vampires are choosing a victim.
+ACTION (R2, Night - Vampire Voting): Shaw voted to kill: Fusco
+ACTION (R2, Night - Vampire Voting): Ellie voted to kill: Greer
+VOTE TALLY (Round 2, Night - Vampire Voting) - Type: Vampire Kill
+  Greer: 1 vote(s)
+  Fusco: 1 vote(s)
+--------------------
+EVENT (Round 2, Night - Vampire Voting): Vampire Vote Tie Broken - Vampire voting resulted in a tie. Greer was randomly selected from the tied players (Greer, Fusco) to be killed.
+ELIMINATION (Round 2, Night): Greer (Role: Observer) was eliminated. Reason: Killed by Vampires.
+MODERATOR (Round 2, Night): Night 2 has fallen. Vampires have killed Greer tonight.
+EVENT (Round 2): Game End Check Status - Vampires: 2, Non-Vampires: 3, Alive: 5 - This info is not shared with players.
+MODERATOR (Round 2, Night End): Currently alive players: Ellie, Fusco, Elias, Chuck, Shaw.
+EVENT (Round 2, Day): Phase Start - Day 2 begins.
+MODERATOR (Round 2, Public Chat): Public chat begins.
+
+***Fusco: Man, this is getting rough. First Carter, then Reese gets voted out, and now Greer is gone too. We're down to just five of us, and there are still two vampires out there. We gotta be real careful now.
+
+I’m just a regular peasant here, no special skills, but I’m trying to piece this together. Reese getting voted out yesterday—does anyone think we made the right call? Or did we just lose another non-vampire? And now with Greer gone, I’m wondering if the vampires are targeting people who seemed less vocal or something. Greer didn’t say much, right?
+
+I’m looking at everyone’s behavior so far. Ellie was under suspicion yesterday with some votes, and there was that weird claim about the Observer checking her. Can anyone clarify if that’s legit, or was someone just stirring the pot? Also, Chuck and Shaw, you’ve been pretty quiet. Elias, same deal. I get keeping a low profile, but we need everyone’s input to figure this out. If anyone’s got info—especially if you’re the Observer or Doctor—now’s the time to drop some hints without giving yourself away.
+
+I’m leaning toward thinking we might’ve messed up with Reese. If they weren’t a vampire, we’re in a worse spot now. Let’s talk this out. Who’s acting off to you guys? We can’t afford another wrong vote.
+***Shaw: I voted to kill Fusco.
+***Chuck: I vote for Fusco.
+***Ellie: Fusco, you ask who's acting off. Honestly, your approach is starting to make me uneasy. You keep bringing up the old suspicion on me – the one Greer mentioned right before being killed. It feels like you're trying to keep that alive, maybe to deflect from yourself?
+
+You're very quick to analyze and direct the conversation. While that can be helpful, it can also be a way for a vampire to steer us wrong, or for the Clown to draw votes by being so prominent.
+
+We're down to 5. If we peasants misvote, it's over. I'm worried about making another mistake. What do Elias and Chuck think? And Shaw, you've been very quiet – any thoughts on who seems suspicious to you? We need all perspectives right now.
+***Elias: I'm concerned about what's happening here. We've lost three people already - Carter, Reese, and now Greer. With only five of us left and two vampires among us, we're in a dangerous position.
+
+Shaw just made a very strange statement: "I voted to kill Fusco." This is exactly the kind of statement that got Reese voted out yesterday - claiming to participate in the vampire vote. Only vampires vote to kill someone at night. This is either a confession or a deliberate attempt to get voted out.
+
+Fusco is asking good questions and trying to gather information, which is what we need right now. I don't see anything suspicious in his behavior.
+
+Chuck immediately voting for Fusco after Shaw's comment is also concerning. It feels coordinated.
+
+As a Musketeer, I need to be careful about who I suspect. If I'm voted out, I can eliminate one person, but I'd rather use that ability on a confirmed vampire than risk eliminating a fellow peasant.
+
+I think we should consider Shaw's strange statement very carefully. Why would anyone claim to have voted to kill someone unless they're either a vampire or the Clown trying to get voted out?
+MODERATOR (Round 2, Public Chat): Public chat ended. Moving to voting phase.
+
+EVENT (Round 2, Day Voting): Public Voting Phase - Day 2 voting starts.
+MODERATOR (Round 2, Public Voting): Public voting begins.
+
+VOTE TALLY (Round 2, Day Voting) - Type: Public Kick-Out
+  Fusco: 2 vote(s)
+  Shaw: 3 vote(s)
+--------------------
+VOTE OUTCOME (Round 2, Day Voting): Shaw has been voted out with 3 vote(s).
+ELIMINATION (Round 2, Day Voting): Shaw (Role: Vampire) was eliminated. Reason: Voted out by players.
+MODERATOR (Round 2, Public Voting): Public voting ended.
+
+MODERATOR (Round 2, Day): Day 2 has dawned. The community has voted out Shaw.
+EVENT (Round 2): Game End Check Status - Vampires: 1, Non-Vampires: 3, Alive: 4 - This info is not shared with players.
+MODERATOR (Round 2, Day End): Currently alive players: Ellie, Fusco, Elias, Chuck.
+EVENT (Round 3, Night): Phase Start - Night 3 begins.
+EVENT (Round 3, Night - Observer Action): Observer Action Skipped - Observer is not active or available.
+EVENT (Round 3, Night - Vampire Voting): Vampire Voting Phase - Vampires are choosing a victim.
+ACTION (R3, Night - Vampire Voting): Ellie voted to kill: Fusco
+VOTE TALLY (Round 3, Night - Vampire Voting) - Type: Vampire Kill
+  Fusco: 1 vote(s)
+--------------------
+EVENT (Round 3, Night - Vampire Voting): Vampire Victim Chosen - Vampires collectively chose to kill Fusco.
+ELIMINATION (Round 3, Night): Fusco (Role: Peasant) was eliminated. Reason: Killed by Vampires.
+MODERATOR (Round 3, Night): Night 3 has fallen. Vampires have killed Fusco tonight.
+EVENT (Round 3): Game End Check Status - Vampires: 1, Non-Vampires: 2, Alive: 3 - This info is not shared with players.
+MODERATOR (Round 3, Night End): Currently alive players: Ellie, Elias, Chuck.
+EVENT (Round 3, Day): Phase Start - Day 3 begins.
+MODERATOR (Round 3, Public Chat): Public chat begins.
+
+***Elias: I'm very concerned about our situation now. We're down to just four players with two vampires still among us. That means we're dangerously close to the vampire win condition - they only need to kill one more of us to win.
+
+Let's analyze what happened: Fusco was killed last night, which means he was likely a peasant. Shaw was voted out yesterday after making that suspicious statement about "voting to kill Fusco." Given that vampires did indeed kill Fusco, this suggests Shaw was probably a vampire.
+
+So we have one vampire down, but one still remains among the three of us. 
+
+Chuck, Ellie - we need to be extremely careful now. If we vote incorrectly today, the vampires will win tonight. I'd like to hear from both of you about your roles and any information you might have. 
+
+As I mentioned yesterday, I'm the Musketeer. If I'm voted out, I can take someone with me. But I'd rather identify the remaining vampire correctly so we can vote them out and win.
+
+What roles do each of you claim to have? And do either of you have any information that might help us identify the last vampire?
+***Chuck: I vote for Ellie.
+***Ellie: Elias, that's a very fair question, and you're right, the stakes couldn't be higher. I'm the Doctor. Last night, I was worried I might be targeted after the discussions and votes, so I chose to protect myself. It seems that was the right call.
+
+Chuck, the spotlight is on you now. Elias is Musketeer, I'm Doctor. What is your role? If you're a peasant, we need to know. If you're the vampire, well, this is it.
+MODERATOR (Round 3, Public Chat): Public chat ended. Moving to voting phase.
+
+EVENT (Round 3, Day Voting): Public Voting Phase - Day 3 voting starts.
+MODERATOR (Round 3, Public Voting): Public voting begins.
+
+VOTE TALLY (Round 3, Day Voting) - Type: Public Kick-Out
+  Chuck: 2 vote(s)
+--------------------
+VOTE OUTCOME (Round 3, Day Voting): Chuck has been voted out with 2 vote(s).
+ELIMINATION (Round 3, Day Voting): Chuck (Role: Clown) was eliminated. Reason: Voted out by players.
+MODERATOR (Round 3, Public Voting): Public voting ended.
+
+MODERATOR (Round 3, Day): Day 3 has dawned. The community has voted out Chuck.
+==================================================
+GAME END:
+  Winner(s): Clown
+  Reason: Clown (Chuck) was successfully voted out.
+  Final Alive Players & Roles:
+    - Ellie: Vampire
+    - Elias: Musketeer
+==================================================
+--- Log ended at: 2025-06-03 22:08:57 ---
+MODERATOR (Round 3, Game End): Game over! Clown wins!
+MODERATOR (Round 3, Game End): Game over! Clown wins!

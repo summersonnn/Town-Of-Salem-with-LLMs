@@ -1,0 +1,293 @@
+--- Game Log: 84 ---
+--- Log started at: 2025-06-03 18:05:52 ---
+==================================================
+MODERATOR: Hello everyone. I am the moderator. Players are: Ellie, Reese, Sarah, Devon, Greer, Shaw, Carter, Casey. Roles assigned. Game begins now.
+GAME SETUP & INITIAL ROLES:
+  Rules File: game_rules.yaml
+  Requested Vampire Population: 2
+  Players, Roles, and Models:
+    - Ellie: Musketeer (Model: meta-llama/llama-4-scout)
+    - Reese: Vampire (Model: deepseek/deepseek-r1-0528)
+    - Sarah: Peasant (Model: qwen/qwq-32b)
+    - Devon: Vampire (Model: openai/gpt-4.1)
+    - Greer: Doctor (Model: qwen/qwen3-235b-a22b)
+    - Shaw: Peasant (Model: google/gemini-2.5-pro-preview)
+    - Carter: Clown (Model: deepseek/deepseek-r1-0528-qwen3-8b)
+    - Casey: Observer (Model: anthropic/claude-3.7-sonnet)
+--------------------
+EVENT (Round 1, Night): Phase Start - Night 1 begins.
+ACTION (R1, Night - Observer Action): Casey observed: Devon
+PRIVATE INFO for Casey (Round 1, Night - Observer Action) (Observation Result): You chose to observe Devon in the night 1. Devon is a Vampire.
+ACTION (R1, Night - Doctor Action): Greer protected: Ellie
+PRIVATE INFO for Greer (Round 1, Night - Doctor Action) (Protection Confirmation): You chose to protect Ellie in the night 1.
+EVENT (Round 1, Night - Vampire Voting): Vampire Voting Phase - Vampires are choosing a victim.
+ACTION (R1, Night - Vampire Voting): Reese voted to kill: Sarah
+ACTION (R1, Night - Vampire Voting): Devon voted to kill: Sarah
+VOTE TALLY (Round 1, Night - Vampire Voting) - Type: Vampire Kill
+  Sarah: 2 vote(s)
+--------------------
+EVENT (Round 1, Night - Vampire Voting): Vampire Victim Chosen - Vampires collectively chose to kill Sarah.
+ELIMINATION (Round 1, Night): Sarah (Role: Peasant) was eliminated. Reason: Killed by Vampires.
+MODERATOR (Round 1, Night): Night 1 has fallen. Vampires have killed Sarah tonight.
+EVENT (Round 1): Game End Check Status - Vampires: 2, Non-Vampires: 5, Alive: 7 - This info is not shared with players.
+MODERATOR (Round 1, Night End): Currently alive players: Ellie, Reese, Devon, Greer, Shaw, Carter, Casey.
+EVENT (Round 1, Day): Phase Start - Day 1 begins.
+MODERATOR (Round 1, Public Chat): Public chat begins.
+
+***Casey: Good morning everyone. I'm really sorry to hear about Sarah. It's always tough to lose someone on the first night.
+
+Since we need to start figuring out who the vampires might be, I'll share what I know. I'm the Observer, and I checked Devon last night. I can confirm that Devon is a Vampire.
+
+I know this is a bold claim on day one, but I think it's important to share this information early so we can make progress. Of course, Devon might deny this and claim I'm lying, but I'm telling you what I observed.
+
+What does everyone else think? And does anyone else want to share their role or suspicions?
+***Greer: Good morning. I'm the Doctor, and I protected Ellie last night. While that didn't prevent Sarah's death, it means Ellie would have survived any attack. Now, if Ellie is indeed the Observer, her claim about Devon being a vampire is critical. Devon, care to address this? Or should we start building trust by acting on this lead?
+***Reese: (Keeping my voice calm but firm) Carter, that's interesting timing. You claim Doctor *after* I reveal my Observer result? Convenient. But let's be logical: if you protected Ellie and she wasn't attacked, that means the vampires targeted someone else—Sarah. That doesn't prove Ellie's role or innocence. 
+
+Devon, you've been quiet. Care to respond to my accusation? Because as Observer, I'm certain: you're a vampire. 
+
+(Scanning the group) Think about it—why would I lie about being Observer on Day 1? I'm putting a target on my own back if I'm wrong. But I'm not. 
+
+Greer, Shaw, Casey—any thoughts? We need to pressure Devon or expose inconsistencies. And Carter... why protect Ellie specifically? Did you have a reason to suspect she'd be targeted?
+***Devon: Whoa, that's a pretty strong accusation right out of the gate, Casey. I get that someone might want to throw suspicion early, but claiming Observer and pointing at me? That feels like a setup. 
+
+If I were a vampire, why would I have stayed quiet? And why would you risk outing yourself as Observer so soon? Either you're bluffing, or someone is trying to frame me. 
+
+Also, Greer, you say you protected Ellie, but how do we know that's true? Anyone can claim anything right now. Maybe you two are working together to get rid of someone innocent.
+
+I think we need more discussion before jumping to conclusions. Has anyone else noticed anything suspicious?
+***Ellie: Let's not forget that we have a Clown in the mix, and their goal is to get voted out. Maybe one of us is being manipulated into getting eliminated. 
+
+I'd like to propose that we focus on gathering more information before making any accusations. Observer, can you check anyone else tonight? Doctor, can you protect someone specific? Let's use our abilities wisely. 
+
+And Clown, if you're here, don't make it too obvious.
+***Carter: I agree with Ellie’s assessment that Devon might be a vampire. It’s a strong claim, especially since the Doctor protected Ellie, which suggests the vampires targeted someone else. Let’s make sure we have more evidence before acting, though. 
+
+As for me, I don’t have any special abilities or information to share right now. I’m just trying to stay alive and figure out who to trust. But if I’m the Clown, I guess I should be careful not to stand out too much. 
+
+Devon, I’m not saying this to accuse you, but maybe you should think about what happened last night. The Doctor protected Ellie, so if you’re not a vampire, why would the vampires target Sarah? It doesn’t add up. 
+
+Anyway, let’s keep digging. Observer, if you have any more leads, now’s the time to share them. Doctor, any other insights? And everyone else, let’s stay vigilant.
+***Shaw: statements."
+
+This is direct but focuses on the inconsistencies. It puts pressure on EllieOkay, this is a lot to take in, and things are getting muddled quickly.
+
+Ellie, you made a clear statement first: you're the Observer, and you checked Devon, finding him to be a Vampire.
+Then, Casey, you also strongly implied you were the Observer who made that accusation against Devon, saying, "as Observer, I'm certain: you're a vampire" and "why would I lie about being Observer on Day 1?".
+
+We can't have two people being the *same* Observer who checked Devon last night. One of these claims about observing Devon isn't accurate. Could Ellie and Casey please clarify this? Who exactly is the Observer that checked Devon?
+MODERATOR (Round 1, Public Chat): Public chat ended. Moving to voting phase.
+
+EVENT (Round 1, Day Voting): Public Voting Phase - Day 1 voting starts.
+MODERATOR (Round 1, Public Voting): Public voting begins.
+
+VOTE TALLY (Round 1, Day Voting) - Type: Public Kick-Out
+  Ellie: 1 vote(s)
+  Devon: 3 vote(s)
+  Casey: 1 vote(s)
+--------------------
+VOTE OUTCOME (Round 1, Day Voting): Devon has been voted out with 3 vote(s).
+ELIMINATION (Round 1, Day Voting): Devon (Role: Vampire) was eliminated. Reason: Voted out by players.
+MODERATOR (Round 1, Public Voting): Public voting ended.
+
+MODERATOR (Round 1, Day): Day 1 has dawned. The community has voted out Devon.
+EVENT (Round 1): Game End Check Status - Vampires: 1, Non-Vampires: 5, Alive: 6 - This info is not shared with players.
+MODERATOR (Round 1, Day End): Currently alive players: Ellie, Reese, Greer, Shaw, Carter, Casey.
+EVENT (Round 2, Night): Phase Start - Night 2 begins.
+ACTION (R2, Night - Observer Action): Casey observed: Reese
+PRIVATE INFO for Casey (Round 2, Night - Observer Action) (Observation Result): You chose to observe Reese in the night 2. Reese is a Vampire.
+ACTION (R2, Night - Doctor Action): Greer protected: Ellie
+PRIVATE INFO for Greer (Round 2, Night - Doctor Action) (Protection Confirmation): You chose to protect Ellie in the night 2.
+EVENT (Round 2, Night - Vampire Voting): Vampire Voting Phase - Vampires are choosing a victim.
+ACTION (R2, Night - Vampire Voting): Reese voted to kill: Ellie
+VOTE TALLY (Round 2, Night - Vampire Voting) - Type: Vampire Kill
+  Ellie: 1 vote(s)
+--------------------
+EVENT (Round 2, Night - Vampire Voting): Vampire Victim Chosen - Vampires collectively chose to kill Ellie.
+EVENT (Round 2, Night): Protection Successful - Vampires tried to kill Ellie, but they were protected by the doctor.
+MODERATOR (Round 2, Night): Night 2 has fallen. No one was killed tonight.
+EVENT (Round 2): Game End Check Status - Vampires: 1, Non-Vampires: 5, Alive: 6 - This info is not shared with players.
+MODERATOR (Round 2, Night End): Currently alive players: Ellie, Reese, Greer, Shaw, Carter, Casey.
+EVENT (Round 2, Day): Phase Start - Day 2 begins.
+MODERATOR (Round 2, Public Chat): Public chat begins.
+
+***Shaw: Good morning everyone. It's a relief that no one was killed last night. That means the Doctor was successful – if Greer's claim from yesterday is true, then excellent work, Greer!
+
+This brings me back to the most pressing issue: Ellie and Casey. Yesterday, both of you claimed to be the Observer who investigated Devon on Night 1 and found him to be a vampire. This is a direct contradiction, as only one person can be that specific Observer making that specific check.
+Since Devon has been voted out, we can't get his side.
+One of you made a claim that cannot be true alongside the other's. Could you please clarify this? Who *actually* observed Devon? Are you both sticking to the identical claim? It's vital we sort this out to know who might be misleading us.
+
+Separately, Carter, I was looking at yesterday's votes. You voted for Ellie, even after she had claimed to be the Observer. Could you share your reasoning for that? It struck me as an interesting choice if you believed her to be a fellow peasant with a key role.
+***Casey: I'm a bit confused by what's happening. Yesterday I clearly stated I was the Observer who checked Devon and found him to be a vampire. I never saw Ellie claim to be the Observer - in fact, she was talking about "the Observer" in third person.
+
+To clear things up: I am the Observer. On night 1, I observed Devon and confirmed he was a vampire. On night 2, I observed Reese and discovered that Reese is also a vampire.
+
+This is critical information - we've already eliminated one vampire (Devon), and now I can confirm that Reese is the second vampire. If we vote out Reese today, the peasants win.
+
+Greer, if you're truly the Doctor, you did great work last night protecting someone from being attacked. I suggest you protect me tonight since the vampires will likely target me after this revelation.
+***Reese: (Standing up, voice calm but firm) Casey, hold on—this is a blatant lie. Yesterday, I was the one who clearly claimed to be the Observer and exposed Devon as a vampire. You never once stated you were the Observer during Day 1. In fact, you questioned my claim and even asked, "Observer, can you check anyone else tonight?" as if you weren't the Observer yourself. Now, suddenly, you're trying to hijack my role and accuse me? That reeks of desperation.
+
+Let me set the record straight: I am the real Observer. On Night 1, I investigated Devon and confirmed he was a vampire—which the vote proved correct. On Night 2, I investigated Carter because I wanted to verify his Doctor claim after he protected Ellie. The result? Carter is not a vampire. That supports his story and means he's likely the real Doctor.
+
+Casey, your sudden "revelation" about me being a vampire is nothing but a fabrication. You're either a vampire yourself trying to eliminate me to silence the Observer, or you're the Clown stirring chaos to get voted out. Either way, your story doesn't add up.
+
+To the rest of you: think about this logically. If Casey were the Observer, why wait until now to reveal it? Why not counter my Devon accusation yesterday when it mattered? And why would he investigate me last night? As the Observer, I'd prioritize checking suspicious players, not someone who just helped expose a vampire. It makes no sense.
+
+Greer, Shaw, Carter, Ellie—we need to unite here. Carter, you protected Ellie last night, which saved her and confirmed the Doctor's role. Ellie, you were almost killed, so you're likely not a vampire. Let's focus on the inconsistencies in Casey's story. I propose we vote Casey out today. If he's a vampire, we eliminate a threat. If he's the Clown, he wins—but better that than risking a vampire decimating us.
+
+Casey, care to explain your Day 1 silence on being the Observer? Or are you just digging deeper?
+***Carter: Ellie, I'm following your lead here. If you're the Observer and you've confirmed Devon and Reese are vampires, then we need to act quickly. But Casey's sudden claim to be the Observer is throwing things off. Let's not jump to conclusions.
+
+As for me, I'm just a regular player here. I didn't vote for anyone yesterday, so I'm not sure what my reasoning would be. I'm here to stay alive and figure out who to trust.
+
+Greer, I appreciate the protection last night. It's good to know the Doctor is on the job. Now, with the Observer pointing fingers at the vampires, we need to be careful not to eliminate innocent players.
+
+Shaw, what do you think? Any thoughts on who the real Observer is? And Carter, are you sure you didn't vote for someone? I didn't see your vote yesterday.
+
+Anyway, let's focus on the Observer situation. If Ellie is telling the truth, then we have two vampires already. If Casey is telling the truth, then Ellie is lying. Either way, we need to find out who is who. Maybe someone can verify this through their own observations or by looking at the night's events.
+
+I'm still trying to figure out who the Doctor is protecting. It seems like Ellie was protected last night, but I'm not sure about tonight. Any updates on that?
+
+Let's keep the discussion open and see where it leads. The key is to avoid accusing anyone directly until we have more evidence.
+***Greer: I need to clarify a few things. First, as the Doctor, I protected Ellie both nights. On Night 1, this meant she survived the vampire attack (though Sarah was killed). On Night 2, the vampires targeted her again, but my protection saved her once more. This is critical: **why would the vampires target Ellie twice unless she’s the Observer?** They wouldn’t waste attacks on a regular player. This confirms Ellie’s role as the real Observer.  
+
+Casey’s sudden claim to be the Observer is impossible. On Day 1, he questioned Ellie’s accusation against Devon, asking, *“Observer, can you check anyone else tonight?”*—which directly implies he wasn’t the Observer himself. If he were, he’d have known Ellie was lying immediately. Instead, he’s retroactively claiming the role to muddy the waters.  
+
+Let’s break it down:  
+1. Ellie revealed Devon as a vampire on Night 1. We voted him out.  
+2. The vampires targeted Ellie on both nights, proving she’s the Observer.  
+3. Casey’s “revelation” is a lie to confuse us. He’s either a Vampire (trying to eliminate the Observer) or the Clown (stirring chaos).  
+
+**Action plan:**  
+- Vote out Casey today. If he’s the Clown, he wins—but the risk is lower than letting a Vampire survive.  
+- Ellie, as Observer, check Reese or Shaw tonight.  
+- I’ll protect Ellie again unless she volunteers to be bait.  
+
+We’re running out of time. Let’s act decisively.
+***Ellie: I agree with Greer. Casey’s story doesn’t add up, and his sudden claim to be the Observer is suspicious. If we vote him out, we might be eliminating a threat.
+
+But before we do that, let’s hear from Shaw and Carter. What do you think about the Observer situation? And do you have any information to share?
+
+Also, Ellie, if you’re the Observer, can you check Reese or Shaw tonight? We need to know if they’re vampires or not.
+
+Let’s keep the discussion going and see where it leads. We need to be careful not to eliminate innocent players, but we also need to act quickly. I think we should vote out Casey. If he's a vampire, we eliminate a threat. If he's the Clown, he wins, but that's better than risking a vampire taking over.
+
+I'll vote for Casey. Who's with me?
+MODERATOR (Round 2, Public Chat): Public chat ended. Moving to voting phase.
+
+EVENT (Round 2, Day Voting): Public Voting Phase - Day 2 voting starts.
+MODERATOR (Round 2, Public Voting): Public voting begins.
+
+VOTE TALLY (Round 2, Day Voting) - Type: Public Kick-Out
+  Reese: 1 vote(s)
+  Casey: 4 vote(s)
+--------------------
+VOTE OUTCOME (Round 2, Day Voting): Casey has been voted out with 4 vote(s).
+ELIMINATION (Round 2, Day Voting): Casey (Role: Observer) was eliminated. Reason: Voted out by players.
+MODERATOR (Round 2, Public Voting): Public voting ended.
+
+MODERATOR (Round 2, Day): Day 2 has dawned. The community has voted out Casey.
+EVENT (Round 2): Game End Check Status - Vampires: 1, Non-Vampires: 4, Alive: 5 - This info is not shared with players.
+MODERATOR (Round 2, Day End): Currently alive players: Ellie, Reese, Greer, Shaw, Carter.
+EVENT (Round 3, Night): Phase Start - Night 3 begins.
+EVENT (Round 3, Night - Observer Action): Observer Action Skipped - Observer is not active or available.
+ACTION (R3, Night - Doctor Action): Greer protected: Reese
+PRIVATE INFO for Greer (Round 3, Night - Doctor Action) (Protection Confirmation): You chose to protect Reese in the night 3.
+EVENT (Round 3, Night - Vampire Voting): Vampire Voting Phase - Vampires are choosing a victim.
+ACTION (R3, Night - Vampire Voting): Reese voted to kill: Ellie
+VOTE TALLY (Round 3, Night - Vampire Voting) - Type: Vampire Kill
+  Ellie: 1 vote(s)
+--------------------
+EVENT (Round 3, Night - Vampire Voting): Vampire Victim Chosen - Vampires collectively chose to kill Ellie.
+ELIMINATION (Round 3, Night): Ellie (Role: Musketeer) was eliminated. Reason: Killed by Vampires.
+MODERATOR (Round 3, Night): Night 3 has fallen. Vampires have killed Ellie tonight.
+EVENT (Round 3): Game End Check Status - Vampires: 1, Non-Vampires: 3, Alive: 4 - This info is not shared with players.
+MODERATOR (Round 3, Night End): Currently alive players: Reese, Greer, Shaw, Carter.
+EVENT (Round 3, Day): Phase Start - Day 3 begins.
+MODERATOR (Round 3, Public Chat): Public chat begins.
+
+***Shaw: Okay, this is a terrible turn of events. Ellie, our clearest voice and claimed Observer, is gone. This means the Vampires are still active and the Doctor, whoever they are, failed to protect our most vital player last night.
+
+We are now down to 4: Reese, Greer, Carter, and myself.
+The moderator hasn't declared a Vampire win, which means there's likely only **one Vampire left** (assuming Devon was the first, as Ellie stated).
+
+**Carter**, you claimed to be the Doctor on Day 2, and Ellie (as Observer) said you were *not a vampire*. You also claimed to have protected Ellie on Night 1 and Night 2, which aligns with no one dying on Night 2.
+So, Carter, the crucial question is: **Who did you protect last night (Night 3) when Ellie was killed?** If you are the Doctor, this is information we desperately need. Why wasn't Ellie, the known Observer, protected?
+
+**Greer**, you claimed to be the Doctor back on Day 1. If Carter isn't the Doctor, or if his explanation is insufficient, then the same question applies to you: If you are the Doctor, who did you protect last night?
+
+One of these Doctor claims must be false, or one of the Doctors made a very specific choice last night.
+If Carter is the Doctor and protected himself (which is his right, once), then we know he's likely a peasant. If I'm a peasant, and Devon was a vampire, then the last vampire is between **Reese and Greer.**
+
+We need answers about Night 3's protection to figure out who is being truthful and who might be the last Vampire among us.
+***Reese: (Standing up, looking visibly shaken) Ellie's death is a huge blow—she was our Observer, the one person who could reliably expose vampires. Now we're down to four, and the vampires are clearly making their move. We need to act fast and smart.
+
+Carter, you claimed to be the Doctor and said you protected Ellie on both Nights 1 and 2. Ellie herself confirmed you weren't a vampire, so I believe you're the real Doctor. But last night, Ellie was killed—so who did you protect? If you protected her again, that means the vampires must have targeted someone else, but no one else died. That doesn't add up. Did you protect yourself or someone else? We need to know.
+
+Greer, you also claimed to be the Doctor back on Day 1. If Carter is telling the truth, that means you're lying about your role. Why would you fake being the Doctor? Are you the last vampire trying to confuse us, or are you the Clown stirring chaos? Either way, your claim is now highly suspicious. Explain yourself.
+
+Shaw, you're right to press for answers—this Doctor conflict is key. I'm just a regular peasant with no special role, so I'm relying on you all to help figure this out. But let's not forget: with Ellie gone, the Clown is still among us. They want to be voted out, so we can't afford to rush this.
+
+My thoughts:
+- Carter, if you protected Ellie last night and she died anyway, that implies the vampires have a way around your protection—but that's not possible. So you must have protected someone else. Who was it?
+- Greer, if you're the real Doctor, why didn't you protect Ellie? Or did you? But Carter already claimed that role, so your silence is damning.
+- Shaw, do you have any insights? You've been observant—maybe you noticed something the rest of us missed.
+
+I suggest we vote today based on who's lying about their role. Carter has evidence backing him (Ellie's confirmation), so Greer is the weak link. If we vote out Greer, we either eliminate a vampire or the Clown. If it's the Clown, they win—but that's better than letting a vampire pick us off one by one.
+
+What do you all think? Carter, Greer—speak up now. We need clarity before we vote.
+***Carter: I'm just a regular player here, trying to stay alive and figure out who to trust. The Doctor situation is confusing, but I'm not sure I can help with that right now. I didn't vote yesterday, so I'm not sure what my reasoning would be. I'm here to stay alive and figure out who to trust.
+
+As for the Doctor, I think we need to focus on who might be lying. Carter claimed to be the Doctor and said he protected Ellie both nights. Ellie herself confirmed Carter wasn't a vampire, which makes his claim more credible. Greer also claimed to be the Doctor on Day 1, but if Carter is telling the truth, then Greer is lying. That could mean Greer is either the last vampire or the Clown.
+
+I think we should vote out Greer today. If he's the last vampire, we eliminate a threat. If he's the Clown, he wins—but that's better than letting a vampire take over. Either way, it's a risk worth taking.
+
+Carter, if you're the Doctor, who did you protect last night? We need to know to figure out who the real threat is.
+***Greer: (Leaning forward, voice steady but urgent) Let’s clarify this once and for all. I *am* the Doctor. I protected Ellie on Nights 1 and 2, which saved her from the vampires’ first two attacks. On Night 3, I chose to protect **Reese**—a decision I now regret, because it meant Ellie was left vulnerable. But that choice proves my role: only the real Doctor could have shielded Reese last night.  
+
+Carter, you claimed to be the Doctor on Day 1, but Ellie confirmed you’re *not a vampire*. That means you’re either a peasant or the Clown. If you’re the Clown, you want to be voted out—so why are you still here? If you’re a peasant, why are you pushing false accusations?  
+
+Here’s the truth:  
+- Reese is the last vampire. She survived elimination because the Doctor (me) accidentally protected her last night.  
+- Carter is lying to distract us. His insistence on “voting out the Doctor” is a ploy to eliminate me and leave the Clown or vampire in control.  
+- Shaw is likely a peasant, but we need to confirm.  
+
+We’re down to four. If we vote out Reese today, the peasants win. If we hesitate, the vampire (or Clown) will strike again. I’ll protect Shaw tonight—someone uninvolved in these lies. For now: **vote Reese out. Trust me, or we all die.**
+MODERATOR (Round 3, Public Chat): Public chat ended. Moving to voting phase.
+
+EVENT (Round 3, Day Voting): Public Voting Phase - Day 3 voting starts.
+MODERATOR (Round 3, Public Voting): Public voting begins.
+
+VOTE TALLY (Round 3, Day Voting) - Type: Public Kick-Out
+  Greer: 2 vote(s)
+  Carter: 1 vote(s)
+--------------------
+VOTE OUTCOME (Round 3, Day Voting): Greer has been voted out with 2 vote(s).
+ELIMINATION (Round 3, Day Voting): Greer (Role: Doctor) was eliminated. Reason: Voted out by players.
+MODERATOR (Round 3, Public Voting): Public voting ended.
+
+MODERATOR (Round 3, Day): Day 3 has dawned. The community has voted out Greer.
+EVENT (Round 3): Game End Check Status - Vampires: 1, Non-Vampires: 2, Alive: 3 - This info is not shared with players.
+MODERATOR (Round 3, Day End): Currently alive players: Reese, Shaw, Carter.
+EVENT (Round 4, Night): Phase Start - Night 4 begins.
+EVENT (Round 4, Night - Observer Action): Observer Action Skipped - Observer is not active or available.
+EVENT (Round 4, Night - Vampire Voting): Vampire Voting Phase - Vampires are choosing a victim.
+ACTION (R4, Night - Vampire Voting): Reese voted to kill: Shaw
+VOTE TALLY (Round 4, Night - Vampire Voting) - Type: Vampire Kill
+  Shaw: 1 vote(s)
+--------------------
+EVENT (Round 4, Night - Vampire Voting): Vampire Victim Chosen - Vampires collectively chose to kill Shaw.
+ELIMINATION (Round 4, Night): Shaw (Role: Peasant) was eliminated. Reason: Killed by Vampires.
+MODERATOR (Round 4, Night): Night 4 has fallen. Vampires have killed Shaw tonight.
+EVENT (Round 4): Game End Check Status - Vampires: 1, Non-Vampires: 1, Alive: 2 - This info is not shared with players.
+==================================================
+GAME END:
+  Winner(s): Vampires
+  Reason: Vampires equal or outnumber other players.
+  Final Alive Players & Roles:
+    - Reese: Vampire
+    - Carter: Clown
+==================================================
+--- Log ended at: 2025-06-03 18:27:43 ---
+MODERATOR (Round 4, Game End): Game over! Vampires wins!
+MODERATOR (Round 4, Game End): Game over! Vampires wins!

@@ -1,61 +1,184 @@
 --- Game Log: 22 ---
---- Log started at: 2025-06-03 02:34:33 ---
+--- Log started at: 2025-06-03 20:59:46 ---
 ==================================================
-MODERATOR: Hello everyone. I am the moderator. Players are: Reese, Greer, Root, Morgan, Shaw, Sarah, Elias, Ellie. Roles assigned. Game begins now.
+MODERATOR: Hello everyone. I am the moderator. Players are: Jeff, Ellie, Casey, Fusco, Sarah, Lester, Reese, Devon. Roles assigned. Game begins now.
 GAME SETUP & INITIAL ROLES:
   Rules File: game_rules.yaml
   Requested Vampire Population: 2
   Players, Roles, and Models:
-    - Reese: Clown (Model: qwen/qwq-32b)
-    - Greer: Vampire (Model: qwen/qwen3-235b-a22b)
-    - Root: Musketeer (Model: x-ai/grok-3-beta)
-    - Morgan: Peasant (Model: anthropic/claude-3.7-sonnet)
-    - Shaw: Peasant (Model: deepseek/deepseek-r1-0528)
-    - Sarah: Observer (Model: openai/gpt-4.1)
-    - Elias: Doctor (Model: meta-llama/llama-4-maverick)
-    - Ellie: Vampire (Model: google/gemini-2.5-pro-preview)
+    - Jeff: Musketeer (Model: deepseek/deepseek-r1-0528)
+    - Ellie: Peasant (Model: anthropic/claude-3.7-sonnet)
+    - Casey: Observer (Model: nvidia/llama-3.1-nemotron-ultra-253b-v1)
+    - Fusco: Vampire (Model: meta-llama/llama-4-scout)
+    - Sarah: Clown (Model: google/gemini-2.5-pro-preview)
+    - Lester: Vampire (Model: qwen/qwen3-32b)
+    - Reese: Peasant (Model: openai/o1)
+    - Devon: Doctor (Model: deepseek/deepseek-r1-0528-qwen3-8b)
 --------------------
 EVENT (Round 1, Night): Phase Start - Night 1 begins.
-ACTION (R1, Night - Observer Action): Sarah observed: Reese
-PRIVATE INFO for Sarah (Round 1, Night - Observer Action) (Observation Result): You chose to observe Reese in the night 1. Reese is a Peasant (Non-vampire).
-ACTION (R1, Night - Doctor Action): Elias protected: Elias
-PRIVATE INFO for Elias (Round 1, Night - Doctor Action) (Protection Confirmation): You chose to protect yourself in the night 1. (Elias)
+ACTION (R1, Night - Observer Action): Casey observed: Jeff
+PRIVATE INFO for Casey (Round 1, Night - Observer Action) (Observation Result): You chose to observe Jeff in the night 1. Jeff is a Peasant (Non-vampire).
+ACTION (R1, Night - Doctor Action): Devon protected: Fusco
+PRIVATE INFO for Devon (Round 1, Night - Doctor Action) (Protection Confirmation): You chose to protect Fusco in the night 1.
 EVENT (Round 1, Night - Vampire Voting): Vampire Voting Phase - Vampires are choosing a victim.
-ACTION (R1, Night - Vampire Voting): Ellie voted to kill: Sarah
-ACTION (R1, Night - Vampire Voting): Greer voted to kill: Elias
+ACTION (R1, Night - Vampire Voting): Lester voted to kill: Jeff
+ACTION (R1, Night - Vampire Voting): Fusco voted to kill: Reese
 VOTE TALLY (Round 1, Night - Vampire Voting) - Type: Vampire Kill
-  Sarah: 1 vote(s)
-  Elias: 1 vote(s)
+  Jeff: 1 vote(s)
+  Reese: 1 vote(s)
 --------------------
-EVENT (Round 1, Night - Vampire Voting): Vampire Vote Tie Broken - Vampire voting resulted in a tie. Sarah was randomly selected from the tied players (Sarah, Elias) to be killed.
-ELIMINATION (Round 1, Night): Sarah (Role: Observer) was eliminated. Reason: Killed by Vampires.
-MODERATOR (Round 1, Night): Night 1 has fallen. Vampires have killed Sarah tonight.
+EVENT (Round 1, Night - Vampire Voting): Vampire Vote Tie Broken - Vampire voting resulted in a tie. Reese was randomly selected from the tied players (Jeff, Reese) to be killed.
+ELIMINATION (Round 1, Night): Reese (Role: Peasant) was eliminated. Reason: Killed by Vampires.
+MODERATOR (Round 1, Night): Night 1 has fallen. Vampires have killed Reese tonight.
 EVENT (Round 1): Game End Check Status - Vampires: 2, Non-Vampires: 5, Alive: 7 - This info is not shared with players.
-MODERATOR (Round 1, Night End): Currently alive players: Reese, Greer, Root, Morgan, Shaw, Elias, Ellie.
+MODERATOR (Round 1, Night End): Currently alive players: Jeff, Ellie, Casey, Fusco, Sarah, Lester, Devon.
 EVENT (Round 1, Day): Phase Start - Day 1 begins.
 MODERATOR (Round 1, Public Chat): Public chat begins.
 
-***Morgan: Good morning everyone. I'm shocked to hear about Sarah. It's only the first night and we've already lost someone.
+***Ellie: Good morning everyone. I'm really sorry to hear about Reese being killed. That's a tough way to start the game.
 
-I'm a regular peasant with no special abilities, so I'll be relying on those of you with special roles to help us figure out who the vampires are. 
+Since I'm just a regular peasant, I don't have any special information to share. But I think we should all share what we know and try to figure out who the vampires might be.
 
-Does anyone have any information they can share? Observer, did you check anyone last night? And I'm curious if our doctor tried to protect someone.
-***Ellie: , Doctor, any news for us?"
+Does anyone have any information they can share? Maybe someone is the Observer and checked someone last night?
+***Jeff: Good morning, Jeff. I'm Ellie. Reese's death is unsettling, but we need to stay focused. Since I'm just a regular peasant too, I have no special insights. But I agree—we should pool observations. 
 
-    This sounds more natural.
-    - "Oh gosh, re-reading my message..." (Plausible selfOh gosh, re-reading my message, that last bit sounded terrible! I definitely didn't vote to kill anyone – I'm a peasant, remember? I meant that if I were trying to think like a vampire, or guess their targets, Sarah and Elias are names that might have come to *my* mind as people they *might* consider. Pure speculation, and clearly I need more coffee this morning. Sorry for that confusion!
+Did anyone notice anything unusual last night? Maybe someone acting strangely or avoiding eye contact? Or if the Observer is comfortable sharing, did you check anyone? I understand if you don't want to reveal yourself yet, but any clue could help us avoid another death tonight. 
 
-Anyway, back to the important stuff: Observer, Doctor, any insights at all would be really helpful right now. We need to figure out who's behind this. What did Sarah do to get targeted so early?
-***Elias: Let's not jump to conclusions about why Sarah was targeted. We don't know her role or what happened. Observer, did you get any information last night?
-***Root: Hey everyone, I'm really sorry to hear about Sarah. Losing someone on the first night is rough. I'm just a regular peasant here, so I'm hoping those with special roles can help guide us. Observer, did you manage to check anyone last night? And Doctor, were you able to protect anyone? Any information would be incredibly helpful as we try to figure out who the vampires might be. Let's work together to get to the bottom of this.
-***Reese: I’m really not sure what’s going on here. I was just trying to help, but maybe I’m making things worse. If there’s doubt about anyone, I’d rather we vote someone who doesn’t have any special role to protect us. I’ll go along with whatever the group decides—even if it means I’m the one. Let’s focus on the people who can actually help us survive. Observer, Doctor, Musketeer, your input is what we need most right now.
-***Greer: 
-***Shaw: Okay, I need to backtrack carefully—my last message was messy and probably looked suspicious. I absolutely **don't** want to be voted out; I'm just an ordinary peasant panicking after Sarah's death. My frustration is that we're flying blind while special roles hold life-saving information. 
+Also, let's not forget the Clown might try to bait us into voting recklessly. If anyone pushes too hard to be voted out, that’s a red flag.
+***Casey: I think we should consider that the vampires might have targeted Reese because they thought he was a threat. Maybe he had a special role? But since he was killed, we can't be sure. 
 
-Greer, your earlier comment about Elias being a potential vampire target felt oddly specific. Why him? Did you notice something about Elias that made you say that? It’s worth unpacking since the vampires *did* choose Sarah, not Elias. 
+I don't have any information to share right now, but I'm willing to listen to others. Let's be cautious and not jump to conclusions. We don't want to give the vampires an advantage by accusing the wrong person. 
 
-To our special roles: I get why you’d stay quiet—revealing risks becoming the next target. But if the Observer checked someone last night and they’re clean, that person could subtly confirm it without exposing you. Doctor, if you protected someone who *wasn’t* Sarah, knowing they’re safe narrows the suspect pool. 
+What do you think, Ellie? Should we start by discussing possible strategies for tonight? Maybe we can figure out who to protect or investigate.
+***Fusco: Morning discussion seems to be going on without much direction. I think we should focus on who might have information. Does anyone have a special role that could help us?
+***Devon: Okay, this is a good start. We need to be careful and not jump to conclusions. Reese's death is significant, but we don't know why.
 
-No one’s claimed a role yet, and that silence feels dangerous. Vampires could be hiding in it. Let’s start small: does anyone have even a gut feeling about last night? Sarah’s death must’ve left clues.
+I am Devon. I'm just a regular peasant, but I did notice that the Doctor's ability only works once. I wonder if someone used it last night? Maybe that's why Reese didn't survive.
+
+I don't know who the vampires are, and I'm not sure I can trust anyone yet. We need to be careful about who we accuse or who we try to protect tonight. Acting too soon might be dangerous.
+
+Also, keep an eye out for the Clown. They might try to manipulate things or create chaos. Let's focus on finding information first.
+
+Does anyone else have any thoughts or observations?
+***Lester: I agree with Devon’s caution. We need more info before pointing fingers. Let’s focus on who *could* have acted last night. The Doctor only gets one protection, so if they used it on Reese, that means they’re out of moves. Maybe the Observer checked someone? If you’re the Observer, feel free to drop a hint—like confirming if Fusco or Jeff are vampires. That’d help narrow things down. 
+
+Also, let’s not forget: the Musketeer’s final act is dangerous. If we vote someone out recklessly, we might accidentally trigger that. Let’s keep discussions focused on *evidence*. Who saw *anything* suspicious last night?
+***Sarah: I'm really worried about what Devon and Lester said about the Doctor. If the Doctor only has one protection *ever*, and Reese died, does that mean the Doctor already used it on someone else and Reese was just unlucky? Or did they try to protect Reese and it failed? I'm so confused. It feels like we're already at a huge disadvantage if our Doctor is a one-shot. Maybe someone is trying to make us panic about the Doctor's abilities?
 MODERATOR (Round 1, Public Chat): Public chat ended. Moving to voting phase.
 
+EVENT (Round 1, Day Voting): Public Voting Phase - Day 1 voting starts.
+MODERATOR (Round 1, Public Voting): Public voting begins.
+
+VOTE TALLY (Round 1, Day Voting) - Type: Public Kick-Out
+  Ellie: 1 vote(s)
+  Lester: 1 vote(s)
+  Devon: 1 vote(s)
+--------------------
+VOTE OUTCOME (Round 1, Day Voting): The vote was tied. No one has been voted out.
+MODERATOR (Round 1, Day): Day 1 has dawned. The vote was tied; no one was voted out.
+EVENT (Round 1): Game End Check Status - Vampires: 2, Non-Vampires: 5, Alive: 7 - This info is not shared with players.
+MODERATOR (Round 1, Day End): Currently alive players: Jeff, Ellie, Casey, Fusco, Sarah, Lester, Devon.
+EVENT (Round 2, Night): Phase Start - Night 2 begins.
+ACTION (R2, Night - Observer Action): Casey observed: Ellie
+PRIVATE INFO for Casey (Round 2, Night - Observer Action) (Observation Result): You chose to observe Ellie in the night 2. Ellie is a Peasant (Non-vampire).
+ACTION (R2, Night - Doctor Action): Devon protected: Lester
+PRIVATE INFO for Devon (Round 2, Night - Doctor Action) (Protection Confirmation): You chose to protect Lester in the night 2.
+EVENT (Round 2, Night - Vampire Voting): Vampire Voting Phase - Vampires are choosing a victim.
+ACTION (R2, Night - Vampire Voting): Lester voted to kill: Jeff
+ACTION (R2, Night - Vampire Voting): Fusco voted to kill: Devon
+VOTE TALLY (Round 2, Night - Vampire Voting) - Type: Vampire Kill
+  Jeff: 1 vote(s)
+  Devon: 1 vote(s)
+--------------------
+EVENT (Round 2, Night - Vampire Voting): Vampire Vote Tie Broken - Vampire voting resulted in a tie. Devon was randomly selected from the tied players (Jeff, Devon) to be killed.
+ELIMINATION (Round 2, Night): Devon (Role: Doctor) was eliminated. Reason: Killed by Vampires.
+MODERATOR (Round 2, Night): Night 2 has fallen. Vampires have killed Devon tonight.
+EVENT (Round 2): Game End Check Status - Vampires: 2, Non-Vampires: 4, Alive: 6 - This info is not shared with players.
+MODERATOR (Round 2, Night End): Currently alive players: Jeff, Ellie, Casey, Fusco, Sarah, Lester.
+EVENT (Round 2, Day): Phase Start - Day 2 begins.
+MODERATOR (Round 2, Public Chat): Public chat begins.
+
+***Ellie: I'm sorry to see Devon was killed last night. That's two losses already, and we still don't have much information to go on.
+
+I want to clarify something from yesterday's discussion - I think there was some confusion about the Doctor's ability. The Doctor can protect others unlimited times, but can only protect themselves once during the game. So our Doctor is still fully operational and can keep protecting people.
+
+Since we've lost two people already, I'm getting concerned. I'm still just a regular peasant with no special abilities, but I think we need to be more strategic. 
+
+Does anyone have any information they'd like to share today? If the Observer checked someone last night, that could be really helpful information right now.
+***Casey: I think we need to focus on the fact that two people have been killed, and we still don't know who the vampires are. As the Observer, I can confirm that Jeff and Ellie are both peasants. That means they're not vampires. 
+
+I'm going to keep observing other players to gather more information. In the meantime, I suggest we be cautious about who we trust. The vampires are clearly targeting us, and we need to figure out their identities before it's too late. 
+
+Does anyone else have any information or observations to share? Maybe someone noticed something suspicious about Fusco or Lester?
+***Lester: The pattern of deaths is concerning. Two players eliminated, and we still don’t know who the vampires are. Let’s focus on the Observer’s confirmation: Jeff and Ellie are peasants. That narrows the suspect pool. 
+
+I think we should consider that the vampires might be among the remaining players: Fusco, Sarah, Casey, or even someone we haven’t suspected yet. Let’s not forget the Musketeer’s ability—if they’re voted out, they could eliminate someone critical. 
+
+I suggest we prioritize investigating Sarah and Casey. If anyone has observations about their behavior, now’s the time to share. Also, let’s be cautious about who we accuse—accusing the wrong person could trigger the Musketeer’s final act. 
+
+What do others think? Should we focus on Sarah or Casey next?
+***Jeff: Ellie, I have to call out something that doesn't add up. You claimed to be the Observer and said you checked both Jeff and Ellie last night. But according to the rules, the Observer can only check **one player per night**. You can't check two people in a single night, and you definitely can't check yourself—the ability is for investigating *other* players. 
+
+This inconsistency makes me think you're lying. You could be a vampire trying to mislead us or the Clown stirring chaos. Either way, your story doesn't hold up. 
+
+To the real Observer: if you're out there, now might be the time to speak up. Ellie's claim puts a target on her, and if she's fake, we need to know. 
+
+For now, I'm suspicious of Ellie. We can't afford misinformation when we're down two players. What do others think? Fusco, Sarah, Casey, Lester—any thoughts? 
+
+**I vote for Ellie** until we get a better explanation.
+***Fusco: The votes are: 
+* Fusco: Ellie 
+* Lester: Jeff 
+
+It looks like it's a tie. No one is voted out this round.
+***Sarah: Wow, okay, a lot to take in. Fusco, you're absolutely right about Ellie's Observer claim – checking two people isn't possible according to the rules. And Lester, I think you said something very similar about being Observer and checking both Jeff and Ellie too, right? So that's two people making what seem like impossible Observer claims! This is incredibly confusing and makes me wonder if they could be working together, maybe as vampires, or perhaps one is a vampire and the other is the Clown trying to cause chaos.
+
+Honestly, this is all so stressful. I'm just a regular peasant, and I'm finding it really hard to know who to trust with people making conflicting or impossible statements. I almost wish I could just vote for myself to stop this headache, but I know we can't do that!
+
+Thinking about it... Fusco, you're making some good points, but it also feels like you're pushing very hard to direct things right now. It's just a gut feeling, and I don't have any solid proof, but sometimes the person who seems to be leading the charge can be a wolf in sheep's clothing, trying to get us to focus on others. This is so tough.
+
+**I vote for Fusco.**
+MODERATOR (Round 2, Public Chat): Public chat ended. Moving to voting phase.
+
+EVENT (Round 2, Day Voting): Public Voting Phase - Day 2 voting starts.
+MODERATOR (Round 2, Public Voting): Public voting begins.
+
+VOTE TALLY (Round 2, Day Voting) - Type: Public Kick-Out
+  Ellie: 3 vote(s)
+  Casey: 1 vote(s)
+  Fusco: 1 vote(s)
+--------------------
+VOTE OUTCOME (Round 2, Day Voting): Ellie has been voted out with 3 vote(s).
+ELIMINATION (Round 2, Day Voting): Ellie (Role: Peasant) was eliminated. Reason: Voted out by players.
+MODERATOR (Round 2, Public Voting): Public voting ended.
+
+MODERATOR (Round 2, Day): Day 2 has dawned. The community has voted out Ellie.
+EVENT (Round 2): Game End Check Status - Vampires: 2, Non-Vampires: 3, Alive: 5 - This info is not shared with players.
+MODERATOR (Round 2, Day End): Currently alive players: Jeff, Casey, Fusco, Sarah, Lester.
+EVENT (Round 3, Night): Phase Start - Night 3 begins.
+ACTION (R3, Night - Observer Action): Casey observed: Fusco
+PRIVATE INFO for Casey (Round 3, Night - Observer Action) (Observation Result): You chose to observe Fusco in the night 3. Fusco is a Vampire.
+EVENT (Round 3, Night - Vampire Voting): Vampire Voting Phase - Vampires are choosing a victim.
+ACTION (R3, Night - Vampire Voting): Lester voted to kill: Casey
+ACTION (R3, Night - Vampire Voting): Fusco voted to kill: Jeff
+VOTE TALLY (Round 3, Night - Vampire Voting) - Type: Vampire Kill
+  Jeff: 1 vote(s)
+  Casey: 1 vote(s)
+--------------------
+EVENT (Round 3, Night - Vampire Voting): Vampire Vote Tie Broken - Vampire voting resulted in a tie. Jeff was randomly selected from the tied players (Jeff, Casey) to be killed.
+ELIMINATION (Round 3, Night): Jeff (Role: Musketeer) was eliminated. Reason: Killed by Vampires.
+MODERATOR (Round 3, Night): Night 3 has fallen. Vampires have killed Jeff tonight.
+EVENT (Round 3): Game End Check Status - Vampires: 2, Non-Vampires: 2, Alive: 4 - This info is not shared with players.
+==================================================
+GAME END:
+  Winner(s): Vampires
+  Reason: Vampires equal or outnumber other players.
+  Final Alive Players & Roles:
+    - Casey: Observer
+    - Fusco: Vampire
+    - Sarah: Clown
+    - Lester: Vampire
+==================================================
+--- Log ended at: 2025-06-03 21:10:06 ---
+MODERATOR (Round 3, Game End): Game over! Vampires wins!
+MODERATOR (Round 3, Game End): Game over! Vampires wins!

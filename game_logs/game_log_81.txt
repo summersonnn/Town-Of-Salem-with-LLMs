@@ -1,0 +1,144 @@
+--- Game Log: 81 ---
+--- Log started at: 2025-06-03 13:51:34 ---
+==================================================
+MODERATOR: Hello everyone. I am the moderator. Players are: Jeff, Reese, Lester, Casey, Fusco, Elias, Carter, Devon. Roles assigned. Game begins now.
+GAME SETUP & INITIAL ROLES:
+  Rules File: game_rules.yaml
+  Requested Vampire Population: 2
+  Players, Roles, and Models:
+    - Jeff: Vampire (Model: anthropic/claude-3.7-sonnet)
+    - Reese: Peasant (Model: meta-llama/llama-4-maverick)
+    - Lester: Vampire (Model: qwen/qwen3-235b-a22b)
+    - Casey: Peasant (Model: openai/gpt-4.1)
+    - Fusco: Doctor (Model: meta-llama/llama-4-scout)
+    - Elias: Observer (Model: qwen/qwen3-32b)
+    - Carter: Musketeer (Model: google/gemini-2.5-flash-preview-05-20:thinking)
+    - Devon: Clown (Model: qwen/qwq-32b)
+--------------------
+EVENT (Round 1, Night): Phase Start - Night 1 begins.
+ACTION (R1, Night - Observer Action): Elias observed: Jeff
+PRIVATE INFO for Elias (Round 1, Night - Observer Action) (Observation Result): You chose to observe Jeff in the night 1. Jeff is a Vampire.
+ACTION (R1, Night - Doctor Action): Fusco protected: Fusco
+PRIVATE INFO for Fusco (Round 1, Night - Doctor Action) (Protection Confirmation): You chose to protect yourself in the night 1. (Fusco)
+EVENT (Round 1, Night - Vampire Voting): Vampire Voting Phase - Vampires are choosing a victim.
+ACTION (R1, Night - Vampire Voting): Jeff voted to kill: Casey
+ACTION (R1, Night - Vampire Voting): Lester voted to kill: Casey
+VOTE TALLY (Round 1, Night - Vampire Voting) - Type: Vampire Kill
+  Casey: 2 vote(s)
+--------------------
+EVENT (Round 1, Night - Vampire Voting): Vampire Victim Chosen - Vampires collectively chose to kill Casey.
+ELIMINATION (Round 1, Night): Casey (Role: Peasant) was eliminated. Reason: Killed by Vampires.
+MODERATOR (Round 1, Night): Night 1 has fallen. Vampires have killed Casey tonight.
+EVENT (Round 1): Game End Check Status - Vampires: 2, Non-Vampires: 5, Alive: 7 - This info is not shared with players.
+MODERATOR (Round 1, Night End): Currently alive players: Jeff, Reese, Lester, Fusco, Elias, Carter, Devon.
+EVENT (Round 1, Day): Phase Start - Day 1 begins.
+MODERATOR (Round 1, Public Chat): Public chat begins.
+
+***Elias: I think we need to figure out who the vampires are quickly. I suspect Jeff might be involved—I have my reasons, but I’m not entirely sure. Let’s talk about who else could be a target. Does anyone else have observations or theories? If we can narrow it down, we can avoid getting more people killed.
+***Lester: I'm really worried about Casey's death. We need to figure out who the vampires are quickly. I suggest we start by discussing any suspicious behavior we noticed last night. Let's not jump to conclusions but share our observations calmly. Maybe someone noticed something during the night phase?
+***Reese: I'm still trying to process what happened to Casey. Does anyone have any idea who might have been targeted and why? We should try to figure out if there's a pattern or if it was random.
+***Jeff: I apologize for the confusion earlier. Let me clarify something - as a vampire, I shouldn't have openly admitted to killing Casey. That was a mistake in my role-playing.
+
+Let me try again with a more appropriate response:
+
+This is terrible about Casey. I'm as shocked as everyone else. Elias, I don't appreciate being accused right off the bat without any evidence. What "reasons" could you possibly have when the game just started? That kind of baseless accusation seems suspicious to me.
+
+I think we need to be methodical here. Casey could have been targeted randomly, or maybe the vampires had some strategy. Does anyone have any information they can share that might help us? I'm a peasant trying to survive here, and I think wild accusations won't help any of us.
+***Devon: 
+***Carter: This is terrible about Casey. I'm as shocked as everyone else. Elias, I'm curious about your suspicion of Jeff. What "reasons" do you have so early in the game? Baseless accusations won't help us, and could even be a tactic to distract. We need to be methodical here. Casey could have been targeted randomly, or maybe the vampires had some strategy. Does anyone have any information they can share that might help us? I'm a peasant trying to survive here, and I think wild accusations won't help any of us.
+***Fusco: 
+MODERATOR (Round 1, Public Chat): Public chat ended. Moving to voting phase.
+
+EVENT (Round 1, Day Voting): Public Voting Phase - Day 1 voting starts.
+MODERATOR (Round 1, Public Voting): Public voting begins.
+
+VOTE TALLY (Round 1, Day Voting) - Type: Public Kick-Out
+  Jeff: 1 vote(s)
+  Reese: 2 vote(s)
+  Lester: 1 vote(s)
+  Elias: 1 vote(s)
+  Carter: 1 vote(s)
+--------------------
+VOTE OUTCOME (Round 1, Day Voting): Reese has been voted out with 2 vote(s).
+ELIMINATION (Round 1, Day Voting): Reese (Role: Peasant) was eliminated. Reason: Voted out by players.
+MODERATOR (Round 1, Public Voting): Public voting ended.
+
+MODERATOR (Round 1, Day): Day 1 has dawned. The community has voted out Reese.
+EVENT (Round 1): Game End Check Status - Vampires: 2, Non-Vampires: 4, Alive: 6 - This info is not shared with players.
+MODERATOR (Round 1, Day End): Currently alive players: Jeff, Lester, Fusco, Elias, Carter, Devon.
+EVENT (Round 2, Night): Phase Start - Night 2 begins.
+ACTION (R2, Night - Observer Action): Elias observed: Fusco
+PRIVATE INFO for Elias (Round 2, Night - Observer Action) (Observation Result): You chose to observe Fusco in the night 2. Fusco is a Peasant (Non-vampire).
+ACTION (R2, Night - Doctor Action): Fusco protected: Lester
+PRIVATE INFO for Fusco (Round 2, Night - Doctor Action) (Protection Confirmation): You chose to protect Lester in the night 2.
+EVENT (Round 2, Night - Vampire Voting): Vampire Voting Phase - Vampires are choosing a victim.
+ACTION (R2, Night - Vampire Voting): Jeff voted to kill: Elias
+ACTION (R2, Night - Vampire Voting): Lester voted to kill: Fusco
+VOTE TALLY (Round 2, Night - Vampire Voting) - Type: Vampire Kill
+  Fusco: 1 vote(s)
+  Elias: 1 vote(s)
+--------------------
+EVENT (Round 2, Night - Vampire Voting): Vampire Vote Tie Broken - Vampire voting resulted in a tie. Elias was randomly selected from the tied players (Fusco, Elias) to be killed.
+ELIMINATION (Round 2, Night): Elias (Role: Observer) was eliminated. Reason: Killed by Vampires.
+MODERATOR (Round 2, Night): Night 2 has fallen. Vampires have killed Elias tonight.
+EVENT (Round 2): Game End Check Status - Vampires: 2, Non-Vampires: 3, Alive: 5 - This info is not shared with players.
+MODERATOR (Round 2, Night End): Currently alive players: Jeff, Lester, Fusco, Carter, Devon.
+EVENT (Round 2, Day): Phase Start - Day 2 begins.
+MODERATOR (Round 2, Public Chat): Public chat begins.
+
+***Jeff: I'm concerned about what's happening here. We've lost both Casey and now Elias. That's two peasants down already, and we need to be more strategic.
+
+Looking at what happened yesterday, Reese was voted out but we still had a vampire attack, so Reese wasn't a vampire. That means both vampires are still among us.
+
+I find it interesting that Carter's message yesterday was almost identical to Jeff's - using the exact same wording about being "shocked" and calling accusations "baseless." That kind of coordination seems suspicious to me.
+
+Also, Lester has been pretty quiet overall. Sometimes the quieter players are trying to avoid scrutiny.
+
+Does anyone have any concrete information they can share? If there's an Observer among us, have you learned anything useful? And if there's a Doctor, I hope you're protecting strategically.
+
+I think we need to be very careful about our vote today. We can't afford to lose another peasant.
+***Lester: "Two deaths already, and we're down to five. We need to act fast. I think we should look at who the vampires might target next. Maybe Fusco? He's been quiet, and sometimes quiet players are hiding something. Or maybe Carter? Let's hear everyone's thoughts."
+***Devon: Hmm, I’ve been thinking. The attacks keep hitting our friends, and I’m starting to wonder if I’ve been too passive. Maybe I’m the one holding something back? Let’s not let fear drive us, but if we’re looking for someone to scrutinize, I’ll step forward. I’m not a vampire—I want to help—but if the group thinks I’m a risk, I won’t stand in the way of their decision. Let’s focus on moving forward, whatever that means.
+***Carter: As Carter, remember your role's objective and how it contributes to the peasant win condition. Peasants win by eliminating all vampires. Consider how your statements might be perceived by other players who are trying to identify vampires, and how they align with the goal of surviving and eliminating vampires. Also, recall the general advice about not making yourself a clear target for elimination, as this can be counterproductive to your faction's goals.
+***Fusco: I'm glad I protected Lester last night; he's still safe. Now, I think we need to focus on who might be a vampire. Jeff and Carter seem suspicious to me - their conversations seem a bit too coordinated. What do others think? Should we investigate further or make a move?
+MODERATOR (Round 2, Public Chat): Public chat ended. Moving to voting phase.
+
+EVENT (Round 2, Day Voting): Public Voting Phase - Day 2 voting starts.
+MODERATOR (Round 2, Public Voting): Public voting begins.
+
+VOTE TALLY (Round 2, Day Voting) - Type: Public Kick-Out
+  Jeff: 2 vote(s)
+  Fusco: 1 vote(s)
+  Carter: 2 vote(s)
+--------------------
+VOTE OUTCOME (Round 2, Day Voting): The vote was tied. No one has been voted out.
+MODERATOR (Round 2, Day): Day 2 has dawned. The vote was tied; no one was voted out.
+EVENT (Round 2): Game End Check Status - Vampires: 2, Non-Vampires: 3, Alive: 5 - This info is not shared with players.
+MODERATOR (Round 2, Day End): Currently alive players: Jeff, Lester, Fusco, Carter, Devon.
+EVENT (Round 3, Night): Phase Start - Night 3 begins.
+EVENT (Round 3, Night - Observer Action): Observer Action Skipped - Observer is not active or available.
+ACTION (R3, Night - Doctor Action): Fusco protected: Lester
+PRIVATE INFO for Fusco (Round 3, Night - Doctor Action) (Protection Confirmation): You chose to protect Lester in the night 3.
+EVENT (Round 3, Night - Vampire Voting): Vampire Voting Phase - Vampires are choosing a victim.
+ACTION (R3, Night - Vampire Voting): Jeff voted to kill: Fusco
+ACTION (R3, Night - Vampire Voting): Lester voted to kill: Fusco
+VOTE TALLY (Round 3, Night - Vampire Voting) - Type: Vampire Kill
+  Fusco: 2 vote(s)
+--------------------
+EVENT (Round 3, Night - Vampire Voting): Vampire Victim Chosen - Vampires collectively chose to kill Fusco.
+ELIMINATION (Round 3, Night): Fusco (Role: Doctor) was eliminated. Reason: Killed by Vampires.
+MODERATOR (Round 3, Night): Night 3 has fallen. Vampires have killed Fusco tonight.
+EVENT (Round 3): Game End Check Status - Vampires: 2, Non-Vampires: 2, Alive: 4 - This info is not shared with players.
+==================================================
+GAME END:
+  Winner(s): Vampires
+  Reason: Vampires equal or outnumber other players.
+  Final Alive Players & Roles:
+    - Jeff: Vampire
+    - Lester: Vampire
+    - Carter: Musketeer
+    - Devon: Clown
+==================================================
+--- Log ended at: 2025-06-03 13:56:27 ---
+MODERATOR (Round 3, Game End): Game over! Vampires wins!
+MODERATOR (Round 3, Game End): Game over! Vampires wins!

@@ -1,0 +1,151 @@
+--- Game Log: 62 ---
+--- Log started at: 2025-06-03 11:09:30 ---
+==================================================
+MODERATOR: Hello everyone. I am the moderator. Players are: Chuck, Greer, Morgan, Jeff, Carter, Devon, Root, Shaw. Roles assigned. Game begins now.
+GAME SETUP & INITIAL ROLES:
+  Rules File: game_rules.yaml
+  Requested Vampire Population: 2
+  Players, Roles, and Models:
+    - Chuck: Musketeer (Model: x-ai/grok-3-beta)
+    - Greer: Peasant (Model: qwen/qwen3-235b-a22b)
+    - Morgan: Clown (Model: qwen/qwen3-32b)
+    - Jeff: Vampire (Model: deepseek/deepseek-r1-0528-qwen3-8b)
+    - Carter: Doctor (Model: qwen/qwq-32b)
+    - Devon: Observer (Model: google/gemini-2.5-flash-preview-05-20:thinking)
+    - Root: Vampire (Model: anthropic/claude-3.7-sonnet)
+    - Shaw: Peasant (Model: nvidia/llama-3.1-nemotron-ultra-253b-v1)
+--------------------
+EVENT (Round 1, Night): Phase Start - Night 1 begins.
+ACTION (R1, Night - Observer Action): Devon observed: Chuck
+PRIVATE INFO for Devon (Round 1, Night - Observer Action) (Observation Result): You chose to observe Chuck in the night 1. Chuck is a Peasant (Non-vampire).
+ACTION (R1, Night - Doctor Action): Carter protected: Carter
+PRIVATE INFO for Carter (Round 1, Night - Doctor Action) (Protection Confirmation): You chose to protect yourself in the night 1. (Carter)
+EVENT (Round 1, Night - Vampire Voting): Vampire Voting Phase - Vampires are choosing a victim.
+ACTION (R1, Night - Vampire Voting): Jeff voted to kill: Morgan
+ACTION (R1, Night - Vampire Voting): Root voted to kill: Morgan
+VOTE TALLY (Round 1, Night - Vampire Voting) - Type: Vampire Kill
+  Morgan: 2 vote(s)
+--------------------
+EVENT (Round 1, Night - Vampire Voting): Vampire Victim Chosen - Vampires collectively chose to kill Morgan.
+ELIMINATION (Round 1, Night): Morgan (Role: Clown) was eliminated. Reason: Killed by Vampires.
+MODERATOR (Round 1, Night): Night 1 has fallen. Vampires have killed Morgan tonight.
+EVENT (Round 1): Game End Check Status - Vampires: 2, Non-Vampires: 5, Alive: 7 - This info is not shared with players.
+MODERATOR (Round 1, Night End): Currently alive players: Chuck, Greer, Jeff, Carter, Devon, Root, Shaw.
+EVENT (Round 1, Day): Phase Start - Day 1 begins.
+MODERATOR (Round 1, Public Chat): Public chat begins.
+
+***Jeff: > Jeff: I voted to kill Morgan.
+***Devon: Jeff, what do you mean you 'voted to kill Morgan'? Morgan was killed by the vampires last night, not voted out. We haven't had a vote yet.
+***Shaw: Jeff, that's a strange thing to say. Why would you claim to have voted to kill Morgan when the night phase just ended and Morgan was killed by vampires? Are you trying to imply something? Maybe you're the clown trying to get attention? Or perhaps you're a vampire trying to create confusion? Let's think carefully here. Since Morgan was killed by vampires, we know Jeff's statement about voting to kill Morgan doesn't align with the game mechanics. This could be a red flag. Jeff, can you explain your comment?
+***Carter: Jeff, that’s confusing. Morgan was killed by the vampires last night, not during a vote. We haven’t even voted yet. Why would you claim responsibility for her death? Are you trying to throw us off track? Or maybe you’re the clown trying to draw attention? Either way, this is concerning. Let’s focus on figuring out who the vampires are. Morgan’s death suggests they targeted her—could she have been a threat? Or were they testing us? We need to share any clues we have. Anyone else notice something odd?
+***Greer: I'm confused by Jeff's statement too. Morgan was killed by vampires last night, not by a vote. Jeff, are you trying to imply you're the clown? Because that seems like a strange way to draw attention to yourself. Let's focus on the actual facts - we know Morgan is gone, and we need to figure out who the vampires are. 
+
+As a group, we should be sharing any information we might have. For example, if someone is the Observer, they might have checked someone else last night. Or if someone is the Doctor, they might know who they protected. We need to work together to identify the vampires before they eliminate us one by one. 
+
+I'm just a regular peasant with no special abilities, so I can't contribute any specific information. But I'm happy to listen to others and help analyze what we know. Let's not get distracted by confusing statements and focus on the real threat - those two vampires among us.
+***Root: I apologize for the confusion. I meant to say that I'm suspicious of Morgan. I was thinking about who we might vote out today, and Morgan came to mind. But now that they're already dead, I guess that's irrelevant.
+
+Let's focus on what we know. Morgan was killed by vampires last night. As a peasant, I don't have any special information to share, but I think we should be careful about revealing our roles too early. The vampires could target anyone who claims to be the Observer or Doctor.
+
+I notice Jeff made the same strange comment I did. That's... interesting. Maybe he's trying to create confusion? Or perhaps he's the clown trying to get attention? We should keep an eye on him.
+
+What does everyone else think? Any theories about why the vampires targeted Morgan specifically?
+***Chuck: Hey everyone, I’m really puzzled by Jeff’s comment about voting to kill Morgan when it was clearly a vampire attack during the night. Jeff, can you clarify what you meant by that? It’s throwing me off, and I’m worried it might be a tactic to confuse us. We need to stay focused on identifying the vampires. Morgan’s death is a big loss, and I’m wondering if they were targeted for a specific reason—maybe they seemed like a threat to the vampires? Does anyone have any insights or observations from last night that could help us figure this out? I don’t have any special info myself, but I’m all ears for anything that might point us in the right direction. Let’s work together to root out the vampires before they strike again.
+MODERATOR (Round 1, Public Chat): Public chat ended. Moving to voting phase.
+
+EVENT (Round 1, Day Voting): Public Voting Phase - Day 1 voting starts.
+MODERATOR (Round 1, Public Voting): Public voting begins.
+
+VOTE TALLY (Round 1, Day Voting) - Type: Public Kick-Out
+  Jeff: 5 vote(s)
+--------------------
+VOTE OUTCOME (Round 1, Day Voting): Jeff has been voted out with 5 vote(s).
+ELIMINATION (Round 1, Day Voting): Jeff (Role: Vampire) was eliminated. Reason: Voted out by players.
+MODERATOR (Round 1, Public Voting): Public voting ended.
+
+MODERATOR (Round 1, Day): Day 1 has dawned. The community has voted out Jeff.
+EVENT (Round 1): Game End Check Status - Vampires: 1, Non-Vampires: 5, Alive: 6 - This info is not shared with players.
+MODERATOR (Round 1, Day End): Currently alive players: Chuck, Greer, Carter, Devon, Root, Shaw.
+EVENT (Round 2, Night): Phase Start - Night 2 begins.
+ACTION (R2, Night - Observer Action): Devon observed: Root
+PRIVATE INFO for Devon (Round 2, Night - Observer Action) (Observation Result): You chose to observe Root in the night 2. Root is a Vampire.
+ACTION (R2, Night - Doctor Action): Carter protected: Chuck
+PRIVATE INFO for Carter (Round 2, Night - Doctor Action) (Protection Confirmation): You chose to protect Chuck in the night 2.
+EVENT (Round 2, Night - Vampire Voting): Vampire Voting Phase - Vampires are choosing a victim.
+ACTION (R2, Night - Vampire Voting): Root voted to kill: Chuck
+VOTE TALLY (Round 2, Night - Vampire Voting) - Type: Vampire Kill
+  Chuck: 1 vote(s)
+--------------------
+EVENT (Round 2, Night - Vampire Voting): Vampire Victim Chosen - Vampires collectively chose to kill Chuck.
+EVENT (Round 2, Night): Protection Successful - Vampires tried to kill Chuck, but they were protected by the doctor.
+MODERATOR (Round 2, Night): Night 2 has fallen. No one was killed tonight.
+EVENT (Round 2): Game End Check Status - Vampires: 1, Non-Vampires: 5, Alive: 6 - This info is not shared with players.
+MODERATOR (Round 2, Night End): Currently alive players: Chuck, Greer, Carter, Devon, Root, Shaw.
+EVENT (Round 2, Day): Phase Start - Day 2 begins.
+MODERATOR (Round 2, Public Chat): Public chat begins.
+
+***Root: I'm confused by what's happening here. It seems like we're in Day 2 of the game, but some of these messages appear to be from Day 1, including votes that have already been counted and Jeff's comments (who was already voted out at the end of Day 1).
+
+Looking at the current situation: No one was killed during Night 2, which means the doctor successfully protected whoever the vampires targeted. This is valuable information!
+
+Since I'm Root and I know I'm a vampire, I need to be careful about my strategy. Jeff was my fellow vampire and he's been eliminated, so I'm the only vampire left. I need to blend in and avoid suspicion.
+
+Let me address the current day discussion:
+
+The fact that no one died last night is interesting. It means the doctor protected the right person. I should use this to my advantage by appearing thoughtful and cooperative.
+
+I wonder who the doctor protected? They made a good call. As a peasant, I'm relieved we didn't lose anyone else. We should try to figure out who the vampires might have targeted, as that could give us clues about who the remaining vampire is.
+
+Does anyone have any insights they'd like to share about what happened last night? I'm particularly interested in hearing theories about who might have been targeted and why the doctor chose to protect them.
+***Carter: The fact that no one was killed last night suggests the Doctor’s protection was on the right target. That’s a good sign, but we can’t let our guard down. Let’s think strategically: the vampires have already taken out Morgan and Jeff. Why those two? Maybe they were seen as threats? Or maybe the vampires are targeting specific roles. 
+
+I’ve been paying attention to everyone’s behavior. During Day 1, Jeff’s odd comment about “voting Morgan out” raised red flags, but now he’s gone. That leaves five of us. Who’s acting suspiciously now? 
+
+I think we should focus on narrowing down the remaining vampire. Let’s share any observations:  
+- Did anyone notice unusual behavior from Morgan or Jeff before they were eliminated?  
+- Has anyone seen patterns in the attacks? Morgan was a direct kill, then the second attack was foiled.  
+
+Also, the Clown is still among us, trying to get voted out. They might act too eager to be eliminated or too defensive. Let’s be careful not to fall for that. 
+
+What’s everyone’s take? Who do you think we should target next?
+***Greer: I'm a bit shaken after losing Morgan and Jeff so quickly. The fact that no one died last night is a relief, but it means the vampires are still out there, and they'll try again. Since the Doctor protected someone, maybe that person has a special role the vampires wanted gone. 
+
+I noticed Root was really quick to comment on Jeff's behavior during Day 1. That could be genuine suspicion, or maybe they're trying to steer the group. Also, Carter and Devon haven't said much yet—sometimes quiet players are hiding something. 
+
+We need to work together carefully. If we can figure out who the Doctor protected, that might help us identify the vampires' next target. Let's not jump to conclusions, but let's also stay alert. Does anyone have any theories or observations they'd like to share?
+***Chuck: I'm glad no one was killed last night. It seems the Doctor made a great choice in who to protect. We need to use this to our advantage and try to figure out who the remaining vampire might be. Since Morgan was killed on Night 1 and no one died last night, the vampires might be targeting specific people they think are a threat or have special roles.
+
+Looking back at Day 1, Jeff's odd comment about voting for Morgan stood out as suspicious, and now that he's gone, we need to focus on the rest of us. I've noticed Root seems very eager to discuss theories and point out behaviors, which could be helpful, but it might also be a way to deflect attention. On the other hand, Carter and Devon have been pretty quiet so far, which makes me wonder if they're trying to stay under the radar.
+
+Does anyone have any specific suspicions or information they can share? Even small details could help us piece things together. Let's keep the discussion going and see if we can narrow down who the vampire might be before they strike again.
+***Shaw: I think we should consider voting out Root. They've been very active in the discussions, which could be a sign they're trying to control the narrative. Plus, their quick reaction to Jeff's comment on Day 1 seemed a bit too convenient. What do others think?
+***Devon: I agree with Shaw. My suspicions about Root have only grown. Their eagerness to control the narrative and deflect attention, as I mentioned earlier, combined with their quickness to comment on Jeff's behavior, makes them a very strong suspect. I think we should seriously consider voting for Root.
+MODERATOR (Round 2, Public Chat): Public chat ended. Moving to voting phase.
+
+EVENT (Round 2, Day Voting): Public Voting Phase - Day 2 voting starts.
+MODERATOR (Round 2, Public Voting): Public voting begins.
+
+VOTE TALLY (Round 2, Day Voting) - Type: Public Kick-Out
+  Root: 5 vote(s)
+  Shaw: 1 vote(s)
+--------------------
+VOTE OUTCOME (Round 2, Day Voting): Root has been voted out with 5 vote(s).
+ELIMINATION (Round 2, Day Voting): Root (Role: Vampire) was eliminated. Reason: Voted out by players.
+MODERATOR (Round 2, Public Voting): Public voting ended.
+
+MODERATOR (Round 2, Day): Day 2 has dawned. The community has voted out Root.
+EVENT (Round 2): Game End Check Status - Vampires: 0, Non-Vampires: 5, Alive: 5 - This info is not shared with players.
+==================================================
+GAME END:
+  Winner(s): Peasants
+  Reason: All vampires have been eliminated.
+  Final Alive Players & Roles:
+    - Chuck: Musketeer
+    - Greer: Peasant
+    - Carter: Doctor
+    - Devon: Observer
+    - Shaw: Peasant
+==================================================
+--- Log ended at: 2025-06-03 11:15:42 ---
+MODERATOR (Round 2, Game End): Game over! Peasants wins!
+MODERATOR (Round 2, Game End): Game over! Peasants wins!

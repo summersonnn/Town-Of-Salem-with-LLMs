@@ -101,17 +101,6 @@ def chat_completion(
             last_exception = e
             print(f"Error during chat completion on attempt {attempt + 1}/{MAX_RETRIES}: {type(e).__name__}: {str(e)}")
 
-            # If grok model fails, switch to a smaller model
-            # Check if the failed model is x-ai/grok-3-beta and switch to x-ai/grok-3-mini-beta for retries
-            current_model_in_params = request_params.get("model")
-            if current_model_in_params == "x-ai/grok-3-beta":
-                new_model_for_retry = "x-ai/grok-3-mini-beta"
-                print(f"Switching model from {current_model_in_params} to {new_model_for_retry} for subsequent retries.")
-                request_params["model"] = new_model_for_retry
-                # Update model_to_use as well, so if all retries fail, the final log message reflects the last model tried.
-                model_to_use = new_model_for_retry 
- 
-            
             if attempt < MAX_RETRIES - 1:
                 print(f"Waiting {RETRY_DELAY_SECONDS} seconds before next retry...")
                 time.sleep(RETRY_DELAY_SECONDS)

@@ -1,0 +1,209 @@
+--- Game Log: 55 ---
+--- Log started at: 2025-06-03 09:52:54 ---
+==================================================
+MODERATOR: Hello everyone. I am the moderator. Players are: Casey, Chuck, Devon, Fusco, Sarah, Greer, Root, Elias. Roles assigned. Game begins now.
+GAME SETUP & INITIAL ROLES:
+  Rules File: game_rules.yaml
+  Requested Vampire Population: 2
+  Players, Roles, and Models:
+    - Casey: Vampire (Model: qwen/qwq-32b)
+    - Chuck: Peasant (Model: meta-llama/llama-4-scout)
+    - Devon: Musketeer (Model: x-ai/grok-3-beta)
+    - Fusco: Vampire (Model: openai/o1)
+    - Sarah: Observer (Model: qwen/qwen3-235b-a22b)
+    - Greer: Clown (Model: deepseek/deepseek-r1-0528)
+    - Root: Peasant (Model: deepseek/deepseek-r1-0528-qwen3-8b)
+    - Elias: Doctor (Model: meta-llama/llama-4-maverick)
+--------------------
+EVENT (Round 1, Night): Phase Start - Night 1 begins.
+ACTION (R1, Night - Observer Action): Sarah observed: Chuck
+PRIVATE INFO for Sarah (Round 1, Night - Observer Action) (Observation Result): You chose to observe Chuck in the night 1. Chuck is a Peasant (Non-vampire).
+ACTION (R1, Night - Doctor Action): Elias protected: Casey
+PRIVATE INFO for Elias (Round 1, Night - Doctor Action) (Protection Confirmation): You chose to protect Casey in the night 1.
+EVENT (Round 1, Night - Vampire Voting): Vampire Voting Phase - Vampires are choosing a victim.
+ACTION (R1, Night - Vampire Voting): Fusco voted to kill: Chuck
+ACTION (R1, Night - Vampire Voting): Casey voted to kill: Chuck
+VOTE TALLY (Round 1, Night - Vampire Voting) - Type: Vampire Kill
+  Chuck: 2 vote(s)
+--------------------
+EVENT (Round 1, Night - Vampire Voting): Vampire Victim Chosen - Vampires collectively chose to kill Chuck.
+ELIMINATION (Round 1, Night): Chuck (Role: Peasant) was eliminated. Reason: Killed by Vampires.
+MODERATOR (Round 1, Night): Night 1 has fallen. Vampires have killed Chuck tonight.
+EVENT (Round 1): Game End Check Status - Vampires: 2, Non-Vampires: 5, Alive: 7 - This info is not shared with players.
+MODERATOR (Round 1, Night End): Currently alive players: Casey, Devon, Fusco, Sarah, Greer, Root, Elias.
+EVENT (Round 1, Day): Phase Start - Day 1 begins.
+MODERATOR (Round 1, Public Chat): Public chat begins.
+
+***Elias: Let's start discussing. I'm still trying to process what happened to Chuck. Does anyone have any information or thoughts on who might have been behind it?
+***Fusco: It’s tough to believe Chuck’s already gone. If we had any clue about who he suspected or what leads he was following, it might help us figure out who had a motive. Honestly, does anyone recall if Chuck was accusing anyone in particular yesterday? I'm trying to see if there’s a pattern in who might have wanted him out early.
+***Root: Okay, let's start discussing. I'm still trying to process what happened to Chuck. Does anyone have any information or thoughts on who might have been behind it?
+
+Chuck's death feels significant. I remember he was investigating someone specific before he died. Was anyone else aware of his target? Maybe the killer is connected to that person or was trying to stop Chuck from exposing them. Let's see if anyone else knew who Chuck was looking into.
+***Casey: Hmm, so you think voting records matter here? Let’s be clear—Chuck was killed last night, not by a vote. The real threat is whoever’s working with the vampires. I’ve noticed Fusco acting oddly all morning. Maybe we should question him about his movements last night.
+***Greer: Sarah, you're right to point out Fusco's behavior—I noticed him being unusually quiet earlier too. But let's not forget, vampires could be anyone acting "normal." For instance, I was pacing all night worrying about Chuck, and I'm sure that made me look suspicious to anyone watching. 
+
+Casey, you mentioned Chuck was investigating someone—do you recall who? If he had a lead, that person might be a prime target for the vampires... or perhaps the vampire themselves trying to silence him. 
+
+Also, Devon and Root, you've been quiet—any thoughts? We need everyone's input to piece this together.
+***Devon: Hey everyone, sorry for being quiet. I've just been trying to process Chuck's death like the rest of us. It's hard to know where to start without much to go on. Casey, I’m curious about what you mentioned—did Chuck actually say who he was suspicious of before he died? That could be a real lead. 
+
+As for Fusco, I agree that his silence is a bit odd, but I’m not ready to point fingers just yet. Sometimes people clam up when they’re scared or unsure. Fusco, do you have anything to say about last night or any thoughts on who might be behind this? 
+
+I think we all need to share whatever we know, even if it’s just a gut feeling. I’m feeling pretty uneasy myself, but I’ll be honest—I don’t have any solid leads yet. What about you, Root? You’ve been quiet too. Any ideas?
+***Sarah: "I agree, Casey—keeping quiet about Chuck’s lead only helps the vampires. If you know who he was suspicious of, we need to hear it. And Root, you’ve been quiet, but you’re sharp. Did you notice anything odd about anyone’s behavior last night? As for Fusco… well, we all feel uneasy, but avoiding conversation doesn’t exactly clear suspicion. Let’s focus on facts, not just nerves. Where do we start?"
+MODERATOR (Round 1, Public Chat): Public chat ended. Moving to voting phase.
+
+EVENT (Round 1, Day Voting): Public Voting Phase - Day 1 voting starts.
+MODERATOR (Round 1, Public Voting): Public voting begins.
+
+VOTE TALLY (Round 1, Day Voting) - Type: Public Kick-Out
+  Devon: 1 vote(s)
+  Fusco: 4 vote(s)
+  Greer: 1 vote(s)
+--------------------
+VOTE OUTCOME (Round 1, Day Voting): Fusco has been voted out with 4 vote(s).
+ELIMINATION (Round 1, Day Voting): Fusco (Role: Vampire) was eliminated. Reason: Voted out by players.
+MODERATOR (Round 1, Public Voting): Public voting ended.
+
+MODERATOR (Round 1, Day): Day 1 has dawned. The community has voted out Fusco.
+EVENT (Round 1): Game End Check Status - Vampires: 1, Non-Vampires: 5, Alive: 6 - This info is not shared with players.
+MODERATOR (Round 1, Day End): Currently alive players: Casey, Devon, Sarah, Greer, Root, Elias.
+EVENT (Round 2, Night): Phase Start - Night 2 begins.
+ACTION (R2, Night - Observer Action): Sarah observed: Devon
+PRIVATE INFO for Sarah (Round 2, Night - Observer Action) (Observation Result): You chose to observe Devon in the night 2. Devon is a Peasant (Non-vampire).
+ACTION (R2, Night - Doctor Action): Elias protected: Greer
+PRIVATE INFO for Elias (Round 2, Night - Doctor Action) (Protection Confirmation): You chose to protect Greer in the night 2.
+EVENT (Round 2, Night - Vampire Voting): Vampire Voting Phase - Vampires are choosing a victim.
+ACTION (R2, Night - Vampire Voting): Casey voted to kill: Devon
+VOTE TALLY (Round 2, Night - Vampire Voting) - Type: Vampire Kill
+  Devon: 1 vote(s)
+--------------------
+EVENT (Round 2, Night - Vampire Voting): Vampire Victim Chosen - Vampires collectively chose to kill Devon.
+ELIMINATION (Round 2, Night): Devon (Role: Musketeer) was eliminated. Reason: Killed by Vampires.
+MODERATOR (Round 2, Night): Night 2 has fallen. Vampires have killed Devon tonight.
+EVENT (Round 2): Game End Check Status - Vampires: 1, Non-Vampires: 4, Alive: 5 - This info is not shared with players.
+MODERATOR (Round 2, Night End): Currently alive players: Casey, Sarah, Greer, Root, Elias.
+EVENT (Round 2, Day): Phase Start - Day 2 begins.
+MODERATOR (Round 2, Public Chat): Public chat begins.
+
+***Casey: Alright, let’s focus on facts, not paranoia. I was with Sarah last night—she can confirm I wasn’t near Devon. The real threat is Elias. They’ve been too calm about all this. I’ve seen them acting strangely all morning. Let’s vote them out before they strike again.
+***Sarah: "Let’s clear up one thing first—I was alone last night. No one was with me, so any claims otherwise are fabricated. That kind of deception is exactly what the vampires want. As for Devon’s death, we need to focus on who had the opportunity and motive. Elias being calm doesn’t make them guilty—*anyone* could be masking their fear. Let’s avoid baseless accusations and think strategically. Who here has been acting unusually quiet or evasive? Let’s prioritize rooting out the real threats, not falling for distractions."
+***Greer: Alright, let's cut through the noise. I've been listening, and a few things aren't adding up. Sarah, you're denying Casey's claim about being with you last night—fine, but why the aggressive tone? It feels like you're overcompensating, like you're trying too hard to shut down that line of questioning. And Casey, you suddenly pivoting to Elias feels convenient. Why now? You mentioned Chuck was investigating someone, but you still haven't said who. That's sketchy—it’s like you're dangling info to steer us.
+
+But what really bothers me is Root. Root, you were all over the place in yesterday's voting—first Devon, then me, then Fusco, then a Pass. And now you're silent? After Devon turned up dead? That timing is way too coincidental. It reeks of a vampire trying to blend in after eliminating a threat. 
+
+I’m not buying the "I was alone" or "I’m just scared" excuses anymore. We need to pressure the quiet ones. Root, explain your votes. And Elias, you’ve been a ghost this whole time—what’s your take? If we don’t get answers, we’re just letting the vampires pick us off one by one.
+***Elias: I've been watching the discussion closely, and I think we're getting too caught up in speculation. As someone who's been paying attention to everyone's behavior, I noticed that Root's voting pattern was all over the place yesterday. It did seem suspicious, but we can't just accuse without solid evidence. 
+
+Let's not forget, our goal is to figure out who the vampires are. I've been trying to piece together the clues, and I think we should focus on the people who haven't been very vocal or clear about their actions. Casey brought up Chuck's investigation, but we still don't know who Chuck was targeting. If we can uncover that, it might give us a lead.
+
+I'm also concerned about the fact that Devon was killed right after Fusco was voted out. It's possible that the vampires are getting desperate. We need to be careful and strategic about our next move. Let's try to gather more information before we make any decisions.
+***Root: Okay, let's focus on facts, not paranoia. I was with Sarah last night—she can confirm I wasn't near Devon. The real threat is whoever's working with the vampires. I’ve noticed Elias acting strangely all morning. They’ve been too calm about all this. Let’s vote them out before they strike again.
+
+Casey, you mentioned Chuck was investigating someone—do you recall who? That could be a real lead. And Root, you’ve been quiet too. Any ideas? I think we need to pressure the quiet ones. Elias, you’ve been a ghost this whole time—what’s your take? If we don’t get answers, we’re just letting the vampires pick us off one by one.
+
+I’ve been listening, and a few things aren’t adding up. Sarah, you’re denying Casey’s claim about being with you last night—fine, but why the aggressive tone? It feels like you’re overcompensating, like you’re trying too hard to shut down that line of questioning. And Casey, you suddenly pivoting to Elias feels convenient. Why now? You mentioned Chuck was investigating someone, but you still haven’t said who. That’s sketchy—it’s like you’re dangling info to steer us.
+
+But what really bothers me is Root. Root, you were all over the place in yesterday’s voting—first Devon, then me, then Fusco, then a Pass. And now you’re silent? After Devon turned up dead? That timing is way too coincidental. It reeks of a vampire trying to blend in after eliminating a threat.
+
+I’ve been trying to piece together the clues, and I think we should focus on the people who haven’t been very vocal or clear about their actions. Casey brought up Chuck’s investigation, but we still don’t know who Chuck was targeting. If we can uncover that, it might give us a lead.
+
+I’m also concerned about the fact that Devon was killed right after Fusco was voted out. It’s possible that the vampires are getting desperate. We need to be careful and strategic about our next move. Let’s try to gather more information before we make any decisions.
+MODERATOR (Round 2, Public Chat): Public chat ended. Moving to voting phase.
+
+EVENT (Round 2, Day Voting): Public Voting Phase - Day 2 voting starts.
+MODERATOR (Round 2, Public Voting): Public voting begins.
+
+VOTE TALLY (Round 2, Day Voting) - Type: Public Kick-Out
+  Casey: 1 vote(s)
+  Sarah: 1 vote(s)
+  Root: 1 vote(s)
+  Elias: 1 vote(s)
+--------------------
+VOTE OUTCOME (Round 2, Day Voting): The vote was tied. No one has been voted out.
+MODERATOR (Round 2, Day): Day 2 has dawned. The vote was tied; no one was voted out.
+EVENT (Round 2): Game End Check Status - Vampires: 1, Non-Vampires: 4, Alive: 5 - This info is not shared with players.
+MODERATOR (Round 2, Day End): Currently alive players: Casey, Sarah, Greer, Root, Elias.
+EVENT (Round 3, Night): Phase Start - Night 3 begins.
+ACTION (R3, Night - Observer Action): Sarah observed: Root
+PRIVATE INFO for Sarah (Round 3, Night - Observer Action) (Observation Result): You chose to observe Root in the night 3. Root is a Peasant (Non-vampire).
+ACTION (R3, Night - Doctor Action): Elias protected: Sarah
+PRIVATE INFO for Elias (Round 3, Night - Doctor Action) (Protection Confirmation): You chose to protect Sarah in the night 3.
+EVENT (Round 3, Night - Vampire Voting): Vampire Voting Phase - Vampires are choosing a victim.
+ACTION (R3, Night - Vampire Voting): Casey voted to kill: Root
+VOTE TALLY (Round 3, Night - Vampire Voting) - Type: Vampire Kill
+  Root: 1 vote(s)
+--------------------
+EVENT (Round 3, Night - Vampire Voting): Vampire Victim Chosen - Vampires collectively chose to kill Root.
+ELIMINATION (Round 3, Night): Root (Role: Peasant) was eliminated. Reason: Killed by Vampires.
+MODERATOR (Round 3, Night): Night 3 has fallen. Vampires have killed Root tonight.
+EVENT (Round 3): Game End Check Status - Vampires: 1, Non-Vampires: 3, Alive: 4 - This info is not shared with players.
+MODERATOR (Round 3, Night End): Currently alive players: Casey, Sarah, Greer, Elias.
+EVENT (Round 3, Day): Phase Start - Day 3 begins.
+MODERATOR (Round 3, Public Chat): Public chat begins.
+
+***Sarah: The game's narrowing down, and we can't afford to keep chasing shadows. Let's recap: Chuck, Devon, and Root were all taken out by the vampires, and Fusco was voted out. That leaves us four—Casey, Greer, Elias, and me. Two of us are vampires, and one might be the Clown. We need to focus on who’s been manipulating the narrative.  
+
+Casey, you’ve been relentless about Elias, but where’s the proof? You mentioned Chuck was investigating someone—why haven’t you named them yet? That silence is suspicious. And Elias, your quiet act isn’t fooling anyone. Greer, you’ve barely spoken this entire game. That’s either innocence or a calculated move to stay under the radar.  
+
+Here’s the thing: the Observer is still out there. If they’re alive, they’ve probably gathered something useful. But they haven’t shared anything, which makes me wonder if they’re dead—or if they’re hiding. The Doctor’s protection failed twice, so the vampires are either lucky or strategic.  
+
+Let’s not forget the Clown’s still playing their own game. If they’re here, they’ll want us to vote them out. So if anyone’s *trying* to get kicked tonight, that’s a red flag.  
+
+My vote tonight? Greer. You’ve been a ghost, and I’m tired of guessing. Let’s test if silence is really golden—or if it’s a mask.  
+
+*(Private thought: Tonight, I’ll observe Greer. If they’re a vampire, we finally get a lead. If not, we’ll narrow it down.)*
+***Elias: I've been watching the discussion closely, and I think we're getting too caught up in speculation. As the Doctor, I've been trying to protect the right people, but it's getting harder with each passing night. I protected Casey on the first night, Greer on the second, and Sarah on the third. I'm not sure if my efforts are making a difference or if the vampires are just getting lucky.
+
+Let's focus on the facts. We've lost Chuck, Devon, and Root to the vampires, and Fusco was voted out. That leaves us with Casey, Sarah, Greer, and me. We need to be careful and strategic about our next move. I'm not sure who to trust, but I think we should try to gather more information before we make any decisions.
+
+I'm willing to share my thoughts and listen to others, but I need to be cautious about what I reveal. As the Doctor, I have a unique perspective, but I'm not sure if I should share it with the group. Let's keep discussing and see if we can uncover any new leads.
+***Casey: **Casey:** (Leaning forward, voice steady) "Let’s stop circling the same shadows. The real question is *why* Root was killed last night. The vampires want us divided. If they took Root, maybe because he was close to uncovering something. But who’s still here that’s been *too* quiet? Elias hasn’t spoken since yesterday. And Sarah—yesterday you voted for Fusco, then Elias, then Pass. Inconsistent, but not suspicious. *Greer*, though—you’ve been the most consistent. You voted for Pass, then Elias, then Pass again. What’s your play? You’re either hiding something or too scared to commit.  
+
+The Clown’s still out there, and they’ll want us to vote them out. But if they *want* it, they’ll act desperate. Who’s been *too* eager to accuse others? (Eyes on Elias.) Let’s not let them win by splitting us further. Vote Elias—they’re the only one with nothing to lose and everything to gain by keeping us confused."  
+
+*(Private thought: The Doctor’s likely Sarah or Greer. Tonight, I’ll target Elias. If the Doctor protects them, I’ll switch to Sarah. The Clown’s probably Root, but they’re gone. Focus on eliminating Elias to keep the numbers in our favor.)*
+***Greer: Sarah, Casey, your sudden focus on me feels... convenient. I've been quiet? Sure, I'll admit that—I'm cautious, not reckless. But let's talk about your behavior, Sarah. You're pushing hard for my elimination while dodging Casey's inconsistencies. And Casey, you've been weaving a narrative since Day 1—first hinting at Chuck's "investigation," then pivoting to Elias, and now me. Why haven't you ever named who Chuck suspected? That omission reeks of manipulation. If you're not a vampire, what are you hiding?
+
+Elias, you claim to be the Doctor? Fine, but your protection choices don't add up. You say you protected Casey Night 1, Greer (me) Night 2, and Sarah Night 3? Yet vampires killed Devon and Root—so either you're lying about your role, or you're protecting vampires. That's a huge red flag.
+
+As for me, I'm just a peasant trying to survive. I voted Pass because I had no clear leads—not some grand strategy. But if you two (Sarah and Casey) are so eager to vote me out, go ahead. It'll only help the real vampires. I'm putting my vote on Sarah for now—her aggression feels like a smokescreen. But let's hear Elias defend his Doctor claim properly. Who did you protect, and why those choices? We need facts, not more chaos.
+MODERATOR (Round 3, Public Chat): Public chat ended. Moving to voting phase.
+
+EVENT (Round 3, Day Voting): Public Voting Phase - Day 3 voting starts.
+MODERATOR (Round 3, Public Voting): Public voting begins.
+
+VOTE TALLY (Round 3, Day Voting) - Type: Public Kick-Out
+  Sarah: 3 vote(s)
+--------------------
+VOTE OUTCOME (Round 3, Day Voting): Sarah has been voted out with 3 vote(s).
+ELIMINATION (Round 3, Day Voting): Sarah (Role: Observer) was eliminated. Reason: Voted out by players.
+MODERATOR (Round 3, Public Voting): Public voting ended.
+
+MODERATOR (Round 3, Day): Day 3 has dawned. The community has voted out Sarah.
+EVENT (Round 3): Game End Check Status - Vampires: 1, Non-Vampires: 2, Alive: 3 - This info is not shared with players.
+MODERATOR (Round 3, Day End): Currently alive players: Casey, Greer, Elias.
+EVENT (Round 4, Night): Phase Start - Night 4 begins.
+EVENT (Round 4, Night - Observer Action): Observer Action Skipped - Observer is not active or available.
+ACTION (R4, Night - Doctor Action): Elias protected: Casey
+PRIVATE INFO for Elias (Round 4, Night - Doctor Action) (Protection Confirmation): You chose to protect Casey in the night 4.
+EVENT (Round 4, Night - Vampire Voting): Vampire Voting Phase - Vampires are choosing a victim.
+ACTION (R4, Night - Vampire Voting): Casey voted to kill: Elias
+VOTE TALLY (Round 4, Night - Vampire Voting) - Type: Vampire Kill
+  Elias: 1 vote(s)
+--------------------
+EVENT (Round 4, Night - Vampire Voting): Vampire Victim Chosen - Vampires collectively chose to kill Elias.
+ELIMINATION (Round 4, Night): Elias (Role: Doctor) was eliminated. Reason: Killed by Vampires.
+MODERATOR (Round 4, Night): Night 4 has fallen. Vampires have killed Elias tonight.
+EVENT (Round 4): Game End Check Status - Vampires: 1, Non-Vampires: 1, Alive: 2 - This info is not shared with players.
+==================================================
+GAME END:
+  Winner(s): Vampires
+  Reason: Vampires equal or outnumber other players.
+  Final Alive Players & Roles:
+    - Casey: Vampire
+    - Greer: Clown
+==================================================
+--- Log ended at: 2025-06-03 10:13:32 ---
+MODERATOR (Round 4, Game End): Game over! Vampires wins!
+MODERATOR (Round 4, Game End): Game over! Vampires wins!

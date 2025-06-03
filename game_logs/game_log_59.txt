@@ -1,0 +1,354 @@
+--- Game Log: 59 ---
+--- Log started at: 2025-06-03 10:28:02 ---
+==================================================
+MODERATOR: Hello everyone. I am the moderator. Players are: Finch, Ellie, Shaw, Root, Sarah, Elias, Chuck, Casey. Roles assigned. Game begins now.
+GAME SETUP & INITIAL ROLES:
+  Rules File: game_rules.yaml
+  Requested Vampire Population: 2
+  Players, Roles, and Models:
+    - Finch: Vampire (Model: meta-llama/llama-4-scout)
+    - Ellie: Vampire (Model: nvidia/llama-3.1-nemotron-ultra-253b-v1)
+    - Shaw: Peasant (Model: x-ai/grok-3-beta)
+    - Root: Doctor (Model: deepseek/deepseek-r1-0528-qwen3-8b)
+    - Sarah: Peasant (Model: qwen/qwq-32b)
+    - Elias: Musketeer (Model: google/gemini-2.5-flash-preview-05-20:thinking)
+    - Chuck: Clown (Model: deepseek/deepseek-r1-0528)
+    - Casey: Observer (Model: meta-llama/llama-4-maverick)
+--------------------
+EVENT (Round 1, Night): Phase Start - Night 1 begins.
+ACTION (R1, Night - Observer Action): Casey observed: Finch
+PRIVATE INFO for Casey (Round 1, Night - Observer Action) (Observation Result): You chose to observe Finch in the night 1. Finch is a Vampire.
+ACTION (R1, Night - Doctor Action): Root protected: Chuck
+PRIVATE INFO for Root (Round 1, Night - Doctor Action) (Protection Confirmation): You chose to protect Chuck in the night 1.
+EVENT (Round 1, Night - Vampire Voting): Vampire Voting Phase - Vampires are choosing a victim.
+ACTION (R1, Night - Vampire Voting): Ellie voted to kill: Shaw
+ACTION (R1, Night - Vampire Voting): Finch voted to kill: Shaw
+VOTE TALLY (Round 1, Night - Vampire Voting) - Type: Vampire Kill
+  Shaw: 2 vote(s)
+--------------------
+EVENT (Round 1, Night - Vampire Voting): Vampire Victim Chosen - Vampires collectively chose to kill Shaw.
+ELIMINATION (Round 1, Night): Shaw (Role: Peasant) was eliminated. Reason: Killed by Vampires.
+MODERATOR (Round 1, Night): Night 1 has fallen. Vampires have killed Shaw tonight.
+EVENT (Round 1): Game End Check Status - Vampires: 2, Non-Vampires: 5, Alive: 7 - This info is not shared with players.
+MODERATOR (Round 1, Night End): Currently alive players: Finch, Ellie, Root, Sarah, Elias, Chuck, Casey.
+EVENT (Round 1, Day): Phase Start - Day 1 begins.
+MODERATOR (Round 1, Public Chat): Public chat begins.
+
+***Casey: Shaw died tonight. That's really unfortunate. I observed someone last night and got some info, but I'll keep it to myself for now. Does anyone have any theories on who might be a vampire?
+***Root: > Shaw was killed tonight. I protected Chuck. Let's figure out who the vampires are.
+***Finch: How do we know who to trust?
+***Chuck: Sarah, why did you protect me? That feels off—like you're trying to make me look suspicious or something. I'm just a regular peasant, so why waste your protection on me? And Ellie, if you've got info from observing someone, stop being cryptic and share it. We can't afford to play games with vampires on the loose. 
+
+Honestly, this whole thing reeks. Shaw's dead, and now we've got people claiming roles and holding back. Feels like a setup to me.
+***Sarah: "Wait, I never said I protected anyone—I mentioned observing someone, not protecting! That must’ve been Ellie. If someone was protected, Ellie’s the one with the power to do that. Let’s not get sidetracked. Shaw’s death means the vampires are still here. Who else has info? Who was even awake last night? Finch? Root? Casey?"
+***Ellie: Alright, so we've got Shaw dead. Let's see... I'm a vampire, so I need to make sure we don't get caught. The others are probably going to start pointing fingers. I should act suspicious of someone else. Maybe accuse the Doctor or the Observer? Wait, the Doctor protected Chuck. So if the Doctor is real, they might have saved someone. But vampires don't know who the Doctor is. Hmm. 
+
+I need to blend in. Let's see, Sarah said she protected Chuck. If Sarah is the Doctor, then that's a good move. But maybe Sarah is lying. If I can make others doubt Sarah, that might help. Or maybe accuse someone else of being a vampire. Let's think... The Observer can check one person each night. If the Observer checked someone and got a "yes," they might know a vampire. But the Observer hasn't spoken up yet. 
+
+I should probably try to steer the conversation towards someone else. Maybe Root? Or Casey? Let's see... If I can get the group to suspect someone else, that buys us time. Also, the Clown is still out there. If the Clown gets voted out, they win. So maybe the Clown is trying to act suspicious to get kicked out. But the Clown can't reveal their role. 
+
+This is tricky. As a vampire, my main goal is to not get caught and to eliminate peasants. Let's see... The current alive players are Finch, Ellie, Root, Sarah, Elias, Chuck, Casey. Shaw is dead. So two vampires (me and Finch) and the rest are peasants, except the Clown. Wait, the roles are 2 Vampires, 1 Observer, 1 Clown, 1 Doctor, 1 Musketeer, 2 Peasants. So total 8. With Shaw dead, who was Shaw? If Shaw was a peasant, then we still have two vampires. If Shaw was the Clown, then the Clown is already dead, but the game didn't end, so Shaw wasn't the Clown. 
+
+So, the Clown is still alive. The Clown wants to be voted out. So maybe the Clown is trying to act suspicious. But the Clown can't say "vote me out," so they have to do it subtly. 
+
+As a vampire, I need to make sure that either the peasants are eliminated or that we reach parity. Right now, there are 7 players left. Vampires need to have equal numbers. So if we can kill three more peasants, then 2 vampires and 2 peasants would mean vampires win. 
+
+But how to do that without getting caught. Let's see... The Doctor is still out there. If the Doctor protects someone, we need to target someone else. But we don't know who the Doctor is. 
+
+Maybe I should pretend to be the Observer. Wait, the Observer can ask about one person each night. If I claim to be the Observer and say that I checked someone and they're not a vampire, that could clear them. But if I'm caught lying, that's bad. 
+
+Alternatively, maybe accuse someone of being the Clown. If the group thinks someone is the Clown, they might vote them out, which would end the game with the Clown winning. But we don't want that. So maybe avoid accusing the Clown. 
+
+This is getting complicated. Let's see what others are saying. Sarah said she protected Chuck. If Sarah is the Doctor, then that's a valid move. But maybe Sarah is a vampire trying to cover for Chuck. Wait, no, vampires don't have the Doctor role. The Doctor is a peasant. So if Sarah is the Doctor, she's a peasant. 
+
+So, if Sarah is the Doctor, then she's telling the truth. Then Chuck was protected, so the vampires targeted Shaw, who wasn't protected. That makes sense. So the Doctor's protection worked on Chuck, but the vampires killed Shaw. 
+
+So, the Doctor is Sarah. Then, the Observer is someone else. The Observer hasn't spoken yet. Maybe the Observer is Root or Elias or Casey. 
+
+If I can figure out who the Observer is, maybe I can manipulate the information. But as a vampire, I need to be careful. 
+
+Let me try to summarize: 
+
+- Vampires: Me (Ellie) and Finch. 
+- Dead: Shaw (peasant, since the game didn't end when he died). 
+- Alive: Ellie, Finch, Root, Sarah, Elias, Chuck, Casey. 
+- Roles left: 2 Vampires, 1 Observer, 1 Clown, 1 Doctor (Sarah), 1 Musketeer, 2 Peasants. 
+
+So, the Musketeer is still alive. The Musketeer can eliminate someone if they are voted out. So if the Musketeer is lynched, they can take someone else down. 
+
+The Clown is still alive and wants to be lynched. 
+
+So, the peasants have the Doctor, Observer, Musketeer, and two regular peasants. 
+
+As a vampire, my goal is to eliminate the peasants without being discovered. 
+
+Current discussion: Sarah said she protected Chuck. Ellie (me) said she observed someone but is keeping it secret. Then someone else (maybe Finch?) accused Sarah of trying to make Chuck look suspicious. Then someone else (maybe Root?) asked how to know who to trust. 
+
+I need to respond in a way that doesn't reveal I'm a vampire. Maybe I should press Sarah for more information. Or maybe accuse someone else. 
+
+Wait, as Ellie, I said I observed someone and got info but kept it secret. Then someone else (maybe Finch) said they protected Chuck. Wait, no, Sarah said she protected Chuck. So Sarah is claiming to be the Doctor. 
+
+If Sarah is the Doctor, then she's a peasant. So she's on our side. But as a vampire, I need to make sure she's eliminated. 
+
+But how? If I can make others doubt Sarah's claim. Maybe say that the Doctor can only protect once, but wait, the Doctor can protect any player unlimited times, but can only protect themselves once. So if Sarah protected Chuck, that's allowed. 
+
+Hmm. Maybe I should try to create confusion. Let's see... If I'm the Observer, I could have checked someone. But I'm a vampire, so I can't be the Observer. The Observer is a peasant. 
+
+So, the real Observer is someone else. If the Observer checked someone and got a "yes," they might know a vampire. But they haven't spoken up. 
+
+Maybe I should pretend to be the Observer and clear someone. For example, say that I checked Finch and he's not a vampire. But if I'm a vampire, that's a risky move because if the real Observer checks Finch later, they'll get a "yes" and know I lied. 
+
+Alternatively, maybe accuse the Clown. If I can get the group to think someone is the Clown, they might vote them out. But the Clown wants that. So if I accuse someone of being the Clown, and the group votes them out, the Clown wins. But we don't want that. So maybe avoid that. 
+
+This is really tricky. Let's see what others are saying. 
+
+Sarah protected Chuck. Ellie (me) observed someone. Finch hasn't spoken yet. Root is asking who to trust. 
+
+Maybe I should speak up again. Let's try to steer the conversation towards accusing someone else. 
+
+"Alright, let's think. Shaw is dead. The vampires are still out there. Sarah claims to have protected Chuck. If that's true, then the vampires targeted Shaw, which makes sense. But how do we know Sarah is telling the truth? Maybe she's a vampire trying to cover for Chuck. Wait, no, vampires can't be Doctors. The Doctor is a peasant. So if Sarah is the Doctor, she's a peasant. 
+
+So, if Sarah is the Doctor, then Chuck was protected, and the vampires killed Shaw. That seems plausible. 
+
+But then, who is the Observer? The Observer should have some info. Maybe the Observer checked someone last night. Let's hear from them. 
+
+If the Observer is silent, maybe they're scared. Or maybe they're a vampire. Wait, no, the Observer is a peasant. So the Observer is a peasant with the ability to check one person per night. 
+
+So, the Observer is a peasant, so they're on our side. If they checked someone and got a "yes," they should share that. 
+
+But the Observer might be holding back to avoid revealing themselves. 
+
+This is getting too slow. We need to figure out who to vote for. 
+
+Maybe we should look for inactivity. Who hasn't spoken yet? Let's see... Players are Finch, Ellie, Root, Sarah, Elias, Chuck, Casey. 
+
+Ellie (me) has spoken. Sarah has spoken. Root asked a question. Finch, Elias, Chuck, Casey haven't said much. 
+
+Maybe the vampires are lurking. So, Finch and I are vampires. If we stay quiet, maybe others will suspect us. 
+
+Alternatively, maybe speak up and try to blend in. 
+
+As Ellie, I should probably continue the discussion. Let's try to push for more information. 
+
+"Sarah, you protected Chuck. That's good. But what about the rest of us? Do you have any other info? And Observer, if you're out there, please share what you know. We can't afford to lose another night." 
+
+That might help. It puts pressure on the Observer to come forward. If the Observer is a peasant, they might share their info. If the Observer is a vampire, they can't, but vampires don't have the Observer role. 
+
+Wait, the Observer is a peasant, so they're not a vampire. So the Observer is a peasant with the ability. So if the Observer checked someone and got a "yes," they know a vampire. 
+
+But the Observer might not want to reveal themselves. However, if they don't share, the vampires could strike again. 
+
+This is a tough spot. As a vampire, I need to prevent the Observer from revealing a vampire. So maybe try to discourage the Observer from speaking up. 
+
+But how? If I'm Ellie, and I'm a vampire, I can't directly say that. Maybe suggest that the Observer should keep their info secret to avoid being targeted. 
+
+Alternatively, maybe accuse someone else of being the Clown. 
+
+Wait, the Clown is still alive. If we can get the Clown voted out, the game ends. But the Clown wants that. So if someone is acting suspiciously, maybe they're the Clown. 
+
+But the Clown can't reveal their role, so they have to act in a way that makes others want to vote them out. 
+
+This is really complicated. Let's see... As a vampire, my best bet is to lay low, let the peasants fight among themselves, and try to misdirect. 
+
+Maybe accuse the Doctor of being a vampire. But the Doctor is a peasant, so that's not possible. 
+
+Alternatively, accuse someone else of being a vampire. Let's say... Elias. If I accuse Elias, maybe others will vote for him. But if Elias is a peasant, that's a bad move. 
+
+Alternatively, let the discussion continue and see who else speaks up. 
+
+I think the key here is to wait for the Observer to share their info. If the Observer checked someone and got a "yes," then we can eliminate a vampire. If not, then we're still in the dark. 
+
+But as a vampire, I need to prevent that. So maybe try to create doubt about the Observer's credibility. 
+
+"Wait, the Observer could be lying. How do we know they're telling the truth? If someone claims to be the Observer, they could be a vampire trying to mislead us." 
+
+But the Observer is a peasant, so they're not a vampire. So that's not possible. 
+
+Hmm. This is tough. Maybe it's better to just vote for someone random and hope for the best. But that's not a good strategy. 
+
+Alternatively, let's think about the numbers. There are 7 players left. Two vampires. So peasants have 5 players. If we can eliminate one peasant tonight, then the numbers are 2 vampires and 4 peasants. Then, the next night, we can kill another peasant, making it 2 vs 3. Then, the peasants would need to eliminate one vampire in the vote. 
+
+But the peasants have the Doctor, Observer, and Musketeer. The Doctor can protect, the Observer can investigate, and the Musketeer can retaliate if lynched. 
+
+This is a challenging game. As a vampire, I need to be careful not to get caught. Let's see how the discussion goes and try to manipulate it from there.
+</think>
+
+Alright, let's think. Shaw is dead. The vampires are still out there. Sarah claims to have protected Chuck. If that's true, then the vampires targeted Shaw, which makes sense. But how do we know Sarah is telling the truth? Maybe she's a vampire trying to cover for Chuck. Wait, no, vampires can't be Doctors. The Doctor is a peasant. So if Sarah is the Doctor, she's a peasant. 
+
+So, if Sarah is the Doctor, then Chuck was protected, and the vampires killed Shaw. That seems plausible. 
+
+But then, who is the Observer? The Observer should have some info. Maybe the Observer checked someone last night. Let's hear from them. 
+
+If the Observer is silent, maybe they're scared. Or maybe they're a vampire. Wait, no, the Observer is a peasant. So the Observer is a peasant with the ability to check one person per night. 
+
+So, the Observer is a peasant, so they're on our side. If they checked someone and got a "yes," they should share that. 
+
+But the Observer might be holding back to avoid revealing themselves. 
+
+This is getting too slow. We need to figure out who to vote for. 
+
+Maybe we should look for inactivity. Who hasn't spoken yet? Let's see... Players are Finch, Ellie, Root, Sarah, Elias, Chuck, Casey. 
+
+Ellie (me) has spoken. Sarah has spoken. Root asked a question. Finch, Elias, Chuck, Casey haven't said much. 
+
+Maybe the vampires are lurking. So, Finch and I are vampires. If we stay quiet, maybe others will suspect us. 
+
+Alternatively, maybe speak up and try to blend in. 
+
+As Ellie, I should probably continue the discussion. Let's try to push for more information. 
+
+"Sarah, you protected Chuck. That's good. But what about the rest of us? Do you have any other info? And Observer, if you're out there, please share what you know. We can't afford to lose another night." 
+
+That might help. It puts pressure on the Observer to come forward. If the Observer is a peasant, they might share their info. If the Observer is a vampire, they can't, but vampires don't have the Observer role. 
+
+Wait, the Observer is a peasant, so they're not a vampire. So the Observer is a peasant with the ability. So if the Observer checked someone and got a "yes," they know a vampire. 
+
+But the Observer might not want to reveal themselves. However, if they don't share, the vampires could strike again. 
+
+This is a tough spot. As a vampire, I need to prevent the Observer from revealing a vampire. So maybe try to discourage the Observer from speaking up. 
+
+But how? If I'm Ellie, and I'm a vampire, I can't directly say that. Maybe suggest that the Observer should keep their info secret to avoid being targeted. 
+
+Alternatively, maybe accuse someone else of being the Clown. 
+
+Wait, the Clown is still alive. If we can get the Clown voted out, the game ends. But the Clown wants that. So if someone is acting suspiciously, maybe they're the Clown. 
+
+But the Clown can't reveal their role, so they have to act in a way that makes others want to vote them out. 
+
+This is really complicated. Let's see... As a vampire, my best bet is to lay low, let the peasants fight among themselves, and try to misdirect. 
+
+Maybe accuse the Doctor of being a vampire. But the Doctor is a peasant, so that's not possible. 
+
+Alternatively, accuse someone else of being a vampire. Let's say... Elias. If I accuse Elias, maybe others will vote for him. But if Elias is a peasant, that's a bad move. 
+
+Alternatively, let the discussion continue and see who else speaks up. 
+
+I think the key here is to wait for the Observer to share their info. If the Observer checked someone and got a "yes," then we can eliminate a vampire. If not, then we're still in the dark. 
+
+But as a vampire, I need to prevent that. So maybe try to create doubt about the Observer's credibility. 
+
+"Wait, the Observer could be lying. How do we know they're telling the truth? If someone claims to be the Observer, they could be a vampire trying to mislead us." 
+
+But the Observer is a peasant, so they're not a vampire. So that's not possible. 
+
+Hmm. This is tough. Maybe it's better to just vote for someone random and hope for the best. But that's not a good strategy. 
+
+Alternatively, let's think about the numbers. There are 7 players left. Two vampires. So peasants have 5 players. If we can eliminate one peasant tonight, then the numbers are 2 vampires and 4 peasants. Then, the next night, we can kill another peasant, making it 2 vs 3. Then, the peasants would need to eliminate one vampire in the vote. 
+
+But the peasants have the Doctor, Observer, and Musketeer. The Doctor can protect, the Observer can investigate, and the Musketeer can retaliate if lynched. 
+
+This is a challenging game. As a vampire, I need to be careful not to get caught. Let's see how the discussion goes and try to manipulate it from there. 
+
+For now, I'll keep pushing for the Observer to share their info and try to steer the conversation away from myself and Finch. Maybe suggest that Elias or Casey is acting suspiciously. 
+
+"Has anyone else noticed that Elias hasn't said a word since the game started? That's pretty suspicious. Maybe we should consider voting him out." 
+
+That could shift the focus to Elias, who might be a peasant. If the group votes him out and he's a peasant, then the vampires win a little more. But if he's the Clown, then the Clown wins. It's a risk, but it's better than doing nothing. 
+
+Let's see how the others react to that.
+***Elias: You are Elias. Please remember to only speak as Elias. Your last message was from Ellie. Please re-write your message from Elias's perspective.
+MODERATOR (Round 1, Public Chat): Public chat ended. Moving to voting phase.
+
+EVENT (Round 1, Day Voting): Public Voting Phase - Day 1 voting starts.
+MODERATOR (Round 1, Public Voting): Public voting begins.
+
+VOTE TALLY (Round 1, Day Voting) - Type: Public Kick-Out
+  Finch: 1 vote(s)
+  Ellie: 3 vote(s)
+  Sarah: 1 vote(s)
+--------------------
+VOTE OUTCOME (Round 1, Day Voting): Ellie has been voted out with 3 vote(s).
+ELIMINATION (Round 1, Day Voting): Ellie (Role: Vampire) was eliminated. Reason: Voted out by players.
+MODERATOR (Round 1, Public Voting): Public voting ended.
+
+MODERATOR (Round 1, Day): Day 1 has dawned. The community has voted out Ellie.
+EVENT (Round 1): Game End Check Status - Vampires: 1, Non-Vampires: 5, Alive: 6 - This info is not shared with players.
+MODERATOR (Round 1, Day End): Currently alive players: Finch, Root, Sarah, Elias, Chuck, Casey.
+EVENT (Round 2, Night): Phase Start - Night 2 begins.
+ACTION (R2, Night - Observer Action): Casey observed: Root
+PRIVATE INFO for Casey (Round 2, Night - Observer Action) (Observation Result): You chose to observe Root in the night 2. Root is a Peasant (Non-vampire).
+ACTION (R2, Night - Doctor Action): Root protected: Finch
+PRIVATE INFO for Root (Round 2, Night - Doctor Action) (Protection Confirmation): You chose to protect Finch in the night 2.
+EVENT (Round 2, Night - Vampire Voting): Vampire Voting Phase - Vampires are choosing a victim.
+ACTION (R2, Night - Vampire Voting): Finch voted to kill: Sarah
+VOTE TALLY (Round 2, Night - Vampire Voting) - Type: Vampire Kill
+  Sarah: 1 vote(s)
+--------------------
+EVENT (Round 2, Night - Vampire Voting): Vampire Victim Chosen - Vampires collectively chose to kill Sarah.
+ELIMINATION (Round 2, Night): Sarah (Role: Peasant) was eliminated. Reason: Killed by Vampires.
+MODERATOR (Round 2, Night): Night 2 has fallen. Vampires have killed Sarah tonight.
+EVENT (Round 2): Game End Check Status - Vampires: 1, Non-Vampires: 4, Alive: 5 - This info is not shared with players.
+MODERATOR (Round 2, Night End): Currently alive players: Finch, Root, Elias, Chuck, Casey.
+EVENT (Round 2, Day): Phase Start - Day 2 begins.
+MODERATOR (Round 2, Public Chat): Public chat begins.
+
+***Chuck: Sarah's dead? That's... unsettling. She claimed to be the Doctor protecting Chuck last night, and now she's gone. If she was telling the truth, the vampires clearly saw her as a threat and silenced her. But if she was lying... what was the point? 
+
+Observer, if you're still with us, we desperately need your insight. Did you check anyone last night? Or even Night 1? Sharing could save us. 
+
+And Chuck—Sarah protected you. Do you have anything to add? Any reason why she’d single you out? 
+
+Finch, Root, Casey—you’ve been quiet. Thoughts? We can’t afford passivity now. Two nights, two deaths. The vampires are picking us off while we argue. 
+
+I’m wary of anyone pushing silence or deflection. Let’s focus.
+***Finch: Let's think this through. Sarah's gone, and now it's down to five of us. I need to make sure I blend in and don't arouse suspicion. 
+
+Chuck, you were protected by Sarah last night. That's a pretty clear sign she thought you were a target. Now that she's dead, the vampires might come for you again. 
+
+Root and Casey, you've both been pretty quiet. What's your take on all this? Do you have any info or theories? 
+
+Elias, you're still here, which means you're not the Clown... unless you're playing it really cool. 
+
+We need to figure out who's who and take out the vampires before it's too late.
+***Root: > (Elias)  
+> Sarah's death was... unexpected. She claimed to be the Doctor, but maybe she was lying. Why would she protect Chuck and not herself? That doesn't make sense unless she was trying to manipulate us.  
+
+> And Ellie... you're quiet. Too quiet. You didn't react when Sarah died, and now you're asking about the Observer. It's suspicious.  
+
+> The Clown is still out there. If we don't vote them out soon, they'll win. But we need to focus on the real threat— the vampires.  
+
+> Root, you protected Chuck last night. Why? Were you trying to save him from the vampires? Or were you protecting yourself?  
+
+> Casey, you haven't said much either. What's your story?  
+
+> We need to figure out who to trust. The Doctor is dead, so we don't have that information anymore. The Observer might be hiding something.  
+
+> Let's not forget the Clown. If we keep pointing fingers at each other, we might end up voting out one of our own.  
+
+> But if we don't act soon, the vampires will silence us all.
+***Elias: You are Elias. Ellie was voted out on Day 1. She is no longer in the game. Sarah claimed to protect Chuck, not Root.
+
+Please remember to only speak as Elias, and keep track of who is alive and what has happened. Your last valid message as Elias was: "Sarah's dead? That's... unsettling. She claimed to be the Doctor protecting Chuck last night, and now she's gone. If she was telling the truth, the vampires clearly saw her as a threat and silenced her. But if she was lying... what was the point? Observer, if you're still with us, we desperately need your insight. Did you check anyone last night? Or even Night 1? Sharing could save us. And Chuck—Sarah protected you. Do you have anything to add? Any reason why she’d single you out? Finch, Root, Casey—you’ve been quiet. Thoughts? We can’t afford passivity now. Two nights, two deaths. The vampires are picking us off while we argue. I’m wary of anyone pushing silence or deflection. Let’s focus."
+
+Please write your next message as Elias.
+***Casey: I've been observing some of you, and I have some information. On Night 1, I checked Finch, and it turns out Finch is a vampire. I didn't share it then because I didn't want to reveal my role. Last night, I checked Root, and Root is not a vampire. So, we have confirmed Finch is a vampire, and we know Root is safe. That leaves Elias, Chuck, and potentially Finch as the remaining unknowns in terms of vampire status, though we know Finch is one. We should be cautious around Finch.
+MODERATOR (Round 2, Public Chat): Public chat ended. Moving to voting phase.
+
+EVENT (Round 2, Day Voting): Public Voting Phase - Day 2 voting starts.
+MODERATOR (Round 2, Public Voting): Public voting begins.
+
+VOTE TALLY (Round 2, Day Voting) - Type: Public Kick-Out
+  Finch: 2 vote(s)
+  Elias: 1 vote(s)
+  Chuck: 1 vote(s)
+  Casey: 1 vote(s)
+--------------------
+VOTE OUTCOME (Round 2, Day Voting): Finch has been voted out with 2 vote(s).
+ELIMINATION (Round 2, Day Voting): Finch (Role: Vampire) was eliminated. Reason: Voted out by players.
+MODERATOR (Round 2, Public Voting): Public voting ended.
+
+MODERATOR (Round 2, Day): Day 2 has dawned. The community has voted out Finch.
+EVENT (Round 2): Game End Check Status - Vampires: 0, Non-Vampires: 4, Alive: 4 - This info is not shared with players.
+==================================================
+GAME END:
+  Winner(s): Peasants
+  Reason: All vampires have been eliminated.
+  Final Alive Players & Roles:
+    - Root: Doctor
+    - Elias: Musketeer
+    - Chuck: Clown
+    - Casey: Observer
+==================================================
+--- Log ended at: 2025-06-03 10:42:29 ---
+MODERATOR (Round 2, Game End): Game over! Peasants wins!
+MODERATOR (Round 2, Game End): Game over! Peasants wins!

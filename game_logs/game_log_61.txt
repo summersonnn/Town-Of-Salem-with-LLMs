@@ -1,0 +1,97 @@
+--- Game Log: 61 ---
+--- Log started at: 2025-06-03 10:53:20 ---
+==================================================
+MODERATOR: Hello everyone. I am the moderator. Players are: Devon, Finch, Reese, Morgan, Elias, Fusco, Shaw, Jeff. Roles assigned. Game begins now.
+GAME SETUP & INITIAL ROLES:
+  Rules File: game_rules.yaml
+  Requested Vampire Population: 2
+  Players, Roles, and Models:
+    - Devon: Peasant (Model: google/gemini-2.5-flash-preview-05-20:thinking)
+    - Finch: Clown (Model: qwen/qwen3-32b)
+    - Reese: Vampire (Model: openai/gpt-4.1)
+    - Morgan: Musketeer (Model: meta-llama/llama-4-scout)
+    - Elias: Peasant (Model: openai/o1)
+    - Fusco: Doctor (Model: deepseek/deepseek-r1-0528-qwen3-8b)
+    - Shaw: Vampire (Model: qwen/qwen3-235b-a22b)
+    - Jeff: Observer (Model: deepseek/deepseek-r1-0528)
+--------------------
+EVENT (Round 1, Night): Phase Start - Night 1 begins.
+ACTION (R1, Night - Observer Action): Jeff observed: Reese
+PRIVATE INFO for Jeff (Round 1, Night - Observer Action) (Observation Result): You chose to observe Reese in the night 1. Reese is a Vampire.
+ACTION (R1, Night - Doctor Action): Fusco protected: Morgan
+PRIVATE INFO for Fusco (Round 1, Night - Doctor Action) (Protection Confirmation): You chose to protect Morgan in the night 1.
+EVENT (Round 1, Night - Vampire Voting): Vampire Voting Phase - Vampires are choosing a victim.
+ACTION (R1, Night - Vampire Voting): Reese voted to kill: Finch
+ACTION (R1, Night - Vampire Voting): Shaw voted to kill: Morgan
+VOTE TALLY (Round 1, Night - Vampire Voting) - Type: Vampire Kill
+  Finch: 1 vote(s)
+  Morgan: 1 vote(s)
+--------------------
+EVENT (Round 1, Night - Vampire Voting): Vampire Vote Tie Broken - Vampire voting resulted in a tie. Finch was randomly selected from the tied players (Finch, Morgan) to be killed.
+ELIMINATION (Round 1, Night): Finch (Role: Clown) was eliminated. Reason: Killed by Vampires.
+MODERATOR (Round 1, Night): Night 1 has fallen. Vampires have killed Finch tonight.
+EVENT (Round 1): Game End Check Status - Vampires: 2, Non-Vampires: 5, Alive: 7 - This info is not shared with players.
+MODERATOR (Round 1, Night End): Currently alive players: Devon, Reese, Morgan, Elias, Fusco, Shaw, Jeff.
+EVENT (Round 1, Day): Phase Start - Day 1 begins.
+MODERATOR (Round 1, Public Chat): Public chat begins.
+
+***Reese: Well, that was quick—Finch is already gone. Anyone have any ideas why the vampires would target Finch first? Maybe someone saw something suspicious last night?
+***Fusco: > Finch is dead. That was fast. Who would have thought the vampires would go for someone so early on? Maybe they're trying to thin the herd quickly. I wonder if anyone saw anything unusual last night.
+***Shaw: "Finch's death is a wake-up call. Last night, the vampires showed they're willing to act fast. I noticed Morgan seemed particularly anxious after
+***Jeff: Finch's death is unsettling—they went straight for him Night 1. That tells me the vampires are either targeting strategically or someone's hiding something. Did anyone notice Finch acting unusually yesterday? Or maybe the killers are trying to silence a potential threat early.  
+
+I'm leaning toward discussing patterns: Why Finch? Was he onto someone? Let's share any subtle observations from yesterday—anything off about interactions or votes? No accusations yet, just pooling info.
+***Devon: Finch's death is unsettling—they went straight for him Night 1. That tells me the vampires are either targeting strategically or someone's hiding something. Did anyone notice Finch acting unusually yesterday? Or maybe the killers are trying to silence a potential threat early.
+
+I'm leaning toward discussing patterns: Why Finch? Was he onto someone? Let's share any subtle observations from yesterday—anything off about interactions or votes? No accusations yet, just pooling info.
+***Morgan: I'm curious—did anyone else notice if Finch was about to accuse someone or had some suspicions before he died? It might help us figure out the vampires' strategy.
+***Elias: Honestly, I'm not sure if Finch had shared any strong suspicions or hints. It all happened so fast. I think we need to watch how people behave carefully now—look for inconsistencies in their stories, or overreactions to simple questions. Vampires typically try to mislead or sow confusion, so let's keep our eyes peeled for anyone pressing too hard or getting defensive without much reason.
+MODERATOR (Round 1, Public Chat): Public chat ended. Moving to voting phase.
+
+EVENT (Round 1, Day Voting): Public Voting Phase - Day 1 voting starts.
+MODERATOR (Round 1, Public Voting): Public voting begins.
+
+VOTE TALLY (Round 1, Day Voting) - Type: Public Kick-Out
+  Reese: 2 vote(s)
+  Morgan: 3 vote(s)
+--------------------
+VOTE OUTCOME (Round 1, Day Voting): Morgan has been voted out with 3 vote(s).
+ELIMINATION (Round 1, Day Voting): Morgan (Role: Musketeer) was eliminated. Reason: Voted out by players.
+EVENT (Round 1, Day - Musketeer Action): Musketeer Ability Triggered - Morgan (Musketeer) was eliminated, can use ability.
+ACTION (R1, Day - Musketeer Action): Morgan chose to eliminate: Elias
+MODERATOR (Round 1, Day - Musketeer Action): Morgan was voted out. As the Musketeer, they chose to eliminate Elias.
+ELIMINATION (Round 1, Day - Musketeer Action): Elias (Role: Peasant) was eliminated. Reason: Eliminated by Musketeer Morgan by Morgan.
+MODERATOR (Round 1, Public Voting): Public voting ended.
+
+MODERATOR (Round 1, Day): Day 1 has dawned. The community has voted out Morgan.
+EVENT (Round 1): Game End Check Status - Vampires: 2, Non-Vampires: 3, Alive: 5 - This info is not shared with players.
+MODERATOR (Round 1, Day End): Currently alive players: Devon, Reese, Fusco, Shaw, Jeff.
+EVENT (Round 2, Night): Phase Start - Night 2 begins.
+ACTION (R2, Night - Observer Action): Jeff observed: Shaw
+PRIVATE INFO for Jeff (Round 2, Night - Observer Action) (Observation Result): You chose to observe Shaw in the night 2. Shaw is a Vampire.
+ACTION (R2, Night - Doctor Action): Fusco protected: Shaw
+PRIVATE INFO for Fusco (Round 2, Night - Doctor Action) (Protection Confirmation): You chose to protect Shaw in the night 2.
+EVENT (Round 2, Night - Vampire Voting): Vampire Voting Phase - Vampires are choosing a victim.
+ACTION (R2, Night - Vampire Voting): Reese voted to kill: Devon
+ACTION (R2, Night - Vampire Voting): Shaw voted to kill: Fusco
+VOTE TALLY (Round 2, Night - Vampire Voting) - Type: Vampire Kill
+  Devon: 1 vote(s)
+  Fusco: 1 vote(s)
+--------------------
+EVENT (Round 2, Night - Vampire Voting): Vampire Vote Tie Broken - Vampire voting resulted in a tie. Devon was randomly selected from the tied players (Devon, Fusco) to be killed.
+ELIMINATION (Round 2, Night): Devon (Role: Peasant) was eliminated. Reason: Killed by Vampires.
+MODERATOR (Round 2, Night): Night 2 has fallen. Vampires have killed Devon tonight.
+EVENT (Round 2): Game End Check Status - Vampires: 2, Non-Vampires: 2, Alive: 4 - This info is not shared with players.
+==================================================
+GAME END:
+  Winner(s): Vampires
+  Reason: Vampires equal or outnumber other players.
+  Final Alive Players & Roles:
+    - Reese: Vampire
+    - Fusco: Doctor
+    - Shaw: Vampire
+    - Jeff: Observer
+==================================================
+--- Log ended at: 2025-06-03 11:09:30 ---
+MODERATOR (Round 2, Game End): Game over! Vampires wins!
+MODERATOR (Round 2, Game End): Game over! Vampires wins!

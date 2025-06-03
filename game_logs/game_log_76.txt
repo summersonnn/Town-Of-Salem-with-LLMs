@@ -1,0 +1,239 @@
+--- Game Log: 76 ---
+--- Log started at: 2025-06-03 13:23:14 ---
+==================================================
+MODERATOR: Hello everyone. I am the moderator. Players are: Greer, Morgan, Shaw, Casey, Root, Chuck, Carter, Jeff. Roles assigned. Game begins now.
+GAME SETUP & INITIAL ROLES:
+  Rules File: game_rules.yaml
+  Requested Vampire Population: 2
+  Players, Roles, and Models:
+    - Greer: Vampire (Model: qwen/qwen3-32b)
+    - Morgan: Clown (Model: qwen/qwq-32b)
+    - Shaw: Vampire (Model: meta-llama/llama-4-maverick)
+    - Casey: Observer (Model: qwen/qwen3-235b-a22b)
+    - Root: Musketeer (Model: meta-llama/llama-4-scout)
+    - Chuck: Doctor (Model: openai/gpt-4.1)
+    - Carter: Peasant (Model: anthropic/claude-3.7-sonnet)
+    - Jeff: Peasant (Model: nvidia/llama-3.1-nemotron-ultra-253b-v1)
+--------------------
+EVENT (Round 1, Night): Phase Start - Night 1 begins.
+ACTION (R1, Night - Observer Action): Casey observed: Morgan
+PRIVATE INFO for Casey (Round 1, Night - Observer Action) (Observation Result): You chose to observe Morgan in the night 1. Morgan is a Peasant (Non-vampire).
+ACTION (R1, Night - Doctor Action): Chuck protected: Chuck
+PRIVATE INFO for Chuck (Round 1, Night - Doctor Action) (Protection Confirmation): You chose to protect yourself in the night 1. (Chuck)
+EVENT (Round 1, Night - Vampire Voting): Vampire Voting Phase - Vampires are choosing a victim.
+ACTION (R1, Night - Vampire Voting): Greer voted to kill: Morgan
+ACTION (R1, Night - Vampire Voting): Shaw voted to kill: Carter
+VOTE TALLY (Round 1, Night - Vampire Voting) - Type: Vampire Kill
+  Morgan: 1 vote(s)
+  Carter: 1 vote(s)
+--------------------
+EVENT (Round 1, Night - Vampire Voting): Vampire Vote Tie Broken - Vampire voting resulted in a tie. Morgan was randomly selected from the tied players (Morgan, Carter) to be killed.
+ELIMINATION (Round 1, Night): Morgan (Role: Clown) was eliminated. Reason: Killed by Vampires.
+MODERATOR (Round 1, Night): Night 1 has fallen. Vampires have killed Morgan tonight.
+EVENT (Round 1): Game End Check Status - Vampires: 2, Non-Vampires: 5, Alive: 7 - This info is not shared with players.
+MODERATOR (Round 1, Night End): Currently alive players: Greer, Shaw, Casey, Root, Chuck, Carter, Jeff.
+EVENT (Round 1, Day): Phase Start - Day 1 begins.
+MODERATOR (Round 1, Public Chat): Public chat begins.
+
+***Greer: Morgan was killed last night, so we know the vampires are active. We need to be careful and try to figure out who they are. Let's discuss any suspicions or observations anyone has.
+***Chuck: That was fast—Morgan’s gone already. Did anyone notice anything odd last night or have any gut feelings? We should try to get some conversation going so we can spot anything suspicious.
+***Shaw: This is a tough start with Morgan being killed. We need to be careful and figure out our next steps. Does anyone have any thoughts on who might be a vampire?
+***Carter: I'm really sorry about Morgan. First night and we already lost someone. 
+
+I don't have any solid suspicions yet since we're just starting, but I think we should all share what roles we're comfortable revealing. It might help us narrow things down.
+
+I'm a regular peasant with no special abilities. I know that's not very helpful, but I want to be honest from the start. Anyone else willing to share?
+***Root: I'm just a regular peasant too. No special roles or abilities. I think we should all be honest about what we know or don't know. Maybe someone has some insight that could help us.
+***Casey: Morgan's death is definitely a wake-up call. Since we lost someone already, we need to be strategic. I'm just a regular peasant, but maybe we should focus on patterns. For example, who seems too eager to point fingers or avoid suspicion? Also, if the Doctor protected someone last night, they might know who was targeted. But since Morgan was killed, the Doctor didn't protect them. Maybe the Doctor is still alive and can help us later. Let's not rush to vote yet—let’s talk more. Does anyone have specific reasons to suspect someone?
+***Jeff: I think we should consider that the vampires might try to blend in by acting normal. Maybe someone who hasn't spoken up yet is hiding something. Let's hear from everyone before making any decisions.
+MODERATOR (Round 1, Public Chat): Public chat ended. Moving to voting phase.
+
+EVENT (Round 1, Day Voting): Public Voting Phase - Day 1 voting starts.
+MODERATOR (Round 1, Public Voting): Public voting begins.
+
+VOTE TALLY (Round 1, Day Voting) - Type: Public Kick-Out
+  Greer: 1 vote(s)
+  Shaw: 1 vote(s)
+  Carter: 1 vote(s)
+--------------------
+VOTE OUTCOME (Round 1, Day Voting): The vote was tied. No one has been voted out.
+MODERATOR (Round 1, Day): Day 1 has dawned. The vote was tied; no one was voted out.
+EVENT (Round 1): Game End Check Status - Vampires: 2, Non-Vampires: 5, Alive: 7 - This info is not shared with players.
+MODERATOR (Round 1, Day End): Currently alive players: Greer, Shaw, Casey, Root, Chuck, Carter, Jeff.
+EVENT (Round 2, Night): Phase Start - Night 2 begins.
+ACTION (R2, Night - Observer Action): Casey observed: Greer
+PRIVATE INFO for Casey (Round 2, Night - Observer Action) (Observation Result): You chose to observe Greer in the night 2. Greer is a Vampire.
+ACTION (R2, Night - Doctor Action): Chuck protected: Carter
+PRIVATE INFO for Chuck (Round 2, Night - Doctor Action) (Protection Confirmation): You chose to protect Carter in the night 2.
+EVENT (Round 2, Night - Vampire Voting): Vampire Voting Phase - Vampires are choosing a victim.
+ACTION (R2, Night - Vampire Voting): Greer voted to kill: Carter
+ACTION (R2, Night - Vampire Voting): Shaw voted to kill: Casey
+VOTE TALLY (Round 2, Night - Vampire Voting) - Type: Vampire Kill
+  Casey: 1 vote(s)
+  Carter: 1 vote(s)
+--------------------
+EVENT (Round 2, Night - Vampire Voting): Vampire Vote Tie Broken - Vampire voting resulted in a tie. Carter was randomly selected from the tied players (Casey, Carter) to be killed.
+EVENT (Round 2, Night): Protection Successful - Vampires tried to kill Carter, but they were protected by the doctor.
+MODERATOR (Round 2, Night): Night 2 has fallen. No one was killed tonight.
+EVENT (Round 2): Game End Check Status - Vampires: 2, Non-Vampires: 5, Alive: 7 - This info is not shared with players.
+MODERATOR (Round 2, Night End): Currently alive players: Greer, Shaw, Casey, Root, Chuck, Carter, Jeff.
+EVENT (Round 2, Day): Phase Start - Day 2 begins.
+MODERATOR (Round 2, Public Chat): Public chat begins.
+
+***Chuck: No one died last night. That means the Doctor must have protected the right person, or the vampires targeted someone who was protected. This is good news for us! Maybe we can use this to narrow down who the vampires might be. Did anyone notice anything strange yesterday or have any new suspicions?
+***Jeff: Since no one died last night, the Doctor must have protected the target. That means the Doctor is still alive and active. Maybe we can figure out who the Doctor is based on who they might have protected. But how? 
+
+Also, the vampires didn't get a kill, which might make them desperate. They might try to manipulate the vote today. Let's be cautious and not jump to conclusions. 
+
+Does anyone have any new information or suspicions? Maybe we should consider voting for someone who was quiet yesterday or seemed suspicious. 
+
+I'm still a regular peasant with no special info, but I want to hear from others. Let's discuss carefully.
+***Carter: I'm glad no one was killed last night. The Doctor definitely saved someone, which is great news for us peasants.
+
+Looking at yesterday's vote, it was interesting that Greer voted for me while Shaw voted for Greer. Root voted for Shaw too. It seems like there was a chain of accusations there. I wonder if that means anything.
+
+I'm still just a regular peasant with no special abilities, but I'm trying to pay attention to patterns. The fact that no one died last night means the vampires are still among us and probably frustrated their attack didn't work.
+
+I think we should consider who might have been protected by the Doctor. The most logical targets for vampires would be people who seemed to be taking leadership roles or asking too many questions. 
+
+Does anyone want to share if they have any special roles that might help us? The Observer might have some information by now, though I understand if they want to keep quiet for safety.
+***Root: I'm a Musketeer. That's a pretty powerful role if I get voted out. I'd rather not get voted out, of course, but it's good to know I have that option.
+
+As a Musketeer, my goal is to survive as long as possible and use my ability strategically if needed. If I do get voted out, I'll make sure to take someone down with me.
+
+Let's get back to the discussion. We were talking about the vote yesterday and potential targets for the vampires. I think we should keep an eye on people who are being overly defensive or evasive.
+***Greer: I think we need to focus on Chuck. He's the Musketeer, and if he gets voted out, he can eliminate someone as a final act. That's a huge risk for us. We should vote him out before the vampires have a chance to target him again. What do you all think?
+***Casey: I think we need to focus on Greer. Based on what’s happened so far, there’s a strong chance they’re a vampire. Remember, Morgan was a regular peasant, so the vampires killed one of us on the first night. Now, with no deaths last night, they’re likely frustrated. If we don’t act, they’ll strike again. Let’s not waste time targeting Chuck when there’s a clearer threat. Greer’s actions and the patterns we’ve seen point to them being a vampire. Let’s vote them out before it’s too late.
+***Shaw: I accuse Greer.
+MODERATOR (Round 2, Public Chat): Public chat ended. Moving to voting phase.
+
+EVENT (Round 2, Day Voting): Public Voting Phase - Day 2 voting starts.
+MODERATOR (Round 2, Public Voting): Public voting begins.
+
+VOTE TALLY (Round 2, Day Voting) - Type: Public Kick-Out
+  Greer: 6 vote(s)
+  Chuck: 1 vote(s)
+--------------------
+VOTE OUTCOME (Round 2, Day Voting): Greer has been voted out with 6 vote(s).
+ELIMINATION (Round 2, Day Voting): Greer (Role: Vampire) was eliminated. Reason: Voted out by players.
+MODERATOR (Round 2, Public Voting): Public voting ended.
+
+MODERATOR (Round 2, Day): Day 2 has dawned. The community has voted out Greer.
+EVENT (Round 2): Game End Check Status - Vampires: 1, Non-Vampires: 5, Alive: 6 - This info is not shared with players.
+MODERATOR (Round 2, Day End): Currently alive players: Shaw, Casey, Root, Chuck, Carter, Jeff.
+EVENT (Round 3, Night): Phase Start - Night 3 begins.
+ACTION (R3, Night - Observer Action): Casey observed: Shaw
+PRIVATE INFO for Casey (Round 3, Night - Observer Action) (Observation Result): You chose to observe Shaw in the night 3. Shaw is a Vampire.
+ACTION (R3, Night - Doctor Action): Chuck protected: Carter
+PRIVATE INFO for Chuck (Round 3, Night - Doctor Action) (Protection Confirmation): You chose to protect Carter in the night 3.
+EVENT (Round 3, Night - Vampire Voting): Vampire Voting Phase - Vampires are choosing a victim.
+ACTION (R3, Night - Vampire Voting): Shaw voted to kill: Casey
+VOTE TALLY (Round 3, Night - Vampire Voting) - Type: Vampire Kill
+  Casey: 1 vote(s)
+--------------------
+EVENT (Round 3, Night - Vampire Voting): Vampire Victim Chosen - Vampires collectively chose to kill Casey.
+ELIMINATION (Round 3, Night): Casey (Role: Observer) was eliminated. Reason: Killed by Vampires.
+MODERATOR (Round 3, Night): Night 3 has fallen. Vampires have killed Casey tonight.
+EVENT (Round 3): Game End Check Status - Vampires: 1, Non-Vampires: 4, Alive: 5 - This info is not shared with players.
+MODERATOR (Round 3, Night End): Currently alive players: Shaw, Root, Chuck, Carter, Jeff.
+EVENT (Round 3, Day): Phase Start - Day 3 begins.
+MODERATOR (Round 3, Public Chat): Public chat begins.
+
+***Carter: I'm definitely relieved no one died last night. The Doctor is doing a great job protecting us.
+
+I'm concerned about what happened with Casey. That's our second peasant down, which means the vampires are getting closer to their win condition. We need to be more strategic.
+
+Looking at what's happened so far - Greer was voted out yesterday with almost unanimous agreement, and now Casey is gone. I think we need to carefully consider who might be working together.
+
+Root claimed to be the Musketeer yesterday. If that's true, that's valuable information. The Observer might have gathered some useful intel by now too, though I understand if they want to stay quiet for safety.
+
+I'm still just a regular peasant trying to help us figure this out. Does anyone have any new suspicions or information they'd like to share? Who do you think might have targeted Casey last night?
+***Root: As the Musketeer, I'm trying to stay alive as long as possible. If I get voted out, I'll make sure to take someone down with me. 
+
+Let's focus on finding the vampires. We know Casey was killed last night, and Greer was voted out yesterday. I think we should look for patterns or inconsistencies in people's behavior. 
+
+I'm not sure who to suspect yet, but I'm keeping an eye on everyone. What do you think about Shaw? They seem pretty quiet.
+***Shaw: Let's be cautious and not jump to conclusions. We should discuss the facts and try to figure out who the vampires are. I think we should focus on the people who were most vocal or suspicious during the game so far. 
+
+Since Greer was voted out yesterday, and now Casey is gone, we need to be careful about our next steps. I'm still trying to process everything that's happened.
+
+Does anyone have any new information or observations? Maybe the Observer has some insight to share?
+***Chuck: Casey being killed last night is a big loss for us. I think it's important to look at who was pushing hardest for Greer to be voted out, since the vampires might have tried to steer the vote away from themselves. 
+
+Root, you claimed Musketeer, and so far no one has challenged that. Shaw, you've been a bit quiet but did vote for Greer. Carter, you've been pretty open and consistent. Jeff, you haven't said much either.
+
+I think we need to hear more from Jeff and Shaw. If anyone has information or suspicions, now's the time to share. We can't afford to make a mistake with so few of us left.
+***Jeff: I think we should consider voting out Root. They claimed to be the Musketeer, but what if they're lying? If they're actually a vampire, they could be trying to manipulate us. Let's not take their claim at face value. What do you all think?
+MODERATOR (Round 3, Public Chat): Public chat ended. Moving to voting phase.
+
+EVENT (Round 3, Day Voting): Public Voting Phase - Day 3 voting starts.
+MODERATOR (Round 3, Public Voting): Public voting begins.
+
+VOTE TALLY (Round 3, Day Voting) - Type: Public Kick-Out
+  Shaw: 2 vote(s)
+  Root: 1 vote(s)
+  Jeff: 2 vote(s)
+--------------------
+VOTE OUTCOME (Round 3, Day Voting): The vote was tied. No one has been voted out.
+MODERATOR (Round 3, Day): Day 3 has dawned. The vote was tied; no one was voted out.
+EVENT (Round 3): Game End Check Status - Vampires: 1, Non-Vampires: 4, Alive: 5 - This info is not shared with players.
+MODERATOR (Round 3, Day End): Currently alive players: Shaw, Root, Chuck, Carter, Jeff.
+EVENT (Round 4, Night): Phase Start - Night 4 begins.
+EVENT (Round 4, Night - Observer Action): Observer Action Skipped - Observer is not active or available.
+ACTION (R4, Night - Doctor Action): Chuck protected: Carter
+PRIVATE INFO for Chuck (Round 4, Night - Doctor Action) (Protection Confirmation): You chose to protect Carter in the night 4.
+EVENT (Round 4, Night - Vampire Voting): Vampire Voting Phase - Vampires are choosing a victim.
+ACTION (R4, Night - Vampire Voting): Shaw voted to kill: Root
+VOTE TALLY (Round 4, Night - Vampire Voting) - Type: Vampire Kill
+  Root: 1 vote(s)
+--------------------
+EVENT (Round 4, Night - Vampire Voting): Vampire Victim Chosen - Vampires collectively chose to kill Root.
+ELIMINATION (Round 4, Night): Root (Role: Musketeer) was eliminated. Reason: Killed by Vampires.
+MODERATOR (Round 4, Night): Night 4 has fallen. Vampires have killed Root tonight.
+EVENT (Round 4): Game End Check Status - Vampires: 1, Non-Vampires: 3, Alive: 4 - This info is not shared with players.
+MODERATOR (Round 4, Night End): Currently alive players: Shaw, Chuck, Carter, Jeff.
+EVENT (Round 4, Day): Phase Start - Day 4 begins.
+MODERATOR (Round 4, Public Chat): Public chat begins.
+
+***Carter: I'm really concerned about what's happening. We've lost Root now, which means we're down to just four players left. The vampires are getting closer to their win condition.
+
+Looking at the voting patterns, I noticed Shaw and Jeff have been getting votes consistently. This makes me wonder if one or both of them might be vampires.
+
+Chuck, you've been relatively quiet but observant. Do you have any insights about who might be a vampire? And Jeff, you suggested voting for Root last time - was there a specific reason you suspected them?
+
+I'm still just a regular peasant trying to help us figure this out. With only four of us left, we really need to make the right choice in this vote or the vampires will win soon.
+
+Does anyone have any concrete information they can share? Maybe the Observer has learned something by now that could help us?
+***Chuck: We're in a really tough spot now—just four of us left. I’ve been watching the votes and the way people are talking. Carter, you’ve been targeted a lot, and I think that’s suspicious, but you’ve also been pretty open and consistent. Shaw and Jeff, you both have been in the middle of a lot of the voting ties and accusations.
+
+At this point, I think the vampires are trying to push suspicion around and avoid getting voted out. If anyone has any last information or gut feelings, now’s the time to share. Otherwise, we need to be really careful with this vote—if we get it wrong, the vampires could win next round.
+***Jeff: I think we need to vote out Shaw. They've been quiet and might be hiding something. Let's focus on them.
+***Shaw: Let's get this over with. I'm not going to say much, just that we need to be careful with our vote today. We can't afford to lose again.
+MODERATOR (Round 4, Public Chat): Public chat ended. Moving to voting phase.
+
+EVENT (Round 4, Day Voting): Public Voting Phase - Day 4 voting starts.
+MODERATOR (Round 4, Public Voting): Public voting begins.
+
+VOTE TALLY (Round 4, Day Voting) - Type: Public Kick-Out
+  Shaw: 2 vote(s)
+  Chuck: 1 vote(s)
+  Jeff: 1 vote(s)
+--------------------
+VOTE OUTCOME (Round 4, Day Voting): Shaw has been voted out with 2 vote(s).
+ELIMINATION (Round 4, Day Voting): Shaw (Role: Vampire) was eliminated. Reason: Voted out by players.
+MODERATOR (Round 4, Public Voting): Public voting ended.
+
+MODERATOR (Round 4, Day): Day 4 has dawned. The community has voted out Shaw.
+EVENT (Round 4): Game End Check Status - Vampires: 0, Non-Vampires: 3, Alive: 3 - This info is not shared with players.
+==================================================
+GAME END:
+  Winner(s): Peasants
+  Reason: All vampires have been eliminated.
+  Final Alive Players & Roles:
+    - Chuck: Doctor
+    - Carter: Peasant
+    - Jeff: Peasant
+==================================================
+--- Log ended at: 2025-06-03 13:29:46 ---
+MODERATOR (Round 4, Game End): Game over! Peasants wins!
+MODERATOR (Round 4, Game End): Game over! Peasants wins!

@@ -1,0 +1,159 @@
+--- Game Log: 94 ---
+--- Log started at: 2025-06-03 14:17:50 ---
+==================================================
+MODERATOR: Hello everyone. I am the moderator. Players are: Casey, Fusco, Chuck, Ellie, Elias, Greer, Shaw, Jeff. Roles assigned. Game begins now.
+GAME SETUP & INITIAL ROLES:
+  Rules File: game_rules.yaml
+  Requested Vampire Population: 2
+  Players, Roles, and Models:
+    - Casey: Vampire (Model: x-ai/grok-3-beta)
+    - Fusco: Peasant (Model: anthropic/claude-3.7-sonnet)
+    - Chuck: Vampire (Model: google/gemini-2.5-flash-preview-05-20:thinking)
+    - Ellie: Observer (Model: qwen/qwen3-32b)
+    - Elias: Peasant (Model: nvidia/llama-3.1-nemotron-ultra-253b-v1)
+    - Greer: Clown (Model: qwen/qwq-32b)
+    - Shaw: Doctor (Model: deepseek/deepseek-r1-0528-qwen3-8b)
+    - Jeff: Musketeer (Model: meta-llama/llama-4-scout)
+--------------------
+EVENT (Round 1, Night): Phase Start - Night 1 begins.
+ACTION (R1, Night - Observer Action): Ellie observed: Fusco
+PRIVATE INFO for Ellie (Round 1, Night - Observer Action) (Observation Result): You chose to observe Fusco in the night 1. Fusco is a Peasant (Non-vampire).
+ACTION (R1, Night - Doctor Action): Shaw protected: Chuck
+PRIVATE INFO for Shaw (Round 1, Night - Doctor Action) (Protection Confirmation): You chose to protect Chuck in the night 1.
+EVENT (Round 1, Night - Vampire Voting): Vampire Voting Phase - Vampires are choosing a victim.
+ACTION (R1, Night - Vampire Voting): Chuck voted to kill: Ellie
+ACTION (R1, Night - Vampire Voting): Casey voted to kill: Fusco
+VOTE TALLY (Round 1, Night - Vampire Voting) - Type: Vampire Kill
+  Fusco: 1 vote(s)
+  Ellie: 1 vote(s)
+--------------------
+EVENT (Round 1, Night - Vampire Voting): Vampire Vote Tie Broken - Vampire voting resulted in a tie. Fusco was randomly selected from the tied players (Fusco, Ellie) to be killed.
+ELIMINATION (Round 1, Night): Fusco (Role: Peasant) was eliminated. Reason: Killed by Vampires.
+MODERATOR (Round 1, Night): Night 1 has fallen. Vampires have killed Fusco tonight.
+EVENT (Round 1): Game End Check Status - Vampires: 2, Non-Vampires: 5, Alive: 7 - This info is not shared with players.
+MODERATOR (Round 1, Night End): Currently alive players: Casey, Chuck, Ellie, Elias, Greer, Shaw, Jeff.
+EVENT (Round 1, Day): Phase Start - Day 1 begins.
+MODERATOR (Round 1, Public Chat): Public chat begins.
+
+***Ellie: I am the Observer. Last night, I checked Fusco and can confirm he was not a vampire. Since he was killed, the vampires are still active in our group. Let’s analyze who might be targeting us and focus on cross-checking suspicious behavior. Who do you all think we should investigate next?
+***Greer: I’m really shaken by Fusco’s death. I didn’t get a good look at who was acting suspicious last night, but I’ve noticed Elias has been pretty quiet. Maybe we should check him? Or maybe I’m just panicking. What do you all think? I don’t want to jump to conclusions, but we need to act fast before another attack.
+***Chuck: Wow, Observer, that's a brave reveal. It's good to know Fusco wasn't a vampire, though it's heartbreaking he's gone. I totally get why you're shaken. Elias being quiet is definitely something to note, but I agree, we shouldn't jump to conclusions just yet. Silence can mean a lot of things. Maybe we should all share our initial thoughts on *anyone* who seemed off, not just the quiet ones? We really need to pool our observations to catch these vampires.
+***Jeff: I think we should focus on building trust within the group. Sharing small details about our interactions or observations might help us figure out who’s not being genuine. I’ve noticed Chuck and Ellie talking a lot; maybe they’ve picked up on something we haven’t? Let’s keep the conversation open and see if anyone’s behavior stands out as suspicious.
+***Casey: I'm glad we're starting to talk and share observations. Fusco's death is a tragedy, and we need to be careful not to let emotions cloud our judgment. I agree that silence can be suspicious, but it’s not enough to go on alone. Elias, can you share your thoughts or anything you’ve noticed? Also, Chuck and Ellie, since you’ve been mentioned, do you have any insights? Let’s keep this discussion open and see if we can spot any inconsistencies in behavior.
+***Shaw: Okay, this is a good start to the discussion. It's important we don't jump to conclusions, but let's use the information we have.
+
+Observer, thank you for sharing that Fusco wasn't a vampire. That helps us understand his death wasn't due to being targeted by the vampires directly, but rather... something else. Since he wasn't a vampire, the attack must have been from the vampires. Knowing he wasn't one rules him out as a suspect for being the killer, but doesn't tell us who *was* responsible.
+
+Elias being quiet is definitely worth noting. In these games, silence can be strategic, but sometimes it's just nervousness or lack of confidence. Let's see if his behavior changes later today. Maybe he'll speak up if he feels safe, or maybe he *is* hiding something.
+
+Chuck and Ellie talking a lot is interesting. It could just be their personalities, but in a game like this, increased talking can sometimes be a way to gather information or appear more trustworthy. However, it can also be a way for vampires or even the clown to manipulate the group. We need to listen carefully to what they're saying, not just how much they're saying.
+
+Greer, you're also a peasant, right? Do you have any observations you're comfortable sharing? Maybe something less obvious than just pointing out who talks a lot?
+
+Jeff, as another peasant, do you have any thoughts on the situation or anyone's behavior?
+
+We need to be careful not to point fingers too quickly. Let's focus on gathering more information and seeing if anyone's actions or words seem inconsistent with a peasant trying to survive. Remember, anyone can lie, so we have to be vigilant.
+***Elias: I think we should consider the possibility that the vampires might be trying to frame someone. Since Fusco was killed and he wasn't a vampire, maybe they're trying to create confusion. Let's not focus too much on one person yet. What if we try to get more information from the Observer? They might have insights from their checks. Also, does anyone remember if there were any conflicts or alliances forming before the night? I feel like we need to look at patterns rather than individual actions right now.
+MODERATOR (Round 1, Public Chat): Public chat ended. Moving to voting phase.
+
+EVENT (Round 1, Day Voting): Public Voting Phase - Day 1 voting starts.
+MODERATOR (Round 1, Public Voting): Public voting begins.
+
+VOTE TALLY (Round 1, Day Voting) - Type: Public Kick-Out
+  Elias: 5 vote(s)
+--------------------
+VOTE OUTCOME (Round 1, Day Voting): Elias has been voted out with 5 vote(s).
+ELIMINATION (Round 1, Day Voting): Elias (Role: Peasant) was eliminated. Reason: Voted out by players.
+MODERATOR (Round 1, Public Voting): Public voting ended.
+
+MODERATOR (Round 1, Day): Day 1 has dawned. The community has voted out Elias.
+EVENT (Round 1): Game End Check Status - Vampires: 2, Non-Vampires: 4, Alive: 6 - This info is not shared with players.
+MODERATOR (Round 1, Day End): Currently alive players: Casey, Chuck, Ellie, Greer, Shaw, Jeff.
+EVENT (Round 2, Night): Phase Start - Night 2 begins.
+ACTION (R2, Night - Observer Action): Ellie observed: Chuck
+PRIVATE INFO for Ellie (Round 2, Night - Observer Action) (Observation Result): You chose to observe Chuck in the night 2. Chuck is a Vampire.
+ACTION (R2, Night - Doctor Action): Shaw protected: Greer
+PRIVATE INFO for Shaw (Round 2, Night - Doctor Action) (Protection Confirmation): You chose to protect Greer in the night 2.
+EVENT (Round 2, Night - Vampire Voting): Vampire Voting Phase - Vampires are choosing a victim.
+ACTION (R2, Night - Vampire Voting): Chuck voted to kill: Ellie
+ACTION (R2, Night - Vampire Voting): Casey voted to kill: Ellie
+VOTE TALLY (Round 2, Night - Vampire Voting) - Type: Vampire Kill
+  Ellie: 2 vote(s)
+--------------------
+EVENT (Round 2, Night - Vampire Voting): Vampire Victim Chosen - Vampires collectively chose to kill Ellie.
+ELIMINATION (Round 2, Night): Ellie (Role: Observer) was eliminated. Reason: Killed by Vampires.
+MODERATOR (Round 2, Night): Night 2 has fallen. Vampires have killed Ellie tonight.
+EVENT (Round 2): Game End Check Status - Vampires: 2, Non-Vampires: 3, Alive: 5 - This info is not shared with players.
+MODERATOR (Round 2, Night End): Currently alive players: Casey, Chuck, Greer, Shaw, Jeff.
+EVENT (Round 2, Day): Phase Start - Day 2 begins.
+MODERATOR (Round 2, Public Chat): Public chat begins.
+
+***Shaw: I see the vote results. Elias has been eliminated. I wonder if that was influenced by my protection of Greer last night. Greer was targeted by the vampires, but I protected her, so she survived. Maybe the vote was a reaction to that. Either way, it's good that Elias is gone. Let's focus on who might be the next target. I need to be careful about who I protect next.
+***Chuck: Alright, everyone, let's take a deep breath and look at what just happened. Someone claiming to be the Doctor just said they protected Greer last night, and that Greer was targeted by the vampires. But the moderator announced that Ellie was killed. This doesn't add up. If the Doctor successfully protected the vampire's target, then *no one* would have died. The fact that Ellie *did* die means either the Doctor protected someone else, or the person claiming to be the Doctor isn't actually the Doctor, or they're deliberately trying to mislead us. This is a huge red flag. Who exactly made that statement about protecting Greer? We need to clarify this immediately. This kind of misinformation, whether intentional or not, is exactly what the vampires would want to sow. Shaw, your point about framing and confusion is spot on, and this 'Doctor's' claim fits right into that. We need to identify who made that claim and get to the bottom of it.
+***Casey: Alright, everyone, I'm just as confused as the rest of you about this supposed Doctor's claim. If they protected Greer and she was targeted, then why did Ellie die? Something's not adding up here. Either someone is lying about being the Doctor, or they're trying to throw us off. We can't let this kind of misinformation slide. Let's figure out who made that claim and press them for an explanation. We need to stay sharp—vampires thrive on confusion like this. What do the rest of you think? Should we focus on this discrepancy, or are there other behaviors we should be looking at?
+***Jeff: I'm getting a bit suspicious about Chuck's behavior. They seem really invested in questioning the Doctor's claim, but it almost feels like they're deflecting attention from themselves. What do others think about Chuck's involvement in this conversation? Should we be keeping a closer eye on them?
+***Greer: I can’t stop thinking about the Doctor’s conflicting statement either. If they protected Greer, why did Ellie die? It’s like there’s a mismatch here. Maybe the Doctor made a mistake, or someone’s lying. Either way, this confusion could be dangerous. I’ve been trying to stay out of the spotlight, but maybe I’m part of the problem. I haven’t contributed much to the discussions—could that be seen as suspicious? Or is it just because I’m overwhelmed? I don’t want to assume anything, but I’m starting to wonder if I should step back and let others take the lead. After all, silence can mean a lot of things… and maybe my silence is raising red flags.
+MODERATOR (Round 2, Public Chat): Public chat ended. Moving to voting phase.
+
+EVENT (Round 2, Day Voting): Public Voting Phase - Day 2 voting starts.
+MODERATOR (Round 2, Public Voting): Public voting begins.
+
+VOTE TALLY (Round 2, Day Voting) - Type: Public Kick-Out
+  Chuck: 2 vote(s)
+  Greer: 1 vote(s)
+  Jeff: 1 vote(s)
+--------------------
+VOTE OUTCOME (Round 2, Day Voting): Chuck has been voted out with 2 vote(s).
+ELIMINATION (Round 2, Day Voting): Chuck (Role: Vampire) was eliminated. Reason: Voted out by players.
+MODERATOR (Round 2, Public Voting): Public voting ended.
+
+MODERATOR (Round 2, Day): Day 2 has dawned. The community has voted out Chuck.
+EVENT (Round 2): Game End Check Status - Vampires: 1, Non-Vampires: 3, Alive: 4 - This info is not shared with players.
+MODERATOR (Round 2, Day End): Currently alive players: Casey, Greer, Shaw, Jeff.
+EVENT (Round 3, Night): Phase Start - Night 3 begins.
+EVENT (Round 3, Night - Observer Action): Observer Action Skipped - Observer is not active or available.
+ACTION (R3, Night - Doctor Action): Shaw protected: Greer
+PRIVATE INFO for Shaw (Round 3, Night - Doctor Action) (Protection Confirmation): You chose to protect Greer in the night 3.
+EVENT (Round 3, Night - Vampire Voting): Vampire Voting Phase - Vampires are choosing a victim.
+ACTION (R3, Night - Vampire Voting): Casey voted to kill: Greer
+VOTE TALLY (Round 3, Night - Vampire Voting) - Type: Vampire Kill
+  Greer: 1 vote(s)
+--------------------
+EVENT (Round 3, Night - Vampire Voting): Vampire Victim Chosen - Vampires collectively chose to kill Greer.
+EVENT (Round 3, Night): Protection Successful - Vampires tried to kill Greer, but they were protected by the doctor.
+MODERATOR (Round 3, Night): Night 3 has fallen. No one was killed tonight.
+EVENT (Round 3): Game End Check Status - Vampires: 1, Non-Vampires: 3, Alive: 4 - This info is not shared with players.
+MODERATOR (Round 3, Night End): Currently alive players: Casey, Greer, Shaw, Jeff.
+EVENT (Round 3, Day): Phase Start - Day 3 begins.
+MODERATOR (Round 3, Public Chat): Public chat begins.
+
+***Jeff: So we made it through another night without casualties. That’s a small win, I suppose. Now that it’s daytime, I think we should focus on discussing our strategies and behaviors. We’ve lost a few people already, and it’s clear the vampires are still among us. I’ve noticed Greer and Casey being pretty active in discussions. Are they trying to gather information or just being cautious? And Shaw, you’ve been relatively quiet—what are your thoughts on all this? Let’s keep the conversation open and see if we can uncover any patterns or suspicious behavior.
+***Greer: I’ve been trying to stay quiet because I didn’t want to jump into accusations without evidence, but now I’m not sure if that’s making me look guilty. I’ve noticed how quickly Elias and Chuck were voted out—maybe I’m next. I don’t want to push anyone’s buttons, but I can’t shake the feeling I’m being watched. What if I’m the one making people uneasy? I’ll try to speak up more, but… I don’t know. This is so hard.
+***Shaw: I see you're still relatively quiet, Shaw. That's fine. Sometimes the best way to avoid suspicion is to blend into the background. But I have to wonder—why are you so cautious? You've been a good listener so far, but maybe you're hiding something. I've noticed you haven't shared much about your own observations or feelings. Is there something you're not comfortable revealing?
+***Casey: I'm glad no one was killed last night. That likely means the Doctor made a good call and protected the right person. It's a small relief, but we can't let our guard down. Jeff, I appreciate you starting the discussion. I’ve been active because I’m trying to piece things together and figure out who we can trust. Shaw, I get why you’ve been quiet—sometimes it’s safer to observe than to speak too soon. But I’m curious about your thoughts on who might be suspicious. Greer, you’ve been in the mix too; do you have any insights or gut feelings about anyone? Let’s keep digging for clues and see if we can narrow down who the vampires might be.
+MODERATOR (Round 3, Public Chat): Public chat ended. Moving to voting phase.
+
+EVENT (Round 3, Day Voting): Public Voting Phase - Day 3 voting starts.
+MODERATOR (Round 3, Public Voting): Public voting begins.
+
+VOTE TALLY (Round 3, Day Voting) - Type: Public Kick-Out
+  Casey: 1 vote(s)
+  Greer: 3 vote(s)
+--------------------
+VOTE OUTCOME (Round 3, Day Voting): Greer has been voted out with 3 vote(s).
+ELIMINATION (Round 3, Day Voting): Greer (Role: Clown) was eliminated. Reason: Voted out by players.
+MODERATOR (Round 3, Public Voting): Public voting ended.
+
+MODERATOR (Round 3, Day): Day 3 has dawned. The community has voted out Greer.
+==================================================
+GAME END:
+  Winner(s): Clown
+  Reason: Clown (Greer) was successfully voted out.
+  Final Alive Players & Roles:
+    - Casey: Vampire
+    - Shaw: Doctor
+    - Jeff: Musketeer
+==================================================
+--- Log ended at: 2025-06-03 14:33:04 ---
+MODERATOR (Round 3, Game End): Game over! Clown wins!
+MODERATOR (Round 3, Game End): Game over! Clown wins!

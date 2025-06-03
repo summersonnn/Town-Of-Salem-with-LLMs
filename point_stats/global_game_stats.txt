@@ -34,9 +34,13 @@ Game 17
 Won by Vampires
 Game 18
 Won by Clown
+Game 19
+Won by Clown
 Game 20
 Won by Vampires
 Game 21
+Won by Vampires
+Game 22
 Won by Vampires
 Game 23
 Won by Vampires
@@ -62,6 +66,10 @@ Game 33
 Won by Peasants
 Game 34
 Won by Vampires
+Game 35
+Won by Peasants
+Game 36
+Won by Peasants
 Game 37
 Won by Peasants
 Game 38
@@ -86,7 +94,111 @@ Game 47
 Won by Vampires
 Game 48
 Won by Clown
+Game 49
+Won by Vampires
+Game 50
+Won by Peasants
+Game 51
+Won by Vampires
+Game 52
+Won by Clown
+Game 53
+Won by Clown
+Game 54
+Won by Clown
+Game 55
+Won by Vampires
+Game 56
+Won by Clown
+Game 57
+Won by Clown
+Game 58
+Won by Clown
+Game 59
+Won by Peasants
+Game 60
+Won by Peasants
+Game 61
+Won by Vampires
+Game 62
+Won by Peasants
+Game 63
+Won by Vampires
+Game 64
+Won by Peasants
+Game 65
+Won by Vampires
+Game 66
+Won by Vampires
+Game 67
+Won by Clown
+Game 68
+Won by Clown
+Game 69
+Won by Vampires
+Game 70
+Won by Peasants
+Game 71
+Won by Peasants
+Game 72
+Won by Vampires
+Game 73
+Won by Vampires
+Game 74
+Won by Peasants
+Game 75
+Won by Peasants
+Game 76
+Won by Peasants
+Game 77
+Won by Peasants
+Game 78
+Won by Clown
+Game 79
+Won by Vampires
+Game 80
+Won by Clown
+Game 81
+Won by Vampires
+Game 82
+Won by Vampires
+Game 83
+Won by Vampires
+Game 84
+Won by Vampires
+Game 85
+Won by Peasants
+Game 86
+Won by Vampires
+Game 87
+Won by Peasants
+Game 88
+Won by Clown
+Game 89
+Won by Peasants
+Game 90
+Won by Peasants
+Game 91
+Won by Clown
+Game 92
+Won by Clown
+Game 93
+Won by Peasants
+Game 94
+Won by Clown
+Game 95
+Won by Vampires
+Game 96
+Won by Peasants
+Game 97
+Won by Clown
+Game 98
+Won by Peasants
+Game 99
+Won by Peasants
+Game 100
+Won by Peasants
 
-Vampires win ratio: 16/44 : 36.4%
-Peasants win ratio: 23/44 : 52.3%
-Clown win ratio: 5/44 : 11.4%
+Vampires win ratio: 34/100 : 34.0%
+Peasants win ratio: 45/100 : 45.0%
+Clown win ratio: 21/100 : 21.0%
