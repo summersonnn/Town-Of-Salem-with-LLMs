@@ -38,7 +38,6 @@ class GamePoints:
 
     def _parse_summary_stats_from_lines(self, lines: List[str]) -> Dict[str, float]:
         stats = {
-            "Total Points": 0.0,
             "Total Rounds Survived (Non-Vampire Games)": 0.0,
             "Total Rounds in all Non-Vampire Games": 0.0, # ADDED
             "Total Vampire Games": 0.0,
@@ -86,7 +85,6 @@ class GamePoints:
             if stats_data["Total Clown Games"] > 0 else 0.0
 
         summary_lines = [f"{self.STATS_FOOTER_MARKER}\n"]
-        summary_lines.append(f"Total Points: {stats_data['Total Points']:.1f}\n")
         summary_lines.append(f"Total Rounds Survived (Non-Vampire Games): {int(stats_data['Total Rounds Survived (Non-Vampire Games)'])}\n")
         summary_lines.append(f"Total Rounds in all Non-Vampire Games: {int(stats_data['Total Rounds in all Non-Vampire Games'])}\n") # ADDED
         
@@ -126,9 +124,6 @@ class GamePoints:
             else:
                 existing_game_entries_text = "".join(lines)
 
-        # Update summary_data with current_game_numeric_stats
-        summary_data["Total Points"] += current_game_numeric_stats.get("points_this_game", 0.0)
-        
         if current_game_numeric_stats.get("was_non_vampire_this_game", False):
             summary_data["Total Rounds Survived (Non-Vampire Games)"] += current_game_numeric_stats.get("rounds_survived_for_calc", 0)
             summary_data["Total Rounds in all Non-Vampire Games"] += current_game_numeric_stats.get("total_rounds_in_this_game_for_calc", 0) # MODIFIED
@@ -160,24 +155,18 @@ class GamePoints:
         with open(file_path, 'w') as f:
             f.write(final_text_to_write)
 
-    def process_points(self):
+    def process_stats(self):
         winner_team = self.game.winner_team
         
         for player_name in self.game.initial_player_names:
-            points_this_game = 0.0
             original_role = self.game.const_roles.get(player_name, "Unknown Role")
             model_name = self.game.player_model_map.get(player_name, "Unknown Model")
             is_alive_at_end = player_name in self.game.turn_order
             rounds_survived_by_player = self.game.player_rounds_survived.get(player_name, 0)
 
-            # --- Nightly survival points for non-Vampires ---
-            if original_role != "Vampire":
-                points_this_game += self.game.player_nightly_points.get(player_name, 0.0)
-
             # --- Role-specific win condition points ---
             # Initialize stats for current game, to be passed for summary updates
             current_game_numeric_stats = {
-                "points_this_game": 0.0, # Will be updated with final points_this_game
                 "original_role": original_role,
                 "is_alive_at_end": is_alive_at_end,
                 "was_non_vampire_this_game": (original_role != "Vampire"),
@@ -190,27 +179,19 @@ class GamePoints:
 
             if original_role != "Vampire":
                 current_game_numeric_stats["rounds_survived_for_calc"] = rounds_survived_by_player
-                current_game_numeric_stats["total_rounds_in_this_game_for_calc"] = self.game.total_rounds_played_in_game # ADDED
+                current_game_numeric_stats["total_rounds_in_this_game_for_calc"] = self.game.max_survivable_rounds # ADDED
             # Else, for Vampires, these remain 0, so they don't affect non-vampire specific stats.
 
 
             if original_role == "Vampire":
                 if winner_team == "Vampires":
                     current_game_numeric_stats["won_as_vampire"] = True
-                    points_this_game += 1.0 if is_alive_at_end else 0.5
             elif original_role == "Clown":
                 if winner_team == "Clown" and self.game.kicked_clown_name == player_name:
                     current_game_numeric_stats["won_as_clown"] = True
-                    points_this_game += 1.0
-            # Peasants win points are covered by nightly points if Peasants team wins.
-            # No extra points for Peasant role winning beyond nightly, unless defined.
-            # The "won_as_peasant_role" flag is for tracking wins for that role.
             else: # Peasant, Observer, Doctor, Musketeer
                  if winner_team == "Peasants":
                       current_game_numeric_stats["won_as_peasant_role"] = True
-
-
-            current_game_numeric_stats["points_this_game"] = points_this_game
 
             # Determine overall win/loss status for this player for the game entry
             player_won_this_game = False
@@ -230,14 +211,12 @@ class GamePoints:
             ]
             if original_role != "Vampire":
                 player_game_entry_list.append(f"Rounds Survived by Player: {rounds_survived_by_player}\n")
-                player_game_entry_list.append(f"Total Rounds in this Game: {self.game.total_rounds_played_in_game}\n")
+                player_game_entry_list.append(f"Max Survivable rounds in this Game: {self.game.max_survivable_rounds}\n")
             else: # For Vampires
                 player_game_entry_list.append(f"Rounds Survived by Player: {rounds_survived_by_player} (Vampire Game - survival stats not tracked for summary)\n")
-                player_game_entry_list.append(f"Total Rounds in this Game: {self.game.total_rounds_played_in_game} (Vampire Game - total rounds not tracked for non-vampire summary)\n")
-
+                player_game_entry_list.append(f"Max Survivable rounds in this Game: {self.game.max_survivable_rounds} (Vampire Game - total rounds not tracked for non-vampire summary)\n")
 
             player_game_entry_list.extend([
-                f"Points Gained This Game: {points_this_game:.1f}\n",
                 f"------------------------------------\n"
             ])
             player_game_entry_text_block = "".join(player_game_entry_list)
@@ -253,13 +232,12 @@ class GamePoints:
             ]
             if original_role != "Vampire":
                 model_game_entry_list.append(f"Rounds Survived by Player: {rounds_survived_by_player}\n")
-                model_game_entry_list.append(f"Total Rounds in this Game: {self.game.total_rounds_played_in_game}\n")
+                model_game_entry_list.append(f"Max Survivable rounds in this Game: {self.game.max_survivable_rounds}\n")
             else:
                 model_game_entry_list.append(f"Rounds Survived by Player: {rounds_survived_by_player} (Vampire Game - survival stats not tracked for summary)\n")
-                model_game_entry_list.append(f"Total Rounds in this Game: {self.game.total_rounds_played_in_game} (Vampire Game - total rounds not tracked for non-vampire summary)\n")
+                model_game_entry_list.append(f"Max Survivable rounds in this Game: {self.game.max_survivable_rounds} (Vampire Game - total rounds not tracked for non-vampire summary)\n")
 
             model_game_entry_list.extend([
-                f"Points Gained This Game (for Model via Player): {points_this_game:.1f}\n",
                 f"------------------------------------\n"
             ])
             model_game_entry_text_block = "".join(model_game_entry_list)
@@ -267,7 +245,7 @@ class GamePoints:
             self._update_individual_stats_file(model_file_path, model_game_entry_text_block, current_game_numeric_stats)
 
         self.update_global_game_stats() # Call after processing all players
-        print(f"Points and global stats processed and updated for Game {self.game.game_id}.")
+        print(f"Global stats processed and updated for Game {self.game.game_id}.")
 
     def update_global_game_stats(self):
         game_id = self.game.game_id

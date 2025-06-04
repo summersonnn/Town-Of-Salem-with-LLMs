@@ -61,17 +61,15 @@ class Vampire_or_Peasant:
         # Game rules - loaded from file
         self.rules = self._load_rules_from_file(rules_file_path)
 
-        # --- Points System Attributes ---
+        # --- System Attributes ---
         # Initialized with 0 for all players who start the game.
         self.player_rounds_survived: Dict[str, int] = {name: 0 for name in self.initial_player_names}
-        # Points accumulated by non-vampires for surviving nights.
-        self.player_nightly_points: Dict[str, float] = {name: 0.0 for name in self.initial_player_names}
         self.winner_team: str = ""  # Stores "Vampires", "Peasants", or "Clown"
         self.kicked_clown_name: Optional[str] = None # Stores the name of the Clown if they win by being kicked
-        self.total_rounds_played_in_game: int = 0 
+        self.max_survivable_rounds: int = 0 # one less of round number
 
         # Initialize GamePoints handler
-        # This is fine here as GamePoints accesses game attributes lazily (during process_points)
+        # This is fine here as GamePoints accesses game attributes lazily (during process_stats)
         self.game_points_handler = GamePoints(self)
 
     def _load_rules_from_file(self, file_path: str) -> Dict[str, Any]:
@@ -757,14 +755,7 @@ class Vampire_or_Peasant:
 
         round_num = 1
         while True:
-            self.total_rounds_played_in_game = round_num # Update total rounds played
-
             print(f"\n--- Round {round_num} ---")
-            # Increment rounds survived for players alive at the START of this round
-            for alive_player_this_round_start in list(self.turn_order): # Iterate copy
-                self.player_rounds_survived[alive_player_this_round_start] = \
-                    self.player_rounds_survived.get(alive_player_this_round_start, 0) + 1
-
             # --- NIGHT PHASE ---
             night_phase_str = f"Night {round_num}"
             self.logger.log_game_event("Phase Start", f"{night_phase_str} begins.", round_num=round_num, phase="Night")
@@ -778,14 +769,7 @@ class Vampire_or_Peasant:
             self.protected_player = None # Reset protection after vampire attack resolution
 
             self.mod_announcing_updates("Night", victim, round_num) # Logging within method
-
-            # Award nightly points to non-vampires alive AFTER night's events
-            for alive_player_after_night in list(self.turn_order): # Iterate copy
-                player_original_role = self.const_roles.get(alive_player_after_night)
-                if player_original_role and player_original_role != "Vampire":
-                    self.player_nightly_points[alive_player_after_night] = \
-                        self.player_nightly_points.get(alive_player_after_night, 0.0) + 0.1
-            self.logger.save_log() # Save after nightly points update
+            self.logger.save_log()
 
             finished, winner = self.check_game_end(round_num=round_num) # Logging within method if game ends
             if finished:
@@ -793,6 +777,7 @@ class Vampire_or_Peasant:
                 print(f"Game over! {winner} wins!")
                 self.logger.log_moderator_announcement(f"Game over! {winner} wins!", round_num=round_num, phase="Game End")
                 self.logger.save_log()
+                self.max_survivable_rounds += 1
                 break
 
             self.mod_announcing_alive_players(round_num=round_num, phase="Night End") # Logging within method
@@ -808,6 +793,11 @@ class Vampire_or_Peasant:
             kicked_player = self.vote(round_num) # Logging within method
 
             self.mod_announcing_updates("Day", kicked_player, round_num) # Logging within method
+            self.max_survivable_rounds += 1
+            # Increment rounds survived for players alive at the end of the round
+            for alive_player_this_round_start in list(self.turn_order): # Iterate copy
+                self.player_rounds_survived[alive_player_this_round_start] = \
+                    self.player_rounds_survived.get(alive_player_this_round_start, 0) + 1
 
             # Pass kicked_player to check_game_end for Clown win condition
             finished, winner = self.check_game_end(round_num=round_num, kicked=kicked_player) # Logging within method if game ends
@@ -824,10 +814,9 @@ class Vampire_or_Peasant:
             round_num += 1
         
         # --- Game End Processing ---
-        self.total_rounds_played_in_game = round_num # Final round count
-        self.game_points_handler.process_points() # Process points after winner_team is set
+        self.game_points_handler.process_stats() # Process stats after winner_team is set
         print(f"Game over! {self.winner_team} wins!")
-        self.logger.log_moderator_announcement(f"Game over! {self.winner_team} wins!", round_num=self.total_rounds_played_in_game, phase="Game End")
+        self.logger.log_moderator_announcement(f"Game over! {self.winner_team} wins!", round_num=round_num, phase="Game End")
 
         # Final save, though individual methods save frequently
         self.logger.save_log()
@@ -869,7 +858,7 @@ if __name__ == "__main__":
     # --- Configuration ---
     CONFIG_FILE = "game_config.yaml" # Name of your new config file
     RULES_FILE = "game_rules.yaml"
-    NUM_GAMES_TO_RUN = 101
+    NUM_GAMES_TO_RUN = 2
     NUM_PLAYERS_PER_GAME = 8
 
     # Load players and models from the external file
@@ -889,7 +878,7 @@ if __name__ == "__main__":
     
     rules_file = "game_rules.yaml"
 
-    for game_num in range(101, NUM_GAMES_TO_RUN + 1):
+    for game_num in range(1, NUM_GAMES_TO_RUN + 1):
         print(f"\n\n===== INITIALIZING GAME {game_num} / {NUM_GAMES_TO_RUN} =====")
         
         # Select a random subset of players and models for this game
@@ -929,10 +918,3 @@ if __name__ == "__main__":
         else:
             print("All games finished.")
 
-    
-    # DONE: Finish game logging for every step.
-    # DONE: Implement a mechanism to randomly select 10 models and 10 names to start game.
-    # DONE: Implement a run with 100 games, all running in a loop. Log files will be named Game 1, Game 2 etc.
-    # DONE: Implement error handling to never stop a game.
-    # DONE: Implement points system
-    # DONE: Implement distinct point logs for every model and name. It includes how many times peasant, vampire, won, points etc.
