@@ -126,6 +126,7 @@ Below are some sample charts comparing model performance across various metrics:
 > 📂 **Per-Name Statistics Available**:  
   All metrics are also tracked on a per-name basis (e.g., how models perform when assigned a specific player name).  
   These charts can be found in the [`/charts/per_name`](./charts/per_name) directory and are useful for spotting potential model biases related to player naming.
+> Note that charts are not generated automatically. I manually generated them from the statistics generated after all 100 games.
 
 ---
 
