@@ -88,7 +88,7 @@ Confidential messages between an individual player and the moderator, stored sep
 - 🧨 **Grok API is unstable**: It randomly fails, and there's not much that can be done.  
 - ⏱️ Due to Grok failures, some games had to be rerun manually after the main simulation completed. This means:
   - Some log timestamps may appear out of order.
-  - For example, Game 41 mistakenly included **Claude Opus 4** twice in the player list—this is a known one-off case.
+  - Game 41 mistakenly included **Claude Opus 4** twice in the player list during these manual runs—this is a known one-off case.
 - 🧠 Models frequently forget their identity and misattribute statements to others. System prompts were used to help with this, but they are not foolproof.
 - 🗯️ Models often confuse who said what. For instance, they'll think _X_ said something that _Y_ actually said. This causes unfair play in some matches.
 
