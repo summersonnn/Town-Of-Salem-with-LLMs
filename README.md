@@ -6,6 +6,27 @@ The complete set of game mechanics and rules can be found in [`game_rules.yaml`]
 
 ---
 
+Although there are **16 models/players** in total, each game randomly selects only **8 participants**. Player name assignment is also random, therefore a model is not permanently associated with any player name.
+This design choice helps in two ways:
+
+- ⏱️ **Faster execution**: Games with all 16 players took too long to complete.
+- 🧠 **Better model performance**: Smaller contexts are easier for models to reason about and less likely to hit token limits.
+
+This setup makes the simulation both **more cost-effective** and **more interpretable**.
+
+---
+
+## 🏃 How to Run a Simulation
+
+To run a simulation, create a `.env` file inside the project folder whose content looks like this:
+
+```
+LLM_BASE_URL=https://openrouter.ai/api/v1
+LLM_API_KEY=your-openrouter-api
+```
+
+---
+
 ## 🤖 Participating Models
 
 The following models are included in the tournament:
@@ -16,7 +37,7 @@ The following models are included in the tournament:
 - Deepseek-r1-0528  
 - Deepseek-r1-0528-qwen3-8b  
 - Gemini-2.5 Pro Preview  
-- Gemini-2.5 Flash Preview-0520 🤔  
+- Gemini-2.5 Flash Preview-0520-thinking  
 - Llama-4-Scout  
 - Llama-4-Maverick  
 - Nvidia-Llama-3.1-nemotron-ultra-253B-v1  
