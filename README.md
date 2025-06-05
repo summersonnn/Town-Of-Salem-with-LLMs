@@ -1,8 +1,6 @@
 # Town of Salem LLM Showdown
 
-This repository hosts a competitive simulation where **16 AI models** compete in a custom version of the game _Town of Salem_.  
-Each model is randomly assigned a role such as **Vampire**, **Peasant**, **Clown**, or specialized Peasant variants with unique abilities.  
-The complete set of game mechanics and rules can be found in [`game_rules.yaml`](./game_rules.yaml).
+This repository hosts a competitive simulation where **16 AI models** compete in a custom version of the game _Town of Salem_.  Each model is randomly assigned a role such as **Vampire**, **Peasant**, **Clown**, or specialized Peasant variants with unique abilities.  The complete set of game mechanics and rules can be found in [`game_rules.yaml`](./game_rules.yaml).
 
 ---
 
@@ -24,6 +22,11 @@ To run a simulation, create a `.env` file inside the project folder whose conten
 LLM_BASE_URL=https://openrouter.ai/api/v1
 LLM_API_KEY=your-openrouter-api
 ```
+then run 
+```
+python game.py
+```
+
 
 ---
 
