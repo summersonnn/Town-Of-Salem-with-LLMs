@@ -12,9 +12,9 @@ import re # For sanitizing filenames
 # --- GamePoints Class ---
 class GamePoints:
     STATS_FOOTER_MARKER = "--- Summary Statistics ---"
-    GLOBAL_STATS_FILE = os.path.join("point_stats", "global_game_stats.txt")
+    GLOBAL_STATS_FILE = os.path.join("final_stats", "global_game_stats.txt")
 
-    def __init__(self, game_instance: 'Vampire_or_Peasant', base_dir: str = "point_stats"):
+    def __init__(self, game_instance: 'Vampire_or_Peasant', base_dir: str = "final_stats"):
         self.game = game_instance
         self.base_dir = base_dir
         os.makedirs(self.base_dir, exist_ok=True)
