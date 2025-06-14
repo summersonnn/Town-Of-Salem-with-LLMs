@@ -51,7 +51,11 @@ ENTITY_NAME_PADDING_DIRECTLY_ABOVE_BAR = 1.0
 ESTIMATED_ENTITY_NAME_LINE_HEIGHT_DATA_UNITS = 2.5
 # --- End Configuration ---
 
-fig, ax = plt.subplots(figsize=(18, 9))
+# === MODIFIED LINE FOR FULL HD (1920x1080) ===
+# We set figsize to (19.2, 10.8) which at a standard 100 DPI gives 1920x1080 pixels.
+fig, ax = plt.subplots(figsize=(19.2, 10.8))
+# ===============================================
+
 bars = ax.bar(x, scores, color=colors)
 
 max_y_coord_overall = max(scores) if scores else 100.0 # Initialize with max score or 100
@@ -116,4 +120,8 @@ ax.set_title("Clown Win Ratio", fontsize=18, pad=20) # New title
 ax.set_ylabel("Win Ratio (%)", fontsize=14) # Updated Y-axis label to match new data type
 
 plt.tight_layout()
+
+# To save the figure as a 1920x1080 PNG file, uncomment the line below
+# plt.savefig('clown_win_ratio_full_hd.png', dpi=100)
+
 plt.show()

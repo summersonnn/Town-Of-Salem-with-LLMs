@@ -72,7 +72,11 @@ ENTITY_NAME_PADDING_DIRECTLY_ABOVE_BAR = 0.01 # Gap if no value text is shown, o
 ESTIMATED_ENTITY_NAME_LINE_HEIGHT_DATA_UNITS = 0.025
 # --- End Configuration ---
 
-fig, ax = plt.subplots(figsize=(18, 9))
+# === MODIFIED LINE FOR FULL HD (1920x1080) ===
+# We set figsize to (19.2, 10.8) which at a standard 100 DPI gives 1920x1080 pixels.
+fig, ax = plt.subplots(figsize=(19.2, 10.8))
+# ===============================================
+
 bars = ax.bar(x, scores, color=colors)
 
 max_y_coord_overall = max(scores) if scores else 1.0 # Initialize with max score
@@ -152,4 +156,8 @@ ax.set_title("Vampire Points per game", fontsize=18, pad=20) # You might want to
 ax.set_ylabel("Points (Max = 1)", fontsize=14) # You might want to change this y-axis label
 
 plt.tight_layout()
+
+# To save the figure as a 1920x1080 PNG file, uncomment the line below
+# plt.savefig('vampire_points_persons_full_hd.png', dpi=100)
+
 plt.show()

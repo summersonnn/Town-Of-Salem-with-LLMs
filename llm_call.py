@@ -144,7 +144,7 @@ if __name__ == "__main__":
 
     # 2. Define the player_model_map
     model_map = {
-        "Max": "openai/gpt-4.1",
+        "Max": "openai/o3",
     }
 
     # 3. Create a sample chat history
